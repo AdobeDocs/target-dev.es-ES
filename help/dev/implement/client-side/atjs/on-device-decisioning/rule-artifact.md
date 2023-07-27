@@ -1,0 +1,19 @@
+---
+keywords: implementación, biblioteca javascript, js, atjs, toma de decisiones en el dispositivo, toma de decisiones en el dispositivo, artefacto de regla, $8
+description: Obtenga información acerca del artefacto de regla JSON utilizado por [!UICONTROL toma de decisiones en el dispositivo]].
+title: ¿Qué hace el artefacto de regla JSON en la toma de decisiones en el dispositivo?
+feature: at.js
+exl-id: 14413ccf-b55e-48a8-a474-4401eb1b50fc
+source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+workflow-type: tm+mt
+source-wordcount: '118'
+ht-degree: 3%
+
+---
+
+# Artefacto de regla de decisión en el dispositivo
+
+El artefacto de regla es una representación JSON de su [!DNL Adobe Target] [!UICONTROL toma de decisiones en el dispositivo] actividades. El artefacto de regla lo genera [!DNL Target] y se propagan a la CDN de Akamai para garantizar que haya un artefacto de regla disponible lo más cerca posible de los visitantes. El artefacto de regla contiene metadatos que garantizan la ejecución y el envío precisos de sus actividades, a la vez que permiten el análisis en tiempo real mediante el seguimiento de eventos.
+
+* Clic [aquí](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) para obtener más información sobre el artefacto de regla.
+* Clic [aquí](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-example.md) para ver un ejemplo de un artefacto de regla JSON.

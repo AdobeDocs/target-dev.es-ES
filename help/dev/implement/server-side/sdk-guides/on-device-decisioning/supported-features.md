@@ -1,0 +1,174 @@
+---
+title: ¿Qué funciones se admiten en la toma de decisiones en el dispositivo?
+description: Aprenda a ofrecer el contenido personalizado más relevante y atractivo mediante el aprendizaje automático mediante una llamada al servidor en directo.
+feature: APIs/SDKs
+exl-id: 15d9870f-6c58-4da0-bfe5-ef23daf7d273
+source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+workflow-type: tm+mt
+source-wordcount: '657'
+ht-degree: 10%
+
+---
+
+# Información general sobre funciones compatibles
+
+[!DNL Adobe Target]Los SDK del lado del servidor de ofrecen a los desarrolladores la flexibilidad de elegir entre el rendimiento y la actualización de los datos para tomar decisiones. En otras palabras, si la entrega del contenido personalizado más relevante y atractivo a través del aprendizaje automático es lo más importante para usted, se debe realizar una llamada al servidor en directo. Pero cuando el rendimiento es más crítico, se debe tomar una decisión en el dispositivo. Para [!UICONTROL toma de decisiones en el dispositivo] para trabajar, consulte la siguiente lista de funciones compatibles:
+
+* Tipos de actividad
+* Segmentación de audiencia
+* Método de asignación
+
+## Tipos de actividades. 
+
+La siguiente tabla indica qué [tipos de actividades](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) creado con la variable [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) son compatibles o no con [!UICONTROL toma de decisiones en el dispositivo].
+
+| Tipo de actividad | Compatible |
+| --- | --- |
+| [Prueba A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) | Sí |
+| [Asignación automática](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | No |
+| [Segmentación automática](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) | No |
+| [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T) | Sí |
+| [Prueba multivariada](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html) (MVT) | No |
+| [Segmentación de experiencias](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT) | Sí |
+| [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) | No |
+| [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) | No |
+
+
+## Segmentación de audiencia
+
+La siguiente tabla indica qué reglas de audiencia son compatibles o no con [!UICONTROL toma de decisiones en el dispositivo].
+
+| Regla de audiencia | Toma de decisiones en el dispositivo |
+| --- | --- |
+| [Ubicación geográfica](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Sí |
+| [Red](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | No |
+| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | No |
+| [Parámetros personalizados](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | Sí |
+| [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | Sí |
+| [Páginas del sitio](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | Sí |
+| [Navegador](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | Sí |
+| [Perfil del visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | No |
+| [Fuentes de tráfico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | No |
+| [Periodo de tiempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Sí |
+| [Audiencias de Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Audiencias de Adobe Audience Manager, Adobe Analytics y Adobe Experience Manager | No |
+
+### Segmentación geográfica para [!UICONTROL toma de decisiones en el dispositivo]
+
+Para mantener una latencia cercana a cero para [!UICONTROL toma de decisiones en el dispositivo] actividades con audiencias basadas en regiones, Adobe recomienda que proporcione los valores geográficos usted mismo en la llamada a `getOffers`. Para ello, configure las `Geo` objeto en el `Context` de la solicitud. Esto significa que el servidor necesitará una forma de determinar la ubicación de cada usuario final. Por ejemplo, el servidor puede realizar una búsqueda de IP a geografía mediante un servicio que configure. Algunos proveedores de alojamiento, como Google Cloud, proporcionan esta funcionalidad a través de encabezados personalizados en cada `HttpServletRequest`.
+
+>[!BEGINTABS]
+
+>[!TAB Node.js]
+
+```csharp {line-numbers="true"}
+const CONFIG = {
+    client: "acmeclient",
+    organizationId: "1234567890@AdobeOrg",
+    decisioningMethod: "on-device"
+};
+
+const targetClient = TargetClient.create(CONFIG);
+
+targetClient.getOffers({
+    request: {
+        context: {
+            geo: {
+                city: "SAN FRANCISCO",
+                countryCode: "US",
+                stateCode: "CA",
+                latitude: 37.75,
+                longitude: -122.4
+            }
+        },
+        execute: {
+            pageLoad: {}
+        }
+    }
+})
+```
+
+>[!TAB Java]
+
+```javascript {line-numbers="true"}
+public class TargetRequestUtils {
+
+    public static Context getContext(HttpServletRequest request) {
+        Context context = new Context()
+            .geo(ipToGeoLookup(request.getRemoteAddr()))
+            .channel(ChannelType.WEB)
+            .timeOffsetInMinutes(330.0)
+            .address(getAddress(request));
+        return context;
+    }
+
+    public static Geo ipToGeoLookup(String ip) {
+        GeoResult geoResult = geoLookupService.lookup(ip);
+        return new Geo()
+            .city(geoResult.getCity())
+            .stateCode(geoResult.getStateCode())
+            .countryCode(geoResult.getCountryCode());
+    }
+
+}
+```
+
+>[!ENDTABS]
+
+Sin embargo, si no tiene la capacidad de realizar búsquedas de IP a geografía en el servidor, pero aún desea realizar [!UICONTROL toma de decisiones en el dispositivo] para `getOffers` solicitudes que contienen audiencias basadas en entornos geográficos, esto también es compatible. La desventaja de este enfoque es que utilizará una búsqueda remota de IP a geografía, que agregará latencia a cada una `getOffers` llamada. Esta latencia debe ser inferior a la de un remoto `getOffers` Llamada de, ya que golpea una CDN que se encuentra cerca del servidor. Solo debe proporcionar el `ipAddress` en el campo `Geo` objeto en el `Context` de su solicitud, para que el SDK recupere la geolocalización de la dirección IP del usuario. Si se selecciona cualquier otro campo además de `ipAddress` se proporciona, la variable [!DNL Target] El SDK no recuperará los metadatos de localización geográfica para su resolución.
+
+
+>[!BEGINTABS]
+
+>[!TAB Node.js]
+
+```csharp {line-numbers="true"}
+const CONFIG = {
+    client: "acmeclient",
+    organizationId: "1234567890@AdobeOrg",
+    decisioningMethod: "on-device"
+};
+
+const targetClient = TargetClient.create(CONFIG);
+
+targetClient.getOffers({
+    request: {
+        context: {
+            geo: {
+                ipAddress: "127.0.0.1"
+            }
+        },
+        execute: {
+            pageLoad: {}
+        }
+    }
+})
+```
+
+>[!TAB Java]
+
+```javascript {line-numbers="true"}
+public class TargetRequestUtils {
+
+    public static Context getContext(HttpServletRequest request) {
+        Context context = new Context()
+            .geo(new Geo().ipAddress(request.getRemoteAddr()))
+            .channel(ChannelType.WEB)
+            .timeOffsetInMinutes(330.0)
+            .address(getAddress(request));
+        return context;
+    }
+
+}
+```
+
+>[!ENDTABS]
+
+## Método de asignación
+
+La siguiente tabla indica qué métodos de asignación son compatibles o no con [!UICONTROL toma de decisiones en el dispositivo].
+
+| Método de asignación | Compatible |
+| --- | --- |
+| Manual | Sí |
+| [Asignar automáticamente a la mejor experiencia](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | No |
+| [Segmentación automática para experiencias personalizadas](https://experienceleague.adobe.com/docs/target/using/activities/auto-target-to-optimize.html) | No |

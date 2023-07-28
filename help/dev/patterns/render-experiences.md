@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 9b65380febf64896a3885c49f8bb79e4bb33f604
+source-git-commit: 18f070005685699e2d1feb12a31802faa17e35f3
 workflow-type: tm+mt
 source-wordcount: '1032'
 ht-degree: 5%
@@ -27,7 +27,7 @@ La gestión automática de parpadeos predeterminada disponible con at.js solo ti
 
 Los números de paso de la siguiente ilustración corresponden a las secciones siguientes.
 
-![Representar diagrama de experiencias](/help/dev/patterns/assets/diagram-render-experiences.png){width="600" zoomable="yes"}
+![Representar diagrama de experiencias](/help/dev/patterns/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
 Haga clic en los siguientes vínculos para desplazarse a las secciones deseadas:
 

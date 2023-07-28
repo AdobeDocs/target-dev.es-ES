@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 18f070005685699e2d1feb12a31802faa17e35f3
+source-git-commit: ca3a3e5b8272c0db9e355abd2d16896251594b43
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1080'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 # Procesar experiencias
 
 Siga los pasos de la *Experiencias de procesamiento* para garantizar que todas las tareas necesarias para procesar las experiencias se ejecuten en la secuencia correcta.
+
+>[!NOTE]
+>
+>Si ha habilitado la solicitud de carga de página automática durante la [Paso Configurar Solicitud de Carga Automática de Página](/help/dev/patterns/initialize-sdk.md#automatic) in *Inicializar SDK* Sin embargo, puede omitir esta actividad a menos que desee llamar al SDK para Adobe Target para procesar experiencias adicionales mediante una solicitud de ubicación regional.
 
 >[!TIP]
 >
@@ -58,7 +62,7 @@ Añada elementos promocionados y controle su ubicación en Target Recommendation
 
 **Parámetros de entidad obligatorios**
 
-* El atributo de elemento de las promociones debe pasarse al utilizar la opción &quot;promocionar por atributo&quot;.
+* Los atributos de elemento de las promociones deben pasarse al utilizar la opción &quot;promocionar por atributo&quot;.
 
 +++
 
@@ -90,7 +94,7 @@ Haga recomendaciones basadas en el contenido del carro de compras del usuario.
 
 ## 3.3: Criterios basados en popularidad {#popularity}
 
-Haga recomendaciones basadas en la popularidad general de un elemento en el sitio o en la popularidad de elementos dentro de la categoría, marca, género, etc. favoritos o más vistos de un usuario.
+Haga recomendaciones basadas en la popularidad general de un elemento en el sitio o en la popularidad de elementos dentro de la categoría, marca, género, etc. favoritos o más vistos de un visitante.
 
 +++Ver detalles
 
@@ -107,7 +111,7 @@ Haga recomendaciones basadas en la popularidad general de un elemento en el siti
 **Parámetros de entidad obligatorios**
 
 * `entity.categoryId` o el atributo de artículo para la popularidad basada en si los criterios se basan en el atributo de artículo o el actual.
-* No se debe pasar nada para los más visitados/más vendidos en el sitio.
+* No se debe pasar nada para los más visitados/más vendidos del sitio.
 
 **Lecturas**
 
@@ -168,7 +172,7 @@ Haga recomendaciones basadas en el comportamiento del usuario.
 
 ## 3.6: Criterios personalizados {#custom}
 
-Haga recomendaciones basadas en un archivo personalizado que haya cargado
+Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 +++Ver detalles
 
@@ -222,7 +226,7 @@ Pase los ID de entidad de las entidades que desee excluir de las recomendaciones
 
 * [Atributos de entidad](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-También puede llevar a cabo este paso creando fuentes de productos con el complemento [!DNL Target] IU para actualizar el catálogo de productos de [!DNL Recommendations].
+También puede realizar este paso creando lo siguiente [fuentes de productos](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} uso del [!DNL Target] IU para actualizar el catálogo de productos de [!DNL Recommendations].
 
 +++
 
@@ -244,7 +248,7 @@ Proporcione los atributos de perfil que se utilizan como claves para las reglas 
 
 ## 3.11: Activar la solicitud de carga de página {#fire}
 
-Este paso déclencheur un [!DNL Delivery API] llame a con `execute` > `pageLoad` carga útil en la solicitud. El `getOffers()` obtiene la experiencia y `applyOffers()` procesa la experiencia en la página. La solicitud pageLoad es necesaria para procesar experiencias creadas en [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
+Este paso déclencheur un [!DNL Delivery API] llame a con `execute` > `pageLoad` carga útil en la solicitud. El `getOffers()` obtiene la experiencia y `applyOffers()` procesa la experiencia en la página. El `pageLoad` La solicitud de es necesaria para procesar experiencias creadas en [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 +++Ver detalles
 

@@ -4,10 +4,10 @@ description: Ver una lista de hosts para ayudarle en la lista de permitidos [!DN
 title: ¿Cómo puedo realizar la Lista de permitidos? [!DNL Target] ¿Nodos perimetrales?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 55deb12a59dc228ec7dcec17fc0ecb43e2900613
+source-git-commit: 3f4147d521b1fb3ee12e879e52a48d459f6b24b9
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 6%
 
 ---
 
@@ -27,11 +27,7 @@ Puede realizar la lista de permitidos [!DNL Target] nodos de Edge, si lo desea.
 >
 >[!DNL Adobe Target] La infraestructura de se está actualizando y los clientes que deseen crear direcciones de lista de permitidos deben utilizar ambos conjuntos de direcciones IP. Si no se hace esto, esto afectará a los clientes que usan implementaciones del lado del servidor o híbridas en las que las llamadas de la API de Target para recuperar experiencias se originan dentro de una red detrás de un firewall configurado para usar una lista de permitidos.
 >
->Esta actualización se realiza según la siguiente programación:
->
->* 22-26 de mayo: región de Europa, Oriente Medio y África (EMEA)
->* Del 22 al 26 de mayo: región Asia-Pacífico (APAC)
->* Del 6 al 10 de junio: región de América
+>Todos los Edge4 *x* Las direcciones enumeradas en ambas tablas a continuación están programadas para actualizarse el 9 de agosto de 2023.
 
 ## Direcciones IP de traducción de direcciones de red (NAT) de [!DNL Target] bordes
 

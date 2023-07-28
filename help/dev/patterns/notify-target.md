@@ -6,16 +6,16 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 65cad3c558aa0f52c8007dcdb566c0ce3b29d8b7
+source-git-commit: 1291a095a7befed5f795f34099e0411930788e29
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
 
 # Notificar [!DNL Target]
 
-Al completar este paso, se garantiza que todos los eventos que necesitan enviarse a [!DNL Adobe Target] se envían utilizando `trackEvent` método.
+Completar este paso garantiza que todos los eventos que deben enviarse a [!DNL Adobe Target] se envían utilizando `trackEvent` método.
 
 Cualquier evento que deba rastrearse en [!DNL Target] puede ser un evento de conversión principal o una métrica de éxito.
 
@@ -31,13 +31,13 @@ El número de paso de la siguiente ilustración corresponde a la sección siguie
 
 ## Fire [!DNL Adobe Target] API de seguimiento
 
-Este paso le ayuda a garantizar que todos los eventos que deben enviarse a [!DNL Target] se envían utilizando `trackEvent` método.
+Este paso le ayuda a asegurarse de que todos los eventos de se deben enviar a [!DNL Target] se envían utilizando `trackEvent` método.
 
 +++Ver detalles
 
 ![Activar el diagrama API de seguimiento de Adobe Target](/help/dev/patterns/assets/fire-adobe-target-track-api-diagram.png){width="100" zoomable="yes"}
 
-Envíe los atributos de conversión del pedido tal y como se indica en la sección Requisitos previos que aparece a continuación. El nombre del mbox no importa, pero la conversión es usar `orderConfirmPage`.
+Los atributos de conversión de pedidos se envían tal como se indica en la *Requisitos previos* más abajo. El nombre del mbox no importa, pero la conversión es usar `orderConfirmPage`.
 
 No es necesario incluir los atributos de conversión de pedidos en esta llamada. Idealmente, estas llamadas registran métricas de éxito que pueden considerarse como eventos de miniconversión antes de los eventos de conversión principales. `CardIds` debe incluirse en las recomendaciones basadas en el carro de compras en función de `Add to Cart` evento.
 
@@ -46,7 +46,7 @@ No es necesario incluir los atributos de conversión de pedidos en esta llamada.
 * Reúnase con su equipo empresarial para identificar todos los eventos que pueden considerarse como métricas de conversión o de éxito. También debe identificar el evento de conversión que genera ingresos para que esos detalles se puedan enviar a [!DNL Target] junto con los datos de evento.
 * Asegúrese de que los siguientes atributos estén disponibles en la capa de datos para que pueda enviarlos con el evento de conversión. El evento de conversión genera ingresos, como una compra de producto o un evento de Agregar al carro de compras.
 
-   * `productPurchaseId`: ID de productos que se compraron como parte del pedido. Separar varios productos con comas.
+   * `productPurchaseId`: ID de productos que se compraron como parte del pedido. Separe varios productos con comas.
    * `orderTotal`: Total del pedido de la compra.
    * `orderId`: ID de pedido de la compra.
 

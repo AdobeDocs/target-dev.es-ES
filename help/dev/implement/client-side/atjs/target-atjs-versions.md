@@ -4,9 +4,9 @@ description: Vea los detalles sobre los cambios en cada versión de [!DNL Adobe 
 title: ¿Qué se incluye en cada versión de at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
 workflow-type: tm+mt
-source-wordcount: '4554'
+source-wordcount: '4603'
 ht-degree: 74%
 
 ---
@@ -15,9 +15,15 @@ ht-degree: 74%
 
 Detalles sobre los cambios realizados en cada versión de la biblioteca JavaScript de at.js. [!DNL Adobe Target].
 
->[!WARNING]
+>[!IMPORTANT]
 >
->[!DNL Adobe Target] admite at.js 1.*x* y at.js 2.*x*. Actualice a la actualización más reciente de cualquiera de las versiones principales de at.js para asegurarse de que dispone de una versión compatible.
+>[!DNL Adobe Target] admite at.js 1.*x* y at.js 2.*x*.
+>
+>at.js 1.*x*   ha entrado en modo de mantenimiento. El [!DNL Target] Team publica correcciones de errores y parches de seguridad cuando es necesario.
+>
+>El [!DNL Target] El equipo de proporciona compatibilidad total con at.js 2.*x* y publica correcciones de errores, parches de seguridad, funciones y optimización del rendimiento de forma continua.
+>
+>Debe actualizar a las versiones más recientes de cualquiera de las dos 1.*x* o 2.*x* para obtener correcciones de errores y parches de seguridad para problemas detectados en cualquier versión menor anterior de la versión principal correspondiente.
 
 Etiquetas en [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) son el método preferido para actualizar at.js. Los desarrolladores de extensiones añaden continuamente nuevas funciones a sus extensiones y suelen corregir errores. Estas actualizaciones se incluyen en las versiones nuevas de una extensión y se pueden descargar en el catálogo de Adobe Experience Platform como actualizaciones. Para obtener más información, consulte [Actualizaciones de extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) en el *Información general sobre etiquetas* guía.
 

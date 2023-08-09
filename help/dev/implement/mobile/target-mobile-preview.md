@@ -4,10 +4,10 @@ description: Utilice los vínculos de vista previa para móviles para realizar u
 title: ¿Cómo utilizo el vínculo de vista previa para móviles en? [!DNL Target] ¿Móvil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
+source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 57%
+source-wordcount: '552'
+ht-degree: 51%
 
 ---
 
@@ -21,7 +21,7 @@ La funcionalidad de vista previa para móviles le permite probar completamente s
 
 ## Requisitos previos  
 
-1. **Utilice una versión compatible del SDK:** la función de vista previa para móviles requiere que descargue e instale la versión apropiada (4.14 o posterior) del SDK de Adobe Mobile en las aplicaciones correspondientes.
+1. **Utilice una versión compatible del SDK:** La función de vista previa para móviles requiere que descargue e instale la versión adecuada del SDK de Adobe Mobile en sus aplicaciones correspondientes.
 
    Para obtener instrucciones para descargar el SDK adecuado, consulte [Versiones actuales del SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} en el *[!DNL Adobe Experience Platform Mobile SDK]* documentación.
 

@@ -4,9 +4,9 @@ description: Utilice los vínculos de vista previa para móviles para realizar u
 title: ¿Cómo utilizo el vínculo de vista previa para móviles en? [!DNL Target] ¿Móvil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
+source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 51%
 
 ---
@@ -34,7 +34,7 @@ La funcionalidad de vista previa para móviles le permite probar completamente s
    * **iOS**: para obtener más información sobre la configuración de esquemas de URL para iOS, consulte [Definición de un esquema de URL personalizado para la aplicación](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} en el sitio web de Apple Developer.
    * **Android**: Para obtener más información sobre la configuración de esquemas de URL para Android, consulte [Creación de vínculos profundos al contenido de la aplicación](https://developer.android.com/training/app-links/deep-linking){target=_blank} en el sitio web de desarrolladores de Android.
 
-1. **Configuración de `collectLaunchInfo` API**
+1. **Configuración de `collectLaunchInfo` API (solo i0S)**
 
    Para obtener más información, consulte [Vista previa](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* en el *[!DNL Adobe Experience Platform Mobile SDK]* documentación.
 

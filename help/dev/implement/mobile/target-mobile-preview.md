@@ -4,20 +4,16 @@ description: Utilice los vínculos de vista previa para móviles para realizar u
 title: ¿Cómo utilizo el vínculo de vista previa para móviles en? [!DNL Target] ¿Móvil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 68%
+source-wordcount: '554'
+ht-degree: 57%
 
 ---
 
 # [!DNL Target] vista previa para móviles
 
 Use el vínculo de vista previa en móviles para realizar fácilmente un control de calidad exhaustivo de las actividades de aplicaciones móviles y registrarse en diversas experiencias directamente en el dispositivo sin tener que usar uno especial para pruebas.
-
->[!NOTE]
->
->La función de vista previa para móviles requiere que descargue e instale la versión apropiada (4.14 o posterior) del SDK de Adobe Mobile.
 
 ## Información general
 
@@ -27,69 +23,24 @@ La funcionalidad de vista previa para móviles le permite probar completamente s
 
 1. **Utilice una versión compatible del SDK:** la función de vista previa para móviles requiere que descargue e instale la versión apropiada (4.14 o posterior) del SDK de Adobe Mobile en las aplicaciones correspondientes.
 
-   Para obtener instrucciones sobre la descarga del SDK apropiado, consulte:
-
-   * **iOS:** [Antes de comenzar](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/requirements.html) en el *Ayuda de Mobile Services para iOS*.
-   * **Android:** [Antes de comenzar](https://experienceleague.adobe.com/docs/mobile-services/android/getting-started-android/requirements.html) en el *Ayuda de Mobile Services para Android*.
+   Para obtener instrucciones para descargar el SDK adecuado, consulte [Versiones actuales del SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} en el *[!DNL Adobe Experience Platform Mobile SDK]* documentación.
 
 1. **Configure un esquema de direcciones URL:** el vínculo de vista previa utiliza un esquema de direcciones URL para abrir la aplicación. Debe especificar un esquema de URL único para la vista previa.
 
-   La siguiente ilustración muestra un ejemplo en iOS:
+   Para obtener más información, consulte [Vista previa](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* en el *[!DNL Adobe Experience Platform Mobile SDK]* documentación.
 
-   ![imagen alt](assets/mobile-preview-url-scheme-ios.png)
+   Los siguientes vínculos contienen más información:
 
-   La siguiente ilustración muestra un ejemplo en Android:
+   * **iOS**: para obtener más información sobre la configuración de esquemas de URL para iOS, consulte [Definición de un esquema de URL personalizado para la aplicación](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} en el sitio web de Apple Developer.
+   * **Android**: Para obtener más información sobre la configuración de esquemas de URL para Android, consulte [Creación de vínculos profundos al contenido de la aplicación](https://developer.android.com/training/app-links/deep-linking){target=_blank} en el sitio web de desarrolladores de Android.
 
-   ![imagen alt](assets/Android_Deeplink.png)
+1. **Configuración de `collectLaunchInfo` API**
 
-1. **Seguimiento de Adobe DeepLink**
-
-   **iOS:** en el delegado de la aplicación, realice una llamada a `[ADBMobile trackAdobeDeepLink:url` cuando se le pida al delegado que abra el recurso con el esquema de la URL especificado en el paso anterior.
-
-   El siguiente fragmento de código es un ejemplo:
-
-   ```javascript {line-numbers="true"}
-   - (BOOL) application:(UIApplication *)app openURL:(NSURL *)url 
-                options:(NSDictionary<NSString *,id> *)options { 
-   
-       if ([[url scheme] isEqualToString:@"com.adobe.targetmobile"]) { 
-           [ADBMobile trackAdobeDeepLink:url]; 
-           return YES; 
-       } 
-       return NO; 
-   } 
-   ```
-
-   **Android:** en la aplicación, realice una llamada a `Config.trackAdobeDeepLink(URL);` cuando se pida a la persona que llama que abra el recurso con el esquema de la URL especificado en el paso anterior.
-
-   ```javascript {line-numbers="true"}
-    private Boolean shouldOpenDeeplinkUrl() { 
-        Intent appLinkIntent = getIntent(); 
-        String appLinkAction = appLinkIntent.getAction(); 
-        Uri appLinkData = appLinkIntent.getData; 
-        if (appLinkData.toString().startsWith("com.adobe.targetmobile")) { 
-            Config.trackAdobeDeepLink(appLinkData); 
-            return true; 
-        } 
-        return false; 
-     }
-   ```
-
-   Para que la vista previa para móviles funcione en Android, también debe añadir el siguiente fragmento de código en AndroidManifest.xml si utiliza la versión 5 del SDK de Adobe Mobile:
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.marketing.mobile.FullscreenMessageActivity" />
-   ```
-
-   Si utiliza la versión 4 del SDK de Adobe Mobile, utilice el siguiente fragmento de código:
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.mobile.MessageFullScreenActivity" />
-   ```
+   Para obtener más información, consulte [Vista previa](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* en el *[!DNL Adobe Experience Platform Mobile SDK]* documentación.
 
 ## Generación de un vínculo de vista previa
 
-1. En el [!DNL Target] IU, haga clic en **[!UICONTROL Más opciones]** (tres elipses verticales) y, a continuación, seleccione **[!UICONTROL Crear vista previa para móviles]**.
+1. En el [!DNL Target] IU, haga clic en **[!UICONTROL Más opciones]** (los puntos suspensivos verticales), y seleccione **[!UICONTROL Crear vista previa para móviles]**.
 
    ![imagen alt](assets/mobile-preview-create.png)
 

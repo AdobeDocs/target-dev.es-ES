@@ -4,10 +4,10 @@ description: Descubra qué funciones son compatibles con [!UICONTROL toma de dec
 title: Qué funciones son compatibles con la toma de decisiones en el dispositivo
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 9%
+source-wordcount: '666'
+ht-degree: 10%
 
 ---
 
@@ -36,7 +36,7 @@ La siguiente tabla indica qué reglas de audiencia son compatibles o no con [!UI
 
 | Regla de audiencia | Compatible? |
 | --- | --- |
-| [Ubicación geográfica](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Sí |
+| [Ubicación geográfica](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Sí<P>Al utilizar la toma de decisiones en el dispositivo, se admiten los siguientes atributos geográficos:<ul><li>País/región</li><li>Ciudad</li><li>Latitud</li><li>Longitud</li></ul> |
 | [Red](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | No |
 | [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | No |
 | [Parámetros personalizados](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | Sí |

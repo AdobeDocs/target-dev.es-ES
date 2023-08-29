@@ -4,10 +4,10 @@ description: Descubra cómo [!DNL Adobe Target] cumple con las leyes aplicables 
 title: ¿Cómo gestiona Target los problemas de privacidad, incluida la PII?
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: d9ac5bab3a09cf49b2178a62c06eebe733b9048d
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 58%
+source-wordcount: '865'
+ht-degree: 48%
 
 ---
 
@@ -38,6 +38,14 @@ Las siguientes configuraciones están disponibles en la variable [!DNL Target] I
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
 
 [!DNL Target] recibe la dirección IP completa y la oculta (si se establece en Último octeto o IP completa) según se ha especificado. [!DNL Target] a continuación, guarda la dirección IP ocultada en la memoria sólo durante la sesión actual.
+
+### Confusión de IP en el nivel de flujo de datos al utilizar [!DNL Adobe Experience Platform Web SDK]
+
+Al usar el [!DNL Platform Web SDK] (versión 23.4 o posterior), la configuración de confusión de IP en el nivel de secuencia de datos tiene prioridad sobre cualquier opción de confusión de IP establecida en [!DNL Target]. Por ejemplo, si la opción de confusión de IP en el nivel de secuencia de datos está configurada en [!UICONTROL Completo] y el [!DNL Target] La opción de confusión de IP está configurada en [!UICONTROL Ofuscación del último octeto], [!DNL Target] recibe una IP totalmente oculta. Debido a la confusión de IP en [!DNL Target] Esto sucede antes de que la búsqueda de geolocalización, la configuración de ofuscación de IP en el nivel de conjunto de datos no tiene ningún impacto.
+
+Después de establecer la confusión de IP en el nivel de flujo de datos y de que los datos pasen a través de la red perimetral, las solicitudes llegan a [!DNL Target] y [!DNL Adobe Audience Manager] AAM () contienen solo la IP ofuscada y cualquier lógica basada en la IP del cliente se ve afectada por la opción de confusión de IP del nivel de flujo de datos. Cualquier confusión de IP establecida en [!DNL Target] AAM o se aplica la dirección IP ya ocultada.
+
+Para obtener más información, consulte [!UICONTROL Confusión de IP] in [Configuración de una secuencia de datos](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html){target=_blank} en el *[!DNL Adobe Experience Platfrom]Guía de flujos de datos*.
 
 ## Segmentación geográfica
 

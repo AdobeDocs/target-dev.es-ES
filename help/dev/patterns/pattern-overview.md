@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c4b9dfed19e5e4a56bfeae26c4310b997a2d617e
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ Tenga en cuenta que los números de la imagen no indican la secuencia de operaci
 
 Cada patrón consta de diferentes partes. Cada parte corresponde a un requisito de implementación crítico para su [!DNL Target] implementación.
 
-Cada parte se explica en una página independiente en esta guía. Por ejemplo, la variable [!DNL Target] El patrón de implementación contiene las siguientes páginas:
+Cada parte se explica en una página independiente en esta guía. Por ejemplo, la variable [[!DNL Recommendations] patrón de implementación con at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) contiene las siguientes páginas:
 
 * Inicializar SDK
-* Enriquecimiento del perfil
+* Configuración de la recopilación de datos
 * Experiencias de procesamiento
 * Notificar [!DNL Target]
 

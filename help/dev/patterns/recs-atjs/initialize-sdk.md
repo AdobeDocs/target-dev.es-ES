@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -54,7 +54,7 @@ Este paso ayuda a garantizar que la variable `VisitorAPI.js` La biblioteca de se
 
 +++Ver detalles
 
-![Cargar diagrama del SDK de API de visitante](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="300" zoomable="yes"}
+![Cargar diagrama del SDK de API de visitante](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
@@ -90,7 +90,7 @@ Este paso ayuda a garantizar que los ID conocidos de los visitantes (ID de CRM, 
 
 +++Ver detalles
 
-![Establecimiento del ID de cliente](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="300" zoomable="yes"}
+![Establecimiento del ID de cliente](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
@@ -117,7 +117,7 @@ Este paso permite que at.js recupere todas las experiencias que se deben procesa
 
 +++Ver detalles
 
-![Configurar la solicitud automática de carga de página](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="300" zoomable="yes"}
+![Configurar la solicitud automática de carga de página](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
@@ -146,7 +146,7 @@ Este paso ayuda a garantizar que no haya parpadeo en la página al enviar experi
 
 +++Ver detalles
 
-![Configurar diagrama de control de parpadeo](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="300" zoomable="yes"}
+![Configurar diagrama de control de parpadeo](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
@@ -179,7 +179,7 @@ Este paso ayuda a garantizar que todos los datos que se deben enviar a [!DNL Tar
 
 +++Ver detalles
 
-![Diagrama de asignación de datos](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="300" zoomable="yes"}
+![Diagrama de asignación de datos](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
@@ -399,7 +399,7 @@ Este paso garantiza que todos los datos que deben enviarse a [!DNL Target] está
 
 +++Ver detalles
 
-![Diagrama de asignación de datos remotos](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="300" zoomable="yes"}
+![Diagrama de asignación de datos remotos](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
@@ -427,7 +427,7 @@ Este paso garantiza que la biblioteca JavaScript at.js se cargue e inicialice.
 
 +++Ver detalles
 
-![Cargar diagrama de SDK web de Adobe Target](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="300" zoomable="yes"}
+![Cargar diagrama de SDK web de Adobe Target](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 

@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 8707fb55d66cb7a28d311a03c749acb1a1d79cf8
+source-git-commit: 3f97c3b38300ec4bbb0bffccfc0ff3f02457a0fc
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,19 @@ ht-degree: 0%
 
 El [!DNL Adobe Target] Los patrones de implementación proporcionan directrices sobre cómo implementar [!DNL Target] seguir las prácticas recomendadas y ayudar a reducir los problemas de implementación para clientes y consultores.
 
+Porque el proceso de implementación [!DNL Target] varía según los distintos marcos y plataformas, la variable [!DNL Target] El equipo de planea crear patrones de implementación para varios marcos, plataformas e integraciones.
+
 El siguiente patrón está disponible actualmente:
 
 * [[!DNL Recommendations] patrón de implementación con at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
+Estos patrones de implementación están pensados para centrarse en qué hacer, cuándo hacerlo y dónde hacerlo en lugar de cómo hacerlo. Los diagramas de flujo detallados le ayudan a comprender la secuencia de operaciones y los vínculos a la documentación relevante proporcionan instrucciones contextuales y paso a paso.
+
 ## Sugerir ideas para nuevos patrones o correcciones a patrones existentes
 
-El [!DNL Target] El equipo de planea crear patrones de implementación para varios marcos, plataformas e integraciones. El equipo también acoge con beneplácito las sugerencias para mejorar las pautas existentes.
+El [!DNL Target] El equipo de planea crear varios patrones de implementación para diferentes marcos, plataformas e integraciones. El equipo también acoge con beneplácito las sugerencias para mejorar las pautas existentes.
 
-Para ayudar al equipo a crear nuevos patrones o mejorar los existentes, utilice el **Opciones de comentarios** en la parte inferior de todos los artículos de *[!DNL Adobe Experience League]*.
+Para ayudar al equipo a crear nuevos patrones o mejorar los patrones existentes, utilice el **Opciones de comentarios** en la parte inferior de todos los artículos de *[!DNL Adobe Experience League]*.
 
 1. Para sugerir ideas de nuevos patrones, desplácese hasta la parte inferior de este artículo para mostrar el modal de opciones de Comentarios.
 
@@ -43,9 +47,11 @@ Para ayudar al equipo a crear nuevos patrones o mejorar los existentes, utilice 
 
    1. Escriba un título y, a continuación, escriba los comentarios en el cuadro de texto.
 
+      Adjunte archivos o capturas de pantalla si es necesario.
+
    1. Clic **[!UICONTROL Enviar nuevo problema]** cuando termine.
 
-1. (Condicional) Para editar un artículo para un patrón existente, haga clic en **[!UICONTROL Sugerir una edición]**, luego haga clic en **[!UICONTROL Editar]** (el icono de lápiz).
+1. (Condicional) Para editar el texto de un patrón existente, en el modelo de opciones de Comentarios del artículo correspondiente, haga clic en **[!UICONTROL Sugerir una edición]**, luego haga clic en **[!UICONTROL Editar]** (el icono de lápiz).
 
    1. Realice ediciones con la sintaxis Markdown.
 
@@ -55,7 +61,7 @@ El [!DNL Target] El equipo de puede revisar los comentarios o las ediciones y co
 
 >[!NOTE]
 >
->[!DNL Adobe] los empleados pueden utilizar el *Patrones de implementación para [!DNL Adobe Target] Implementación* wiki para obtener más información sobre cómo contribuir con los patrones de diseño. Siga las indicaciones anteriores y pida el enlace y el [!DNL Target] El equipo de puede proporcionar un vínculo a la [!DNL Adobe] wiki.
+>[!DNL Adobe] los empleados pueden utilizar el *Patrones de implementación para [!DNL Adobe Target] Implementación* wiki para obtener más información sobre cómo contribuir al diseño de patrones. Siga las instrucciones anteriores sobre cómo sugerir una idea y, a continuación, pida el vínculo y el [!DNL Target] El equipo de puede proporcionar un vínculo a la [!DNL Adobe] wiki.
 
 
 

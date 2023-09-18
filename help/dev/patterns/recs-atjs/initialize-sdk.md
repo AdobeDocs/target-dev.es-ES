@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
+source-git-commit: f2587af68a76eb700378076ad9f20844061164ae
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -54,7 +54,7 @@ Este paso ayuda a garantizar que la variable `VisitorAPI.js` La biblioteca de se
 
 +++Ver detalles
 
-![Cargar diagrama del SDK de API de visitante](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="400" zoomable="yes"}
+![Cargar diagrama del SDK de API de visitante](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 

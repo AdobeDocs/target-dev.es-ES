@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 60b986b4d956972714cb485057484ee5d6eed2bb
+source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1790'
 ht-degree: 8%
 
 ---
@@ -179,7 +179,7 @@ Este paso ayuda a garantizar que todos los datos que se deben enviar a [!DNL Tar
 
 +++Ver detalles
 
-![Diagrama de asignación de datos](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
+![Diagrama de asignación de datos](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
@@ -399,7 +399,7 @@ Este paso garantiza que todos los datos que deben enviarse a [!DNL Target] está
 
 +++Ver detalles
 
-![Diagrama de asignación de datos remotos](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
+![Diagrama de asignación de datos remotos](/help/dev/patterns/recs-atjs/assets/remote-data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
@@ -427,7 +427,7 @@ Este paso garantiza que la biblioteca JavaScript at.js se cargue e inicialice.
 
 +++Ver detalles
 
-![Cargar diagrama de SDK web de Adobe Target](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
+![Cargar diagrama de at.js de Adobe Target](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 

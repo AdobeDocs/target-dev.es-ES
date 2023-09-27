@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1814'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,9 @@ Siga los pasos de la *Inicializar SDK* para asegurarse de que todas las tareas n
 
 En el caso de las aplicaciones de varias páginas, este flujo se produce cada vez que la página se vuelve a cargar o el visitante navega a una nueva página del sitio web.
 
-Los números de paso de la siguiente ilustración corresponden a las secciones siguientes.
+>[!NOTE]
+>
+>Los números de paso de la siguiente ilustración corresponden a las secciones siguientes. Los números de paso no están en un orden particular y no reflejan el orden de los pasos realizados en la [!DNL Target] Interfaz de usuario al crear la actividad.
 
 ![Inicializar diagrama de SDK](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 

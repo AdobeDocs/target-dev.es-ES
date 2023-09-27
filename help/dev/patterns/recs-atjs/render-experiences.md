@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 85af1bad244dc0aa7665e2fbb627d82f6fabbf88
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1104'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,9 @@ Siga los pasos de la *Experiencias de procesamiento* para garantizar que todas l
 
 La gestión automática de parpadeos predeterminada disponible con at.js solo tiene sentido cuando tiene [!UICONTROL Solicitud automática de carga de página] activado. Esta opción oculta todo el cuerpo del HTML al recuperar las experiencias de [!DNL Target]. En este caso, es su responsabilidad gestionar el parpadeo. Busque patrones de implementación disponibles para la gestión de parpadeos a modo de guía.
 
-Los números de paso de la siguiente ilustración corresponden a las secciones siguientes.
+>[!NOTE]
+>
+>Los números de paso de la siguiente ilustración corresponden a las secciones siguientes. Los números de paso no están en un orden particular y no reflejan el orden de los pasos realizados en la [!DNL Target] Interfaz de usuario al crear la actividad.
 
 ![Representar diagrama de experiencias](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 

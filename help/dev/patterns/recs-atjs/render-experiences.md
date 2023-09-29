@@ -4,11 +4,9 @@ description: Asegúrese de que todos los pasos necesarios para procesar las expe
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1124'
 ht-degree: 7%
 
 ---
@@ -52,7 +50,7 @@ Haga clic en los siguientes vínculos para desplazarse a las secciones deseadas:
 
 ## 3.1: Promoción {#promotion}
 
-Añada elementos promocionados y controle su ubicación en Target Recommendations [diseños](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+Añada elementos promocionados y controle su ubicación en el diseño de recomendaciones eligiendo promociones principales o secundarias en la [!DNL Target] Interfaz de usuario al crear la actividad.
 
 +++Ver detalles
 
@@ -65,6 +63,10 @@ Añada elementos promocionados y controle su ubicación en Target Recommendation
 **Parámetros de entidad obligatorios**
 
 * Los atributos de elemento de las promociones deben pasarse al utilizar la opción &quot;promocionar por atributo&quot;.
+
+**Lecturas**
+
+* [Agregar promociones](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -297,3 +299,5 @@ Este paso déclencheur un [!DNL Delivery API] llame a con `execute` > `mboxes` c
 +++
 
 [Vuelva al diagrama situado en la parte superior de esta página.](#diagram)
+
+Continúe con el paso 4: [Notificar al destinatario](/help/dev/patterns/recs-atjs/notify-target.md).

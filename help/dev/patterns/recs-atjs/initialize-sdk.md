@@ -4,11 +4,9 @@ description: Asegúrese de que siguen todos los pasos necesarios para cargar el 
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1820'
 ht-degree: 8%
 
 ---
@@ -448,6 +446,8 @@ Incruste el archivo at.js en todas las páginas web donde se debe llevar a cabo 
 +++
 
 [Vuelva al diagrama situado en la parte superior de esta página.](#diagram)
+
+Continúe con el paso 2: [Configuración de la recopilación de datos](/help/dev/patterns/recs-atjs/data-collection.md).
 
 
 

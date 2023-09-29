@@ -4,11 +4,9 @@ description: Asegúrese de que rastrea todos los eventos que necesita [!DNL Targ
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 013a49b92357cfb5d45f7e595b46b1b12ce91c65
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -49,6 +47,10 @@ No es necesario incluir los atributos de conversión de pedidos en esta llamada.
    * `productPurchaseId`: ID de productos que se compraron como parte del pedido. Separe varios productos con comas.
    * `orderTotal`: Total del pedido de la compra.
    * `orderId`: ID de pedido de la compra.
+
+  La siguiente ilustración muestra una [regla para [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que sólo se debe activar en el [!UICONTROL Confirmación] página.
+
+  ![Página Configuración de la acción](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * Si está realizando el seguimiento de un evento para agregar al carro de compras, envíe `cartIds` como parámetro. Se puede pasar una lista de ID de producto separados por comas para `cardIds`.
 

@@ -1,46 +1,44 @@
 ---
 keywords: control de calidad, vista previa, vínculo de vista previa, móvil, vista previa para móviles
-description: Utilice los vínculos de vista previa para móviles para realizar un completo control de calidad de las actividades de aplicaciones móviles. Puede inscribirse en diferentes experiencias sin dispositivos de prueba especiales.
-title: ¿Cómo utilizo el vínculo de vista previa para móviles en? [!DNL Target] ¿Móvil?
+description: Utilice los vínculos de vista previa para móviles para realizar un completo control de calidad de las actividades de aplicaciones móviles.
+title: ¿Cómo utilizo los vínculos de vista previa para móviles en? [!DNL Adobe Target] ¿Móvil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
+source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 51%
+source-wordcount: '548'
+ht-degree: 27%
 
 ---
 
 # [!DNL Target] vista previa para móviles
 
-Use el vínculo de vista previa en móviles para realizar fácilmente un control de calidad exhaustivo de las actividades de aplicaciones móviles y registrarse en diversas experiencias directamente en el dispositivo sin tener que usar uno especial para pruebas.
-
-## Información general
+Use los vínculos de vista previa en móviles para realizar fácilmente un control de calidad exhaustivo de las actividades de aplicaciones móviles y registrarse en diferentes experiencias con el dispositivo sin tener que usar ningún dispositivo de prueba especial.
 
 La funcionalidad de vista previa para móviles le permite probar completamente sus actividades de aplicación móvil antes del lanzamiento.
 
 ## Requisitos previos  
 
-1. **Utilice una versión compatible del SDK:** La función de vista previa para móviles requiere que descargue e instale la versión adecuada del SDK de Adobe Mobile en sus aplicaciones correspondientes.
+1. **Utilice una versión compatible del SDK:** La función de vista previa para móviles requiere que descargue e instale la versión adecuada de [!DNL Adobe Mobile SDK] en sus aplicaciones correspondientes.
 
    Para obtener instrucciones para descargar el SDK adecuado, consulte [Versiones actuales del SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} en el *[!DNL Adobe Experience Platform Mobile SDK]* documentación.
 
-1. **Configure un esquema de direcciones URL:** el vínculo de vista previa utiliza un esquema de direcciones URL para abrir la aplicación. Debe especificar un esquema de URL único para la vista previa.
+1. **Configure un esquema de direcciones URL:** el vínculo de vista previa utiliza un esquema de direcciones URL para abrir la aplicación. Especifique un esquema URL único para la vista previa.
 
-   Para obtener más información, consulte [Vista previa](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* en el *[!DNL Adobe Experience Platform Mobile SDK]* documentación.
+   Para obtener más información, consulte [Vista previa](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Configurar la extensión de Target en la interfaz de usuario de la conexión de datos* en el *[!DNL Mobile SDK]* documentación.
 
    Los siguientes vínculos contienen más información:
 
-   * **iOS**: para obtener más información sobre la configuración de esquemas de URL para iOS, consulte [Definición de un esquema de URL personalizado para la aplicación](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} en el sitio web de Apple Developer.
-   * **Android**: Para obtener más información sobre la configuración de esquemas de URL para Android, consulte [Creación de vínculos profundos al contenido de la aplicación](https://developer.android.com/training/app-links/deep-linking){target=_blank} en el sitio web de desarrolladores de Android.
+   * **iOS**: para obtener más información sobre la configuración de esquemas de URL para iOS, consulte [Definición de un esquema de URL personalizado para la aplicación](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} en el *Apple Developer* sitio web.
+   * **Android**: Para obtener más información sobre la configuración de esquemas de URL para Android, consulte [Creación de vínculos profundos al contenido de la aplicación](https://developer.android.com/training/app-links/deep-linking){target=_blank} en el *Desarrolladores de Android* sitio web.
 
-1. **Configuración de `collectLaunchInfo` API (solo i0S)**
+1. **Configure las variables `collectLaunchInfo` API (solo i0S)**
 
-   Para obtener más información, consulte [Vista previa](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* en el *[!DNL Adobe Experience Platform Mobile SDK]* documentación.
+   Para obtener más información, consulte [Vista previa](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Configurar la extensión de Target en la interfaz de usuario de la conexión de datos* en el *[!DNL Mobile SDK]* documentación.
 
 ## Generación de un vínculo de vista previa
 
-1. En el [!DNL Target] IU, haga clic en **[!UICONTROL Más opciones]** (los puntos suspensivos verticales), y seleccione **[!UICONTROL Crear vista previa para móviles]**.
+1. En el [!DNL Target] IU, haga clic en **[!UICONTROL Más opciones]** (los puntos suspensivos verticales), y seleccione **[!UICONTROL Crear vínculo de vista previa para móviles]**.
 
    ![imagen alt](assets/mobile-preview-create.png)
 
@@ -48,13 +46,13 @@ La funcionalidad de vista previa para móviles le permite probar completamente s
 
    >[!NOTE]
    >
-   >Solo se pueden seleccionar actividades AB y XT basadas en formularios.
+   >Solo puede seleccionar Basado en formularios [!UICONTROL Prueba A/B] y [!UICONTROL Segmentación de experiencias] Actividades de (XT).
 
    ![imagen alt](assets/mobile-preview-select-activities.png)
 
 1. Especifique el esquema de URL de su aplicación.
 
-   Debe ser el mismo que está presente en su aplicación iOS o Android. Si es necesario, repita este proceso de forma separada para iOS y Android.
+   El esquema de URL debe ser el mismo que el que está presente en la aplicación de iOS o Android. Repita este proceso por separado para iOS y Android, si es necesario.
 
    ![imagen alt](assets/mobile-preview-enter-url-scheme.png)
 
@@ -64,15 +62,15 @@ La funcionalidad de vista previa para móviles le permite probar completamente s
 
 ## Vista previa en su dispositivo
 
-Abra el vínculo en un navegador móvil en un dispositivo en el que tenga instalada la aplicación. Puede ser la aplicación de producción descargada desde la tienda App Store de Apple o la tienda Google Play. No es necesario que sea una compilación especial. Si tiene un vínculo de vista previa activo, podrá ver las experiencias en el dispositivo.
+Abra el vínculo en un navegador móvil en un dispositivo en el que tenga instalada la aplicación. Esta aplicación puede ser la aplicación de producción que descargó del [!DNL Apple App Store] o el [!DNL Google Play Store]. No es necesario que la aplicación sea una compilación especial. Si tiene un vínculo de vista previa activo, puede ver las experiencias en el dispositivo.
 
 1. Abra el vínculo en su navegador móvil.
 
-   Comparta el vínculo que ha copiado en el paso anterior desde el [!DNL Target] Conecte la interfaz de usuario a su dispositivo móvil de forma práctica, por ejemplo, mediante texto, correo electrónico o Slack.
+   Comparta el vínculo que copió en la sección anterior desde el [!DNL Target] Conecte la interfaz de usuario a su dispositivo móvil de forma práctica, por ejemplo, mediante texto, correo electrónico o [!DNL Slack].
 
    |![vista previa del vínculo profundo 1](assets/mobile-preview-open-deeplink.png)|![vista previa del vínculo profundo 2](assets/mobile-preview-open-app.png)|
 
-   La aplicación se abre e inicia el [!DNL Target] Modo de vista previa para móviles.
+   La aplicación se abre e inicia el [!DNL Target] [!UICONTROL Modo de vista previa móvil].
 
 1. Seleccione la combinación de experiencias que desee usar y, a continuación, haga clic en **[!UICONTROL Launch Experiences]**.
 

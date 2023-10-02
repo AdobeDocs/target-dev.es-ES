@@ -4,9 +4,9 @@ description: Comprender cómo utilizar los patrones de implementación
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 09dafc7c85ea7f3600fceac4e673e8f1901771a4
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ El siguiente patrón está disponible actualmente:
 
 * [[!DNL Recommendations] patrón de implementación con at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-Estos patrones de implementación están pensados para centrarse en qué hacer, cuándo hacerlo y dónde hacerlo en lugar de cómo hacerlo. Los diagramas de flujo detallados le ayudan a comprender la secuencia de operaciones y los vínculos a la documentación relevante proporcionan instrucciones contextuales y paso a paso.
+Estos patrones de implementación se centran en qué hacer, cuándo hacerlo y dónde hacerlo. Los diagramas de flujo detallados le ayudan a comprender la secuencia de operaciones y los vínculos a la documentación relevante proporcionan instrucciones contextuales y paso a paso.
 
 ## Sugerir ideas para nuevos patrones o correcciones a patrones existentes
 

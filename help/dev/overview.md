@@ -5,16 +5,14 @@ description: ¿Cómo implemento y administro  [!DNL Adobe Target]  y trabajo con
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 063d0574ee380bf76130fb0f17db89cd09efdb7d
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '479'
 ht-degree: 14%
 
 ---
 
 # Guía para desarrolladores de [!DNL Adobe Target]
-
-![Imagen del titular de Adobe Target](/help/dev/assets/target-home-banner-simple.png)
 
 **([Ver [!DNL Target] actualizaciones de documentación](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 

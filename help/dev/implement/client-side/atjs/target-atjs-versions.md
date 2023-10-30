@@ -4,10 +4,10 @@ description: Vea los detalles sobre los cambios en cada versión de [!DNL Adobe 
 title: ¿Qué se incluye en cada versión de at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: eb82f6a0d0165d73c1c40917c96e09c8bdddf647
+source-git-commit: c5d1f477a2561a59efb3250e35563b48822fbe59
 workflow-type: tm+mt
-source-wordcount: '4678'
-ht-degree: 73%
+source-wordcount: '4697'
+ht-degree: 72%
 
 ---
 
@@ -30,6 +30,10 @@ Etiquetas en [Adobe Experience Platform](/help/dev/implement/client-side/atjs/ho
 ## Versión 2.11.2 de at.js (26 de octubre de 2023)
 
 * Se ha corregido un problema que provocaba incoherencias en los tokens de respuesta enviados en eventos personalizados.
+
+## Versión 2.11.1 de at.js (13 de octubre de 2023)
+
+* Se ha corregido un problema que provocaba errores no capturados mientras una página que ejecutaba at.js estaba en modo quirks.
 
 ## Versión 2.11.0 de at.js (10 de octubre de 2023)
 

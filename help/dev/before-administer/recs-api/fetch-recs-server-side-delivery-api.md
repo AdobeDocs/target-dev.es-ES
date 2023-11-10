@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1520'
 ht-degree: 1%
 
 ---
@@ -97,22 +97,22 @@ Los siguientes recursos proporcionan ejemplos de varias implementaciones centrad
 
 La mayoría de las veces, las recomendaciones se configuran en la interfaz de usuario de Adobe Target y, a continuación, se utilizan o se accede a ellas a través de las API de Target, por motivos como los mencionados en las secciones anteriores. Esta coordinación IU-API es común. Sin embargo, a veces los usuarios pueden querer realizar todas las acciones a través de las API, tanto la configuración como el uso de los resultados. Aunque es mucho menos común, los usuarios pueden configurar, ejecutar, *y* aproveche los resultados de las recomendaciones completamente mediante las API.
 
-Aprendimos en un [sección anterior](manage-catalog.md) Obtenga información sobre cómo administrar entidades de Recommendations de Adobe Target y entregarlas en el servidor. Del mismo modo, la variable [Consola de Adobe Developer](https://developer.adobe.com/console/home) permite administrar criterios, promociones, colecciones y plantillas de diseño sin tener que iniciar sesión en Adobe Target. Se puede encontrar una lista completa de todas las API de Recommendations [aquí](http://developers.adobetarget.com/api/recommendations/), pero aquí tiene un resumen como referencia.
+Aprendimos en un [sección anterior](manage-catalog.md) Obtenga información sobre cómo administrar entidades de Recommendations de Adobe Target y entregarlas en el servidor. Del mismo modo, la variable [Consola de Adobe Developer](https://developer.adobe.com/console/home) permite administrar criterios, promociones, colecciones y plantillas de diseño sin tener que iniciar sesión en Adobe Target. Se puede encontrar una lista completa de todas las API de Recommendations [aquí](https://developer.adobe.com/target/administer/recommendations-api/), pero aquí tiene un resumen como referencia.
 
 | Recurso | Detalles |
 | --- | --- |
-| [Colecciones](http://developers.adobetarget.com/api/recommendations/#tag/Collections) | Enumere, cree, obtenga, edite y elimine colecciones. |
-| [Criterios](http://developers.adobetarget.com/api/recommendations/#tag/Criteria) | Enumerar y obtener criterios. |
-| [Diseños](http://developers.adobetarget.com/api/recommendations/#tag/Designs) | Muestre una lista, cree, obtenga, edite, elimine y valide diseños. |
-| [Entidades](http://developers.adobetarget.com/api/recommendations/#tag/Entities) | Guarde, elimine y obtenga entidades. |
-| [Promociones](http://developers.adobetarget.com/api/recommendations/#tag/Promotions) | Enumere, cree, obtenga, edite y elimine promociones. |
-| [Criterios de categoría](http://developers.adobetarget.com/api/recommendations/#tag/Category-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios de categoría. |
-| [Criterios personalizados](http://developers.adobetarget.com/api/recommendations/#tag/Custom-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios personalizados. |
-| [Criterios de elemento](http://developers.adobetarget.com/api/recommendations/#tag/Item-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios de elementos. |
-| [Criterios de popularidad](http://developers.adobetarget.com/api/recommendations/#tag/Popularity-Criteria) | Enumere, cree, obtenga, edite y elimine criterios de popularidad. |
-| [Criterios de atributo de perfil](http://developers.adobetarget.com/api/recommendations/#tag/Profile-Attribute-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios de atributos de perfil. |
-| [Criterios recientes](http://developers.adobetarget.com/api/recommendations/#tag/Recent-Criteria) | Enumere, cree, obtenga, edite y elimine criterios recientes. |
-| [Criterios de secuencia](http://developers.adobetarget.com/api/recommendations/#tag/Sequence-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios de secuencia. |
+| [Colecciones](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | Enumere, cree, obtenga, edite y elimine colecciones. |
+| [Criterios](https://developer.adobe.com/target/administer/recommendations-api/#tag/Criteria) | Enumerar y obtener criterios. |
+| [Diseños](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | Muestre una lista, cree, obtenga, edite, elimine y valide diseños. |
+| [Entidades](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | Guarde, elimine y obtenga entidades. |
+| [Promociones](https://developer.adobe.com/target/administer/recommendations-api/#tag/Promotions) | Enumere, cree, obtenga, edite y elimine promociones. |
+| [Criterios de categoría](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios de categoría. |
+| [Criterios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios personalizados. |
+| [Criterios de elemento](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios de elementos. |
+| [Criterios de popularidad](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | Enumere, cree, obtenga, edite y elimine criterios de popularidad. |
+| [Criterios de atributo de perfil](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios de atributos de perfil. |
+| [Criterios recientes](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | Enumere, cree, obtenga, edite y elimine criterios recientes. |
+| [Criterios de secuencia](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | Enumerar, crear, obtener, editar y eliminar criterios de secuencia. |
 
 ## Documentación de referencia
 

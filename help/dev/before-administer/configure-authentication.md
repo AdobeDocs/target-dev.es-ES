@@ -3,9 +3,9 @@ title: Cómo configurar la autenticación para [!DNL Adobe Target] API
 description: ¿Cómo se generan los tokens de autenticación necesarios para interactuar correctamente con? [!DNL Adobe Target] ¿API?
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1942'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Estos son los pasos preliminares necesarios para generar los tokens de autentica
 | Recurso | Detalles |
 | --- | --- |
 | Postman | Para completar estos pasos correctamente, obtenga el [aplicación de Postman](https://www.postman.com/downloads/) para su sistema operativo. Postman basic es gratuito con la creación de cuentas. Aunque no es necesario para utilizar [!DNL Adobe Target] API en general, Postman facilita los flujos de trabajo de las API y [!DNL Adobe Target] proporciona varias colecciones Postman para ayudarle a ejecutar sus API y aprender cómo funcionan. El resto de esta guía supone conocimientos prácticos de Postman. Si necesita ayuda, consulte la [Documentación de Postman](https://learning.getpostman.com/). |
-| Referencias | En el resto de esta guía se da por hecho que está familiarizado con los siguientes recursos:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentación de la API de perfil y administración de Target](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentación de API de Recommendations](https://developers.adobetarget.com/api/recommendations/)</li></ul> |
+| Referencias | En el resto de esta guía se da por hecho que está familiarizado con los siguientes recursos:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentación de la API de perfil y administración de Target](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentación de API de Recommendations](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## Creación de un proyecto de Adobe I/O
 

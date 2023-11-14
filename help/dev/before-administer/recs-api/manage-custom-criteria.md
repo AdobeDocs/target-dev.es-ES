@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Para crear criterios personalizados, defina e importe la asignación deseada ent
 
 ## Crear criterios personalizados
 
-Para crear criterios personalizados con [Crear API de criterios personalizados](https://developers.adobetarget.com/api/recommendations/#operation/createCriteriaCustom), la sintaxis es:
+Para crear criterios personalizados con [Crear API de criterios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom), la sintaxis es:
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -39,7 +39,7 @@ Solo continúe con los siguientes pasos después de haber leído la advertencia 
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
-1. Añada su **Cuerpo** as **crudo** JSON que define la ubicación del archivo CSV de criterios personalizados. Utilice el ejemplo proporcionado en la variable [Crear API de criterios personalizados](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom) documentación como plantilla, proporcionando su `environmentId` y otros valores según sea necesario. Para este ejemplo, utilizamos LAST_PURCHASED como clave.
+1. Añada su **Cuerpo** as **crudo** JSON que define la ubicación del archivo CSV de criterios personalizados. Utilice el ejemplo proporcionado en la variable [Crear API de criterios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom) documentación como plantilla, proporcionando su `environmentId` y otros valores según sea necesario. Para este ejemplo, utilizamos LAST_PURCHASED como clave.
 
    ![CreateCustomCriteria2](assets/CreateCustomCriteria2.png)
 
@@ -55,7 +55,7 @@ En este caso, se produce un error. Vamos a investigar el error examinando más d
 
 ## Enumerar criterios personalizados
 
-Para recuperar una lista de todos los criterios personalizados junto con los detalles de cada uno, utilice el [API de lista de criterios personalizados](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom). La sintaxis es:
+Para recuperar una lista de todos los criterios personalizados junto con los detalles de cada uno, utilice el [API de lista de criterios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom). La sintaxis es:
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -66,7 +66,7 @@ En este caso, el error se produjo porque la información del servidor es incorre
 
 ## Editar criterios personalizados
 
-Para cambiar los detalles de una definición de criterio personalizada, utilice la variable [Editar API de criterios personalizados](https://developers.adobetarget.com/api/recommendations/#operation/updateCriteriaCustom). La sintaxis es:
+Para cambiar los detalles de una definición de criterio personalizada, utilice la variable [Editar API de criterios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom). La sintaxis es:
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -86,7 +86,7 @@ Vamos a verificar el éxito de los criterios personalizados actualizados utiliza
 
 ## Obtener criterios personalizados
 
-Para ver los detalles de criterios personalizados de un criterio personalizado específico, use [Obtener API de criterios personalizados](https://developers.adobetarget.com/api/recommendations/#operation/getCriteriaCustom). La sintaxis es:
+Para ver los detalles de criterios personalizados de un criterio personalizado específico, use [Obtener API de criterios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom). La sintaxis es:
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -99,7 +99,7 @@ Para ver los detalles de criterios personalizados de un criterio personalizado e
 
 ## Eliminar criterios personalizados
 
-Con el ID de criterios mencionado anteriormente, elimine los criterios personalizados con el [Eliminar API de criterios personalizados](https://developers.adobetarget.com/api/recommendations/#operation/deleteCriteriaCustom). La sintaxis es:
+Con el ID de criterios mencionado anteriormente, elimine los criterios personalizados con el [Eliminar API de criterios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom). La sintaxis es:
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 

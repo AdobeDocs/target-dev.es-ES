@@ -3,9 +3,9 @@ title: Información general de API de Adobe Target
 description: Información general sobre las distintas API de Adobe Target, incluidas la API de envío, la API de informes, la API de administración, la API de perfil, la API de Recommendations y los vínculos a las colecciones de Postman.
 exl-id: bf886103-36af-4061-b8be-2fe645f45ff3
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Las API de Adobe Target se pueden agrupar según el tipo: Administración, Perfi
 
 | Tipo de API | Lo que le permite hacer | Vínculo de descarga | Otros vínculos útiles |
 | --- | --- | --- |--- |
-| [Administrador](../administer/admin-api/admin-api-overview-new.md) | Cree, modifique y elimine actividades, audiencias, ofertas y otros objetos (incluidas entidades de Recommendations, criterios, diseños, etc.). Las API de Recommendations son un tipo de API de administrador). | <UL><li>[Recopilación de Postman de la API de administración de Target](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Colección Postman de API de Recommendations](https://developers.adobetarget.com/api/recommendations/#section/Postman)</li></UL> | [Uso de API de Recommendations](../before-administer/recs-api/overview.md) |
+| [Administrador](../administer/admin-api/admin-api-overview-new.md) | Cree, modifique y elimine actividades, audiencias, ofertas y otros objetos (incluidas entidades de Recommendations, criterios, diseños, etc.). Las API de Recommendations son un tipo de API de administrador). | <UL><li>[Recopilación de Postman de la API de administración de Target](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Colección Postman de API de Recommendations](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)</li></UL> | [Uso de API de Recommendations](../before-administer/recs-api/overview.md) |
 | Perfil | Recupere y modifique perfiles de usuario almacenados en Adobe Target. | [Colección Postman de API de perfil de Target](https://developers.adobetarget.com/api/#profiles) |  |
 | [Entrega](../implement/delivery-api/overview.md) | Recupere contenido optimizado y personalizado de Target para su entrega a un usuario final. | [Colección Postman de API de envío de Target](/help/dev/before-implement/delivery-api-overview/getting-started.md#postman) |  |
 | [Creación de informes](../administer/admin-api/admin-api-overview-new.md) | Exportar resultados de actividades y otros resultados de informes. | Las API de informes se incluyen en la [Recopilación de Postman de la API de administración de Target](https://developers.adobetarget.com/api/#admin-postman-collection). |  |

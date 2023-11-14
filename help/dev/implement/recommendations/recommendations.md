@@ -4,9 +4,9 @@ description: Obtenga información sobre cómo implementar [!UICONTROL Recommenda
 title: ¿Cómo puedo implementar [!UICONTROL Recommendations] ¿Actividades?
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 1e1bfb556005f7ea998caf97685c834825372bd6
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1461'
 ht-degree: 29%
 
 ---
@@ -45,7 +45,7 @@ Para ofrecer recomendaciones de alta calidad, [!UICONTROL Target] debe conocer l
 | Método | Qué es | Cuándo utilizarla | Información adicional |
 | --- | --- | --- | --- |
 | Fuente de catálogo | Programe una fuente (CSV, XML de producto de Google o Clasificaciones de productos de Analytics) para que se cargue e incorpore diariamente. | Para enviar información sobre varios elementos a la vez. Para enviar información que cambia con poca frecuencia. | Consulte [Fuentes](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
-| API de entidades | Llame a una API para enviar actualizaciones al minuto de un solo elemento. | Para enviar actualizaciones a medida que se producen en un elemento a la vez. Para enviar información que cambia con frecuencia (por ejemplo, nivel de precio, inventario/stock). | Consulte la [Documentación para desarrolladores de API de entidades](https://developers.adobetarget.com/api/recommendations/#tag/Entities). |
+| API de entidades | Llame a una API para enviar actualizaciones al minuto de un solo elemento. | Para enviar actualizaciones a medida que se producen en un elemento a la vez. Para enviar información que cambia con frecuencia (por ejemplo, nivel de precio, inventario/stock). | Consulte la [Documentación para desarrolladores de API de entidades](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Pasar actualizaciones en la página | Envíe actualizaciones de último minuto para un solo elemento con JavaScript en la página o mediante la API de envío. | Para enviar actualizaciones a medida que se producen en un elemento a la vez. Para enviar información que cambia con frecuencia (por ejemplo, nivel de precio, inventario/stock). | Consulte [Vistas de elementos/páginas de productos](#item-views-or-product-pages) más abajo. |
 
 La mayoría de los clientes deben implementar al menos una fuente. A continuación, puede elegir complementar su fuente con actualizaciones para atributos o elementos que se cambian con frecuencia mediante la API de entidades o el método en la página.

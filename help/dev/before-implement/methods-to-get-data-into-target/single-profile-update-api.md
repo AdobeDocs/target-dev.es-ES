@@ -4,9 +4,9 @@ description: Introducción de datos en [!DNL Target] uso de la API de actualizac
 title: ¿Cómo puedo obtener datos en? [!DNL Target] ¿Utiliza la API de actualización de perfil único?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '204'
 ht-degree: 35%
 
 ---
@@ -35,7 +35,7 @@ Límite de 1 000 000 (1 millón) de llamadas a la API por período de 24 hor
 
 Solo se actualiza el perfil. No se puede crear un perfil para un usuario potencial [!DNL Target] aún no lo ha visto.
 
-Las actualizaciones suelen producirse en menos de 1 hora, pero pueden tardar hasta 24 horas en reflejarse.
+Las actualizaciones suelen producirse en menos de una hora, pero pueden tardar hasta 24 horas en reflejarse.
 
 ## Ejemplos de código
 

@@ -4,10 +4,10 @@ description: Introducción de datos en [!DNL Target] uso de la API de actualizac
 title: ¿Cómo puedo obtener datos en? [!DNL Target] ¿Utiliza la API de actualización de perfiles en lote?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 62%
+source-wordcount: '404'
+ht-degree: 59%
 
 ---
 
@@ -41,6 +41,8 @@ Los atributos de perfil enviados a través del sitio se pueden actualizar a trav
 ## Advertencias
 
 El tamaño del archivo en lote debe ser inferior a 50 MB. Además, el número total de filas no puede superar las 500 000 filas por carga.
+
+Las actualizaciones suelen producirse en menos de una hora, pero pueden tardar hasta 24 horas en reflejarse
 
 No hay ningún límite en el número de filas que puede cargar en lotes consecutivos en un período de 24 horas. Sin embargo, el proceso de ingestión puede acelerarse durante el horario laboral para garantizar que otros procesos se ejecuten de forma eficaz.
 

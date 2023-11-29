@@ -4,10 +4,10 @@ description: Introducción de datos en [!DNL Target] uso de la API de actualizac
 title: ¿Cómo puedo obtener datos en? [!DNL Target] ¿Utiliza la API de actualización de perfil único?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 35%
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ Casi idéntico al [!UICONTROL API de actualización de perfil en lote] in [!DNL 
 
 ## Formato
 
-El visitante se debe identificar a través del valor [!DNL Target]mboxPC de o del valor `mbox3rdPartyId`. El Experience Cloud ID (ECID) no se admite.
+El visitante debe identificarse mediante la variable [!DNL Target] `mboxPC` valor o `mbox3rdPartyId` valor. El [!UICONTROL ID de Experience Cloud] (ECID) no es compatible.
 
 ## Casos de uso de ejemplo
 
@@ -25,17 +25,14 @@ Desea actualizar el perfil de un único visitante que realiza alguna acción sin
 
 ## Ventajas del método
 
-No hay ningún límite en la cantidad de atributos del perfil.
+* No hay ningún límite en la cantidad de atributos del perfil.*
+* Los atributos de perfil enviados a través del sitio se pueden actualizar mediante la API y viceversa.
 
-Los atributos de perfil enviados a través del sitio se pueden actualizar a través de la API y viceversa.
+## Advertencias 
 
-## Advertencias
-
-Límite de 1 000 000 (1 millón) de llamadas a la API por período de 24 horas
-
-Solo se actualiza el perfil. No se puede crear un perfil para un usuario potencial [!DNL Target] aún no lo ha visto.
-
-Las actualizaciones suelen producirse en menos de una hora, pero pueden tardar hasta 24 horas en reflejarse.
+* Límite de 1 000 000 (1 millón) de llamadas a la API por período de 24 horas.
+* Solo se actualiza el perfil. No se puede crear un perfil para un usuario potencial [!DNL Target] aún no lo ha visto.
+* Las actualizaciones suelen producirse en menos de una hora, pero pueden tardar hasta 24 horas en reflejarse.
 
 ## Ejemplos de código
 

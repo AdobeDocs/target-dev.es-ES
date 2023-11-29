@@ -2,10 +2,10 @@
 user-guide-title: Guía para desarrolladores de Adobe Target
 breadcrumb-title: Guía para desarrolladores de Target
 user-guide-description: Aprenda a adaptar y personalizar la experiencia de sus clientes para que pueda maximizar los ingresos de sus sitios web y móviles, aplicaciones, medios sociales y otros canales digitales.
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '729'
-ht-degree: 54%
+ht-degree: 55%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 54%
       + [Atributos de perfil en página](before-implement/methods-to-get-data-into-target/in-page-profile-attributes.md)
       + [Atributos de perfil en script](before-implement/methods-to-get-data-into-target/script-profile-attributes.md)
       + [Proveedores de datos](before-implement/methods-to-get-data-into-target/data-providers.md)
-      + [API de actualización de perfiles en lote](before-implement/methods-to-get-data-into-target/bulk-profile-update-api.md)
+      + [API de actualización de perfil en lote](before-implement/methods-to-get-data-into-target/bulk-profile-update-api.md)
       + [API de actualización de perfil único](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [Atributos del cliente](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [Configuración de la API de perfil](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
@@ -210,9 +210,9 @@ ht-degree: 54%
    + [Información general sobre patrones de implementación](/help/dev/patterns/pattern-overview.md)
    + Patrón de implementación de Recommendations con at.js {#atjs}
       + [Información general sobre el patrón de implementación de Recommendations con at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
-      + [Inicializar SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
+      + [Inicialización de los SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [Configuración de la recopilación de datos](/help/dev/patterns/recs-atjs/data-collection.md)
-      + [Procesar experiencias](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [Procesamiento de experiencias](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [Notificar al destinatario](/help/dev/patterns/recs-atjs/notify-target.md)
 
 

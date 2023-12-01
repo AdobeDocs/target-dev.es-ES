@@ -4,10 +4,10 @@ description: Introducción de datos en [!DNL Target] uso de la API de actualizac
 title: ¿Cómo puedo obtener datos en? [!DNL Target] ¿Utiliza la API de actualización de perfil único?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 15%
+source-wordcount: '198'
+ht-degree: 13%
 
 ---
 
@@ -44,4 +44,6 @@ https://CLIENT.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-57594
 
 ## Recursos
 
-* [Actualización de perfiles](https://developers.adobetarget.com/api/#updating-profiles)
+* [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
+* [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
+* [[!DNL Adobe Target Bulk Profile Update API]](/help/dev/administer/profile-api/profile-bulk-api.md)

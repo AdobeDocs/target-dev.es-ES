@@ -1,48 +1,23 @@
 ---
 keywords: implementación, implementación, configuración, configuración, actualización de perfil único
 description: Introducción de datos en [!DNL Target] uso de la API de actualización de perfil único.
-title: ¿Cómo puedo obtener datos en? [!DNL Target] ¿Utiliza la API de actualización de perfil único?
+title: ¿Cómo puedo obtener datos en? [!DNL Target] Uso del [!UICONTROL API de actualización de perfil único]?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
+source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 13%
+source-wordcount: '153'
+ht-degree: 2%
 
 ---
 
-# API de actualización de perfil único
+# [!UICONTROL API de actualización de perfil único]
 
-Casi idéntico al [!UICONTROL API de actualización de perfil en lote] in [!DNL Adobe Target], pero se actualiza un perfil de visitante a la vez, en línea en la llamada de API en lugar de con un archivo .csv.
+El [!DNL Adobe Target] [!UICONTROL API de actualización de perfil único] permite enviar una actualización de perfil para un solo usuario. El [!UICONTROL API de actualización de perfil único] es casi idéntico al de [!UICONTROL API de actualización de perfil en lote], pero se actualiza un perfil de visitante a la vez, en línea con la llamada de API en lugar de con un archivo .cvs.
 
-## Formato
+El [!UICONTROL API de actualización de perfil único] y se utiliza generalmente cuando debe producirse una actualización en relación con una transacción que se produce en un canal que no se ha implementado [!DNL Target]. Por ejemplo, desea actualizar el perfil de un único visitante que realiza alguna acción sin conexión. Las acciones pueden incluir llegar a un centro de llamadas, financiar un préstamo, usar una tarjeta de fidelidad en una tienda, acceder a un quiosco, etc.
 
-El visitante debe identificarse mediante la variable [!DNL Target] `mboxPC` valor o `mbox3rdPartyId` valor. El [!UICONTROL ID de Experience Cloud] (ECID) no es compatible.
-
-## Casos de uso de ejemplo
-
-Desea actualizar el perfil de un único visitante que realiza alguna acción sin conexión. Las acciones pueden incluir llegar a un centro de llamadas, financiar un préstamo, usar una tarjeta de fidelidad en una tienda, acceder a un quiosco, etc.
-
-## Ventajas del método
-
-* No hay ningún límite en la cantidad de atributos del perfil.*
-* Los atributos de perfil enviados a través del sitio se pueden actualizar mediante la API y viceversa.
-
-## Advertencias 
-
-* Límite de 1 000 000 (1 millón) de llamadas a la API por período de 24 horas.
-* Solo se actualiza el perfil. No se puede crear un perfil para un usuario potencial [!DNL Target] aún no lo ha visto.
-* Las actualizaciones suelen producirse en menos de una hora, pero pueden tardar hasta 24 horas en reflejarse.
-
-## Ejemplos de código
-
-Se admiten GET y POST. 
-
-```
-https://CLIENT.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr1=0&profile.attr2=1...
-```
-
-## Recursos
+Para obtener más información, consulte:
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)

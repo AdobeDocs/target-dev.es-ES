@@ -3,9 +3,9 @@ title: API de actualización de perfil en lote de Adobe Target
 description: Aprenda a utilizar [!DNL Adobe Target] [!UICONTROL API de actualización de perfil en lote] para enviar datos de perfil de varios visitantes a [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '722'
 ht-degree: 9%
 
 ---
@@ -24,6 +24,11 @@ Uso del [!UICONTROL API de actualización de perfil en lote], puede enviar cómo
 >[!NOTE]
 >
 >Versión 2 (v2) de [!UICONTROL API de actualización de perfil en lote] es la versión actual. Sin embargo, [!DNL Target] sigue siendo compatible con la versión 1 (v1).
+
+## Ventajas de la API de actualización de perfiles en lote
+
+* No hay ningún límite en la cantidad de atributos del perfil.
+* Los atributos de perfil enviados a través del sitio se pueden actualizar mediante la API y viceversa.
 
 ## Advertencias
 

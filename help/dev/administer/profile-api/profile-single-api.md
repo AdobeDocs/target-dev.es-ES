@@ -3,9 +3,9 @@ title: API de actualización de perfil único de Adobe Target
 description: Aprenda a utilizar [!DNL Adobe Target] [!UICONTROL API de actualización de perfil único] para enviar los datos de perfil de un solo visitante a [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: dcff5d2eb8740420a9f9cf488474c3bca1628567
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '386'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,8 @@ Ventajas de la [!UICONTROL API de actualización de perfil único] incluir:
 * Las actualizaciones suelen producirse en menos de una hora, pero pueden tardar hasta 24 horas en reflejarse.
 
   Si debe enviar más actualizaciones o requerir que las actualizaciones se procesen en intervalos de tiempo más cortos, considere la posibilidad de enviar actualizaciones de perfil transaccionales a través de la actualización del lado del cliente (opción preferida) o a través de la variable [!DNL Adobe Target] del lado del servidor [API de envío](/help/dev/implement/delivery-api/overview.md).
+
+* El [!UICONTROL API de actualización de perfil único] es una API de servidor a servidor y no está diseñada para funcionar dentro de una página web. Para actualizar un perfil de visitante desde su página web, puede utilizar el [trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) para la función [API de envío](/help/dev/implement/delivery-api/overview.md).
 
 ## Formato
 

@@ -1,18 +1,18 @@
 ---
 keywords: guía para desarrolladores de target; información general; inicio
 title: Guía para desarrolladores de Adobe Target
-description: ¿Cómo implemento y administro  [!DNL Adobe Target]  y trabajo con sus API y SDK?
+description: ¿Cómo implemento y administro [!DNL Adobe Target] y trabajar con sus API y SDK?
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: a72d3ee76b25702b186565e86ec6b0e67c9d5d1b
+source-git-commit: dadc3804da4592dba4ad88b8c5c9f804c56e232b
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 15%
+source-wordcount: '407'
+ht-degree: 5%
 
 ---
 
-# Guía para desarrolladores de [!DNL Adobe Target]
+# [!DNL Adobe Target] Guía para desarrolladores
 
 **([Ver [!DNL Target] actualizaciones de documentación](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 
@@ -30,7 +30,7 @@ Esta *[!DNL Adobe Target]Guía para desarrolladores* proporciona recursos y guí
 
 ## Introducción a la implementación
 
-**[](/help/dev/before-implement/considerations-before-you-implement-target.md)** Antes de la implementación: consideraciones que debe abordar antes de implementar [!DNL Adobe Target].
+**[Antes de la implementación](/help/dev/before-implement/considerations-before-you-implement-target.md)**: Consideraciones que debe abordar antes de implementar [!DNL Adobe Target].
 
 ## Implementación del lado del cliente
 
@@ -76,7 +76,7 @@ Esta *[!DNL Adobe Target]Guía para desarrolladores* proporciona recursos y guí
 
 [**[!DNL Target Admin API]**](administer/admin-api/admin-api-overview-new.md): utilice el [!DNL Adobe Target] API de administración para administrar propiedades, actividades, audiencias, ofertas, propiedades, informes, mboxes, hosts, entornos y mucho más.
 
-[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profile-api-overview.md): Recuperar [!DNL Adobe Target] información del perfil de usuario.
+[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): Recuperar [!DNL Adobe Target] información del perfil de usuario.
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Recuperar [!UICONTROL Prueba A/B] y [!UICONTROL Automated Personalization] datos del informe de actividad.
 

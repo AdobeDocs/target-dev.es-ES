@@ -3,10 +3,10 @@ title: API de actualización de perfil en lote de Adobe Target
 description: Aprenda a utilizar [!DNL Adobe Target] [!UICONTROL API de actualización de perfil en lote] para enviar datos de perfil de varios visitantes a [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
+source-git-commit: 8bc819823462fae71335ac3b6c871140158638fe
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 9%
+source-wordcount: '727'
+ht-degree: 8%
 
 ---
 
@@ -19,7 +19,7 @@ Uso del [!UICONTROL API de actualización de perfil en lote], puede enviar cómo
 | Versión  | Ejemplo de URL | Funciones |
 | --- | --- | --- |
 | Versión 1 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/profile/batchUpdate` | Solo es compatible con la actualización de perfiles en lote. |
-| v2 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Crear perfil si no se encuentra.</li><li>Actualización del estado por fila.</li></ul> |
+| Versión 2 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Crear perfil si no se encuentra.</li><li>Actualización del estado por fila.</li></ul> |
 
 >[!NOTE]
 >
@@ -61,7 +61,7 @@ Hace referencia a este archivo en la llamada del POST a [!DNL Target] para proce
 Realizar una solicitud de POST HTTP a [!DNL Target] servidores Edge para procesar el archivo. Este es un ejemplo de solicitud de POST HTTP para el archivo batch.txt mediante el comando curl:
 
 ``````
-curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/v2/profile/batchUpdate
+curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
 ``````
 
 Donde:

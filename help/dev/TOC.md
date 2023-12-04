@@ -2,10 +2,10 @@
 user-guide-title: Guía para desarrolladores de Adobe Target
 breadcrumb-title: Guía para desarrolladores de Target
 user-guide-description: Aprenda a adaptar y personalizar la experiencia de sus clientes para que pueda maximizar los ingresos de sus sitios web y móviles, aplicaciones, medios sociales y otros canales digitales.
-source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 54%
+source-wordcount: '744'
+ht-degree: 45%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 54%
       + [API de actualización de perfil único](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [Atributos del cliente](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [Configuración de la API de perfil](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
-   + [Target información general sobre seguridad](before-implement/target-security-overview.md)
+   + [Información general sobre la seguridad de Target](before-implement/target-security-overview.md)
    + [Navegadores admitidos](before-implement/supported-browsers.md)
    + [Cambios en el cifrado de TLS (Seguridad de capa de transporte)](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME y Adobe Target](before-implement/implement-cname-support-in-target.md)
@@ -185,7 +185,7 @@ ht-degree: 54%
       + [Identificación de visitantes](/help/dev/before-implement/delivery-api-overview/identifying-visitors.md)
       + [Entrega única o por lotes](/help/dev/before-implement/delivery-api-overview/single-or-batch.md)
       + [Precarga](/help/dev/before-implement/delivery-api-overview/prefetch.md)
-      + [ Notificaciones ](/help/dev/before-implement/delivery-api-overview/notifications.md)
+      + [Notificaciones](/help/dev/before-implement/delivery-api-overview/notifications.md)
       + [Integración con Experience Cloud](before-implement/delivery-api-overview/integration.md)
       + [Consideraciones y limitaciones conocidas](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [Client Hints](/help/dev/before-implement/delivery-api-overview/client-hints.md)
@@ -194,7 +194,9 @@ ht-degree: 54%
       + [Resumen de API de administración](before-administer/admin-api-overview/admin-api-overview.md)
       + [API de administración de Adobe Target](/help/dev/administer/admin-api/admin-api-overview-new.md)
    + API de perfil {#profile-apis}
-      + [Información general sobre API de perfiles](/help/dev/administer/profile-api/profile-api-overview.md)
+      + [Resumen de API de perfiles](/help/dev/administer/profile-api/profiles-api.md)
+      + [Recuperación de perfiles](/help/dev/administer/profile-api/profile-fetch.md)
+      + [Actualización de perfiles](/help/dev/administer/profile-api/profile-api-overview.md)
       + [API de actualización de perfil único](/help/dev/administer/profile-api/profile-single-api.md)
       + [API de actualización de perfil en lote](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [API de informes](/help/dev/administer/reporting-api/reporting-api.md)
@@ -213,9 +215,9 @@ ht-degree: 54%
    + [Información general sobre patrones de implementación](/help/dev/patterns/pattern-overview.md)
    + Patrón de implementación de Recommendations con at.js {#atjs}
       + [Información general sobre el patrón de implementación de Recommendations con at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
-      + [Inicialización de los SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
+      + [Inicializar SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [Configuración de la recopilación de datos](/help/dev/patterns/recs-atjs/data-collection.md)
-      + [Procesamiento de experiencias](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [Procesar experiencias](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [Notificar al destinatario](/help/dev/patterns/recs-atjs/notify-target.md)
 
 

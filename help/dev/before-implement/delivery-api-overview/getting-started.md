@@ -4,9 +4,9 @@ description: ¿Cómo se usa el [!UICONTROL API de envío de Adobe Target]?
 keywords: api de envío
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,3 @@ Antes de realizar una [!UICONTROL API de envío de Target] Para realizar una lla
 1. Crear un [!DNL Target] actividad (A/B, XT, AP o Recommendations) utilizando [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) o el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
 1. Utilice la API de envío para obtener una respuesta para los mboxes utilizados en [!DNL Target] actividad creada en el paso 2.
 1. Presente la experiencia al visitante.
-
-## Colección de Postman {#postman}
-
-Postman es una aplicación que facilita la activación de llamadas de API. [Esta colección de Postman](https://run.pstmn.io/button.svg) contiene llamadas de API de envío de ejemplo.

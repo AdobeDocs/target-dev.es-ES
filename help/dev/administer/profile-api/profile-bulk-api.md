@@ -3,10 +3,10 @@ title: API de actualización de perfil en lote de Adobe Target
 description: Aprenda a utilizar [!DNL Adobe Target] [!UICONTROL API de actualización de perfil en lote] para enviar datos de perfil de varios visitantes a [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
+source-git-commit: 38a5e82d3170fa64220bd63f505f1470af43e8a3
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 9%
+source-wordcount: '824'
+ht-degree: 8%
 
 ---
 
@@ -35,6 +35,7 @@ Uso del [!UICONTROL API de actualización de perfil en lote], puede enviar cómo
 * El tamaño del archivo en lote debe ser inferior a 50 MB. Además, el número total de filas no puede superar las 500 000 filas por carga.
 * No hay límite en el número o las filas que puede cargar durante un periodo de 24 horas en lotes posteriores. Sin embargo, el proceso de ingestión puede acelerarse durante el horario laboral para garantizar que otros procesos se ejecuten de forma eficaz.
 * Las llamadas de actualización por lotes v2 consecutivas sin llamadas de mbox intermedias para los mismos ID de terceros anulan las propiedades actualizadas en la primera llamada de actualización por lotes.
+* [!DNL Adobe] no garantiza que el 100 % de los datos de perfil por lotes se incorporen y conserven en Target y que, por lo tanto, estén disponibles para su uso en la segmentación. En el diseño actual, existe la posibilidad de que un pequeño porcentaje de datos (hasta el 0,1 % de los lotes de producción grandes) no se incorpore o conserve.
 
 ## Archivo por lotes
 

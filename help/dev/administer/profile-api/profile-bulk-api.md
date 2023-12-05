@@ -3,10 +3,10 @@ title: API de actualización de perfil en lote de Adobe Target
 description: Aprenda a utilizar [!DNL Adobe Target] [!UICONTROL API de actualización de perfil en lote] para enviar datos de perfil de varios visitantes a [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 8bc819823462fae71335ac3b6c871140158638fe
+source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 8%
+source-wordcount: '773'
+ht-degree: 9%
 
 ---
 
@@ -72,27 +72,58 @@ Si no conoce su código de cliente, en la [!DNL Target] clic en interfaz de usua
 
 ### Inspect la respuesta
 
-v2 devuelve un estado de perfil a perfil y v1 solo devuelve el estado general. La respuesta incluye un vínculo a una dirección URL diferente que tiene el mensaje de éxito perfil a perfil.
+La API de perfiles devuelve el estado de envío del lote para su procesamiento junto con un vínculo en &quot;batchStatus&quot; a una dirección URL diferente que muestra el estado general del trabajo por lotes en particular.
 
-### Respuesta de ejemplo
+### Ejemplo de respuesta de API
+
+El siguiente código recortado es un ejemplo de respuesta de API de perfiles:
 
 ```
-true http://mboxedge19.tt.omtrdc.net/m2/demo/v2/profile/batchStatus?batchId=demo-1845664501&m2Node=00 Batch submitted for processing
+<response>
+    <success>true</success>
+    <batchStatus>http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383</batchStatus>
+    <message>Batch submitted for processing</message>
+</response>
 ```
 
 Si hay un error, la respuesta contiene `success=false` y un mensaje detallado del error.
 
-Una respuesta correcta tiene el siguiente aspecto:
+### Respuesta de estado de lote predeterminada
 
-``````
-demo-1845664501 1436187396849-250353.03_03 success 2403081156529-351655.03_03 success 2403081156529-351656.03_03 success 1436187396849-250351.01_00 success 
-``````
+Una respuesta predeterminada correcta cuando lo anterior `batchStatus` Al hacer clic en un vínculo URL, se muestra lo siguiente:
+
+```
+<response><batchId>demo4-1701473848678-13029383</batchId><status>complete</status><batchSize>1</batchSize></response>
+```
 
 Los valores esperados para los campos de estado son:
 
-**success**: se ha actualizado el perfil. Si no se ha encontrado el perfil, se ha creado uno con los valores del lote.
-**error**: el perfil no se ha actualizado ni creado debido a un error, una excepción o una pérdida de mensaje.
-**pendiente**: el perfil aún no se ha actualizado ni creado.
+| Estado | Detalles |
+| --- | --- |
+| [!UICONTROL complete] | La solicitud de actualización de lote de perfiles se completó correctamente. |
+| [!UICONTROL incompleto] | La solicitud de actualización de lote de perfiles aún se está procesando y no se ha completado. |
+| [!UICONTROL atascado] | La solicitud de actualización de lote de perfiles está atascada y no se pudo completar. |
 
+### Respuesta URL de estado detallado del lote
 
+Se puede obtener una respuesta más detallada pasando un parámetro `showDetails=true` a la `batchStatus` url anterior.
 
+Por ejemplo:
+
+```
+http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383&showDetails=true
+```
+
+#### Respuesta detallada
+
+```
+<response>
+    <batchId>demo4-1701473848678-13029383</batchId>
+    <status>complete</status>
+    <batchSize>1</batchSize>
+    <consumedCount>1</consumedCount>
+    <successfulUpdates>1</successfulUpdates>
+    <profilesNotFound>0</profilesNotFound>
+    <failedUpdates>0</failedUpdates>
+</response>
+```

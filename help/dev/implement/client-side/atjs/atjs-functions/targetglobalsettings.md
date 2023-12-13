@@ -4,10 +4,10 @@ description: Utilice el [!UICONTROL targetGlobalSettings()] para la función [!D
 title: ¿Cómo utilizo el [!UICONTROL targetGlobalSettings()] ¿Función?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: d5d25c6a559dafe446d26cca6c03d8e693cbd508
+source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
 workflow-type: tm+mt
-source-wordcount: '2521'
-ht-degree: 70%
+source-wordcount: '2568'
+ht-degree: 58%
 
 ---
 
@@ -18,6 +18,18 @@ Puede anular la configuración de la biblioteca at.js de mediante `[!UICONTROL t
 ## Configuración
 
 Las configuraciones que se pueden anular son las siguientes:
+
+### aepSandboxId
+
+* **Tipo**: String
+* **Valor predeterminado**: nulo
+* **Descripción**: Parámetro opcional utilizado para enviar [!DNL Adobe Experience Platform] ID de zona protegida para compartir [!DNL Adobe Experience Platform] destinos creados en la zona protegida no predeterminada con [!DNL Target]. If `aepSandboxId` no es nulo, `aepSandboxName` también debe proporcionarse.
+
+### aepSandboxName
+
+* **Tipo**: String
+* **Valor predeterminado**: nulo
+* **Descripción**: Parámetro opcional utilizado para enviar [!DNL Adobe Experience Platform] nombre de zona protegida para compartir [!DNL Adobe Experience Platform] destinos creados en la zona protegida no predeterminada con [!DNL Target]. If `aepSandboxName` no es nulo, `aepSandboxId` también debe proporcionarse.
 
 ### artifactLocation
 
@@ -90,7 +102,7 @@ Las configuraciones que se pueden anular son las siguientes:
 
   Solo del lado del servidor es el método de toma de decisiones predeterminado que se establece por defecto cuando at.js 2.5+ se implementa y despliega en las propiedades web.
 
-  Usar solo del lado del servidor como configuración predeterminada significa que todas las decisiones se toman en la red perimetral de [!DNL Target], lo que implica una llamada al servidor de bloqueo. Este método puede introducir la latencia incremental, pero también ofrece beneficios importantes, como la posibilidad de aplicar [!DNL Target]Las funciones de aprendizaje automático de que incluyen [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) y [Segmentación automática](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) actividades.
+  Usar solo del lado del servidor como configuración predeterminada significa que todas las decisiones se toman en la [!DNL Target] red perimetral, que implica una llamada al servidor de bloqueo. Este método puede introducir la latencia incremental, pero también ofrece beneficios importantes, como la posibilidad de aplicar [!DNL Target]Las funciones de aprendizaje automático de que incluyen [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) y [Segmentación automática](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) actividades.
 
   Además, puede mejorar sus experiencias personalizadas utilizando [!DNL Target]El perfil de usuario de, que se mantiene en todas las sesiones y canales, puede proporcionar potentes resultados para su empresa.
 
@@ -110,7 +122,7 @@ Las configuraciones que se pueden anular son las siguientes:
 
   Híbrido es el método de toma de decisiones que debe configurarse en at.js 2.5+ cuando las decisiones en el dispositivo y las actividades que requieren una llamada de red a [!DNL Adobe Target] Se debe ejecutar la red perimetral.
 
-  Cuando administra actividades de toma de decisiones en el dispositivo y actividades del lado del servidor, puede resultar un poco complicado y tedioso pensar en cómo implementar y aprovisionar [!DNL Target] en sus páginas. Con el método de toma de decisiones hibrido, [!DNL Target] sabe cuándo debe realizar una llamada al servidor a la red de Edge para actividades que requieren ejecución del lado del servidor y también cuándo ejecutar únicamente decisiones en el dispositivo.[!DNL Adobe Target]
+  Cuando administra actividades de toma de decisiones en el dispositivo y actividades del lado del servidor, puede resultar un poco complicado y tedioso pensar en cómo implementar y aprovisionar [!DNL Target] en sus páginas. Con el método de toma de decisiones híbrido, [!DNL Target] sabe cuándo debe realizar una llamada al servidor a [!DNL Adobe Target] Red perimetral para actividades que requieren ejecución del lado del servidor y también cuando solo se ejecutan decisiones en el dispositivo.
 
   El artefacto de reglas JSON incluye metadatos para informar a at.js de si un mbox tiene una actividad del lado del servidor en ejecución o una actividad de toma de decisiones en el dispositivo. Este método de toma de decisiones garantiza que las actividades que desea que se entreguen rápidamente se realicen mediante la toma de decisiones en el dispositivo y que, para las actividades que requieren una personalización basada en ML más potente, dichas actividades se realicen a través del [!DNL Adobe Target] Red perimetral.
 
@@ -166,7 +178,7 @@ Las configuraciones que se pueden anular son las siguientes:
 
 * **Tipo**: booleano
 * **Valor predeterminado**: false
-* **Descripción**[!DNL Target]: indica si debe llamar a la función `isOptedOut()` de la API de visitante. Esto forma parte de la habilitación de Device Graph.
+* **Descripción**: indica si [!DNL Target] debe llamar a la API de visitante `isOptedOut()` función. Esto forma parte de la habilitación de Device Graph.
 
 ### overrideMboxEdgeServer
 
@@ -214,7 +226,7 @@ Las configuraciones que se pueden anular son las siguientes:
 
 * **Tipo**: String
 * **Valor predeterminado**: valor establecido mediante la IU.
-* **Descripción**[!DNL Target]: representa el servidor Edge de 
+* **Descripción**: representa el [!DNL Target] servidor Edge.
 
 ### serverState
 
@@ -244,7 +256,7 @@ Las configuraciones que se pueden anular son las siguientes:
 
 * **Tipo**: número
 * **Valor predeterminado**: 2000 ms = 2 s
-* **Descripción**: representa el tiempo de espera de la solicitud de la API de visitante.
+* **Descripción**: representa el tiempo de espera de la solicitud de API del visitante.
 
 ## Uso
 
@@ -304,7 +316,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-Después de que at.js procese `window.targetGlobalSettings.dataProviders`[!DNL Target], la solicitud de contiene un nuevo parámetro: `t1=1`.
+Después de que at.js procese `window.targetGlobalSettings.dataProviders`, el [!DNL Target] La solicitud contendrá un nuevo parámetro: `t1=1`.
 
 A continuación se muestra un ejemplo si los parámetros que desea agregar a la variable [!DNL Target] Las solicitudes de se recuperan de un servicio de terceros, como BlueKai, Demandbase, etc.:
 
@@ -327,7 +339,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-Después de que at.js procese `window.targetGlobalSettings.dataProviders`[!DNL Target], la solicitud de contiene parámetros adicionales: `t1=1`, `t2=2` y `t3=3`.
+Después de que at.js procese `window.targetGlobalSettings.dataProviders`, el [!DNL Target] la solicitud contendrá parámetros adicionales: `t1=1`, `t2=2` y `t3=3`.
 
 El siguiente ejemplo utiliza proveedores de datos para recopilar datos de la API meteorológica y enviarlos como parámetros en un [!DNL Target] solicitud. El [!DNL Target] La solicitud tendrá parámetros adicionales, como `country` y `weatherCondition`.
 
@@ -398,11 +410,11 @@ window.targetGlobalSettings = {
 ...
 ```
 
-Una vez especificadas las configuraciones `cspScriptNonce` y `cspStyleNonce`, at.js 2.3.0+ las establece como atributos nonce en todas las etiquetas SCRIPT y STYLE que adjunta al DOM al aplicar ofertas de [!DNL Target]
+Después `cspScriptNonce` y `cspStyleNonce` Si se especifica la configuración, at.js 2.3.0+ las establece como atributos nonce en todas las etiquetas SCRIPT y STYLE que adjunta al DOM al aplicar [!DNL Target] ofertas.
 
 ## Personalización híbrida
 
-`serverState`[!DNL Target] es una configuración disponible en at.js v2.2 o posterior que se puede utilizar para optimizar el rendimiento de la página cuando se implementa una integración híbrida de La integración híbrida significa que está utilizando at.js v2.2 o posterior del lado del cliente y la API de entrega o un [!DNL Target] SDK en el lado del servidor para ofrecer experiencias. `serverState` permite a at.js v2.2, u otra versión posterior, aplicar experiencias directamente desde el contenido recuperado en el servidor y devuelto al cliente como parte de la página que se está sirviendo.
+`serverState` es una configuración disponible en at.js v2.2 o posterior que se puede utilizar para optimizar el rendimiento de la página cuando una integración híbrida de [!DNL Target] se ha implementado. La integración híbrida significa que está utilizando at.js v2.2 o posterior del lado del cliente y la API de entrega o un [!DNL Target] SDK en el lado del servidor para ofrecer experiencias. `serverState` permite a at.js v2.2, u otra versión posterior, aplicar experiencias directamente desde el contenido recuperado en el servidor y devuelto al cliente como parte de la página que se está sirviendo.
 
 ### Requisitos previos
 
@@ -525,13 +537,13 @@ Tenga en cuenta lo siguiente al utilizar `serverState`:
    * Actividades creadas por VEC que se ejecutan al cargar la página.
    * Vistas previamente recuperadas.
 
-     Si hay SPA que utilizan Vistas de [!DNL Target] y `triggerView()` en la API de at.js, at.js v2.2 almacena en caché el contenido de todas las vistas previamente recuperadas del lado del servidor y las aplica en cuanto cada vista se activa mediante `triggerView()`, de nuevo sin activar ninguna llamada de recuperación de contenido adicional a [!DNL Target].
+     SPA En caso de que se utilice la [!DNL Target] Vistas y `triggerView()` en la API de at.js, at.js v2.2 almacena en caché el contenido de todas las vistas previamente recuperadas del lado del servidor y las aplica en cuanto cada vista se activa mediante `triggerView()`, de nuevo sin activar ninguna llamada de recuperación de contenido adicional a [!DNL Target].
 
    * **Nota**: Actualmente, los mboxes recuperados del lado del servidor no son compatibles con `serverState`.
 
-* Al aplicar ofertas de `serverState`, at.js tiene en cuenta la configuración `pageLoadEnabled` y `viewsEnabled`. Por ejemplo, las ofertas de carga de página no se aplicarán si la configuración `pageLoadEnabled` es falsa.
+* Al aplicar `serverState` ofertas, at.js tiene en cuenta `pageLoadEnabled` y `viewsEnabled` , por ejemplo, las ofertas de carga de página no se aplicarán si la variable `pageLoadEnabled` La configuración es falsa.
 
-  Para activar esta configuración, habilite la opción en **Administración > Implementación > Editar > Carga de página habilitada**.
+  Para activar esta configuración, active la opción **Administración > Implementación > Editar > Carga de página habilitada**.
 
   ![Configuración de carga de página habilitada](../../assets/page-load-enabled-setting.png)
 

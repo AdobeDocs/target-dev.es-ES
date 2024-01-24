@@ -4,10 +4,10 @@ description: Vea los detalles sobre los cambios en cada versión de [!DNL Adobe 
 title: ¿Qué se incluye en cada versión de at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 09ecaa3be954fe5a002e09a422ceeb7a4ed0750a
+source-git-commit: 9999c1b5f603e6607bd81f6ad6a06a7f74e76acb
 workflow-type: tm+mt
-source-wordcount: '4712'
-ht-degree: 72%
+source-wordcount: '4926'
+ht-degree: 65%
 
 ---
 
@@ -19,7 +19,7 @@ Detalles sobre los cambios realizados en cada versión de la biblioteca JavaScri
 >
 >[!DNL Adobe Target] admite at.js 1.*x* y at.js 2.*x*.
 >
->at.js 1.*x*   ha entrado en modo de mantenimiento. El [!DNL Target] Team publica correcciones de errores y parches de seguridad cuando es necesario.
+>at.js 1.*x* ha entrado en modo de mantenimiento. El [!DNL Target] Team publica correcciones de errores y parches de seguridad cuando es necesario.
 >
 >El [!DNL Target] El equipo de proporciona compatibilidad total con at.js 2.*x* y publica correcciones de errores, parches de seguridad, funciones y optimización del rendimiento de forma continua.
 >
@@ -27,24 +27,28 @@ Detalles sobre los cambios realizados en cada versión de la biblioteca JavaScri
 
 Etiquetas en [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) son el método preferido para actualizar at.js. Los desarrolladores de extensiones añaden continuamente nuevas funciones a sus extensiones y suelen corregir errores. Estas actualizaciones se incluyen en las versiones nuevas de una extensión y se pueden descargar en el catálogo de Adobe Experience Platform como actualizaciones. Para obtener más información, consulte [Actualizaciones de extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) en el *Información general sobre etiquetas* guide.6+
 
-## Versión 2.11.3 de at.js (21 de noviembre de 2023)
+## Versión 2.11.4 de at.js (jueves, 24 de enero de 2024)
+
+* Se ha actualizado at.js para evitar que se envíen datos geográficos no válidos a la API de entrega.
+
+## Versión 2.11.3 de at.js (miércoles, 21 de noviembre de 2023)
 
 * Se ha corregido un problema que impedía que se enviaran tokens de respuesta en `at-content-rendering-failed` eventos.
 
-## Versión 2.11.2 de at.js (26 de octubre de 2023)
+## Versión 2.11.2 de at.js (viernes, 26 de octubre de 2023)
 
 * Se ha corregido un problema que provocaba incoherencias en los tokens de respuesta enviados en eventos personalizados.
 
-## Versión 2.11.1 de at.js (13 de octubre de 2023)
+## Versión 2.11.1 de at.js (sábado, 13 de octubre de 2023)
 
 * Se ha corregido un problema que provocaba errores no capturados mientras una página que ejecutaba at.js estaba en modo quirks.
 
-## Versión 2.11.0 de at.js (10 de octubre de 2023)
+## Versión 2.11.0 de at.js (miércoles, 10 de octubre de 2023)
 
 * Se ha agregado compatibilidad para establecer parámetros personalizados [!DNL Adobe Experience Platform] (AEP) `sandboxId` y `sandboxName` in `targetGlobalSettings`, que se pasa a la API de entrega el `getOffer/getOffers` llamadas.
 * Corrección DOM de sombreado para encadenar `:eq()` en selectores.
 
-## Versión 2.10.3 de at.js (12 de septiembre de 2023)
+## Versión 2.10.3 de at.js (miércoles, 12 de septiembre de 2023)
 
 * Se ha corregido un problema que activaba incorrectamente el `at-content-rendering-succeeded` Evento personalizado cuando no se procesan ofertas. El evento correcto, `at-content-rendering-no-offers`, ahora se activa.
 * Añadido `eventToken` y `responseTokens` a objeto de error para `at-content-rendering-failed` Evento personalizado.
@@ -58,7 +62,7 @@ Etiquetas en [Adobe Experience Platform](/help/dev/implement/client-side/atjs/ho
 * Se ha corregido un error por el que las actividades que implicaban reglas de audiencia que contenían parámetros con puntos en sus nombres no devolvían la experiencia esperada, para la toma de decisiones en el dispositivo.
 * Se ha corregido un error introducido en at.js 2.6.0 en el que at.js activaba una llamada de entrega, incluso cuando mboxDisable estaba habilitado.
 
-## Versión 2.10.0 de at.js (19 de septiembre de 2022)
+## Versión 2.10.0 de at.js (martes, 19 de septiembre de 2022)
 
 * Se ha agregado compatibilidad con cookies de terceros.
 
@@ -69,7 +73,7 @@ Etiquetas en [Adobe Experience Platform](/help/dev/implement/client-side/atjs/ho
 
 ## Versión 2.8.1 de at.js (28 de enero de 2022)
 
-* Se ha corregido que la `pageLoad` no se asignara a target-global-mbox en el modo de ejecución híbrido de On Device Decisioning (ODD).
+* Fijo `pageLoad` no se va a asignar a target-global-mbox en el modo de ejecución híbrido de On Device Decisioning (ODD).
 * Se ha corregido un problema con los detalles de análisis para la solicitud de mbox.
 * Se han actualizado las dependencias de desarrollo para corregir las vulnerabilidades de seguridad.
 
@@ -102,7 +106,7 @@ Esta versión incluye los siguientes cambios:
 * [!UICONTROL Analytics for Target] (A4T) Los detalles de las métricas de clic se devuelven correctamente al utilizar `prefetch` solicitudes.
 * La generación UUID ya no utiliza `Math.random()`, sino que depende de `window.crypto`.
 * La caducidad de la cookie `sessionId` se amplía correctamente en cada llamada de red.
-* La inicialización de la caché de la vista Aplicación de una sola página (SPA) ahora se gestiona correctamente y respeta la configuración `viewsEnabled`. Configuración `viewsEnabled` a la `false` ahora deshabilita la variable `triggerView()` función. Consulte [Orden de las operaciones para la carga inicial de la página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
+* SPA Ahora, la inicialización de la caché de la vista Aplicación de una sola página (VISTA) se gestiona correctamente y respeta `viewsEnabled` configuración. Configuración `viewsEnabled` a la `false` ahora deshabilita la variable `triggerView()` función. Consulte [Orden de las operaciones para la carga inicial de la página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
 
 ## at.js 2.5.0 (13 de mayo de 2021)
 
@@ -153,7 +157,7 @@ Esta versión de at.js es de mantenimiento e incluye las siguientes mejoras y co
 * Se ha corregido un problema que se producía al usar CNAME y la anulación de perímetros, at.js 2.*x* podría crear incorrectamente el dominio del servidor, lo que provocaba que la solicitud de [!DNL Target] diera error. (TNT-35065)
 * Se ha corregido un problema al usar el [!DNL Target] extensión v2 y el [!UICONTROL Adobe Analytics Launch] extensión, [!DNL Target] retrasó el [!DNL Analytics] `sendBeacon` llamada. (TNT-36407, TNT-35990, TNT-36000)
 
-## Versión 2.3.0 de at.js (25 de marzo de 2020)
+## Versión 2.3.0 de at.js (jueves, 25 de marzo de 2020)
 
 Esta versión de at.js es de mantenimiento e incluye las siguientes mejoras y correcciones:
 
@@ -161,13 +165,13 @@ Esta versión de at.js es de mantenimiento e incluye las siguientes mejoras y co
 * Se ha corregido un problema que se producía al compilar at.js con el compilador de cierre de Google para la implementación de Google Tag Manager.
 * Se ha cambiado el nombre de la cookie de comprobación de at.js de `check` hasta `at_check` para evitar conflictos con las implementaciones de los clientes.
 
-## Versión 1.8.1 de at.js (25 de marzo de 2020)
+## Versión 1.8.1 de at.js (jueves, 25 de marzo de 2020)
 
 Esta versión de at.js es de mantenimiento e incluye las siguientes mejoras y correcciones:
 
 * Se ha cambiado el nombre de la cookie de comprobación de at.js de `check` hasta `at_check` para evitar conflictos con las implementaciones de los clientes.
 
-## Versión 2.2.0 de at.js (10 de octubre de 2019)
+## Versión 2.2.0 de at.js (viernes, 10 de octubre de 2019)
 
 Esta versión de at.js incluye las siguientes mejoras y correcciones:
 
@@ -180,9 +184,9 @@ Esta versión de at.js incluye las siguientes mejoras y correcciones:
 >
 >Actualice la extensión de ECID a la versión 4.4 para aprovechar esta mejora de rendimiento.
 
-* La versión 2.2 de at.js también proporciona una nueva configuración denominada `serverState`. Esta configuración se puede utilizar para optimizar el rendimiento de la página cuando una integración híbrida de [!DNL Target] se ha implementado. La integración híbrida significa que está utilizando at.js v2.2 o posterior del lado del cliente y la API de entrega o un [!DNL Target] SDK en el lado del servidor para ofrecer experiencias. `serverState` permite a at.js v2.2, u otra versión posterior, aplicar experiencias directamente desde el contenido recuperado en el servidor y devuelto al cliente como parte de la página que se está sirviendo. Para obtener más información, consulte Proveedores de datos en [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
+* La versión 2.2 de at.js también proporciona una nueva configuración denominada `serverState`. Esta configuración se puede utilizar para optimizar el rendimiento de la página cuando una integración híbrida de [!DNL Target] se ha implementado. La integración híbrida significa que está utilizando at.js v2.2 o posterior del lado del cliente y la API de entrega o un [!DNL Target] SDK en el lado del servidor para ofrecer experiencias. `serverState` permite a at.js v2.2 o posterior aplicar experiencias directamente desde el contenido recuperado en el servidor y devuelto al cliente como parte de la página que se está sirviendo. Para obtener más información, consulte serverState en [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
 
-## Versión 1.8.0 de at.js (10 de octubre de 2019)
+## Versión 1.8.0 de at.js (viernes, 10 de octubre de 2019)
 
 Esta versión de at.js incluye las siguientes mejoras y correcciones:
 
@@ -370,11 +374,11 @@ Ya está disponible la versión 1.3.0 de at.js.
   Para obtener más información, consulte [Proveedores de datos](atjs-functions/targetglobalsettings.md#data-providers).
 
 * Las solicitudes at.js ahora usan GET, pero cambiarán a POST cuando el tamaño de la URL exceda los 2048 caracteres. Hay una nueva propiedad llamada `urlSizeLimit` donde puede aumentar el límite de tamaño si es necesario. Este cambio permite [!DNL Target] para alinear at.js con el AppMeasurement, que utiliza la misma técnica.
-* [!DNL Target] ahora impone que se use la clave `mbox` en la función `adobe.target.applyOffer(options)`. Esta clave se ha requerido en el pasado, pero [!DNL Target] impone ahora su uso para garantizar que [!DNL Target] tiene la validación adecuada y los clientes utilizan la función correctamente.
+* [!DNL Target] ahora exige que la variable `mbox` clave en el `adobe.target.applyOffer(options)` se utiliza la función. Esta clave se ha requerido en el pasado, pero [!DNL Target] impone ahora su uso para garantizar que [!DNL Target] tiene la validación adecuada y los clientes utilizan la función correctamente.
 * at.js ha mejorado la funcionalidad de seguimiento de eventos y clics. at.js utiliza `navigator.sendBeacon()` para enviar datos de seguimiento de eventos y se volverá a utilizar XHR sincrónico cuando no se admita `navigator.sendBeacon()`. Este reutilización afecta principalmente a Internet Explorer 10 y 11 y algunas versiones de Safari. Safari añadirá compatibilidad para `navigator.sendBeacon()` en la próxima versión de iOS 11.3.
 * Ahora, at.js puede presentar ofertas incluso cuando una página se abre en pestañas de fondo. Algunos [!DNL Target] Los clientes encontraban un problema cuando `requestAnimationFrame()` se deshabilitó debido al comportamiento de regulación del explorador para las pestañas de fondo.
 * Esta versión agrega muchas mejoras de rendimiento, incluyendo pilas de llamadas más cortas al inspeccionar un perfil de la CPU de Chrome.
-* at.js 1.3.0 ya no admite la publicación de contenido en Microsoft Internet Explorer 9. Para ver la lista de navegadores compatibles, consulte  [Exploradores admitidos](/help/dev/before-implement/supported-browsers.md). En el futuro, todas las solicitudes se ejecutarán a través de `XMLHttpRequest` con compatibilidad con CORS sin solicitudes JSONP. Este cambio mejora mucho la seguridad.
+* at.js 1.3.0 ya no admite la publicación de contenido en Microsoft Internet Explorer 9. Para ver una lista de los exploradores compatibles, consulte [Exploradores compatibles](/help/dev/before-implement/supported-browsers.md). En el futuro, todas las solicitudes se ejecutarán a través de `XMLHttpRequest` con compatibilidad con CORS sin solicitudes JSONP. Este cambio mejora mucho la seguridad.
 
 ## Versión 1.2.3 de at.js
 
@@ -399,10 +403,10 @@ Ya está disponible la versión 1.2.1 de at.js.
 
 ## Versión 1.2.0 de at.js
 
-La versión 1.2 de at.js ya está disponible como una versión de mantenimiento que contiene principalmente correcciones de errores. 
+La versión 1.2 de at.js ya está disponible como una versión de mantenimiento que contiene principalmente correcciones de errores.
 
 * Se ha corregido un problema que impedía utilizar acciones predeterminadas en casos especiales de rastreo de clics. (TNT-28089)
-* Se ha corregido un problema producido al rastrear clics en un vínculo con `target="_blank"`, y que impedía que abriera el vínculo en una pestaña nueva. [!DNL Target] (TNT-28072)
+* Se ha corregido un problema que se producía al rastrear clics en un vínculo con `target="_blank"` que impedía [!DNL Target] para abrir el vínculo en una nueva pestaña. (TNT-28072)
 * Se pueden usar direcciones IP como dominio de la cookie. (TNT-28002)
 * Se ha corregido un problema que causaba parpadeo en las ofertas de redireccionamiento con un mbox global u otros mboxes regionales. (TNT-27978)
 * Se ha corregido un problema en [!UICONTROL Segmentación de experiencias] error en la configuración de la actividad dentro del VEC al cambiar entre Examinar y Componer. (TNT-27942)
@@ -452,7 +456,7 @@ En la versión 0.9.7 de at.js se incluyen las siguientes mejoras y correcciones:
 
 En la versión 0.9.6 de at.js se incluyen las siguientes mejoras y correcciones:
 
-* Compatibilidad con ofertas de redireccionamiento para A4T. Una vez que descargue e instale la versión 0.9.6 de at.js, podrá usar ofertas de redireccionamiento en actividades que empleen [!UICONTROL Adobe Analytics como la fuente de informes de Target] (A4T). Aparte de la versión 0.9.6 de at.js, existen otros requisitos mínimos que su implementación debe cumplir para usar ofertas de redireccionamiento y A4T. Para obtener más información y otros detalles importantes adicionales que debe conocer, consulte las [preguntas más frecuentes de A4T sobre las ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html).
+* Compatibilidad con ofertas de redireccionamiento para A4T. Una vez que descargue e instale la versión 0.9.6 de at.js, podrá usar ofertas de redireccionamiento en actividades que utilicen [!UICONTROL Adobe Analytics como fuente de informes para Target] (A4T). Aparte de la versión 0.9.6 de at.js, existen otros requisitos mínimos que su implementación debe cumplir para utilizar ofertas de redireccionamiento y A4T. Para obtener más información y otros detalles importantes adicionales que debe conocer, consulte las [preguntas más frecuentes de A4T sobre las ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html).
 * Antes de at.js 0.9.6, cuando la API de visitante estaba presente en la página y el `visitorApiTimeout` la configuración era demasiado agresiva, [!DNL Target] podría encontrar una situación en la que no se enviara ningún dato MCID en el [!DNL Target] solicitud. Esto podía conllevar problemas como visitas no retenidas en [!DNL Analytics] al usar A4T.
 
   Este comportamiento se ha cambiado en la versión 0.9.6 de at.js, aunque la variable `visitorApiTimeout` se define en, por ejemplo, 1 ms, [!DNL Target] intentará recopilar los datos del SDID, los servidores de seguimiento y los ID de cliente, y enviarlos en el [!DNL Target] solicitud.
@@ -469,7 +473,7 @@ En la versión 0.9.6 de at.js se incluyen las siguientes mejoras y correcciones:
 
 **Fecha:** 19 de enero de 2017
 
-* Los nombres de mbox ahora pueden contener caracteres especiales, incluido el símbolo et (&amp;). 
+* Los nombres de mbox ahora pueden contener caracteres especiales, incluido el símbolo &amp;.
 
   Para ver una lista de caracteres especiales permitidos, consulte [Configuración de at.js](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
@@ -488,7 +492,7 @@ En la versión 0.9.6 de at.js se incluyen las siguientes mejoras y correcciones:
 
 **Fecha:** 21 de septiembre de 2016
 
-* Se ha añadido la opción de configuración `optoutEnabled` para habilitar o deshabilitar la exclusión de Device Graph. Si esta opción se establece en `true` y el visitante ha excluido el seguimiento, su navegador no hará llamadas de mbox. Device Graph está aún en versión beta. Esta opción está definida en `false` de forma predeterminada; si se usa Device Graph, hay que establecerla en `true`. 
+* Se ha añadido la opción de configuración `optoutEnabled` para habilitar o deshabilitar la exclusión de Device Graph. Si esta opción se establece en `true` y el visitante ha excluido el seguimiento, su navegador no hará llamadas de mbox. Device Graph está aún en versión beta. Esta configuración se establece en `false` de forma predeterminada, pero debe configurarse como `true` si utiliza Device Graph.
 * Se ha añadido compatibilidad con `CustomEvent` para el mecanismo de notificación. Antes, el mecanismo de notificación de los eventos de at.js no se podía usar desde las API Standard del DOM, como `document.addEventListener()`. Ahora puede usar `document.addEventListener()` para suscribirse a los eventos de at.js, como eventos de solicitud y eventos de representación de contenido.
 * Se ha arreglado un error relacionado con las ofertas creadas en el Compositor de experiencias visuales (VEC). Antes de esta versión, [!DNL Target] oculta los selectores y los muestra solo cuando coinciden todos los selectores. En la versión 0.9.2 de at.js [!DNL Target] muestra los selectores en cuanto coinciden.
 
@@ -506,10 +510,10 @@ En la versión 0.9.6 de at.js se incluyen las siguientes mejoras y correcciones:
 
 **Fecha:** 23 de junio de 2016
 
-* Corrige un problema de pantalla blanca que surgía al usar las ofertas del VEC. Todo aquel que utilice at.js debería actualizar a esta nueva versión.
+* Corrige un problema de pantalla blanca que surgía al usar las ofertas del VEC. Todo aquel que utilice at.js debe actualizar a esta nueva versión.
 * Nueva API `registerExtension`.
 
-  Esta nueva API ofrece a los desarrolladores acceso a ciertos módulos de jQuery utilizados en at.js para desarrollar extensiones (es decir, complementos) para la biblioteca. Este cambio conlleva varias implicaciones. Solo afectan a los usuarios que usan estas características:
+  Esta nueva API proporciona a los desarrolladores acceso a ciertos módulos de jQuery utilizados en at.js para desarrollar extensiones (es decir, complementos) para la biblioteca. Este cambio conlleva varias implicaciones. Solo afectan a los usuarios que usan estas características:
 
    * La API `getSettings()` se ha eliminado, pero las mismas funciones están disponibles en `registerExtension()`.
    * La API `getTracking()` se ha eliminado, pero las mismas funciones están disponibles en `registerExtension()`.
@@ -518,7 +522,7 @@ En la versión 0.9.6 de at.js se incluyen las siguientes mejoras y correcciones:
 
 * Nueva API de notificación de at.js.
 
-  El objetivo de este sistema de notificación es ofrecer más información sobre lo que at.js hace en la página y avisar cuando hay problemas. Un problema común del VEC es que un lanzamiento de TI modifica la página, un selector del VEC se interrumpe y la prueba deja de entregar el contenido correctamente. Uno de los objetivos de este sistema de notificación es poner en conocimiento de la página este problema de entrega con el fin de que los desarrolladores puedan acceder a la información para pasarla a un sistema como [!DNL Adobe Analytics] y de que se puedan enviar alertas a los propietarios del negocio con el aviso de que la prueba se ha interrumpido.
+  El objetivo de este sistema de notificación es proporcionar más información sobre lo que at.js está haciendo en la página y cuándo hay problemas. Un problema común del VEC es que un lanzamiento de TI modifica la página, un selector del VEC se interrumpe y la prueba deja de entregar el contenido correctamente. Uno de los objetivos de este sistema de notificación es poner en conocimiento de la página este problema de entrega con el fin de que los desarrolladores puedan acceder a la información para pasarla a un sistema como [!DNL Adobe Analytics] y de que se puedan enviar alertas a los propietarios del negocio con el aviso de que la prueba se ha interrumpido.
 
 * Método de la nueva API.`targetGlobalSettings()`
 
@@ -530,17 +534,17 @@ En la versión 0.9.6 de at.js se incluyen las siguientes mejoras y correcciones:
 
 Esta es la primera fecha de lanzamiento oficial de la biblioteca at.js.
 
-at.js es una nueva biblioteca de implementación para [!DNL Target] que está diseñada tanto para implementaciones web típicas como para aplicaciones de una sola página.
+at.js es una nueva biblioteca de implementación para [!DNL Target] diseñado tanto para implementaciones web típicas como para aplicaciones de una sola página.
 
 at.js reemplaza a mbox.js para [!DNL Adobe Target]implementaciones.
 
-Entre otros beneficios, at.js mejora los tiempos de carga de página para implementaciones web, mejora la seguridad y proporciona mejores opciones de implementación para aplicaciones de una sola página.
+Entre otros beneficios, at.js mejora los tiempos de carga de página en implementaciones web, mejora la seguridad y proporciona mejores opciones de implementación en aplicaciones de una sola página.
 
 at.js contiene los componentes que se incluían en target.js, de modo que ya no hay más una llamada a target.js.
 
 Al implementar at.js, tenga en cuenta lo siguiente:
 
 * Las versiones anteriores a Internet Explorer 8 no son compatibles.
-* La implementación asincrónica significa que las integraciones anteriores, como el complemento de [!UICONTROL Test&amp;Target a SiteCatalyst], pueden no funcionar.
-* Los complementos de [!DNL Target] que hacen referencia a objetos y métodos de mbox.js no son compatibles.
+* La implementación asíncrona implica integraciones heredadas como la [!UICONTROL Test&amp;Target al SiteCatalyst] el complemento puede no funcionar.
+* [!DNL Target] Los complementos de que hacen referencia a objetos y métodos de mbox.js no son compatibles.
 * Todas las llamadas a [!DNL Target] se realizan mediante una solicitud XMLHTTPRequest y el contenido se devuelve mediante JSON.

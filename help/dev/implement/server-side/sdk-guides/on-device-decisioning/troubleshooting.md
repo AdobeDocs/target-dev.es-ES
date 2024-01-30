@@ -3,9 +3,9 @@ title: Resolución de problemas de toma de decisiones en el dispositivo
 description: Obtenga información sobre cómo solucionar problemas [!UICONTROL toma de decisiones en el dispositivo]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adob
 
 ## 3. Compruebe el [!UICONTROL toma de decisiones en el dispositivo] *artefacto de regla* se ha recuperado y almacenado en caché según el intervalo de sondeo definido.
 
-1. Espere la duración del intervalo de sondeo (el valor predeterminado es 5 minutos) y asegúrese de que el SDK esté recuperando el artefacto. Se generarán los mismos registros de terminal.
+1. Espere la duración del intervalo de sondeo (el valor predeterminado es 20 minutos) y asegúrese de que el SDK esté recuperando el artefacto. Se generarán los mismos registros de terminal.
 
    Además, la información de la[!DNL Target]El seguimiento debe enviarse al terminal con detalles sobre el artefacto de regla.
 

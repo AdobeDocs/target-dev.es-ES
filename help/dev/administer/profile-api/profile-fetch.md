@@ -3,14 +3,15 @@ title: Recuperación de perfiles
 description: Aprenda a utilizar las API de perfil de Adobe Target para recuperar datos de visitantes que utilizar en [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
+exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
+source-git-commit: b8ccfdcaff6aa17a325727df0a9ffd716e44519b
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
-# Actualización de perfiles
+# Recuperación de perfiles
 
 A [!DNL Target] El perfil de se puede recuperar de tres formas: mediante una `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` o `thirdPartyId`.
 

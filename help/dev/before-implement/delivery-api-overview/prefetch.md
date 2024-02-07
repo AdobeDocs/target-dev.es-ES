@@ -4,9 +4,9 @@ description: ¿Cómo utilizo la recuperación previa de en [!UICONTROL API de en
 keywords: api de envío
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -122,9 +122,54 @@ Dentro de `prefetch` , añada uno o más `mboxes` que desee recuperar previament
 
 Dentro de la respuesta, verá el `content` campo que contiene la experiencia que se mostrará al usuario en un `mbox`. Esto resulta muy útil cuando se almacena en caché en el servidor, para que cuando un usuario interactúe con la aplicación web o móvil dentro de una sesión y visite un `mbox` en cualquier página concreta de la aplicación, la experiencia se puede entregar desde la caché en lugar de hacer otra [!UICONTROL API de envío de Adobe Target] llamada. Sin embargo, cuando se entrega una experiencia al usuario desde el `mbox`, a `notification` se enviarán mediante una llamada de API de envío para que se registre la impresión. Esto se debe a la respuesta de `prefetch` Las llamadas de se almacenan en caché, lo que significa que el usuario no ha visto las experiencias en el momento de la `prefetch` la llamada se realiza. Para obtener más información sobre `notification` proceso, consulte [Notificaciones](notifications.md).
 
+## Recuperar previamente mboxes con métricas de clickTrack al usar [!UICONTROL Analytics for Target] (A4T)
+
+[[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia de.
+
+El siguiente fragmento de código le permite recuperar previamente un mbox que contenga `clickTrack` métricas a notificar [!DNL Analytics] que se ha hecho clic en una oferta:
+
+```
+{
+  "prefetch": {
+    "mboxes": [
+      {
+        "index": 0,
+        "name": "<mboxName>",
+        "options": [
+           ...
+        ],
+        "metrics": [
+          {
+            "type": "click",
+            "eventToken": "<eventToken>",
+             "analytics": {
+               "payload": {
+                 "pe": "tnt",
+                 "tnta": "..."
+               }
+             }
+          },
+          }
+        ],
+        "analytics": {
+          "payload": {
+            "pe": "tnt",
+            "tnta": "347565:1:0|2,347565:1:0|1"
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+>[!NOTE]
+>
+>La recuperación previa de un mbox contiene [!DNL Analytics] carga útil solo para actividades cualificadas. La recuperación previa de métricas de éxito para actividades no calificadas aún provoca incoherencias en los informes.
+
 ## Recuperar vistas previamente
 
-SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o un usuario de un dispositivo móvil. Ahora, a través de la API de entrega, VEC crea actividades AB y XT con modificaciones en [SPA Vistas para la](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) ahora se puede recuperar previamente.
+SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o una experiencia móvil de un usuario. Ahora, a través de la API de entrega, VEC crea actividades AB y XT con modificaciones en [SPA Vistas para la](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) ahora se puede recuperar previamente.
 
 ```
 curl -X POST \

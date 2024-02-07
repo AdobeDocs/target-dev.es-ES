@@ -4,9 +4,9 @@ description: ¿Cómo utilizo la recuperación previa de en [!UICONTROL API de en
 keywords: api de envío
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
+source-git-commit: 803723d95d50cc39101d1646232446fbb0254385
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ Dentro de la respuesta, verá el `content` campo que contiene la experiencia que
 
 [[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia de.
 
-El siguiente fragmento de código le permite recuperar previamente un mbox que contenga `clickTrack` métricas a notificar [!DNL Analytics] que se ha hecho clic en una oferta:
+El siguiente fragmento de código es una respuesta de una recuperación previa de un mbox que contiene `clickTrack` métricas a notificar [!DNL Analytics] que se ha hecho clic en una oferta:
 
 ```
 {

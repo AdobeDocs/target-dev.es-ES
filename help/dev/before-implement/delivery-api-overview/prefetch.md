@@ -4,9 +4,9 @@ description: ¿Cómo utilizo la recuperación previa de en [!UICONTROL API de en
 keywords: api de envío
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 803723d95d50cc39101d1646232446fbb0254385
+source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---

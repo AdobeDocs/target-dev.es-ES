@@ -4,9 +4,9 @@ description: ¿Cómo utilizo la recuperación previa de en [!UICONTROL API de en
 keywords: api de envío
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
+source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Al utilizar la recuperación previa, es importante estar familiarizado con los s
 
 Los clientes, como las aplicaciones móviles y los servidores, pueden recuperar previamente varios mboxes para un visitante determinado dentro de una sesión y almacenarlos en la caché para evitar múltiples llamadas a [!UICONTROL API de envío de Adobe Target].
 
-```
+```shell shell-session
 curl -X POST \
 'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=7abf6304b2714215b1fd39a870f01afc#1555632114' \
 -H 'Content-Type: application/json' \
@@ -71,7 +71,7 @@ curl -X POST \
 
 Dentro de `prefetch` , añada uno o más `mboxes` desea recuperar previamente al menos una vez para un visitante dentro de una sesión. Después de recuperar previamente esos `mboxes`, recibirá la siguiente respuesta:
 
-```
+```JSON {line-numbers="true"}
 {
     "status": 200,
     "requestId": "5efee0d8-3779-4b12-a74e-e04848faf191",
@@ -128,7 +128,7 @@ Dentro de la respuesta, verá el `content` que contiene la experiencia que se mo
 
 El siguiente fragmento de código es una respuesta de una recuperación previa de un mbox que contiene `clickTrack` métricas a notificar [!DNL Analytics] que se ha hecho clic en una oferta:
 
-```
+```JSON {line-numbers="true"}
 {
   "prefetch": {
     "mboxes": [
@@ -169,9 +169,9 @@ El siguiente fragmento de código es una respuesta de una recuperación previa d
 
 ## Recuperar vistas previamente
 
-SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o una experiencia móvil de un usuario. Ahora, a través de la API de entrega, VEC crea actividades AB y XT con modificaciones en [SPA Vistas para la](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) ahora se puede recuperar previamente.
+SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o una experiencia móvil de un usuario. Ahora, a través de la API de entrega, se crea un VEC [[!UICONTROL Prueba A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} Actividades de (X)T con modificaciones en [SPA Vistas para la](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) ahora se puede recuperar previamente.
 
-```
+```shell  {line-numbers="true"}
 curl -X POST \
   'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=a3e7368c62d944c0855d424cd7a03ab0' \
   -H 'Content-Type: application/json' \
@@ -199,9 +199,9 @@ curl -X POST \
 }'
 ```
 
-SPA La llamada de ejemplo anterior recuperará previamente todas las vistas creadas mediante el VEC de para actividades AB y XT que se mostrarán para la web `channel`. Observe en la llamada que queremos recuperar previamente todas las vistas de las actividades AB o XT con las que trabaja un visitante `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que está visitando el `url`:`https://target.enablementadobe.com/react/demo/#/` es apto para.
+SPA La llamada de ejemplo anterior recupera previamente todas las vistas creadas a través del VEC de para [!UICONTROL Prueba A/B] y actividades XT que se mostrarán para la web `channel`. Tenga en cuenta que la llamada recupera previamente todas las vistas de [!UICONTROL Prueba A/B] o actividades XT con las que trabaja un visitante `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que está visitando el `url`:`https://target.enablementadobe.com/react/demo/#/` es apto para.
 
-```
+```JSON  {line-numbers="true"}
 {
     "status": 200,
     "requestId": "14ce028e-d2d2-4504-b3da-32740fa8dd61",
@@ -280,4 +280,4 @@ SPA La llamada de ejemplo anterior recuperará previamente todas las vistas crea
 }
 ```
 
-En el `content` campos de la respuesta, observe metadatos como `type`, `selector`, `cssSelector`, y `content`, que se utilizan para presentar la experiencia al usuario final cuando este visita la página. Tenga en cuenta que la variable `prefetched` el contenido se puede almacenar en caché y procesar para el usuario cuando sea necesario.
+En el `content` campos de la respuesta, observe metadatos como `type`, `selector`, `cssSelector`, y `content`, que se utilizan para presentar la experiencia al visitante cuando un usuario visita la página. Tenga en cuenta que la variable `prefetched` el contenido se puede almacenar en caché y procesar para el usuario cuando sea necesario.

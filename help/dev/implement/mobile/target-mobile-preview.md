@@ -4,10 +4,10 @@ description: Utilice los vínculos de vista previa para móviles para realizar u
 title: ¿Cómo utilizo los vínculos de vista previa para móviles en? [!DNL Adobe Target] ¿Móvil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
+source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 27%
+source-wordcount: '508'
+ht-degree: 23%
 
 ---
 
@@ -38,25 +38,25 @@ La funcionalidad de vista previa para móviles le permite probar completamente s
 
 ## Generación de un vínculo de vista previa
 
-1. En el [!DNL Target] IU, haga clic en **[!UICONTROL Más opciones]** (los puntos suspensivos verticales), y seleccione **[!UICONTROL Crear vínculo de vista previa para móviles]**.
+1. En el [!DNL Target] IU, haga clic en **[!UICONTROL More Options]** (los puntos suspensivos verticales), y seleccione **[!UICONTROL Create Mobile Preview Link]**.
 
    ![imagen alt](assets/mobile-preview-create.png)
 
-1. Seleccione las actividades que desea previsualizar y haga clic en **[!UICONTROL Generar vínculo de vista previa para móviles]**.
+1. Seleccione las actividades que desea previsualizar y haga clic en **[!UICONTROL Generate Mobile Preview Link]**.
 
    >[!NOTE]
    >
-   >Solo puede seleccionar Basado en formularios [!UICONTROL Prueba A/B] y [!UICONTROL Segmentación de experiencias] Actividades de (XT).
+   >Solo puede seleccionar Basado en formularios [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] Actividades de (XT).
 
    ![imagen alt](assets/mobile-preview-select-activities.png)
 
 1. Especifique el esquema de URL de su aplicación.
 
-   El esquema de URL debe ser el mismo que el que está presente en la aplicación de iOS o Android. Repita este proceso por separado para iOS y Android, si es necesario.
+   El esquema de URL debe ser el mismo que el presente en la aplicación de iOS o Android. Repita este proceso por separado para iOS y Android, si es necesario.
 
    ![imagen alt](assets/mobile-preview-enter-url-scheme.png)
 
-1. Haga clic en **[!UICONTROL Generar vínculo de vista previa para móviles]** y, a continuación, copie el vínculo.
+1. Clic **[!UICONTROL Generate Mobile Preview Link]** y, a continuación, copie el vínculo.
 
    ![imagen alt](assets/mobile-preview-generate-and-copy.png)
 
@@ -70,14 +70,14 @@ Abra el vínculo en un navegador móvil en un dispositivo en el que tenga instal
 
    |![vista previa del vínculo profundo 1](assets/mobile-preview-open-deeplink.png)|![vista previa del vínculo profundo 2](assets/mobile-preview-open-app.png)|
 
-   La aplicación se abre e inicia el [!DNL Target] [!UICONTROL Modo de vista previa móvil].
+   La aplicación se abre e inicia el [!DNL Target] [!UICONTROL Mobile Preview Mode].
 
-1. Seleccione la combinación de experiencias que desee usar y, a continuación, haga clic en **[!UICONTROL Launch Experiences]**.
+1. Seleccione la combinación de experiencias que desee ver y haga clic en **[!UICONTROL Launch Experiences]**.
 
    |![vista previa para móvil 1](assets/mobile-preview-experience-selection-1.png)|![vista previa para móvil 2](assets/mobile-preview-experience-result-1-france.png)|![vista previa para móvil 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![vista previa para móvil 4](assets/mobile-preview-experience-selection-2.png)|![vista previa para móvil 5](assets/mobile-preview-experience-result-2-aus.png)|![vista previa para móvil 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Limitaciones  
 
-* Debe volver a cargarse la vista para que el nuevo contenido se muestre después de hacer clic en el botón **[!UICONTROL Launch Experiences]**. El modo más sencillo es cambiar a una pantalla diferente y regresar a aquella en la que espera que se produzca el cambio.
+* La vista debe cargarse de nuevo para que el nuevo contenido se muestre después de **[!UICONTROL Launch Experiences]** Haga clic en el botón. El modo más sencillo es cambiar a una pantalla diferente y regresar a aquella en la que espera que se produzca el cambio.
 * La vista previa para móviles no es compatible con las versiones de Android anteriores a API-19 (KitKat).

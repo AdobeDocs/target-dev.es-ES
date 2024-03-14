@@ -4,16 +4,22 @@ description: Obtenga información acerca de [!DNL Adobe Target] API de envío de
 title: ¿Dónde puedo obtener información? [!DNL Target] ¿API de envío del lado del servidor y SDK?
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 14%
+source-wordcount: '569'
+ht-degree: 13%
 
 ---
 
 # Servidor: implementación [!DNL Target]
 
 Información acerca de [!DNL Adobe Target] API de envío del lado del servidor, SDK y [!DNL Target Recommendations] API.
+
+>[!NOTE]
+>
+>Si su implementación utiliza at.js y [!DNL AppMeasurement] en el lado del cliente, debe utilizar el [!UICONTROL Target Delivery API] y los SDK del lado del servidor que se describen a continuación.
+>
+>Si su implementación utiliza el [!UICONTROL Adobe Experience Platform Web SDK], debe utilizar el [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 El proceso siguiente se produce en una implementación del lado del servidor de [!DNL Target]:
 

@@ -3,7 +3,7 @@ keywords: Información general y referencias, cookies, origen, terceros, origen,
 description: Obtenga información acerca del impacto de la desaprobación de cookies de terceros en [!DNL Adobe Target] (at.js)
 title: El impacto de la obsolescencia de las cookies de terceros en [!DNL Adobe Target] (at.js)
 feature: at.js
-source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
+source-git-commit: 705b94d60690a6e32185908c4bc53d8a3cee70bb
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%

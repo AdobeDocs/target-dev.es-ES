@@ -4,10 +4,10 @@ description: Obtenga información sobre cómo implementar [!DNL Adobe Target] pa
 title: ¿Cómo puedo implementar [!DNL Target] para la web del lado del cliente
 feature: at.js
 exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2d2a593df661c7e6c6e6384af6042e8aa4575fdb
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 30%
+source-wordcount: '207'
+ht-degree: 28%
 
 ---
 
@@ -19,8 +19,11 @@ Para implementar [!DNL Target] En el lado del cliente, debe utilizar una de las 
 
 * [SDK web de Adobe Experience Platform](/help/dev/implement/client-side/aep-web-sdk.md)
 
-  El [!UICONTROL SDK web de Adobe Experience Platform] le permite interactuar con los distintos servicios de [!DNL Adobe Experience Cloud] (incluido [!DNL Target]) a través de [!UICONTROL Adobe Experience Edge Network]. Si decide migrar al [!UICONTROL SDK web de Adobe Experience Platform], consulte [Qué es [!UICONTROL SDK web de Adobe Experience Platform]](/help/dev/implement/client-side/aep-web-sdk.md).
+  El [!UICONTROL Adobe Experience Platform Web SDK] le permite interactuar con los distintos servicios de [!DNL Adobe Experience Cloud] (incluido [!DNL Target]) a través de [!UICONTROL Adobe Experience Edge Network]. Si decide migrar al [!UICONTROL Adobe Experience Platform Web SDK], consulte [Qué es [!UICONTROL Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk.md).
 
 * [[!DNL Target] Biblioteca JavaScript de at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md)
 
   La biblioteca JavaScript at.js mejora los tiempos de carga de página en implementaciones web, mejora la seguridad y proporciona mejores opciones de implementación en aplicaciones de una sola página. Si decide migrar a at.js, consulte [Cómo funciona at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) y [[!DNL Adobe Target] Generador de habilidades: Chat del desarrollador, migrar el mbox.js de Adobe Target a at.js](https://seminars.adobeconnect.com/ptdo6mfo6qn6/?proto=true).
+
+
+Consulte [Comparación de la biblioteca at.js con el SDK web](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/adobe-target/web-sdk-atjs-comparison){target=_blank} para conocer las diferencias entre los dos enfoques de implementación.

@@ -1,5 +1,5 @@
 ---
-title: Utilice métodos de utilidad en [!DNL Adobe Target] SDK de Java
+title: Use métodos de utilidad en el SDK de Java  [!DNL Adobe Target] Java
 description: Aprenda a utilizar los métodos de ayuda, que se pueden reutilizar entre controladores y se pueden mover a una clase de utilidad independiente.
 feature: APIs/SDKs
 exl-id: 19418126-c4d8-4e6b-bb84-036b7fe0e6ec

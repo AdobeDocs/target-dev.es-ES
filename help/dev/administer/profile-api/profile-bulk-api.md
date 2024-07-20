@@ -1,6 +1,6 @@
 ---
 title: API de actualización de perfil en lote de Adobe Target
-description: Aprenda a utilizar [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] para enviar datos de perfil de varios visitantes a [!DNL Target] para su uso en segmentación.
+description: Aprenda a usar [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] para enviar datos de perfil de varios visitantes a [!DNL Target] para usarlos en la segmentación.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
@@ -13,9 +13,9 @@ ht-degree: 8%
 
 # [!DNL Adobe Target Bulk Profile Update API]
 
-El [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] permite actualizar de forma masiva los perfiles de usuario de varios visitantes de un sitio web mediante un archivo por lotes.
+[!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] le permite actualizar los perfiles de usuario de varios visitantes de un sitio web de forma masiva mediante un archivo por lotes.
 
-Uso del [!UICONTROL Bulk Profile Update API], puede enviar cómodamente datos detallados del perfil del visitante en forma de parámetros de perfil para que muchos usuarios de [!DNL Target] de cualquier fuente externa. Las fuentes externas pueden incluir sistemas de administración de la relación con los clientes (CRM) o puntos de venta (POS), que normalmente no están disponibles en una página web.
+Con [!UICONTROL Bulk Profile Update API], puede enviar convenientemente datos detallados del perfil del visitante en forma de parámetros de perfil para muchos usuarios a [!DNL Target] desde cualquier origen externo. Las fuentes externas pueden incluir sistemas de administración de la relación con los clientes (CRM) o puntos de venta (POS), que normalmente no están disponibles en una página web.
 
 | Versión  | Ejemplo de URL | Funciones |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Uso del [!UICONTROL Bulk Profile Update API], puede enviar cómodamente datos de
 * Las actualizaciones suelen producirse en menos de una hora, pero pueden tardar hasta 24 horas en reflejarse.
 * No hay límite en el número o las filas que puede cargar durante un periodo de 24 horas en lotes posteriores. Sin embargo, el proceso de ingestión puede acelerarse durante el horario laboral para garantizar que otros procesos se ejecuten de forma eficaz.
 * Las llamadas de actualización por lotes v2 consecutivas sin llamadas de mbox intermedias para los mismos ID de terceros anulan las propiedades actualizadas en la primera llamada de actualización por lotes.
-* [!DNL Adobe] no garantiza que el 100 % de los datos de perfil por lotes se incorporen y conserven en Target y que, por lo tanto, estén disponibles para su uso en la segmentación. En el diseño actual, existe la posibilidad de que un pequeño porcentaje de datos (hasta el 0,1 % de los lotes de producción grandes) no se incorpore o conserve.
+* [!DNL Adobe] no garantiza que el 100% de los datos de perfil por lotes se incorporarán y conservarán en Target y, por lo tanto, estarán disponibles para su uso en la segmentación. En el diseño actual, existe la posibilidad de que un pequeño porcentaje de datos (hasta el 0,1 % de los lotes de producción grandes) no se incorpore o conserve.
 
 ## Archivo por lotes
 
@@ -53,23 +53,23 @@ batch=pcId,param1,param2,param3,param4
 
 >[!NOTE]
 >
->El `batch=` El parámetro es obligatorio y debe especificarse al principio del archivo.
+>El parámetro `batch=` es obligatorio y debe especificarse al principio del archivo.
 
-Hace referencia a este archivo en la llamada del POST a [!DNL Target] para procesar el archivo. Al crear el archivo por lotes, tenga en cuenta lo siguiente:
+Hace referencia a este archivo en la llamada del POST a [!DNL Target] servidores para procesar el archivo. Al crear el archivo por lotes, tenga en cuenta lo siguiente:
 
 * La primera fila del archivo debe especificar encabezados de columna.
-* El primer encabezado debe ser un `pcId` o `thirdPartyId`. El [!UICONTROL Marketing Cloud visitor ID] no es compatible. [!UICONTROL pcId] es un [!DNL Target]ID de visitante no generado. `thirdPartyId` es un ID especificado por la aplicación cliente, que se pasa a [!DNL Target] mediante una llamada de mbox como `mbox3rdPartyId`. Debe ser referido aquí como `thirdPartyId`.
+* El primer encabezado debe ser un `pcId` o `thirdPartyId`. No se admite [!UICONTROL Marketing Cloud visitor ID]. [!UICONTROL pcId] es un visitorID generado por [!DNL Target]. `thirdPartyId` es un identificador especificado por la aplicación cliente, que se pasa a [!DNL Target] a través de una llamada de mbox como `mbox3rdPartyId`. Se debe hacer referencia a él aquí como `thirdPartyId`.
 * Los parámetros y valores especificados en el archivo por lotes deben estar codificados en URL mediante UTF-8 por motivos de seguridad. Los parámetros y valores se pueden reenviar a otros nodos perimetrales para su procesamiento mediante solicitudes HTTP.
-* Los parámetros deben tener el formato `paramName` solo. Los parámetros se muestran en [!DNL Target] as `profile.paramName`.
-* Si está utilizando [!UICONTROL Bulk Profile Update API] v2, no es necesario especificar todos los valores de parámetro para cada `pcId`. Los perfiles se crean para cualquier `pcId` o `mbox3rdPartyId` que no se encuentra en [!DNL Target]. Si utiliza la versión 1, los perfiles no se crean para los pcIds o mbox3rdPartyIds que faltan.
+* Los parámetros sólo deben tener el formato `paramName`. Los parámetros se muestran en [!DNL Target] como `profile.paramName`.
+* Si usa [!UICONTROL Bulk Profile Update API] v2, no es necesario especificar todos los valores de parámetro para cada `pcId`. Los perfiles se crean para cualquier `pcId` o `mbox3rdPartyId` que no se encuentre en [!DNL Target]. Si utiliza la versión 1, los perfiles no se crean para los pcIds o mbox3rdPartyIds que faltan.
 * El tamaño del archivo en lote debe ser inferior a 50 MB. Además, el número total de filas no debe superar los 500 000. Este límite garantiza que los servidores no se inunden con demasiadas solicitudes.
 * Puede enviar varios archivos. Sin embargo, la suma total de las filas de todos los archivos que envía en un día no debe superar un millón para cada cliente.
-* No hay límite en el número de atributos que se cargan. Sin embargo, el tamaño total de un perfil, incluidos los datos del sistema, no debe superar los 2000 KB. [!DNL Adobe] recomienda utilizar menos de 1000 KB de almacenamiento para los atributos de perfil.
+* No hay límite en el número de atributos que se cargan. Sin embargo, el tamaño total de un perfil, incluidos los datos del sistema, no debe superar los 2000 KB. [!DNL Adobe] recomienda usar menos de 1000 KB de almacenamiento para atributos de perfil.
 * Los parámetros y valores distinguen entre mayúsculas y minúsculas.
 
 ## Solicitud de POST HTTP
 
-Realizar una solicitud de POST HTTP a [!DNL Target] servidores Edge para procesar el archivo. Este es un ejemplo de solicitud de POST HTTP para el archivo batch.txt mediante el comando curl:
+Realice una solicitud de POST HTTP a [!DNL Target] servidores Edge para procesar el archivo. Este es un ejemplo de solicitud de POST HTTP para el archivo batch.txt mediante el comando curl:
 
 ``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
@@ -77,9 +77,9 @@ curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTC
 
 Donde:
 
-BATCH.TXT es el nombre de archivo. CLIENTCODE es el [!DNL Target] código de cliente.
+BATCH.TXT es el nombre de archivo. CLIENTCODE es el código de cliente [!DNL Target].
 
-Si no conoce su código de cliente, en la [!DNL Target] clic en interfaz de usuario **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. El código de cliente se muestra en la [!UICONTROL Account Details] sección.
+Si no conoce su código de cliente, en la interfaz de usuario de [!DNL Target], haga clic en **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. El código de cliente se muestra en la sección [!UICONTROL Account Details].
 
 ### Inspect la respuesta
 
@@ -101,7 +101,7 @@ Si hay un error, la respuesta contiene `success=false` y un mensaje detallado de
 
 ### Respuesta de estado de lote predeterminada
 
-Una respuesta predeterminada correcta cuando lo anterior `batchStatus` Al hacer clic en un vínculo URL, se muestra lo siguiente:
+Una respuesta predeterminada correcta cuando se hace clic en el vínculo de URL `batchStatus` anterior tiene el siguiente aspecto:
 
 ```
 <response><batchId>demo4-1701473848678-13029383</batchId><status>complete</status><batchSize>1</batchSize></response>
@@ -117,7 +117,7 @@ Los valores esperados para los campos de estado son:
 
 ### Respuesta URL de estado detallado del lote
 
-Se puede obtener una respuesta más detallada pasando un parámetro `showDetails=true` a la `batchStatus` url anterior.
+Se puede obtener una respuesta más detallada pasando un parámetro `showDetails=true` a la dirección URL `batchStatus` anterior.
 
 Por ejemplo:
 

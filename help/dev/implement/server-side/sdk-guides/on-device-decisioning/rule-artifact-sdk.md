@@ -1,18 +1,18 @@
 ---
 title: Descargar, almacenar y actualizar automáticamente el artefacto de regla de toma de decisiones en el dispositivo
-description: Aprenda a trabajar con el artefacto de regla de toma de decisiones en el dispositivo al inicializar el [!DNL Adobe Target] SDK.
+description: Aprenda a trabajar con el artefacto de la regla de toma de decisiones en el dispositivo al inicializar el SDK  [!DNL Adobe Target] .
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 1%
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
-# Descarga, almacenamiento y actualización automática del artefacto de regla a través del [!DNL Adobe Target] SDK
+# Descarga, almacenamiento y actualización automática del artefacto de regla mediante el SDK [!DNL Adobe Target]
 
-Este método es mejor cuando puede inicializar el [!DNL Adobe Target] SDK al mismo tiempo que se inicializa y se inicia el servidor web. El artefacto de regla será descargado por el [!DNL Adobe Target] SDK y en caché antes de que la aplicación del servidor web empiece a servir solicitudes. Una vez que la aplicación web esté en funcionamiento, todas las [!DNL Adobe Target] las decisiones se ejecutarán utilizando el artefacto de regla en memoria. El artefacto de regla en caché se actualizará en función de la variable `pollingInterval` especifique durante el paso de inicialización del SDK.
+Este método es mejor si puede inicializar el SDK de [!DNL Adobe Target] al mismo tiempo que inicializa e inicia el servidor web. El SDK [!DNL Adobe Target] descargará el artefacto de regla y lo almacenará en la memoria caché antes de que la aplicación del servidor web comience a servir solicitudes. Una vez que la aplicación web esté en funcionamiento, todas las [!DNL Adobe Target] decisiones se ejecutarán mediante el artefacto de regla en memoria. El artefacto de regla en caché se actualizará en función de `pollingInterval` que especifique durante el paso de inicialización del SDK.
 
 ## Resumen de los pasos
 
@@ -46,7 +46,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. En primer lugar, importe el SDK. Importe al mismo archivo desde el que puede controlar el inicio del servidor.
 
-   **Node.js**
+   **Nodo.js**
 
    ```javascript {line-numbers="true"}
    const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -61,7 +61,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Para configurar el SDK, utilice el método create.
 
-   **Node.js**
+   **Nodo.js**
 
    ```javascript {line-numbers="true"}
    const CONFIG = {
@@ -92,10 +92,10 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Tanto el ID de cliente como el ID de organización se pueden recuperar de [!DNL Adobe Target] navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementación]**, como se muestra aquí.
+1. El cliente y el id. de organización se pueden recuperar de [!DNL Adobe Target] navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, como se muestra aquí.
 
    &lt;!— Insert image-client-code.png —>
-   ![Página Implementación en Administración en Target](assets/asset-rule-artifact-3.png)
+   ![Página de implementación bajo Administración en Target](assets/asset-rule-artifact-3.png)
 
 ## 3. Almacenar y utilizar el artefacto de regla
 
@@ -103,7 +103,7 @@ No es necesario que administre el artefacto de regla usted mismo. Llamar a los m
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```javascript {line-numbers="true"}
 //req is the request object from the server request listener method
@@ -146,13 +146,13 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->En el ejemplo de código anterior, la variable `TargetClient` contiene una referencia al artefacto de regla en memoria. Cuando se utiliza este objeto para invocar métodos estándar del SDK, utiliza el artefacto de regla en memoria para la toma de decisiones. Si la aplicación está estructurada de modo que necesita llamar a los métodos SDK en archivos que no sean el que inicializa y escucha las solicitudes del cliente, y si esos archivos no tienen acceso al objeto TargetClient, puede descargar la carga útil JSON y almacenarla en un archivo JSON local para consumirla en otros archivos que necesiten inicializar el SDK. Esto se explica en la siguiente sección, con respecto a [descarga del artefacto de regla mediante una carga útil JSON](rule-artifact-json.md).
+>En el ejemplo de código anterior, el objeto `TargetClient` contiene una referencia al artefacto de regla en memoria. Cuando se utiliza este objeto para invocar métodos estándar del SDK, utiliza el artefacto de regla en memoria para la toma de decisiones. Si la aplicación está estructurada de modo que necesita llamar a los métodos SDK en archivos que no sean el que inicializa y escucha las solicitudes del cliente, y si esos archivos no tienen acceso al objeto TargetClient, puede descargar la carga útil JSON y almacenarla en un archivo JSON local para consumirla en otros archivos que necesiten inicializar el SDK. Esto se explica en la siguiente sección, con respecto a [la descarga del artefacto de regla mediante una carga útil JSON](rule-artifact-json.md).
 
-Este es un ejemplo que inicia una aplicación web después de inicializar el [!DNL Adobe Target] SDK.
+Este es un ejemplo que inicia una aplicación web después de inicializar el SDK [!DNL Adobe Target].
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```javascript {line-numbers="true"}
 const express = require("express");

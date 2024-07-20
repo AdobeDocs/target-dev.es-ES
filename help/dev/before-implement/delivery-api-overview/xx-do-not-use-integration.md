@@ -4,7 +4,7 @@ description: Integración con Experience Cloud
 keywords: api de envío
 source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '467'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Integración con Experience Cloud
 
-## Adobe Analytics para Target (A4T)
+## Adobe Analytics for Target (A4T)
 
 Cuando se activa una llamada a la API de envío de Target desde el servidor, Adobe Target devuelve la experiencia de ese usuario y, además de eso, Adobe Target devuelve la carga útil de Adobe Analytics al que llama o la reenvía automáticamente a Adobe Analytics. Para enviar información de actividad de Target a Adobe Analytics en el servidor, hay que cumplir algunos requisitos previos:
 
@@ -25,8 +25,8 @@ Cuando se activa una llamada a la API de envío de Target desde el servidor, Ado
 
 Adobe Target puede reenviar automáticamente la carga útil de Analytics a Adobe Analytics a través del servidor si se proporcionan los siguientes identificadores:
 
-1. `supplementalDataId` : El ID que se utiliza para unir Adobe Analytics y Adobe Target
-1. `trackingServer` : El servidor de Adobe de Analytics Para que Adobe Target y Adobe Analytics unan correctamente los datos, debe hacer lo mismo `supplementalDataId` deben pasarse tanto a Adobe Target como a Adobe Analytics.
+1. `supplementalDataId`: el ID que se utiliza para unir Adobe Analytics y Adobe Target
+1. `trackingServer`: el servidor de Adobe Analytics Para que Adobe Target y Adobe Analytics unan correctamente los datos, es necesario pasar el mismo `supplementalDataId` a Adobe Target y a Adobe Analytics.
 
 ```
 curl -X POST \
@@ -73,7 +73,7 @@ curl -X POST \
 
 ### Recuperar carga útil de Analytics de Adobe Target
 
-Los consumidores de la API de envío de Adobe Target pueden recuperar la carga útil de Adobe Analytics para un mbox correspondiente, de modo que el consumidor pueda enviar la carga útil a Adobe Analytics a través del [API de inserción de datos](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Cuando se activa una llamada de Adobe Target del lado del servidor, pase `client_side` a la `logging` en la solicitud. A su vez, esto devolverá una carga útil si el mbox está presente en una actividad que utiliza Analytics como fuente de informes.
+Los consumidores de la API de envío de Adobe Target pueden recuperar la carga útil de Adobe Analytics para un mbox correspondiente, de modo que el consumidor pueda enviar la carga útil a Adobe Analytics mediante la [API de inserción de datos](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Cuando se activa una llamada de Adobe Target del lado del servidor, pase `client_side` al campo `logging` en la solicitud. A su vez, esto devolverá una carga útil si el mbox está presente en una actividad que utiliza Analytics como fuente de informes.
 
 ```
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
     }'
 ```
 
-Una vez especificado `logging` = `client_side`, recibirá la carga útil en el `mbox` como se muestra a continuación.
+Una vez que haya especificado `logging` = `client_side`, recibirá la carga útil en el campo `mbox` como se muestra a continuación.
 
 ```
 {
@@ -176,7 +176,7 @@ Una vez especificado `logging` = `client_side`, recibirá la carga útil en el `
 }
 ```
 
-Si la respuesta de Target contiene algo en `analytics` -> `payload` propiedad, reenvíela tal como está en Adobe Analytics. Analytics sabe cómo procesar esta carga útil. Esto se puede hacer en una solicitud de GET con el siguiente formato:
+Si la respuesta de Target contiene algo en la propiedad `analytics` -> `payload`, reenvíela tal cual a Adobe Analytics. Analytics sabe cómo procesar esta carga útil. Esto se puede hacer en una solicitud de GET con el siguiente formato:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -193,7 +193,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 
 ### Valores de encabezado obligatorios
 
-| Nombre del encabezado | Valor de encabezado |
+| Nombre del encabezado | Valor del encabezado |
 | --- | --- |
 | Host | Servidor de recopilación de datos de Analytics (p. ej.: adobeags421.sc.omtrdc.net) |
 

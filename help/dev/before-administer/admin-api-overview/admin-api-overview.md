@@ -1,36 +1,36 @@
 ---
 title: Información general de API de administración de Adobe Target
-description: Descripción general de [!DNL Adobe Target Admin API]
+description: Información general de  [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 3%
+source-wordcount: '1312'
+ht-degree: 2%
 
 ---
 
 # Información general de API de administración de Target
 
-Este artículo proporciona información general sobre la información básica necesaria para comprender y utilizar [!DNL Adobe Target Admin API]s correctamente. El siguiente contenido supone que comprende cómo [configurar autenticación](../configure-authentication.md) para [!DNL Adobe Target Admin API]s.
+Este artículo proporciona información general sobre la información básica necesaria para comprender y usar [!DNL Adobe Target Admin API] correctamente. El siguiente contenido supone que usted comprende cómo [configurar la autenticación](../configure-authentication.md) para [!DNL Adobe Target Admin API]s.
 
 >[!NOTE]
 >
->Si desea administrar el [!DNL Target] a través de la interfaz de usuario de, consulte la [sección de administración de *Guía para profesionales de Adobe Target Business*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
+>Si desea administrar [!DNL Target] a través de la interfaz de usuario, consulte la sección de administración de [Adobe Target Business Practitioner Guide *](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).*
 >
->Las API de administrador y las API de perfil suelen denominarse de forma colectiva (&quot;API de administrador y de perfil&quot;), pero también pueden denominarse por separado (&quot;API de administrador&quot; y &quot;API de perfil&quot;). La API de Recommendations es una implementación específica de un [!DNL Target] API de administración.
+>Las API de administrador y las API de perfil suelen denominarse de forma colectiva (&quot;API de administrador y de perfil&quot;), pero también pueden denominarse por separado (&quot;API de administrador&quot; y &quot;API de perfil&quot;). La API de Recommendations es una implementación específica de una API de administrador de [!DNL Target].
 
 ## Antes de empezar  
 
-En todos los ejemplos de código proporcionados para [API de administrador](../../administer/admin-api/admin-api-overview-new.md), reemplazar {tenant} con su valor de inquilino, `your-bearer-token` con el token de acceso que genera con su JWT y `your-api-key` con su clave de API de la [Consola de Adobe Developer](https://developer.adobe.com/console/home). Para obtener más información sobre los inquilinos y JWT, consulte el artículo sobre cómo [configurar autenticación](../configure-authentication.md) para Adobe [!DNL Target] API de administrador.
+En todos los ejemplos de código proporcionados para las [API de administrador](../../administer/admin-api/admin-api-overview-new.md), reemplace {tenant} por su valor de inquilino, `your-bearer-token` por el token de acceso que genere con su JWT y `your-api-key` por su clave de API de [Adobe Developer Console](https://developer.adobe.com/console/home). Para obtener más información sobre inquilinos y JWT, consulte el artículo sobre cómo [configurar la autenticación](../configure-authentication.md) para las API de administración de Adobe [!DNL Target].
 
 ## Versiones
 
 Todas las API tienen una versión asociada. Es importante proporcionar la versión correcta de la API que desee utilizar.
 
-Si la solicitud contiene una carga útil (POST o PUT), el `Content-Type` encabezado de la solicitud se utiliza para especificar la versión.
+Si la solicitud contiene una carga útil (POST o PUT), se utiliza el encabezado `Content-Type` de la solicitud para especificar la versión.
 
-Si la solicitud no contiene una carga útil (GET, DELETE o OPTIONS), el `Accept` se utiliza para especificar la versión.
+Si la solicitud no contiene una carga útil (GET, DELETE o OPTIONS), se utiliza el encabezado `Accept` para especificar la versión.
 
 Si no se proporciona una versión, la llamada predeterminada será V1 (application/vnd.adobe.target.v1+json).
 
@@ -56,7 +56,7 @@ Mensaje de error para funciones no admitidas
 
 Colección de Admin Postman
 
-Postman es una aplicación que facilita la activación de llamadas de API. Esta [Recopilación de Postman de la API de administración de Target](https://developers.adobetarget.com/api/#admin-postman-collection) contiene todas las llamadas a la API de administración de Target que requieren autenticación mediante actividades, audiencias, ofertas, informes, mboxes y entornos
+Postman es una aplicación que facilita la activación de llamadas de API. Esta [recopilación de Postman de la API de administración de Target](https://developers.adobetarget.com/api/#admin-postman-collection) contiene todas las llamadas a la API de administración de Target que requieren autenticación mediante actividades, audiencias, ofertas, informes, mboxes y entornos
 
 ## Códigos de respuesta
 
@@ -64,7 +64,7 @@ Estos son los códigos de respuesta comunes para las API de administrador de Tar
 
 | Estado | Significado | Descripción |
 | --- | --- | --- |
-| 200 | [Aceptar](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |  |
+| 200 | [ACEPTAR](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | Aceptar |  |
 | 400 | [Solicitud incorrecta](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | Solicitud incorrecta. Lo más probable es que los datos proporcionados en la solicitud no sean válidos. |  |
 | 401 | [No autorizado](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | El usuario no tiene permiso para realizar esta operación. |  |
 | 403 | [Prohibido](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | El acceso a este recurso está prohibido. |  |
@@ -74,11 +74,11 @@ Estos son los códigos de respuesta comunes para las API de administrador de Tar
 
 Una actividad de le permite probar o personalizar el contenido para los usuarios. Las actividades pueden ser de uno de los siguientes tipos:
 
-* [Campaña A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
 * [Segmentación de experiencias (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
 * [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
 * [Personalización automatizada](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [Prueba multivariada (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Prueba multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## Actualizaciones por lotes
 
@@ -110,7 +110,7 @@ El procesamiento por lotes finaliza cuando se han completado todas las operacion
 
 | Atributo | Descripción | Límites | Valor predeterminado |
 | --- | --- | --- | --- |
-| body | cuerpo para la operación por lotes HTTP. se ignorarán para todas las acciones excepto POST y PUT. Puede hacer referencia a ID de acciones por lotes anteriores, por ejemplo: &quot;offerId&quot;: &quot;{operationIdResponse:0}&quot;, &quot;segmentId&quot;: &quot;{operationIdResponse:1}&quot; | debe ser un JSON válido; en caso de hacer referencia a un operationIdResponse, la respuesta de operationId debe ser un ID válido y el método de esa acción debe ser un POST | objeto vacío {} |  |
+| cuerpo | cuerpo para la operación por lotes HTTP. se ignorarán para todas las acciones excepto POST y PUT. Puede hacer referencia a los ID de acciones por lotes anteriores, por ejemplo: &quot;offerId&quot;: &quot;{operationIdResponse:0}&quot;, &quot;segmentId&quot;: &quot;{operationIdResponse:1}&quot; | debe ser un JSON válido; en caso de hacer referencia a un operationIdResponse, la respuesta de operationId debe ser un ID válido y el método de esa acción debe ser un POST | objeto vacío {} |  |
 | dependsOnOperationIds | Lista de ID de restricción que garantiza que la operación actual se ejecutará sólo si las operaciones especificadas se han completado correctamente. Se puede utilizar para lograr encadenar operaciones. | se permiten un máximo de 255 operaciones; solo se permiten valores únicos; debe señalar a un operationId válido en la matriz; no se permiten dependencias cíclicas |  |  |
 | encabezados | matriz de encabezados clave-valor que se enviarán con una operación determinada. Si la autenticación para la API por lotes se ha realizado mediante el encabezado Autorización, también se copiará para operaciones individuales. | el número máximo de encabezados permitidos en la matriz es 50 | Content-Type: application/json |  |
 | headers->name | nombre del encabezado | debe ser único entre otros nombres de encabezado. rfc no distingue entre mayúsculas y minúsculas en los encabezados; de lo contrario, los valores se anularán entre sí. |  |  |
@@ -154,7 +154,7 @@ El procesamiento por lotes finaliza cuando se han completado todas las operacion
 | encabezados | matriz de encabezados clave-valor que se enviarán como respuesta a una operación concreta. |  |
 | headers->name | nombre del encabezado |  |
 | headers->value | valor de encabezado |  |
-| body | cuerpo de la operación de respuesta por lotes HTTP |  |
+| cuerpo | cuerpo de la operación de respuesta por lotes HTTP |  |
 
 #### Objeto de respuesta de ejemplo
 

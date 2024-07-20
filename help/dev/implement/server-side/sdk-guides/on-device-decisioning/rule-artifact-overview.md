@@ -1,36 +1,36 @@
 ---
 title: Comprender el artefacto de la regla de toma de decisiones en el dispositivo
-description: Aprenda a utilizar el artefacto de regla, que es una representación JSON de su [!DNL Adobe Target] [!UICONTROL toma de decisiones en el dispositivo] actividades.
+description: Aprenda a utilizar el artefacto de regla, que es una representación JSON de sus actividades  [!DNL Adobe Target] [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
 
 # Resumen de artefactos de regla
 
-El artefacto de regla es una representación JSON de su [!DNL Adobe Target] [!UICONTROL toma de decisiones en el dispositivo] actividades. Se genera mediante [!DNL Adobe Target] y se propagan a la CDN de Akamai para garantizar que haya un artefacto de regla disponible lo más cerca posible de los usuarios finales. Contiene metadatos que garantizan la ejecución y el envío precisos de sus actividades, a la vez que permiten el análisis en tiempo real mediante el seguimiento de eventos. El [!DNL Adobe Target] Los SDK se pueden configurar de manera que permitan la administración automática del artefacto de regla, mediante el cual se puede descargar o actualizar según un intervalo de tiempo especificado por el usuario. Además, también puede mantener su propia copia local del artefacto de regla con un sistema de almacenamiento en caché de memoria distribuida como [Memcached](https://memcached.org/) para inicializar el [!DNL Adobe Target] SDK, para que los servidores sin estado puedan servir solicitudes inmediatamente. Para obtener más información sobre estas opciones, consulte las siguientes guías:
+El artefacto de regla es una representación JSON de sus actividades [!DNL Adobe Target] [!UICONTROL on-device decisioning]. Se genera por [!DNL Adobe Target] y se propaga a la CDN de Akamai para garantizar que haya un artefacto de regla disponible lo más cerca posible de los usuarios finales. Contiene metadatos que garantizan la ejecución y el envío precisos de sus actividades, a la vez que permiten el análisis en tiempo real mediante el seguimiento de eventos. Los SDK de [!DNL Adobe Target] se pueden configurar de forma que permitan la administración automática del artefacto de regla, mediante el cual se puede descargar o actualizar según un intervalo de tiempo especificado por el usuario. Además, también puede mantener su propia copia local del artefacto de regla usando un sistema de almacenamiento en caché de memoria distribuida como [Memcached](https://memcached.org/) para inicializar el SDK [!DNL Adobe Target], de modo que los servidores sin estado puedan servir solicitudes inmediatamente. Para obtener más información sobre estas opciones, consulte las siguientes guías:
 
-* [Descarga, almacenamiento y actualización del artefacto de regla automáticamente a través del [!DNL Adobe Target] SDK](rule-artifact-sdk.md)
+* [Descargar, almacenar y actualizar el artefacto de regla automáticamente mediante el SDK  [!DNL Adobe Target] SDK](rule-artifact-sdk.md)
 * [Descarga, almacenamiento y actualización del artefacto de regla a través de la carga útil JSON](rule-artifact-json.md)
 
 ## Ejemplo de artefacto de regla
 
-Haga clic aquí para ver un ejemplo de [artefacto de regla](rule-artifact-example.md).
+Haga clic aquí para ver un ejemplo del [artefacto de regla](rule-artifact-example.md).
 
 ## Visualización del artefacto de regla para el cliente
 
-Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adobe Target] en cuanto al artefacto de regla, específicamente la URL.
+Al habilitar los seguimientos, se generará información adicional de [!DNL Adobe Target] con respecto al artefacto de regla, específicamente la dirección URL.
 
 1. Vaya a la IU de Target.
 
    &lt;!— Insert image-target-ui-1.png —>
    ![imagen alt](assets/asset-rule-artifact-1.png)
 
-1. Vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementación]** y haga clic en **[!UICONTROL Generar nuevo token de autorización]**.
+1. Vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** y haga clic en **[!UICONTROL Generate New Authorization Token]**.
 
    &lt;!— Insert image-target-ui-2.png —>
    ![imagen alt](assets/asset-rule-artifact-2.png)
@@ -50,7 +50,7 @@ Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adob
    }};
    ```
 
-1. Obtenga el seguimiento de destino a través del terminal para ver los detalles del artefacto. Se puede acceder a la dirección URL a través de `artifactLocation` variable.
+1. Obtenga el seguimiento de destino a través del terminal para ver los detalles del artefacto. Se puede acceder a la dirección URL a través de la variable `artifactLocation`.
 
    ```
    "trace": {

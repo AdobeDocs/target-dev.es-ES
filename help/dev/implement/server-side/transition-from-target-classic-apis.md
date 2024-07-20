@@ -1,49 +1,49 @@
 ---
 keywords: api, adobe i/o, classic, adobe developer console
-description: Aprenda a realizar la transición desde el [!DNL Adobe Target Classic] API para [!DNL Target] API en [!DNL Adobe Developer Console].
-title: ¿Cómo puedo realizar la transición desde [!DNL Target Classic] API para [!DNL Target] API en [!DNL Adobe Developer Console]?
+description: Aprenda a pasar de las  [!DNL Adobe Target Classic] API a las [!DNL Target] API en [!DNL Adobe Developer Console].
+title: ¿Cómo hago la transición de  [!DNL Target Classic] API a [!DNL Target] API en [!DNL Adobe Developer Console]?
 feature: APIs/SDKs
 exl-id: b84e3767-89ad-4e2d-9bb4-7e31bffbc285
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 34%
+source-wordcount: '493'
+ht-degree: 38%
 
 ---
 
-# Transición desde [!DNL Target Classic] API para [!DNL Target] API en [!DNL Adobe Developer Console]
+# Transición de [!DNL Target Classic] API a [!DNL Target] API en [!DNL Adobe Developer Console]
 
-Información para ayudarle con la transición desde [!DNL Target Classic] API para [!DNL Target] API en [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home).
+Información para ayudarle con la transición de las API [!DNL Target Classic] a las API [!DNL Target] en [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home).
 
-Con la clausura de [!DNL Adobe Target Classic], las API conectadas a su [!DNL Target Classic] La cuenta de también se ha bloqueado. Este artículo le ayudará con la transición de su [!DNL Target Classic] Integraciones basadas en API con [!DNL Target] API con tecnología de [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home).
+Con la retirada del servicio de [!DNL Adobe Target Classic], las API conectadas a su cuenta de [!DNL Target Classic] tampoco estarán disponibles. Este artículo le ayudará con la transición de sus integraciones basadas en API de [!DNL Target Classic] a las API de [!DNL Target] con tecnología de [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home).
 
-Para obtener más información acerca de [!DNL Target] API, consulte [[!DNL Target] API](/help/dev/before-administer/target-api-overview.md). Para obtener más información acerca de [!DNL Target] SDK, consulte [[!DNL Target] Implementación del lado del servidor](/help/dev/implement/server-side/server-side-overview.md)
+Para obtener más información sobre las API de [!DNL Target], consulte [[!DNL Target] API](/help/dev/before-administer/target-api-overview.md). Para obtener más información sobre los SDK de [!DNL Target], consulte [[!DNL Target] Implementación del lado del servidor](/help/dev/implement/server-side/server-side-overview.md)
 
 ## Terminología  
 
 | Término | Descripción |
 |--- |--- |
-| API clásica | API vinculadas a su [!DNL Target Classic] cuenta. Estas llamadas a API se basan en una autenticación mediante nombre de usuario y contraseña, y utilizan el nombre de host `testandtarget.omniture.com`. Si las llamadas de API contienen un nombre de usuario y una contraseña en la dirección URL de la solicitud, debe realizar la transición a la variable [!DNL Adobe Developer Console] API. |
-| [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home) | El [!DNL Adobe Developer Console] es la puerta de enlace para [!DNL Target] API. Estas API están conectadas a su [!DNL Target Standard/Premium] cuenta. El [!DNL Target] API en [!DNL Adobe Developer Console] use un [Autenticación basada en JWT](../../before-administer/configure-authentication.md), que es el estándar en la industria para las API seguras para empresas. |
+| API clásica | API vinculadas a su cuenta de [!DNL Target Classic]. Estas llamadas a API se basan en una autenticación mediante nombre de usuario y contraseña, y utilizan el nombre de host `testandtarget.omniture.com`. Si las llamadas a la API contienen un nombre de usuario y una contraseña en la dirección URL de la solicitud, debe realizar la transición a las API [!DNL Adobe Developer Console]. |
+| [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home) | [!DNL Adobe Developer Console] es la puerta de enlace para las API de [!DNL Target]. Estas API están conectadas a su cuenta de [!DNL Target Standard/Premium]. Las API [!DNL Target] en [!DNL Adobe Developer Console] utilizan una [autenticación basada en JWT](../../before-administer/configure-authentication.md), que es el estándar en la industria para las API de empresa seguras. |
 
 ## Cronología  
 
-Las siguientes API se retiraron al [!DNL Target Classic] se ha retirado del mercado:
+Las siguientes API se retiraron al retirar [!DNL Target Classic]:
 
 | Fecha | Detalles |
 |--- |--- |
-| 17 de octubre de 2017 | Se han retirado todos los métodos API que realizan una operación de escritura (`saveCampaign`, `copyCampaign`, `saveHTMLOfferContent` y `setCampaignState`).<P>Es la misma fecha en que todos los [!DNL Target Classic] las cuentas de usuario se han establecido en estado de solo lectura. |
-| 14 de noviembre de 2017 | Se han retirado las API restantes. Esta es la fecha en la que [!DNL Target Classic] se ha retirado la interfaz de usuario |
+| 17 de octubre de 2017 | Se han retirado todos los métodos API que realizan una operación de escritura (`saveCampaign`, `copyCampaign`, `saveHTMLOfferContent` y `setCampaignState`).<P>La fecha es la misma en la que todas las cuentas de usuario de [!DNL Target Classic] quedaron en estado de solo lectura. |
+| 14 de noviembre de 2017 | Se han retirado las API restantes. Esta es la fecha en la que se retiró del mercado la interfaz de usuario [!DNL Target Classic] |
 
-[!DNL Recommendations Classic] Las API no se vieron afectadas por esta cronología.
+Las API [!DNL Recommendations Classic] no se vieron afectadas por esta cronología.
 
 ## Métodos equivalentes  
 
-La siguiente tabla enumera el equivalente [!DNL Adobe Developer Console] Métodos de API para los métodos de API clásicos. El [!DNL Adobe Developer Console] Las API devuelven JSON, mientras que las API clásicas devuelven XML.
+En la tabla siguiente se enumeran los métodos de API equivalentes de [!DNL Adobe Developer Console] para los métodos de API clásicos. Las API [!DNL Adobe Developer Console] devuelven JSON, mientras que las API clásicas devuelven XML.
 
-El [!DNL Adobe Developer Console] Los métodos de API están vinculados a la sección correspondiente del sitio de documentación de la API. Se proporciona un ejemplo para cada método API. También puede utilizar la variable [!DNL Target] Recopilación de Postman de la API de administración que contiene llamadas de API de ejemplo para todos los métodos de API de Adobe en la [!DNL Adobe Developer Console].
+Los métodos de API [!DNL Adobe Developer Console] están vinculados a la sección correspondiente del sitio de documentación de API. Se proporciona un ejemplo para cada método API. También puede usar la colección de Postman de la API de administración [!DNL Target] que contiene llamadas de API de ejemplo para todos los métodos de API de Adobe en [!DNL Adobe Developer Console].
 
-| Grupo | Método de API clásico | [!DNL Adobe Developer Console] Método de API | Notas |
+| Grupo | Método de API clásico | Método de API [!DNL Adobe Developer Console] | Notas |
 |--- |--- |--- |--- |
 | Campaña/Actividad | Creación de campaña | [Crear actividad AB](https://developers.adobetarget.com/api/#create-ab-activity)<P>[Crear actividad XT](https://developers.adobetarget.com/api/#create-xt-activity) | Las nuevas API proporcionan métodos de creación distintos para AB y XT |
 |  | Actualización de campaña | [Actualizar actividad AB](https://developers.adobetarget.com/api/#update-ab-activity)<P>[Actualizar actividad XT](https://developers.adobetarget.com/api/#update-xt-activity) |  |
@@ -55,7 +55,7 @@ El [!DNL Adobe Developer Console] Los métodos de API están vinculados a la sec
 | Ofertas | Creación de oferta | [Crear oferta](https://developers.adobetarget.com/api/#create-offer) |  |
 |  | Obtención de oferta | [Obtener oferta por ID](https://developers.adobetarget.com/api/#get-offer-by-id) |  |
 |  | Lista de ofertas | [Listar ofertas](https://developers.adobetarget.com/api/#list-offers) |  |
-|  | Lista de carpetas | N/A | Las carpetas no son compatibles con [!DNL Target Standard/Premium] |
+|  | Lista de carpetas | N/A | No se admiten carpetas en [!DNL Target Standard/Premium] |
 | Creación de informes | Informe de rendimiento de la campaña | [Obtener informe de rendimiento AB](https://developers.adobetarget.com/api/#get-ab-performance-report)<P>[Obtener informe de rendimiento XT](https://developers.adobetarget.com/api/#get-xt-performance-report) |  |
 |  | Informe de auditoría | [Obtener informe de auditoría](https://developers.adobetarget.com/api/#get-audit-report) |  |
 |  | Informe de contenido 1-1 | [Obtener informe de rendimiento AP](https://developers.adobetarget.com/api/#get-ap-activity-performance-report) |  |
@@ -67,4 +67,4 @@ Si necesita una excepción, póngase en contacto con el gestor de éxito de los 
 
 ## Ayuda  
 
-Póngase en contacto con [!DNL Adobe Target Client Care] (tt-support@adobe.com) si tiene alguna pregunta o necesita ayuda en la transición de las API clásicas a la [!DNL Target] API en [!DNL Adobe Developer Console].
+Póngase en contacto con [!DNL Adobe Target Client Care] (tt-support@adobe.com) si tiene alguna pregunta o necesita ayuda en la transición de las API clásicas a las API [!DNL Target] en [!DNL Adobe Developer Console].

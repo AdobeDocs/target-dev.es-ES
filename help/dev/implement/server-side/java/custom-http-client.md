@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Configuración personalizada de cliente HTTP (Java)
 
-Si la aplicación que ejecuta el SDK requiere un cliente HTTP personalizado para habilitar funciones como configurar SSL o agregar encabezados predeterminados a las solicitudes, la variable `TargetClient` tendrá que configurarse con `ClientConfig.builder().httpClient()`:
+Si la aplicación que ejecuta el SDK requiere un cliente HTTP personalizado para habilitar características como configurar SSL o agregar encabezados predeterminados a las solicitudes, `TargetClient` deberá configurarse con `ClientConfig.builder().httpClient()`:
 
 ## Configuración básica personalizada del cliente HTTP
 
-Ahora mismo, el SDK admite clientes HTTP que implementan el `org.apache.http.client.HttpClient` interfaz.
+Ahora mismo, el SDK admite clientes HTTP que implementan la interfaz `org.apache.http.client.HttpClient`.
 
 ### Implementación básica
 
@@ -32,7 +32,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Configuración personalizada de cliente HTTP con configuración SSL
 
-Este es un ejemplo de cómo configurar SSL en la variable `TargetClient` al personalizar el `HttpClient` pasado a la `ClientConfig`. El siguiente fragmento de código utiliza clases del `org.apache.http.conn.ssl` para la configuración SSL.
+Este es un ejemplo de cómo configurar SSL en `TargetClient` personalizando `HttpClient` pasado a `ClientConfig`. El siguiente fragmento de código utiliza clases del paquete `org.apache.http.conn.ssl` para la configuración SSL.
 
 ### Implementación SSL
 

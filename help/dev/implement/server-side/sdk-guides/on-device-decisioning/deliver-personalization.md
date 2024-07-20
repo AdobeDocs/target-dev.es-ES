@@ -1,11 +1,11 @@
 ---
 title: Ofrezca personalización mediante los SDK para Adobe Target
-description: Obtenga información sobre cómo ofrecer personalización mediante [!UICONTROL toma de decisiones en el dispositivo].
+description: Obtenga información sobre cómo entregar personalización mediante [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: bac64c78-0d3a-40d7-ae2b-afa0f1b8dc4f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -14,79 +14,79 @@ ht-degree: 0%
 
 ## Resumen de los pasos
 
-1. Activar [!UICONTROL toma de decisiones en el dispositivo] para su organización
-1. Crear un [!UICONTROL Segmentación de experiencias] Actividad (XT)
+1. Habilitar [!UICONTROL on-device decisioning] para su organización
+1. Crear una actividad [!UICONTROL Experience Targeting] (XT)
 1. Definir experiencia personalizada por audiencia
 1. Verificar experiencia personalizada por audiencia
 1. Configuración de informes
 1. Agregar métricas para KPI de seguimiento
 1. Implementación de ofertas personalizadas en la aplicación
 1. Implementación de código para hacer un seguimiento de eventos de conversión
-1. Activar su [!UICONTROL Segmentación de experiencias] (XT) actividad de personalización
+1. Activar su actividad de personalización [!UICONTROL Experience Targeting] (XT)
 
 Supongamos que es una empresa de turismo. Desea ofrecer una oferta personalizada del 25% de descuento en determinados paquetes de viaje. Para que la oferta resuene entre sus usuarios, decide mostrar un punto de referencia de la ciudad de destino. También debe asegurarse de que la entrega de sus ofertas personalizadas se ejecute con una latencia cercana a cero para que no afecte negativamente a las experiencias de los usuarios y distorsione los resultados.
 
-## 1. Habilitar [!UICONTROL toma de decisiones en el dispositivo] para su organización
+## 1. Habilite [!UICONTROL on-device decisioning] para su organización
 
-1. Al habilitar la toma de decisiones en el dispositivo, se garantiza que una actividad A/B se ejecute con una latencia cercana a cero. Para habilitar esta función, vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementación]** > **[!UICONTROL Detalles de la cuenta]** in [!DNL Adobe Target]y habilite la opción **[!UICONTROL Toma de decisiones en el dispositivo]** alternar.
+1. Al habilitar la toma de decisiones en el dispositivo, se garantiza que una actividad A/B se ejecute con una latencia cercana a cero. Para habilitar esta característica, vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** en [!DNL Adobe Target] y habilite la opción **[!UICONTROL On-Device Decisioning]**.
 
    ![imagen alt](assets/asset-odd-toggle.png)
 
    >[!NOTE]
    >
-   >Debe tener el administrador o aprobador [función de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar [!UICONTROL Toma de decisiones en el dispositivo] alternar.
+   >Debe tener el rol de administrador o aprobador [user](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar la opción [!UICONTROL On-Device Decisioning].
 
-   Después de activar el **[!UICONTROL Toma de decisiones en el dispositivo]** alternar, [!DNL Adobe Target] comienza a generar *artefactos de regla* para su cliente.
+   Después de habilitar la opción **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] comienza a generar *artefactos de regla* para su cliente.
 
-## 2. Crear un [!UICONTROL Segmentación de experiencias] Actividad (XT)
+## 2. Crear una actividad [!UICONTROL Experience Targeting] (XT)
 
-1. Entrada [!DNL Adobe Target], vaya al **[!UICONTROL Actividades]** página, luego seleccione **[!UICONTROL Crear actividad]** > **[!UICONTROL Segmentación de experiencias]**.
+1. En [!DNL Adobe Target], vaya a la página **[!UICONTROL Activities]** y, a continuación, seleccione **[!UICONTROL Create Activity]** > **[!UICONTROL Experience Targeting]**.
 
    ![imagen alt](assets/asset-xt.png)
 
-1. En el **[!UICONTROL Crear actividad de segmentación de experiencias]** modal, mantenga el valor predeterminado **[!UICONTROL Web]** opción seleccionada (1), seleccionar **[!UICONTROL Form]** como compositor de experiencias (2), seleccione un espacio de trabajo y una propiedad (3) y haga clic en **[!UICONTROL Siguiente]** (4).
+1. En el modal **[!UICONTROL Create Experience Targeting Activity]**, deje seleccionada la opción predeterminada **[!UICONTROL Web]** (1), seleccione **[!UICONTROL Form]** como compositor de experiencias (2), seleccione un espacio de trabajo y una propiedad (3) y haga clic en **[!UICONTROL Next]** (4).
 
    ![imagen alt](assets/asset-xt-next.png)
 
 ## 3. Defina una experiencia personalizada por audiencia
 
-1. En el **[!UICONTROL Experiencias]** paso de creación de la actividad, haga clic en **[!UICONTROL Cambiar audiencia]** para crear una audiencia de aquellos visitantes que desean viajar a San Francisco, California.
+1. En el paso **[!UICONTROL Experiences]** de creación de la actividad, haga clic en **[!UICONTROL Change Audience]** para crear una audiencia de los visitantes que deseen viajar a San Francisco, California.
 
    ![imagen alt](assets/asset-change-audience.png)
 
-1. En el **[!UICONTROL Crear audiencia]** modal, defina una regla personalizada donde `destinationCity = San Francisco`. Define el grupo de usuarios que desea viajar a San Francisco.
+1. En el modal **[!UICONTROL Create Audience]**, defina una regla personalizada donde `destinationCity = San Francisco`. Define el grupo de usuarios que desea viajar a San Francisco.
 
    ![imagen alt](assets/asset-audience-sf.png)
 
-1. Todavía en el **[!UICONTROL Experiencias]** paso, introduzca el nombre de la ubicación (1) dentro de su aplicación donde desea presentar una oferta especial con respecto al puente Golden Gate, pero solo para aquellos que se dirigen a San Francisco. En el ejemplo que se muestra a continuación, la página principal es la ubicación seleccionada para la oferta de HTML (2), que se define en la variable **[!UICONTROL Contenido]** área.
+1. En el paso **[!UICONTROL Experiences]**, escriba el nombre de la ubicación (1) dentro de su aplicación donde desea presentar una oferta especial con respecto a Golden Gate Bridge, pero solo para los que se dirigen a San Francisco. En el ejemplo que se muestra aquí, homepage es la ubicación seleccionada para la oferta de HTML (2), que se define en el área **[!UICONTROL Content]**.
 
    ![imagen alt](assets/asset-content-sf.png)
 
-1. Añada otra audiencia de objetivos haciendo clic en **[!UICONTROL Añadir segmentación de experiencias]**. Esta vez, diríjase a una audiencia que desee viajar a Nueva York definiendo una regla de audiencia en la que `destinationCity = New York`. Defina la ubicación dentro de su aplicación donde desea presentar una oferta especial con respecto al Empire State Building. En el ejemplo que se muestra a continuación, `homepage` es la ubicación seleccionada para la oferta de HTML (2), que se define en la **[!UICONTROL Contenido]** área.
+1. Agregue otra audiencia de segmentación haciendo clic en **[!UICONTROL Add Experience Targeting]**. En esta ocasión, defina una regla de audiencia donde `destinationCity = New York` sea el destino de una audiencia que desee viajar a Nueva York. Defina la ubicación dentro de su aplicación donde desea presentar una oferta especial con respecto al Empire State Building. En el ejemplo que se muestra aquí, `homepage` es la ubicación seleccionada para la oferta de HTML (2), que se define en el área **[!UICONTROL Content]**.
 
    ![imagen alt](assets/asset-content-ny.png)
 
 ## 4. Verificar la experiencia personalizada por audiencia
 
-En el **[!UICONTROL Segmentación]** paso, compruebe que ha configurado la experiencia personalizada que desea por audiencia.
+En el paso **[!UICONTROL Targeting]**, compruebe que ha configurado la experiencia personalizada que desea por audiencia.
 
 ![imagen alt](assets/asset-verify-sf-ny.png)
 
 ## 5. Configurar informes
 
-En el **[!UICONTROL Objetivos y configuración]** paso, elija **[!UICONTROL Adobe Target]** como el **[!UICONTROL Fuente de informes]** para ver los resultados de la actividad en [!DNL Adobe Target] IU o elija **[!UICONTROL Adobe Analytics]** para verlos en la interfaz de usuario de Adobe Analytics.
+En el paso **[!UICONTROL Goals & Settings]**, elija **[!UICONTROL Adobe Target]** como **[!UICONTROL Reporting Source]** para ver los resultados de la actividad en la interfaz de usuario de [!DNL Adobe Target] o elija **[!UICONTROL Adobe Analytics]** para verlos en la interfaz de usuario de Adobe Analytics.
 
 ![imagen alt](assets/asset-reporting-sf-ny.png)
 
 ## 6. Agregar métricas para el seguimiento de KPI
 
-Elija una **[!UICONTROL Métrica de objetivo]** para medir el éxito de la actividad. En este ejemplo, una conversión correcta se basa en si el usuario hace clic en la oferta de destino personalizada.
+Elija un(a) **[!UICONTROL Goal Metric]** para medir el éxito de la actividad. En este ejemplo, una conversión correcta se basa en si el usuario hace clic en la oferta de destino personalizada.
 
 ## 7. Implementar las ofertas personalizadas en la aplicación
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -150,7 +150,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 //... Code removed for brevity

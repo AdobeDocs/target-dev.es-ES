@@ -1,31 +1,31 @@
 ---
 title: Precarga de API de envío de Adobe Target
-description: ¿Cómo utilizo la recuperación previa de en [!UICONTROL API de envío de Adobe Target]?
+description: ¿Cómo se usa la recuperación previa en [!UICONTROL Adobe Target Delivery API]?
 keywords: api de envío
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
 
 # Precarga
 
-La recuperación previa permite a clientes como aplicaciones móviles y servidores recuperar contenido para varios mboxes o vistas en una solicitud, almacenarlo en la caché local y notificarlo más tarde [!DNL Target] cuando el visitante visita esos mboxes o vistas.
+La recuperación previa permite a clientes como aplicaciones móviles y servidores recuperar contenido para varios mboxes o vistas en una solicitud, almacenarlo en la caché local y, posteriormente, notificar a [!DNL Target] cuando el visitante visite esos mboxes o vistas.
 
 Al utilizar la recuperación previa, es importante estar familiarizado con los siguientes términos:
 
 | Nombre del campo | Descripción |
 | --- | --- |
-| `prefetch` | Lista de mboxes y vistas que deben recuperarse, pero que no deben marcarse como visitadas. El [!DNL Target] Edge devuelve un valor `eventToken` para cada mbox o vista que exista en la matriz de recuperación previa. |
+| `prefetch` | Lista de mboxes y vistas que deben recuperarse, pero que no deben marcarse como visitadas. El Edge [!DNL Target] devuelve un `eventToken` para cada mbox o vista que exista en la matriz de recuperación previa. |
 | `notifications` | Lista de mboxes y vistas que se recuperaron previamente y que deben marcarse como visitados. |
-| `eventToken` | Un token cifrado con hash que se devuelve cuando se recupera previamente el contenido. Este token debe enviarse de vuelta a [!DNL Target] en el `notifications` matriz. |
+| `eventToken` | Un token cifrado con hash que se devuelve cuando se recupera previamente el contenido. Este token debe enviarse a [!DNL Target] en la matriz `notifications`. |
 
 ## Mboxes de recuperación previa
 
-Los clientes, como las aplicaciones móviles y los servidores, pueden recuperar previamente varios mboxes para un visitante determinado dentro de una sesión y almacenarlos en la caché para evitar múltiples llamadas a [!UICONTROL API de envío de Adobe Target].
+Los clientes, como las aplicaciones móviles y los servidores, pueden recuperar previamente varios mboxes para un visitante determinado dentro de una sesión y almacenarlos en la caché para evitar múltiples llamadas a [!UICONTROL Adobe Target Delivery API].
 
 ```shell shell-session
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-Dentro de `prefetch` , añada uno o más `mboxes` desea recuperar previamente al menos una vez para un visitante dentro de una sesión. Después de recuperar previamente esos `mboxes`, recibirá la siguiente respuesta:
+Dentro del campo `prefetch`, agregue uno o más `mboxes` que quiera recuperar previamente al menos una vez para un visitante dentro de una sesión. Después de recuperar previamente esos `mboxes`, recibe la siguiente respuesta:
 
 ```JSON {line-numbers="true"}
 {
@@ -120,13 +120,13 @@ Dentro de `prefetch` , añada uno o más `mboxes` desea recuperar previamente al
 }
 ```
 
-Dentro de la respuesta, verá el `content` que contiene la experiencia que se mostrará al visitante en un `mbox`. Esto resulta muy útil cuando se almacena en caché en el servidor para que cuando un visitante interactúe con su aplicación web o móvil dentro de una sesión y visite un `mbox` en cualquier página concreta de la aplicación, la experiencia se puede entregar desde la caché en lugar de hacer otra [!UICONTROL API de envío de Adobe Target] llamada. Sin embargo, cuando se entrega una experiencia al visitante desde el `mbox`, a `notification` se envía a través de una llamada de API de envío para que se registre la impresión. Esto se debe a la respuesta de `prefetch` Las llamadas de se almacenan en caché, lo que significa que el visitante no ha visto las experiencias en el momento en que se realizó la `prefetch` la llamada se realiza. Para obtener más información sobre `notification` proceso, consulte [Notificaciones](notifications.md).
+Dentro de la respuesta, verá el campo `content` que contiene la experiencia que se mostrará al visitante en relación con un(a) `mbox` determinado(a). Esto es muy útil cuando se almacena en caché en el servidor para que cuando un visitante interactúe con su aplicación web o móvil en una sesión y visite un(a) `mbox` en cualquier página particular de su aplicación, la experiencia se pueda entregar desde la caché en lugar de realizar otra llamada de [!UICONTROL Adobe Target Delivery API]. Sin embargo, cuando se entrega una experiencia al visitante desde `mbox`, se envía un `notification` a través de una llamada de API de entrega para que se produzca el registro de impresiones. Esto se debe a que la respuesta de `prefetch` llamadas se almacena en caché, lo que significa que el visitante no ha visto las experiencias en el momento en que se produce la llamada a `prefetch`. Para obtener más información acerca del proceso `notification`, consulte [Notificaciones](notifications.md).
 
-## Recuperar previamente mboxes con `clickTrack` métricas al usar [!UICONTROL Analytics for Target] (A4T)
+## Recuperar previamente mboxes con métricas `clickTrack` al usar [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia de.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
 
-El siguiente fragmento de código es una respuesta de una recuperación previa de un mbox que contiene `clickTrack` métricas a notificar [!DNL Analytics] que se ha hecho clic en una oferta:
+El siguiente fragmento de código es una respuesta de una recuperación previa de un mbox que contiene `clickTrack` métricas para notificar a [!DNL Analytics] que se hizo clic en una oferta:
 
 ```JSON {line-numbers="true"}
 {
@@ -165,11 +165,11 @@ El siguiente fragmento de código es una respuesta de una recuperación previa d
 
 >[!NOTE]
 >
->La recuperación previa de un mbox contiene [!DNL Analytics] carga útil solo para actividades cualificadas. La recuperación previa de métricas de éxito para actividades no calificadas aún provoca incoherencias en los informes.
+>La recuperación previa de un mbox contiene la carga útil [!DNL Analytics] solo para actividades calificadas. La recuperación previa de métricas de éxito para actividades no calificadas aún provoca incoherencias en los informes.
 
 ## Recuperar vistas previamente
 
-SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o una experiencia móvil de un usuario. Ahora, a través de la API de entrega, se crea un VEC [[!UICONTROL Prueba A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} Actividades de (X)T con modificaciones en [SPA Vistas para la](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) ahora se puede recuperar previamente.
+SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o una experiencia móvil de un usuario. SPA Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} y [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para el](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -199,7 +199,7 @@ curl -X POST \
 }'
 ```
 
-SPA La llamada de ejemplo anterior recupera previamente todas las vistas creadas a través del VEC de para [!UICONTROL Prueba A/B] y actividades XT que se mostrarán para la web `channel`. Tenga en cuenta que la llamada recupera previamente todas las vistas de [!UICONTROL Prueba A/B] o actividades XT con las que trabaja un visitante `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que está visitando el `url`:`https://target.enablementadobe.com/react/demo/#/` es apto para.
+SPA La llamada de ejemplo anterior recupera previamente todas las vistas creadas a través del VEC de para las actividades [!UICONTROL A/B Test] y XT que se mostrarán en la web `channel`. Observe que la llamada recupera previamente todas las vistas de las actividades [!UICONTROL A/B Test] o XT para las que califica un visitante con `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que visita `url`:`https://target.enablementadobe.com/react/demo/#/`.
 
 ```JSON  {line-numbers="true"}
 {
@@ -280,4 +280,4 @@ SPA La llamada de ejemplo anterior recupera previamente todas las vistas creadas
 }
 ```
 
-En el `content` campos de la respuesta, observe metadatos como `type`, `selector`, `cssSelector`, y `content`, que se utilizan para presentar la experiencia al visitante cuando un usuario visita la página. Tenga en cuenta que la variable `prefetched` el contenido se puede almacenar en caché y procesar para el usuario cuando sea necesario.
+En los campos `content` de la respuesta, anote metadatos como `type`, `selector`, `cssSelector` y `content`, que se utilizan para representar la experiencia en el visitante cuando un usuario visita su página. Tenga en cuenta que el contenido de `prefetched` se puede almacenar en caché y representar para el usuario cuando sea necesario.

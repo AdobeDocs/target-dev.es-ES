@@ -5,14 +5,14 @@ feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
-# Introducción a [!DNL Target] SDK
+# Introducción a los SDK de [!DNL Target]
 
-Para ponerse en marcha, le recomendamos que cree su primer [toma de decisiones en el dispositivo](../on-device-decisioning/overview.md) marca la actividad en el idioma que elija:
+Para ponerte en marcha, te recomendamos que crees tu primera actividad de indicador de funciones de [toma de decisiones en el dispositivo](../on-device-decisioning/overview.md) en el idioma que elijas:
 
 * Node.js
 * Java
@@ -24,30 +24,30 @@ Para ponerse en marcha, le recomendamos que cree su primer [toma de decisiones e
 1. Habilitar la toma de decisiones en el dispositivo para su organización
 1. Instalación del SDK
 1. Inicialización del SDK
-1. Configurar los indicadores de funcionalidades en una [!DNL Adobe Target] [!UICONTROL Prueba A/B] actividad
+1. Configurar los indicadores de características en una actividad [!DNL Adobe Target] [!UICONTROL A/B Test]
 1. Implementar y procesar la función en la aplicación
 1. Implementar el seguimiento de eventos en la aplicación
-1. Activar su [!UICONTROL Prueba A/B] actividad
+1. Activar su actividad [!UICONTROL A/B Test]
 
 ## 1. Habilitar la toma de decisiones en el dispositivo para su organización
 
-Al habilitar la toma de decisiones en el dispositivo se garantiza una [!UICONTROL Prueba A/B] la actividad se ejecuta con una latencia cercana a cero. Para habilitar esta función, vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementación]** > **[!UICONTROL Detalles de la cuenta]** y habilite la **[!UICONTROL Toma de decisiones en el dispositivo]** alternar.
+Al habilitar la toma de decisiones en el dispositivo, se garantiza que la actividad [!UICONTROL A/B Test] se ejecute con una latencia cercana a cero. Para habilitar esta característica, vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** y habilite la opción **[!UICONTROL On-Device Decisioning]**.
 
 ![imagen alt](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->Debe tener el **[!UICONTROL Administrador]** o **[!UICONTROL Aprobador]** [función de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar **[!UICONTROL Toma de decisiones en el dispositivo]** alternar.
+>Debe tener el **[!UICONTROL Admin]** o **[!UICONTROL Approver]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar la opción **[!UICONTROL On-Device Decisioning]**.
 
-Después de activar el **[!UICONTROL Toma de decisiones en el dispositivo]** alternar, [!DNL Adobe Target] comienza a generar [artefactos de regla](../on-device-decisioning/rule-artifact-overview.md) para su cliente.
+Después de habilitar la opción **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] comienza a generar [artefactos de regla](../on-device-decisioning/rule-artifact-overview.md) para su cliente.
 
 ## 2. Instalar el SDK
 
-Para Node.js, Java y Python, ejecute el siguiente comando en el directorio del proyecto en el terminal. Para .NET, agréguela como dependencia por [instalar desde NuGet](https://www.nuget.org/packages/Adobe.Target.Client).
+Para Node.js, Java y Python, ejecute el siguiente comando en el directorio del proyecto en el terminal. Para .NET, agréguela como una dependencia mediante [la instalación desde NuGet](https://www.nuget.org/packages/Adobe.Target.Client).
 
 >[!BEGINTABS]
 
->[!TAB Node.js (NPM)]
+>[!TAB Nodo.js (NPM)]
 
 ```js {line-numbers="true"}
 npm i @adobe/target-nodejs-sdk -P
@@ -83,7 +83,7 @@ El artefacto de regla se descarga durante el paso de inicialización del SDK. Pu
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -146,25 +146,25 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## 4. Configure los indicadores de funcionalidades en una [!DNL Adobe Target] [!UICONTROL Prueba A/B] actividad
+## 4. Configure los indicadores de características en una actividad [!DNL Adobe Target] [!UICONTROL A/B Test]
 
-1. Entrada [!DNL Target], vaya al **[!UICONTROL Actividades]** página, luego seleccione **[!UICONTROL Crear actividad]** > **[!UICONTROL Prueba A/B]**.
+1. En [!DNL Target], vaya a la página **[!UICONTROL Activities]** y, a continuación, seleccione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
    ![imagen alt](assets/asset-ab.png)
 
-1. En el **[!UICONTROL Crear actividad de prueba A/B]** modal, deje seleccionada la opción web predeterminada (1), seleccione **[!UICONTROL Form]** como compositor de experiencias (2), seleccione **[!UICONTROL Workspace predeterminado]** con **[!UICONTROL Sin restricciones de propiedad]**(3) y haga clic en **[!UICONTROL Siguiente]** (4).
+1. En el modal **[!UICONTROL Create A/B Test Activity]**, deje seleccionada la opción web predeterminada (1), seleccione **[!UICONTROL Form]** como compositor de experiencias (2), seleccione **[!UICONTROL Default Workspace]** con **[!UICONTROL No Property Restrictions]**(3) y, a continuación, haga clic en **[!UICONTROL Next]** (4).
 
    ![imagen alt](assets/asset-form.png)
 
-1. En el **[!UICONTROL Experiencias]** Paso de creación de la actividad, proporcione un nombre para su actividad (1) y añada una segunda experiencia, Experiencia B, haciendo clic en **[!UICONTROL Añadir experiencia]** (2). Introduzca el nombre de la ubicación que elija (3). Por ejemplo, `ondevice-featureflag` o `homepage-addtocart-featureflag` son nombres de ubicación que indican los destinos de las pruebas de indicadores de características.  En el ejemplo que se muestra a continuación, `ondevice-featureflag` es la ubicación definida para la Experiencia B. Opcionalmente, puede añadir Refinamientos de audiencia (4) para restringir la calificación a la actividad.
+1. En el paso **[!UICONTROL Experiences]** de creación de la actividad, proporcione un nombre para su actividad (1) y agregue una segunda experiencia, Experiencia B, haciendo clic en **[!UICONTROL Add Experience]** (2). Introduzca el nombre de la ubicación que elija (3). Por ejemplo, `ondevice-featureflag` o `homepage-addtocart-featureflag` son nombres de ubicación que indican los destinos de las pruebas de indicadores de características.  En el ejemplo que se muestra a continuación, `ondevice-featureflag` es la ubicación definida para la Experiencia B. Opcionalmente, puede agregar Refinamientos de audiencia (4) para restringir la calificación a la actividad.
 
    ![imagen alt](assets/asset-location.png)
 
-1. En el **[!UICONTROL CONTENIDO]** en la misma página, seleccione **[!UICONTROL Crear oferta JSON]** en la lista desplegable (1) como se muestra.
+1. En la sección **[!UICONTROL CONTENT]** de la misma página, seleccione **[!UICONTROL Create JSON Offer]** en la lista desplegable (1) como se muestra.
 
    ![imagen alt](assets/asset-offer.png)
 
-1. En el **[!UICONTROL Datos JSON]** En el cuadro de texto que aparece, escriba las variables de indicador de funciones para cada experiencia (1), utilizando un objeto JSON válido (2).
+1. En el cuadro de texto **[!UICONTROL JSON Data]** que aparece, escriba las variables de indicador de características para cada experiencia (1), utilizando un objeto JSON válido (2).
 
    Introduzca las variables de indicador de funcionalidad para la Experiencia A.
 
@@ -192,25 +192,25 @@ target_client = TargetClient.create(CONFIG)
    }
    ```
 
-1. Clic **[!UICONTROL Siguiente]** (1) para avanzar a la **[!UICONTROL Segmentación]** paso de creación de la actividad.
+1. Haga clic en **[!UICONTROL Next]** (1) para avanzar al paso **[!UICONTROL Targeting]** de creación de la actividad.
 
    ![imagen alt](assets/asset-next_2_t.png)
 
-1. En el **[!UICONTROL Segmentación]** El ejemplo de paso que se muestra a continuación, Segmentación de audiencia (2) permanece en el conjunto predeterminado de Todos los visitantes, para simplificar. Esto significa que la actividad no está dirigida. Sin embargo, tenga en cuenta que el Adobe recomienda segmentar siempre las audiencias para las actividades de producción. Clic **[!UICONTROL Siguiente]** (3) para avanzar a la **[!UICONTROL Objetivos y configuración]** paso de creación de la actividad.
+1. En el ejemplo del paso **[!UICONTROL Targeting]** que se muestra a continuación, Segmentación de audiencia (2) permanece en el conjunto predeterminado de Todos los visitantes, para simplificar. Esto significa que la actividad no está dirigida. Sin embargo, tenga en cuenta que el Adobe recomienda segmentar siempre las audiencias para las actividades de producción. Haga clic en **[!UICONTROL Next]** (3) para avanzar al paso **[!UICONTROL Goals & Settings]** de creación de la actividad.
 
    ![imagen alt](assets/asset-next_2_g.png)
 
-1. En el **[!UICONTROL Objetivos y configuración]** paso, establecer **[!UICONTROL Fuente de informes]** hasta **[!UICONTROL Adobe Target]** (1). Defina el **[!UICONTROL Métrica de objetivo]** as **[!UICONTROL Conversión]**, especificando los detalles según las métricas de conversión del sitio (2). Clic **[!UICONTROL Guardar y cerrar]** (3) para guardar la actividad.
+1. En el paso **[!UICONTROL Goals & Settings]**, establezca **[!UICONTROL Reporting Source]** en **[!UICONTROL Adobe Target]** (1). Defina **[!UICONTROL Goal Metric]** como **[!UICONTROL Conversion]**, y especifique los detalles según las métricas de conversión del sitio (2). Haga clic en **[!UICONTROL Save & Close]** (3) para guardar la actividad.
 
    ![imagen alt](assets/asset-conv.png)
 
 ## 5. Implementar y procesar la función en la aplicación
 
-Después de configurar las variables de indicador de funcionalidad en [!DNL Target], modifique el código de la aplicación para utilizarlos. Por ejemplo, después de obtener la marca de características en la aplicación, puede utilizarla para habilitar características y procesar la experiencia para la que el visitante cumple los requisitos.
+Después de configurar las variables de indicador de características en [!DNL Target], modifique el código de la aplicación para usarlas. Por ejemplo, después de obtener la marca de características en la aplicación, puede utilizarla para habilitar características y procesar la experiencia para la que el visitante cumple los requisitos.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 //... Code removed for brevity
@@ -278,7 +278,7 @@ Opcionalmente, puede enviar eventos adicionales para rastrear conversiones media
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 //... Code removed for brevity
@@ -382,12 +382,12 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## 7. Active el [!UICONTROL Prueba A/B] actividad
+## 7. Active la actividad [!UICONTROL A/B Test]
 
-1. Clic **[!UICONTROL Activar]** (1) para activar su [!UICONTROL Prueba A/B] actividad.
+1. Haga clic en **[!UICONTROL Activate]** (1) para activar su actividad [!UICONTROL A/B Test].
 
    >[!NOTE]
    >
-   >Debe tener el **[!UICONTROL Aprobador]** o **[!UICONTROL Editor]** [función de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para realizar este paso.
+   >Debe tener el **[!UICONTROL Approver]** o **[!UICONTROL Publisher]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para realizar este paso.
 
    ![imagen alt](assets/asset-activate.png)

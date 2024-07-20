@@ -1,25 +1,25 @@
 ---
 keywords: implementar, implementar, configurar, configurar, parámetro de página
-description: Introducción de datos en [!DNL Target] uso de atributos de perfil en página.
-title: ¿Cómo puedo obtener datos en? [!DNL Target] ¿Usar atributos de perfil en página?
+description: Obtener datos en  [!DNL Target] usando atributos de perfil en página.
+title: ¿Cómo puedo obtener datos en  [!DNL Target] usando atributos de perfil en página?
 feature: Implementation
 exl-id: c19fd746-21a2-4eb5-8c2a-c24806e09324
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 45%
+source-wordcount: '283'
+ht-degree: 43%
 
 ---
 
 # Atributos de perfil en página
 
-Atributos de perfil en página en [!DNL Adobe Target] (también denominados &quot;atributos de perfil en mbox&quot;) son pares de nombre/valor que se pasan directamente a través del código de página y que se almacenan en el perfil del visitante para su uso futuro.
+Los atributos de perfil en página de [!DNL Adobe Target] (también denominados &quot;atributos de perfil en mbox&quot;) son pares de nombre/valor que se pasan directamente a través del código de página y que se almacenan en el perfil del visitante para su uso futuro.
 
 Los atributos de perfil en página permiten que los datos específicos del usuario se almacenen en el perfil de Target para una posterior segmentación.
 
 ## Formato
 
-Los atributos de perfil en página se pasan a [!DNL Target] a través de una llamada al servidor como un par de nombre/valor de cadena con el prefijo &quot;perfil&quot;. antes del nombre del atributo.
+Los atributos de perfil en página se pasan a [!DNL Target] mediante una llamada al servidor como un par de nombre-valor de cadena con el prefijo &quot;perfil&quot;. antes del nombre del atributo.
 
 Los nombres y valores del atributo se pueden personalizar, aunque hay algunos “nombres reservados” para usos específicos.
 
@@ -30,13 +30,13 @@ Estos son algunos ejemplos de atributos de perfil en página:
 
 ## Casos de uso de ejemplo
 
-* **Información de inicio de sesión**[!DNL Target]: comparta con datos con información que no permita identificar personalmente a los usuarios en función del inicio de sesión del usuario. Estos datos pueden ser el estado del abono, el historial de pedidos, etc.
+* **Información de inicio de sesión**: comparta datos con [!DNL Target] que no sean PII (información de identificación personal) según el inicio de sesión del usuario. Estos datos pueden ser el estado del abono, el historial de pedidos, etc.
 * **Información de la tienda**: hace el seguimiento de cuál es la ubicación de la tienda preferida de este usuario.
 * **Interacciones anteriores**: hace el seguimiento de las acciones realizadas anteriormente por el usuario en el sitio para proporcionar datos para una futura personalización.
 
 ## Ventajas del método
 
-Los datos se envían a [!DNL Target] en tiempo real, y se pueden utilizar en la misma llamada de servidor en la que se incluyen los datos.
+Los datos se envían a [!DNL Target] en tiempo real y se pueden usar en la misma llamada al servidor en la que se reciben los datos.
 
 ## Advertencias
 

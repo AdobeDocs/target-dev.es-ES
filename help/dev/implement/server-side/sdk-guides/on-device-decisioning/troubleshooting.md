@@ -1,34 +1,34 @@
 ---
 title: Resolución de problemas de toma de decisiones en el dispositivo
-description: Obtenga información sobre cómo solucionar problemas [!UICONTROL toma de decisiones en el dispositivo]
+description: Obtenga información sobre cómo solucionar problemas de [!UICONTROL on-device decisioning]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
 
-# Solución de problemas [!UICONTROL toma de decisiones en el dispositivo]
+# Resolución de problemas [!UICONTROL on-device decisioning]
 
 ## Validando configuración
 
 ### Resumen de pasos
 
-1. Asegúrese de que `logger` está configurado
-1. Asegurar [!DNL Target] traces está habilitado
-1. Compruebe el [!UICONTROL toma de decisiones en el dispositivo] *artefacto de regla* se ha recuperado y almacenado en caché según el intervalo de sondeo definido.
-1. Validar la entrega de contenido mediante el artefacto de regla en caché creando una prueba [!UICONTROL toma de decisiones en el dispositivo] actividad a través del compositor de experiencias basadas en formularios.
+1. Asegúrese de que `logger` esté configurado
+1. Asegúrese de que los seguimientos de [!DNL Target] estén habilitados
+1. Compruebe que el [!UICONTROL on-device decisioning] *artefacto de regla* se haya recuperado y almacenado en caché según el intervalo de sondeo definido.
+1. Valide la entrega de contenido mediante el artefacto de reglas en caché creando una actividad de prueba [!UICONTROL on-device decisioning] a través del compositor de experiencias basadas en formularios.
 1. Inspect envía errores de notificación
 
 ## 1. Asegúrese de que el registrador esté configurado
 
 Al inicializar el SDK, asegúrese de habilitar el registro.
 
-**Node.js**
+**Nodo.js**
 
-Para el SDK de Node.js `logger` debe proporcionarse el objeto.
+Para el SDK de Node.js, se debe proporcionar un objeto `logger`.
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -40,7 +40,7 @@ const CONFIG = {
 
 **SDK de Java**
 
-Para el SDK de Java `logRequests` en el `ClientConfig` debe estar activado.
+Para el SDK de Java `logRequests` en `ClientConfig` debe estar habilitado.
 
 ```js {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -56,21 +56,21 @@ Además, la JVM debe iniciarse con el siguiente parámetro de línea de comandos
 java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 ```
 
-## 2. Garantice[!DNL Target]Traces está habilitado
+## 2. Asegúrese de que [!DNL Target]Traces esté habilitado
 
-Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adobe Target] en lo que respecta al artefacto de reglas.
+Al habilitar los seguimientos, se generará información adicional de [!DNL Adobe Target] con respecto al artefacto de reglas.
 
-1. Vaya a[!DNL Target]IU en [!DNL Experience Cloud].
+1. Vaya a la [!DNL Target]interfaz de usuario de [!DNL Experience Cloud].
 
    ![imagen alt](assets/asset-target-ui-1.png)
 
-1. Vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementación]** y haga clic en **[!UICONTROL Generar nuevo token de autorización]**.
+1. Vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** y haga clic en **[!UICONTROL Generate New Authorization Token]**.
 
    ![imagen alt](assets/asset-target-ui-2.png)
 
-1. Copie el token de autorización recién generado en el portapapeles y agréguelo a su[!DNL Target]solicitud:
+1. Copie el token de autorización recién generado al portapapeles y agréguelo a su [!DNL Target]solicitud:
 
-   **Node.js**
+   **Nodo.js**
 
    ```js {line-numbers="true"}
    const request = {
@@ -113,11 +113,11 @@ Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adob
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## 3. Compruebe el [!UICONTROL toma de decisiones en el dispositivo] *artefacto de regla* se ha recuperado y almacenado en caché según el intervalo de sondeo definido.
+## 3. Compruebe que el [!UICONTROL on-device decisioning] *artefacto de regla* se haya recuperado y almacenado en caché según el intervalo de sondeo definido.
 
 1. Espere la duración del intervalo de sondeo (el valor predeterminado es 20 minutos) y asegúrese de que el SDK esté recuperando el artefacto. Se generarán los mismos registros de terminal.
 
-   Además, la información de la[!DNL Target]El seguimiento debe enviarse al terminal con detalles sobre el artefacto de regla.
+   Además, la información del seguimiento [!DNL Target]Trace debe enviarse al terminal con detalles sobre el artefacto de regla.
 
    ```text {line-numbers="true"}
    "trace": {
@@ -135,9 +135,9 @@ Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adob
      },
    ```
 
-## 4. Valide la entrega de contenido mediante el artefacto de regla en caché creando una prueba [!UICONTROL toma de decisiones en el dispositivo] actividad a través del compositor de experiencias basadas en formularios
+## 4. Valide la entrega de contenido mediante el artefacto de reglas en caché creando una actividad de prueba [!UICONTROL on-device decisioning] a través del compositor de experiencias basadas en formularios
 
-1. Vaya a[!DNL Target]IU en el Experience Cloud
+1. Vaya a la [!DNL Target]IU en el Experience Cloud
 
    ![imagen alt](assets/asset-target-ui-1.png)
 
@@ -145,15 +145,15 @@ Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adob
 
    ![imagen alt](assets/asset-form-base-composer-ui.png)
 
-1. Introduzca el nombre de mbox utilizado en su[!DNL Target]como la ubicación de la actividad XT (tenga en cuenta que debe ser un nombre de mbox único específicamente para fines de desarrollo).
+1. Escriba el nombre de mbox utilizado en la solicitud [!DNL Target] como ubicación para la actividad XT (tenga en cuenta que debe ser un nombre de mbox único específicamente para fines de desarrollo).
 
    ![imagen alt](assets/asset-mbox-location-ui.png)
 
-1. Cambie el contenido a una oferta de HTML u oferta JSON. Esto se devolverá en el[!DNL Target]a su aplicación. Deje el objetivo de la actividad como &quot;Todos los visitantes&quot; y seleccione la métrica que desee. Asigne un nombre a la actividad, guárdela y actívela para asegurarse de que el mbox o la ubicación en uso solo sean aptos para el desarrollo.
+1. Cambie el contenido a una oferta de HTML u oferta JSON. Esto se devolverá en la [!DNL Target]solicitud a su aplicación. Deje el objetivo de la actividad como &quot;Todos los visitantes&quot; y seleccione la métrica que desee. Asigne un nombre a la actividad, guárdela y actívela para asegurarse de que el mbox o la ubicación en uso solo sean aptos para el desarrollo.
 
    ![imagen alt](assets/asset-target-content-ui.png)
 
-1. En la aplicación, agregue instrucciones de registro para el contenido recibido en la respuesta de su[!DNL Target]solicitud
+1. En su aplicación, agregue instrucciones de registro para el contenido recibido en la respuesta de su [!DNL Target]solicitud
 
    **SDK de Node.js**
 
@@ -191,7 +191,7 @@ Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adob
    }
    ```
 
-1. Revise los registros de su terminal para verificar que el contenido se está enviando y que se entregó a través del artefacto de reglas en su servidor. El `LD.DeciscionProvider` El objeto de se genera cuando la calificación y la toma de decisiones de la actividad se determinaron en el dispositivo en función del artefacto de reglas. Además, debido a la tala de `content`, debería ver `<div>test</div>` o como quiera que haya decidido que sea la respuesta al crear la actividad de prueba.
+1. Revise los registros de su terminal para verificar que el contenido se está enviando y que se entregó a través del artefacto de reglas en su servidor. El objeto `LD.DeciscionProvider` se genera cuando la calificación y la toma de decisiones de la actividad se determinaron en el dispositivo en función del artefacto de reglas. Además, debido al registro de `content`, debería ver `<div>test</div>` o como sea que haya decidido que sea la respuesta al crear la actividad de prueba.
 
    **Salida del registrador**
 
@@ -203,7 +203,7 @@ Al habilitar los seguimientos, se obtendrá información adicional de [!DNL Adob
 
 ## Inspect envía errores de notificación
 
-Al utilizar la toma de decisiones en el dispositivo, las notificaciones se envían automáticamente para que getOffers ejecute solicitudes. Estas solicitudes se envían silenciosamente en segundo plano. Los errores se pueden inspeccionar suscribiéndose a un evento llamado `sendNotificationError`. Este es un ejemplo de código que muestra cómo suscribirse a los errores de notificación mediante el SDK de Node.js.
+Al utilizar la toma de decisiones en el dispositivo, las notificaciones se envían automáticamente para que getOffers ejecute solicitudes. Estas solicitudes se envían silenciosamente en segundo plano. Cualquier error se puede inspeccionar mediante la suscripción a un evento denominado `sendNotificationError`. Este es un ejemplo de código que muestra cómo suscribirse a los errores de notificación mediante el SDK de Node.js.
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -239,11 +239,11 @@ client = TargetClient.create({
 
 ## Escenarios comunes de resolución de problemas
 
-Asegúrese de revisar [funciones compatibles](supported-features.md) para [!UICONTROL toma de decisiones en el dispositivo] cuando encuentre problemas.
+Asegúrese de revisar [funciones compatibles](supported-features.md) para [!UICONTROL on-device decisioning] cuando encuentre problemas.
 
 ### Las actividades de toma de decisiones en el dispositivo no se ejecutan debido a una audiencia o actividad no admitidas
 
-Un problema común que puede ocurrir es [!UICONTROL toma de decisiones en el dispositivo] Las actividades de no se ejecutan debido a que la audiencia está en uso o el tipo de actividad no es compatible.
+Un problema común que se puede producir es que [!UICONTROL on-device decisioning] actividades no se ejecutan debido a que la audiencia está en uso o el tipo de actividad no es compatible.
 
 (1) Con el resultado del registrador, revise las entradas de la propiedad trace en el objeto response. Identifique específicamente la propiedad de campañas:
 
@@ -264,9 +264,9 @@ Un problema común que puede ocurrir es [!UICONTROL toma de decisiones en el dis
     }
 ```
 
-Observará que la actividad para la que intenta cumplir los requisitos no está en la `campaigns` ya que no se admite el tipo de audiencia o actividad. Si la actividad se enumera en la `campaigns` , el problema no se debe a una audiencia o tipo de actividad no compatible.
+Observará que la actividad para la que intenta calificar no está en la propiedad `campaigns`, ya que no se admite la audiencia o el tipo de actividad. Si la actividad aparece en la propiedad `campaigns`, el problema no se debe a una audiencia o a un tipo de actividad no compatibles.
 
-(2) Además, busque la variable `rules.json` al consultar el archivo `trace` > `artifact` > `artifactLocation` en la salida del registrador y observe que la actividad no aparece en el `rules` > `mboxes` propiedad:
+(2) Además, busque el archivo `rules.json` mirando `trace` > `artifact` > `artifactLocation` en la salida del registrador y observe que falta su actividad en la propiedad `rules` > `mboxes`:
 
 **Salida del registrador**
 
@@ -278,7 +278,7 @@ Observará que la actividad para la que intenta cumplir los requisitos no está 
  }
 ```
 
-Finalmente, vaya a[!DNL Target]IU de y busque la actividad en cuestión: [experience.adobe.com/target](https://experience.adobe.com/target)
+Finalmente, vaya a la [!DNL Target]interfaz de usuario y busque la actividad en cuestión: [experience.adobe.com/target](https://experience.adobe.com/target)
 
 Revise las reglas utilizadas en la audiencia y asegúrese de utilizar solo las mencionadas que son compatibles. Además, asegúrese de que el tipo de actividad sea A/B o XT.
 
@@ -342,7 +342,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-(2) Asegúrese de que reúne los requisitos para la audiencia de su actividad revisando la `matchedRuleConditions` o `unmatchedRuleConditions` propiedad del resultado del seguimiento:
+(2) Asegúrese de que cumple los requisitos para la audiencia de su actividad revisando la propiedad `matchedRuleConditions` o `unmatchedRuleConditions` del resultado del seguimiento:
 
 **Salida de seguimiento**
 
@@ -394,9 +394,9 @@ Puede que no sea evidente por qué no se está ejecutando una actividad de toma 
 ...
 ```
 
-Consulte la `artifactLastRetrieved` fecha del artefacto y asegúrese de que dispone de la última `rules.json` archivo descargado en la aplicación.
+Observe la fecha `artifactLastRetrieved` del artefacto y asegúrese de que ha descargado el archivo más reciente de `rules.json` en su aplicación.
 
-(2) Encuentre el `evaluatedCampaignTargets` en la salida del registrador:
+(2) Busque la propiedad `evaluatedCampaignTargets` en la salida del registrador:
 
 **Salida del registrador**
 
@@ -470,24 +470,24 @@ Consulte la `artifactLastRetrieved` fecha del artefacto y asegúrese de que disp
 ...
 ```
 
-(3) Revise la `context`, `page`, y `referring` para garantizar que es lo esperado, ya que esto puede afectar a la calificación de la actividad como objetivo.
+(3) Revise los datos de `context`, `page` y `referring` para asegurarse de que son lo esperados, ya que esto puede afectar a la calificación de la actividad como objetivo.
 
-(4) Revise la `campaignId` para garantizar que se evalúen la actividad o actividades que espera ejecutar. El `campaignId` coincidirá con el ID de actividad en la ficha de información general de actividad de[!DNL Target]IU:
+(4) Revise `campaignId` para asegurarse de que se evalúan la actividad o actividades que espera ejecutar. `campaignId` coincidirá con el ID de actividad en la ficha de información general de actividad de la [!DNL Target]IU:
 
 ![imagen alt](assets/asset-activity-id-target-ui.png)
 
-(5) Revise la `matchedRuleConditions` y `unmatchedRuleConditions` para identificar los problemas relacionados con los requisitos para las reglas de audiencia de una actividad determinada.
+(5) Revise `matchedRuleConditions` y `unmatchedRuleConditions` para identificar los problemas con la calificación de las reglas de audiencia para una actividad determinada.
 
-(6) Revise los últimos `rules.json` para garantizar que se incluyan la actividad o actividades que desea ejecutar localmente. En el paso 1 se hace referencia a la ubicación.
+(6) Revise el archivo `rules.json` más reciente para asegurarse de que se incluyen la actividad o actividades que desea ejecutar localmente. En el paso 1 se hace referencia a la ubicación.
 
 (7) Asegúrese de que utiliza los mismos nombres de mbox en sus solicitudes y actividades.
 
 (8) Asegúrese de que utiliza reglas de audiencia y tipos de actividades compatibles.
 
-### Se realiza una llamada al servidor aunque la configuración de la actividad en un mbox indique &quot;Elegible para la toma de decisiones en el dispositivo&quot; en el[!DNL Target]interfaz de usuario
+### Se realiza una llamada al servidor aunque la configuración de la actividad en un mbox indique &quot;Opción de decisiones en el dispositivo elegible&quot; en la interfaz de usuario [!DNL Target]
 
 Existen varias razones por las que se realiza una llamada al servidor aunque el dispositivo sea apto para la toma de decisiones en el dispositivo:
 
-* Cuando el mbox utilizado para una actividad &quot;Elegible para la toma de decisiones en el dispositivo&quot; se utiliza también para otras actividades que no son &quot;Elegibles para la toma de decisiones en el dispositivo&quot;, el mbox se enumera en la sección `remoteMboxes` de la sección `rules.json` artefacto. Cuando aparece un mbox en `remoteMboxes`, cualquiera `getOffer(s)` las llamadas a ese mbox dan como resultado una llamada al servidor.
+* Cuando el mbox utilizado para una actividad &quot;Opción de decisiones en el dispositivo elegible&quot; también se usa para otras actividades que no son &quot;Opción de decisiones en el dispositivo elegible&quot;, el mbox se enumera en la sección `remoteMboxes` del artefacto `rules.json`. Cuando un mbox aparece en `remoteMboxes`, cualquier llamada de `getOffer(s)` a ese mbox resulta en una llamada al servidor.
 
-* Si configura una actividad en un espacio de trabajo/propiedad y no incluye la misma al configurar el SDK, esto puede provocar lo siguiente `rules.josn` del espacio de trabajo predeterminado que se va a descargar, que puede utilizar el mbox en `remoteMboxes` sección.
+* Si configura una actividad en un espacio de trabajo o una propiedad y no incluye la misma al configurar el SDK, esto puede hacer que se descargue el `rules.josn` del espacio de trabajo predeterminado, que puede utilizar el mbox en la sección `remoteMboxes`.

@@ -1,19 +1,19 @@
 ---
 title: Consideraciones de la API de envío de Adobe Target y limitaciones conocidas
-description: ¿Qué consideraciones y limitaciones conocidas debo tener en cuenta al utilizar? [!UICONTROL API de envío de Adobe Target]?
+description: ¿Qué consideraciones y limitaciones conocidas debo tener en cuenta al usar [!UICONTROL Adobe Target Delivery API]?
 keywords: api de envío
 exl-id: 49fe13b0-efcb-4b1c-a4cb-03b64fbd9214
 feature: APIs/SDKs
 source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '134'
 ht-degree: 6%
 
 ---
 
 # Consideraciones y limitaciones conocidas
 
-* No hay autenticación para [!DNL Target] API de envío.
+* No hay autenticación para las API de entrega de [!DNL Target].
 * Esta API no procesa cookies ni redirige llamadas.
 * Los nombres de encabezado HTTP/1.1 y HTTP/2 no distinguen entre mayúsculas y minúsculas; sin embargo, HTTP/2 exige nombres de encabezado en minúsculas. Para obtener más información, consulte la [Documentación del Protocolo de transferencia de hipertexto versión 2 (HTTP/2)](https://www.rfc-editor.org/rfc/rfc7540#section-8.1.2){target=_blank}.
 

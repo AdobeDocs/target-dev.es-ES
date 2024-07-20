@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Resumen de principios básicos
 
-[!DNL Adobe Target] funciona de acuerdo con varios principios básicos, que son importantes de comprender para ejecutar actividades de experimentación o personalización eficaces. Estos principios son:
+[!DNL Adobe Target] funciona de acuerdo con varios principios básicos que son importantes de comprender para ejecutar actividades de experimentación o personalización efectivas. Estos principios son:
 
 * [Identificación de usuario y agrupamiento](user-identification-and-bucketing.md)
 

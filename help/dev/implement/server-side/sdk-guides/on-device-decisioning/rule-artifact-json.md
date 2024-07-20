@@ -5,8 +5,8 @@ feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +46,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. En primer lugar, importe el SDK. Importe al mismo archivo desde el que puede controlar el inicio del servidor.
 
-   **Node.js**
+   **Nodo.js**
 
    ```javascript {line-numbers="true"}
    const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -61,7 +61,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Para configurar el SDK, utilice el método create.
 
-   **Node.js**
+   **Nodo.js**
 
    ```javascript {line-numbers="true"}
    const CONFIG = {
@@ -113,7 +113,7 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Tanto el cliente como `organizationId` se puede recuperar de [!DNL Adobe Target]navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementación]**, como se muestra aquí.
+1. El cliente y `organizationId` se pueden recuperar de [!DNL Adobe Target]navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, como se muestra aquí.
 
    &lt;!— Insert image-client-code.png —>
    ![imagen alt](assets/asset-rule-artifact-3.png)
@@ -124,7 +124,7 @@ El mecanismo que utilice para almacenar la carga útil JSON depende de la arquit
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```javascript {line-numbers="true"}
 //... Code removed for brevity
@@ -162,13 +162,13 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Inicializando el [!DNL Adobe Target]SDK a través de la carga útil JSON, su servidor está listo para servir solicitudes inmediatamente con actividades de toma de decisiones en el dispositivo, ya que la variable [!DNL Adobe Target]El SDK no necesita esperar a que se descargue el artefacto de regla.
+>Al inicializar el SDK [!DNL Adobe Target]a través de la carga útil JSON, el servidor está listo para servir solicitudes inmediatamente con actividades de toma de decisiones en el dispositivo, ya que el SDK [!DNL Adobe Target]no necesita esperar a que se descargue el artefacto de regla.
 
 Este es un ejemplo que muestra la capacidad de inicialización de carga útil JSON.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```javascript {line-numbers="true"}
 const express = require("express");

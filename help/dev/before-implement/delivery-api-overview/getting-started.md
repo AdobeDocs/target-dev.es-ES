@@ -1,19 +1,19 @@
 ---
 title: Introducción a la API de entrega de Adobe Target
-description: ¿Cómo se usa el [!UICONTROL API de envío de Adobe Target]?
+description: ¿Cómo se usa [!UICONTROL Adobe Target Delivery API]?
 keywords: api de envío
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
 source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-# Introducción a la [!UICONTROL API de envío de Adobe Target]
+# Introducción a [!UICONTROL Adobe Target Delivery API]
 
-A [!UICONTROL API de envío de Target] la llamada tiene este aspecto:
+Una llamada de [!UICONTROL Target Delivery API] tiene este aspecto:
 
 ```
 curl -X POST \
@@ -45,10 +45,10 @@ curl -X POST \
     }'
 ```
 
-El `clientCode` se puede recuperar desde el [!DNL Target] IU navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementación]**.
+Se puede recuperar `clientCode` de la interfaz de usuario de [!DNL Target] navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
 
-Antes de realizar una [!UICONTROL API de envío de Target] Para realizar una llamada a, siga estos pasos para asegurarse de que una respuesta contenga la experiencia relevante para mostrar a los usuarios finales:
+Antes de realizar una llamada de [!UICONTROL Target Delivery API], siga estos pasos para asegurarse de que una respuesta contenga la experiencia relevante para mostrar a los usuarios finales:
 
-1. Crear un [!DNL Target] actividad (A/B, XT, AP o Recommendations) utilizando [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) o el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
-1. Utilice la API de envío para obtener una respuesta para los mboxes utilizados en [!DNL Target] actividad creada en el paso 2.
+1. Cree una actividad [!DNL Target] (A/B, XT, AP o Recommendations) usando [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) o [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+1. Utilice la API de envío para obtener una respuesta para los mboxes utilizados en la actividad [!DNL Target] creada en el paso 2.
 1. Presente la experiencia al visitante.

@@ -6,8 +6,8 @@ feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '2374'
-ht-degree: 64%
+source-wordcount: '2329'
+ht-degree: 62%
 
 ---
 
@@ -30,9 +30,9 @@ Adobe Experience Cloud proporciona API preparadas para RGPD para Controladores d
 
 Para obtener más información, consulte:
 
-* [Introducción al Privacy Service de Adobe](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=es)
+* [descripción general del Privacy Service de Adobe](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=es)
 * [Guía de API de Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=es)
-* [Información general de IU de Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=es)
+* [Descripción general de la IU del Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=es)
 
 ## Información general sobre la Ley de privacidad del consumidor de California (CCPA)
 
@@ -53,7 +53,7 @@ Si estuvo al tanto de la ley de privacidad de Europa (RGPD) del año pasado, alg
 
 ## Inclusión de Adobe Target y Adobe Experience Platform
 
-Target proporciona soporte de funcionalidad opcional a través de etiquetas en Adobe Experience Platform para ayudar a respaldar su estrategia de gestión de consentimiento. La funcionalidad de inclusión permite a los clientes controlar cómo y cuándo se inicia la etiqueta de Target. También hay una opción a través de Adobe Experience Platform para aprobar previamente la etiqueta de Target. Para activar Opt-In en la biblioteca at.js de Target, debe utilizar `targetGlobalSettings` y añada el `optinEnabled=true` configuración. En Adobe Experience Platform, seleccione &quot;habilitar&quot; en la lista desplegable Inclusión del RGPD en la vista de instalación de extensión. Consulte [Implementación de Target mediante Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) para obtener más información.
+Target proporciona soporte de funcionalidad opcional a través de etiquetas en Adobe Experience Platform para ayudar a respaldar su estrategia de gestión de consentimiento. La funcionalidad de inclusión permite a los clientes controlar cómo y cuándo se inicia la etiqueta de Target. También hay una opción a través de Adobe Experience Platform para aprobar previamente la etiqueta de Target. Para habilitar la capacidad de usar la inclusión en la biblioteca de Target at.js, debe usar `targetGlobalSettings` y agregar la configuración `optinEnabled=true`. En Adobe Experience Platform, seleccione &quot;habilitar&quot; en la lista desplegable Inclusión del RGPD en la vista de instalación de extensión. Consulte [Implementar Target mediante Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) para obtener más información.
 
 El siguiente fragmento de código muestra cómo habilitar la configuración `optinEnabled=true`:
 
@@ -71,9 +71,9 @@ El uso de Adobe Experience Platform es el enfoque recomendado para administrar i
 
 Hay tres escenarios a considerar cuando se usa la inclusión:
 
-1. **La etiqueta de Target se aprueba previamente mediante Adobe Experience Platform (o el titular de los datos ha aprobado previamente Target):** La etiqueta de Target no se contiene para el consentimiento y funciona como se espera.
+1. **La etiqueta de Target se aprobó previamente mediante Adobe Experience Platform (o el sujeto de datos aprobó previamente Target):** La etiqueta de Target no se retiene para el consentimiento y funciona como se espera.
 1. **La etiqueta de Target NO está aprobada previamente y `bodyHidingEnabled` es FALSO:** la etiqueta de Target se activa solo después de que se haya obtenido el consentimiento del cliente. Antes de recopilar el consentimiento, solo está disponible el contenido predeterminado. Después de recibir el consentimiento, se llama a Target y el contenido personalizado está disponible para el sujeto de los datos (visitante). Debido a que solo el contenido predeterminado está disponible antes del consentimiento, es importante usar una estrategia adecuada, como una página de inicio que cubra cualquier parte de la página o contenido que pueda ser personalizado. Este proceso asegura que la experiencia se mantenga consistente para el sujeto de los datos (visitante).
-1. **La etiqueta de Target NO está aprobada previamente y `bodyHidingEnabled` es VERDADERO:** la etiqueta de Target se activa solo después de que se haya obtenido el consentimiento del cliente. Antes de recopilar el consentimiento, solo está disponible el contenido predeterminado. Sin embargo, debido a que `bodyHidingEnabled` se establece en verdadero, `bodyHiddenStyle` dicta qué contenido de la página está oculto hasta que se dispara la etiqueta de Target (o el sujeto de los datos rechaza la opción de inclusión, en cuyo caso se muestre el contenido por defecto). De forma predeterminada, `bodyHiddenStyle` se establece en `body { opacity:0;}`, que oculta la etiqueta de cuerpo HTML. A continuación encontrará la configuración de página recomendada por Adobe para que todo el cuerpo de la página, excepto el cuadro de diálogo del administrador de consentimiento, se oculte al colocar el contenido de la página en un contenedor y el cuadro de diálogo del administrador de consentimiento en un contenedor separado. Estos ajustes configuran Target de modo que ocultan solo el contenedor de contenido de la página. Consulte [Resumen de Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=es?).
+1. **La etiqueta de Target NO está aprobada previamente y `bodyHidingEnabled` es VERDADERO:** la etiqueta de Target se activa solo después de que se haya obtenido el consentimiento del cliente. Antes de recopilar el consentimiento, solo está disponible el contenido predeterminado. Sin embargo, debido a que `bodyHidingEnabled` se establece en verdadero, `bodyHiddenStyle` dicta qué contenido de la página está oculto hasta que se dispara la etiqueta de Target (o el sujeto de los datos rechaza la opción de inclusión, en cuyo caso se muestre el contenido por defecto). De forma predeterminada, `bodyHiddenStyle` se establece en `body { opacity:0;}`, que oculta la etiqueta de cuerpo HTML. A continuación encontrará la configuración de página recomendada por Adobe para que todo el cuerpo de la página, excepto el cuadro de diálogo del administrador de consentimiento, se oculte al colocar el contenido de la página en un contenedor y el cuadro de diálogo del administrador de consentimiento en un contenedor separado. Estos ajustes configuran Target de modo que ocultan solo el contenedor de contenido de la página. Consulte [Resumen de Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?).
 
    La configuración de página recomendada para el escenario 3 es:
 
@@ -119,7 +119,7 @@ Todas las solicitudes de RGPD y CCPA entre soluciones de Experience Cloud, inclu
 
 ### ¿Qué información permite el Adobe que los clientes eliminen en respuesta a una solicitud del sujeto/usuario?
 
-La información relacionada con un visitante individual dentro de Target está contenida dentro del perfil del visitante de Target. Target permite que los clientes eliminen todos los datos asociados con un ID en su perfil del visitante. Para ver ejemplos de los datos de perfil que Target almacena, consulte [Perfil del visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
+La información relacionada con un visitante individual dentro de Target está contenida dentro del perfil del visitante de Target. Target permite que los clientes eliminen todos los datos asociados con un ID en su perfil del visitante. Para obtener ejemplos de los datos de perfil que Target almacena, consulte [Perfil del visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
 
 Los datos agregados o anonimizados (por ejemplo, datos de informe) que no identifican a una persona en particular, o datos que no están relacionados con una persona específica (por ejemplo, datos de contenido) están fuera del alcance de una solicitud de eliminación de usuario.
 
@@ -131,9 +131,9 @@ Target admite los siguientes tipos de ID para localizar un perfil de cliente:
 
 | ID de usuario | Tipo de ID de espacio de nombres | ID de espacio de nombres | Definición |
 |--- |--- |--- |--- |
-| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID, conocido anteriormente como ID de visitante o Experience Cloud ID. Puede usar la API de JavaScript para ubicar este ID (consulte los detalles más abajo). |
-| ID de TnT/ID de cookie(TNTID) | Standard | 9 | Identificador de Target establecido como cookie en el explorador del visitante. Puede usar la API de JavaScript para ubicar este ID (consulte los detalles más abajo). |
-| ID de terceros/ID de administración de la relación con los clientes. (THIRDPARTYID) | Específico de Target | N/A | Si proporciona a Target su administración de la relación con los clientes u otra información de identificador único para sus clientes. |
+| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID, anteriormente conocido como ID de visitante o ID de Experience Cloud. Puede usar la API de JavaScript para ubicar este ID (consulte los detalles más abajo). |
+| ID de TnT/ID de cookie (TNTID) | Standard | 9 | Identificador de Target establecido como cookie en el explorador del visitante. Puede usar la API de JavaScript para ubicar este ID (consulte los detalles más abajo). |
+| ID de terceros/ID de CRM (THIRDPARTYID) | Específico de Target | N/A | Si proporciona a Target su administración de la relación con los clientes u otra información de identificador único para sus clientes. |
 
 >[!NOTE]
 >
@@ -147,7 +147,7 @@ Adobe no ofrece actualmente una solución de administración de consentimiento, 
 
 Target proporciona soporte de funcionalidad opcional a través de Adobe Experience Platform para ayudar a su estrategia de administración de consentimiento. La funcionalidad de inclusión permite a los clientes controlar cómo y cuándo se inicia la etiqueta de Target. También hay una opción a través de Adobe Experience Platform para aprobar previamente la etiqueta de Target. El uso de Adobe Experience Platform es el enfoque recomendado para administrar inclusiones. Existe un control granular adicional en Adobe Experience Platform para ocultar elementos seleccionados de su página antes de la activación de Target que pueden ser útiles para su estrategia de consentimiento.
 
-Para obtener más información sobre el RGPD, la CCPA y Adobe Experience Platform, consulte [El RGPD y la biblioteca JavaScript de privacidad de Adobe](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=es?). Además, consulte la *inclusión de Adobe Target y Adobe Experience Platform* en la sección superior.
+Para obtener más información sobre el RGPD, la CCPA y Adobe Experience Platform, consulte [La biblioteca JavaScript de privacidad de Adobe y RGPD](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?). Además, consulte la *inclusión de Adobe Target y Adobe Experience Platform* en la sección superior.
 
 ### ¿Envía `AdobePrivacy.js` información a la API del RGPD?
 
@@ -204,7 +204,7 @@ Además de los requisitos del Privacy Service central, un mensaje de RGPD o de C
 
 | Estado de la solicitud | Mensaje de respuesta de Target | Escenario |
 |--- |--- |--- |
-| Procesando | Procesando | Target ha recibido la solicitud de RGPD o de CCPA y la está procesando. |
+| Procesamiento | Procesamiento | Target ha recibido la solicitud de RGPD o de CCPA y la está procesando. |
 | Completado | No aplicable: el contexto de la empresa no es aplicable | El ID de IMS de la solicitud de RGPD o de CCPA no está asignado a ningún cliente de Target.<br />Algunas empresas tienen varios ID de IMS. Envíe el ID de IMS donde se proporciona Target. |
 | Completado | No aplicable: no se encontró el contexto del usuario | El ID proporcionado en la solicitud de RGPD o de CCPA para el visitante o sujeto de datos específico no está presente en el almacén de perfiles de Target.<br />Este resultado también devuelve si intenta enviar un tipo de ID de área de nombres no compatible con Target (consulte más atrás cuáles son los ID compatibles). |
 | Error | Mensaje de error (los detalles dependen del tipo de error) | Error al recuperar o eliminar el perfil objeto de los datos solicitados.<br />Error al cargar en Azure la solicitud de acceso. |

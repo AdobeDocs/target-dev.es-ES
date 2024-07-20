@@ -1,12 +1,12 @@
 ---
-title: Cómo utilizar solicitudes asincrónicas en [!DNL Adobe Target] Python SDK
-description: Descubra cómo [!DNL Target] El SDK de Python admite solicitudes asincrónicas, lo que puede reducir el tiempo de objetivo efectivo a cero.
+title: Cómo usar solicitudes asincrónicas en el SDK de  [!DNL Adobe Target] Python
+description: Descubra cómo el SDK de  [!DNL Target] Python admite solicitudes asincrónicas, lo que puede reducir el tiempo de destino efectivo a cero.
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 14%
+source-wordcount: '123'
+ht-degree: 16%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 ## Descripción
 
-`get_attributes()` se utiliza para recuperar experimentación y experiencias personalizadas de [!DNL Target] y extraer valores de atributo.
+`get_attributes()` se usa para recuperar experimentación y experiencias personalizadas de [!DNL Target] y extraer valores de atributos.
 
 
 ## Método
@@ -29,8 +29,8 @@ target_client_instance.get_attributes(mbox_names, options)
 
 | Nombre | Tipo | Requerido | Valor predeterminado | Descripción |
 | --- | --- | --- | --- | --- |
-| mbox_names | lista[str] | Sí | Ninguna | Una lista de nombres de mbox |
-| opciones | dict | No | Ninguna | Las mismas opciones que se usan para [Obtener ofertas](get-offers.md) |
+| mbox_names | list[str] | Sí | Ninguna | Una lista de nombres de mbox |
+| opciones | dict | No | Ninguna | Se usan las mismas opciones para [Obtener ofertas](get-offers.md) |
 
 ## AttributesProvider
 

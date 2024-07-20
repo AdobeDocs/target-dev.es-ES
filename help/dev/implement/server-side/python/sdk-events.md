@@ -1,11 +1,11 @@
 ---
-title: Suscribirse a eventos en [!DNL Adobe Target] Python SDK
-description: Obtenga información sobre cómo suscribirse a varios eventos que se producen dentro del SDK de Python de mediante [!UICONTROL OnDeviceDecisioningHandler] objeto.
+title: Suscribirse a eventos en el SDK de  [!DNL Adobe Target] Python
+description: Obtenga información sobre cómo suscribirse a varios eventos que se producen dentro del SDK de Python mediante el objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '165'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Descripción
 
-Cuándo [inicialización del SDK](initialize-sdk.md), el `options["events"]` dict es un objeto opcional con claves de nombre de evento y valores de función de llamada de retorno. Se puede utilizar para suscribirse a varios eventos que se producen dentro del SDK. Por ejemplo, la variable `client_ready` se puede utilizar con una función de llamada de retorno que se invocará cuando el SDK esté listo para las llamadas de método.
+Al [inicializar el SDK](initialize-sdk.md), el diccionario `options["events"]` es un objeto opcional con claves de nombre de evento y valores de función de devolución de llamada. Se puede utilizar para suscribirse a varios eventos que se producen dentro del SDK. Por ejemplo, el evento `client_ready` se puede usar con una función de llamada de retorno que se invocará cuando el SDK esté listo para las llamadas de método.
 
-Si la variable `callback` se llama a la función, se pasa un objeto de evento. Cada evento tiene un `type` corresponde al nombre del evento y algunos eventos incluyen propiedades adicionales con información pertinente.
+Cuando se llama a la función `callback`, se pasa un objeto de evento. Cada evento tiene un `type` correspondiente al nombre del evento y algunos eventos incluyen propiedades adicionales con información relevante.
 
 ## Solicitud
 

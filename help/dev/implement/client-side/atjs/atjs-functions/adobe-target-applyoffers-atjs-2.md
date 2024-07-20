@@ -1,13 +1,13 @@
 ---
 keywords: adobe.target.applyOffers, applyOffers, applyoffers, apply oferta, at.js, funciones, función,
-description: Utilice el [!UICONTROL adobe.target.applyOffers()] para la función [!DNL Adobe Target] La biblioteca JavaScript at.js para aplicar varias ofertas en la respuesta. (at.js 2.x)
-title: ¿Cómo utilizo el [!UICONTROL adobe.target.applyOffers()] ¿Función?
+description: Utilice la función [!UICONTROL adobe.target.applyOffers()] para la biblioteca JavaScript  [!DNL Adobe Target] at.js para aplicar varias ofertas en la respuesta. (at.js 2.x)
+title: ¿Cómo se utiliza la función [!UICONTROL adobe.target.applyOffers()]?
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '813'
-ht-degree: 85%
+source-wordcount: '808'
+ht-degree: 80%
 
 ---
 
@@ -28,7 +28,7 @@ Esta función permite aplicar más de una oferta recuperada por `adobe.target.ge
 
 >[!NOTE]
 >
->Consulte la [Documentación de API de envío](/help/dev/implement/delivery-api/overview.md) para obtener información sobre los tipos aceptables para todos los campos enumerados a continuación.
+>Consulte la [documentación de la API de envío](/help/dev/implement/delivery-api/overview.md) para obtener información sobre los tipos aceptables para todos los campos enumerados a continuación.
 
 | Nombre del campo | Descripción |
 | --- | --- |
@@ -36,7 +36,7 @@ Esta función permite aplicar más de una oferta recuperada por `adobe.target.ge
 | Respuesta > Captura previa > Vistas > Opciones > Tipo | Tipo de opción. Refleja el tipo de campo “contenido”. El tipo compatible es acciones. |
 | Respuesta > Captura previa > Vistas > Estado | Un token de estado de vista opaca que debería reenviarse con la notificación de visualización de la vista. |
 | Respuesta > Captura previa > Vistas > Opciones > responseTokens | Contiene el mapa de `responseTokens` que se recopiló cuando se estaba procesando la opción actual. |
-| Respuesta > Captura previa > Vistas > Analytics > Carga | [!DNL Analytics]Carga útil de para la integración de cliente que debería enviarse a después de aplicar la vista.[!DNL Analytics] |
+| Respuesta > Captura previa > Vistas > Analytics > Carga | [!DNL Analytics] carga para la integración de cliente que debería enviarse a [!DNL Analytics] después de aplicar la vista. |
 | Respuesta > Captura previa > Vistas > Seguimiento | El objeto que contiene todos los datos de seguimiento de la llamada de captura previa por vista.<br />El objeto de seguimiento también incluye una versión para el seguimiento.<br />El objeto de seguimiento también incluye detalles de la vista actual. |
 | Respuesta > Captura previa > Vistas > Opciones > eventToken | El registro de eventos se realiza por opción. Para cada opción aplicada, el token de evento respectivo debe agregarse a la lista de tokens de notificación. Tenga en cuenta que una Vista está compuesta de varias opciones. Si se han aplicado y visto todas las opciones, es necesario incluir todos los `eventTokens` en la notificación. |
 | Respuesta > Captura previa > Vistas > Nombre | El nombre de vista legible en lenguaje natural. |
@@ -61,16 +61,16 @@ Esta función permite aplicar más de una oferta recuperada por `adobe.target.ge
 | Respuesta > Ejecutar > mboxes > mbox > Métricas | Contiene la lista de métricas `clickThrough`. |
 | Respuesta > Ejecutar > mboxes > mbox > mbox | El nombre del mbox. |
 | Respuesta > Ejecutar > mboxes > mbox > Índice | Indica que la respuesta es para mbox con este índice de la solicitud. |
-| Respuesta > Ejecutar > mboxes > mbox > Analytics > Carga | [!DNL Analytics]Carga útil de para la integración de cliente que debe enviarse a después de aplicarse el mbox. [!DNL Analytics] (Consulte la sección Campañas habilitadas para A4T). |
+| Respuesta > Ejecutar > mboxes > mbox > Analytics > Carga | [!DNL Analytics] carga para la integración de cliente que debería enviarse a [!DNL Analytics] después de aplicar el mbox. (Consulte la sección Campañas habilitadas para A4T). |
 | Respuesta > Ejecutar > mboxes | Lista de mboxes ejecutados. |
 | Respuesta > Ejecutar > pageLoad > Opciones > Contenido | Tenga en cuenta que el contenido de la “opción” no está bien definido y depende directamente del tipo de opción o de la estructura de la plantilla. |
 | Respuesta > Ejecutar > pageLoad > Opciones > Tipo | Tipo de opción. Refleja el tipo de campo “contenido”. Los tipos compatibles son: HTML, redireccionamiento, JSON, dinámico y acciones. |
 | Respuesta > Ejecutar > pageLoad > Opciones | Opciones que no se agrupan por vistas (target-global-mbox y opciones de actividades con vistas no agrupadas por vistas). |
 | Respuesta > Ejecutar > pageLoad > Métricas | Métricas de clic que no están configuradas para pertenecer a una vista específica. |
 | Respuesta > Ejecutar > pageLoad > Seguimiento | El objeto que contiene todos los datos de seguimiento de la solicitud pageLoad. |
-| Respuesta > Ejecutar > pageLoad > Analytics > Carga | [!DNL Analytics]Carga útil de para la integración de cliente que debe enviarse a después de aplicar el contenido de carga de página. [!DNL Analytics] (Consulte la sección Campañas habilitadas para A4T). |
+| Respuesta > Ejecutar > pageLoad > Analytics > Carga | [!DNL Analytics] carga para la integración de cliente que debería enviarse a [!DNL Analytics] después de aplicar el contenido de carga de página. (Consulte la sección Campañas habilitadas para A4T). |
 
-## Ejemplo [!UICONTROL applyOffers()] llamada
+## Ejemplo de llamada de [!UICONTROL applyOffers()]
 
 ```javascript {line-numbers="true"}
 adobe.target.applyOffers({response:{
@@ -107,7 +107,7 @@ adobe.target.applyOffers({response:{
 }});
 ```
 
-## Llamadas de ejemplo de Promise encadenada con `[!UICONTROL getOffers()]` y `[!UICONTROL applyOffers()]`, ya que estas funciones están basadas en Promise
+## Llamadas de ejemplo de Promise encadenada con `[!UICONTROL getOffers()]` y `[!UICONTROL applyOffers()]`, porque estas funciones están basadas en Promise
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({...})
@@ -116,7 +116,7 @@ adobe.target.getOffers({...})
 .catch(error => console.log("Error", error));
 ```
 
-Para obtener más ejemplos sobre cómo utilizar getOffers(), consulte getOffers [documentación](adobe-target-getoffers-atjs-2.md)
+Para obtener más ejemplos sobre cómo usar getOffers(), consulte la [documentación](adobe-target-getoffers-atjs-2.md) de getOffers
 
 ### Ejemplo de solicitud de carga de página
 

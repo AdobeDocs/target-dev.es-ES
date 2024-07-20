@@ -1,18 +1,18 @@
 ---
 title: Instalar .NET SDK
-description: Obtenga información sobre cómo instalar el [!DNL Adobe Target] SDK DE .NET.
+description: Obtenga información sobre cómo instalar el SDK de  [!DNL Adobe Target] .NET.
 feature: APIs/SDKs
 exl-id: 3cc84775-4692-4d14-9e82-db2873140835
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '51'
 ht-degree: 0%
 
 ---
 
 # Instalar .NET SDK
 
-.NET SDK se distribuye por [NuGet](https://www.nuget.org/packages/Adobe.Target.Client). Para empezar, añádala como dependencia instalando mediante `Package Manage` o `.NET CLI`:
+[NuGet](https://www.nuget.org/packages/Adobe.Target.Client) ha distribuido .NET SDK. Para empezar, agréguela como una dependencia mediante la instalación mediante `Package Manage` o `.NET CLI`:
 
 ## Administrador de paquetes
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 Install-Package Adobe.Target.Client
 ```
 
->[!TAB CLI DE .NET]
+>[!TAB .NET CLI]
 
 ```csharp {line-numbers="true"}
 dotnet add package Adobe.Target.Client

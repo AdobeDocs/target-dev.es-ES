@@ -1,11 +1,11 @@
 ---
-title: Suscribirse a eventos en [!DNL Adobe Target] SDK de Node.js
-description: Obtenga información sobre cómo suscribirse a varios eventos que se producen dentro del SDK de Node.js mediante [!UICONTROL OnDeviceDecisioningHandler] objeto.
+title: Suscribirse a eventos en el SDK  [!DNL Adobe Target] Node.js
+description: Obtenga información sobre cómo suscribirse a varios eventos que se producen dentro del SDK de Node.js mediante el objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 40c53840-a560-4819-ae04-f527c36b22fe
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '163'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Descripción
 
-Cuándo [inicialización del SDK](initialize-sdk.md), el `options.events` object es un objeto opcional con claves de nombre de evento y valores de función de devolución de llamada. Se puede utilizar para suscribirse a varios eventos que se producen dentro del SDK. Por ejemplo, la variable `clientReady` se puede utilizar con una función de llamada de retorno que se invocará cuando el SDK esté listo para las llamadas de método.
+Al [inicializar el SDK](initialize-sdk.md), el objeto `options.events` es un objeto opcional con claves de nombre de evento y valores de función de devolución de llamada. Se puede utilizar para suscribirse a varios eventos que se producen dentro del SDK. Por ejemplo, el evento `clientReady` se puede usar con una función de devolución de llamada que se invocará cuando el SDK esté listo para las llamadas de método.
 
 Cuando se llama a la función de llamada de retorno, se pasa un objeto de evento. Cada evento tiene un `type` correspondiente al nombre del evento. Algunos eventos incluyen propiedades adicionales con información pertinente.
 

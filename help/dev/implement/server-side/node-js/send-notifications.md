@@ -1,11 +1,11 @@
 ---
-title: Envíe notificaciones de visualización o clics a [!DNL Adobe Target] uso del SDK de Node.js
-description: Aprenda a utilizar sendNotifications() para enviar notificaciones de visualización o de clic a [!DNL Adobe Target] para medición e informes.
+title: Enviar notificaciones de clic o visualización a [!DNL Adobe Target] mediante el SDK de Node.js
+description: Aprenda a utilizar sendNotifications() para enviar notificaciones de clic o visualización a [!DNL Adobe Target] para la medición y la creación de informes.
 feature: APIs/SDKs
 exl-id: 84bb6a28-423c-457f-8772-8e3f70e06a6c
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '248'
 ht-degree: 4%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 4%
 
 ## Descripción
 
-`[!UICONTROL sendNotifications()]` se utiliza para enviar notificaciones de visualización o clics a [!DNL Adobe Target] para medición e informes.
+`[!UICONTROL sendNotifications()]` se usa para enviar notificaciones de clics o visualizaciones a [!DNL Adobe Target] para la medición y generación de informes.
 
 >[!NOTE]
 >
->Cuando un `execute` el objeto con parámetros requeridos está dentro de la propia solicitud, la impresión se incrementará automáticamente para las actividades calificadas.
+>Cuando un objeto `execute` con parámetros requeridos se encuentra dentro de la propia solicitud, la impresión se incrementará automáticamente para las actividades calificadas.
 
 Los métodos del SDK que incrementarán una impresión automáticamente son:
 
 * `getOffers()`
 * `getAttributes()`
 
-Cuando un `prefetch` se pasa dentro de la solicitud, la impresión no se incrementa automáticamente para las actividades con mboxes dentro de `prefetch` objeto. `sendNotifications()` debe utilizarse para experiencias previamente recuperadas para incrementar impresiones y conversiones.
+Cuando se pasa un objeto `prefetch` dentro de la solicitud, la impresión no se incrementa automáticamente para las actividades con mboxes dentro del objeto `prefetch`. `sendNotifications()` debe usarse para experiencias previamente recuperadas para incrementar impresiones y conversiones.
 
 ## Método
 
@@ -45,7 +45,7 @@ TargetClient.sendNotifications(options: Object): Promise
 
 ## Ejemplo
 
-Primero, vamos a crear el ID de TargetSolicitud de API de envío para recuperar previamente contenido para `home` y `product1` mboxes.
+En primer lugar, vamos a crear la solicitud de API de entrega de Target Dpara recuperar previamente contenido para los mboxes `home` y `product1`.
 
 ### Node.js
 
@@ -62,7 +62,7 @@ const prefetchMboxesRequest = {
 const targetResponse = await targetClient.getOffers({ request: prefetchMboxesRequest });
 ```
 
-Una respuesta correcta contendrá un [!UICONTROL API de envío de Target] objeto response, que contiene contenido recuperado previamente para los mboxes solicitados. Una muestra `targetResponse.response` puede aparecer de la siguiente manera:
+Una respuesta correcta contendrá un objeto de respuesta [!UICONTROL Target Delivery API], que incluye contenido recuperado previamente para los mboxes solicitados. Un objeto `targetResponse.response` de ejemplo puede aparecer de la siguiente manera:
 
 ### Node.js
 
@@ -120,7 +120,7 @@ Una respuesta correcta contendrá un [!UICONTROL API de envío de Target] objeto
 }
 ```
 
-Observe el mbox `name` y `state` , así como la variable `eventToken` , en cada una de las [!DNL Target] opciones de contenido. Estos deben proporcionarse en la `sendNotifications()` solicitud, en cuanto se muestre cada opción de contenido. Supongamos que el `product1` mbox se ha mostrado en un dispositivo que no es de explorador. La solicitud de notificaciones aparecerá de la siguiente manera:
+Observe los campos mbox `name` y `state`, así como el campo `eventToken`, en cada una de las opciones de contenido de [!DNL Target]. Se deben proporcionar en la solicitud `sendNotifications()`, en cuanto se muestre cada opción de contenido. Supongamos que el mbox `product1` se ha mostrado en un dispositivo que no es de explorador. La solicitud de notificaciones aparecerá de la siguiente manera:
 
 ### Node.js
 
@@ -139,7 +139,7 @@ const mboxNotificationRequest = {
 };
 ```
 
-Tenga en cuenta que hemos incluido el estado de mbox y el token de evento correspondiente al [!DNL Target] entregada en la respuesta de recuperación previa. Una vez creada la solicitud de notificaciones, podemos enviarla a [!DNL Target] a través de `sendNotifications()` Método de API:
+Observe que hemos incluido el estado de mbox y el token de evento correspondiente a la oferta [!DNL Target] entregada en la respuesta de recuperación previa. Una vez creada la solicitud de notificaciones, podemos enviarla a [!DNL Target] mediante el método de API `sendNotifications()`:
 
 ### Node.js
 

@@ -1,12 +1,12 @@
 ---
 title: Inicialice .NET SDK con el método create
-description: Aprenda a utilizar el método create para inicializar el SDK de Java e instanciar el [!UICONTROL TargetClient] para realizar llamadas a [!DNL Adobe Target] para experimentos y experiencias personalizadas.
+description: Aprenda a utilizar el método create para inicializar el SDK de Java y crear una instancia de [!UICONTROL TargetClient] para realizar llamadas a  [!DNL Adobe Target] para experimentos y experiencias personalizadas.
 feature: APIs/SDKs
 exl-id: 501010c3-22f4-49a8-b2ac-c7307232d180
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 17%
+source-wordcount: '350'
+ht-degree: 16%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 17%
 
 ## Descripción
 
-Utilice el `Create` para inicializar .NET SDK e crear una instancia del método [!UICONTROL Cliente de destino] para realizar llamadas a [!DNL Adobe Target] para experimentos y experiencias personalizadas.
+Utilice el método `Create` para inicializar .NET SDK e instanciar [!UICONTROL Target Client] para realizar llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
 
-Cuando utilice la inyección de dependencia de .NET, simplemente agregue el SDK en el paso de configuración del servicio llamando a `services.AddTargetLibrary()`;, entonces inyecte `ITargetClient targetClient` en el constructor de la aplicación.
+Cuando utilice la inyección de dependencia de .NET, simplemente agregue el SDK en el paso de configuración del servicio llamando a `services.AddTargetLibrary()`;, y después inserte `ITargetClient targetClient` en el constructor de la aplicación.
 
-Después de esto, utilice el `Initialize` método del SDK para configurar el SDK, completando así el paso de inicialización.
+Después de esto, use el método `Initialize` del SDK para configurar el SDK y así completar el paso de inicialización.
 
 ## Método
 
-`TargetClient` se crea mediante `TargetClient.Create`.
+`TargetClient` se creó con `TargetClient.Create`.
 
 ## C\
 #
@@ -31,7 +31,7 @@ Después de esto, utilice el `Initialize` método del SDK para configurar el SDK
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 ```
 
-`ClientConfig` se crea mediante ClientConfig.Builder.
+`ClientConfig` se ha creado mediante ClientConfig.Builder.
 
 ## C\
 #
@@ -46,16 +46,16 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 | Nombre | Tipo | Requerido | Valor predeterminado | Descripción |
 | --- | --- | --- | --- | --- |
-| Cliente | string | Sí | Ninguna | [!UICONTROL ID de cliente de Target] |
-| OrganizationId | string | Sí | Ninguna | [!UICONTROL ID de organización de Experience Cloud] |
+| Cliente | string | Sí | Ninguna | [!UICONTROL Target Client Id] |
+| OrganizationId | string | Sí | Ninguna | [!UICONTROL Experience Cloud Organization ID] |
 | Tiempo de espera | int | No | 10000 | Tiempo de espera para todas las solicitudes en milisegundos |
-| Proxy |  | WebProxy | No | null | Proxy para todos [!DNL Target] solicitudes |
-| RetryPolicy | Política | No | null | Política de reintentos para todos [!DNL Target] solicitudes |
-| AsyncRetryPolicy | AsyncPolicy | No | null | Directiva de reintentos asincrónicos para todos [!DNL Target] solicitudes |
-| Logger | ILogger | No | null | Se utiliza para el registro de depuración de [!DNL Target] solicitudes y respuestas |
+| Proxy |  | WebProxy | No | null | Proxy para todas las [!DNL Target] solicitudes |
+| RetryPolicy | Política | No | null | Directiva de reintento para todas las [!DNL Target] solicitudes |
+| AsyncRetryPolicy | AsyncPolicy | No | null | Directiva de reintentos asincrónicos para todas las [!DNL Target] solicitudes |
+| Logger | ILogger | No | null | Se usa para el registro de depuración de [!DNL Target] solicitudes y respuestas |
 | ServerDomain | string | No | `client.tt.omtrdc.net` | Anula el nombre de host predeterminado |
 | Secure | bool | No | true | No configurado para aplicar el esquema HTTP |
-| DefaultPropertyToken | string | No | null | Establece el token de propiedad predeterminado para cada `getOffers` llamada |
+| DefaultPropertyToken | string | No | null | Establece el token de propiedad predeterminado para cada llamada a `getOffers` |
 | TelemetryEnabled | bool | No | true | Envío de datos de telemetría para mejorar la experiencia de uso del SDK |
 | DecisioningMethod | DecisioningMethod enum | No | ServerSide | Debe establecerse en OnDevice o Hybrid para habilitar la toma de decisiones en el dispositivo |
 | OnDeviceDecisioningReady | Acción | No | null | Delegar para el evento Listo para la toma de decisiones en el dispositivo (llamado una vez cuando la toma de decisiones en el dispositivo está lista) |

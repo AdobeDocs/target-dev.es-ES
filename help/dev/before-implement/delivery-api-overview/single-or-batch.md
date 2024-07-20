@@ -1,25 +1,25 @@
 ---
 title: Entrega por lotes o única de la API de envío de Adobe Target
-description: ¿Cómo se usa [!UICONTROL API de envío de Adobe Target] ¿Llamadas de envío únicas o por lotes?
+description: ¿Cómo utilizo [!UICONTROL Adobe Target Delivery API] llamadas de envío únicas o por lotes?
 keywords: api de envío
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
 
 # Entrega única o por lotes
 
-El [!UICONTROL API de envío de Adobe Target] admite una sola llamada de envío o una llamada de envío por lotes. Se puede realizar una solicitud de servidor para el contenido de uno o varios mboxes.
+[!UICONTROL Adobe Target Delivery API] admite una sola llamada de envío o una llamada de envío por lotes. Se puede realizar una solicitud de servidor para el contenido de uno o varios mboxes.
 
 Valore los costes de rendimiento al decidir realizar una sola llamada en lugar de una llamada por lotes. Si conoce todo el contenido que debe mostrarse para un usuario, la práctica recomendada es recuperar contenido para todos los mboxes con una sola llamada de envío por lotes para evitar hacer varias llamadas de envío.
 
 ## Llamada de envío única
 
-Puede recuperar una experiencia para mostrarla al usuario de un mbox mediante el [!UICONTROL API de envío de Adobe Target]. Tenga en cuenta que si realiza una sola llamada de envío, debe iniciar otra llamada al servidor para recuperar contenido adicional para un mbox de un usuario. Esto puede resultar muy costoso con el tiempo, por lo que asegúrese de evaluar su enfoque al utilizar la llamada de API de entrega única.
+Puede recuperar una experiencia para mostrarla al usuario de un mbox mediante [!UICONTROL Adobe Target Delivery API]. Tenga en cuenta que si realiza una sola llamada de envío, debe iniciar otra llamada al servidor para recuperar contenido adicional para un mbox de un usuario. Esto puede resultar muy costoso con el tiempo, por lo que asegúrese de evaluar su enfoque al utilizar la llamada de API de entrega única.
 
 ```
 curl -X POST \
@@ -83,11 +83,11 @@ En el ejemplo de llamada de entrega única anterior, la experiencia se recupera 
 }
 ```
 
-En la respuesta, observe lo siguiente `content` contiene el HTML que describe la experiencia que se mostrará al usuario en la web que corresponde al mbox Oferta de verano.
+En la respuesta, observe que el campo `content` contiene el HTML que describe la experiencia que se mostrará al usuario en la web que corresponde al mbox SummerOffer.
 
 ### Ejecutar carga de página
 
-Si hay experiencias que se deben mostrar cuando se produce una carga de página en el canal Web, como la prueba A/B de las fuentes ubicadas en el pie de página o el encabezado, puede especificar `pageLoad` en el `execute` para recuperar todas las modificaciones que se deben aplicar.
+Si hay experiencias que se deben mostrar cuando se produce una carga de página en el canal web, como la prueba A/B de las fuentes ubicadas en el pie de página o el encabezado, puede especificar `pageLoad` en el campo `execute` para recuperar todas las modificaciones que se deben aplicar.
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ curl -X POST \
 }'
 ```
 
-La llamada de ejemplo anterior recupera cualquier experiencia para mostrar a un usuario cuándo se abre la página `https://target.enablementadobe.com/react/demo/#/` carga.
+La llamada de ejemplo anterior recupera cualquier experiencia para mostrar a un usuario cuando se carga la página `https://target.enablementadobe.com/react/demo/#/`.
 
 ```
 {
@@ -155,7 +155,7 @@ La llamada de ejemplo anterior recupera cualquier experiencia para mostrar a un 
   }
 ```
 
-En el `content` , se puede recuperar la modificación que debe aplicarse al cargar una página. En el ejemplo anterior, tenga en cuenta que es necesario nombrar un vínculo en el encabezado *Inicio modificado*.
+En el campo `content`, se puede recuperar la modificación que debe aplicarse al cargar una página. En el ejemplo anterior, tenga en cuenta que un vínculo del encabezado debe llamarse *Hogar modificado*.
 
 ## Llamada de envío por lotes
 
@@ -203,7 +203,7 @@ curl -X POST \
 }'
 ```
 
-En el ejemplo de llamada de entrega por lotes anterior, las experiencias se recuperan para mostrarlas para el usuario con `tntId`: `abcdefghijkl00023.1_1` para varios `mbox`:`SummerOffer`, `SummerShoesOffer`, y `SummerDressOffer`. Como sabemos que necesitamos mostrar una experiencia para varios mboxes para este usuario, podemos procesar estas solicitudes por lotes y hacer una llamada al servidor en lugar de tres llamadas de envío individuales.
+En el ejemplo de llamada de entrega por lotes anterior, las experiencias se recuperan para mostrarlas para el usuario con `tntId`: `abcdefghijkl00023.1_1` para varios `mbox`:`SummerOffer`, `SummerShoesOffer` y `SummerDressOffer`. Como sabemos que necesitamos mostrar una experiencia para varios mboxes para este usuario, podemos procesar estas solicitudes por lotes y hacer una llamada al servidor en lugar de tres llamadas de envío individuales.
 
 ```
 {
@@ -252,4 +252,4 @@ En el ejemplo de llamada de entrega por lotes anterior, las experiencias se recu
 }
 ```
 
-En la respuesta anterior, puede ver que dentro de la variable `content` de cada mbox, se puede recuperar la representación del HTML de la experiencia que se mostrará al usuario para cada mbox.
+En la respuesta anterior, puede ver que, dentro del campo `content` de cada mbox, se puede recuperar la representación de HTML de la experiencia que se va a mostrar al usuario para cada mbox.

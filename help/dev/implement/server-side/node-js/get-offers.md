@@ -1,20 +1,20 @@
 ---
-title: Uso [!UICONTROL getOffers()] in [!DNL Adobe Target] al utilizar el SDK de Node.js
-description: Aprenda a utilizar [!UICONTROL getOffers()] para ejecutar una decisión y recuperar una experiencia de [!DNL Adobe Target].
+title: Usar [!UICONTROL getOffers()] en  [!DNL Adobe Target] al usar el SDK de Node.js
+description: Aprenda a usar [!UICONTROL getOffers()] para ejecutar una decisión y recuperar una experiencia de  [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '313'
 ht-degree: 22%
 
 ---
 
-# [!UICONTROL Obtener ofertas] (Node.js)
+# [!UICONTROL Get Offers] (Node.js)
 
 ## Descripción
 
-`[!UICONTROL getOffers()]` se utiliza para ejecutar una decisión y recuperar una experiencia de [!DNL Adobe Target].
+`[!UICONTROL getOffers()]` se usa para ejecutar una decisión y recuperar una experiencia de [!DNL Adobe Target].
 
 
 ## Método
@@ -27,17 +27,17 @@ TargetClient.getOffers(options: Object): Promise
 
 ## Parámetros
 
-El `options` tiene la siguiente estructura:
+El objeto `options` tiene la siguiente estructura:
 
 | Nombre | Tipo | Requerido | Valor predeterminado | Descripción |
 | --- |--- | --- | --- | --- |
-| Solicitud | Objeto | Sí | Ninguna | Se ajusta a [[!DNL Target] API de envío](/help/dev/implement/delivery-api/overview.md) solicitud |
+| Solicitud | Objeto | Sí | Ninguna | Se ajusta a la solicitud de la [[!DNL Target] API de envío](/help/dev/implement/delivery-api/overview.md) |
 | visitorCookie | Cadena | No | Ninguna | Cookie ECID (VisitorId) |
-| targetCookie | Cadena | No | Ninguna | [!DNL Target] cookie |
-| targetLocationHint | Cadena | No | Ninguna | [!DNL Target] indicio de ubicación |
-| consumerId | Cadena | No | Ninguna | consumerIds para [!UICONTROL Analytics for Target] Vinculación (A4T) |
+| targetCookie | Cadena | No | Ninguna | Cookie [!DNL Target] |
+| targetLocationHint | Cadena | No | Ninguna | [!DNL Target] sugerencia de ubicación |
+| consumerId | Cadena | No | Ninguna | consumerIds para la vinculación de [!UICONTROL Analytics for Target] (A4T) |
 | CustomerIds | Matriz | No | Ninguna | ID de cliente en formato compatible con VisitorId |
-| sessionId | Cadena | No | Ninguna | Se utiliza para vincular varios [!DNL Target] solicitudes |
+| sessionId | Cadena | No | Ninguna | Se usa para vincular varias solicitudes [!DNL Target] |
 | visitante | Objeto | No | new VisitorId | Proporcione una instancia de VisitorId externa |
 
 ## Promesa
@@ -46,32 +46,32 @@ El `options` tiene la siguiente estructura:
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
-| de eventos | Objeto | [[!UICONTROL API de envío de Target]](/help/dev/implement/delivery-api/overview.md) solicitud |
-| respuesta | Objeto | [[!UICONTROL API de envío de Target]](/help/dev/implement/delivery-api/overview.md) respuesta |
-| visitorState | Objeto | Objeto que debe pasarse a la API de visitante `getInstance()` |
-| targetCookie | Objeto | [!DNL Target] cookie |
+| de eventos | Objeto | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) solicitud |
+| respuesta | Objeto | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) respuesta |
+| visitorState | Objeto | Objeto que se debe pasar a la API de visitante `getInstance()` |
+| targetCookie | Objeto | Cookie [!DNL Target] |
 | targetLocationHintCookie | Objeto | [!DNL Target] cookie de indicio de ubicación |
 | analyticsDetails | Matriz | Carga útil de Analytics, en caso de uso de Analytics en el lado del cliente |
-| responseTokens | Matriz | Una lista de [Tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
+| responseTokens | Matriz | Una lista de [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
 | trazar | Matriz | Datos de seguimiento agregados para todos los mboxes o vistas de solicitud |
 | status | Objeto | Un objeto que contiene el estado de la respuesta. |
-| decisioningMethod | Cadena | Determina qué método de toma de decisiones utilizar ([en el dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), del lado del servidor, híbrido) |
+| decisioningMethod | Cadena | Determina qué método de toma de decisiones usar ([en el dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), del lado del servidor, híbrido) |
 
-`targetCookie` y `targetLocationHintCookie` Los objetos utilizados para devolver datos al explorador tienen la siguiente estructura:
+Los objetos `targetCookie` y `targetLocationHintCookie` utilizados para devolver datos al explorador tienen la siguiente estructura:
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | name | Cadena | Nombre de la cookie |
 | value | Cualquiera | Valor de la cookie, el se convertirá en cadena |
-| maxAge | Número | El `maxAge` es una opción conveniente para configurar las caducidades en relación con el tiempo actual en segundos |
+| maxAge | Número | La opción `maxAge` es una conveniencia para configurar las caducidades en relación con el tiempo actual en segundos |
 
-El `status` el objeto utilizado para indicar el estado de la respuesta de destinatario tiene la siguiente estructura:
+El objeto `status` utilizado para indicar el estado de la respuesta de destino tiene la siguiente estructura:
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | status | Número | Código de estado HTTP |
-| message | Cadena | Un mensaje sobre la respuesta. Por ejemplo, puede indicar si se ha decidido la respuesta [en el dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) o del lado del servidor |
-| remoteMboxes | Matriz | Cuando el método de toma de decisiones es `on-device`, se proporciona una matriz de nombres de mbox que no se han podido decidir completamente en el dispositivo. En otras palabras, un [[!UICONTROL API de envío de Target]](/help/dev/implement/delivery-api/overview.md) se necesita la solicitud de. |
+| message | Cadena | Un mensaje sobre la respuesta. Por ejemplo, puede indicar si la respuesta se decidió [en el dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) o en el lado del servidor |
+| remoteMboxes | Matriz | Cuando el método de toma de decisiones es `on-device`, se proporciona una matriz de nombres de mbox que no se pudieron decidir completamente en el dispositivo. En otras palabras, se necesita una solicitud [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md). |
 
 ## Ejemplo
 

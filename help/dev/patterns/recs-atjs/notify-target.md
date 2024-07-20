@@ -1,19 +1,20 @@
 ---
 title: Notificar al destinatario
-description: Asegúrese de que rastrea todos los eventos que necesita [!DNL Target] se envían utilizando el método trackEvent.
+description: Asegúrese de que todos los eventos de los que  [!DNL Target] debe realizar un seguimiento se envían mediante el método trackEvent.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: efccadab-d139-4423-8613-c2743d87b3a0
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '346'
 ht-degree: 1%
 
 ---
 
-# Notificar [!DNL Target]
+# Notificar a [!DNL Target]
 
-Completar este paso garantiza que todos los eventos que deben enviarse a [!DNL Adobe Target] se envían utilizando `trackEvent` método.
+Al completar este paso, se asegura de que todos los eventos que deben enviarse a [!DNL Adobe Target] se envíen mediante el método `trackEvent`.
 
 Cualquier evento que deba rastrearse en [!DNL Target] puede ser un evento de conversión principal o una métrica de éxito.
 
@@ -21,38 +22,38 @@ Cualquier evento que deba rastrearse en [!DNL Target] puede ser un evento de con
 >
 >Haga clic en las imágenes de este tema para expandirlas a pantalla completa.
 
-## Notificar [!DNL Target] diagrama {#diagram}
+## Notificar al diagrama [!DNL Target] {#diagram}
 
 El número de paso de la siguiente ilustración corresponde a la sección siguiente.
 
-![Diagrama de Notificar a Target](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
+![Notificar al diagrama de Target](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
-## 4.1: Fuego [!DNL Adobe Target] API de seguimiento
+## 4.1: Activar la API de seguimiento [!DNL Adobe Target]
 
-Este paso le ayuda a asegurarse de que todos los eventos de se deben enviar a [!DNL Target] se envían utilizando `trackEvent` método.
+Este paso le ayuda a asegurarse de que todos los eventos que deben enviarse a [!DNL Target] se envíen mediante el método `trackEvent`.
 
 +++Ver detalles
 
-![Activar el diagrama API de seguimiento de Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
+![Activar el diagrama de API de seguimiento de Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
-Los atributos de conversión de pedidos se envían tal como se indica en la *Requisitos previos* más abajo. El nombre del mbox no importa, pero la conversión es usar `orderConfirmPage`.
+Envía los atributos de conversión de pedidos como se indica en la sección *Requisitos previos* a continuación. El nombre del mbox no importa, pero la conversión es usar `orderConfirmPage`.
 
-No es necesario incluir los atributos de conversión de pedidos en esta llamada. Idealmente, estas llamadas registran métricas de éxito que pueden considerarse como eventos de miniconversión antes de los eventos de conversión principales. `CardIds` debe incluirse en las recomendaciones basadas en el carro de compras en función de `Add to Cart` evento.
+No es necesario incluir los atributos de conversión de pedidos en esta llamada. Idealmente, estas llamadas registran métricas de éxito que pueden considerarse como eventos de miniconversión antes de los eventos de conversión principales. `CardIds` debe incluirse en las recomendaciones basadas en el carro de compras en función del evento `Add to Cart`.
 
 **Requisitos previos**
 
-* Reúnase con su equipo empresarial para identificar todos los eventos que pueden considerarse como métricas de conversión o de éxito. También debe identificar el evento de conversión que genera ingresos para que esos detalles se puedan enviar a [!DNL Target] junto con los datos de evento.
+* Reúnase con su equipo empresarial para identificar todos los eventos que pueden considerarse como métricas de conversión o de éxito. También debe identificar el evento de conversión que genera ingresos para que esos detalles se puedan enviar a [!DNL Target] junto con los datos del evento.
 * Asegúrese de que los siguientes atributos estén disponibles en la capa de datos para que pueda enviarlos con el evento de conversión. El evento de conversión genera ingresos, como una compra de producto o un evento de Agregar al carro de compras.
 
-   * `productPurchaseId`: ID de productos que se compraron como parte del pedido. Separe varios productos con comas.
-   * `orderTotal`: Total del pedido de la compra.
+   * `productPurchaseId`: ID de producto comprados como parte del pedido. Separe varios productos con comas.
+   * `orderTotal`: total del pedido de la compra.
    * `orderId`: ID de pedido de la compra.
 
-  La siguiente ilustración muestra una [regla para [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que sólo se debe activar en el [!UICONTROL Confirmación] página.
+  La siguiente ilustración muestra una regla [para [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que solo debería activarse en la página [!UICONTROL Confirmation].
 
-  ![Página Configuración de la acción](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
+  ![Página de configuración de la acción](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
-* Si está realizando el seguimiento de un evento para agregar al carro de compras, envíe `cartIds` como parámetro. Se puede pasar una lista de ID de producto separados por comas para `cardIds`.
+* Si está realizando el seguimiento de un evento para agregar al carro de compras, envíe `cartIds` como parámetro. Se puede pasar una lista de identificadores de producto separados por comas para `cardIds`.
 
 **Lecturas**
 
@@ -61,11 +62,4 @@ No es necesario incluir los atributos de conversión de pedidos en esta llamada.
 
 **Acciones**
 
-* Uso `adobe.target-trackEvent()` para enviar todos los datos que deben enviarse a [!DNL Target].
-
-
-
-
-
-
-
+* Utilice el método `adobe.target-trackEvent()` para enviar todos los datos que deben enviarse a [!DNL Target].

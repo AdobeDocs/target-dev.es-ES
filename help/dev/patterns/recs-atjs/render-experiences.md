@@ -4,20 +4,21 @@ description: Asegúrese de que todos los pasos necesarios para procesar las expe
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 4%
 
 ---
 
 # Procesar experiencias
 
-Siga los pasos de la *Experiencias de procesamiento* para garantizar que todas las tareas necesarias para procesar las experiencias se ejecuten en la secuencia correcta.
+Siga los pasos del diagrama de *Experiencias de procesamiento* para asegurarse de que todas las tareas necesarias para procesar experiencias se ejecuten en la secuencia correcta.
 
 >[!NOTE]
 >
->Si ha habilitado la solicitud de carga de página automática durante la [Paso Configurar Solicitud de Carga Automática de Página](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) in *Inicializar SDK* Sin embargo, puede omitir esta actividad a menos que desee llamar al SDK para Adobe Target para procesar experiencias adicionales mediante una solicitud de ubicación regional.
+>Si ha habilitado la solicitud de carga de página automática durante el paso [Configurar solicitud de carga de página automática](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) en *Inicializar SDK* , puede omitir esta actividad a menos que desee llamar al SDK para Adobe Target para procesar experiencias adicionales mediante una solicitud de ubicación regional.
 
 >[!TIP]
 >
@@ -25,13 +26,13 @@ Siga los pasos de la *Experiencias de procesamiento* para garantizar que todas l
 
 ## Representar diagrama de experiencias {#diagram}
 
-La gestión automática de parpadeos predeterminada disponible con at.js solo tiene sentido cuando tiene [!UICONTROL Solicitud automática de carga de página] activado. Esta opción oculta todo el cuerpo del HTML al recuperar las experiencias de [!DNL Target]. En este caso, es su responsabilidad gestionar el parpadeo. Busque patrones de implementación disponibles para la gestión de parpadeos a modo de guía.
+La administración automática de parpadeos predeterminada disponible con at.js solo tiene sentido cuando tiene [!UICONTROL Automatic Page Load Request] habilitado. Esta opción oculta todo el cuerpo del HTML al recuperar las experiencias de [!DNL Target]. En este caso, es su responsabilidad gestionar el parpadeo. Busque patrones de implementación disponibles para la gestión de parpadeos a modo de guía.
 
 >[!NOTE]
 >
->Los números de paso de la siguiente ilustración corresponden a las secciones siguientes. Los números de paso no están en un orden particular y no reflejan el orden de los pasos realizados en la [!DNL Target] Interfaz de usuario al crear la actividad.
+>Los números de paso de la siguiente ilustración corresponden a las secciones siguientes. Los números de paso no están en un orden particular y no reflejan el orden de los pasos realizados en la interfaz de usuario de [!DNL Target] al crear la actividad.
 
-![Representar diagrama de experiencias](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
+![Diagrama de experiencias de procesamiento](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
 Haga clic en los siguientes vínculos para desplazarse a las secciones deseadas:
 
@@ -50,7 +51,7 @@ Haga clic en los siguientes vínculos para desplazarse a las secciones deseadas:
 
 ## 3.1: Promoción {#promotion}
 
-Añada elementos promocionados y controle su ubicación en el diseño de recomendaciones eligiendo promociones principales o secundarias en la [!DNL Target] Interfaz de usuario al crear la actividad.
+Agregue elementos promocionados y controle su ubicación en el diseño de recomendaciones eligiendo promociones principales o secundarias en la interfaz de usuario de [!DNL Target] al crear la actividad.
 
 +++Ver detalles
 
@@ -60,7 +61,7 @@ Añada elementos promocionados y controle su ubicación en el diseño de recomen
 * [Promocionar por colección](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
 * [Promocionar por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-**Parámetros de entidad obligatorios**
+**Se requieren parámetros de entidad**
 
 * Los atributos de elemento de las promociones deben pasarse al utilizar la opción &quot;promocionar por atributo&quot;.
 
@@ -80,17 +81,17 @@ Haga recomendaciones basadas en el contenido del carro de compras del usuario.
 
 **Criterios disponibles**
 
-* [!UICONTROL Los ususarios que vieron estos, vieron aquellos]
-* [!UICONTROL Los ususarios que vieron esto, compraron aquello.]
-* [!UICONTROL Los ususarios que compraron estos, compraron aquellos]
+* [!UICONTROL People Who Viewed These, Viewed Those]
+* [!UICONTROL People Who Viewed These, Bought Those]
+* [!UICONTROL People Who Bought These, Bought Those]
 
-**Parámetros de entidad obligatorios**
+**Se requieren parámetros de entidad**
 
 * cartIds
 
 **Lecturas**
 
-* [Basado en el carro](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en el carro de compras](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -104,17 +105,17 @@ Haga recomendaciones basadas en la popularidad general de un elemento en el siti
 
 **Criterios disponibles**
 
-* [!UICONTROL Más visitados en todo el sitio]
-* [!UICONTROL Más visitados por categoría]
-* [!UICONTROL Más visitados por atributo de artículo]
-* [!UICONTROL Principales vendedores en todo el sitio]
-* [!UICONTROL Principales vendedores por categoría]
-* [!UICONTROL Principales vendedores por atributo de artículo]
-* [!UICONTROL Superior por métrica de Analytics]
+* [!UICONTROL Most Viewed Across the Site]
+* [!UICONTROL Most Viewed by Category]
+* [!UICONTROL Most Viewed by Item Attribute]
+* [!UICONTROL Top Sellers Across the Site]
+* [!UICONTROL Top Sellers by Category]
+* [!UICONTROL Top Sellers by Item Attribute]
+* [!UICONTROL Top by Analytics Metric]
 
-**Parámetros de entidad obligatorios**
+**Se requieren parámetros de entidad**
 
-* `entity.categoryId` o el atributo de artículo para la popularidad basada en si los criterios se basan en el atributo de artículo o el actual.
+* `entity.categoryId` o el atributo de elemento para popularidad basada en si los criterios se basan en el atributo de elemento o actual.
 * No se debe pasar nada para los más visitados/más vendidos del sitio.
 
 **Lecturas**
@@ -133,19 +134,19 @@ Haga recomendaciones basadas en la búsqueda de artículos similares a los que e
 
 **Criterios disponibles**
 
-* [!UICONTROL Los usuarios que vieron esto, vieron aquello.]
-* [!UICONTROL Los usuarios que vieron esto, compraron aquello.]
-* [!UICONTROL Los usuarios que compraron esto, compraron aquello.]
-* [!UICONTROL Artículos con atributos similares]
+* [!UICONTROL People Who Viewed This, Viewed That]
+* [!UICONTROL People Who Viewed This, Bought That]
+* [!UICONTROL People Who Bought This, Bought That]
+* [!UICONTROL Items with Similar Attributes]
 
-**Parámetros de entidad obligatorios**
+**Se requieren parámetros de entidad**
 
 * `entity.id`
 * Si se utiliza algún atributo de perfil como clave
 
 **Lecturas**
 
-* [Basado en elementos](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en elemento](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -159,16 +160,16 @@ Haga recomendaciones basadas en el comportamiento del usuario.
 
 **Criterios disponibles**
 
-* [!UICONTROL Artículos vistos recientemente. ]
-* [!UICONTROL Recomendado para usted]
+* [!UICONTROL Recently Viewed Items]
+* [!UICONTROL Recommended for You]
 
-**Parámetros de entidad obligatorios**
+**Se requieren parámetros de entidad**
 
 * `entity.id`
 
 **Lecturas**
 
-* [Basado en el usuario](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en usuario](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -182,9 +183,9 @@ Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 **Criterios disponibles**
 
-* [!UICONTROL Algoritmo personalizado]
+* [!UICONTROL Custom algorithm]
 
-**Parámetros de entidad obligatorios**
+**Se requieren parámetros de entidad**
 
 `entity.id` o el atributo utilizado como clave para el algoritmo personalizado
 
@@ -202,7 +203,7 @@ Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 **Lecturas**
 
-* [Uso de reglas de inclusión dinámicas y estáticas](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
+* [Usar reglas de inclusión dinámicas y estáticas](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -216,13 +217,13 @@ Pase los ID de entidad de las entidades que desee excluir de las recomendaciones
 
 **Lecturas**
 
-* [¿Puedo excluir dinámicamente una entidad? ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
+* [¿Puedo excluir dinámicamente una entidad?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
 [Vuelva al diagrama situado en la parte superior de esta página.](#diagram)
 
-## 3.9: Proporcione atributos de entidad para actualizar el catálogo de productos de [!DNL Recommendations] {#entity-attributes}
+## 3.9: proporcione atributos de entidad para actualizar el catálogo de productos de [!DNL Recommendations] {#entity-attributes}
 
 +++Ver detalles
 
@@ -230,7 +231,7 @@ Pase los ID de entidad de las entidades que desee excluir de las recomendaciones
 
 * [Atributos de entidad](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-También puede realizar este paso creando lo siguiente [fuentes de productos](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} uso del [!DNL Target] IU para actualizar el catálogo de productos de [!DNL Recommendations].
+También puede realizar este paso creando [fuentes de productos](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} con la interfaz de usuario de [!DNL Target] para actualizar el catálogo de productos de [!DNL Recommendations].
 
 +++
 
@@ -252,7 +253,7 @@ Proporcione los atributos de perfil que se utilizan como claves para las reglas 
 
 ## 3.11: Activar la solicitud de carga de página {#fire}
 
-Este paso déclencheur un [!DNL Delivery API] llame a con `execute` > `pageLoad` carga útil en la solicitud. El `getOffers()` obtiene la experiencia y `applyOffers()` procesa la experiencia en la página. El `pageLoad` La solicitud de es necesaria para procesar experiencias creadas en [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
+Este paso almacena en déclencheur una llamada a [!DNL Delivery API] con `execute` > `pageLoad` carga útil en la solicitud. El método `getOffers()` recupera la experiencia y `applyOffers()` la procesa en la página. La solicitud `pageLoad` es necesaria para procesar experiencias creadas en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 +++Ver detalles
 
@@ -260,16 +261,16 @@ Este paso déclencheur un [!DNL Delivery API] llame a con `execute` > `pageLoad`
 
 **Requisitos previos**
 
-* Todas las asignaciones de datos deben realizarse utilizando `targetPageParams` función.
+* Toda la asignación de datos debe realizarse utilizando la función `targetPageParams`.
 
 **Lecturas**
 
-* [adobe. target. getoffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
+* [adobe.target.getOffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
 * [adobe.target.applyOffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)
 
 **Acciones**
 
-* Utilice el `getOffers` y `applyOffers` métodos para recuperar la experiencia mediante una llamada a la API de solicitud de carga de página.
+* Utilice los métodos `getOffers` y `applyOffers` para recuperar la experiencia mediante una llamada a la API de solicitud de carga de página.
 
 +++
 
@@ -277,7 +278,7 @@ Este paso déclencheur un [!DNL Delivery API] llame a con `execute` > `pageLoad`
 
 ## 3.12: Activar la solicitud de ubicación regional (#location)
 
-Este paso déclencheur un [!DNL Delivery API] llame a con `execute` > `mboxes` carga útil en su solicitud. El `getOffers` obtiene la experiencia y `applyOffers` procesa la experiencia en la página. Puede enviar más de un mbox en `execute` > `mboxes` carga útil.
+Este paso almacena en déclencheur una llamada a [!DNL Delivery API] con la carga útil `execute` > `mboxes` en su solicitud. El método `getOffers` recupera la experiencia y `applyOffers` la procesa en la página. Puede enviar más de un mbox bajo la carga útil `execute` > `mboxes`.
 
 +++Ver detalles
 
@@ -285,16 +286,16 @@ Este paso déclencheur un [!DNL Delivery API] llame a con `execute` > `mboxes` c
 
 **Requisitos previos**
 
-* Todas las asignaciones de datos deben realizarse utilizando `targetPageParams` función.
+* Toda la asignación de datos debe realizarse utilizando la función `targetPageParams`.
 
 **Lecturas**
 
-* [adobe. target. getoffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
+* [adobe.target.getOffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
 * [adobe.target.applyOffers()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)
 
 **Acciones**
 
-* Utilice el `getOffers` y `applyOffers` métodos para recuperar la experiencia mediante una llamada a la API de solicitud de carga de página.
+* Utilice los métodos `getOffers` y `applyOffers` para recuperar la experiencia mediante una llamada a la API de solicitud de carga de página.
 
 +++
 

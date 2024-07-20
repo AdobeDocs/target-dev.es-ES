@@ -3,8 +3,8 @@ title: 'Asistencia: Adobe Analytics'
 description: Esta es la página de soporte de Adobe Analytics
 source-git-commit: a5bcf98b586c655a36a9ae8800a8f31978d68646
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 8%
+source-wordcount: '92'
+ht-degree: 6%
 
 ---
 
@@ -25,11 +25,11 @@ Tienes un lugar donde empezar las discusiones.
 
 Discusión abierta y apoyo con expertos de la comunidad y personal de Adobe.
 
-[Experience league](https://adobe.io)
+[Liga de experiencia](https://adobe.io)
 
 Tutorials y videos para toda la comunidad.
 
-[Experience forum](https://adobe.io)
+[Foro de experiencias](https://adobe.io)
 
 Foro para obtener ayuda y ayudar a otros
 

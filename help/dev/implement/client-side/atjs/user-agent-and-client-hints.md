@@ -6,8 +6,8 @@ feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 74%
+source-wordcount: '1162'
+ht-degree: 72%
 
 ---
 
@@ -165,7 +165,7 @@ Esta es una tabla de Client Hints y la semántica de uso de scripts de perfil co
 | [Sec-CH-UA-Bitness](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness) | Alto | Expuesto a usuarios mediante scripts de perfil | `user.clientHint('sec-ch-ua-bitness')` |
 | [Sec-CH-UA-Full-Version-List](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version-List) | Alto | Explorador | `user.clientHint('sec-ch-ua-full-version-list')` |
 | [Sec-CH-UA-Mobile](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile) | Bajo | Móvil | `user.clientHint('sec-ch-ua-mobile')` |
-| [Sec-CH-UA-Model](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model) | Alto | Móvil | `user.clientHint('sec-ch-ua-model')` |
+| [Modelo Sec-CH-UA](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model) | Alto | Móvil | `user.clientHint('sec-ch-ua-model')` |
 | [Sec-CH-UA-Platform](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform) | Bajo | Sistema operativo | `user.clientHint('sec-ch-ua-platform')` |
 | [Sec-CH-UA-Platform-Version](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version) | Alto | Expuesto a usuarios mediante scripts de perfil | `user.clientHint('sec-ch-ua-platform-version')` |
 
@@ -175,7 +175,7 @@ Las secciones siguientes contienen más información sobre cómo pasar Client Hi
 
 ### at.js versión 2.9.0 (o posterior)
 
-A partir de at.js 2.9.0, User Agent Client Hints se recopilarán automáticamente desde el explorador y se enviarán a Target cuando `getOffer/getOffers()` se llama. De forma predeterminada, at.js recopila solo Client Hints de “baja entropía”. Si realiza la segmentación de audiencia o utiliza secuencias de comandos de perfil basadas en datos clasificados como “alta entropía” desde las secciones anteriores, debe configurar at.js para que recopile Client Hints de “alta entropía” desde el explorador a través de `targetGlobalSettings`.
+A partir de at.js 2.9.0, User Agent Client Hints se recopilarán automáticamente desde el explorador y se enviarán a Target cuando se llame a `getOffer/getOffers()`. De forma predeterminada, at.js recopila solo Client Hints de “baja entropía”. Si realiza la segmentación de audiencia o utiliza secuencias de comandos de perfil basadas en datos clasificados como “alta entropía” desde las secciones anteriores, debe configurar at.js para que recopile Client Hints de “alta entropía” desde el explorador a través de `targetGlobalSettings`.
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
@@ -183,4 +183,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### SDK del lado del servidor
 
-Para obtener más información sobre cómo pasar Client Hints mediante SDK del lado del servidor, consulte [Client Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) en Documentación de implementación del lado del servidor.
+Para obtener más información sobre cómo pasar Client Hints mediante SDK del lado del servidor, consulte [Client Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) en la documentación de implementación del lado del servidor.

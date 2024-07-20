@@ -1,13 +1,13 @@
 ---
 keywords: adobe.target.sendNotifications, sendNotifications, sendnotifications, enviar notificaciones, notificaciones, at.js, funciones, función, $9
-description: Uso [!UICONTROL adobe.target.sendNotifications()] para que at.js envíe notificaciones a [!DNL Target] edge cuando se procesa una experiencia que no utiliza [!UICONTROL applyOffer](s). (at.js.2.1+)
+description: Use [!UICONTROL adobe.target.sendNotifications()] para at.js para enviar notificaciones a  [!DNL Target] edge cuando se represente una experiencia que no use [!UICONTROL applyOffer]. (at.js.2.1+)
 title: ¿Cómo utilizo la función adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 84%
+source-wordcount: '640'
+ht-degree: 83%
 
 ---
 
@@ -56,7 +56,7 @@ Esta función envía una notificación a [!DNL Target] edge cuando se procesa un
 | Request > notifications > view > key | Cadena | No | `<=` 512 caracteres. | Ver clave. La clave que se configuró con la vista a través de la API. |
 | Request > notifications > view > state | Cadena | No |  | Ver token de estado. |
 
-**Nota**: Los siguientes caracteres son *no* permitido para `Request > notifications > mbox > name`:
+**Nota**: los siguientes caracteres son *no se permiten* para `Request > notifications > mbox > name`:
 
 ```
 - '-, ./=`:;&!@#$%^&*()+|?~[]{}'
@@ -118,4 +118,4 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->Si está utilizando [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` solo con recuperación previa y `[!UICONTROL sendNotifications()]`, el [!DNL Analytics] la solicitud se debe activar después de `[!UICONTROL sendNotifications()]` se ejecuta. El propósito de esto es garantizar que el SDID generado por `[!UICONTROL sendNotifications()]` coincide con el SDID enviado a [!DNL Analytics] y [!DNL Target].
+>Si está usando [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` solo con recuperación previa y `[!UICONTROL sendNotifications()]`, la solicitud [!DNL Analytics] debe activarse después de que se ejecute `[!UICONTROL sendNotifications()]`. El propósito de esto es garantizar que el SDID generado por `[!UICONTROL sendNotifications()]` coincida con el SDID enviado a [!DNL Analytics] y [!DNL Target].

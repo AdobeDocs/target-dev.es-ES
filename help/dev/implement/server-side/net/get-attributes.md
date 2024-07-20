@@ -1,12 +1,12 @@
 ---
-title: Uso de getAttributes en [!DNL Adobe Target] con .NET SDK
-description: Aprenda a utilizar getAttributes() para recuperar experimentación y experiencias personalizadas de [!DNL Target] y extraer valores de atributo.
+title: Usar getAttributes en  [!DNL Adobe Target] con .NET SDK
+description: Aprenda a utilizar getAttributes() para recuperar experimentación y experiencias personalizadas de  [!DNL Target] y extraer valores de atributos.
 feature: APIs/SDKs
 exl-id: 808da83d-3077-468b-a2ad-e35c25905f7d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 10%
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 ## Descripción
 
-`GetAttributes()` se utiliza para recuperar experimentación y experiencias personalizadas de [!DNL Target] y extraer valores de atributo.
+`GetAttributes()` se usa para recuperar experimentación y experiencias personalizadas de [!DNL Target] y extraer valores de atributos.
 
 ## Método
 
@@ -28,12 +28,12 @@ TargetAttributes TargetClient.GetAttributes(TargetDeliveryRequest targetRequest,
 
 | Nombre | Tipo | Requerido | Valor predeterminado | Descripción |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | No | null | Lo mismo [!DNL Target] solicitud tal como se usa para [Obtener ofertas&#x200B;](get-offers.md) |
-| mboxNames | cadena de parámetros[] | No | null | Matriz de parámetros de nombres de mbox |
+| targetRequest | TargetDeliveryRequest | No | null | Se usó la misma solicitud [!DNL Target] para [Obtener ofertas&#x200B;](get-offers.md) |
+| mboxNames | params string[] | No | null | Matriz de parámetros de nombres de mbox |
 
 ## Resultado
 
-A `TargetAttributes` el objeto se devuelve desde `TargetClient.GetAttributes()` que tiene las siguientes propiedades y métodos:
+Se ha devuelto un objeto `TargetAttributes` de `TargetClient.GetAttributes()` que tiene las siguientes propiedades y métodos:
 
 | Propiedad/Método | Tipo de devolución | Descripción |
 | --- | --- | --- |

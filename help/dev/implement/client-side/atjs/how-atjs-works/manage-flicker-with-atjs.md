@@ -1,31 +1,31 @@
 ---
 keywords: parpadeo, at.js, implementación, asincrónico, asincrónico, sincrónico, sincrónico, $8
-description: Descubra cómo at.js y [!DNL Target] evitar el parpadeo (el contenido predeterminado se muestra momentáneamente antes de ser reemplazado por el contenido de la actividad) durante la carga de la página o la aplicación.
+description: Descubra cómo at.js y  [!DNL Target] evitan el parpadeo (el contenido predeterminado se muestra momentáneamente antes de ser reemplazado por el contenido de la actividad) durante la carga de la página o la aplicación.
 title: ¿Cómo administra at.js el parpadeo?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 63%
+source-wordcount: '699'
+ht-degree: 57%
 
 ---
 
 # Cómo gestiona at.js el parpadeo
 
-Información acerca de cómo [!DNL Adobe Target] La biblioteca JavaScript de at.js evita el parpadeo mientras se carga una página o una aplicación.
+Información sobre cómo la biblioteca JavaScript de at.js de [!DNL Adobe Target] evita el parpadeo mientras se carga una página o una aplicación.
 
 El parpadeo tiene lugar cuando se muestra momentáneamente el contenido predeterminado a los visitantes antes de que lo reemplace el contenido de la actividad. El parpadeo no es deseable porque confunde a los visitantes.
 
 ## Uso de un mbox global creado automáticamente
 
-Si habilita la función [mbox global creado automáticamente](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) al configurar at.js, éste gestiona el parpadeo cambiando al configuración de opacidad mientras la página carga. Cuando se carga at.js, cambia la configuración de opacidad del `<body>` elemento a “0”, para que la página sea invisible inicialmente para los visitantes. Después de una respuesta de [!DNL Target] se recibe, o si se produce un error con la variable [!DNL Target] se ha detectado la solicitud: at.js restablece la opacidad a &quot;1&quot;. Esto garantiza que el visitante solo vea la página después de haberse aplicado el contenido de sus actividades.
+Si habilita la función [mbox global creado automáticamente](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) al configurar at.js, éste gestiona el parpadeo cambiando al configuración de opacidad mientras la página carga. Cuando se carga at.js, cambia la configuración de opacidad del elemento `<body>` a &quot;0&quot;, lo que hace que la página sea invisible inicialmente para los visitantes. Después de recibir una respuesta de [!DNL Target] (o si se detecta un error en la solicitud [!DNL Target]), at.js restablece la opacidad a &quot;1&quot;. Esto garantiza que el visitante solo vea la página después de haberse aplicado el contenido de sus actividades.
 
-Si activa el ajuste al configurar at.js, at.js establece la opacidad del estilo HTML BODY en 0. Después de una respuesta de [!DNL Target] se recibe, at.js restablece la opacidad de BODY del HTML a 1.
+Si activa el ajuste al configurar at.js, at.js establece la opacidad del estilo HTML BODY en 0. Después de recibir una respuesta de [!DNL Target], at.js restablece la opacidad de BODY del HTML a 1.
 
 La opacidad establecida en 0 mantiene el contenido de la página oculto para evitar el parpadeo, pero el navegador sigue procesando la página y carga todos los activos necesarios, como CSS, imágenes, etc.
 
-If `opacity: 0` no funciona en la implementación, también puede administrar el parpadeo personalizando `bodyHiddenStyle` y configúrelo en `body {visibility:hidden !important}`. Puede usar cualquiera de las siguientes opciones `body {opacity:0 !important}` o `body {visibility:hidden !important}`, el que mejor se adapte a sus circunstancias específicas.
+Si `opacity: 0` no funciona en su implementación, también puede administrar el parpadeo personalizando `bodyHiddenStyle` y establecerlo en `body {visibility:hidden !important}`. Puede usar `body {opacity:0 !important}` o `body {visibility:hidden !important}`, el que funcione mejor para sus circunstancias específicas.
 
 La ilustración siguiente muestra las llamadas a Ocultar cuerpo y Mostrar cuerpo en at.js 1.*x* y at.js 2.x.
 
@@ -33,13 +33,13 @@ La ilustración siguiente muestra las llamadas a Ocultar cuerpo y Mostrar cuerpo
 
 (Haga clic en la imagen para ampliarla a ancho completo).
 
-![Flujo de Target: Solicitud de carga de página de at.js](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Flujo de Target: Solicitud de carga de página de at.js"){zoomable=&quot;yes&quot;}
+![Flujo de Target: solicitud de carga de página de at.js](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Flujo de Target: solicitud de carga de página de at.js"){zoomable="yes"}
 
 **at.js 1.*x***  
 
 (Haga clic en la imagen para ampliarla a ancho completo).
 
-![Flujo de Target: mbox global creado automáticamente](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Flujo de Target: mbox global creado automáticamente"){zoomable=&quot;yes&quot;}
+![Flujo de Target: mbox global creado automáticamente](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "flujo de Target: mbox global creado automáticamente"){zoomable="yes"}
 
 Para obtener más información sobre la anulación de `bodyHiddenStyle`, consulte [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 

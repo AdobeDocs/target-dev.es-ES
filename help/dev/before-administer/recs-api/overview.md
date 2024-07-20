@@ -8,19 +8,19 @@ author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
 source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 1%
+source-wordcount: '330'
+ht-degree: 2%
 
 ---
 
 # Información general de API de Adobe Recommendations
 
-Las API relevantes para Recommendations incluyen [API de administrador](../../before-administer/target-api-overview.md) que le permiten:
+Las API relevantes para Recommendations incluyen [API de administrador](../../before-administer/target-api-overview.md) que le permiten lo siguiente:
 
 * Administre su catálogo de productos o contenido recomendables
 * Administrar los algoritmos y las actividades de Recommendations
 
-Uso de Target [API de envío](../../implement/delivery-api/overview.md) con Recommendations, también puede:
+Con la [API de envío](../../implement/delivery-api/overview.md) de Target con Recommendations, también puede:
 
 * Recupere recomendaciones en objetos JSON, HTML o XML para que se puedan mostrar en la web, dispositivos móviles, correo electrónico, Internet de las cosas (IOT) y otros canales.
 
@@ -38,7 +38,7 @@ Esta guía está dirigida a desarrolladores que utilicen las API de Target o las
 
 ## Requisitos previos   {#prerequisites}
 
-Las API de administrador de Target requieren lo siguiente [configuración de autenticación de Adobe](../configure-authentication.md). Asegúrese de tener esto configurado antes de utilizar la API de Recommendations.
+Las API de administrador de Target requieren [configuración de autenticación de Adobe](../configure-authentication.md). Asegúrese de tener esto configurado antes de utilizar la API de Recommendations.
 
 ## Recursos
 
@@ -46,5 +46,5 @@ Tenga en cuenta los siguientes recursos, que son necesarios para comprender esta
 
 | Recurso | Detalles |
 | --- | --- |
-| Postman | Obtenga la [aplicación de Postman](https://www.postman.com/downloads/) para su sistema operativo. Postman basic es gratuito con la creación de cuentas. Aunque no es necesario para utilizar las API de Adobe Target en general, Postman facilita los flujos de trabajo de las API y Adobe Target proporciona varias colecciones de Postman para ayudarle a ejecutar sus API y aprender cómo funcionan. El resto de esta guía supone conocimientos prácticos de Postman. Para obtener ayuda, consulte la [Documentación de Postman](https://learning.getpostman.com/). |
-| Referencias | En el resto de esta guía se da por hecho que está familiarizado con los siguientes recursos:<UL><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentación de la API de perfil y administración de Target](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentación de API de Recommendations](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |
+| Postman | Obtén la [aplicación de Postman](https://www.postman.com/downloads/) para tu sistema operativo. Postman basic es gratuito con la creación de cuentas. Aunque no es necesario para utilizar las API de Adobe Target en general, Postman facilita los flujos de trabajo de las API y Adobe Target proporciona varias colecciones de Postman para ayudarle a ejecutar sus API y aprender cómo funcionan. El resto de esta guía supone conocimientos prácticos de Postman. Para obtener ayuda, consulte la [documentación de Postman](https://learning.getpostman.com/). |
+| Referencias | En el resto de esta guía se da por hecho que está familiarizado con los siguientes recursos:<UL><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentación de la API de perfil y administrador de Target](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentación de la API de Recommendations](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |

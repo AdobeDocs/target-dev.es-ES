@@ -4,16 +4,17 @@ description: Asegúrese de que todas las tareas necesarias para la recopilación
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 66e0f18d-c78c-463b-8c47-132ef6332927
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 3%
+source-wordcount: '384'
+ht-degree: 2%
 
 ---
 
 # Configuración de la recopilación de datos
 
-Siga los pasos de la *Recopilación de datos* para garantizar que todas las tareas necesarias para la recopilación de datos se ejecuten en la secuencia correcta.
+Siga los pasos del diagrama *Recopilación de datos* para asegurarse de que todas las tareas necesarias para la recopilación de datos se ejecutan en la secuencia correcta.
 
 >[!TIP]
 >
@@ -21,9 +22,9 @@ Siga los pasos de la *Recopilación de datos* para garantizar que todas las tare
 
 La capa de datos está lista durante la carga de página o bien la capa de datos cambia después de la carga de página.
 
-Si ya ha asignado datos durante la [Fase de inicialización del SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md), debe ejecutar los pasos de este diagrama si:
+Si ya asignó datos durante la [fase de inicialización del SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md), debe ejecutar los pasos de este diagrama si:
 
-* La capa de datos se aumenta de cualquier manera en la misma página y desea enviar esos datos adicionales a [!DNL Target]
+* La capa de datos se ha aumentado de cualquier manera en la misma página y desea enviar esos datos adicionales a [!DNL Target]
 * Desea enviar los datos del catálogo de productos a [!DNL Target Recommendations]
 
 ## Recopilar diagrama de datos {#diagram}
@@ -40,7 +41,7 @@ Haga clic en los siguientes vínculos para desplazarse a las secciones deseadas:
 
 ## 2.1: Configurar asignación de datos {#configure}
 
-Este paso ayuda a garantizar que todos los datos que se deben enviar a [!DNL Adobe Target] está configurado.
+Este paso ayuda a garantizar que se establezcan todos los datos que deben enviarse a [!DNL Adobe Target].
 
 +++Ver detalles
 
@@ -56,7 +57,7 @@ Este paso ayuda a garantizar que todos los datos que se deben enviar a [!DNL Ado
 
 **Acciones**
 
-Utilice el `targetPageParams()` para establecer todos los datos necesarios que deben enviarse a [!DNL Target].
+Utilice la función `targetPageParams()` para establecer todos los datos necesarios que deben enviarse a [!DNL Target].
 
 +++
 
@@ -64,7 +65,7 @@ Utilice el `targetPageParams()` para establecer todos los datos necesarios que d
 
 ## 2.2: Vínculo a atributos de entidad {#entity-attributes}
 
-Vínculo a atributos de entidad para actualizar el catálogo de productos [!DNL Target Recommendations].
+Vínculo a atributos de entidad para actualizar el catálogo de productos de [!DNL Target Recommendations].
 
 +++Ver detalles
 
@@ -74,9 +75,9 @@ Vínculo a atributos de entidad para actualizar el catálogo de productos [!DNL 
 
 **Consideraciones**
 
-* Una forma alternativa de pasar atributos de entidad es actualizar el catálogo de productos en la [!DNL Target] IU que se utilizará [Fuentes de productos de Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
+* Una forma alternativa de pasar atributos de entidad es actualizar el catálogo de productos en la interfaz de usuario de [!DNL Target] para usar [fuentes de productos de Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
 * El paso de atributos de entidad solo es aplicable en páginas donde los datos del catálogo de productos están disponibles en la capa de datos.
-* Pasar el `entity.event.detailsOnly=true` en cualquier llamada tiene prioridad.
+* Pasar el parámetro `entity.event.detailsOnly=true` en cualquier llamada tiene prioridad.
 
 +++
 
@@ -84,15 +85,15 @@ Vínculo a atributos de entidad para actualizar el catálogo de productos [!DNL 
 
 ## 2.3 Activar la API de seguimiento de Adobe Target {#fire-api}
 
-Este paso ayuda a garantizar que todos los datos que se deben enviar a [!DNL Target] se envía.
+Este paso ayuda a garantizar que se envíen todos los datos que deben enviarse a [!DNL Target].
 
 +++Ver detalles
 
-![Activar el diagrama API de seguimiento de Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-track-api-combined.png){width="400" zoomable="yes"}
+![Activar el diagrama de API de seguimiento de Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-track-api-combined.png){width="400" zoomable="yes"}
 
 **Requisitos previos**
 
-* Toda la asignación de datos debe haberse realizado utilizando [función targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
+* Toda la asignación de datos debe haberse realizado con la [función targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
 
 **Lecturas**
 
@@ -100,11 +101,10 @@ Este paso ayuda a garantizar que todos los datos que se deben enviar a [!DNL Tar
 
 **Acciones**
 
-Uso [adobe.target.trackEvent(), método](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) para enviar todos los datos que deben enviarse a [!DNL Target].
+Use el [método adobe.target.trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) para enviar todos los datos que deben enviarse a [!DNL Target].
 
 +++
 
 [Vuelva al diagrama situado en la parte superior de esta página.](#diagram)
 
 Continúe con el paso 3: [Procesar experiencias](/help/dev/patterns/recs-atjs/render-experiences.md)
-

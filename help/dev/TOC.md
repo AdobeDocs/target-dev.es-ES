@@ -13,7 +13,7 @@ ht-degree: 45%
 # Guía para desarrolladores de Adobe Target {#developer}
 
 + [Guía para desarrolladores de Adobe Target](overview.md)
-+ Primeros pasos {#implementation}
++ Introducción a {#implementation}
    + Antes de la implementación {#before-implement}
       + [Antes de la implementación](before-implement/considerations-before-you-implement-target.md)
       + [Preparación para implementar Target](before-implement/prepare-to-implement-target.md)
@@ -120,7 +120,7 @@ ht-degree: 45%
       + [Información general sobre funciones compatibles](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [Resolución de problemas de la toma de decisiones en el dispositivo](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
       + [Prácticas recomendadas  ](implement/server-side/sdk-guides/best-practices/best-practices.md)
-   + Referencia del SDK de Node.js {#node-js}
+   + Referencia de SDK de Node.js {#node-js}
       + [Información general del SDK de Node.js](implement/server-side/node-js/overview.md)
       + [Instalación del SDK de Node.js](implement/server-side/node-js/install-sdk.md)
       + [Inicialice el SDK de Node.js](implement/server-side/node-js/initialize-sdk.md)
@@ -143,7 +143,7 @@ ht-degree: 45%
       + [Configuración de proxy (Java)](implement/server-side/java/proxy-configuration.md)
       + [Configuración personalizada de cliente HTTP (Java)](implement/server-side/java/custom-http-client.md)
       + [Métodos de utilidad (Java)](implement/server-side/java/utility-methods.md)
-   + Referencia del SDK de .NET {#net}
+   + Referencia de .NET SDK {#net}
       + [Información general de .NET SDK](implement/server-side/net/overview.md)
       + [Instalación del SDK de .Net](implement/server-side/net/install-sdk.md)
       + [Inicializar .NET SDK](implement/server-side/net/initialize-sdk.md)
@@ -192,7 +192,7 @@ ht-degree: 45%
       + [Consideraciones y limitaciones conocidas](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [Client Hints](/help/dev/before-implement/delivery-api-overview/client-hints.md)
       + [API de entrega](/help/dev/implement/delivery-api/delivery-api.md)
-   + API de administración {#admin-api}
+   + API de administrador {#admin-api}
       + [Resumen de API de administración](before-administer/admin-api-overview/admin-api-overview.md)
       + [API de administración de Adobe Target](/help/dev/administer/admin-api/admin-api-overview-new.md)
    + API de perfil {#profile-apis}

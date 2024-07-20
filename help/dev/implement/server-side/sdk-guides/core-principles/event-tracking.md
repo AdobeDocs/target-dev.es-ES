@@ -1,30 +1,30 @@
 ---
 title: Seguimiento de eventos
-description: Uso [!DNL Adobe Target]Las funcionalidades de seguimiento de eventos de para medir de forma eficaz las métricas que más importan para su negocio y sus casos de uso.
+description: Utilice las capacidades de seguimiento de eventos de  [!DNL Adobe Target] para medir de manera eficaz las métricas que más importan para su negocio y sus casos de uso.
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
 source-wordcount: '527'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
 # Seguimiento de eventos
 
-Uso [!DNL Adobe Target]Las funcionalidades de seguimiento de eventos de para medir de forma eficaz las métricas que más importan para su negocio y sus casos de uso. El seguimiento de eventos es clave para medir el éxito de las actividades de experimentación o personalización, ya que indican qué variación o experiencia está ganando o perdiendo. Comprender esto le ayudará a comprender cómo los usuarios se relacionan con su producto o cómo evolucionan en un entorno en constante cambio.
+Utilice las capacidades de seguimiento de eventos de [!DNL Adobe Target] para medir de manera eficaz las métricas que más importan para su negocio y sus casos de uso. El seguimiento de eventos es clave para medir el éxito de las actividades de experimentación o personalización, ya que indican qué variación o experiencia está ganando o perdiendo. Comprender esto le ayudará a comprender cómo los usuarios se relacionan con su producto o cómo evolucionan en un entorno en constante cambio.
 
-Para realizar un seguimiento de los eventos mediante [!DNL Adobe Target]Los SDK de, siga este proceso de 2 pasos:
+Para realizar el seguimiento de eventos a través de los SDK de [!DNL Adobe Target], siga este proceso de 2 pasos:
 
 1. Instale el SDK e implemente el código que envía eventos a [!DNL Adobe Target].
 
-1. Creación y activación de un [!DNL Adobe Target] actividad con una métrica de objetivo en la IU de.
+1. Cree y active una actividad [!DNL Adobe Target] con una métrica de objetivo en la interfaz de usuario.
 
    ![imagen alt](./assets/report-settings.png)
 
 ## Métricas y eventos de objetivo
 
-En la tabla siguiente se define la combinación de objetivos y eventos que puede definir y medir con un [!DNL Target] actividad mediante [!DNL Target]Funciones de informes de:
+En la tabla siguiente se define la combinación de objetivos y eventos que puede definir y medir con una actividad de [!DNL Target] mediante las capacidades de generación de informes de [!DNL Target]:
 
 | Objetivo principal | Evento |
 | --- | --- |
@@ -34,7 +34,7 @@ En la tabla siguiente se define la combinación de objetivos y eventos que puede
 
 ## Cómo se activan las impresiones
 
-Los SDK de Target llaman al subyacente [API de envío](/help/dev/implement/delivery-api/overview.md). Cuando un objeto execute con parámetros requeridos está dentro de la propia solicitud, la impresión se incrementa automáticamente para las actividades calificadas. Los métodos del SDK que incrementan una impresión automáticamente son:
+Los SDK de Target llaman a la [API de envío](/help/dev/implement/delivery-api/overview.md) subyacente. Cuando un objeto execute con parámetros requeridos está dentro de la propia solicitud, la impresión se incrementa automáticamente para las actividades calificadas. Los métodos del SDK que incrementan una impresión automáticamente son:
 
 * getOffers()
 * getAttributes()
@@ -43,11 +43,11 @@ Los SDK de Target llaman al subyacente [API de envío](/help/dev/implement/deliv
 >
 >Cuando se pasa un objeto de recuperación previa en la solicitud, la impresión no se incrementa automáticamente para las actividades con mboxes dentro del objeto de recuperación previa.
 
-El `sendNotifications` se puede utilizar para enviar eventos manualmente a [!DNL Adobe Target] y déclencheur una impresión.
+El método `sendNotifications` se puede usar para enviar eventos manualmente a [!DNL Adobe Target] y almacenar en déclencheur una impresión.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 TargetClient.sendNotifications(options: Object): Promise
@@ -67,9 +67,9 @@ Los siguientes ejemplos de código funcionan para todos los tipos de métricas d
 
 ### Visualizó una página o un mbox
 
-Este ejemplo obtiene primero una oferta de mbox de target mediante `getOffers`. A continuación, construye una solicitud con una notificación basada en esa oferta de mbox.
+Este ejemplo obtiene primero una oferta de mbox de target usando `getOffers`. A continuación, construye una solicitud con una notificación basada en esa oferta de mbox.
 
-La notificación `type` La propiedad se establece en `display`.
+La propiedad de notificación `type` se ha establecido en `display`.
 
 Para indicar que se ha visto una página, es importante especificar el objeto de dirección en la carga útil de notificación. Asegúrese de establecer la dirección URL según corresponda.
 
@@ -77,7 +77,7 @@ Para los mboxes, debe establecer la propiedad de mbox en el objeto de notificaci
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -184,15 +184,15 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Hizo clic en un mbox
 
-Este ejemplo obtiene primero una oferta de mbox de target mediante `getOffers`. A continuación, construye una solicitud con una notificación basada en esa oferta de mbox.
+Este ejemplo obtiene primero una oferta de mbox de target usando `getOffers`. A continuación, construye una solicitud con una notificación basada en esa oferta de mbox.
 
-La notificación `type` La propiedad se establece en `click`.
+La propiedad de notificación `type` se ha establecido en `click`.
 
-Debe configurar la variable `mbox` en el objeto de notificación y proporcionar una matriz de tokens basada en la matriz de métricas de la variable `targetResult`.
+Debe establecer la propiedad `mbox` en el objeto de notificación y proporcionar una matriz de tokens basada en la matriz de métricas de `targetResult`.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -304,15 +304,15 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Visualizó una vista
 
-Este ejemplo obtiene primero las vistas de destino mediante `getOffers`. A continuación, construye una solicitud con una notificación basada en esas vistas.
+Este ejemplo obtiene primero vistas de destino con `getOffers`. A continuación, construye una solicitud con una notificación basada en esas vistas.
 
-La notificación `type` La propiedad se establece en `display`.
+La propiedad de notificación `type` se ha establecido en `display`.
 
-Para las vistas, debe establecer la variable `view` en el objeto de notificación y proporcionar una matriz de tokens basada en la matriz de opciones de targetResult.
+Para las vistas, debe establecer la propiedad `view` en el objeto de notificación y proporcionar una matriz de tokens basada en la matriz de opciones de targetResult.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -414,15 +414,15 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Hizo clic en una vista
 
-Este ejemplo obtiene primero las vistas de destino mediante `getOffers`. A continuación, construye una solicitud con notificaciones basadas en esas vistas.
+Este ejemplo obtiene primero vistas de destino con `getOffers`. A continuación, construye una solicitud con notificaciones basadas en esas vistas.
 
-La notificación `type` La propiedad se establece en `click`.
+La propiedad de notificación `type` se ha establecido en `click`.
 
-Debe configurar la variable `view` en el objeto de notificación y proporcionar una matriz de tokens basada en la matriz de métricas de targetResult.
+Debe establecer la propiedad `view` en el objeto de notificación y proporcionar una matriz de tokens basada en la matriz de métricas de targetResult.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB Nodo.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");

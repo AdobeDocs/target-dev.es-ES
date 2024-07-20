@@ -1,11 +1,11 @@
 ---
-title: Cómo utilizar solicitudes asincrónicas en [!DNL Adobe Target] SDK de Node.js
-description: Descubra cómo [!DNL Target] El SDK de Node.js admite solicitudes asincrónicas, lo que puede reducir el tiempo de destino efectivo a cero.
+title: Cómo usar solicitudes asincrónicas en el SDK de  [!DNL Adobe Target] Node.js
+description: Descubra cómo el SDK de  [!DNL Target] Node.js admite solicitudes asincrónicas, lo que puede reducir el tiempo de destino efectivo a cero.
 feature: APIs/SDKs
 exl-id: aa06f3ca-7d2a-4334-8092-730a8705dfb0
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '112'
 ht-degree: 18%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 18%
 
 ## Descripción
 
-`[!UICONTROL getAttributes()]` se utiliza para recuperar experimentación y experiencias personalizadas de [!DNL Target] y extraer valores de atributo.
+`[!UICONTROL getAttributes()]` se usa para recuperar experimentación y experiencias personalizadas de [!DNL Target] y extraer valores de atributos.
 
 ## Método
 
@@ -33,7 +33,7 @@ TargetClient.getAttributes(mboxNames: Array, options: Object): Promise
 
 ## Promesa
 
-El `Promise` devuelto por `TargetClient.getAttributes()` resuelve un objeto con los métodos siguientes:
+El `Promise` devuelto por `TargetClient.getAttributes()` resuelve un objeto con los siguientes métodos:
 
 | Método | Tipo de devolución | Descripción |
 | --- | --- | --- |

@@ -1,13 +1,13 @@
 ---
 keywords: Implementación, mbox.js no javascript, redirector, costes por clic, ingresos por clic
-description: Aprenda a utilizar los redirectores en implementaciones de correo electrónico, de forma similar a cómo utiliza un mbox en su [!DNL Adobe Target] actividades.
+description: Aprenda a utilizar redirectores en implementaciones de correo electrónico, de manera similar a cómo se usa un mbox en las actividades  [!DNL Adobe Target] de.
 title: ¿Cómo trabajo con los redirectores?
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 69%
+source-wordcount: '668'
+ht-degree: 64%
 
 ---
 
@@ -17,7 +17,7 @@ Use un redirector de forma similar a como se usa un mbox en las pruebas.
 
 Los redirectores se crean con una dirección URL de redirector especial que carga un mbox de redirector en su cuenta. Use este redirector de forma similar a como se usa un mbox en las pruebas. Envíe la dirección URL del redirector a la red de publicidad como vínculo de destino de la publicidad.
 
-Use el redirector para   hacer lo siguiente:
+Utilice el redirector para hacer lo siguiente:
 
 * Rastrear los clics de los anuncios en pantalla en su sitio
 * Crear un único informe centralizado para rastrear los clics efectuados en los anuncios en pantalla de las redes de publicidad múltiple
@@ -27,7 +27,7 @@ Use el redirector para   hacer lo siguiente:
 
 * Averigüe cuál es la página de aterrizaje que produce el mayor número de conversiones
 
-Para obtener ayuda para decidir la configuración adecuada, consulte   [Implementaciones no basadas en JavaScript](/help/dev/implement/email/overview.md).
+Para obtener ayuda para decidir la configuración adecuada, consulte [Implementaciones no basadas en JavaScript](/help/dev/implement/email/overview.md).
 
 ## Creación de un redirector
 
@@ -44,7 +44,7 @@ Antes de poder usar un redirector, debe crearlo.
 
    * Donde `yourclientcode` es el código de cliente de la empresa. El código de cliente de su compañía está por completo en minúscula y carece de caracteres especiales.
 
-     El código de cliente se encuentra disponible en la parte superior de la **[!UICONTROL Administration]** > **[!UICONTROL Implementación]** página de la [!DNL Target] interfaz.
+     Su código de cliente está disponible en la parte superior de la página **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** de la interfaz [!DNL Target].
 
    * `redirectorlink_456` es el nombre del mbox de redirector que aparecerá en la cuenta para usarlo en campañas y pruebas.
 
@@ -52,14 +52,14 @@ Antes de poder usar un redirector, debe crearlo.
 
    * Donde `http%3A%2F%2Fwww%2Eyourcompany%2Ecom%2Fusualdestination%2Ehtm` es el destino predeterminado.
 
-     Debe tener codificación de dirección URL y ser una referencia absoluta. Puede usar el complemento [Referencia de codificación de URL de HTML](https://www.w3schools.com/tags/ref_urlencode.asp) para codificar rápidamente las direcciones URL.
+     Debe tener codificación de dirección URL y ser una referencia absoluta. Puede usar la [Referencia de codificación de la dirección URL del HTML](https://www.w3schools.com/tags/ref_urlencode.asp) para codificar rápidamente sus direcciones URL.
 
    >[!WARNING]
    >
-   >Tenga en cuenta que con el redirector puede estar expuesto a un riesgo de vulnerabilidad de redireccionamiento abierto. Para evitar el uso no autorizado de vínculos de redirector por parte de terceros, Adobe recomienda utilizar &quot;hosts autorizados&quot; para la lista de permitidos de los dominios de URL de redireccionamiento predeterminados. [!DNL Target] usa hosts para la lista de permitidos de dominios a los que desea permitir redirecciones. Para obtener más información, consulte [Creación de listas de permitidos que especifiquen hosts con autorización para enviar llamadas de mbox a  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) en *Hosts*.
+   >Tenga en cuenta que con el redirector puede estar expuesto a un riesgo de vulnerabilidad de redireccionamiento abierto. Para evitar el uso no autorizado de vínculos de redirector por parte de terceros, Adobe recomienda utilizar &quot;hosts autorizados&quot; para la lista de permitidos de los dominios de URL de redireccionamiento predeterminados. [!DNL Target] usa hosts para la lista de permitidos de dominios a los que desea permitir redirecciones. Para obtener más información, consulte [Crear Listas de permitidos que especifiquen hosts con autorización para enviar llamadas de mbox a [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) en *Hosts*.
 
 1. Valide el redirector.
-   1. *Práctica recomendada de seguridad*: Asegúrese de que el dominio utilizado en el redirector esté incluido en la lista de permitidos, como se ha indicado anteriormente. Si utiliza un dominio que no está incluido en la lista de permitidos, el Adobe bloqueará cualquier llamada a ese dominio para evitar que agentes malintencionados utilicen el redirector para redirigir a dominios potencialmente malintencionados.
+   1. *Práctica recomendada de seguridad*: Asegúrese de que el dominio usado en el redirector esté incluido en la lista de permitidos, como se ha indicado anteriormente. Si utiliza un dominio que no está incluido en la lista de permitidos, el Adobe bloqueará cualquier llamada a ese dominio para evitar que agentes malintencionados utilicen el redirector para redirigir a dominios potencialmente malintencionados.
    2. Inserte la dirección URL del redirector en un navegador y actualícelo.
    3. Inicie sesión en la cuenta, actualice la lista de mboxes y confirme que el nuevo redirector aparece enumerado en la cuenta.
 1. Si va a comprobar diferentes destinos para un anuncio, cree [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html) para cada versión.
@@ -80,7 +80,7 @@ Antes de poder usar un redirector, debe crearlo.
 
    >[!NOTE]
    >
-   >Los redirectores no son compatibles con las vistas previas de ofertas o con la exploración en busca de mboxes. Obtenga una vista previa de las experiencias directamente en un navegador. Además, `mboxDebug` no funciona con los redirectores.
+   >Los redirectores no son compatibles con las vistas previas de ofertas o con la exploración en busca de mboxes. Previsualizar experiencias directamente en un navegador. Además, `mboxDebug` no funciona con los redirectores.
 
 1. Envíe la dirección URL completa del redirector a la red de anuncios en pantalla como destino de la publicidad.
 
@@ -94,7 +94,7 @@ Use un redirector para pasar los costes por clic.
 
 >[!NOTE]
 >
->La práctica recomendada es determinar el valor de coste mediante **[!UICONTROL Puntuación por visita]** métrica de compromiso.
+>La práctica recomendada es determinar el valor de costo mediante la métrica de compromiso **[!UICONTROL Score per visit]**.
 
 Añada `&mboxPageValue=-value` a la dirección URL. Observe el valor negativo.
 
@@ -111,7 +111,7 @@ Use un redirector para pasar los ingresos por clic.
 
 >[!NOTE]
 >
->La práctica recomendada es determinar el valor de los ingresos mediante la variable **[!UICONTROL Puntuación por visita]** métrica de compromiso.
+>La práctica recomendada es determinar el valor de los ingresos mediante la métrica de participación **[!UICONTROL Score per visit]**.
 
 Añada `&mboxPageValue=value` a la dirección URL.
 

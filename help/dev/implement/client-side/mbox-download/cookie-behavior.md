@@ -4,7 +4,7 @@ description: Obtenga información acerca del comportamiento de la cookie de Targ
 title: ¿Dónde Puedo Encontrar Información Sobre Las Cookies De Target?
 feature: at.js
 role: Developer
-source-git-commit: 34e8625798121e236a04646dfcf049f9c2b6f9d0
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 53%
@@ -118,6 +118,7 @@ La cookie conserva varios valores para administrar la forma en que los visitante
 |--- |--- |
 | Dominios de origen | Implementación estándar para clientes de Target. La cookie “mbox” se establece en el dominio del cliente. |
 | Seguimiento de terceros | El seguimiento de terceros es importante para los casos de uso de publicidad y segmentación en Target y en Adobe Audience Manager AAM (). El seguimiento de terceros requiere técnicas de ejecución de scripts en sitios múltiples. Target utiliza dos cookies, “mboxSession” y “mboxPC”, que se establecen en el dominio `clientcode.tt.omtrd.net`. |
+
 **¿Cuál es el enfoque de Apple?**
 
 De Apple:

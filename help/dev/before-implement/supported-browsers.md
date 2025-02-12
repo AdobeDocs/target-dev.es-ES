@@ -4,10 +4,10 @@ description: Conozca qué exploradores de Internet [!DNL Adobe Target] admiten p
 title: ¿Qué exploradores admiten  [!DNL Target] ?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 26%
+source-wordcount: '380'
+ht-degree: 23%
 
 ---
 
@@ -38,6 +38,7 @@ La entrega de contenido se ha probado en los siguientes navegadores y dispositiv
 
 Tenga en cuenta lo siguiente:
 
+* [!DNL Adobe Experience Platform Web SDK] está diseñado para funcionar de manera óptima en las últimas versiones de [!DNL Google Chrome], [!DNL Safari], [!DNL Firefox] y [!DNL Microsoft Edge Chromium]. Es posible que tenga problemas al usar ciertas funciones en versiones anteriores de estos exploradores o en exploradores obsoletos, como [!DNL Internet Explorer].
 * Para implementaciones de at.js, [!DNL Target] muestra el contenido predeterminado en versiones anteriores de Internet Explorer y posiblemente en versiones anteriores de los exploradores enumerados anteriormente.
 * Internet Explorer trata todos los elementos desconocidos (como los elementos personalizados) como el mismo tipo de elemento. Como resultado, la entrega no funciona con elementos personalizados.
 * [!DNL Target] muestra contenido predeterminado en exploradores que no aparecen enumerados anteriormente y en exploradores que usan [modo quirks](https://en.wikipedia.org/wiki/Quirks_mode). at.js requiere un tipo de documento que se muestre en modo estándar, por ejemplo: `<!DOCTYPE html>`.

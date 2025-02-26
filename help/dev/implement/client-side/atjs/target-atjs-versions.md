@@ -4,10 +4,10 @@ description: Vea los detalles sobre los cambios realizados en cada versión de l
 title: ¿Qué se incluye en cada versión de at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
 workflow-type: tm+mt
-source-wordcount: '4967'
-ht-degree: 65%
+source-wordcount: '4994'
+ht-degree: 64%
 
 ---
 
@@ -26,6 +26,10 @@ Detalles sobre los cambios realizados en cada versión de la biblioteca JavaScri
 >Debe actualizar a las versiones más recientes de cualquiera de las dos 1.*x* o 2.*x* para obtener correcciones de errores y parches de seguridad para problemas detectados en cualquier versión menor anterior de la versión principal correspondiente.
 
 Las etiquetas de [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) son el método preferido para actualizar at.js. Los desarrolladores de extensiones añaden continuamente nuevas funciones a sus extensiones y suelen corregir errores. Estas actualizaciones se incluyen en las versiones nuevas de una extensión y se pueden descargar en el catálogo de Adobe Experience Platform como actualizaciones. Para obtener más información, consulte [Actualizaciones de extensiones](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) en la guía de *Información general sobre etiquetas*.
+
+## Versión 2.11.7 de at.js (26 de febrero de 2025)
+
+* Se corrigió el registro de telemetría cuando `localStorage` no está disponible. La telemetría estaba ocasionando un problema a algunos clientes que tenían `localStorage` deshabilitado en sus navegadores.
 
 ## Versión 2.11.6 de at.js (lunes, 29 de septiembre de 2024)
 
@@ -100,7 +104,7 @@ Esta versión incluye la siguiente mejora:
 
 Esta versión incluye los siguientes cambios:
 
-* Se eliminaron los módulos Adobe Experience Platform Launch `reactor-window` y `reactor-document` para garantizar que la compilación del Platform launch funcione correctamente para los clientes que tienen establecido `window.default` o `document-default`.
+* Se eliminaron los módulos Adobe Experience Platform Launch `reactor-window` y `reactor-document` para garantizar que la versión de Platform Launch funcione correctamente para los clientes que tienen establecidos `window.default` o `document-default`.
 * at.js 1.8.3 ahora establece explícitamente `Samesite=None` y `Secure` para garantizar que las cookies de dominio de terceros se establezcan correctamente.
 
 ## at.js 2.6.1 (16 de agosto de 2021)
@@ -115,7 +119,7 @@ Esta versión incluye los siguientes cambios:
 * [!UICONTROL Analytics for Target] (A4T) Los detalles de las métricas de clic se devuelven correctamente al usar solicitudes `prefetch`.
 * La generación UUID ya no utiliza `Math.random()`, sino que depende de `window.crypto`.
 * La caducidad de la cookie `sessionId` se amplía correctamente en cada llamada de red.
-* SPA Ahora, la inicialización de la caché de la vista Aplicación de una sola página () se administra correctamente y respeta la configuración de `viewsEnabled`. Al establecer `viewsEnabled` en el valor `false`, ahora se deshabilita la función `triggerView()`. Consulte [Orden de las operaciones para la carga inicial de la página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
+* La inicialización de la caché de la vista Aplicación de una sola página (SPA) ahora se administra correctamente y respeta la configuración de `viewsEnabled`. Al establecer `viewsEnabled` en el valor `false`, ahora se deshabilita la función `triggerView()`. Consulte [Orden de las operaciones para la carga inicial de la página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
 
 ## at.js 2.5.0 (13 de mayo de 2021)
 
@@ -185,7 +189,7 @@ Esta versión de at.js es de mantenimiento e incluye las siguientes mejoras y co
 Esta versión de at.js incluye las siguientes mejoras y correcciones:
 
 * Se corrigió un problema en el cual el rastreo de clics no informaba de las conversiones en [!DNL Analytics for Target] (A4T) cuando el código [!DNL Adobe Analytics] no estaba presente en los elementos de la página.
-* Rendimiento mejorado al usar el servicio de ID de Experience Cloud (ECID) 4.4 y at.js 2.2 en sus páginas web.
+* Rendimiento mejorado al usar el servicio Experience Cloud ID (ECID) 4.4 y at.js 2.2 en sus páginas web.
 * Anteriormente, el ECID realizaba dos llamadas de bloqueo antes de que at.js pudiera recuperar experiencias. Esto se ha reducido a una sola llamada, lo que mejora significativamente el rendimiento.
 * Se ha corregido un procesamiento de vista previa incorrecto, en el que los tokens de evento de ofertas predeterminadas no se incluían en las notificaciones enviadas.
 
@@ -193,13 +197,13 @@ Esta versión de at.js incluye las siguientes mejoras y correcciones:
 >
 >Actualice la extensión de ECID a la versión 4.4 para aprovechar esta mejora de rendimiento.
 
-* La versión 2.2 de at.js también proporciona una nueva configuración denominada `serverState`. Esta configuración se puede usar para optimizar el rendimiento de la página cuando se implementa una integración híbrida de [!DNL Target]. La integración híbrida significa que está utilizando at.js v2.2 o posterior del lado del cliente y la API de entrega o un SDK de [!DNL Target] del lado del servidor para ofrecer experiencias. `serverState` permite a at.js v2.2 o posterior aplicar experiencias directamente desde el contenido recuperado en el servidor y devuelto al cliente como parte de la página que se está sirviendo. Para obtener más información, consulte &quot;serverState&quot; en [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
+* La versión 2.2 de at.js también proporciona una nueva configuración denominada `serverState`. Esta configuración se puede usar para optimizar el rendimiento de la página cuando se implementa una integración híbrida de [!DNL Target]. La integración híbrida significa que está utilizando at.js v2.2 o posterior del lado del cliente y la API de entrega o un SDK [!DNL Target] del lado del servidor para ofrecer experiencias. `serverState` permite a at.js v2.2 o posterior aplicar experiencias directamente desde el contenido recuperado en el servidor y devuelto al cliente como parte de la página que se está sirviendo. Para obtener más información, consulte &quot;serverState&quot; en [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
 
 ## Versión 1.8.0 de at.js (viernes, 10 de octubre de 2019)
 
 Esta versión de at.js incluye las siguientes mejoras y correcciones:
 
-* Rendimiento mejorado al usar el servicio de ID de Experience Cloud (ECID) 4.4 y at.js 1.8 en sus páginas web.
+* Rendimiento mejorado al usar el servicio Experience Cloud ID (ECID) 4.4 y at.js 1.8 en sus páginas web.
 * Anteriormente, el ECID realizaba dos llamadas de bloqueo antes de que at.js pudiera recuperar experiencias. Esto se ha reducido a una sola llamada, lo que mejora significativamente el rendimiento.
 
 >[!NOTE]
@@ -300,7 +304,7 @@ Esta versión también corrige un problema en el cual [!DNL Target] podría anul
 
 >[!NOTE]
 >
->Si necesita soporte de Adobe Opt-in para el RGPD, actualmente debe utilizar at.js 1.7.0, at.js 2.1.0 o posterior.
+>Si necesita soporte con Adobe Opt-in para el RGPD, actualmente debe utilizar at.js 1.7.0, at.js 2.1.0 o posterior.
 
 ## Versión 1.6.4 de at.js
 
@@ -382,7 +386,7 @@ Ya está disponible la versión 1.3.0 de at.js.
 
   Para obtener más información, consulte [Proveedores de datos](atjs-functions/targetglobalsettings.md#data-providers).
 
-* Las solicitudes at.js ahora usan GET, pero cambiarán a POST cuando el tamaño de la URL exceda los 2048 caracteres. Hay una nueva propiedad llamada `urlSizeLimit` donde puede aumentar el límite de tamaño si es necesario. Este cambio permite que [!DNL Target] alinee at.js con el AppMeasurement, que emplea la misma técnica.
+* Las solicitudes at.js ahora usan GET, pero cambiarán a POST cuando el tamaño de la URL exceda los 2048 caracteres. Hay una nueva propiedad llamada `urlSizeLimit` donde puede aumentar el límite de tamaño si es necesario. Este cambio permite que [!DNL Target] alinee at.js con AppMeasurement, que usa la misma técnica.
 * [!DNL Target] exige ahora que se use la clave `mbox` en la función `adobe.target.applyOffer(options)`. Esta clave se ha requerido en el pasado, pero [!DNL Target] impone ahora su uso para garantizar que [!DNL Target] tenga la validación adecuada y que los clientes usen la función correctamente.
 * at.js ha mejorado la funcionalidad de seguimiento de eventos y clics. at.js utiliza `navigator.sendBeacon()` para enviar datos de seguimiento de eventos y se volverá a utilizar XHR sincrónico cuando no se admita `navigator.sendBeacon()`. Este reutilización afecta principalmente a Internet Explorer 10 y 11 y algunas versiones de Safari. Safari añadirá compatibilidad para `navigator.sendBeacon()` en la próxima versión de iOS 11.3.
 * Ahora, at.js puede presentar ofertas incluso cuando una página se abre en pestañas de fondo. Algunos clientes de [!DNL Target] encontraron un problema cuando `requestAnimationFrame()` se deshabilitó debido al comportamiento de regulación del explorador para las fichas de fondo.

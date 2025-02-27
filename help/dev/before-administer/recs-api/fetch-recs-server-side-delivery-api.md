@@ -1,27 +1,27 @@
 ---
-title: Cómo recuperar Recommendations con la API de entrega
+title: Recuperación de recomendaciones con la API de entrega
 description: Este artículo guía a los desarrolladores a través de los pasos necesarios para recuperar contenido de Recommendations mediante la API de envío de Adobe Target.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
+source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1286'
 ht-degree: 1%
 
 ---
 
-# Recuperación de Recommendations con la API de entrega
+# Recuperación de recomendaciones con la API de entrega
 
-Las API de Recommendations de Adobe Target y Adobe Target se pueden utilizar para enviar respuestas a páginas web, pero también se pueden utilizar en experiencias no basadas en HTML, como aplicaciones, pantallas, consolas, correos electrónicos, quioscos y otros dispositivos de visualización. En otras palabras, cuando no se pueden usar las bibliotecas de Target y JavaScript, la [API de envío de Target](/help/dev/implement/delivery-api/overview.md) sigue habilitando el acceso a toda la gama de funcionalidades de Target para ofrecer experiencias personalizadas.
+Las API de Adobe Target y Adobe Target Recommendations se pueden utilizar para enviar respuestas a páginas web, pero también se pueden utilizar en experiencias no basadas en HTML, como aplicaciones, pantallas, consolas, correos electrónicos, quioscos y otros dispositivos de visualización. En otras palabras, cuando no se pueden usar las bibliotecas de Target y JavaScript, la [API de envío de Target](/help/dev/implement/delivery-api/overview.md) sigue habilitando el acceso a toda la gama de funcionalidades de Target para ofrecer experiencias personalizadas.
 
 >[!NOTE]
 >
 >Al solicitar contenido que contenga recomendaciones reales (productos o artículos recomendados), utilice la API de envío de Target.
 
-Para recuperar recomendaciones, envíe una llamada al POST de la API de envío de Adobe Target con la información contextual adecuada, que puede incluir un ID de usuario (para su uso con recomendaciones específicas del perfil, como los artículos vistos recientemente por el usuario), un nombre de mbox relevante, parámetros de mbox, parámetros de perfil y otros atributos. La respuesta incluirá entity.ids recomendados (y pueden incluir otros datos de entidad) en formato JSON o de HTML, que luego se pueden mostrar en el dispositivo.
+Para recuperar las recomendaciones, envíe una llamada de POST de la API de envío de Adobe Target con la información contextual adecuada, que puede incluir un ID de usuario (para su uso con recomendaciones específicas del perfil, como los artículos vistos recientemente por el usuario), un nombre de mbox relevante, parámetros de mbox, parámetros de perfil y otros atributos. La respuesta incluirá entity.ids recomendados (y pueden incluir otros datos de entidad) en formato JSON o HTML, que luego se pueden mostrar en el dispositivo.
 
 La [API de envío](/help/dev/implement/delivery-api/overview.md) para Adobe Target expone todas las características existentes que proporciona una solicitud de Target estándar.
 
@@ -76,28 +76,26 @@ Recuerde configurar los parámetros de consulta correctamente. Por ejemplo, aseg
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 La respuesta incluye el ID de clave, así como los ID de entidad de las entidades recomendadas.
 
-El uso de la API de envío con Recommendations de esta manera le permite realizar pasos adicionales antes de mostrar recomendaciones al visitante en un dispositivo que no sea de HTML. Por ejemplo, puede tomar la respuesta de la API de envío para realizar una búsqueda adicional en tiempo real de los detalles de atributos de entidad (inventario, precio, calificación, etc.) de otro sistema (como un CMS, PIM o una plataforma de comercio electrónico) antes de mostrar los resultados finales.
+El uso de la API de envío con Recommendations de esta manera le permite realizar pasos adicionales antes de mostrar recomendaciones al visitante en un dispositivo que no sea de HTML. Por ejemplo, puede tomar la respuesta de la API de envío para realizar una búsqueda adicional en tiempo real de los detalles de atributos de entidad (inventario, precio, calificación, etc.) de otro sistema (como una plataforma de CMS, PIM o de comercio electrónico) antes de mostrar los resultados finales.
 
 Con el enfoque descrito en esta guía, puede hacer que cualquier aplicación aproveche la respuesta de Target para ofrecer recomendaciones personalizadas.
 
 ## Ejemplos de implementaciones
 
-Los siguientes recursos proporcionan ejemplos de varias implementaciones centradas en no HTML. Tenga en cuenta que cada implementación será única, debido al sistema y los dispositivos implicados.
+Los siguientes recursos proporcionan ejemplos de varias implementaciones no centradas en HTML. Tenga en cuenta que cada implementación será única, debido al sistema y los dispositivos implicados.
 
 | Recurso | Detalles |
 | --- | --- |
-| [Adobe Target en todas partes - Implementar Server Side o en IoT](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Summit 2019 Lab ofrece una experiencia práctica para una aplicación de React que aprovecha las API del lado del servidor de Adobe Target. |
-| [Adobe Target en una aplicación móvil sin el SDK de Adobe](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | Esta guía muestra cómo configurar Adobe Target en la aplicación móvil sin instalar el SDK de Adobe. Esta solución utiliza la vista web del SDK de Tealium y el módulo de comandos remotos para enviar y recibir solicitudes a la API de visitante de Adobe (Experience Cloud) y a la API de Adobe Target. |
-| [Configuración de la extensión de Target en el Experience Platform Launch e implementación de las API de Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Pasos para configurar la extensión de Target en Experience Platform Launch, añadir la extensión de Target a la aplicación e implementar las API de Target para solicitar actividades, recuperar previamente ofertas e introducir el modo de vista previa. |
+| [Configuración de la extensión de Target en Experience Platform Launch e Implementación de las API de Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Pasos para configurar la extensión de Target en Experience Platform Launch, añadir la extensión de Target a la aplicación e implementar las API de Target para solicitar actividades, recuperar previamente ofertas e introducir el modo de vista previa. |
 | [Cliente de nodo de Adobe Target](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | SDK v1.0 de Node.js de Target de código abierto |
-| [Información general del lado del servidor](../../implement/server-side/server-side-overview.md) | Información sobre las API de envío del servidor de Adobe Target, las API de envío por lotes del servidor, el SDK de Node.js y las API de Adobe Target Recommendations. |
-| [Recommendations de contenido de Adobe Campaign en el correo electrónico](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Blog que describe cómo aprovechar las recomendaciones de contenido en el correo electrónico mediante Adobe Target y Adobe I/O Runtime en Adobe Campaign. |
+| [Información general del lado del servidor](../../implement/server-side/server-side-overview.md) | Información sobre las API de envío del servidor de Adobe Target, las API de envío por lotes del servidor, Node.js, SDK y las API de Adobe Target Recommendations. |
+| [Recomendaciones de contenido de Adobe Campaign en el correo electrónico](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Blog que describe cómo aprovechar las recomendaciones de contenido en el correo electrónico mediante Adobe Target y Adobe I/O Runtime en Adobe Campaign. |
 
 ## Administración de la configuración de Recommendations con API
 
 La mayoría de las veces, las recomendaciones se configuran en la interfaz de usuario de Adobe Target y, a continuación, se utilizan o se accede a ellas a través de las API de Target, por motivos como los mencionados en las secciones anteriores. Esta coordinación IU-API es común. Sin embargo, a veces los usuarios pueden querer realizar todas las acciones a través de las API, tanto la configuración como el uso de los resultados. Aunque es mucho menos común, los usuarios pueden configurar, ejecutar, *y* absolutamente aprovechar los resultados de las recomendaciones completamente mediante las API.
 
-En una [sección anterior](manage-catalog.md) aprendimos a administrar entidades de Adobe Target Recommendations y a entregarlas en el servidor. Del mismo modo, [Adobe Developer Console](https://developer.adobe.com/console/home) le permite administrar criterios, promociones, colecciones y plantillas de diseño sin tener que iniciar sesión en Adobe Target. Se puede encontrar una lista completa de todas las API de Recommendations [aquí](https://developer.adobe.com/target/administer/recommendations-api/), pero aquí tiene un resumen para referencia.
+En una [sección anterior](manage-catalog.md) aprendimos a administrar entidades de Recommendations de Adobe Target y a entregarlas en el servidor. Del mismo modo, [Adobe Developer Console](https://developer.adobe.com/console/home) le permite administrar criterios, promociones, colecciones y plantillas de diseño sin tener que iniciar sesión en Adobe Target. Se puede encontrar una lista completa de todas las API de Recommendations [aquí](https://developer.adobe.com/target/administer/recommendations-api/), pero aquí tiene un resumen para referencia.
 
 | Recurso | Detalles |
 | --- | --- |

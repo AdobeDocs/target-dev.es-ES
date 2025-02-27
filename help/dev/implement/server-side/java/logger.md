@@ -1,9 +1,9 @@
 ---
-title: Inicialice el SDK de Java  [!DNL Adobe Target] para registrar solicitudes
-description: Obtenga información sobre cómo registrar solicitudes en el SDK de Java  [!DNL Adobe Target] Java.
+title: Inicialice  [!DNL Adobe Target] Java SDK para registrar solicitudes
+description: Obtenga información sobre cómo registrar solicitudes en  [!DNL Adobe Target] Java SDK.
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 4%
@@ -14,14 +14,14 @@ ht-degree: 4%
 
 ## Descripción
 
-Al [inicializar el SDK](initialize-sdk.md), existen varias opciones en el objeto `ClientConfig`, que se pueden configurar para registrar solicitudes.
+Al [inicializar SDK](initialize-sdk.md), existen varias opciones en el objeto `ClientConfig`, que se pueden configurar para registrar solicitudes.
 
 | Opción | Descripción |
 | --- | --- |
 | `logRequests` | Registra todo el cuerpo de la solicitud, así como el cuerpo de la respuesta. |
 | `logRequestStatus` | Registra la dirección URL de la solicitud, el estado junto con el tiempo de respuesta. |
 
-[!DNL Target] El SDK de Java utiliza el registro `slf4j`. Debe proporcionar la implementación del registrador como `java.util.logging`, `logback` y `log4j`. Consulte [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) para obtener más información. Todos los registros se imprimirán en `debug`.
+[!DNL Target] Java SDK usa el registro `slf4j`. Debe proporcionar la implementación del registrador como `java.util.logging`, `logback` y `log4j`. Consulte [https://www.slf4j.org/manual.html](https://www.slf4j.org/manual.html) para obtener más información. Todos los registros se imprimirán en `debug`.
 
 ## Ejemplo
 

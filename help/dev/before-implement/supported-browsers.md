@@ -4,10 +4,10 @@ description: Conozca qué exploradores de Internet [!DNL Adobe Target] admiten p
 title: ¿Qué exploradores admiten  [!DNL Target] ?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
+source-git-commit: 1b6dcb24d677b758ed1daf85dc0a7e9e5b42680d
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 23%
+source-wordcount: '421'
+ht-degree: 20%
 
 ---
 
@@ -21,10 +21,24 @@ Para obtener información más importante acerca de TLS, vea [Cambios en el cifr
 
 La interfaz [!DNL Target] es compatible con los siguientes exploradores y dispositivos:
 
+>[!NOTE]
+>
+>Target admite la última versión de cada explorador enumerado y la última versión menos 1.
+
+
 | Tipo de dispositivo | Versión del navegador |
 |--- |--- |
-| Windows | <ul><li>Microsoft Edge</li><li>Google Chrome (última versión, última menos 1)</li><li>Mozilla Firefox (última versión, menos 1)</li></ul> |
-| Mac | <ul><li>Firefox (último, último menos 1)</li><li>Chrome (última versión, menos 1)</li></ul> |
+| [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+
+## Requisitos de edición visual
+
+Para poder abrir, crear y obtener una vista previa de las páginas web de forma fiable en [!UICONTROL Visual Experience Composer] (VEC), debe tener instalada la extensión de explorador [Ayuda de edición visual de Adobe Experience Cloud](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} en el explorador web o usar [!UICONTROL Enhanced Experience Composer (EEC)].
+
+>[!NOTE]
+>
+>[!DNL Google Chrome] y [!DNL Microsoft Edge] son actualmente los únicos exploradores que admiten la edición visual de páginas web en [!DNL Adobe Target].
+
 
 ## Entrega de contenido
 

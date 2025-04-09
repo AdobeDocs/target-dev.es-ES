@@ -4,9 +4,9 @@ description: Trabaje con [!UICONTROL Adobe Client Care] para implementar la comp
 title: ¿Cómo utilizo CNAME en Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: a36826202c5baa47f95a88c7b29c0d114901e6fa
+source-git-commit: 1a78a1e2750ae906338e91ff24ac16cdc99323ba
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1165'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,7 @@ Sin embargo, después de cambiar el nombre de host en el código de implementaci
 
 ### ¿Qué tipo de clave y algoritmo de firma de certificado se utiliza para mi implementación CNAME?
 
-De forma predeterminada, todos los certificados son RSA SHA-256 y las claves son RSA de 2048 bits. Actualmente no se admiten tamaños de clave de más de 2048 bits.
+De forma predeterminada, todos los certificados son RSA SHA-256 y las claves son RSA de 2048 bits. Los tamaños de clave superiores a 2048 bits deben solicitarse explícitamente a través de [!UICONTROL Customer Care].
 
 ### ¿Cómo puedo validar que mi implementación CNAME está lista para el tráfico?
 

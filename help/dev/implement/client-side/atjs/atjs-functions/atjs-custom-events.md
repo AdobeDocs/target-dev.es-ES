@@ -50,4 +50,4 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 
 Vea el siguiente vídeo para aprender a utilizar los tokens de respuesta y los eventos personalizados de at.js con el fin de compartir información de perfil de [!DNL Target] con sistemas de terceros.
 
->[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33709/?quality=12&captions=spa)

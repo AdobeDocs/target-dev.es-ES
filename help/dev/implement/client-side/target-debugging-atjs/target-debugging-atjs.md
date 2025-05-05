@@ -25,12 +25,12 @@ Los siguientes vídeos le guían a través del proceso de depuración:
 
 ### Agregar la extensión de Adobe Experience Cloud Debugger ![Distintivo de información general](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23114/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33688/?quality=12&captions=spa)
 
 ### Depuración básica de Adobe Target con Adobe Experience Cloud Debugger ![distintivo de información general](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23115/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33706/?quality=12&captions=spa)
 
 ### Mbox Trace ![Distintivo de información general](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23113/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33707/?quality=12&captions=spa)

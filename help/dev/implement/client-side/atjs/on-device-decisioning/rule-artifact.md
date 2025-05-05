@@ -1,6 +1,6 @@
 ---
 keywords: implementación, biblioteca javascript, js, atjs, toma de decisiones en el dispositivo, toma de decisiones en el dispositivo, artefacto de regla, $8
-description: Obtenga información acerca del artefacto de regla JSON usado por [!UICONTROL on-device decisioning]].
+description: Obtenga información acerca del artefacto de regla JSON usado por [!UICONTROL on-device decisioning]&rbrack;.
 title: ¿Qué hace el artefacto de regla JSON en la toma de decisiones en el dispositivo?
 feature: at.js
 exl-id: 14413ccf-b55e-48a8-a474-4401eb1b50fc

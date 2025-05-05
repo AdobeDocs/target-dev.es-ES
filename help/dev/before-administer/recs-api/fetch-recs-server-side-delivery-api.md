@@ -68,6 +68,7 @@ La sintaxis de la [API de envío](/help/dev/implement/delivery-api/overview.md) 
    * los objetos **browser** y **address** se quitaron de **Body**, ya que no son necesarios para los casos de uso que no son de HTML
    * *api_charter* aparece como el nombre de la ubicación en este ejemplo
    * se especifica entity.id, ya que esta recomendación se basa en la Similitud de contenido, que requiere que se pase a Target una clave de elemento actual.
+
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 Recuerde configurar los parámetros de consulta correctamente. Por ejemplo, asegúrese de especificar `{{CLIENT_CODE}}` según sea necesario. &lt;!— P: En la sintaxis de llamada actualizada, entity.id se muestra como profileParameter en lugar de mboxParameter, como en versiones anteriores. —> &lt;!— P: Imagen antigua ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Texto acompañante antiguo: &quot;Tenga en cuenta que esta recomendación se basa en productos similares de contenido basados en entity.id enviados mediante mboxParameters.&quot; —>
      ![client-code3](assets/client-code3.png)

@@ -317,7 +317,7 @@ Los clientes pueden especificar un nombre de mbox global mediante **[!UICONTROL 
 
 Sí, los eventos personalizados de at.js también son aplicables en `triggerView()`.
 
-### Indica que cuando llamo a `triggerView()` con &amp;lbrace;`"page" : "true"`&amp;rbrace;, enviará una notificación al servidor de [!DNL Target] y aumentará la impresión. ¿También provoca que se ejecuten los scripts de perfil?
+### Indica que cuando llamo a `triggerView()` con &lbrace;`"page" : "true"`&rbrace;, enviará una notificación al servidor de [!DNL Target] y aumentará la impresión. ¿También provoca que se ejecuten los scripts de perfil?
 
 Cuando se realiza una llamada de recuperación previa al back-end de [!DNL Target], se ejecutan los scripts de perfil. A partir de ahí, los datos de perfil afectados se cifran y se devuelven al cliente. Después de la invocación de `triggerView()` con `{"page": "true"}`, se envía una notificación junto con los datos de perfil cifrados. Es entonces cuando el back-end de [!DNL Target] descifra los datos de perfil y los almacena en las bases de datos.
 

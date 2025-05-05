@@ -62,7 +62,7 @@ La documentación del SDK del lado del servidor [!DNL Adobe Target] le ayuda a i
 Mediante los SDK del lado del servidor de [!DNL Adobe Target], puede:
 
 * Ejecute **marcas de características**, **despliegues** y **experimentos A/B** con **latencia cercana a cero**.
-* SPA Entregue experiencias en **la web**, incluidos **** y **canales móviles**, así como en **dispositivos con Internet de las cosas (IoT)** que no usen explorador, como un televisor conectado, un quiosco o una pantalla digital en la tienda.
+* SPA Entregue experiencias en **la web**, incluidos **&#x200B;**&#x200B;y **canales móviles**, así como en **dispositivos con Internet de las cosas (IoT)** que no usen explorador, como un televisor conectado, un quiosco o una pantalla digital en la tienda.
 * Ofrezca **experiencias personalizadas impulsadas por el aprendizaje automático** a un usuario, sin importar el canal o el dispositivo que el usuario haya interactuado con su empresa.
 * **Se integra sin problemas con productos de Adobe Experience Cloud** como **Adobe Analytics**, **Adobe Audience Manager** y el **servicio de ID de Experience Cloud** desde el servidor.
 

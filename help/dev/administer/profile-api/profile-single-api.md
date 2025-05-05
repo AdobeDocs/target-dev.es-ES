@@ -37,15 +37,15 @@ Especifique los parámetros de perfil en el formato `profile.paramName=value`.
 
 Para actualizar el perfil de un(a) `pcId`, use:
 
-``````
-https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
-``````
+``` ```
+https://&lt;your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
+``` ```
 
 Para actualizar el perfil de un(a) `mbox3rdPartyId`, use:
 
-``````
-shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
-``````
+``` ```
+shell http://&lt;your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
+``` ```
 
 [!UICONTROL Single Profile Update API] es solo para actualizaciones. Si no se encuentra nada, no se crea ningún perfil.
 

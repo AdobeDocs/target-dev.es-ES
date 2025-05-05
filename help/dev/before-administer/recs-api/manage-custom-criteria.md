@@ -17,7 +17,7 @@ ht-degree: 0%
 
 A veces, los algoritmos proporcionados por Recommendations no pueden mostrar elementos concretos que desea promocionar. En tal situación, los criterios personalizados proporcionan una forma de proporcionar un conjunto específico de elementos recomendados para un elemento o categoría clave determinada.
 
-Para crear criterios personalizados, defina e importe la asignación deseada entre el elemento o la categoría clave y los elementos recomendados. Este proceso se describe en la [documentación de criterios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Como se indica en esa documentación, puede crear, editar y eliminar criterios personalizados a través de la interfaz de usuario (IU) de Target. Sin embargo, Target también proporciona un conjunto de API de criterios personalizados que permiten una administración más detallada de los criterios personalizados.
+Para crear criterios personalizados, defina e importe la asignación deseada entre el elemento o la categoría clave y los elementos recomendados. Este proceso se describe en la [documentación de criterios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=es). Como se indica en esa documentación, puede crear, editar y eliminar criterios personalizados a través de la interfaz de usuario (IU) de Target. Sin embargo, Target también proporciona un conjunto de API de criterios personalizados que permiten una administración más detallada de los criterios personalizados.
 
 >[!WARNING]
 >
@@ -31,7 +31,7 @@ Para crear criterios personalizados con la API [Crear criterios personalizados](
 
 >[!WARNING]
 >
->Los criterios personalizados creados con la API Crear criterio personalizado, tal como se describe en este ejercicio, aparecerán en la interfaz de usuario, donde persistirán. No podrá editarlos ni eliminarlos de la interfaz de usuario. Puede editarlos o eliminarlos **mediante la API**, pero de cualquier forma seguirán apareciendo en la interfaz de usuario de Target. Para mantener la opción de editar o eliminar de la interfaz de usuario, cree los criterios personalizados usando la interfaz de usuario para [la documentación](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html), en lugar de usar la API Crear criterios personalizados.
+>Los criterios personalizados creados con la API Crear criterio personalizado, tal como se describe en este ejercicio, aparecerán en la interfaz de usuario, donde persistirán. No podrá editarlos ni eliminarlos de la interfaz de usuario. Puede editarlos o eliminarlos **mediante la API**, pero de cualquier forma seguirán apareciendo en la interfaz de usuario de Target. Para mantener la opción de editar o eliminar de la interfaz de usuario, cree los criterios personalizados usando la interfaz de usuario para [la documentación](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=es), en lugar de usar la API Crear criterios personalizados.
 
 Solo continúe con los siguientes pasos después de haber leído la advertencia anterior y de sentirse cómodo con la creación de nuevos criterios personalizados que no se puedan eliminar posteriormente de la interfaz de usuario.
 

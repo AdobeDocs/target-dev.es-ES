@@ -148,7 +148,7 @@ Para admitir visitantes de Safari, se &quot;deshabilitaría&quot; (solo establec
 
 ## ¿Puedo usar Target [!UICONTROL Visual Experience Composer] (VEC) en mis aplicaciones de una sola página?
 
-Sí, puede utilizar el VEC para su SPA si usa at.js 2.x. Para obtener más información, consulte [Compositor de experiencias visuales de una sola página (SPA)](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html).
+Sí, puede utilizar el VEC para su SPA si usa at.js 2.x. Para obtener más información, consulte [Compositor de experiencias visuales de una sola página (SPA)](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=es).
 
 ## ¿Puedo usar Adobe Experience Cloud Debugger con implementaciones de at.js?
 
@@ -239,7 +239,7 @@ Tenga en cuenta que para los tokens de respuesta y los ID de sesión transmitido
 * Rastrean sesiones de comunicación
 * Están compuestos por caracteres aleatorios
 * Los ID de sesión son válidos durante 30 minutos
-* Se pueden deshabilitar los tokens de respuesta ([tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
+* Se pueden deshabilitar los tokens de respuesta ([tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=es))
 * Solo son útiles en el entorno de las soluciones de Adobe.
 
 Se espera ver el encabezado `Access-Control-Allow-Origin` con el valor &quot;*&quot; en las solicitudes at.js, ya que son públicas, no se requiere autenticación y es necesario acceder a Adobe Edge Network desde cualquier dominio a través de llamadas JavaScript.

@@ -24,7 +24,7 @@ ht-degree: 22%
 
 Las *ubicaciones de target* también se denominan mbox. Una ubicación identificada en la aplicación se habilita para realizar pruebas o personalizaciones (por ejemplo, el mensaje de bienvenida de la pantalla de inicio). Estas ubicaciones se identifican durante el proceso de creación de la prueba.
 
-Una *[métrica de éxito](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)* es una acción realizada por el usuario que identifica si una actividad específica se realizó correctamente (como iniciar sesión, realizar una compra o reservar un ticket, entre otras).
+Una *[métrica de éxito](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=es)* es una acción realizada por el usuario que identifica si una actividad específica se realizó correctamente (como iniciar sesión, realizar una compra o reservar un ticket, entre otras).
 
 ![imagen alt](assets/mobile-target-location.png)
 

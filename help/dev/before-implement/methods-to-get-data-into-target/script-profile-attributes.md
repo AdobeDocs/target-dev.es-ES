@@ -54,4 +54,4 @@ user.purchase_recency: var dayInMillis = 3600 * 24 * 1000; if (mbox.name
 
 ### Vínculos a información relevante
 
-[Atributos de script de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html#concept_8C07AEAB0A144FECA8B4FEB091AED4D2)
+[Atributos de script de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=es#concept_8C07AEAB0A144FECA8B4FEB091AED4D2)

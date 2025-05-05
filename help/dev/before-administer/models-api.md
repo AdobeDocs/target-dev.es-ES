@@ -14,7 +14,7 @@ ht-degree: 2%
 
 La API de modelos, también denominada API de Lista de bloqueados, permite a los usuarios ver y administrar la lista de características utilizadas en los modelos de aprendizaje automático para las actividades [!UICONTROL Automated Personalization] (AP) y [!DNL Auto-Target] (AT). Si un usuario desea excluir una función de la utilización por parte de los modelos para actividades AP o AT, puede utilizar la API de modelos para añadir esa función a la &quot;lista de bloqueados&quot;.
 
-Un(a) **[!UICONTROL blocklist]** define el conjunto de características que [!DNL Adobe Target] excluirá de sus modelos de aprendizaje automático. Para obtener más información sobre las características, consulte [Datos utilizados por [!DNL Target] algoritmos de aprendizaje automático](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
+Un(a) **[!UICONTROL blocklist]** define el conjunto de características que [!DNL Adobe Target] excluirá de sus modelos de aprendizaje automático. Para obtener más información sobre las características, consulte [Datos utilizados por [!DNL Target] algoritmos de aprendizaje automático](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=es).
 
 Las listas de bloqueados se pueden definir por actividad (nivel de actividad) o para todas las actividades de una cuenta de [!DNL Target] (nivel global).
 
@@ -100,7 +100,7 @@ En el ejemplo que se muestra a continuación, el usuario comprueba la lista de f
 >
 >Para encontrar el ID de actividad de su actividad, vaya a la lista de actividades en la interfaz de usuario de [!DNL Target]. Haga clic en la actividad que le interese. El ID de actividad se muestra en el cuerpo de la página de Información general de las actividades resultantes, así como al final de la dirección URL de esa página.
 
-**[!UICONTROL externalName]** es un nombre descriptivo para una característica. Lo crea [!DNL Target] y es posible que este valor cambie con el tiempo. Los usuarios pueden ver estos nombres descriptivos en el [informe de perspectivas de Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
+**[!UICONTROL externalName]** es un nombre descriptivo para una característica. Lo crea [!DNL Target] y es posible que este valor cambie con el tiempo. Los usuarios pueden ver estos nombres descriptivos en el [informe de perspectivas de Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=es).
 
 **[!UICONTROL internalName]** es el identificador real de la característica. También lo creó [!DNL Target], pero no se puede cambiar. Este es el valor al que deberá hacer referencia para identificar las funciones a las que desea hacer lista de bloqueados.
 

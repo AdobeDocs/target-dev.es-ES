@@ -38,7 +38,7 @@ Al habilitar la toma de decisiones en el dispositivo, se garantiza que una activ
 
 >[!NOTE]
 >
->Debe tener el rol de administrador o aprobador [usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar la opción de toma de decisiones en el dispositivo.
+>Debe tener el rol de administrador o aprobador [usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para habilitar o deshabilitar la opción de toma de decisiones en el dispositivo.
 
 Después de habilitar la opción **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] comienza a generar artefactos de regla para el cliente.
 

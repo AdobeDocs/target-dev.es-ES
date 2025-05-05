@@ -68,8 +68,8 @@ targetPageParams (sustituye los parámetros en el mbox global de la página):
 
 ## Vínculos a información relevante
 
-Recommendations: [implementación según el tipo de página](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html)
+Recommendations: [implementación según el tipo de página](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=es)
 
 Confirmación del pedido: [Rastrear conversiones](../../implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)
 
-Afinidad de la categoría: [afinidad de la categoría](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html)
+Afinidad de la categoría: [afinidad de la categoría](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=es)

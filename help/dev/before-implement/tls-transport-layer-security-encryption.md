@@ -29,7 +29,7 @@ TLS 1.2 es el predeterminado a partir del 1 de marzo de 2020 y TLS 1.1 ya no ser
 
 Adobe realizará la migración de sus clientes por etapas a TLS 1.2. Para aquellos cuyos dominios ya cumplan con 1.2, los pasaremos a TLS 1.2 sin que usted tenga que hacer ningún cambio. La mayoría de los dominios de los clientes ya son compatibles con TLS 1.2; sin embargo, si su dominio no es compatible con TLS 1.2, mantendremos esos dominios en TLS 1.1 como en el día de hoy (hasta marzo de 2020).
 
-No debería tener ningún problema durante esta fase de migración. Si el VEC ha dejado de cargar un sitio que anteriormente funcionaba, [abra un ticket de atención al cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C) citando esta migración como causa posible.
+No debería tener ningún problema durante esta fase de migración. Si el VEC ha dejado de cargar un sitio que anteriormente funcionaba, [abra un ticket de atención al cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es&#reference_ACA3391A00EF467B87930A450050077C) citando esta migración como causa posible.
 
 Si, sin embargo, es uno de los clientes que están en TSL 1.1 sin admitir TLS 1.2, debería planificar la migración de sus dominios e infraestructura a TLS 1.2. Seguiremos admitiendo el protocolo TLS 1.1 hasta el lunes, 01 de marzo de 2020. A partir del 1 de marzo de 2020, [!DNL Target] no admitirá el protocolo TLS 1.1 que se utilizará para el VEC mediante la capacidad del Compositor de experiencias mejorado.
 

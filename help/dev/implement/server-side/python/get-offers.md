@@ -51,7 +51,7 @@ Devuelve un(a) `TargetDeliveryResponse` si se llama sincrónicamente (predetermi
 | target_location_hint_cookie | dict | [!DNL Target] cookie de indicio de ubicación |
 | analytics_details | list[AnalyticsResponse] | Carga útil de Analytics, en caso de uso de Analytics por parte del cliente |
 | trazar | list[dict] | Datos de seguimiento agregados para todos los mboxes o vistas de solicitud |
-| response_tokens | list[dict] | Lista de [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) en línea |
+| response_tokens | list[dict] | Lista de [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=es) en línea |
 | meta | dict | Metadatos de toma de decisiones adicionales para su uso con la toma de decisiones en el dispositivo |
 
 Los objetos `target_cookie` y `target_location_hint_cookie` utilizados para devolver datos al explorador tienen la siguiente estructura:

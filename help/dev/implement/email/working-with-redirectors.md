@@ -56,13 +56,13 @@ Antes de poder usar un redirector, debe crearlo.
 
    >[!WARNING]
    >
-   >Tenga en cuenta que con el redirector puede estar expuesto a un riesgo de vulnerabilidad de redireccionamiento abierto. Para evitar el uso no autorizado de vínculos de redirector por parte de terceros, Adobe recomienda utilizar &quot;hosts autorizados&quot; para la lista de permitidos de los dominios de URL de redireccionamiento predeterminados. [!DNL Target] usa hosts para la lista de permitidos de dominios a los que desea permitir redirecciones. Para obtener más información, consulte [Crear Listas de permitidos que especifiquen hosts con autorización para enviar llamadas de mbox a [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) en *Hosts*.
+   >Tenga en cuenta que con el redirector puede estar expuesto a un riesgo de vulnerabilidad de redireccionamiento abierto. Para evitar el uso no autorizado de vínculos de redirector por parte de terceros, Adobe recomienda utilizar &quot;hosts autorizados&quot; para la lista de permitidos de los dominios de URL de redireccionamiento predeterminados. [!DNL Target] usa hosts para la lista de permitidos de dominios a los que desea permitir redirecciones. Para obtener más información, consulte [Crear Listas de permitidos que especifiquen hosts con autorización para enviar llamadas de mbox a [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=es#allowlist) en *Hosts*.
 
 1. Valide el redirector.
    1. *Práctica recomendada de seguridad*: Asegúrese de que el dominio usado en el redirector esté incluido en la lista de permitidos, como se ha indicado anteriormente. Si utiliza un dominio que no está incluido en la lista de permitidos, el Adobe bloqueará cualquier llamada a ese dominio para evitar que agentes malintencionados utilicen el redirector para redirigir a dominios potencialmente malintencionados.
    2. Inserte la dirección URL del redirector en un navegador y actualícelo.
    3. Inicie sesión en la cuenta, actualice la lista de mboxes y confirme que el nuevo redirector aparece enumerado en la cuenta.
-1. Si va a comprobar diferentes destinos para un anuncio, cree [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html) para cada versión.
+1. Si va a comprobar diferentes destinos para un anuncio, cree [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=es) para cada versión.
 1. Cree la campaña.
 
    Consulte [Implementaciones no basadas en JavaScript](/help/dev/implement/email/overview.md) para saber cuál es la configuración apropiada para alcanzar sus metas.

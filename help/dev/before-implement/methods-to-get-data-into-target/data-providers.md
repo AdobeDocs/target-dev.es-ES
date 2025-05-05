@@ -53,5 +53,5 @@ Documentación: [Proveedores de datos](../../implement/client-side/atjs/atjs-fun
 
 ## Vídeos de formación:
 
-* [Uso de Proveedores de datos en Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html)
-* [Implementación de Proveedores de datos en Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html)
+* [Uso de Proveedores de datos en Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=es)
+* [Implementación de Proveedores de datos en Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=es)

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Información y una lista actualizada de hosts que le ayudarán a realizar la lista de permitidos de [!DNL Adobe Target] perímetros.
 
-Un perímetro es una arquitectura de servidores distribuidos geográficamente que garantiza tiempos de respuesta óptimos para usuarios finales que solicitan contenido desde cualquier ubicación. Cada nodo perimetral tiene toda la información necesaria para responder a la solicitud de contenido del usuario y realizar un seguimiento de los datos de análisis de esa solicitud. Las solicitudes de los usuarios se dirigen al nodo perimetral más cercano. Para obtener más información, consulte [La red perimetral](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
+Un perímetro es una arquitectura de servidores distribuidos geográficamente que garantiza tiempos de respuesta óptimos para usuarios finales que solicitan contenido desde cualquier ubicación. Cada nodo perimetral tiene toda la información necesaria para responder a la solicitud de contenido del usuario y realizar un seguimiento de los datos de análisis de esa solicitud. Las solicitudes de los usuarios se dirigen al nodo perimetral más cercano. Para obtener más información, consulte [La red perimetral](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=es#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
 
 Si lo desea, puede realizar la lista de permitidos de [!DNL Target] nodos perimetrales.
 
@@ -23,7 +23,7 @@ Si lo desea, puede realizar la lista de permitidos de [!DNL Target] nodos perime
 >
 >Además de la inclusión en la lista de permitidos de las direcciones IP de traducción de direcciones de red (NAT) de [!DNL Target] extremos y [!DNL Target] direcciones IP perimetrales que se describen en el artículo, también debe realizar la lista de permitidos de todos los [!DNL Adobe Analytics] bloques de direcciones IP.
 >
->Para obtener más información, consulte [Todos los bloques de direcciones IP de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank} en la documentación de *Notas técnicas de Adobe Analytics*.
+>Para obtener más información, consulte [Todos los bloques de direcciones IP de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=es#all-adobe-analytics-ip-address-blocks){target=_blank} en la documentación de *Notas técnicas de Adobe Analytics*.
 >
 >Se está actualizando la infraestructura de [!DNL Adobe Target] y los clientes que deseen direcciones de lista de permitidos deben utilizar ambos conjuntos de direcciones IP. Si no se hace esto, esto afectará a los clientes que usan implementaciones del lado del servidor o híbridas en las que las llamadas de la API de Target para recuperar experiencias se originan dentro de una red detrás de un firewall configurado para usar una lista de permitidos.
 >

@@ -24,6 +24,6 @@ Hay muchas diferencias entre un mbox normal (mbox no global) y el mbox global, e
 | Un mbox normal suele encapsular contenido con una etiqueta `<DIV>`. | El mbox global está “vacío” y no encapsula ningún contenido. |
 | El contenido de una sola actividad puede entregarse en un mbox normal. | El contenido de varias actividades puede entregarse en una sola respuesta a un mbox global. |
 
-Si se envían varias actividades a través del mbox global o a través de varios mboxes normales, el objetivo [determina la prioridad](https://experienceleague.adobe.com/docs/target/using/activities/priority.html) mediante la cual la actividad (o actividades) se envía a una página web.
+Si se envían varias actividades a través del mbox global o a través de varios mboxes normales, el objetivo [determina la prioridad](https://experienceleague.adobe.com/docs/target/using/activities/priority.html?lang=es) mediante la cual la actividad (o actividades) se envía a una página web.
 
 Pueden enviarse a [!DNL Target] datos adicionales a nivel de página junto con el mbox global con la función `[!UICONTROL targetPageParams]`. Esta opción es parecida a la funcionalidad de parámetro de mbox. Para obtener más información, consulte [Transferencia de parámetros a un mbox global](/help/dev/implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md).

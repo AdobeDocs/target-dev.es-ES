@@ -39,7 +39,7 @@ Para obtener ayuda para seleccionar la configuración adecuada, consulte [Implem
 
      Debe tener codificación de dirección URL y ser una referencia absoluta. Puede usar la [Referencia de codificación de la dirección URL del HTML](https://www.w3schools.com/tags/ref_urlencode.asp) para codificar rápidamente sus direcciones URL.
 
-1. Cree [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html) para cada imagen alternativa.
+1. Cree [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=es) para cada imagen alternativa.
 
    >[!NOTE]
    >

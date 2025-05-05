@@ -71,11 +71,11 @@ Vínculo a atributos de entidad para actualizar el catálogo de productos de [!D
 
 **Lecturas**
 
-* [Atributos de entidad](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [Atributos de entidad](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=es){target=_blank}
 
 **Consideraciones**
 
-* Una forma alternativa de pasar atributos de entidad es actualizar el catálogo de productos en la interfaz de usuario de [!DNL Target] para usar [fuentes de productos de Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
+* Una forma alternativa de pasar atributos de entidad es actualizar el catálogo de productos en la interfaz de usuario de [!DNL Target] para usar [fuentes de productos de Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=es){target=_blank}.
 * El paso de atributos de entidad solo es aplicable en páginas donde los datos del catálogo de productos están disponibles en la capa de datos.
 * Pasar el parámetro `entity.event.detailsOnly=true` en cualquier llamada tiene prioridad.
 

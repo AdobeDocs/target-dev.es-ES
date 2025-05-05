@@ -15,13 +15,13 @@ Este proyecto ha adoptado el [Código de conducta de Adobe Open Source](code-of-
 
 ## Acerca de las contribuciones al contenido de Adobe
 
-Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=es).
 
 La manera en que contribuya depende de quién sea y del tipo de cambios con los que desee contribuir:
 
 ### Cambios menores
 
-Si va a contribuir con actualizaciones menores positivas, visite el artículo y haga clic en el vínculo **Editar** del artículo que va al origen de GitHub. A continuación, utilice la interfaz de usuario de GitHub para realizar los cambios. Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) general para obtener más información.
+Si va a contribuir con actualizaciones menores positivas, visite el artículo y haga clic en el vínculo **Editar** del artículo que va al origen de GitHub. A continuación, utilice la interfaz de usuario de GitHub para realizar los cambios. Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=es) general para obtener más información.
 
 Las correcciones menores o las aclaraciones que envíe para la documentación y los ejemplos de código en este repositorio están sujetos a las condiciones de uso de Adobe.
 
@@ -43,7 +43,7 @@ Si es un redactor técnico, administrador de programa o desarrollador del equipo
 
 Los colaboradores de la comunidad pueden utilizar la IU de GitHub para hacer cambios básicos o para que el repositorio realice contribuciones importantes.
 
-Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) para obtener más detalles.
+Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=es) para obtener más detalles.
 
 ## Usar Markdown para dar formato al tema
 

@@ -37,7 +37,7 @@ Se espera que se pueda acceder a [!DNL Target] desde cualquier dominio a través
 
 ### ¿Cómo puedo permitir o evitar que mi sitio se incruste como un iFrame en dominios extranjeros?
 
-Para permitir que [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) incruste el sitio web en un iFrame, se debe cambiar el CSP (si está configurado) en la configuración del servidor web. Los dominios de [!DNL Adobe] deben estar en la lista blanca y configurados.
+Para permitir que [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es){target=_blank} (VEC) incruste el sitio web en un iFrame, se debe cambiar el CSP (si está configurado) en la configuración del servidor web. Los dominios de [!DNL Adobe] deben estar en la lista blanca y configurados.
 
 Por motivos de seguridad, es posible que desee evitar que el sitio se incruste como un iFrame en dominios externos.
 

@@ -19,7 +19,7 @@ Lista de las preguntas más frecuentes (FAQ) sobre los mboxes globales.
 
 Se admite un único mbox global en su cuenta.
 
-Puede limitar dónde se ejecutan sus actividades añadiéndoles reglas de URL. Para obtener más información, vea [Incluir la misma experiencia en páginas similares](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html).
+Puede limitar dónde se ejecutan sus actividades añadiéndoles reglas de URL. Para obtener más información, vea [Incluir la misma experiencia en páginas similares](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=es).
 
 También puede pasar un parámetro en la página usando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) y, a continuación, seleccionar esos parámetros en la sección &quot;configurar URL&quot; del [!UICONTROL Visual Experience Composer] (VEC) o agregando los parámetros como &quot;refinamientos&quot; en el [!UICONTROL Form-Based Experience Composer].
 

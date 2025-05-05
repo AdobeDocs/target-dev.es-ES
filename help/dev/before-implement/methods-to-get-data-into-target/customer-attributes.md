@@ -43,8 +43,8 @@ Se requiere la implementación del Experience Cloud ID (ECID).
 
 ## Ejemplos de código
 
-Encontrará información detallada en [Crear un origen de atributos del cliente y cargar el archivo de datos](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html).
+Encontrará información detallada en [Crear un origen de atributos del cliente y cargar el archivo de datos](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=es).
 
 ### Vínculos a información relevante
 
-[Cree un origen de atributo de cliente y cargue el archivo de datos](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html).
+[Cree un origen de atributo de cliente y cargue el archivo de datos](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=es).

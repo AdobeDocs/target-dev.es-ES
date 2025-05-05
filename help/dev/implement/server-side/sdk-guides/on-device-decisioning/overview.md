@@ -42,7 +42,7 @@ El diagrama siguiente muestra la arquitectura de [!UICONTROL on-device decisioni
 
 ### Actividades
 
-La toma de decisiones en el dispositivo admite los siguientes tipos de actividades creadas por el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html):
+La toma de decisiones en el dispositivo admite los siguientes tipos de actividades creadas por el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es):
 
 * [!UICONTROL A/B Test]
 * [!UICONTROL Experience Targeting] (XT)
@@ -59,17 +59,17 @@ La toma de decisiones en el dispositivo admite las siguientes reglas de audienci
 
 | Regla de audiencia | Toma de decisiones en el dispositivo |
 | --- | --- |
-| [Ubicación geográfica](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Sí<P>Al utilizar la toma de decisiones en el dispositivo, se admiten los siguientes atributos geográficos:<ul><li>País/región</li><li>Ciudad</li><li>Latitud</li><li>Longitud</li></ul> |
-| [Red](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | No |
-| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | No |
-| [Parámetros personalizados](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | Sí |
-| [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | Sí |
-| [Páginas del sitio](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | Sí |
-| [Explorador](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | Sí |
-| [Perfil del visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | No |
-| [Fuentes de tráfico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | No |
-| [Lapso de tiempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Sí |
-| [Audiencias de Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Audiencias de Adobe Audience Manager, Adobe Analytics y Adobe Experience Manager | No |
+| [Ubicación geográfica](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=es) | Sí<P>Al utilizar la toma de decisiones en el dispositivo, se admiten los siguientes atributos geográficos:<ul><li>País/región</li><li>Ciudad</li><li>Latitud</li><li>Longitud</li></ul> |
+| [Red](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=es) | No |
+| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=es) | No |
+| [Parámetros personalizados](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=es) | Sí |
+| [Sistema operativo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=es) | Sí |
+| [Páginas del sitio](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=es) | Sí |
+| [Explorador](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=es) | Sí |
+| [Perfil del visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=es) | No |
+| [Fuentes de tráfico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=es) | No |
+| [Lapso de tiempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=es) | Sí |
+| [Audiencias de Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=es) (Audiencias de Adobe Audience Manager, Adobe Analytics y Adobe Experience Manager | No |
 
 ## ¿Cómo aprovisiono a mi cliente para que use [!UICONTROL on-device decisioning]?
 

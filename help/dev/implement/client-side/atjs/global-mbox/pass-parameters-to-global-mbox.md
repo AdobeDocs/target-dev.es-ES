@@ -29,7 +29,7 @@ Puede pasar parámetros a `target-global-mbox` mediante la función `targetPageP
 * Un objeto JSON
 * Una lista delimitada por Y comerciales
 
-Use estos tres métodos para verificar que los parámetros se estén pasando correctamente. También podría verificar el paso de parámetros con [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html).
+Use estos tres métodos para verificar que los parámetros se estén pasando correctamente. También podría verificar el paso de parámetros con [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/debugger/using/experience-cloud-debugger.html?lang=es).
 
 Debe definir la función de JavaScript antes de añadir el mbox global a la página. El nombre debe ser `targetPageParams`.
 

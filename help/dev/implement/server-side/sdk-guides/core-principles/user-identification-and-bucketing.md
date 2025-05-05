@@ -21,7 +21,7 @@ Hay varias maneras de identificar a un usuario dentro de [!DNL Adobe Target]. [!
 | `tntID` | `tntId` es el identificador principal de [!DNL Target] para un usuario. Puede proporcionar este identificador o [!DNL Target] lo generará automáticamente si la solicitud no contiene uno. |
 | `thirdPartyId` | El `thirdPartyId` es el identificador de su compañía para el usuario, el cual puede enviar con cada llamada. Cuando un usuario inicia sesión en el sitio de una empresa, esta generalmente crea un ID vinculado a la cuenta del visitante, la tarjeta de fidelidad, el número de pertenencia u otros identificadores aplicables para esa empresa. |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId` se usa para combinar y compartir datos entre distintas soluciones de Adobe. Se requiere marketingCloudVisitorId para las integraciones con Adobe Analytics y Adobe Audience Manager. |
-| `customerIds` | Junto con la ID de visitante Experience Cloud, también se pueden usar [ID de cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) adicionales y un estado autenticado para cada visitante. |
+| `customerIds` | Junto con la ID de visitante Experience Cloud, también se pueden usar [ID de cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=es) adicionales y un estado autenticado para cada visitante. |
 
 ## [!DNL Target] ID (tntID)
 
@@ -233,7 +233,7 @@ En este escenario, [!DNL Target] generará un `tntId`, ya que no se pasó a la l
 
 ## ID del cliente (customerIds)
 
-[Los ID de cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) se pueden agregar o asociar a un ID de visitante de Experience Cloud. Siempre que se envíe `customerIds`, también se debe proporcionar `marketingCloudVisitorId`. Además, se puede proporcionar un estado de autenticación junto con cada `customerId` para cada visitante. Se pueden utilizar los siguientes estados de autenticación:
+[Los ID de cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=es) se pueden agregar o asociar a un ID de visitante de Experience Cloud. Siempre que se envíe `customerIds`, también se debe proporcionar `marketingCloudVisitorId`. Además, se puede proporcionar un estado de autenticación junto con cada `customerId` para cada visitante. Se pueden utilizar los siguientes estados de autenticación:
 
 | Estado de autenticación | Estado de usuario |
 | --- | --- |
@@ -315,7 +315,7 @@ El ejemplo anterior muestra cómo enviar un `customerId` con un `authenticatedSt
 
 ## Perfil combinado
 
-Puede combinar `tntId`, `thirdPartyID` y `marketingCloudVisitorId` en la misma solicitud. En este escenario, [!DNL Adobe Target] mantendrá la asignación de todos estos ID y los anclará a un visitante. Descubra cómo se combinan y sincronizan los perfiles [en tiempo real](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) con los diferentes identificadores.
+Puede combinar `tntId`, `thirdPartyID` y `marketingCloudVisitorId` en la misma solicitud. En este escenario, [!DNL Adobe Target] mantendrá la asignación de todos estos ID y los anclará a un visitante. Descubra cómo se combinan y sincronizan los perfiles [en tiempo real](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=es) con los diferentes identificadores.
 
 >[!BEGINTABS]
 

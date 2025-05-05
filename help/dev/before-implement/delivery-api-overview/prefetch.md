@@ -124,7 +124,7 @@ Dentro de la respuesta, verá el campo `content` que contiene la experiencia que
 
 ## Recuperar previamente mboxes con métricas `clickTrack` al usar [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
 
 El siguiente fragmento de código es una respuesta de una recuperación previa de un mbox que contiene `clickTrack` métricas para notificar a [!DNL Analytics] que se hizo clic en una oferta:
 
@@ -169,7 +169,7 @@ El siguiente fragmento de código es una respuesta de una recuperación previa d
 
 ## Recuperar vistas previamente
 
-SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o una experiencia móvil de un usuario. SPA Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} y [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para el](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o una experiencia móvil de un usuario. SPA Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es){target=_blank} y [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=es){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para el](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \

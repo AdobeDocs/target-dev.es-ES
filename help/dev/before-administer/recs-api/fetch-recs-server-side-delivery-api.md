@@ -42,9 +42,9 @@ Para utilizar la API de envío para ofrecer experiencias de Target, incluidas re
 
 ## Crear una recomendación con el Compositor de experiencias basadas en formularios
 
-Para crear recomendaciones que se puedan usar con la API de entrega, use [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+Para crear recomendaciones que se puedan usar con la API de entrega, use [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es).
 
-1. En primer lugar, cree y guarde un diseño basado en JSON para utilizarlo en su recomendación. Para obtener el archivo JSON de muestra, además de información básica sobre cómo se pueden devolver las respuestas JSON al configurar una actividad basada en formularios, consulte la documentación de [Creación de diseños de recomendación](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html). En este ejemplo, el diseño se denomina *JSON simple.*
+1. En primer lugar, cree y guarde un diseño basado en JSON para utilizarlo en su recomendación. Para obtener el archivo JSON de muestra, además de información básica sobre cómo se pueden devolver las respuestas JSON al configurar una actividad basada en formularios, consulte la documentación de [Creación de diseños de recomendación](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=es). En este ejemplo, el diseño se denomina *JSON simple.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. En Target, vaya a **[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]** y, a continuación, seleccione **[!UICONTROL Form]**.
@@ -54,7 +54,7 @@ Para crear recomendaciones que se puedan usar con la API de entrega, use [Compos
 1. Seleccione una propiedad y haga clic en **[!UICONTROL Next]**.
 1. Defina la ubicación en la que desea que los usuarios reciban la respuesta de la recomendación. El ejemplo siguiente utiliza una ubicación denominada *api_charter*. Seleccione el diseño basado en JSON, creado anteriormente, con el nombre *JSON simple.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. Guarde y active la recomendación. Generará resultados. [Una vez que los resultados estén listos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html), puede usar la API de envío para recuperarlos.
+1. Guarde y active la recomendación. Generará resultados. [Una vez que los resultados estén listos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=es), puede usar la API de envío para recuperarlos.
 
 ## Uso de la API de entrega
 
@@ -116,7 +116,7 @@ En una [sección anterior](manage-catalog.md) aprendimos a administrar entidades
 ## Documentación de referencia
 
 * [Documentación de la API de envío de Adobe Target](/help/dev/implement/delivery-api/overview.md)
-* [Integrar Recommendations con el correo electrónico](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
+* [Integrar Recommendations con el correo electrónico](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=es)
 
 ## Resumen y revisión
 

@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Vea lo que significa la futura obsolescencia de las cookies de terceros para su implementación de at.js de [!DNL Adobe Target].
 
-Para obtener más información, consulte [El impacto de la obsolescencia de las cookies de terceros en Adobe Target (at.js)](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?search=Third%20Party%20Cookie%20Deprecation){target=_blank} en la comunidad de Adobe Target.
+Para obtener más información, consulte [El impacto de la obsolescencia de las cookies de terceros en Adobe Target (at.js)](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?profile.language=es&search=Third%20Party%20Cookie%20Deprecation){target=_blank} en la comunidad de Adobe Target.

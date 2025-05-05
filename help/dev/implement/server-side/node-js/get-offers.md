@@ -52,7 +52,7 @@ El objeto `options` tiene la siguiente estructura:
 | targetCookie | Objeto | Cookie [!DNL Target] |
 | targetLocationHintCookie | Objeto | [!DNL Target] cookie de indicio de ubicación |
 | analyticsDetails | Matriz | Carga útil de Analytics, en caso de uso de Analytics en el lado del cliente |
-| responseTokens | Matriz | Una lista de [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
+| responseTokens | Matriz | Una lista de [tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=es&). |
 | trazar | Matriz | Datos de seguimiento agregados para todos los mboxes o vistas de solicitud |
 | status | Objeto | Un objeto que contiene el estado de la respuesta. |
 | decisioningMethod | Cadena | Determina qué método de toma de decisiones usar ([en el dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), del lado del servidor, híbrido) |

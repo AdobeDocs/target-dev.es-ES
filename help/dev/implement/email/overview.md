@@ -28,7 +28,7 @@ Tanto la publicidad de AdBox como redirector se pueden usar en cualquier tipo de
 
 ## Prácticas recomendadas de seguridad
 
-Tenga en cuenta que con el redirector, puede estar expuesto a un riesgo de vulnerabilidad de redireccionamiento abierto. Para evitar el uso no autorizado de vínculos de redirector por parte de terceros, se recomienda utilizar &quot;hosts autorizados&quot; para la lista de permitidos de los dominios de URL de redireccionamiento predeterminados. [!DNL Target] usa hosts para la lista de permitidos de dominios a los que desea permitir redirecciones. Para obtener más información, consulte [Crear Listas de permitidos que especifiquen hosts con autorización para enviar llamadas de mbox a [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) en *Hosts*.
+Tenga en cuenta que con el redirector, puede estar expuesto a un riesgo de vulnerabilidad de redireccionamiento abierto. Para evitar el uso no autorizado de vínculos de redirector por parte de terceros, se recomienda utilizar &quot;hosts autorizados&quot; para la lista de permitidos de los dominios de URL de redireccionamiento predeterminados. [!DNL Target] usa hosts para la lista de permitidos de dominios a los que desea permitir redirecciones. Para obtener más información, consulte [Crear Listas de permitidos que especifiquen hosts con autorización para enviar llamadas de mbox a [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=es#allowlist) en *Hosts*.
 
 ## Restricciones
 

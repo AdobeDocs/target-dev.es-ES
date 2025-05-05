@@ -17,7 +17,7 @@ Las etiquetas de [!DNL Adobe Experience Platform] son la siguiente generación d
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en [!DNL Adobe Experience Platform]. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en [!DNL Adobe Experience Platform]. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=es&) para obtener una referencia consolidada de los cambios terminológicos.
 
 En la siguiente tabla se enumeran distintos recursos donde puede obtener más información:
 

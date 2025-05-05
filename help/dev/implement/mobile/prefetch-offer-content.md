@@ -26,7 +26,7 @@ Este proceso reduce el tiempo de carga, evita múltiples llamadas de red y permi
 Tenga en cuenta las siguientes limitaciones al utilizar el método de recuperación previa con los SDK para móviles de iOS y Android:
 
 * El contenido de recuperación previa no persiste de un inicio a otro. El contenido de recuperación previa se guarda en caché mientras la aplicación esté activa o hasta que se realice una llamada al método `clearPrefetchCache()`.
-* No se admite la funcionalidad de recuperación previa para los métodos de asignación de tráfico [!UICONTROL Auto-Allocate] y [!UICONTROL Auto-Target], para los tipos de actividad [!UICONTROL Automated Personalization] o [!UICONTROL Recommendations], o para las [ofertas de recomendaciones dentro de una actividad A/B o XT](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html).
+* No se admite la funcionalidad de recuperación previa para los métodos de asignación de tráfico [!UICONTROL Auto-Allocate] y [!UICONTROL Auto-Target], para los tipos de actividad [!UICONTROL Automated Personalization] o [!UICONTROL Recommendations], o para las [ofertas de recomendaciones dentro de una actividad A/B o XT](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=es).
 
 Para obtener más información, incluidos los métodos de recuperación previa, las clases públicas y ejemplos de código, consulte:
 

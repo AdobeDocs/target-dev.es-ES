@@ -30,5 +30,5 @@ Tenga en cuenta las siguientes limitaciones al utilizar el método de recuperaci
 
 Para obtener más información, incluidos los métodos de recuperación previa, las clases públicas y ejemplos de código, consulte:
 
-* **iOS:** [Recuperar previamente contenido de ofertas en iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) en la ayuda del SDK para iOS de *Mobile Services*.
-* **Android:** [Recuperar previamente contenido de ofertas en Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html) en la ayuda del SDK para Android de *Mobile Services*.
+* **iOS:** [Recuperar previamente contenido de ofertas en iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=es) en la ayuda del SDK para iOS de *Mobile Services*.
+* **Android:** [Recuperar previamente contenido de ofertas en Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=es) en la ayuda del SDK para Android de *Mobile Services*.

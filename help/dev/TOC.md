@@ -2,10 +2,10 @@
 user-guide-title: Guía para desarrolladores de Adobe Target
 breadcrumb-title: Guía para desarrolladores de Target
 user-guide-description: Aprenda a adaptar y personalizar la experiencia de sus clientes para que pueda maximizar los ingresos de sus sitios web y móviles, aplicaciones, medios sociales y otros canales digitales.
-source-git-commit: ac13e0dd7f67de50b77778921c90a95f12c2b9e4
+source-git-commit: f4e0e1b202863eb9fddb40836cf53d2df7cdbebe
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 44%
+source-wordcount: '787'
+ht-degree: 43%
 
 ---
 
@@ -42,56 +42,62 @@ ht-degree: 44%
    + [Cambios en el cifrado de TLS (Seguridad de capa de transporte)](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME y Adobe Target](before-implement/implement-cname-support-in-target.md)
 + Implementación del lado del cliente {#client-side}
-   + [Información general: implementación de Target para la web del lado del cliente](implement/client-side/overview.md)
+   + [Información general: implementar Target para la web del lado del cliente](implement/client-side/overview.md)
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+   + Implementación de Adobe Experience Platform Web SDK {#aep}
+      + [Información general sobre la implementación de Adobe Experience Platform Web SDK](implement/client-side/aep-web-sdk.md)
+      + [Implementación de aplicación de una sola página](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
+=======
    + Adobe Experience Platform Web SDK {#web-sdk}
       + [Información general sobre la implementación de Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
       + [Uso de Adobe Target y Web SDK para la personalización](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
-   + Implementación de at.js {#at-js-implementation}
-      + [Información general sobre at.js](implement/client-side/atjs/how-atjs-works/overview.md)
-      + Cómo funciona at.js {#at-js}
-         + [Información general sobre el funcionamiento de at.js](implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
-         + [Cómo gestiona at.js el parpadeo](implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
-         + [Integraciones de at.js](implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)
-      + Cómo implementar at.js {#deploy-at-js}
-         + [Cómo implementar at.js](implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)
-         + [Implementación Target de mediante Adobe Experience Platform](implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)
-         + [Implementación de Target sin un administrador de etiquetas](implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
-         + [Implementación de Target mediante el administrador dinámico de etiquetas (DTM)](implement/client-side/atjs/how-to-deployatjs/implement-target-using-dtm.md)
-         + [Implementación de Target para aplicaciones de una sola página (SPA)](implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)
-      + Toma de decisiones en el dispositivo {#on-device-decisioning}
-         + [Información general sobre la toma de decisiones en el dispositivo](implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)
-         + [Funciones compatibles](implement/client-side/atjs/on-device-decisioning/supported-features.md)
-         + [Artefacto de regla](implement/client-side/atjs/on-device-decisioning/rule-artifact.md)
-         + [Resolución de problemas](implement/client-side/atjs/on-device-decisioning/troubleshooting-on-device-decisioning.md)
-      + Funciones de at.js {#functions-overview}
-         + [Información general sobre las funciones de at.js](implement/client-side/atjs/atjs-functions/atjs-functions.md)
-         + [adobe.target.getOffer()](implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md)
-         + [adobe.target.getOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
-         + [adobe.target.applyOffer()](implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md)
-         + [adobe.target.applyOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)
-         + [adobe.target.triggerView() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)
-         + [adobe.target.trackEvent()](implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-         + [mboxCreate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)
-         + [targetGlobalSettings()](implement/client-side/atjs/atjs-functions/targetglobalsettings.md)
-         + [mboxDefine() and mboxUpdate(): at.js 1.x](implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)
-         + [targetPageParams()](implement/client-side/atjs/atjs-functions/targetpageparams.md)
-         + [targetPageParamsAll()](implement/client-side/atjs/atjs-functions/targetpageparamsall.md)
-         + [registerExtension(): at.js 1.x](implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)
-         + [sendNotifications() - at.js 2.1](implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)
-         + [Eventos personalizados de at.js](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
-         + [Depurar at.js mediante Adobe Experience Cloud Debugger](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
-         + [Uso de instancias basadas en la nube con Target](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
-      + [Preguntas más frecuentes de at.js](implement/client-side/atjs/target-atjs-faq.md)
-      + [Detalles de las versiones de at.js](implement/client-side/atjs/target-atjs-versions.md)
-      + [Actualización de at.js 1.x a at.js 2.x](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
-      + [Cookies de at.js](implement/client-side/atjs/atjs-cookies.md)
-   + [User-agent y Client Hints](implement/client-side/atjs/user-agent-and-client-hints.md)
-   + Comprender el mbox global {#global-mbox}
-      + [Información general sobre mbox global](implement/client-side/atjs/global-mbox/global-mbox-overview.md)
-      + [Personalización de un mbox global](implement/client-side/atjs/global-mbox/customize-global-mbox.md)
-      + [Uso de un mbox global desde una implementación heredada](implement/client-side/atjs/global-mbox/mbox-global-target-standard.md)
-      + [Pase de parámetros a un mbox global](implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)
-      + [Preguntas frecuentes sobre mbox global](implement/client-side/atjs/global-mbox/global-mbox-faq.md)
+>>>>>>>>>>63c8d3b4c4f6000294c0669159e97426b213595b
+> + Implementación de at.js {#at-js-implementation}
+   + [Información general sobre at.js](implement/client-side/atjs/how-atjs-works/overview.md)
+   + Cómo funciona at.js {#at-js}
+      + [Información general sobre el funcionamiento de at.js](implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
+      + [Cómo gestiona at.js el parpadeo](implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md)
+      + [Integraciones de at.js](implement/client-side/atjs/how-atjs-works/target-atjs-integrations.md)
+   + Cómo implementar at.js {#deploy-at-js}
+      + [Cómo implementar at.js](implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md)
+      + [Implementación Target de mediante Adobe Experience Platform](implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)
+      + [Implementación de Target sin un administrador de etiquetas](implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
+      + [Implementación de Target mediante el administrador dinámico de etiquetas (DTM)](implement/client-side/atjs/how-to-deployatjs/implement-target-using-dtm.md)
+      + [Implementación de Target para aplicaciones de una sola página (SPA)](implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md)
+   + Toma de decisiones en el dispositivo {#on-device-decisioning}
+      + [Información general sobre la toma de decisiones en el dispositivo](implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md)
+      + [Funciones compatibles](implement/client-side/atjs/on-device-decisioning/supported-features.md)
+      + [Artefacto de regla](implement/client-side/atjs/on-device-decisioning/rule-artifact.md)
+      + [Resolución de problemas](implement/client-side/atjs/on-device-decisioning/troubleshooting-on-device-decisioning.md)
+   + Funciones de at.js {#functions-overview}
+      + [Información general sobre las funciones de at.js](implement/client-side/atjs/atjs-functions/atjs-functions.md)
+      + [adobe.target.getOffer()](implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md)
+      + [adobe.target.getOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)
+      + [adobe.target.applyOffer()](implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md)
+      + [adobe.target.applyOffers() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)
+      + [adobe.target.triggerView() - at.js 2.x](implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)
+      + [adobe.target.trackEvent()](implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
+      + [mboxCreate() - at.js 1.x](implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)
+      + [targetGlobalSettings()](implement/client-side/atjs/atjs-functions/targetglobalsettings.md)
+      + [mboxDefine() and mboxUpdate(): at.js 1.x](implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)
+      + [targetPageParams()](implement/client-side/atjs/atjs-functions/targetpageparams.md)
+      + [targetPageParamsAll()](implement/client-side/atjs/atjs-functions/targetpageparamsall.md)
+      + [registerExtension(): at.js 1.x](implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)
+      + [sendNotifications() - at.js 2.1](implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)
+      + [Eventos personalizados de at.js](implement/client-side/atjs/atjs-functions/atjs-custom-events.md)
+      + [Depurar at.js mediante Adobe Experience Cloud Debugger](implement/client-side/target-debugging-atjs/target-debugging-atjs.md)
+      + [Uso de instancias basadas en la nube con Target](implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md)
+   + [Preguntas más frecuentes de at.js](implement/client-side/atjs/target-atjs-faq.md)
+   + [Detalles de las versiones de at.js](implement/client-side/atjs/target-atjs-versions.md)
+   + [Actualización de at.js 1.x a at.js 2.x](implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md)
+   + [Cookies de at.js](implement/client-side/atjs/atjs-cookies.md)
++ [User-agent y Client Hints](implement/client-side/atjs/user-agent-and-client-hints.md)
++ Comprender el mbox global {#global-mbox}
+   + [Información general sobre mbox global](implement/client-side/atjs/global-mbox/global-mbox-overview.md)
+   + [Personalización de un mbox global](implement/client-side/atjs/global-mbox/customize-global-mbox.md)
+   + [Uso de un mbox global desde una implementación heredada](implement/client-side/atjs/global-mbox/mbox-global-target-standard.md)
+   + [Pase de parámetros a un mbox global](implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)
+   + [Preguntas frecuentes sobre mbox global](implement/client-side/atjs/global-mbox/global-mbox-faq.md)
 + Implementación del servidor {#server-side}
    + [Servidor: información general sobre la implementación de Target](implement/server-side/server-side-overview.md)
    + [Introducción a los SDK de Target](implement/server-side/sdk-guides/getting-started/getting-started.md)

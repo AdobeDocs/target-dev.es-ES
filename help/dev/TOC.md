@@ -2,10 +2,10 @@
 user-guide-title: Guía para desarrolladores de Adobe Target
 breadcrumb-title: Guía para desarrolladores de Target
 user-guide-description: Aprenda a adaptar y personalizar la experiencia de sus clientes para que pueda maximizar los ingresos de sus sitios web y móviles, aplicaciones, medios sociales y otros canales digitales.
-source-git-commit: c963a070a7a4c5e7dc2915eb5ac7d60895340705
+source-git-commit: ac13e0dd7f67de50b77778921c90a95f12c2b9e4
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 45%
+source-wordcount: '769'
+ht-degree: 44%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 45%
 # Guía para desarrolladores de Adobe Target {#developer}
 
 + [Guía para desarrolladores de Adobe Target](overview.md)
-+ Introducción a {#implementation}
++ Primeros pasos {#implementation}
    + Antes de la implementación {#before-implement}
       + [Antes de la implementación](before-implement/considerations-before-you-implement-target.md)
       + [Preparación para implementar Target](before-implement/prepare-to-implement-target.md)
@@ -43,7 +43,9 @@ ht-degree: 45%
    + [CNAME y Adobe Target](before-implement/implement-cname-support-in-target.md)
 + Implementación del lado del cliente {#client-side}
    + [Información general: implementación de Target para la web del lado del cliente](implement/client-side/overview.md)
-   + [Información general sobre la implementación del SDK web de Adobe Experience Platform](implement/client-side/aep-web-sdk.md)
+   + Adobe Experience Platform Web SDK {#web-sdk}
+      + [Información general sobre la implementación de Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
+      + [Uso de Adobe Target y Web SDK para la personalización](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
    + Implementación de at.js {#at-js-implementation}
       + [Información general sobre at.js](implement/client-side/atjs/how-atjs-works/overview.md)
       + Cómo funciona at.js {#at-js}
@@ -103,14 +105,14 @@ ht-degree: 45%
       + [Permisos y propiedades de usuario](implement/server-side/sdk-guides/core-principles/user-permissions-and-properties.md)
    + Integración {#integration}
       + [Resumen de integración](implement/server-side/sdk-guides/integration-with-experience-cloud/overview.md)
-      + [Servicio de ID de Experience Cloud (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
+      + [Servicio de Experience Cloud ID (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Creación de informes en Analytics for Target (A4T)](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
       + [Segmentos de AAM](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
    + Toma de decisiones en el dispositivo {#on-device-decisioning}
       + [Información general sobre la toma de decisiones en el dispositivo](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
       + Artefacto de regla {#rule-artifact}
          + [Resumen de artefactos de regla](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
-         + [Descargar mediante el SDK de Adobe Target](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
+         + [Descargar mediante Adobe Target SDK](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [Descargar mediante carga útil JSON](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
          + [Ejemplo de artefacto de regla](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-example.md)
       + [Ejecución de pruebas A/B con indicadores de funcionalidad](implement/server-side/sdk-guides/on-device-decisioning/execute-ab-tests-with-feature-flags.md)
@@ -121,8 +123,8 @@ ht-degree: 45%
       + [Resolución de problemas de la toma de decisiones en el dispositivo](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
       + [Prácticas recomendadas  ](implement/server-side/sdk-guides/best-practices/best-practices.md)
    + Referencia de SDK de Node.js {#node-js}
-      + [Información general del SDK de Node.js](implement/server-side/node-js/overview.md)
-      + [Instalación del SDK de Node.js](implement/server-side/node-js/install-sdk.md)
+      + [Información general sobre Node.js SDK](implement/server-side/node-js/overview.md)
+      + [Instalación de Node.js en SDK](implement/server-side/node-js/install-sdk.md)
       + [Inicialice el SDK de Node.js](implement/server-side/node-js/initialize-sdk.md)
       + [Obtener ofertas (Node.js)](implement/server-side/node-js/get-offers.md)
       + [Obtener atributos (Node.js)](implement/server-side/node-js/get-attributes.md)
@@ -130,10 +132,10 @@ ht-degree: 45%
       + [Eventos de SDK (Node.js)](implement/server-side/node-js/sdk-events.md)
       + [Registrador (Node.js)](implement/server-side/node-js/logger.md)
       + [Configuración de proxy (Node.js)](implement/server-side/node-js/proxy-configuration.md)
-   + Referencia del SDK de Java {#java}
-      + [Información general del SDK de Java](implement/server-side/java/overview.md)
-      + [Instalación del SDK de Java](implement/server-side/java/install-sdk.md)
-      + [Inicialización del SDK de Java](implement/server-side/java/initialize-sdk.md)
+   + Referencia de SDK en Java {#java}
+      + [Información general sobre Java SDK](implement/server-side/java/overview.md)
+      + [Instalación de Java SDK](implement/server-side/java/install-sdk.md)
+      + [Inicialización de Java SDK](implement/server-side/java/initialize-sdk.md)
       + [Obtener ofertas (Java)](implement/server-side/java/get-offers.md)
       + [Obtener atributos (Java)](implement/server-side/java/get-attributes.md)
       + [Envío de notificaciones (Java)](implement/server-side/java/send-notifications.md)
@@ -144,18 +146,18 @@ ht-degree: 45%
       + [Configuración personalizada de cliente HTTP (Java)](implement/server-side/java/custom-http-client.md)
       + [Métodos de utilidad (Java)](implement/server-side/java/utility-methods.md)
    + Referencia de .NET SDK {#net}
-      + [Información general de .NET SDK](implement/server-side/net/overview.md)
-      + [Instalación del SDK de .Net](implement/server-side/net/install-sdk.md)
+      + [Información general sobre .NET SDK](implement/server-side/net/overview.md)
+      + [Instalar .Net SDK](implement/server-side/net/install-sdk.md)
       + [Inicializar .NET SDK](implement/server-side/net/initialize-sdk.md)
       + [Obtener ofertas (.NET)](implement/server-side/net/get-offers.md)
       + [Obtener atributos (.NET)](implement/server-side/net/get-attributes.md)
       + [Enviar notificaciones (.NET)](implement/server-side/net/send-notifications.md)
       + [Eventos de SDK (.NET)](implement/server-side/net/sdk-events.md)
       + [Solicitudes asincrónicas (.NET)](implement/server-side/net/asynchronous-requests.md)
-   + Referencia del SDK de Python {#python}
-      + [Información general del SDK de Python](implement/server-side/python/overview.md)
-      + [Instalación del SDK de Python de](implement/server-side/python/install-sdk.md)
-      + [Inicialización del SDK de Python](implement/server-side/python/initialize-sdk.md)
+   + Referencia de SDK en Python {#python}
+      + [Información general sobre Python SDK](implement/server-side/python/overview.md)
+      + [Instalación de Python SDK](implement/server-side/python/install-sdk.md)
+      + [Inicialización de Python SDK](implement/server-side/python/initialize-sdk.md)
       + [Obtener ofertas (Python)](implement/server-side/python/get-offers.md)
       + [Obtener atributos (Python)](implement/server-side/python/get-attributes.md)
       + [Envío de notificaciones (Python)](implement/server-side/python/send-notifications.md)
@@ -164,13 +166,13 @@ ht-degree: 45%
       + [Registrador (Python)](implement/server-side/python/logger.md)
 + [Implementación híbrida](implement/hybrid/hybrid-overview.md)
 + [Implementación de Recommendations](implement/recommendations/recommendations.md)
-+ [Implementación beta de Recommendations](/help/dev/implement/recommendations/recommendations-beta.md)
++ [Implementación de Recommendations beta](/help/dev/implement/recommendations/recommendations-beta.md)
 + Implementación de aplicación móvil {#mobile-apps}
    + [Información general sobre Target para aplicaciones móviles](implement/mobile/overview.md)
    + [Vista previa para móviles en Target](implement/mobile/target-mobile-preview.md)
    + [Uso del servicio de ubicación](implement/mobile/use-location-service.md)
    + [Preguntas frecuentes sobre Target para aplicaciones móviles](implement/mobile/mobile-faq.md)
-   + [Implementar Target con el SDK de AEP Mobile en una aplicación nativa con vistas web](/help/dev/implement/mobile/native-app.md)
+   + [Implementar Target con AEP Mobile SDK en una aplicación nativa con vistas web](/help/dev/implement/mobile/native-app.md)
 + Implementación de correo electrónico {#implement-email}
    + [Correo electrónico: información general sobre la implementación de Target](implement/email/overview.md)
    + [Creación de un AdBox para una imagen](implement/email/testing-content-with-the-adbox.md)
@@ -192,7 +194,7 @@ ht-degree: 45%
       + [Consideraciones y limitaciones conocidas](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [Client Hints](/help/dev/before-implement/delivery-api-overview/client-hints.md)
       + [API de entrega](/help/dev/implement/delivery-api/delivery-api.md)
-   + API de administrador {#admin-api}
+   + API de administración {#admin-api}
       + [Resumen de API de administración](before-administer/admin-api-overview/admin-api-overview.md)
       + [API de administración de Adobe Target](/help/dev/administer/admin-api/admin-api-overview-new.md)
    + API de perfil {#profile-apis}
@@ -203,7 +205,7 @@ ht-degree: 45%
       + [API de actualización de perfil en lote](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [API de informes](/help/dev/administer/reporting-api/reporting-api.md)
    + API de Recommendations {#recommendations-api}
-      + [Información general de API de Recommendations](before-administer/recs-api/overview.md)
+      + [Resumen de API de Recommendations](before-administer/recs-api/overview.md)
       + [Administración del catálogo con API](before-administer/recs-api/manage-catalog.md)
       + [Administrar criterios personalizados](before-administer/recs-api/manage-custom-criteria.md)
       + [Uso de la API de envío con Recommendations](before-administer/recs-api/fetch-recs-server-side-delivery-api.md)
@@ -212,11 +214,11 @@ ht-degree: 45%
       + [Información general sobre la API de modelos (Inclusión en la lista de bloqueados)](before-administer/models-api.md)
       + [API de modelos](/help/dev/administer/models-api/models-api-overview.md)
    + [API de Adobe Admin Console](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)
-   + [API de Adobe Experience Platform Edge Network Server](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
+   + [API de servidor de Adobe Experience Platform Edge Network](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + Patrones de implementación {#implementation-patterns}
    + [Información general sobre patrones de implementación](/help/dev/patterns/pattern-overview.md)
-   + Patrón de implementación de Recommendations con at.js {#atjs}
-      + [Información general sobre el patrón de implementación de Recommendations con at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+   + Patrón de implementación de Recommendations mediante at.js {#atjs}
+      + [Patrón de implementación de Recommendations mediante la información general de at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [Inicializar SDK](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [Configuración de la recopilación de datos](/help/dev/patterns/recs-atjs/data-collection.md)
       + [Procesar experiencias](/help/dev/patterns/recs-atjs/render-experiences.md)

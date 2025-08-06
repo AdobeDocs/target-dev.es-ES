@@ -815,7 +815,7 @@ Cuando se configura esta opción, el formato de la carga útil que se devuelve e
 }
 ```
 
-La carga útil se puede reenviar a [!DNL Analytics] mediante [!DNL  Data Insertion API].
+La carga útil se puede reenviar a [!DNL Analytics] mediante [!DNL &#x200B; Data Insertion API].
 
 Ejemplo 2: Configurándolo en cada función `getOffers`:
 

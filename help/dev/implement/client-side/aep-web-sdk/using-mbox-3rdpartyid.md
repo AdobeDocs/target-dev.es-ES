@@ -14,13 +14,13 @@ ht-degree: 16%
 
 El `mbox3rdPartyId` en [!DNL Adobe Target] es el ID de visitante de su compañía, como el ID de pertenencia para el programa de fidelidad de su empresa.
 
-Cuando un visitante inicia sesión en el sitio de una empresa, esta generalmente crea un ID vinculado a la cuenta del visitante, la tarjeta de fidelidad, el número de pertenencia u otros identificadores aplicables para esa empresa. [Más información](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html#)
+Cuando un visitante inicia sesión en el sitio de una empresa, esta generalmente crea un ID vinculado a la cuenta del visitante, la tarjeta de fidelidad, el número de pertenencia u otros identificadores aplicables para esa empresa. [Más información](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=es#)
 
 ## Cómo usar `mbox3rdPartyId` con [!DNL Platform Web SDK]
 
 ### Paso 1: Configurar `Target Third Party ID Namespace`
 
-Configure `Target Third Party ID Namespace` en su [secuencia de datos](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) con el área de nombres de ID que desea usar como ID de terceros de mbox. [Más información sobre áreas de nombres de ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
+Configure `Target Third Party ID Namespace` en su [secuencia de datos](https://experienceleague.adobe.com/es/docs/experience-platform/datastreams/overview) con el área de nombres de ID que desea usar como ID de terceros de mbox. [Más información sobre áreas de nombres de ID](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=es)
 
 ![IU de Experience Platform que muestra el campo de área de nombres de ID de terceros de Target.](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 

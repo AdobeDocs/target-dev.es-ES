@@ -1,11 +1,11 @@
 ---
-title: Patrón de implementación de Recommendations con at.js
+title: Patrón de implementación de Recommendations mediante at.js
 description: Descubra cómo utilizar el patrón de implementación para Recommendations con at.js
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: d568cd1d-acc3-42e0-ae2c-5787e6f361f8
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3b0bc0b67800ed4b1da6ba2bfa05c677147a78ba
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Resumen del patrón de implementación de [!DNL Recommendations] mediante at.js
 
-Este patrón de implementación le ayuda a comprender y crear su implementación de [!DNL Adobe Target Recommendations] al usar la [biblioteca JavaScript at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
+Este patrón de implementación le ayuda a comprender y crear su implementación de [!DNL Adobe Target Recommendations] al usar la [biblioteca JavaScript at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md).
 
 Haga clic en la imagen para expandirla a pantalla completa.
 

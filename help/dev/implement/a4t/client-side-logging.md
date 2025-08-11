@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Registro en el lado del cliente de datos de A4T en [!DNL Experience Platform Web SDK]
 
-[!DNL Adobe Experience Platform Web SDK] le permite recopilar [datos de Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) en el lado del cliente de la aplicación web.
+[!DNL Adobe Experience Platform Web SDK] le permite recopilar [datos de Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es) en el lado del cliente de la aplicación web.
 
-El registro en el lado del cliente significa que se devuelven datos relevantes de [!DNL Target] en el lado del cliente, lo que le permite recopilar datos y compartirlos con [!DNL Analytics]. Esta opción debería habilitarse si desea enviar manualmente datos a Analytics mediante la [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
+El registro en el lado del cliente significa que se devuelven datos relevantes de [!DNL Target] en el lado del cliente, lo que le permite recopilar datos y compartirlos con [!DNL Analytics]. Esta opción debería habilitarse si desea enviar manualmente datos a Analytics mediante la [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=es).
 
 >[!NOTE]
 >
->Actualmente se está desarrollando un método para realizar esto usando [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html), que estará disponible en un futuro próximo.
+>Actualmente se está desarrollando un método para realizar esto usando [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=es), que estará disponible en un futuro próximo.
 
 Este documento describe los pasos para configurar el registro de A4T en el lado del cliente para [!DNL Platform Web SDK] y proporciona ejemplos de implementación para casos de uso comunes.
 
@@ -28,9 +28,9 @@ Este documento describe los pasos para configurar el registro de A4T en el lado 
 
 En este tutorial se da por hecho que está familiarizado con los conceptos y procesos fundamentales relacionados con el uso de [!DNL Platform Web SDK] con fines de personalización. Revise la siguiente documentación si necesita una introducción:
 
-* [Configuración de Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
-* [Enviando eventos](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [Procesando contenido personalizado](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [Configuración de Web SDK](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/commands/configure/overview)
+* [Enviando eventos](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [Procesando contenido personalizado](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Configurar el registro del lado del cliente [!DNL Analytics] {#set-up-client-side-logging}
 
@@ -38,13 +38,13 @@ Las siguientes subsecciones describen cómo habilitar el registro del lado del c
 
 ### Habilitar el registro del lado del cliente [!DNL Analytics] {#enable-analytics-client-side-logging}
 
-Para considerar el registro del lado del cliente [!DNL Analytics] habilitado para su implementación, debe deshabilitar la configuración de [!DNL Adobe Analytics] en su [secuencia de datos](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview).
+Para considerar el registro del lado del cliente [!DNL Analytics] habilitado para su implementación, debe deshabilitar la configuración de [!DNL Adobe Analytics] en su [secuencia de datos](https://experienceleague.adobe.com/es/docs/experience-platform/datastreams/overview).
 
 ![Configuración del flujo de datos de Analytics deshabilitada](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### Recuperar [!DNL A4T] datos de SDK y enviarlos a [!DNL Analytics] {#a4t-to-analytics}
 
-Para que este método de generación de informes funcione correctamente, debe enviar los datos relacionados con [!DNL A4T] recuperados del comando [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview) en la visita de [!DNL Analytics].
+Para que este método de generación de informes funcione correctamente, debe enviar los datos relacionados con [!DNL A4T] recuperados del comando [`sendEvent`](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/commands/sendevent/overview) en la visita de [!DNL Analytics].
 
 Cuando [!DNL Target] Edge calcula una respuesta de propuestas, comprueba si el registro del lado del cliente de [!DNL Analytics] está habilitado (por ejemplo, si [!DNL Analytics] está deshabilitado en la secuencia de datos). Si el registro del lado del cliente está habilitado, el sistema agrega un token [!DNL Analytics] a cada propuesta en la respuesta.
 
@@ -225,7 +225,7 @@ Las siguientes subsecciones muestran cómo implementar el registro del lado del 
 
 ### [!UICONTROL Form-Based Experience Composer] actividades {#form-based-composer}
 
-Puede usar [!DNL Platform Web SDK] para controlar la ejecución de propuestas desde [actividades del Compositor de experiencias basadas en formularios de Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+Puede usar [!DNL Platform Web SDK] para controlar la ejecución de propuestas desde [actividades del Compositor de experiencias basadas en formularios de Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es).
 
 Cuando solicita propuestas para un ámbito de decisión específico, la propuesta devuelta contiene el token [!DNL Analytics] correspondiente. La práctica recomendada es encadenar el comando [!DNL Experience Platform Web SDK] `sendEvent` e iterar en las propuestas devueltas para ejecutarlas mientras se recopilan los tokens de [!DNL Analytics] al mismo tiempo.
 
@@ -465,7 +465,7 @@ alloy("sendEvent", {
 
 ### Actividades de [!UICONTROL Visual Experience Composer] (VEC) {#visual-experience-composer-acitivties}
 
-El [!DNL Platform Web SDK] le permite administrar ofertas creadas con [Compositor de experiencias visuales (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+El [!DNL Platform Web SDK] le permite administrar ofertas creadas con [Compositor de experiencias visuales (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es).
 
 >[!NOTE]
 >

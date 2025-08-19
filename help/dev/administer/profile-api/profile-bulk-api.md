@@ -49,13 +49,13 @@ Con [!UICONTROL Bulk Profile Update API], puede enviar convenientemente datos de
 
 Para actualizar los datos de perfil de forma masiva, cree un archivo por lotes. El archivo por lotes es un archivo de texto con valores separados por comas similar al siguiente archivo de muestra.
 
-``````
+``` ```
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``````
+``` ```
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ Hace referencia a este archivo en la llamada de POST a [!DNL Target] servidores 
 
 Realice una petición HTTP POST a [!DNL Target] servidores Edge para procesar el archivo. Este es un ejemplo de una petición HTTP POST para el archivo batch.txt mediante el comando curl:
 
-``````
+``` ```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``````
+``` ```
 
 Donde:
 

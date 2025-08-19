@@ -4,7 +4,7 @@ description: Aprenda a usar [!DNL Adobe Target] [!UICONTROL Bulk Profile Update 
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
+source-git-commit: 8cab20a7842b0a05c5b2a845662a7ab5f60393bd
 workflow-type: tm+mt
 source-wordcount: '929'
 ht-degree: 7%
@@ -26,7 +26,7 @@ Con [!UICONTROL Bulk Profile Update API], puede enviar convenientemente datos de
 >
 >Versión 2 (v2) de [!DNL Bulk Profile Update API] es la versión actual. Sin embargo, [!DNL Target] sigue siendo compatible con la versión 1 (v1).
 >
->* **Implementaciones independientes que no dependen de `PCID`, use la versión 2**: Si su implementación de [!DNL Target] usa [!DNL Experience Cloud ID] (ECID) como uno de los identificadores de perfil para visitantes anónimos, no debe usar `pcId` como clave en un archivo por lotes de la versión 2 (v2). El uso de `pcId` con la versión 2 de [!DNL Bulk Profile Update API] está destinado a implementaciones [!DNL Target] independientes que no dependen de `ECID`.
+>* **Implementaciones independientes que no dependen de `ECID`, use la versión 2**: Si su implementación de [!DNL Target] usa [!DNL Experience Cloud ID] (ECID) como uno de los identificadores de perfil para visitantes anónimos, no debe usar `pcId` como clave en un archivo por lotes de la versión 2 (v2). El uso de `pcId` con la versión 2 de [!DNL Bulk Profile Update API] está destinado a implementaciones [!DNL Target] independientes que no dependen de `ECID`.
 >
 >* **Implementaciones que dependen de `thirdPartID`, usan la versión 1**: Las implementaciones que usan `ECID` para la identificación del perfil deben usar la versión 1 (v1) de la API si desea usar `pcId` como clave en el archivo por lotes. Si su implementación utiliza `thirdPartyId` para la identificación del perfil, se recomienda la versión 2 (v2) con `thirdPartyId` como clave.
 
@@ -47,13 +47,13 @@ Con [!UICONTROL Bulk Profile Update API], puede enviar convenientemente datos de
 
 Para actualizar los datos de perfil de forma masiva, cree un archivo por lotes. El archivo por lotes es un archivo de texto con valores separados por comas similar al siguiente archivo de muestra.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -75,9 +75,9 @@ Hace referencia a este archivo en la llamada de POST a [!DNL Target] servidores 
 
 Realice una petición HTTP POST a [!DNL Target] servidores Edge para procesar el archivo. Este es un ejemplo de una petición HTTP POST para el archivo batch.txt mediante el comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Donde:
 

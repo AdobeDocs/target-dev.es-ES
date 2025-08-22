@@ -4,9 +4,9 @@ description: Trabaje con [!UICONTROL Adobe Client Care] para implementar la comp
 title: ¿Cómo utilizo CNAME en Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: f894122217529cb40369c003a3b4ed5419fb0505
+source-git-commit: 353597cbbd3478e9598bd42303619440b3b478fd
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Instrucciones para trabajar con [!DNL Adobe Client Care] a fin de implementar el
    >
    >La autoridad de certificación de Adobe, DigiCert, no puede emitir un certificado hasta que se complete este paso. Por lo tanto, Adobe no puede cumplir su solicitud de implementación CNAME hasta que se complete este paso.
 
-1. [Rellene este formulario](assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de Adobe Client Care solicitando asistencia de CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Rellene este formulario](assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de Adobe Client Care solicitando asistencia de CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] código de cliente:
    * Nombres de host de certificado SSL (ejemplo: `target.example.com target.example.org`):
@@ -96,8 +96,6 @@ De forma predeterminada, todos los certificados son RSA SHA-256 y las claves son
 Utilice el siguiente conjunto de comandos (en el terminal de línea de comandos de macOS o Linux, utilizando bash y curl >=7.49):
 
 1. Copie y pegue esta función bash en su terminal, o pegue la función en su archivo de script de inicio bash (normalmente `~/.bash_profile` o `~/.bashrc`) para que la función esté disponible entre sesiones de terminal:
-
-   +++ Ver detalles
 
    ```bash {line-numbers="true"}
     function adobeTargetCnameValidation {
@@ -243,8 +241,6 @@ Utilice el siguiente conjunto de comandos (en el terminal de línea de comandos 
    }
    ```
 
-   +++
-
 1. Pegue este comando (reemplazando `target.example.com` con su nombre de host):
 
    ```adobeTargetCnameValidation target.example.com```
@@ -265,14 +261,14 @@ Si la implementación está lista, verá el resultado como se muestra a continua
     ✅ target.example.com pasa la validación de respuesta TLS y HTTP para la región VA
     ✅ target.example.com pasa la validación de respuesta TLS y HTTP para la región TYO
     ✅ target.example.com pasa la validación de partición para los siguientes 7 fragmentos de Edge:===== ✅ target.example.com [fragmento de Edge: IRL1-pool.data.adobedc.net] =====
-     fecha de caducidad: feb. fecha 14&rbrace;* 20 23:59:59 2026 GMT
+     fecha de caducidad: feb. fecha 14}* 20 23:59:59 2026 GMT
     * emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     * asunto: C=US; ST=California; L=San José; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: IND1-pool.data.adobedc.net] =====
-    * fecha de caducidad: 20/Feb/23/20&rbrace;59/2026 GMT:59:* emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+    * fecha de caducidad: 20/Feb/23/20}59/2026 GMT:59:* emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     * asunto: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== 
      target.example.com [Edge Shard: SIN-pool.data.adobedc.net] =====✅* fecha de caducidad: 20 de febrero de 23
     59 2026 GMT:59:* emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-    * asunto: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== &lbrace;2target.example.com OR-pool.data.adobedc.net&rbrack; =====
+    * asunto: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== {2target.example.com OR-pool.data.adobedc.net] =====
     * fecha de caducidad: 20 de febrero de 23✅59 2026 GMT
     * emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1:59:* asunto: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== 
      [edge shard: SYD-pool.data.adobedc.net] =====
@@ -286,7 +282,7 @@ Si la implementación está lista, verá el resultado como se muestra a continua
     * emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1:59:* asunto: C=US; ST=California; L=San José O=Adobe Systems Incorporated; CN=target.example.com========================================================== Para obtener más información sobre la validación de TLS/SSL, consulte Comprador de SSL.    
      https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com Para comprobar la propagación de DNS en todo el mundo, consulte whatsmydns.net:    
      registros A de DNS:     Registro CNAME DNS de https://whatsmydns.net/#A/target.example.com🔎: https://whatsmydns.net/#CNAME/target.example.com🔎&quot;
-    +++🔎
+    🔎+++
     
     
     

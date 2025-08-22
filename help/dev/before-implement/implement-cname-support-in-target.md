@@ -4,9 +4,9 @@ description: Trabaje con [!UICONTROL Adobe Client Care] para implementar la comp
 title: ¿Cómo utilizo CNAME en Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 1a78a1e2750ae906338e91ff24ac16cdc99323ba
+source-git-commit: 04dfc34bcd3e7efbf73cd167334b440d42cafd1b
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Instrucciones para trabajar con [!DNL Adobe Client Care] a fin de implementar el
    >
    >La autoridad de certificación de Adobe, DigiCert, no puede emitir un certificado hasta que se complete este paso. Por lo tanto, Adobe no puede cumplir su solicitud de implementación CNAME hasta que se complete este paso.
 
-1. [Rellene este formulario](assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de Adobe Client Care solicitando asistencia de CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Rellene este formulario](assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de Adobe Client Care solicitando asistencia de CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] código de cliente:
    * Nombres de host de certificado SSL (ejemplo: `target.example.com target.example.org`):
@@ -49,7 +49,7 @@ Instrucciones para trabajar con [!DNL Adobe Client Care] a fin de implementar el
 
    Adobe Client Care le notifica cuando su implementación está lista.
 
-1. Actualice la [documentación](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) de `serverDomain` al nuevo nombre de host CNAME y establezca `overrideMboxEdgeServer` en `false` [documentación](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) en su configuración de at.js.
+1. Actualice la `serverDomain`documentación[ de ](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) al nuevo nombre de host CNAME y establezca `overrideMboxEdgeServer` en `false` [documentación](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) en su configuración de at.js.
 
 ## Preguntas frecuentes
 
@@ -96,6 +96,8 @@ De forma predeterminada, todos los certificados son RSA SHA-256 y las claves son
 Utilice el siguiente conjunto de comandos (en el terminal de línea de comandos de macOS o Linux, utilizando bash y curl >=7.49):
 
 1. Copie y pegue esta función bash en su terminal, o pegue la función en su archivo de script de inicio bash (normalmente `~/.bash_profile` o `~/.bashrc`) para que la función esté disponible entre sesiones de terminal:
+
+   +++Ver detalles
 
    ```
    function adobeTargetCnameValidation {
@@ -240,13 +242,15 @@ Utilice el siguiente conjunto de comandos (en el terminal de línea de comandos 
    }
    ```
 
+   +++
+
 1. Pegue este comando (reemplazando `target.example.com` con su nombre de host):
 
-   ```
-   adobeTargetCnameValidation target.example.com
-   ```
+   ```adobeTargetCnameValidation target.example.com```
 
    Si la implementación está lista, verá el resultado como se muestra a continuación. Lo importante es que todas las líneas de estado de validación muestren `✅` en lugar de `🚫`. Cada recurso compartido CNAME de Edge de Target debe mostrar `CN=target.example.com`, que coincide con el nombre de host principal del certificado solicitado (los nombres de host de SAN adicionales del certificado no se imprimen en esta salida).
+
+   +++Ver detalles
 
    ```
    $ adobeTargetCnameValidation target.example.com
@@ -310,6 +314,8 @@ Utilice el siguiente conjunto de comandos (en el terminal de línea de comandos 
        🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
    ```
+
++++
 
 >[!NOTE]
 >

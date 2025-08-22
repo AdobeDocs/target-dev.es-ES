@@ -261,14 +261,14 @@ Si la implementación está lista, verá el resultado como se muestra a continua
     ✅ target.example.com pasa la validación de respuesta TLS y HTTP para la región VA
     ✅ target.example.com pasa la validación de respuesta TLS y HTTP para la región TYO
     ✅ target.example.com pasa la validación de partición para los siguientes 7 fragmentos de Edge:===== ✅ target.example.com [fragmento de Edge: IRL1-pool.data.adobedc.net] =====
-     fecha de caducidad: feb. fecha 14}* 20 23:59:59 2026 GMT
+     fecha de caducidad: feb. fecha 14&rbrace;* 20 23:59:59 2026 GMT
     * emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     * asunto: C=US; ST=California; L=San José; O=Adobe Systems Incorporated; CN=target.example.com===== ✅ target.example.com [edge shard: IND1-pool.data.adobedc.net] =====
-    * fecha de caducidad: 20/Feb/23/20}59/2026 GMT:59:* emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+    * fecha de caducidad: 20/Feb/23/20&rbrace;59/2026 GMT:59:* emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     * asunto: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== 
      target.example.com [Edge Shard: SIN-pool.data.adobedc.net] =====✅* fecha de caducidad: 20 de febrero de 23
     59 2026 GMT:59:* emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-    * asunto: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== {2target.example.com OR-pool.data.adobedc.net] =====
+    * asunto: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== &lbrace;2target.example.com OR-pool.data.adobedc.net&rbrack; =====
     * fecha de caducidad: 20 de febrero de 23✅59 2026 GMT
     * emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1:59:* asunto: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== 
      [edge shard: SYD-pool.data.adobedc.net] =====
@@ -282,7 +282,7 @@ Si la implementación está lista, verá el resultado como se muestra a continua
     * emisor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1:59:* asunto: C=US; ST=California; L=San José O=Adobe Systems Incorporated; CN=target.example.com========================================================== Para obtener más información sobre la validación de TLS/SSL, consulte Comprador de SSL.    
      https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com Para comprobar la propagación de DNS en todo el mundo, consulte whatsmydns.net:    
      registros A de DNS:     Registro CNAME DNS de https://whatsmydns.net/#A/target.example.com🔎: https://whatsmydns.net/#CNAME/target.example.com🔎&quot;
-    🔎+++
+    +++🔎
     
     
     

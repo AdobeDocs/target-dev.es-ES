@@ -31,7 +31,7 @@ Instrucciones para trabajar con [!DNL Adobe Client Care] a fin de implementar el
    >
    >La autoridad de certificación de Adobe, DigiCert, no puede emitir un certificado hasta que se complete este paso. Por lo tanto, Adobe no puede cumplir su solicitud de implementación CNAME hasta que se complete este paso.
 
-1. [Rellene este formulario](assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de Adobe Client Care solicitando asistencia de CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
+1. [Rellene este formulario](assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de Adobe Client Care solicitando asistencia de CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es&#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] código de cliente:
    * Nombres de host de certificado SSL (ejemplo: `target.example.com target.example.org`):

@@ -1,13 +1,13 @@
 ---
-keywords: Recommendations, configuración, preferencias, sector, criterios incompatibles de filtro, grupo de hosts predeterminado, url de base en miniatura, token de api de recomendaciones, $9
+keywords: Recommendations, configuración, preferencias, sector, criterios incompatibles de filtro, grupo de hosts predeterminado, URL de base en miniatura, token de api de recomendaciones, $9
 description: Obtenga información sobre cómo implementar [!UICONTROL Recommendations] actividades en  [!DNL Adobe Target].
 title: ¿Cómo Implemento Actividades De [!UICONTROL Recommendations]?
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 777c8b9aeb866e1b20ec24e85532a99f57d1fe72
+source-git-commit: 94a4122244065384f487ca9a29dfa1b414168cb8
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 25%
+source-wordcount: '1462'
+ht-degree: 21%
 
 ---
 
@@ -17,7 +17,7 @@ Información para ayudarle a planificar e implementar [!DNL Adobe Target Recomme
 
 >[!NOTE]
 >
->Además de este artículo, la [Guía para profesionales de Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=es){target=_blank} contiene información detallada acerca de [Target Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=es){target=_blank}.
+>Además de este artículo, la [Guía para profesionales de Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=es){target=_blank} contiene información detallada acerca de [Target Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html){target=_blank}.
 
 Antes de configurar su primera actividad [!UICONTROL Recommendations] en [!DNL Adobe Target], complete los siguientes pasos:
 
@@ -28,11 +28,11 @@ Antes de configurar su primera actividad [!UICONTROL Recommendations] en [!DNL A
 1. [Configurar [!UICONTROL Recommendations] configuración](#configure-recommendations-settings).
 1. (Opcional) [Administrar [!UICONTROL Recommendations] mediante las API de administrador](#administer-recommendations-using-admin-apis).
 
-## 1. Implementar [!UICONTROL Target]
+## &#x200B;1. Implementar [!UICONTROL Target]
 
-[!DNL Target Recommendations] requiere que implemente el SDK web de Adobe Experience Platform o at.js 0.9.2 (o posterior). Consulte las [[!UICONTROL Target] guías de implementación del lado del cliente](../client-side/overview.md) para obtener más información.
+[!DNL Target Recommendations] requiere que implemente Adobe Experience Platform Web SDK o at.js 0.9.2 (o posterior). Consulte las [[!UICONTROL Target] guías de implementación del lado del cliente](../client-side/overview.md) para obtener más información.
 
-## 2. Configurar el catálogo [!UICONTROL Recommendations]
+## &#x200B;2. Configurar el catálogo [!UICONTROL Recommendations]
 
 Para ofrecer recomendaciones de alta calidad, [!UICONTROL Target] debe conocer los productos o el contenido que desea recomendar. Los catálogos suelen incluir tres tipos de información sobre los artículos recomendados. Supongamos que recomienda películas. Incluya lo siguiente:
 
@@ -44,13 +44,29 @@ Para ofrecer recomendaciones de alta calidad, [!UICONTROL Target] debe conocer l
 
 | Método | Qué es | Cuándo utilizarla | Información adicional |
 | --- | --- | --- | --- |
-| Fuente de catálogo | Programe una fuente (CSV, XML de producto de Google o Clasificaciones de productos de Analytics) para que se cargue e incorpore diariamente. | Para enviar información sobre varios elementos a la vez. Para enviar información que cambia con poca frecuencia. | Ver [Fuentes](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=es). |
+| Fuente de catálogo | Programe una fuente (CSV, XML de producto de Google o Clasificaciones de productos de Analytics) para que se cargue e incorpore diariamente. | Para enviar información sobre varios elementos a la vez. Para enviar información que cambia con poca frecuencia. | Ver [Fuentes](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
 | API de entidades | Llame a una API para enviar actualizaciones al minuto de un solo elemento. | Para enviar actualizaciones a medida que se producen en un elemento a la vez. Para enviar información que cambia con frecuencia (por ejemplo, nivel de precio, inventario/stock). | Consulte la [documentación para desarrolladores de API de entidades](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Pasar actualizaciones en la página | Envíe actualizaciones de un solo elemento al minuto mediante JavaScript en la página o mediante la API de envío. | Para enviar actualizaciones a medida que se producen en un elemento a la vez. Para enviar información que cambia con frecuencia (por ejemplo, nivel de precio, inventario/stock). | Ver [vistas de artículos/páginas de productos](#item-views-or-product-pages) a continuación. |
 
+>[!IMPORTANT]
+>
+>Tenga cuidado al actualizar su [!DNL Recommendations] [!UICONTROL Catalog] a través de [!DNL Delivery API]. [!DNL Delivery API] es público, por lo que debe evitar utilizarlo para rellenar elementos en los que se puede hacer clic en su catálogo de recomendaciones. Al hacerlo, se puede introducir contenido invalidado y contaminar el catálogo.
+>
+>**Prácticas recomendadas**: Use [!DNL Delivery API] solo para actualizar atributos de catálogo que:
+>
+>* Cambie con frecuencia (por ejemplo, precio o nivel de stock).
+>
+>* Siga un formato predefinido que se pueda validar fácilmente en su sitio web.
+>
+>* No lo utilice para agregar o modificar elementos en los que se puede hacer clic u otro contenido no verificado.
+>
+>* Si es necesario, puede solicitar al servicio de atención al cliente que deshabilite las actualizaciones del catálogo a través de la API de envío.
+>
+>Para obtener más información, consulte la documentación de [[!UICONTROL Adobe Target Delivery API]](https://developer.adobe.com/target/implement/delivery-api/){target=_blank}.
+
 La mayoría de los clientes deben implementar al menos una fuente. A continuación, puede elegir complementar su fuente con actualizaciones para atributos o elementos que se cambian con frecuencia mediante la API de entidades o el método en la página.
 
-## 3. Pasar información y contexto de comportamiento
+## &#x200B;3. Pasar información y contexto de comportamiento
 
 La información de comportamiento y el contexto que debe pasar a [!UICONTROL Target] dependen de la acción que esté realizando el visitante, que a menudo se asocia con el tipo de página con la que interactúa.
 
@@ -107,7 +123,7 @@ function targetPageParams() {
 }
 ```
 
-Para obtener más información sobre las recomendaciones basadas en el carro de compras, consulte [Basado en el carro de compras](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=es#cart-based) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
+Para obtener más información sobre las recomendaciones basadas en el carro de compras, consulte [Basado en el carro de compras](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
 
 ### Excluir elementos que ya están en el carro de compras del visitante
 
@@ -127,11 +143,11 @@ function targetPageParams() {
 
 Cuando se produce un evento de compra, pasa la identidad del artículo o artículos comprados. Consulte [Rastrear conversiones](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions) en el artículo de [Cómo implementar at.js > Implementar [!UICONTROL Target] sin un administrador de etiquetas](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
-## 4. Configurar exclusiones globales
+## &#x200B;4. Configurar exclusiones globales
 
-Excluya cualquier elemento de nivel global que no quiera que se recomiende a un visitante. Consulte [Exclusiones](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/exclusions.html?lang=es) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
+Excluya cualquier elemento de nivel global que no quiera que se recomiende a un visitante. Consulte [Exclusiones](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/exclusions.html) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
 
-## 5. Configurar [!UICONTROL Recommendations]
+## &#x200B;5. Configurar [!UICONTROL Recommendations]
 
 Utilice la configuración para administrar la implementación de [!UICONTROL Recommendations].
 
@@ -145,11 +161,11 @@ Las opciones disponibles son las siguientes:
 |--- |--- |
 | Mbox global personalizado | (Opcional) Especifique el mbox global personalizado que se usa para aprovisionar actividades de [!UICONTROL Target]. De manera predeterminada, el mbox global usado por [!UICONTROL Target] se usa para [!UICONTROL Recommendations].<P>Nota: Esta opción está establecida en la página [!UICONTROL Target] **[!UICONTROL Administration]**. Abra [!UICONTROL Target] y haga clic en **[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**. |
 | Sector | El sector se usa para ayudarle a categorizar los criterios de recomendaciones. Esta información ayuda a los miembros de su equipo a encontrar criterios que tienen sentido para una página en particular, como los criterios que son mejores para la página del carro de compras o para una página multimedia. |
-| Criterios incompatibles de filtro | Habilite esta opción para mostrar únicamente aquellos criterios donde la página seleccionada pasa los datos necesarios. No todos los criterios se ejecutan correctamente en cada página. La página o el mbox deben pasar `entity.id` o `entity.categoryId` para que las recomendaciones de la categoría actual o el elemento actual sean compatibles. En general, se recomienda mostrar solamente criterios compatibles. Sin embargo, si desea que haya disponibles criterios incompatibles para la actividad, desactive esta opción.<P>Se recomienda deshabilitar esta opción si se usa una solución de administración de etiquetas.<P>Para obtener más información sobre esta opción, consulte [[!UICONTROL Recommendations] preguntas frecuentes](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=es) en la *[!DNL Adobe Target]Guía para profesionales de la empresa*. |
-| Grupo de hosts predeterminado | Seleccione el grupo de hosts predeterminado.<P>El grupo de hosts puede utilizarse para separar los elementos disponibles en el catálogo para usos diferentes. Por ejemplo, puede utilizar grupos de hosts para entornos de desarrollo y producción, marcas diferentes o regiones geográficas diferentes. De forma predeterminada, la vista previa de los resultados en Búsqueda de catálogo, Colecciones y Exclusiones se basa en el grupo de hosts predeterminado. (También puede seleccionar otro grupo de hosts para obtener una vista previa de los resultados mediante el filtro Entorno). De forma predeterminada, los elementos recién añadidos están disponibles en todos los grupos de hosts a menos que se especifique un ID de entorno al crear o actualizar el elemento. Las recomendaciones enviadas dependen del grupo de hosts especificado en la solicitud.<P>Si no ve sus productos, asegúrese de que esté usando el grupo de hosts correcto. Por ejemplo, si configura que la recomendación use un entorno de ensayo y establece el grupo de hosts en Ensayo, puede que tenga que volver a crear las colecciones en el entorno de ensayo para que se puedan mostrar los productos. Para ver qué productos están disponibles en cada entorno, use Búsqueda en catálogo con cada entorno. También puede obtener una vista previa del contenido de [!UICONTROL Recommendations] colecciones y exclusiones de un entorno seleccionado (grupo de hosts).<P>**Nota:** Después de cambiar el entorno seleccionado, debe hacer clic en Buscar para actualizar los resultados devueltos.<P> El filtro **[!UICONTROL The Environment]** está disponible en los siguientes lugares de la interfaz de usuario de Target:<ul><li>Búsqueda en el catálogo (**[!UICONTROL Recommendations]** > **[!UICONTROL Catalog Search]**)</li><li>Cuadro de diálogo Crear colección (**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Create New]**)</li><li>Cuadro de diálogo Actualizar colección (**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Edit]**)</li><li>Cuadro de diálogo Crear exclusión (**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create New]**)</li><li>Cuadro de diálogo Actualizar exclusión (**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)</li></ul>Para obtener más información, consulte [Hosts](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=es) en la *[!DNL Adobe Target]Guía para profesionales de la empresa*. |
+| Criterios incompatibles de filtro | Habilite esta opción para mostrar únicamente aquellos criterios donde la página seleccionada pasa los datos necesarios. No todos los criterios se ejecutan correctamente en cada página. La página o el mbox deben pasar `entity.id` o `entity.categoryId` para que las recomendaciones de la categoría actual o el elemento actual sean compatibles. En general, se recomienda mostrar solamente criterios compatibles. Sin embargo, si desea que haya disponibles criterios incompatibles para la actividad, desactive esta opción.<P>Se recomienda deshabilitar esta opción si se usa una solución de administración de etiquetas.<P>Para obtener más información sobre esta opción, consulte [[!UICONTROL Recommendations] preguntas frecuentes](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html) en la *[!DNL Adobe Target]Guía para profesionales de la empresa*. |
+| Grupo de hosts predeterminado | Seleccione el grupo de hosts predeterminado.<P>El grupo de hosts puede utilizarse para separar los elementos disponibles en el catálogo para usos diferentes. Por ejemplo, puede utilizar grupos de hosts para entornos de desarrollo y producción, marcas diferentes o regiones geográficas diferentes. De forma predeterminada, la vista previa de los resultados en Búsqueda de catálogo, Colecciones y Exclusiones se basa en el grupo de hosts predeterminado. (También puede seleccionar otro grupo de hosts para obtener una vista previa de los resultados mediante el filtro Entorno). De forma predeterminada, los elementos recién añadidos están disponibles en todos los grupos de hosts a menos que se especifique un ID de entorno al crear o actualizar el elemento. Las recomendaciones enviadas dependen del grupo de hosts especificado en la solicitud.<P>Si no ve sus productos, asegúrese de que esté usando el grupo de hosts correcto. Por ejemplo, si configura que la recomendación use un entorno de ensayo y establece el grupo de hosts en Ensayo, puede que tenga que volver a crear las colecciones en el entorno de ensayo para que se puedan mostrar los productos. Para ver qué productos están disponibles en cada entorno, use Búsqueda en catálogo con cada entorno. También puede obtener una vista previa del contenido de [!UICONTROL Recommendations] colecciones y exclusiones de un entorno seleccionado (grupo de hosts).<P>**Nota:** Después de cambiar el entorno seleccionado, debe hacer clic en Buscar para actualizar los resultados devueltos.<P> El filtro **[!UICONTROL The Environment]** está disponible en los siguientes lugares de la interfaz de usuario de Target:<ul><li>Búsqueda en el catálogo (**[!UICONTROL Recommendations]** > **[!UICONTROL Catalog Search]**)</li><li>Cuadro de diálogo Crear colección (**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Create New]**)</li><li>Cuadro de diálogo Actualizar colección (**[!UICONTROL Recommendations]** > **[!UICONTROL Collections]** > **[!UICONTROL Edit]**)</li><li>Cuadro de diálogo Crear exclusión (**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Create New]**)</li><li>Cuadro de diálogo Actualizar exclusión (**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusions]** > **[!UICONTROL Edit]**)</li></ul>Para obtener más información, consulte [Hosts](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) en la *[!DNL Adobe Target]Guía para profesionales de la empresa*. |
 | Dirección URL de base en miniatura | Al establecer una dirección URL de base para su catálogo de productos, es posible usar direcciones URL relativas al especificar vistas en miniatura de sus productos al pasar su dirección URL de vista en miniatura.<P>Por ejemplo:<P>`"entity.thumbnailURL=/Images/Homepage/product1.jpg"`<P>establece una dirección URL relativa para la dirección URL de base de vista en miniatura. |
 | [!UICONTROL Recommendations] token de API | Use este token en [!UICONTROL Recommendations] llamadas a la API, como la API de descarga. |
 
-## 6. (Opcional) Administrar [!UICONTROL Recommendations] mediante las API de administración
+## &#x200B;6. (Opcional) Administrar [!UICONTROL Recommendations] mediante las API de administración
 
 Consulte la guía práctica [Usar las API [!UICONTROL Recommendations]](../../before-administer/recs-api/overview.md) para obtener información sobre cómo configurar y usar las API de administración y envío [!UICONTROL Target] para [!UICONTROL Recommendations].

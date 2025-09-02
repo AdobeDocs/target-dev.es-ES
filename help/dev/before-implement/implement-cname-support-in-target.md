@@ -4,7 +4,7 @@ description: Trabaje con [!UICONTROL Adobe Client Care] para implementar la comp
 title: ¿Cómo utilizo CNAME en Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 71a8a2d9d324cd31452a4400d76052432efbfdd4
+source-git-commit: 4f28018a55d484f45ebbbce319d580450d3db68b
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%
@@ -31,12 +31,13 @@ Instrucciones para trabajar con [!DNL Adobe Client Care] a fin de implementar el
    >
    >La autoridad de certificación de Adobe, DigiCert, no puede emitir un certificado hasta que se complete este paso. Por lo tanto, Adobe no puede cumplir su solicitud de implementación CNAME hasta que se complete este paso.
 
-1. [Rellene este formulario](assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de Adobe Client Care solicitando asistencia de CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Rellene este formulario](assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de Adobe Client Care solicitando asistencia de CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] código de cliente:
    * Nombres de host de certificado SSL (ejemplo: `target.example.com target.example.org`):
    * Comprador de certificados SSL (se recomienda encarecidamente Adobe, consulte las preguntas frecuentes): Adobe/cliente
    * Si el cliente está comprando el certificado, también conocido como &quot;Traer su propio certificado&quot; (BYOC), rellene estos detalles adicionales:
+
       * Organización del certificado (ejemplo: Empresa de ejemplo Inc):
       * Unidad organizativa del certificado (opcional, ejemplo: Marketing):
       * País del certificado (ejemplo: EE. UU.):
@@ -306,3 +307,4 @@ Reemplace `clientcode` por su código de cliente y luego agregue el texto o la i
 
 * El modo de control de calidad no se fija cuando tiene CNAME y at.js 1.x porque se basa en una cookie de terceros. La solución consiste en agregar los parámetros de vista previa a cada dirección URL a la que vaya. El modo de control de calidad es fijo cuando tiene CNAME y at.js 2.x.
 * Al utilizar CNAME, es más probable que aumente el tamaño del encabezado de la cookie para [!DNL Target] llamadas. Adobe recomienda mantener el tamaño de la cookie por debajo de 8 KB.
+

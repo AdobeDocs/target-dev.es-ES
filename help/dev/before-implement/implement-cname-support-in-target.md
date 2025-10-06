@@ -19,7 +19,7 @@ Instrucciones para trabajar con [!DNL Adobe] Client Care a fin de implementar el
 ## Solicitar soporte de CNAME en [!DNL Target]
 
 1. Determine la lista de nombres de host que necesita para su certificado SSL (consulte las preguntas frecuentes a continuación).
-1. [Rellene este formulario](/help/dev/implement/assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de  [!DNL Adobe] Atención al cliente solicitando soporte de CNAME](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
+1. [Rellene este formulario](/help/dev/implement/assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de  [!DNL Adobe] Atención al cliente solicitando soporte de CNAME](https://experienceleague.adobe.com/es/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] código de cliente:
    * Nombres de host de certificado SSL (ejemplo: `target.example.com target.example.org`):

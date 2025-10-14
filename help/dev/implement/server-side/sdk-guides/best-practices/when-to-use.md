@@ -17,4 +17,4 @@ Por otro lado, la toma de decisiones perimetral requiere una llamada de bloqueo 
 
 ## Funciones compatibles
 
-Además de evaluar sus casos de uso y objetivos empresariales, revise qué características admite la toma de decisiones en el dispositivo [antes de decidir si usar la toma de decisiones en el dispositivo en lugar de la toma de decisiones en el perímetro. ](../on-device-decisioning/supported-features.md) Actualmente, Edge Decisioning admite todos los tipos de actividades, segmentación de audiencias y métodos de asignación.
+Además de evaluar sus casos de uso y objetivos empresariales, revise qué características admite la toma de decisiones en el dispositivo [antes de decidir si usar la toma de decisiones en el dispositivo en lugar de la toma de decisiones en el perímetro. &#x200B;](../on-device-decisioning/supported-features.md) Actualmente, Edge Decisioning admite todos los tipos de actividades, segmentación de audiencias y métodos de asignación.

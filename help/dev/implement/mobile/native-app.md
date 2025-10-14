@@ -79,7 +79,7 @@ Target.getSessionId { (id, err) in
 
 ## Realizar pruebas en las vistas web
 
-Los vínculos de vista previa web se generan en la página [!UICONTROL Activity detail] al hacer clic en el vínculo [[!UICONTROL Adobe QA] ](/help/dev/implement/mobile/target-mobile-preview.md) para mostrar una ventana emergente con el fin de copiar cada vínculo de vista previa de experiencia, de forma similar a la siguiente:
+Los vínculos de vista previa web se generan en la página [!UICONTROL Activity detail] al hacer clic en el vínculo [[!UICONTROL Adobe QA] &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md) para mostrar una ventana emergente con el fin de copiar cada vínculo de vista previa de experiencia, de forma similar a la siguiente:
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

@@ -334,6 +334,6 @@ Puede filtrar todas las actividades que cumplen los requisitos de [!UICONTROL on
 
    La primera generación de artefactos de reglas JSON puede tardar hasta 10 minutos.
 
-1. Cree y active un tipo de actividad [ compatible con [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) y verifique que cumpla los requisitos de [!UICONTROL on-device decisioning].
+1. Cree y active un tipo de actividad [&#x200B; compatible con [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) y verifique que cumpla los requisitos de [!UICONTROL on-device decisioning].
 1. Establezca **[!UICONTROL Decisioning Method]** en **[!UICONTROL "Hybrid"]** o **[!UICONTROL "On-device only"]** a través de la interfaz de usuario de la configuración de at.js.
 1. Descargue e implemente at.js 2.5.0+ en sus páginas.

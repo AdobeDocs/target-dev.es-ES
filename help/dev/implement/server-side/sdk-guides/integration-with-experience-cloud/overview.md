@@ -12,7 +12,7 @@ ht-degree: 9%
 
 # Información general sobre la integración con [!DNL Experience Cloud]
 
-Los SDK del lado del servidor de [!DNL Adobe Target] admiten una integración perfecta con [Adobe Analytics](https://business.adobe.com/products/analytics/adobe-analytics.html) y [Adobe Audience Manager](https://business.adobe.com/products/audience-manager/adobe-audience-manager.html) para que puedas aprovechar la potencia de [!DNL Adobe Experience Cloud].
+Los SDK del lado del servidor de [!DNL Adobe Target] admiten una integración perfecta con [Adobe Analytics](https://business.adobe.com/es/products/analytics/adobe-analytics.html) y [Adobe Audience Manager](https://business.adobe.com/es/products/audience-manager/adobe-audience-manager.html) para que puedas aprovechar la potencia de [!DNL Adobe Experience Cloud].
 
 Para obtener más información sobre estas integraciones, explore las referencias siguientes:
 

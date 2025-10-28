@@ -4,10 +4,10 @@ description: Aprenda a usar [!DNL Adobe Target] [!UICONTROL Bulk Profile Update 
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: dae198fd8ef3fc8473ad31807c146802339b1832
+source-git-commit: 38ed32560170e5a8f472aa191bb5a24d4e13cde7
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 7%
+source-wordcount: '1078'
+ht-degree: 6%
 
 ---
 
@@ -49,13 +49,13 @@ Con [!UICONTROL Bulk Profile Update API], puede enviar convenientemente datos de
 
 Para actualizar los datos de perfil de forma masiva, cree un archivo por lotes. El archivo por lotes es un archivo de texto con valores separados por comas similar al siguiente archivo de muestra.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ Hace referencia a este archivo en la llamada de POST a [!DNL Target] servidores 
 
 Realice una petición HTTP POST a [!DNL Target] servidores Edge para procesar el archivo. Este es un ejemplo de una petición HTTP POST para el archivo batch.txt mediante el comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Donde:
 
@@ -144,3 +144,25 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
     <failedUpdates>0</failedUpdates>
 </response>
 ```
+
+## Aclaración sobre la administración de valores vacíos en [!DNL Bulk Profile Update API]
+
+Al usar [!DNL Target] [!DNL Bulk Profile Update API] (v1 o v2), es importante entender cómo el sistema gestiona los valores de atributo o parámetro vacíos.
+
+### Comportamiento esperado
+
+Al enviar valores vacíos (&quot;&quot;, campos nulos o que faltan) para parámetros o atributos existentes, no se restablecen ni eliminan esos valores en el almacén de perfiles. Esto es por diseño.
+
+Los valores vacíos se ignoran: la API filtra los valores vacíos durante el procesamiento para evitar actualizaciones innecesarias o sin sentido.
+
+**No se han borrado los datos existentes**: si un parámetro ya tiene un valor, al enviar un valor vacío, no se cambiará.
+
+**Se omiten los lotes solo vacíos**: Si un lote contiene solo valores vacíos o nulos, se omitirá por completo y no se aplicarán actualizaciones.
+
+### Notas adicionales
+
+Este comportamiento se aplica tanto a la versión 1 como a la versión 2 de [!DNL Bulk Profile Update API].
+
+No tiene ningún efecto intentar borrar o quitar un atributo enviando un valor vacío.
+
+Se ha planificado la eliminación de atributos explícitos para una versión futura (v3) de la API, pero aún no está disponible.

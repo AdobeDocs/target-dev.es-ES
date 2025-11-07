@@ -4,7 +4,7 @@ description: Descubra cómo Adobe Target utiliza user-agent y Client Hints para 
 title: User Agent y Client Hints
 feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 72%
@@ -136,7 +136,7 @@ Actualmente, los exploradores basados en Chromium siguen enviando user-agent jun
 
 Los siguientes casos de uso en Target requieren Client Hints:
 
-### Atributos de audiencia
+### Atributos de público
 
 Si utiliza audiencias de Target y utiliza cualquiera de los atributos de audiencia siguientes, Target requiere que las Client Hints realicen la segmentación correcta:
 
@@ -175,7 +175,7 @@ Las secciones siguientes contienen más información sobre cómo pasar Client Hi
 
 ### at.js versión 2.9.0 (o posterior)
 
-A partir de at.js 2.9.0, User Agent Client Hints se recopilarán automáticamente desde el explorador y se enviarán a Target cuando se llame a `getOffer/getOffers()`. De forma predeterminada, at.js recopila solo Client Hints de “baja entropía”. Si realiza la segmentación de audiencia o utiliza secuencias de comandos de perfil basadas en datos clasificados como “alta entropía” desde las secciones anteriores, debe configurar at.js para que recopile Client Hints de “alta entropía” desde el explorador a través de `targetGlobalSettings`.
+A partir de at.js 2.9.0, User Agent Client Hints se recopilarán automáticamente desde el explorador y se enviarán a Target cuando se llame a `getOffer/getOffers()`. De forma predeterminada, at.js recopila solo Client Hints de “baja entropía”. Si realiza la segmentación del público o utiliza secuencias de comandos de perfil basadas en datos clasificados como “alta entropía” desde las secciones anteriores, debe configurar at.js para que recopile Client Hints de “alta entropía” desde el explorador a través de `targetGlobalSettings`.
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };

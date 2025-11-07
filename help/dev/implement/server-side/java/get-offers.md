@@ -1,9 +1,9 @@
 ---
-title: Usar getOffers() en  [!DNL Adobe Target] al usar el SDK de Java
+title: Use getOffers() en  [!DNL Adobe Target] al usar Java SDK
 description: Aprenda a utilizar getOffers() para ejecutar una decisión y recuperar una experiencia de  [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 9d7bf956-9d6a-4b4f-a401-2e6814f17f3d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 13%
@@ -43,7 +43,7 @@ El objeto `[!UICONTROL TargetDeliveryRequestBuilder]` tiene la siguiente estruct
 | Nombre | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
 | el contexto | Contexto | Sí | Especifica el contexto de la solicitud |
-| sessionId |  | Cadena | No | Se usa para vincular varias solicitudes [!DNL Target] |
+| sessionId | Cadena | No | Se usa para vincular varias solicitudes [!DNL Target] |
 | thirdPartyId | Cadena | No | El identificador de su empresa del usuario que puede enviar con cada llamada |
 | cookies | Lista | No | Lista de cookies devueltas en la solicitud [!DNL Target] anterior del mismo usuario. |
 | customerIds | Mapa | No | ID de cliente en formato compatible con VisitorId |
@@ -98,7 +98,7 @@ El objeto `TargetCookie` utilizado para guardar datos para la sesión de usuario
 | value | Cadena | Valor de la cookie, el valor se convertirá en cadena |
 | maxAge | Número | La opción maxAge es una comodidad para configurar las caducidades en relación con el tiempo actual en segundos |
 
-No tiene que preocuparse por la caducidad de las cookies. Target administra maxAge dentro del SDK.
+No tiene que preocuparse por la caducidad de las cookies. Target administra maxAge dentro de SDK.
 
 ## Ejemplo
 

@@ -4,7 +4,7 @@ description: Vea una lista de funciones que se pueden usar con las versiones 1.x
 title: ¿Qué funciones puedo utilizar con at.js?
 feature: at.js
 exl-id: 1efed365-8a74-4c85-bdb1-8daaaf53d642
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 58%
@@ -16,12 +16,12 @@ ht-degree: 58%
 Lista de funciones que se pueden usar con la biblioteca JavaScript at.js [!DNL Adobe Target]. Para obtener más información y ejemplos, haga clic en los vínculos de la columna Función.
 
 | Función | Detalles |
-| --- | --- | 
+| --- | --- |
 | [[!UICONTROL adobe.target.getOffer(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md) | Esta función activa una solicitud para obtener una oferta [!DNL Target]. Use con `adobe.target.applyOffer()` para procesar la respuesta o use su propia administración de éxito. |
 | [[!UICONTROL adobe.target.getOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)<P>(at.js 2.x) | Esta función le permite recuperar varias ofertas pasando varios mboxes. Además, se pueden recuperar varias ofertas para todas las vistas de actividades activas.<P>**Nota:** Esta función se introdujo en at.js 2.x. Esta función no está disponible para la versión 1 de at.js.*x*. |
 | [[!UICONTROL adobe.target.applyOffer(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md) | Esta función es para aplicar el contenido de respuesta. |
 | [[!UICONTROL adobe.target.applyOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)<P>(at.js 2.x) | Esta función permite aplicar más de una oferta recuperada por [!UICONTROL adobe.target.getOffers()].<P>**Nota:** Esta función se introdujo en at.js 2.x. Esta función no está disponible para la versión 1 de at.js.*x*. |
-| [[!UICONTROL adobe.target.triggerView (viewName, options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)<P>(at.js 2.x) | Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página.<P> SPA Esta función debe implementarse para aplicaciones de una sola página () a fin de usar el [!UICONTROL Visual Experience Composer] (VEC) para crear actividades [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT). |
+| [[!UICONTROL adobe.target.triggerView (viewName, options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)<P>(at.js 2.x) | Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página.<P> Esta función debe implementarse para aplicaciones de una sola página (SPA) a fin de usar el [!UICONTROL Visual Experience Composer] (VEC) para crear actividades [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT). |
 | [[!UICONTROL adobe.target.trackEvent(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) | Esta función activa una solicitud para informar sobre las acciones de los usuarios, como clics y conversiones. No proporciona ninguna actividad en la respuesta. |
 | [[!UICONTROL mboxCreate(mbox,params)]](/help/dev/implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)<P>(at.js 1.x) | Ejecuta una solicitud y aplica la oferta al DIV más cercano con nombre de clase mboxDefault.<P>**Nota:** Esta función está disponible para las versiones 1 de at.js.Solamente *x*. Esta función quedó obsoleta con el lanzamiento de at.js 2.x. Esta función devuelve el contenido predeterminado si se utiliza con at.js 2.x. |
 | [[!UICONTROL mboxDefine(options)] y [!UICONTROL mboxUpdate(options)]](/help/dev/implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)<P>(at.js 1.x) | Defina y actualice un mbox.<P>**Nota:** Esta función está disponible para las versiones 1 de at.js.Solamente *x*. Esta función quedó obsoleta con el lanzamiento de at.js 2.x. Esta función devuelve el contenido predeterminado si se utiliza con at.js 2.x. |

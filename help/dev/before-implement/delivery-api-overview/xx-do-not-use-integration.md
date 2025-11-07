@@ -2,7 +2,7 @@
 title: Integración con Experience Cloud
 description: Integración con Experience Cloud
 keywords: api de envío
-source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -176,7 +176,7 @@ Una vez que haya especificado `logging` = `client_side`, recibirá la carga úti
 }
 ```
 
-Si la respuesta de Target contiene algo en la propiedad `analytics` -> `payload`, reenvíela tal cual a Adobe Analytics. Analytics sabe cómo procesar esta carga útil. Esto se puede hacer en una solicitud de GET con el siguiente formato:
+Si la respuesta de Target contiene algo en la propiedad `analytics` -> `payload`, reenvíela tal cual a Adobe Analytics. Analytics sabe cómo procesar esta carga útil. Esto se puede hacer en una petición GET utilizando el siguiente formato:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -189,7 +189,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | `rsid` | Sí | La ID del grupo de informes |
 | `pe` | Sí | Evento de página. Siempre establecido en `tnt` |
 | `tnta` | Sí | Carga útil de Analytics devuelta por el servidor de Target en `analytics` -> `payload` -> `tnta` |
-| `mid` | ID de visitante de Marketing Cloud |
+| `mid` | ID de visitante de Marketing Cloud |  |
 
 ### Valores de encabezado obligatorios
 
@@ -205,13 +205,13 @@ https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0?pe=tnt&tnta=285408:0:0
 
 ## Adobe Audience Manager
 
-Los segmentos de Adobe Audience Manager AAM () también se pueden aprovechar mediante las API de envío de Adobe Target. AAM Para aprovechar los segmentos de, se deben proporcionar los siguientes campos:
+Los segmentos de Adobe Audience Manager (AAM) también se pueden aprovechar mediante las API de envío de Adobe Target. Para aprovechar los segmentos de AAM, se deben proporcionar los siguientes campos:
 
 | Nombre del campo | Requerido | Descripción |
 | --- | --- | --- |
-| `locationHint` | Sí | AAM Sugerencia de ubicación DCS se utiliza para determinar qué extremo de DCS de DCS de DCS se visita para recuperar el perfil. Debe ser >= 1. |
+| `locationHint` | Sí | Sugerencia de ubicación DCS se utiliza para determinar qué punto de conexión DCS de AAM visitar para recuperar el perfil. Debe ser >= 1. |
 | `marketingCloudVisitorId` | Sí | ID de visitante de Marketing Cloud |
-| `blob` | Sí | AAM AAM Se utiliza un blob de para enviar datos adicionales a los usuarios de la aplicación de correo electrónico No debe estar en blanco y tener un tamaño &lt;= 1024. |
+| `blob` | Sí | AAM Blob se utiliza para enviar datos adicionales a AAM. No debe estar en blanco y tener un tamaño &lt;= 1024. |
 
 ```
 curl -X POST \

@@ -6,7 +6,7 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 1%
@@ -42,9 +42,9 @@ Para utilizar la API de envío para ofrecer experiencias de Target, incluidas re
 
 ## Crear una recomendación con el Compositor de experiencias basadas en formularios
 
-Para crear recomendaciones que se puedan usar con la API de entrega, use [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es).
+Para crear recomendaciones que se puedan usar con la API de entrega, use [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
-1. En primer lugar, cree y guarde un diseño basado en JSON para utilizarlo en su recomendación. Para obtener el archivo JSON de muestra, además de información básica sobre cómo se pueden devolver las respuestas JSON al configurar una actividad basada en formularios, consulte la documentación de [Creación de diseños de recomendación](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=es). En este ejemplo, el diseño se denomina *JSON simple.*
+1. En primer lugar, cree y guarde un diseño basado en JSON para utilizarlo en su recomendación. Para obtener el archivo JSON de muestra, además de información básica sobre cómo se pueden devolver las respuestas JSON al configurar una actividad basada en formularios, consulte la documentación de [Creación de diseños de recomendación](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html). En este ejemplo, el diseño se denomina *JSON simple.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. En Target, vaya a **[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]** y, a continuación, seleccione **[!UICONTROL Form]**.
@@ -54,7 +54,7 @@ Para crear recomendaciones que se puedan usar con la API de entrega, use [Compos
 1. Seleccione una propiedad y haga clic en **[!UICONTROL Next]**.
 1. Defina la ubicación en la que desea que los usuarios reciban la respuesta de la recomendación. El ejemplo siguiente utiliza una ubicación denominada *api_charter*. Seleccione el diseño basado en JSON, creado anteriormente, con el nombre *JSON simple.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. Guarde y active la recomendación. Generará resultados. [Una vez que los resultados estén listos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=es), puede usar la API de envío para recuperarlos.
+1. Guarde y active la recomendación. Generará resultados. [Una vez que los resultados estén listos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html), puede usar la API de envío para recuperarlos.
 
 ## Uso de la API de entrega
 
@@ -64,11 +64,10 @@ La sintaxis de la [API de envío](/help/dev/implement/delivery-api/overview.md) 
 
 1. Tenga en cuenta que el código de cliente es obligatorio. Como recordatorio, el código de cliente se puede encontrar en Adobe Target navegando a **[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**. Observe el valor **Código de cliente** en la sección **Token de API de recomendación**.
    ![client-code.png](assets/client-code.png)
-1. Una vez que tenga el código de cliente de, cree la llamada de API de envío. El ejemplo siguiente comienza con **[!UICONTROL Web Batched Mboxes Delivery API Call]** proporcionado en la [colección Postman de la API de entrega](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection), y realiza las modificaciones pertinentes. Por ejemplo:
+1. Una vez que tenga el código de cliente de, cree la llamada de API de envío. El ejemplo siguiente comienza con **[!UICONTROL Web Batched Mboxes Delivery API Call]** proporcionado en la [colección Postman de la API de entrega](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection), y realiza las modificaciones pertinentes. Por ejemplo:
    * los objetos **browser** y **address** se quitaron de **Body**, ya que no son necesarios para los casos de uso que no son de HTML
    * *api_charter* aparece como el nombre de la ubicación en este ejemplo
    * se especifica entity.id, ya que esta recomendación se basa en la Similitud de contenido, que requiere que se pase a Target una clave de elemento actual.
-
      ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 Recuerde configurar los parámetros de consulta correctamente. Por ejemplo, asegúrese de especificar `{{CLIENT_CODE}}` según sea necesario. &lt;!— P: En la sintaxis de llamada actualizada, entity.id se muestra como profileParameter en lugar de mboxParameter, como en versiones anteriores. —> &lt;!— P: Imagen antigua ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Texto acompañante antiguo: &quot;Tenga en cuenta que esta recomendación se basa en productos similares de contenido basados en entity.id enviados mediante mboxParameters.&quot; —>
      ![client-code3](assets/client-code3.png)
@@ -116,7 +115,7 @@ En una [sección anterior](manage-catalog.md) aprendimos a administrar entidades
 ## Documentación de referencia
 
 * [Documentación de la API de envío de Adobe Target](/help/dev/implement/delivery-api/overview.md)
-* [Integrar Recommendations con el correo electrónico](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=es)
+* [Integrar Recommendations con el correo electrónico](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## Resumen y revisión
 

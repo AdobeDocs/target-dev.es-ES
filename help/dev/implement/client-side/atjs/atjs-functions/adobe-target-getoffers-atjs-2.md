@@ -4,7 +4,7 @@ description: Utilice la función [!UICONTROL adobe.target.getOffers()] y sus opc
 title: ¿Cómo se utiliza la función [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1317'
 ht-degree: 62%
@@ -35,7 +35,7 @@ Esta función le permite recuperar varias ofertas pasando varios mboxes. Además
 | Nombre del campo | ¿Requerido? | Limitaciones | Descripción |
 | --- | --- | --- | --- |
 | solicitud > id | No |  | Uno de `tntId`, `thirdPartyId` o `marketingCloudVisitorId` es obligatorio. |
-| Solicitud > ID > thirdPartyId | No | Tamaño máximo = 128. |  |  |
+| Solicitud > ID > thirdPartyId | No | Tamaño máximo = 128. |  |
 | Request > experienceCloud | No |  |  |
 | Request > experienceCloud > analytics | No |  | Integración de Adobe Analytics |
 | Request > experienceCloud > analytics > logging | No | Se debe implementar lo siguiente en la página:<ul><li>Servicio de ID de visitante</li><li>AppMeasurement.js</li></ul> | Se admiten los siguientes valores:<P>**client_side**: cuando se especifique, se devolverá una carga útil de Analytics al que llama, que debería usarse para enviar a [!UICONTROL Adobe Analytics] a través de [!UICONTROL Data Insertion API].<P>**server_side**: Este es el valor predeterminado en el que el backend [!DNL Target] y [!DNL Analytics] usará el SDID para unir las llamadas con fines de creación de informes. |
@@ -61,7 +61,7 @@ Esta función le permite recuperar varias ofertas pasando varios mboxes. Además
 | Solicitar > Ejecutar > pageLoad > Pedido > Total | No | `>=` 0. | Recupere ofertas con totales de pedidos especificados cuando se carga la página. |
 | Solicitud > Ejecutar > pageLoad > Pedido > purchasedProductIds | No | No hay valores en blanco.<P>Longitud máxima de cada valor 50.<P>Concatenado y separado por una coma.<P>Longitud total de ID de producto `<=` 250. | Recupere ofertas con ID de productos comprados cuando se carga la página. |
 | Solicitud > Ejecutar > mboxes | No | Tamaño máximo = 50.<P>No hay elementos nulos. |  |
-| Solicitud > Ejecutar > mboxes > mbox | Sí | No en blanco.<P>Sin sufijo &quot;-clicked&quot;.<P>Tamaño máximo = 250.<P>Caracteres permitidos: `'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'` | Nombre del mbox. |
+| Solicitud > Ejecutar > mboxes > mbox | Sí | No en blanco.<P>Sin sufijo &quot;-clicked&quot;.<P>Tamaño máximo = 250.<P>Caracteres permitidos: `'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'`\|Nombre del mbox. |
 | Solicitud > Ejecutar > mboxes > mbox > Índice | Sí | No es nulo.<P>Único.<P>`>=` 0. | Tenga en cuenta que el índice no representa el orden en que se procesarán los mboxes. Al igual que en una página web con varios mboxes regionales, no se puede especificar el orden en que se procesarán. |
 | Solicitud > Ejecutar > mboxes > mbox > Parámetros | No | Recuento máximo = 50.<P>Nombre no en blanco.<P>Longitud de nombre `<=` 128.<P>Solo acepta valores de cadena.<P>Longitud del valor `<=` 5000.<P>El nombre no debe comenzar con &quot;perfil&quot;.<P>Nombres no permitidos: &quot;orderId&quot;, &quot;orderTotal&quot;, &quot;productPurchasedId&quot;. | Recupere ofertas para un mbox determinado con los parámetros especificados. |
 | Solicitud > Ejecutar > mboxes > mbox > profileParameters | No | Recuento máximo = 50.<P>Nombre no en blanco.<P>Longitud de nombre `<=` 128.<P>Solo acepta valores de cadena.<P>Longitud del valor `<=`256.<P>El nombre no debe comenzar con &quot;perfil&quot;. | Recupere ofertas para un mbox determinado con los parámetros de perfil especificados. |
@@ -275,7 +275,7 @@ adobe.target.getOffers({
 });
 ```
 
-En la sección `request > prefetch > mboxes`, hay tres mboxes diferentes. Si la solicitud se completó correctamente, recibe la respuesta de `response > prefetch > mboxes` para cada mbox. Una vez que tenga las respuestas y las ubicaciones que desee utilizar para la representación, puede invocar a `applyOffers()` para representar el contenido obtenido de [!DNL Target]. En este ejemplo tenemos la siguiente asignación:
+En la sección `request > prefetch > mboxes`, hay tres mboxes diferentes. Si la solicitud se completó correctamente, recibe la respuesta de `response > prefetch > mboxes` para cada mbox. Una vez que tenga las respuestas y las ubicaciones que desee utilizar para la representación, puede invocar a `applyOffers()` para representar el contenido recuperado de [!DNL Target]. En este ejemplo tenemos la siguiente asignación:
 
 * mbox 1 > selector CSS #contenedor 1
 * mbox 2 > selector CSS #contenedor 2

@@ -1,9 +1,9 @@
 ---
-title: Información general de API de modelos de Adobe
+title: Información general de API de modelos Adobe
 description: Información general sobre la API de modelos, que los usuarios pueden utilizar para bloquear funciones y evitar que se incluyan en los modelos de aprendizaje automático.
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1288'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 La API de modelos, también denominada API de Lista de bloqueados, permite a los usuarios ver y administrar la lista de características utilizadas en los modelos de aprendizaje automático para las actividades [!UICONTROL Automated Personalization] (AP) y [!DNL Auto-Target] (AT). Si un usuario desea excluir una función de la utilización por parte de los modelos para actividades AP o AT, puede utilizar la API de modelos para añadir esa función a la &quot;lista de bloqueados&quot;.
 
-Un(a) **[!UICONTROL blocklist]** define el conjunto de características que [!DNL Adobe Target] excluirá de sus modelos de aprendizaje automático. Para obtener más información sobre las características, consulte [Datos utilizados por [!DNL Target] algoritmos de aprendizaje automático](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=es).
+Un(a) **[!UICONTROL blocklist]** define el conjunto de características que [!DNL Adobe Target] excluirá de sus modelos de aprendizaje automático. Para obtener más información sobre las características, consulte [Datos utilizados por [!DNL Target] algoritmos de aprendizaje automático](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
 
 Las listas de bloqueados se pueden definir por actividad (nivel de actividad) o para todas las actividades de una cuenta de [!DNL Target] (nivel global).
 
@@ -100,7 +100,7 @@ En el ejemplo que se muestra a continuación, el usuario comprueba la lista de f
 >
 >Para encontrar el ID de actividad de su actividad, vaya a la lista de actividades en la interfaz de usuario de [!DNL Target]. Haga clic en la actividad que le interese. El ID de actividad se muestra en el cuerpo de la página de Información general de las actividades resultantes, así como al final de la dirección URL de esa página.
 
-**[!UICONTROL externalName]** es un nombre descriptivo para una característica. Lo crea [!DNL Target] y es posible que este valor cambie con el tiempo. Los usuarios pueden ver estos nombres descriptivos en el [informe de perspectivas de Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=es).
+**[!UICONTROL externalName]** es un nombre descriptivo para una característica. Lo crea [!DNL Target] y es posible que este valor cambie con el tiempo. Los usuarios pueden ver estos nombres descriptivos en el [informe de perspectivas de Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
 
 **[!UICONTROL internalName]** es el identificador real de la característica. También lo creó [!DNL Target], pero no se puede cambiar. Este es el valor al que deberá hacer referencia para identificar las funciones a las que desea hacer lista de bloqueados.
 
@@ -166,7 +166,7 @@ Tenga en cuenta que `blockedFeatureSources` indica de dónde proviene una caract
 | MAFIA | Móvil |
 | CRS | Personalizado: Atributos del cliente |
 | UPA | Personalizado: atributo de perfil RT-CDP |
-| IAC | Áreas de interés del visitante |  |
+| IAC | Áreas de interés del visitante |
 
 >[!BEGINTABS]
 
@@ -197,11 +197,11 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-En el ejemplo que se muestra aquí, el usuario está bloqueando dos características, `SES_PREVIOUS_VISIT_COUNT` y `SES_TOTAL_SESSIONS`, que identificó previamente consultando la lista completa de características de la actividad cuyo ID de actividad es 260480, tal como se describe en [Paso 1](#step1). También están bloqueando todas las características que provienen de los segmentos del Experience Cloud AAM, lo cual se logra bloqueando características con el prefijo &quot;&quot;, tal como se describe en la [tabla](#table) anterior.
+En el ejemplo que se muestra aquí, el usuario está bloqueando dos características, `SES_PREVIOUS_VISIT_COUNT` y `SES_TOTAL_SESSIONS`, que identificó previamente consultando la lista completa de características de la actividad cuyo ID de actividad es 260480, tal como se describe en [Paso 1](#step1). También están bloqueando todas las características que provienen de los segmentos de Experience Cloud, lo cual se logra bloqueando características con el prefijo &quot;AAM&quot;, tal como se describe en la [tabla](#table) anterior.
 
 ![Paso 3](assets/models-api-step-3.png)
 
-Tenga en cuenta que después de la inclusión en la lista de bloqueados de una característica, se recomienda que compruebe la lista de bloqueados actualizada realizando de nuevo el [Paso 2](#step2) (GET de la lista de bloqueados). Compruebe que los resultados aparecen según lo esperado (compruebe que los resultados incluyen las funciones agregadas desde la última solicitud de PUT).
+Tenga en cuenta que después de la inclusión en la lista de bloqueados de una característica, se recomienda que compruebe la lista de bloqueados actualizada realizando de nuevo el [Paso 2](#step2) (GET la lista de bloqueados). Compruebe que los resultados se muestran según lo esperado (compruebe que los resultados incluyen las funciones añadidas desde la última solicitud de PUT).
 
 ## Paso 4: (Opcional) Desbloquear {#step4}
 
@@ -235,7 +235,7 @@ En el ejemplo que se muestra a continuación, el usuario está borrando su lista
 
 ![Paso 4](assets/models-api-step-4.png)
 
-Como siempre, después de modificar la lista de bloqueados, se recomienda que vuelva a realizar el [Paso 2](#step2) (la GET lista de bloqueados para comprobar que la lista incluye las características esperadas). En el ejemplo que se muestra aquí, el usuario comprueba que su lista de bloqueados está vacía.
+Como siempre, después de modificar la lista de bloqueados, se recomienda que vuelva a realizar el [Paso 2](#step2) (GET comprueba la lista de bloqueados para comprobar que la lista incluye las características esperadas). En el ejemplo que se muestra aquí, el usuario comprueba que su lista de bloqueados está vacía.
 
 ![Paso 4b](assets/models-api-step-4b.png)
 
@@ -278,14 +278,14 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/global
 
 >[!ENDTABS]
 
-AAM AAM En la solicitud de ejemplo que se muestra arriba, el usuario está bloqueando dos características, &quot;_FEATURE_1&quot; y &quot;_FEATURE_2&quot;, para todas las actividades de su cuenta de [!DNL Target]. AAM AAM Esto significa que, independientemente de la actividad, &quot;_FEATURE_1&quot; y &quot;_FEATURE_2&quot; no se incluirán en los modelos de aprendizaje automático de esta cuenta. AAM Además, el usuario también está bloqueando globalmente todas las funciones cuyo prefijo sea &quot;&quot;, &quot;PRO&quot; o &quot;ENV&quot;.
+En la solicitud de ejemplo que se muestra arriba, el usuario está bloqueando dos características, &quot;AAM_FEATURE_1&quot; y &quot;AAM_FEATURE_2&quot;, para todas las actividades de su cuenta de [!DNL Target]. Esto significa que, independientemente de la actividad, &quot;AAM_FEATURE_1&quot; y &quot;AAM_FEATURE_2&quot; no se incluirán en los modelos de aprendizaje automático de esta cuenta. Además, el usuario también bloquea globalmente todas las funciones cuyo prefijo sea &quot;AAM&quot;, &quot;PRO&quot; o &quot;ENV&quot;.
 
 Pregunta: ¿No es redundante el ejemplo de código anterior?
 
-Respuesta: Sí. AAM AAM Es redundante bloquear funciones con valores que comienzan por &quot;&quot;, a la vez que bloquea todas las funciones cuyo origen sea &quot;&quot;. AAM El siguiente resultado es que todas las funciones originadas en los segmentos de Experience Cloud (segmentos de) se bloquearán. Por lo tanto, si el objetivo es bloquear todas las funciones de los segmentos de Experience Cloud AAM, no es necesario especificar individualmente determinadas funciones que comienzan con &quot;&quot;, como en el ejemplo anterior.
+Respuesta: Sí. Es redundante bloquear funciones con valores que comienzan por &quot;AAM&quot;, a la vez que bloquea todas las funciones cuya fuente sea &quot;AAM&quot;. El siguiente resultado es que todas las funciones procedentes de AAM (segmentos de Experience Cloud) se bloquearán. Por lo tanto, si el objetivo es bloquear todas las funciones de los segmentos de Experience Cloud, no es necesario especificar individualmente determinadas funciones que comienzan con &quot;AAM&quot;, como en el ejemplo anterior.
 
 Paso final: Ya sea a nivel de actividad o a nivel global, se recomienda comprobar la lista de bloqueados después de modificarla para asegurarse de que contiene los valores esperados. Para ello, cambie `PUT` por `GET`.
 
-AAM La respuesta de ejemplo que se muestra a continuación indica que [!DNL Target] está bloqueando dos características individuales, además de todas las características originadas en &quot;&quot;, &quot;PRO&quot; y &quot;ENV&quot;.
+La respuesta de ejemplo que se muestra a continuación indica que [!DNL Target] está bloqueando dos características individuales, además de todas las características procedentes de &quot;AAM&quot;, &quot;PRO&quot; y &quot;ENV&quot;.
 
 ![Paso 5](assets/models-api-step-5.png)

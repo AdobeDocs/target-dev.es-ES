@@ -4,7 +4,7 @@ description: Utilice eventos personalizados para que se notifique a la bibliotec
 title: ¿Cómo utilizo los eventos personalizados de at.js?
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 71%
@@ -50,4 +50,4 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 
 Vea el siguiente vídeo para aprender a utilizar los tokens de respuesta y los eventos personalizados de at.js con el fin de compartir información de perfil de [!DNL Target] con sistemas de terceros.
 
->[!VIDEO](https://video.tv.adobe.com/v/33709/?quality=12&captions=spa)
+>[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)

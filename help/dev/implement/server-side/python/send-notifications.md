@@ -3,7 +3,7 @@ title: Enviar notificaciones de clic o visualización a [!DNL Adobe Target] usan
 description: Aprenda a utilizar sendNotifications() para enviar notificaciones de clic o visualización a [!DNL Adobe Target] para la medición y la creación de informes.
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 8%
@@ -20,7 +20,7 @@ ht-degree: 8%
 >
 >Cuando un objeto `execute` con parámetros requeridos se encuentra dentro de la propia solicitud, la impresión se incrementará automáticamente para las actividades calificadas.
 
-Los métodos del SDK que incrementarán una impresión automáticamente son:
+Los métodos de SDK que incrementarán una impresión automáticamente son:
 
 * `get_offers()`
 * `get_attributes()`
@@ -60,8 +60,8 @@ target_client.send_notifications(options)
 | target_cookie | dict | Cookie [!DNL Target] |
 | target_location_hint_cookie | dict | [!DNL Target] cookie de indicio de ubicación |
 | analytics_details | list[AnalyticsResponse] | [!DNL Analytics] carga útil, en caso de uso de [!DNL Analytics] del lado del cliente |
-| trazar |  | list[dict] | Datos de seguimiento agregados para todos los mboxes o vistas de solicitud |
-| response_tokens | list[dict] | Una lista de [&#x200B; tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=es) |
+| trazar | list[dict] | Datos de seguimiento agregados para todos los mboxes o vistas de solicitud |
+| response_tokens | list[dict] | Una lista de [ tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | meta | dict | Metadatos de toma de decisiones adicionales para su uso con la toma de decisiones en el dispositivo |
 
 ## Ejemplo

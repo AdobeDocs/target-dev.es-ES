@@ -16,7 +16,7 @@ Este artículo proporciona información general sobre la información básica ne
 
 >[!NOTE]
 >
->Si desea administrar [!DNL Target] a través de la interfaz de usuario, consulte la sección de administración de [Adobe Target Business Practitioner Guide **.](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en)
+>Si desea administrar [!DNL Target] a través de la interfaz de usuario, consulte la sección de administración de [Adobe Target Business Practitioner Guide **.](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=es)
 >
 >Las API de administrador y las API de perfil suelen denominarse de forma colectiva (&quot;API de administrador y de perfil&quot;), pero también pueden denominarse por separado (&quot;API de administrador&quot; y &quot;API de perfil&quot;). La API de Recommendations es una implementación específica de una API de administrador de [!DNL Target].
 
@@ -74,11 +74,11 @@ Estos son los códigos de respuesta comunes para las API de administrador de Tar
 
 Una actividad de le permite probar o personalizar el contenido para los usuarios. Las actividades pueden ser de uno de los siguientes tipos:
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [Segmentación de experiencias (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
-* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
-* [Personalización automatizada](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [Prueba multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es)
+* [Segmentación de experiencias (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=es)
+* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=es)
+* [Personalización automatizada](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=es)
+* [Prueba multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=es)
 
 ## Actualizaciones por lotes
 

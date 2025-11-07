@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Registro de [!DNL Adobe Analytics for Target] (A4T) en [!DNL Experience Platform Web SDK]
 
-Al utilizar [!DNL Adobe Target] para la personalización, puede elegir qué sistema desea utilizar para la medición de rendimiento. Cada [actividad de destino](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) le permite seleccionar entre [!DNL Target] informes y [!DNL Analytics] informes de Adobe.
+Al utilizar [!DNL Adobe Target] para la personalización, puede elegir qué sistema desea utilizar para la medición de rendimiento. Cada [actividad de destino](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=es) le permite seleccionar entre [!DNL Target] informes y [!DNL Analytics] informes de Adobe.
 
 Si está usando un informe de [!DNL Analytics], [!DNL Target] tiene que comunicar lo siguiente a [!DNL Analytics]:
 
@@ -28,9 +28,9 @@ El [!DNL Adobe Experience Platform Web SDK] admite dos tipos de registro de [!DN
 | Método de registro | Descripción |
 | --- | --- |
 | Registro [!DNL Analytics] del lado del servidor | Todas las [!DNL Analytics] visitas enviadas a través de Edge Network se aumentan con [!DNL Target] detalles en el servidor, sin tener que pasar por el proceso de vinculación de visitas. |
-| Registro [!DNL Analytics] del lado del cliente | Se devuelven datos de [!DNL Target] en el lado del cliente, lo que le permite aumentar y enviar datos manualmente a [!DNL Analytics] mediante la [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Registro [!DNL Analytics] del lado del cliente | Se devuelven datos de [!DNL Target] en el lado del cliente, lo que le permite aumentar y enviar datos manualmente a [!DNL Analytics] mediante la [API de inserción de datos](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=es). |
 
-El método de registro viene determinado por si tiene [!DNL Adobe Analytics] habilitado en su [secuencia de datos](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) configurada:
+El método de registro viene determinado por si tiene [!DNL Adobe Analytics] habilitado en su [secuencia de datos](https://experienceleague.adobe.com/es/docs/experience-platform/datastreams/overview) configurada:
 
 ![Flujo de decisión del método de registro](/help/dev/implement/a4t/assets/analytics-logging.png)
 

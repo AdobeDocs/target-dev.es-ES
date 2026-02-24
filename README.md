@@ -7,4 +7,4 @@ ht-degree: 0%
 ---
 # ARCHIVADO
 
-Este repositorio se migró a <https://github.com/Adobe-Enterprise-Docs/target-dev.en>.
+Este repositorio se migró a <https://github.com/Adobe-Enterprise-Docs/target-dev.es-ES>.

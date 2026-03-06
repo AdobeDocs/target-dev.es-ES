@@ -125,7 +125,7 @@ ht-degree: 41%
       + [Entrega de personalización](implement/server-side/sdk-guides/on-device-decisioning/deliver-personalization.md)
       + [Información general sobre funciones compatibles](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [Resolución de problemas de la toma de decisiones en el dispositivo](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
-      + [Prácticas recomendadas  ](implement/server-side/sdk-guides/best-practices/best-practices.md)
+      + [Prácticas recomendadas  &#x200B;](implement/server-side/sdk-guides/best-practices/best-practices.md)
    + Referencia de SDK de Node.js {#node-js}
       + [Información general sobre Node.js SDK](implement/server-side/node-js/overview.md)
       + [Instalación de Node.js en SDK](implement/server-side/node-js/install-sdk.md)
@@ -174,7 +174,7 @@ ht-degree: 41%
    + [Registro del lado del cliente para datos de A4T en Experience Platform Web SDK](/help/dev/implement/a4t/client-side-logging.md)
    + [Registro del lado del servidor para datos de A4T en Experience Platform Web SDK](/help/dev/implement/a4t/server-side-a4t.md)
 + [Implementación de Recommendations](implement/recommendations/recommendations.md)
-+ {hide-from-toc}[Implementación beta de Recommendations](/help/dev/implement/recommendations/recommendations-beta.md)
++ [hide-from-tocImplementación beta de Recommendations](/help/dev/implement/recommendations/recommendations-beta.md)
 + Implementación de aplicación móvil {#mobile-apps}
    + [Información general sobre Target para aplicaciones móviles](implement/mobile/overview.md)
    + [Vista previa para móviles en Target](implement/mobile/target-mobile-preview.md)

@@ -1,15 +1,14 @@
 ---
-keywords: Recommendations, configuración, preferencias, sector, criterios incompatibles de filtro, grupo de hosts predeterminado, URL de base en miniatura, token de api de Recommendations,
+keywords: Recommendations, configuración, preferencias, sector, criterios incompatibles de filtro, grupo de hosts predeterminado, URL de base en miniatura, token de api de recomendaciones,
 description: Obtenga información sobre cómo implementar [!UICONTROL Recommendations] actividades en  [!DNL Adobe Target].
 title: ¿Cómo Implemento Actividades De [!UICONTROL Recommendations]?
 feature: Recommendations
-hidefromtoc: true
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: aa032255222d92aeddd7238922eb450f1b6b93a0
+source-git-commit: d161a60be0e9acbdd217f1acde5987b839dd78de
 workflow-type: tm+mt
 source-wordcount: '1550'
-ht-degree: 20%
+ht-degree: 18%
 
 ---
 
@@ -30,11 +29,11 @@ Antes de configurar su primera actividad [!UICONTROL Recommendations] en [!DNL A
 1. [Configurar [!UICONTROL Recommendations] configuración](#configure-recommendations-settings).
 1. (Opcional) [Administrar [!UICONTROL Recommendations] mediante las API de administrador](#administer-recommendations-using-admin-apis).
 
-## 1. Implementar [!UICONTROL Target]
+## &#x200B;1. Implementar [!UICONTROL Target]
 
 [!DNL Target Recommendations] requiere que implemente [!DNL Adobe Experience Platform Web SDK] o at.js 0.9.2 (o posterior). Consulte las [[!UICONTROL Target] guías de implementación del lado del cliente](../client-side/overview.md) para obtener más información.
 
-## 2. Configurar el catálogo [!UICONTROL Recommendations]
+## &#x200B;2. Configurar el catálogo [!UICONTROL Recommendations]
 
 Para ofrecer recomendaciones de alta calidad, [!UICONTROL Target] debe conocer los productos o el contenido que desea recomendar. Los catálogos suelen incluir tres tipos de información sobre los artículos recomendados. Supongamos que recomienda películas. Incluya lo siguiente:
 
@@ -52,7 +51,7 @@ Para ofrecer recomendaciones de alta calidad, [!UICONTROL Target] debe conocer l
 
 La mayoría de los clientes deben implementar al menos una fuente. A continuación, puede elegir complementar su fuente con actualizaciones para atributos o elementos que se cambian con frecuencia mediante la API de entidades o el método en la página.
 
-## 3. Pasar información y contexto de comportamiento
+## &#x200B;3. Pasar información y contexto de comportamiento
 
 La información de comportamiento y el contexto que debe pasar a [!UICONTROL Target] dependen de la acción que esté realizando el visitante, que a menudo se asocia con el tipo de página con la que interactúa.
 
@@ -129,11 +128,11 @@ function targetPageParams() {
 
 Cuando se produce un evento de compra, pasa la identidad del artículo o artículos comprados. Consulte [Rastrear conversiones](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions) en el artículo de [Cómo implementar at.js > Implementar [!UICONTROL Target] sin un administrador de etiquetas](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
-## 4. Configurar exclusiones globales
+## &#x200B;4. Configurar exclusiones globales
 
 Excluya cualquier elemento de nivel global que no quiera que se recomiende a un visitante. Consulte [Exclusiones](https://experienceleague.adobe.com/es/docs/target/using/recommendations/entities/exclusions) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
 
-## 5. Configurar [!UICONTROL Recommendations]
+## &#x200B;5. Configurar [!UICONTROL Recommendations]
 
 Utilice la configuración para administrar la implementación de [!UICONTROL Recommendations].
 
@@ -190,7 +189,7 @@ Habilite esta opción para mostrar únicamente aquellos criterios donde la pági
 
 En general, se recomienda mostrar solamente criterios compatibles. Sin embargo, si desea que haya disponibles criterios incompatibles para la actividad, no active esta opción.
 
-El Adobe recomienda desactivar esta opción si se utiliza una solución de administración de etiquetas.
+Adobe recomienda deshabilitar esta opción si se usa una solución de administración de etiquetas.
 
 Para obtener más información sobre esta opción, consulte [[!UICONTROL Recommendations] preguntas frecuentes](https://experienceleague.adobe.com/es/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank} en la *[!DNL Adobe Target]Guía para profesionales de la empresa*.
 
@@ -237,6 +236,6 @@ Base sus recomendaciones en un elemento almacenado en el perfil del visitante. P
 
 Haga clic en **[!UICONTROL Add]** para crear una nueva configuración, especifique un nombre para la configuración, seleccione el atributo de perfil deseado y haga clic en **[!UICONTROL Save]**.
 
-## 6. (Opcional) Administrar [!UICONTROL Recommendations] mediante las API de administración
+## &#x200B;6. (Opcional) Administrar [!UICONTROL Recommendations] mediante las API de administración
 
 Consulte la guía práctica [Usar las API [!UICONTROL Recommendations]](../../before-administer/recs-api/overview.md) para obtener información sobre cómo configurar y usar las API de administración y envío [!UICONTROL Target] para [!UICONTROL Recommendations].

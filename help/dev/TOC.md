@@ -125,7 +125,7 @@ ht-degree: 41%
       + [Entrega de personalización](implement/server-side/sdk-guides/on-device-decisioning/deliver-personalization.md)
       + [Información general sobre funciones compatibles](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [Resolución de problemas de la toma de decisiones en el dispositivo](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
-      + [Prácticas recomendadas  ](implement/server-side/sdk-guides/best-practices/best-practices.md)
+      + [Prácticas recomendadas  &#x200B;](implement/server-side/sdk-guides/best-practices/best-practices.md)
    + Referencia de SDK de Node.js {#node-js}
       + [Información general sobre Node.js SDK](implement/server-side/node-js/overview.md)
       + [Instalación de Node.js en SDK](implement/server-side/node-js/install-sdk.md)

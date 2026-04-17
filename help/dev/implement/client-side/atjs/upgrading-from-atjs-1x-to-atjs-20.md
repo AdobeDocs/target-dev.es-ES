@@ -4,7 +4,7 @@ description: Obtenga información sobre cómo actualizar de  [!DNL Adobe Target]
 title: ¿Cómo puedo actualizar de at.js versión 1.x a la versión 2.x?
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
 workflow-type: tm+mt
 source-wordcount: '2939'
 ht-degree: 57%
@@ -19,11 +19,11 @@ Estos son algunos de los beneficios de utilizar at.js 2.*x* que no están dispon
 
 * La capacidad de almacenar en caché todas las ofertas al cargar la página para reducir el número de llamadas al servidor a una sola llamada.
 * Importante mejora de las experiencias de los usuarios finales en su sitio porque las ofertas se muestran inmediatamente a través de la caché sin ningún tiempo de retraso que introducen las llamadas tradicionales al servidor.
-* SPA Código sencillo de una línea y configuración de desarrollador único para permitir que sus especialistas en marketing creen y ejecuten actividades [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT) a través del VEC en su.
+* Código sencillo de una línea y configuración de desarrollador único para permitir que sus especialistas en marketing creen y ejecuten actividades [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT) a través del VEC en sus SPA.
 
 ## at.js 2.*x* diagramas de sistema
 
-Los siguientes diagramas le ayudan a comprender el flujo de trabajo de at.js 2.SPA *x* con vistas y cómo esto mejora la integración de la. Para obtener una mejor introducción a los conceptos utilizados en at.js 2.*x*, consulte [implementación de aplicación de una sola página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Los siguientes diagramas le ayudan a comprender el flujo de trabajo de at.js 2.*x* con vistas y cómo esto mejora la integración de SPA. Para obtener una mejor introducción a los conceptos utilizados en at.js 2.*x*, consulte [implementación de aplicación de una sola página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 (Haga clic en la imagen para ampliarla a ancho completo).
 
@@ -36,7 +36,7 @@ Los siguientes diagramas le ayudan a comprender el flujo de trabajo de at.js 2.S
 | 3 | Se solicita una carga de página que incluye todos los parámetros configurados (MCID, SDID y el ID del cliente). |
 | 4 | Se ejecutan los scripts de perfiles y se incluyen en el Almacenamiento de perfiles. El Almacenamiento solicita audiencias de la Biblioteca de audiencias que cumplan los requisitos (por ejemplo, audiencias compartidas de [!DNL Adobe Analytics], [!DNL Audience Manager], etc.).<P>Se envían los atributos del cliente al Almacenamiento de perfiles en un procesamiento de lotes. |
 | 5 | Según los parámetros de la solicitud de la URL y los datos de perfil, [!DNL Target] decide qué actividades y experiencias vuelven al visitante para la página actual y las vistas futuras. |
-| 6 | El contenido dirigido se devuelve a la página, incluyendo, de manera opcional, los valores de perfil para una personalización adicional.<P>El contenido dirigido se muestra en la página actual lo más rápido posible y sin parpadeo del contenido predeterminado.<P>SPA Contenido dirigido para vistas que se muestran como resultado de acciones del usuario en una vista almacenada en caché en el explorador, de modo que se pueda aplicar instantáneamente sin una llamada al servidor adicional cuando las vistas se activan mediante `triggerView()`. |
+| 6 | El contenido dirigido se devuelve a la página, incluyendo, de manera opcional, los valores de perfil para una personalización adicional.<P>El contenido dirigido se muestra en la página actual lo más rápido posible y sin parpadeo del contenido predeterminado.<P>Contenido dirigido para vistas que se muestran como resultado de acciones del usuario en una SPA almacenada en caché en el explorador, de modo que se pueda aplicar instantáneamente sin una llamada al servidor adicional cuando las vistas se activan mediante `triggerView()`. |
 | 7 | Se envían los datos de [!UICONTROL Analytics] a los servidores de recopilación de datos. |
 | 8 | Los datos de destino coinciden con los datos de [!UICONTROL Analytics] mediante el SDID y se procesan en el almacén de informes de [!UICONTROL Analytics].<P>Los datos de [!UICONTROL Analytics] se pueden ver en [!UICONTROL Analytics] y [!DNL Target] mediante los informes de [!UICONTROL Analytics for Target] (A4T). |
 
@@ -252,7 +252,7 @@ fundamentalmente, el concepto de mbox global se introdujo para hacer saber a [!D
 
 ### ¿Sigue siendo relevante el nombre de mbox global en at.js?
 
-Los clientes pueden especificar un nombre de mbox global mediante **[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit at.js Settings]**. Este ajuste lo utilizan los servidores [!DNL Target] Edge para traducir Ejecutar > pageLoad al nombre de mbox global que aparece en la interfaz de usuario [!DNL Target]. Esto permite a los clientes seguir utilizando API del lado del servidor, el compositor basado en formularios, los comandos de perfil y crear audiencias utilizando el nombre de mbox global. Le recomendamos encarecidamente que verifique que se haya configurado el mismo nombre de mbox global en la página **[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**, en caso de que tenga páginas con at.js 1.*x*, como se muestra en las ilustraciones siguientes.
+Los clientes pueden especificar un nombre de mbox global mediante **[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit at.js Settings]**. Este ajuste lo utilizan los servidores [!DNL Target] Edge para traducir Ejecutar > pageLoad al nombre de mbox global que aparece en la interfaz de usuario [!DNL Target]. Esto permite a los clientes seguir utilizando API del lado del servidor, el compositor basado en formularios, los comandos de perfil y crear públicos utilizando el nombre de mbox global. Le recomendamos encarecidamente que verifique que se haya configurado el mismo nombre de mbox global en la página **[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**, en caso de que tenga páginas con at.js 1.*x*, como se muestra en las ilustraciones siguientes.
 
 ![Modificación del diálogo at.js](../assets/modify-atjs.png)
 
@@ -290,7 +290,7 @@ El seguimiento entre dominios permite unir visitantes de dominios distintos. Dad
 
 En [!DNL Target], la cookie de terceros se almacena en `<CLIENTCODE>.tt.omtrdc.net`. La cookie de origen se almacena en `clientdomain.com`. La primera solicitud devuelve encabezados de respuesta HTTP que intentan establecer cookies de terceros denominadas `mboxSession` y `mboxPC`, mientras se devuelve una solicitud de redirección con un parámetro adicional (`mboxXDomainCheck=true`). Si el navegador acepta cookies de terceros, la solicitud de redirección incluye dichas cookies y la experiencia se devuelve. Este flujo de trabajo es posible porque utilizamos el método HTTP GET.
 
-Sin embargo, en at.js 2.*x*, no se usa la GET HTTP. En su lugar, se utiliza el POST HTTP a través de at.js 2.*x* para enviar cargas JSON a [!DNL Target] servidores de Edge. El uso del POST HTTP significa que se interrumpirá la solicitud de redirección para comprobar si un explorador admite cookies de terceros. Esto se debe a que las solicitudes HTTP GET son transacciones idempotentes, mientras que HTTP POST no es idempotente y no se debe repetir arbitrariamente. Por lo tanto, en el seguimiento entre dominios en at.js 2.*x* (anterior a 2.10) no es compatible de serie. Solo at.js 1.*x* es compatible de serie para el seguimiento entre dominios.
+Sin embargo, en at.js 2.*x*, no se usa HTTP GET. En su lugar, HTTP POST se utiliza a través de at.js 2.*x* para enviar cargas JSON a [!DNL Target] servidores de Edge. El uso de HTTP POST implica que se interrumpirá la solicitud de redirección para comprobar si un explorador admite cookies de terceros. Esto se debe a que las solicitudes HTTP GET son transacciones idempotentes, mientras que HTTP POST no es idempotente y no se debe repetir arbitrariamente. Por lo tanto, en el seguimiento entre dominios en at.js 2.*x* (anterior a 2.10) no es compatible de serie. Solo at.js 1.*x* es compatible de serie para el seguimiento entre dominios.
 
 Para utilizar el seguimiento entre dominios para at.js v2.10 o posterior, puede realizar una de las siguientes acciones:
 
@@ -306,7 +306,7 @@ Esta configuración indica a at.js 2.*x* para activar una solicitud a los servid
 
 ### Se admite el nombre de mbox global
 
-Los clientes pueden especificar un nombre de mbox global mediante **[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]**. Este ajuste lo utilizan los servidores Edge [!DNL Target] para representar ejecutar > pageLoad en el nombre de mbox global introducido. Esto permite a los clientes seguir utilizando las API del servidor, el compositor basado en formularios, scripts de perfil y crear audiencias dirigidas al mbox global.
+Los clientes pueden especificar un nombre de mbox global mediante **[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]**. Este ajuste lo utilizan los servidores Edge [!DNL Target] para representar ejecutar > pageLoad en el nombre de mbox global introducido. Esto permite a los clientes seguir utilizando las API del servidor, el compositor basado en formularios, scripts de perfil y crear públicos dirigidas al mbox global.
 
 ### ¿Los eventos personalizados de at.js se aplican a `triggerView()`, o es solo para `applyOffer()` o `applyOffers()`?
 
@@ -317,7 +317,7 @@ Los clientes pueden especificar un nombre de mbox global mediante **[!UICONTROL 
 
 Sí, los eventos personalizados de at.js también son aplicables en `triggerView()`.
 
-### Indica que cuando llamo a `triggerView()` con &lbrace;`"page" : "true"`&rbrace;, enviará una notificación al servidor de [!DNL Target] y aumentará la impresión. ¿También provoca que se ejecuten los scripts de perfil?
+### Indica que cuando llamo a `triggerView()` con &amp;lbrace;`"page" : "true"`&amp;rbrace;, enviará una notificación al servidor de [!DNL Target] y aumentará la impresión. ¿También provoca que se ejecuten los scripts de perfil?
 
 Cuando se realiza una llamada de recuperación previa al back-end de [!DNL Target], se ejecutan los scripts de perfil. A partir de ahí, los datos de perfil afectados se cifran y se devuelven al cliente. Después de la invocación de `triggerView()` con `{"page": "true"}`, se envía una notificación junto con los datos de perfil cifrados. Es entonces cuando el back-end de [!DNL Target] descifra los datos de perfil y los almacena en las bases de datos.
 
@@ -339,7 +339,7 @@ Los siguientes parámetros de at.js 1.x son *NOT* compatibles actualmente con la
 * devicePixelRatio
 * vst.* parámetros (ver más abajo)
 
-### at.js 2.*x* no admite la creación de audiencias con vst.* parámetros
+### at.js 2.*x* no admite la creación de públicos con vst.* parámetros
 
 Clientes en at.js 1.*x* pudieron usar vst.* Parámetros de mbox para crear audiencias. Este fue un efecto secundario no intencionado de cómo at.js 1.*x* envió parámetros de mbox al back-end [!DNL Target]. Después de migrar a at.js 2.*x*, ya no puede crear audiencias con estos parámetros debido a at.js 2.*x* envía parámetros de mbox de forma diferente.
 
@@ -368,14 +368,14 @@ Las tablas siguientes explican la 2.*x* compatibilidad con diferentes tipos de a
 | Tipo | Compatible? |
 | --- | --- |
 | [!UICONTROL Analytics for Target] (A4T) | Sí |
-| Audiencias | Sí |
+| Públicos | Sí |
 | Atributos del cliente | Sí |
 | Fragmentos de experiencia de AEM | Sí |
 | [Extensión de Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) | Sí |
 | Depurador | Sí |
 | Auditor | Todavía no se han actualizado las reglas para at.js 2.*x*   |
 | Compatibilidad con Opt-In para [RGPD](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Esto se admite en [at.js versión 2.1.0](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) o posterior. |
-| AEM Personalization mejorado con tecnología de [!DNL Adobe Target] | No |
+| Personalization mejorado de AEM con tecnología de [!DNL Adobe Target] | No |
 
 ### Funciones
 
@@ -405,7 +405,7 @@ Las tablas siguientes explican la 2.*x* compatibilidad con diferentes tipos de a
 
 ## Tokens de respuesta
 
-at.js 2.*x*, igual que at.js 1.*x*, utiliza el evento personalizado `at-request-succeeded` para los tokens de respuesta. Para obtener ejemplos de código utilizando el evento personalizado `at-request-succeeded`, consulte [Tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=es).
+at.js 2.*x*, igual que at.js 1.*x*, utiliza el evento personalizado `at-request-succeeded` para los tokens de respuesta. Para obtener ejemplos de código utilizando el evento personalizado `at-request-succeeded`, consulte [Tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html).
 
 ## at.js 1.*x* parámetros para at.js 2.Asignación de carga útil *x*
 
@@ -768,8 +768,9 @@ La versión se envía como parámetro de cadena de consulta a través del parám
 
 ## Vídeo de formación: at.js 2.*x* diagrama arquitectónico ![distintivo de descripción general](../../assets/overview.png)
 
-at.js 2.*x* mejora la compatibilidad de Adobe SPA [!DNL Target] con el servicio de asistencia técnica e integra el servicio con otras soluciones de Experience Cloud para la integración con el servicio de asistencia técnica de . Este vídeo explica cómo se vincula todo.
+at.js 2.*x* mejora la compatibilidad de Adobe [!DNL Target] con las SPA e integra otras soluciones de Experience Cloud. Este vídeo explica cómo se vincula todo.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Ver [Explicación de cómo at.js 2.*x* funciona](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=es) para obtener más información.
+Ver [Explicación de cómo at.js 2.*x* funciona](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html) para obtener más información.
+

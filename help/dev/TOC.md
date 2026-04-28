@@ -2,9 +2,10 @@
 user-guide-title: Guía para desarrolladores de Adobe Target
 breadcrumb-title: Guía para desarrolladores de Target
 user-guide-description: Aprenda a adaptar y personalizar la experiencia de sus clientes para que pueda maximizar los ingresos de sus sitios web y móviles, aplicaciones, medios sociales y otros canales digitales.
-source-git-commit: 04de08103591059481ee996123f4c5bae8e1fa0a
+nudge: true
+source-git-commit: ca53593287a5a58e6e0b9fe02b6e8b28788f9ff9
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '850'
 ht-degree: 41%
 
 ---
@@ -125,7 +126,7 @@ ht-degree: 41%
       + [Entrega de personalización](implement/server-side/sdk-guides/on-device-decisioning/deliver-personalization.md)
       + [Información general sobre funciones compatibles](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [Resolución de problemas de la toma de decisiones en el dispositivo](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
-      + [Prácticas recomendadas  &#x200B;](implement/server-side/sdk-guides/best-practices/best-practices.md)
+      + [Prácticas recomendadas](implement/server-side/sdk-guides/best-practices/best-practices.md)
    + Referencia de SDK de Node.js {#node-js}
       + [Información general sobre Node.js SDK](implement/server-side/node-js/overview.md)
       + [Instalación de Node.js en SDK](implement/server-side/node-js/install-sdk.md)

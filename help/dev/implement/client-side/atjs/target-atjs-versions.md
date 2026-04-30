@@ -242,7 +242,7 @@ Esta versión incorpora las siguientes funciones y mejoras:
 
 * **Registro de análisis del lado del cliente**: Proporcione a los clientes control total sobre cómo desean enviar datos de análisis a [!DNL Adobe Analytics], ya sea en el lado del cliente o en el lado del servidor.
 
-  Para obtener más información, consulte [Registro del lado del cliente [!DNL Analytics] 2}.](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side)
+  Para obtener más información, consulte [Registro del lado del cliente [!DNL Analytics] 2&rbrace;.](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side)
 
 * **Enviar notificaciones**: Permita que los desarrolladores envíen notificaciones cuando su código procese una experiencia en lugar de utilizar `applyOffer()` o `applyOffers()`.
 

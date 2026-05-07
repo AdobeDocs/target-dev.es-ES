@@ -49,4 +49,4 @@ Para obtener más información, consulte [SDK para Python](/help/dev/implement/s
 
 Lea el [Changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) para el SDK para Python.
 
-&lt;!--- Judy: ¿quitar o modificar esta página? ¿se trata adecuadamente en otro lugar? O bien, ¿añadir vínculos a la información análoga para .NET SDK y SDK para Python? --->
+&lt;!-- Judy: remove or modify this page? ¿se trata adecuadamente en otro lugar? O bien, ¿añadir vínculos a la información análoga para .NET SDK y SDK para Python? -->

@@ -1,20 +1,24 @@
 ---
-title: Inicialice el SDK de Java mediante el método create
-description: Aprenda a utilizar el método create para inicializar el SDK de Java y crear una instancia de [!UICONTROL TargetClient] para realizar llamadas a  [!DNL Adobe Target] para experimentos y experiencias personalizadas.
+title: Inicialice Java SDK mediante el método create
+description: Aprenda a utilizar el método create para inicializar Java SDK e instanciar [!UICONTROL TargetClient] para realizar llamadas a  [!DNL Adobe Target] para experimentos y experiencias personalizadas.
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
-source-git-commit: 1d080b5e402e5d55039bf06611b44678cc6c36de
+TQID: https://experienceleague.adobe.com/B1Ev7NnjlFMg4VoicF6Z4whyqfJYDjCwPeYRKEk2viY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: 460
 ht-degree: 17%
 
 ---
 
-# Inicialización del SDK de Java
+# Inicialización de Java SDK
 
 ## Descripción
 
-Utilice el método `create` para inicializar el SDK de Java e instanciar [!UICONTROL Target Client] para realizar llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
+Utilice el método `create` para inicializar Java SDK e instanciar [!UICONTROL Target Client] para realizar llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
 
 ## Método
 
@@ -52,8 +56,8 @@ ClientConfigBuilder ClientConfig.builder()
 | logRequestStatus | Booleano | No | false | Registrar tiempo de respuesta, estado y dirección URL de [!DNL Target] |
 | serverDomain | Cadena | No | `*client*.tt.omtrdc.net` | Anula el nombre de host predeterminado |
 | secure | Booleano | No | true | No configurado para aplicar el esquema HTTP |
-| requestInterceptor | HttpRequestInterceptor | No | Nulo | Añadir interceptor de solicitud personalizada |
-| defaultPropertyToken | Cadena | No | Ninguna | Establece el token de propiedad predeterminado para cada llamada a `getOffers`. **Para la toma de decisiones en el dispositivo**, el SDK solo descargará el artefacto que contenga las actividades calificadas para el token de propiedad establecido en `defaultPropertyToken` |
+| requestInterceptor | HttpRequestInterceptor | No | Null | Añadir interceptor de solicitud personalizada |
+| defaultPropertyToken | Cadena | No | Ninguna | Establece el token de propiedad predeterminado para cada llamada a `getOffers`. **Para la toma de decisiones en el dispositivo**, SDK solo descargará el artefacto que contiene las actividades calificadas para el token de propiedad establecido en `defaultPropertyToken` |
 | defaultDecisioningMethod | DecisioningMethod enum | No | SERVER_SIDE | Debe establecerse a ON_DEVICE o HYBRID para habilitar la toma de decisiones en el dispositivo |
 | telemetryEnabled | Booleano | No | true | Permite que los clientes excluyan la recopilación de datos adicionales durante las solicitudes a [!DNL Target] servidores |
 | proxyConfig | ClientProxyConfig | No | Ninguna | Permite al cliente proporcionar sus propios detalles de proxy |

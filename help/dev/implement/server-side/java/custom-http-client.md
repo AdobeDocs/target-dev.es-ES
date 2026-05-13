@@ -3,20 +3,23 @@ title: Obtenga información sobre cómo configurar el cliente HTTP personalizado
 description: Obtenga información sobre cómo configurar TargetClient mediante ClientConfig.builder().httpClient().
 feature: APIs/SDKs
 exl-id: 7615029c-b62d-4ed1-aadb-32e364c4c654
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/SwijRIrhqSG4Mlij4sBH9Kx8tRB-6Bo7eyMoUZREOW8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '108'
+source-wordcount: 108
 ht-degree: 0%
 
 ---
 
 # Configuración personalizada de cliente HTTP (Java)
 
-Si la aplicación que ejecuta el SDK requiere un cliente HTTP personalizado para habilitar características como configurar SSL o agregar encabezados predeterminados a las solicitudes, `TargetClient` deberá configurarse con `ClientConfig.builder().httpClient()`:
+Si la aplicación que ejecuta SDK requiere un cliente HTTP personalizado para habilitar características como configurar SSL o agregar encabezados predeterminados a las solicitudes, `TargetClient` deberá configurarse con `ClientConfig.builder().httpClient()`:
 
 ## Configuración básica personalizada del cliente HTTP
 
-Ahora mismo, el SDK admite clientes HTTP que implementan la interfaz `org.apache.http.client.HttpClient`.
+SDK admite actualmente clientes HTTP que implementan la interfaz `org.apache.http.client.HttpClient`.
 
 ### Implementación básica
 

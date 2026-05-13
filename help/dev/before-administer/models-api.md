@@ -3,9 +3,13 @@ title: Información general de API de modelos Adobe
 description: Información general sobre la API de modelos, que los usuarios pueden utilizar para bloquear funciones y evitar que se incluyan en los modelos de aprendizaje automático.
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: 1316
 ht-degree: 2%
 
 ---
@@ -14,7 +18,7 @@ ht-degree: 2%
 
 La API de modelos, también denominada API de Lista de bloqueados, permite a los usuarios ver y administrar la lista de características utilizadas en los modelos de aprendizaje automático para las actividades [!UICONTROL Automated Personalization] (AP) y [!DNL Auto-Target] (AT). Si un usuario desea excluir una función de la utilización por parte de los modelos para actividades AP o AT, puede utilizar la API de modelos para añadir esa función a la &quot;lista de bloqueados&quot;.
 
-Un(a) **[!UICONTROL blocklist]** define el conjunto de características que [!DNL Adobe Target] excluirá de sus modelos de aprendizaje automático. Para obtener más información sobre las características, consulte [Datos utilizados por [!DNL Target] algoritmos de aprendizaje automático](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=es).
+Un(a) **[!UICONTROL blocklist]** define el conjunto de características que [!DNL Adobe Target] excluirá de sus modelos de aprendizaje automático. Para obtener más información sobre las características, consulte [Datos utilizados por [!DNL Target] algoritmos de aprendizaje automático](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
 
 Las listas de bloqueados se pueden definir por actividad (nivel de actividad) o para todas las actividades de una cuenta de [!DNL Target] (nivel global).
 
@@ -24,7 +28,7 @@ Las listas de bloqueados se pueden definir por actividad (nivel de actividad) o 
 
 Vea la especificación de API de modelos [aquí](../administer/models-api/models-api-overview.md).
 
-## Requisitos previos  
+## Requisitos previos
 
 Para usar la API de modelos, debe configurar la autenticación mediante [Adobe Developer Console](https://developer.adobe.com/console/home), tal como lo haría con [Target Admin API](../administer/admin-api/admin-api-overview-new.md). Para obtener más información, consulte [Cómo configurar la autenticación](../before-administer/configure-authentication.md).
 
@@ -100,7 +104,7 @@ En el ejemplo que se muestra a continuación, el usuario comprueba la lista de f
 >
 >Para encontrar el ID de actividad de su actividad, vaya a la lista de actividades en la interfaz de usuario de [!DNL Target]. Haga clic en la actividad que le interese. El ID de actividad se muestra en el cuerpo de la página de Información general de las actividades resultantes, así como al final de la dirección URL de esa página.
 
-**[!UICONTROL externalName]** es un nombre descriptivo para una característica. Lo crea [!DNL Target] y es posible que este valor cambie con el tiempo. Los usuarios pueden ver estos nombres descriptivos en el [informe de perspectivas de Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=es).
+**[!UICONTROL externalName]** es un nombre descriptivo para una característica. Lo crea [!DNL Target] y es posible que este valor cambie con el tiempo. Los usuarios pueden ver estos nombres descriptivos en el [informe de perspectivas de Personalization](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
 
 **[!UICONTROL internalName]** es el identificador real de la característica. También lo creó [!DNL Target], pero no se puede cambiar. Este es el valor al que deberá hacer referencia para identificar las funciones a las que desea hacer lista de bloqueados.
 

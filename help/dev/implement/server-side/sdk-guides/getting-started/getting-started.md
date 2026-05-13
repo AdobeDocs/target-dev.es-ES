@@ -3,10 +3,15 @@ title: Introducción a los SDK de Target
 description: ¿Cómo utilizo los SDK de Adobe Target?
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 0%
+source-wordcount: 622
+ht-degree: 1%
 
 ---
 
@@ -22,14 +27,14 @@ Para ponerte en marcha, te recomendamos que crees tu primera actividad de indica
 ## Resumen de los pasos
 
 1. Habilitar la toma de decisiones en el dispositivo para su organización
-1. Instalación del SDK
-1. Inicialización del SDK
+1. Instalación de SDK
+1. Inicialización de SDK
 1. Configurar los indicadores de características en una actividad [!DNL Adobe Target] [!UICONTROL A/B Test]
 1. Implementar y procesar la función en la aplicación
 1. Implementar el seguimiento de eventos en la aplicación
 1. Activar su actividad [!UICONTROL A/B Test]
 
-## 1. Habilitar la toma de decisiones en el dispositivo para su organización
+## &#x200B;1. Habilitar la toma de decisiones en el dispositivo para su organización
 
 Al habilitar la toma de decisiones en el dispositivo, se garantiza que la actividad [!UICONTROL A/B Test] se ejecute con una latencia cercana a cero. Para habilitar esta característica, vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** y habilite la opción **[!UICONTROL On-Device Decisioning]**.
 
@@ -37,11 +42,11 @@ Al habilitar la toma de decisiones en el dispositivo, se garantiza que la activi
 
 >[!NOTE]
 >
->Debe tener el **[!UICONTROL Admin]** o **[!UICONTROL Approver]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para habilitar o deshabilitar la opción **[!UICONTROL On-Device Decisioning]**.
+>Debe tener el **[!UICONTROL Admin]** o **[!UICONTROL Approver]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar la opción **[!UICONTROL On-Device Decisioning]**.
 
 Después de habilitar la opción **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] comienza a generar [artefactos de regla](../on-device-decisioning/rule-artifact-overview.md) para su cliente.
 
-## 2. Instalar el SDK
+## &#x200B;2. Instalación de SDK
 
 Para Node.js, Java y Python, ejecute el siguiente comando en el directorio del proyecto en el terminal. Para .NET, agréguela como una dependencia mediante [la instalación desde NuGet](https://www.nuget.org/packages/Adobe.Target.Client).
 
@@ -77,9 +82,9 @@ pip install target-python-sdk
 
 >[!ENDTABS]
 
-## 3. Inicializar el SDK
+## &#x200B;3. Inicialización de SDK
 
-El artefacto de regla se descarga durante el paso de inicialización del SDK. Puede personalizar el paso de inicialización para determinar cómo se descarga y utiliza el artefacto.
+El artefacto de regla se descarga durante el paso de inicialización de SDK. Puede personalizar el paso de inicialización para determinar cómo se descarga y utiliza el artefacto.
 
 >[!BEGINTABS]
 
@@ -146,7 +151,7 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## 4. Configure los indicadores de características en una actividad [!DNL Adobe Target] [!UICONTROL A/B Test]
+## &#x200B;4. Configurar los indicadores de características en una actividad [!DNL Adobe Target] [!UICONTROL A/B Test]
 
 1. En [!DNL Target], vaya a la página **[!UICONTROL Activities]** y, a continuación, seleccione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
@@ -196,7 +201,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![imagen alt](assets/asset-next_2_t.png)
 
-1. En el ejemplo del paso **[!UICONTROL Targeting]** que se muestra a continuación, Segmentación de audiencia (2) permanece en el conjunto predeterminado de Todos los visitantes, para simplificar. Esto significa que la actividad no está dirigida. Sin embargo, tenga en cuenta que el Adobe recomienda segmentar siempre las audiencias para las actividades de producción. Haga clic en **[!UICONTROL Next]** (3) para avanzar al paso **[!UICONTROL Goals & Settings]** de creación de la actividad.
+1. En el ejemplo del paso **[!UICONTROL Targeting]** que se muestra a continuación, Segmentación de audiencia (2) permanece en el conjunto predeterminado de Todos los visitantes, para simplificar. Esto significa que la actividad no está dirigida. Sin embargo, tenga en cuenta que Adobe recomienda segmentar siempre las audiencias para las actividades de producción. Haga clic en **[!UICONTROL Next]** (3) para avanzar al paso **[!UICONTROL Goals & Settings]** de creación de la actividad.
 
    ![imagen alt](assets/asset-next_2_g.png)
 
@@ -204,7 +209,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![imagen alt](assets/asset-conv.png)
 
-## 5. Implementar y procesar la función en la aplicación
+## &#x200B;5. Implementar y procesar la función en la aplicación
 
 Después de configurar las variables de indicador de características en [!DNL Target], modifique el código de la aplicación para usarlas. Por ejemplo, después de obtener la marca de características en la aplicación, puede utilizarla para habilitar características y procesar la experiencia para la que el visitante cumple los requisitos.
 
@@ -272,7 +277,7 @@ def target_client_ready():
 
 >[!ENDTABS]
 
-## 6. Implemente un seguimiento adicional para los eventos de su aplicación
+## &#x200B;6. Implementar el seguimiento adicional de eventos en la aplicación
 
 Opcionalmente, puede enviar eventos adicionales para rastrear conversiones mediante la función sendNotification().
 
@@ -382,12 +387,12 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## 7. Active la actividad [!UICONTROL A/B Test]
+## &#x200B;7. Activar su actividad [!UICONTROL A/B Test]
 
 1. Haga clic en **[!UICONTROL Activate]** (1) para activar su actividad [!UICONTROL A/B Test].
 
    >[!NOTE]
    >
-   >Debe tener el **[!UICONTROL Approver]** o **[!UICONTROL Publisher]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para realizar este paso.
+   >Debe tener el **[!UICONTROL Approver]** o **[!UICONTROL Publisher]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para realizar este paso.
 
    ![imagen alt](assets/asset-activate.png)

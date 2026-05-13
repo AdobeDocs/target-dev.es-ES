@@ -3,10 +3,15 @@ title: Ejecución de pruebas A/B con indicadores de funcionalidades y toma de de
 description: Ejecute pruebas A/B con indicadores de características mediante la toma de decisiones en el dispositivo.
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 0%
+source-wordcount: 749
+ht-degree: 1%
 
 ---
 
@@ -29,7 +34,7 @@ ht-degree: 0%
 >
 >Supongamos que desea determinar si el rediseño de la página principal con temas de otoño sería bien recibido por los usuarios. Usted decide probarlo ejecutando un experimento A/B en [!DNL Adobe Target]. También debe asegurarse de que el experimento se entrega con un buen rendimiento para que una experiencia de usuario negativa o lenta no distorsione los resultados.
 
-## 1. Habilite [!UICONTROL on-device decisioning] para su organización
+## &#x200B;1. Habilitar [!UICONTROL on-device decisioning] para su organización
 
 Al habilitar la toma de decisiones en el dispositivo, se garantiza que una actividad A/B se ejecute con una latencia cercana a cero. Para habilitar esta característica, vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** en [!DNL Adobe Target] y habilite la opción **[!UICONTROL On-Device Decisioning]**.
 
@@ -38,11 +43,11 @@ Al habilitar la toma de decisiones en el dispositivo, se garantiza que una activ
 
 >[!NOTE]
 >
->Debe tener el rol de administrador o aprobador [usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para habilitar o deshabilitar la opción de toma de decisiones en el dispositivo.
+>Debe tener el rol de administrador o aprobador [usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar la opción de toma de decisiones en el dispositivo.
 
 Después de habilitar la opción **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] comienza a generar artefactos de regla para el cliente.
 
-## 2. Crear una actividad [!UICONTROL A/B Test]
+## &#x200B;2. Crear una actividad [!UICONTROL A/B Test]
 
 En [!DNL Adobe Target], vaya a la página **[!UICONTROL Activities]** y, a continuación, seleccione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
@@ -52,9 +57,9 @@ En el modal **[!UICONTROL Create A/B Test Activity]**, deje seleccionada la opci
 
 ![imagen alt](assets/asset-form.png)
 
-## 3. Defina su A y B
+## &#x200B;3. Defina su A y B
 
-1. En el paso **[!UICONTROL Experiences]** de creación de la actividad, proporcione un nombre para su actividad (1) y agregue una segunda experiencia, Experiencia B, haciendo clic en el botón **[!UICONTROL Add Experience]** (2). Introduzca el nombre de la ubicación (3) dentro de la aplicación donde desea ejecutar la prueba A/B. En el ejemplo que se muestra a continuación, la página principal es la ubicación definida para la Experiencia A. (También es la ubicación definida para la Experiencia B.)
+1. En el paso **[!UICONTROL Experiences]** de creación de la actividad, proporcione un nombre para su actividad (1) y agregue una segunda experiencia, Experiencia B, haciendo clic en el botón **[!UICONTROL Add Experience]** (2). Introduzca el nombre de la ubicación (3) dentro de la aplicación donde desea ejecutar la prueba A/B. En el ejemplo que se muestra a continuación, la página principal es la ubicación definida para la Experiencia A. (También es la ubicación definida para la Experiencia B).
 
    La experiencia A define el control, que es el diseño actual de la página principal.
 
@@ -77,7 +82,7 @@ En el modal **[!UICONTROL Create A/B Test Activity]**, deje seleccionada la opci
 
    ![imagen alt](assets/asset-homepage.png)
 
-## 4. Añada una audiencia
+## &#x200B;4. Añadir una audiencia
 
 Supongamos que desea probar primero el rediseño en sus clientes fieles, a los que puede identificar en función de si han iniciado sesión o no.
 
@@ -89,29 +94,29 @@ Supongamos que desea probar primero el rediseño en sus clientes fieles, a los q
 
    ![imagen alt](assets/asset-audience.png)
 
-## 5. Establecer la asignación del tráfico
+## &#x200B;5. Establecer asignación de tráfico
 
 Defina el porcentaje de usuarios que iniciaron sesión con el que desea probar el rediseño de la nueva página principal. En otras palabras, ¿a qué porcentaje de los usuarios desea desplegar esta prueba? En este ejemplo, para implementar esta prueba para todos los usuarios que iniciaron sesión, mantenga la asignación de tráfico al 100%.
 
 ![imagen alt](assets/asset-allocation.png)
 
-## 6. Establecer la distribución del tráfico en variaciones
+## &#x200B;6. Establecer la distribución del tráfico en variaciones
 
 Defina el porcentaje de usuarios que iniciaron sesión y que verán el diseño actual de la página principal o el rediseño completamente nuevo. En este ejemplo, mantenga la distribución del tráfico como una división 50/50 entre las experiencias A y B.
 
 ![imagen alt](assets/asset-traffic-distribution.png)
 
-## 7. Configurar informes
+## &#x200B;7. Configuración de informes
 
 En el paso **[!UICONTROL Goals & Settings]**, elija **[!UICONTROL Adobe Target]** como **[!UICONTROL Reporting Source]** para ver los resultados de la actividad en la interfaz de usuario de [!DNL Adobe Target] o elija **[!UICONTROL Adobe Analytics]** para verlos en la interfaz de usuario de Adobe Analytics.
 
 ![imagen alt](assets/asset-reporting.png)
 
-## 8. Agregar métricas para el seguimiento de KPI
+## &#x200B;8. Agregar métricas para KPI de seguimiento
 
 Elija un **[!UICONTROL Goal Metric]** para medir la prueba A/B. En este ejemplo, una conversión correcta se basa en si el usuario llega al final de la página, lo que indica participación. Por lo tanto, **[!UICONTROL Conversion]** se determina en función de si el usuario vio la ubicación llamada final de la página.
 
-## 9. Implemente código para ejecutar pruebas A/B con indicadores de funcionalidad en la aplicación
+## &#x200B;9. Implemente código para ejecutar pruebas A/B con indicadores de características en la aplicación
 
 >[!BEGINTABS]
 
@@ -165,6 +170,6 @@ String flag = attributes.getString("homepage", "feature-flag");
 
 >[!ENDTABS]
 
-## 10. Active la prueba A/B con el indicador de funcionalidad
+## &#x200B;10. Activación de la prueba A/B con el indicador de funcionalidad
 
 ![imagen alt](assets/asset-activate.png)

@@ -4,9 +4,12 @@ description: Aprenda a utilizar las API de perfil de Adobe Target para recuperar
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
-source-git-commit: b8ccfdcaff6aa17a325727df0a9ffd716e44519b
+TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: 294
 ht-degree: 0%
 
 ---
@@ -37,7 +40,7 @@ El ejemplo siguiente muestra el formato de solicitud para recuperar un perfil me
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-Reemplace `<your-client-code>` y `your-tnt-id` y active una solicitud de GET. Esta es una llamada de captura de perfil de ejemplo que usa un `tntid`:
+Reemplace `<your-client-code>` y `your-tnt-id` y active una petición GET. Esta es una llamada de captura de perfil de ejemplo que usa un `tntid`:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
@@ -55,7 +58,7 @@ El ejemplo siguiente muestra el formato de solicitud para recuperar un perfil me
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
-Reemplace `<your-client-code>` y `your-thirdpartyid` y active una solicitud de GET. Esta es una llamada de captura de perfil de ejemplo que usa un [!UICONTROL thirdpartyid]:
+Reemplace `<your-client-code>` y `your-thirdpartyid` y active una petición GET. Esta es una llamada de captura de perfil de ejemplo que usa un [!UICONTROL thirdpartyid]:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>

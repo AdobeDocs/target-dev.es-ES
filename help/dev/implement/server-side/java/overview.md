@@ -1,18 +1,21 @@
 ---
-title: Introducción al  [!DNL Adobe Target] SDK de Java
-description: Descubra cómo  [!DNL Adobe Target] los clientes de pueden instalar, inicializar y utilizar el SDK de Java de.
+title: Introducción a  [!DNL Adobe Target] Java SDK
+description: Aprenda cómo  [!DNL Adobe Target] los clientes pueden instalar, inicializar y utilizar Java SDK.
 feature: APIs/SDKs
 exl-id: ccdd33f5-a9c7-4832-beba-b9692203d42c
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/BtTvCc3i4bYN5rujWFkp-h6TNewSovwrxC8UKvEYZpI
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 4%
+source-wordcount: 120
+ht-degree: 9%
 
 ---
 
-# Información general del SDK de Java
+# Información general sobre Java SDK
 
-Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] pueden instalar, inicializar y utilizar el SDK de Java.
+Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] pueden instalar, inicializar y utilizar Java SDK.
 
 ## Requisitos previos
 
@@ -21,20 +24,20 @@ Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] puede
 
 ## Primeros pasos
 
-Para ver cómo puede empezar a usar el SDK de Java, vaya a la [[!DNL Target] Guía de introducción al SDK](../sdk-guides/getting-started/getting-started.md).
+Para ver cómo puede empezar a usar Java SDK, vaya a la [[!DNL Target] Guía de introducción de SDK](../sdk-guides/getting-started/getting-started.md).
 
 ## Aplicación de ejemplo
 
-Prueba del SDK de Java:
+Prueba de conducción de Java SDK:
 
 * Al visitar el sitio de demostración [[!DNL Adobe Target] [!UICONTROL on-device decisioning]](https://github.com/adobe/on-device-decisioning-demo-site)
 * En una [aplicación de ejemplo](../sdk-guides/sample-apps/sample-apps.md).
 
 ## Referencia
 
-Para leer y comprender la documentación de referencia del SDK de Java, comience en [Instalar SDK](install-sdk.md).
+Para leer y comprender la documentación de referencia de Java SDK, comience en [Instalar SDK](install-sdk.md).
 
 ## Archivos de Source
 
-* [Repositorio de Github del SDK de Java](https://github.com/adobe/target-java-sdk)
-* [Registro de cambios](https://github.com/adobe/target-java-sdk/blob/master/CHANGELOG.md)
+* [Java SDK Github Repo](https://github.com/adobe/target-java-sdk)
+* [Changelog](https://github.com/adobe/target-java-sdk/blob/master/CHANGELOG.md)

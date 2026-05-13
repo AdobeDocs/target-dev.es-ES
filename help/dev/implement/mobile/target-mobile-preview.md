@@ -4,10 +4,13 @@ description: Utilice los vínculos de vista previa para móviles para realizar u
 title: ¿Cómo se usan los vínculos de vista previa para móviles en  [!DNL Adobe Target] Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
+TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 23%
+source-wordcount: 552
+ht-degree: 18%
 
 ---
 
@@ -17,11 +20,11 @@ Use los vínculos de vista previa en móviles para realizar fácilmente un contr
 
 La funcionalidad de vista previa para móviles le permite probar completamente sus actividades de aplicación móvil antes del lanzamiento.
 
-## Requisitos previos  
+## Requisitos previos
 
-1. **Use una versión compatible del SDK:** La característica de vista previa para móviles requiere que descargue e instale la versión adecuada de [!DNL Adobe Mobile SDK] en sus aplicaciones correspondientes.
+1. **Use una versión compatible de SDK:** La característica de vista previa para móviles requiere que descargue e instale la versión adecuada de [!DNL Adobe Mobile SDK] en sus aplicaciones correspondientes.
 
-   Para obtener instrucciones para descargar el SDK adecuado, consulte [Versiones actuales del SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} en la documentación de *[!DNL Adobe Experience Platform Mobile SDK]*.
+   Para obtener instrucciones para descargar el SDK apropiado, consulte [Versiones actuales de SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} en la documentación de *[!DNL Adobe Experience Platform Mobile SDK]*.
 
 1. **Configure un esquema de direcciones URL:** el vínculo de vista previa utiliza un esquema de direcciones URL para abrir la aplicación. Especifique un esquema URL único para la vista previa.
 
@@ -30,7 +33,7 @@ La funcionalidad de vista previa para móviles le permite probar completamente s
    Los siguientes vínculos contienen más información:
 
    * **iOS**: Para obtener más información sobre cómo configurar esquemas de URL para iOS, consulte [Definición de un esquema de URL personalizado para su aplicación](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} en el sitio web de *Apple Developer*.
-   * **Android**: Para obtener más información sobre cómo configurar esquemas de URL para Android, consulte [Crear vínculos profundos al contenido de la aplicación](https://developer.android.com/training/app-links/deep-linking){target=_blank} en el sitio web de *desarrolladores de Android*.
+   * **Android**: Para obtener más información sobre cómo configurar esquemas de URL para Android, consulte [Crear vínculos profundos al contenido de la aplicación](https://developer.android.com/training/app-links/deep-linking){target=_blank} en el sitio web de *Desarrolladores de Android*.
 
 1. **Configurar la API `collectLaunchInfo` (solo i0S)**
 
@@ -74,10 +77,10 @@ Abra el vínculo en un navegador móvil en un dispositivo en el que tenga instal
 
 1. Seleccione la combinación de experiencias que desee ver y haga clic en **[!UICONTROL Launch Experiences]**.
 
-   |![vista previa para móvil 1](assets/mobile-preview-experience-selection-1.png)|![vista previa para móvil 2](assets/mobile-preview-experience-result-1-france.png)|![vista previa para móvil 3](assets/mobile-preview-experience-result-1-shipfree.png)|
-|![vista previa para móvil 4](assets/mobile-preview-experience-selection-2.png)|![vista previa para móvil 5](assets/mobile-preview-experience-result-2-aus.png)|![vista previa para móvil 6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![vista previa para móviles 1](assets/mobile-preview-experience-selection-1.png)|![vista previa para móviles 2](assets/mobile-preview-experience-result-1-france.png)|![vista previa para móviles 3](assets/mobile-preview-experience-result-1-shipfree.png)|
+|![vista previa para móviles 4](assets/mobile-preview-experience-selection-2.png)|![vista previa para móviles 5](assets/mobile-preview-experience-result-2-aus.png)|![vista previa para móviles 6](assets/mobile-preview-experience-result-2-10off.png)|
 
-## Limitaciones  
+## Limitaciones
 
 * Debe volver a cargarse la vista para que el nuevo contenido se muestre después de hacer clic en el botón **[!UICONTROL Launch Experiences]**. El modo más sencillo es cambiar a una pantalla diferente y regresar a aquella en la que espera que se produzca el cambio.
 * La vista previa para móviles no es compatible con las versiones de Android anteriores a API-19 (KitKat).

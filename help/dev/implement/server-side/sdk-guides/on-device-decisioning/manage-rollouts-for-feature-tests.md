@@ -3,10 +3,15 @@ title: Administración de despliegues para pruebas de funciones
 description: Obtenga información sobre cómo administrar despliegues para pruebas de características usando [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/soG8leVV3R4Y4FSns5oIJ43oziIhtOb2zJ5bkFYxeo0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: 525
+ht-degree: 1%
 
 ---
 
@@ -22,7 +27,7 @@ ht-degree: 0%
 1. Activación de la actividad A/B
 1. Ajuste el despliegue y la asignación de tráfico según sea necesario
 
-## 1. Habilite [!UICONTROL on-device decisioning] para su organización
+## &#x200B;1. Habilitar [!UICONTROL on-device decisioning] para su organización
 
 Al habilitar la toma de decisiones en el dispositivo, se garantiza que una actividad A/B se ejecute con una latencia cercana a cero. Para habilitar esta característica, vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** en [!DNL Adobe Target] y habilite la opción **[!UICONTROL On-Device Decisioning]**.
 
@@ -30,11 +35,11 @@ Al habilitar la toma de decisiones en el dispositivo, se garantiza que una activ
 
 >[!NOTE]
 >
->Debe tener el rol de administrador o aprobador [user](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para habilitar o deshabilitar la opción [!UICONTROL On-Device Decisioning].
+>Debe tener el rol de administrador o aprobador [user](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar la opción [!UICONTROL On-Device Decisioning].
 
 Después de habilitar la opción [!UICONTROL On-Device Decisioning], [!DNL Adobe Target] comienza a generar *artefactos de regla* para su cliente.
 
-## 2. Crear una actividad [!UICONTROL A/B Test]
+## &#x200B;2. Crear una actividad [!UICONTROL A/B Test]
 
 1. En [!DNL Adobe Target], vaya a la página **[!UICONTROL Activities]** y, a continuación, seleccione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
@@ -44,7 +49,7 @@ Después de habilitar la opción [!UICONTROL On-Device Decisioning], [!DNL Adobe
 
    ![imagen alt](assets/asset-form.png)
 
-## 3. Defina la función y la configuración de despliegue
+## &#x200B;3. Definición de la configuración de funciones y despliegue
 
 En el paso **[!UICONTROL Experiences]** de creación de la actividad, indique un nombre para la actividad (1). Introduzca el nombre de la ubicación (2) dentro de la aplicación donde desea administrar los despliegues de la función. Por ejemplo, `ondevice-rollout` o `homepage-addtocart-rollout` son nombres de ubicación que indican los destinos para administrar los despliegues de características. En el siguiente ejemplo, `ondevice-rollout` es la ubicación definida para la Experiencia A. Si lo desea, puede añadir refinamientos de audiencia (4) para restringir la calificación a la actividad.
 
@@ -74,7 +79,7 @@ En el paso **[!UICONTROL Experiences]** de creación de la actividad, indique un
 
    ![imagen alt](assets/asset-conv-rollout.png)
 
-## 4. Implementar y procesar la función en la aplicación
+## &#x200B;4. Implementar y procesar la función en la aplicación
 
 >[!BEGINTABS]
 
@@ -103,7 +108,7 @@ targetClient.getAttributes(["ondevice-rollout"]).then(function(attributes) {
 
 >[!ENDTABS]
 
-## 5. Implemente el seguimiento de eventos en la aplicación
+## &#x200B;5. Implementar el seguimiento de eventos en la aplicación
 
 Después de hacer que la variable de indicador de funcionalidad esté disponible en la aplicación, puede utilizarla para habilitar cualquier función que ya forme parte de la aplicación. Si un visitante no cumple los requisitos para la actividad, significa que no se incluyó como parte del bloque del 10 % definido como audiencia.
 
@@ -155,11 +160,11 @@ else {
 
 >[!ENDTABS]
 
-## 6. Active la actividad de despliegue
+## &#x200B;6. Activación de la actividad de despliegue
 
 ![imagen alt](assets/asset-activate-rollout.png)
 
-## 7. Ajuste el despliegue y la asignación de tráfico según sea necesario
+## &#x200B;7. Ajuste el despliegue y la asignación de tráfico según sea necesario
 
 Una vez que haya activado la actividad, edítela en cualquier momento para aumentar o disminuir la asignación de tráfico según sea necesario.
 

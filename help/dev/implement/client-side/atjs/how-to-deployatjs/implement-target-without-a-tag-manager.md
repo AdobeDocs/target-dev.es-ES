@@ -4,10 +4,16 @@ description: Obtenga información sobre cómo especificar la configuración (det
 title: ¿Puedo implementar [!DNL Target]  sin un Administrador de etiquetas?
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 35%
+source-wordcount: 1739
+ht-degree: 33%
 
 ---
 
@@ -59,7 +65,7 @@ En el panel Métodos de implementación se pueden configurar los siguientes ajus
 | [!UICONTROL Page load enabled (Auto-create global mbox)] | Seleccione si quiere incrustar la llamada de mbox global en el archivo at.js para que se active automáticamente cada vez que se cargue la página. |
 | [!UICONTROL Global mbox] | Seleccione un nombre para el mbox global. De forma predeterminada, este nombre es target-global-mbox.<p>Pueden utilizarse caracteres especiales, incluido el símbolo &amp;, en los nombres de mbox con at.js. |
 | [!UICONTROL Timeout (seconds)] | Si [!DNL Target] no responde con contenido dentro del periodo definido, se agota el tiempo de espera de la llamada del servidor y se muestra el contenido predeterminado. Se siguen realizando llamadas adicionales durante la sesión del visitante. El valor predeterminado es de 5 segundos.<p>La biblioteca at.js utiliza la configuración de tiempo de espera de `XMLHttpRequest`. El tiempo de espera comienza cuando se activa la solicitud y se detiene cuando [!DNL Target] obtiene una respuesta del servidor. Para obtener más información, consulte [XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout) en Mozilla Developer Network.<p>Si el tiempo de espera especificado se agota antes de recibir una respuesta, se mostrará el contenido predeterminado y el visitante se podrá contar como un participante de una actividad, ya que la recopilación de datos se realizará en el perímetro de [!DNL Target]. Si la solicitud alcanza el límite de [!DNL Target], se contará al visitante.<p>Considere los siguientes puntos a la hora de configurar el tiempo de espera:<ul><li>Si el valor es demasiado bajo, los usuarios podrían ver el contenido predeterminado la mayor parte del tiempo, aunque se cuente al visitante como un participante de la actividad.</li><li>Si el valor es demasiado alto, los visitantes podrían ver áreas negras en la página web o páginas en blanco si oculta el cuerpo durante periodos muy largos.</li></ul>Para comprender mejor cómo funcionan los tiempos de respuesta de mbox, consulte la ficha Red en las herramientas para desarrolladores de su navegador. También puede utilizar herramientas de supervisión del rendimiento web de terceros, como Catchpoint.<p>**Nota**: La configuración de [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout) garantiza que [!DNL Target] no espere a la respuesta de la API del visitante durante demasiado tiempo. Esta configuración y la configuración Tiempo de espera para at.js descrita no se afectan entre sí. |
-| [!UICONTROL Profile Lifetime] | Esta opción determina durante cuánto tiempo se almacenan los perfiles de los visitantes. De forma predeterminada, los perfiles se almacenan durante dos semanas. Esta configuración se puede aumentar hasta 90 días.<p>Para cambiar la configuración de Duración del perfil, comuníquese con [Atención al cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es#reference_ACA3391A00EF467B87930A450050077C). |
+| [!UICONTROL Profile Lifetime] | Esta opción determina durante cuánto tiempo se almacenan los perfiles de los visitantes. De forma predeterminada, los perfiles se almacenan durante dos semanas. Esta configuración se puede aumentar hasta 90 días.<p>Para cambiar la configuración de Duración del perfil, comuníquese con [Atención al cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C). |
 
 ### Método de implementación principal
 
@@ -73,7 +79,7 @@ Para editar la configuración de at.js, haga clic en **[!UICONTROL Edit]** junto
 
 >[!WARNING]
 >
->Antes de cambiar esta configuración predeterminada, comuníquese con [Client Care](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es#reference_ACA3391A00EF467B87930A450050077C) para que no afecte a su implementación actual.
+>Antes de cambiar esta configuración predeterminada, comuníquese con [Client Care](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C) para que no afecte a su implementación actual.
 
 Además de la configuración explicada anteriormente, también está disponible la siguiente configuración específica de at.js:
 
@@ -109,7 +115,7 @@ Para obtener más información, consulte [Privacidad](/help/dev/before-implement
 
 >[!NOTE]
 >
->La opción Compatibilidad con navegadores anteriores estaba disponible en la versión 0.9.3 (y anteriores) de at.js. Esta opción se ha eliminado de la versión 0.9.4 de at.js. Para saber cuáles con los exploradores compatibles con at.js, consulte [Exploradores compatibles](/help/dev/before-implement/supported-browsers.md)<p>Los navegadores anteriores son navegadores más viejos que no admiten completamente CORS (Uso compartido de recursos de origen cruzado). Algunos de estos navegadores son: Internet Explorer antes de la versión 11 y Safari versión 6 y anteriores. Si se deshabilitó la compatibilidad con exploradores anteriores, [!DNL Target] no entregó contenido ni contó visitantes en los informes de estos exploradores. Si esta opción estaba habilitada, se recomienda realizar el control de calidad en los exploradores más antiguos para garantizar una buena experiencia del cliente.
+>La opción Compatibilidad con navegadores anteriores estaba disponible en la versión 0.9.3 (y anteriores) de at.js. Esta opción se ha eliminado en la versión 0.9.4 de at.js. Para obtener una lista de los exploradores compatibles con at.js, consulte [Exploradores compatibles](/help/dev/before-implement/supported-browsers.md).<p>Los navegadores anteriores son navegadores más viejos que no admiten completamente CORS (Uso compartido de recursos de origen cruzado). Algunos de estos navegadores son: Internet Explorer antes de la versión 11 y Safari versión 6 y anteriores. Si se deshabilitó la compatibilidad con exploradores anteriores, [!DNL Target] no entregó contenido ni contó visitantes en los informes de estos exploradores. Si esta opción estaba habilitada, se recomienda realizar el control de calidad en los exploradores más antiguos para garantizar una buena experiencia del cliente.
 
 ## Descargar at.js
 
@@ -232,7 +238,7 @@ Una implementación típica de [!DNL Target] que no usa un administrador de etiq
 
 Tenga en cuenta las siguientes notas importantes:
 
-* Debe usarse el tipo de documento HTML5 (por ejemplo, `<!doctype html>`). Los tipos de documento no admitidos o anteriores podrían ocasionar que [!DNL Target] no pueda realizar una solicitud.
+* Se debe utilizar el tipo de documento HTML5 (por ejemplo, `<!doctype html>`). Los tipos de documento no admitidos o anteriores podrían ocasionar que [!DNL Target] no pueda realizar una solicitud.
 * Conexión previa y Recuperación previa son opciones que pueden ayudar a que sus páginas web se carguen más rápido. Si usa estas configuraciones, asegúrese de reemplazar `<client code>` por su propio código de cliente, que puede obtener de la página **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
 * Si tiene una capa de datos es óptimo definir la mayor cantidad posible en el `<head>` de sus páginas antes de que se cargue at.js. Esta ubicación proporciona la máxima capacidad para utilizar esta información en [!DNL Target] para la personalización.
 * Las funciones especiales de [!DNL Target], como `targetPageParams()`, `targetPageParamsAll()`, proveedores de datos y `targetGlobalSettings()` deben definirse después de la capa de datos y antes de que se cargue at.js. Alternativamente, estas funciones podrían guardarse en la sección Encabezado de biblioteca de la página Editar configuración de at.js y guardarse como parte de la propia biblioteca de at.js. Para obtener más información sobre estas funciones, consulte [funciones de at.js](/help/dev/implement/client-side/atjs/atjs-functions/atjs-functions.md).

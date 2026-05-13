@@ -4,10 +4,13 @@ description: Aprenda a usar  [!DNL Adobe Experience Platform Location Service]  
 title: ¿Cómo se usa  [!DNL Adobe Location Service]?
 feature: Implement Mobile
 exl-id: ff38c0bb-3451-420f-8538-10f1d0606232
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/dr-6ZJdh-o9p75Cm1LsT7IrRglSiAMlkGKoEc4EZU6E
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 1%
+source-wordcount: 175
+ht-degree: 4%
 
 ---
 
@@ -19,4 +22,4 @@ La ubicación es un contexto importante para comprender y interactuar con los us
 
 Puede usar [!DNL Location Service] con [!DNL Target] para aprovechar las reglas con [etiquetas en Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y adjuntar los datos de [!UICONTROL Places] a los eventos de SDK de [!DNL Adobe Target].
 
-Para obtener más información, consulte [Usar [!UICONTROL Location Service] con [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=es) en la guía del [Servicio de ubicación de Adobe Experience Platform](https://experienceleague.adobe.com/docs/places/using/home.html?lang=es).
+Para obtener más información, consulte [Usar [!UICONTROL Location Service] con [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html) en la guía del [Servicio de ubicación de Adobe Experience Platform](https://experienceleague.adobe.com/docs/places/using/home.html).

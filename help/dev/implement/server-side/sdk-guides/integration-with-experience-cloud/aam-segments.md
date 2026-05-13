@@ -1,31 +1,36 @@
 ---
-title: Integración con segmentos de de Experience Cloud AAM
+title: Integración con segmentos de AAM de Experience Cloud
 description: Integración con Experience Cloud, integración con Audience Manager
 keywords: api de entrega, lado del servidor, lado del servidor, integración, audience manager, aam
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side
-source-git-commit: e3f14e97fa48ffb1f07b29aca5711d16e75faa80
+TQID: https://experienceleague.adobe.com/mc55SxaUU8BJ81hKLji9xi0-OHCux3W4R0syuVoGrIo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: 431
 ht-degree: 4%
 
 ---
 
 # Segmentos de AAM
 
-[!DNL Adobe Audience Manager] segmentos se pueden aprovechar mediante los SDK [!DNL Adobe Target]. AAM Para aprovechar los segmentos de, se deben proporcionar los siguientes campos:
+[!DNL Adobe Audience Manager] segmentos se pueden aprovechar mediante los SDK [!DNL Adobe Target]. Para aprovechar los segmentos de AAM, se deben proporcionar los siguientes campos:
 
 >[!NOTE]
 >
->AAM Los segmentos de la lista de distribución no son compatibles con las actividades de toma de decisiones en el dispositivo.
+>Los segmentos de AAM no son compatibles con las actividades de toma de decisiones en el dispositivo.
 
 | Nombre del campo | Requerido | Descripción |
 | --- | --- | --- |
-| `locationHint` | Sí | AAM Sugerencia de ubicación DCS se utiliza para determinar qué extremo de DCS de DCS de DCS se visita para recuperar el perfil. Debe ser >= 1. |
+| `locationHint` | Sí | Sugerencia de ubicación DCS se utiliza para determinar qué punto de conexión DCS de AAM visitar para recuperar el perfil. Debe ser >= 1. |
 | `marketingCloudVisitorId` | Sí | ID de visitante de Marketing Cloud |
-| `blob` | Sí | AAM AAM Se utiliza un blob de para enviar datos adicionales a los usuarios de la aplicación de correo electrónico No debe estar en blanco y tener un tamaño &lt;= 1024. |
+| `blob` | Sí | AAM Blob se utiliza para enviar datos adicionales a AAM. No debe estar en blanco y tener un tamaño &lt;= 1024. |
 
-El SDK rellenará automáticamente estos campos cuando realice una llamada al método `getOffers`, pero deberá asegurarse de que se proporciona una cookie de visitante válida. Para obtener esta cookie, debe implementar VisitorAPI.js en el explorador.
+SDK rellenará automáticamente estos campos cuando realice una llamada al método `getOffers`, pero deberá asegurarse de que se proporciona una cookie de visitante válida. Para obtener esta cookie, debe implementar VisitorAPI.js en el explorador.
 
 ## Guía de implementación
 
@@ -43,13 +48,13 @@ Las cookies se utilizan para correlacionar [!DNL Adobe Audience Manager] solicit
 Supongamos que un usuario introduce una URL en un explorador que envía una solicitud al servidor web. Al cumplir esa solicitud:
 
 1. El servidor lee las cookies de visitante y destinatario de la solicitud.
-1. El servidor realiza una llamada al método `getOffers` del SDK [!DNL Target], especificando las cookies de visitante y destino si están disponibles.
+1. El servidor realiza una llamada al método `getOffers` de la SDK [!DNL Target], especificando las cookies de visitante y destino si están disponibles.
 1. Cuando se completa la llamada a `getOffers`, se utilizan los valores de `targetCookie` y `visitorState` de la respuesta.
    1. Se ha establecido una cookie en la respuesta con valores tomados de `targetCookie`. Esto se realiza mediante el encabezado de respuesta `Set-Cookie`, que indica al explorador que mantenga la cookie de destino.
-   1. Se prepara una respuesta del HTML que inicializa `VisitorAPI.js` y pasa `visitorState` desde la respuesta de destino.
-1. La respuesta del HTML se carga en el explorador...
+   1. Se prepara una respuesta de HTML que inicializa `VisitorAPI.js` y pasa `visitorState` desde la respuesta de destino.
+1. La respuesta de HTML se carga en el explorador...
    1. `VisitorAPI.js` se incluye en el encabezado del documento.
-   1. VisitorAPI se inicializó con `visitorState` desde la respuesta del SDK `getOffers`. Esto hará que la cookie del visitante se establezca en el explorador para que se envíe al servidor en solicitudes posteriores.
+   1. VisitorAPI se inicializó con `visitorState` desde la respuesta de SDK `getOffers`. Esto hará que la cookie del visitante se establezca en el explorador para que se envíe al servidor en solicitudes posteriores.
 
 ### Código de ejemplo
 
@@ -298,4 +303,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-Para obtener más información acerca de `TargetRequestUtils.java`, vea [Métodos de utilidad (Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=es){target=_blank}
+Para obtener más información acerca de `TargetRequestUtils.java`, vea [Métodos de utilidad (Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}

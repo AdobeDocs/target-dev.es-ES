@@ -1,18 +1,21 @@
 ---
-title: Introducción al SDK de  [!DNL Adobe Target] Node.js
-description: Obtenga información sobre cómo  [!DNL Adobe Target] los clientes pueden instalar, inicializar y utilizar el SDK de Node.js.
+title: Introducción a  [!DNL Adobe Target] Node.js SDK
+description: Obtenga información sobre cómo  [!DNL Adobe Target] los clientes pueden instalar, inicializar y utilizar SDK de Node.js.
 feature: APIs/SDKs
 exl-id: 74f31f6f-6ada-49c5-9b61-98a91288347f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/rRdr0BmXxOBYBqzO5s5ejxvTwlcohks7s8hsfd6hFv4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 5%
+source-wordcount: 138
+ht-degree: 14%
 
 ---
 
-# Información general del SDK de Node.js
+# Información general sobre Node.js SDK
 
-Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] pueden instalar, inicializar y utilizar el SDK de Node.js.
+Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] pueden instalar, inicializar y utilizar el SDK Node.js.
 
 ## Requisitos previos
 
@@ -20,7 +23,7 @@ Se admiten todas las versiones de Node.js que se mantienen actualmente (incluida
 
 ## Primeros pasos
 
-Para ver cómo puede empezar a utilizar el SDK de Node.js, vaya a la [Guía de introducción al SDK de Target](../sdk-guides/getting-started/getting-started.md).
+Para ver cómo puede empezar a utilizar la SDK de Node.js, vaya a la [Guía de introducción de Target SDK](../sdk-guides/getting-started/getting-started.md).
 
 ## Aplicación de ejemplo
 
@@ -31,10 +34,10 @@ Pruebe el SDK de Node.js:
 
 ## Referencia
 
-Para leer y comprender la documentación de referencia del SDK de Node.js, comience en [Instalar SDK](install-sdk.md).
+Para leer y comprender la documentación de referencia de SDK de Node.js, comience en [Instalar SDK](install-sdk.md).
 
 ## Archivos de Source
 
-* [Repositorio de Github del SDK de Node.js](https://github.com/adobe/target-nodejs-sdk)
+* [Repositorio de SDK Github de Node.js](https://github.com/adobe/target-nodejs-sdk)
 * [Registro de cambios](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md)
 escafandra&#x200B;

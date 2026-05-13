@@ -4,9 +4,12 @@ description: API y SDK de envío de Adobe Target
 keywords: API de envío
 exl-id: fc3996e6-8945-437c-9574-cc3f1a406f54
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ctDEksYd-dwv5oe9QC1NMGsGUVoTdsxXDtoxg-ah2ks
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: 262
 ht-degree: 100%
 
 ---
@@ -49,4 +52,4 @@ Para obtener más información, consulte [SDK para Python](/help/dev/implement/s
 
 Lea el [Changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) para el SDK para Python.
 
-&lt;!-- Judy: remove or modify this page? ¿se trata adecuadamente en otro lugar? O bien, ¿añadir vínculos a la información análoga para .NET SDK y SDK para Python? -->
+<!-- Judy: remove or modify this page? adequately covered elsewhere? Or, add links to analogous info for the .NET and Python SDKs? -->

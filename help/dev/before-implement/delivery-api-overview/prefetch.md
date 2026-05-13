@@ -1,12 +1,17 @@
 ---
 title: Precarga de API de envío de Adobe Target
 description: ¿Cómo se usa la recuperación previa en [!UICONTROL Adobe Target Delivery API]?
-keywords: api de envío
+keywords: API de envío
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
+TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: 548
 ht-degree: 0%
 
 ---
@@ -124,7 +129,7 @@ Dentro de la respuesta, verá el campo `content` que contiene la experiencia que
 
 ## Recuperar previamente mboxes con métricas `clickTrack` al usar [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
 
 El siguiente fragmento de código es una respuesta de una recuperación previa de un mbox que contiene `clickTrack` métricas para notificar a [!DNL Analytics] que se hizo clic en una oferta:
 
@@ -169,7 +174,7 @@ El siguiente fragmento de código es una respuesta de una recuperación previa d
 
 ## Recuperar vistas previamente
 
-SPA Las vistas admiten aplicaciones de una sola página () y aplicaciones móviles de forma más fluida. SPA Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de visualización o una experiencia móvil de un usuario o una experiencia móvil de un usuario. SPA Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es){target=_blank} y [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=es){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para el](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Las vistas admiten aplicaciones de una sola página (SPA) y aplicaciones móviles de forma más fluida. Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia SPA o móvil. Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} y [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -199,7 +204,7 @@ curl -X POST \
 }'
 ```
 
-SPA La llamada de ejemplo anterior recupera previamente todas las vistas creadas a través del VEC de para las actividades [!UICONTROL A/B Test] y XT que se mostrarán en la web `channel`. Observe que la llamada recupera previamente todas las vistas de las actividades [!UICONTROL A/B Test] o XT para las que califica un visitante con `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que visita `url`:`https://target.enablementadobe.com/react/demo/#/`.
+La llamada de ejemplo anterior recupera previamente todas las vistas creadas mediante el VEC de SPA para las actividades [!UICONTROL A/B Test] y XT que se mostrarán para la web `channel`. Observe que la llamada recupera previamente todas las vistas de las actividades [!UICONTROL A/B Test] o XT para las que califica un visitante con `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que visita `url`:`https://target.enablementadobe.com/react/demo/#/`.
 
 ```JSON  {line-numbers="true"}
 {

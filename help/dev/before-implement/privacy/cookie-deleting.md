@@ -4,9 +4,15 @@ description: Aprenda a eliminar las cookies de su explorador  [!DNL Target] para
 title: ¿Cómo elimino la cookie  [!DNL Target] ?
 feature: Privacy & Security
 exl-id: c975c47f-8d81-4abe-aa89-f65275a73002
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/t4ieDzmphu8NHTM9eGnaZMoeXk-Y1G05E4K6spdSs6Y
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: 352
 ht-degree: 3%
 
 ---
@@ -39,7 +45,7 @@ Versión 79.0
 
 1. Haga clic en el menú **[!UICONTROL Firefox]** > **[!UICONTROL Preferences]**.
 1. Haga clic en la ficha **[!UICONTROL Privacy and Security]**.
-1. En **Cookies y datos del sitio*, haga clic en &#x200B;** [!UICONTROL Manage Data]**.
+1. En ** Cookies y datos del sitio*, haga clic en **[!UICONTROL Manage Data]**.
 1. Seleccione el sitio `adobe.com` y luego haga clic en **[!UICONTROL Remove Selected]**.
 
 >[!WARNING]

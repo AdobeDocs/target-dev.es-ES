@@ -5,9 +5,15 @@ title: ¿Cómo utilizo CNAME en Target?
 feature: Privacy & Security
 role: Developer
 exl-id: bf533771-6d46-48ba-964c-3ad9ce9f7352
-source-git-commit: c9f6bf53ee8a9d6808191bbe7d014d31a9d80829
+TQID: https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: 1313
 ht-degree: 1%
 
 ---
@@ -19,7 +25,7 @@ Instrucciones para trabajar con [!DNL Adobe] Client Care a fin de implementar el
 ## Solicitar soporte de CNAME en [!DNL Target]
 
 1. Determine la lista de nombres de host que necesita para su certificado SSL (consulte las preguntas frecuentes a continuación).
-1. [Rellene este formulario](/help/dev/implement/assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de  [!DNL Adobe] Atención al cliente solicitando soporte de CNAME](https://experienceleague.adobe.com/es/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
+1. [Rellene este formulario](/help/dev/implement/assets/FPC_Request_Form.xlsx) e inclúyalo cuando [abra un ticket de  [!DNL Adobe] Atención al cliente solicitando soporte de CNAME](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] código de cliente:
    * Nombres de host de certificado SSL (ejemplo: `target.example.com target.example.org`):

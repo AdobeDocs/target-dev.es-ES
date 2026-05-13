@@ -3,9 +3,14 @@ title: Información general de API de administración de Adobe Target
 description: Información general de  [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: 1400
 ht-degree: 2%
 
 ---
@@ -16,11 +21,11 @@ Este artículo proporciona información general sobre la información básica ne
 
 >[!NOTE]
 >
->Si desea administrar [!DNL Target] a través de la interfaz de usuario, consulte la sección de administración de [Adobe Target Business Practitioner Guide **.](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=es)
+>Si desea administrar [!DNL Target] a través de la interfaz de usuario, consulte la sección de administración de [Adobe Target Business Practitioner Guide *](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).*
 >
 >Las API de administrador y las API de perfil suelen denominarse de forma colectiva (&quot;API de administrador y de perfil&quot;), pero también pueden denominarse por separado (&quot;API de administrador&quot; y &quot;API de perfil&quot;). La API de Recommendations es una implementación específica de una API de administrador de [!DNL Target].
 
-## Antes de empezar  
+## Antes de empezar
 
 En todos los ejemplos de código proporcionados para las [API de administrador](../../administer/admin-api/admin-api-overview-new.md), reemplace {tenant} por su valor de inquilino, `your-bearer-token` por el token de acceso que genere con su JWT y `your-api-key` por su clave de API de [Adobe Developer Console](https://developer.adobe.com/console/home). Para obtener más información sobre inquilinos y JWT, consulte el artículo sobre cómo [configurar la autenticación](../configure-authentication.md) para las API de administrador de Adobe [!DNL Target].
 
@@ -74,11 +79,11 @@ Estos son los códigos de respuesta comunes para las API de administrador de Tar
 
 Una actividad de le permite probar o personalizar el contenido para los usuarios. Las actividades pueden ser de uno de los siguientes tipos:
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es)
-* [Segmentación de experiencias (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=es)
-* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=es)
-* [Personalización automatizada](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=es)
-* [Prueba multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=es)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [Segmentación de experiencias (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [Prueba multivariable (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## Actualizaciones por lotes
 

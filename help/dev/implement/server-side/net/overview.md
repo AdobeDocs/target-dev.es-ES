@@ -1,16 +1,19 @@
 ---
-title: Introducción al SDK de  [!DNL Adobe Target] .NET
-description: Obtenga información sobre cómo  [!DNL Adobe Target] los clientes pueden instalar, inicializar y utilizar .NET SDK.
+title: Introducción a  [!DNL Adobe Target] .NET SDK
+description: Descubra cómo  [!DNL Adobe Target] los clientes pueden instalar, inicializar y utilizar .NET SDK.
 feature: APIs/SDKs
 exl-id: 618e9320-f001-4ab4-befc-c7b12bbe7b5f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/FWbHAWmYHTVTKdfk0mRek1U6ymrmZ7ioB7plWmnndSk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 3%
+source-wordcount: 140
+ht-degree: 12%
 
 ---
 
-# Información general de .NET SDK
+# Información general sobre .NET SDK
 
 Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] pueden instalar, inicializar y utilizar .NET SDK.
 
@@ -21,11 +24,11 @@ Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] puede
 
 ## Primeros pasos
 
-Para ver cómo puede empezar a usar .NET SDK, vaya a la [[!DNL Target] Guía de introducción al SDK](../sdk-guides/getting-started/getting-started.md).
+Para ver cómo puede empezar a usar .NET SDK, vaya a la [[!DNL Target] Guía de introducción de SDK](../sdk-guides/getting-started/getting-started.md).
 
 ## Aplicación de ejemplo
 
-Prueba del SDK the.NET:
+Prueba de unidad the.NET SDK:
 
 * Al visitar el sitio de demostración [[!DNL Adobe Target] [!UICONTROL on-device decisioning]](https://github.com/adobe/on-device-decisioning-demo-site)
 * En una [aplicación de ejemplo](../sdk-guides/sample-apps/sample-apps.md).
@@ -36,5 +39,5 @@ Para leer y comprender la documentación de referencia de .NET SDK, comience en 
 
 ## Archivos de Source
 
-* [.NET SDK Github Repo](https://github.com/adobe/target-dotnet-sdk)
+* [Repositorio de .NET SDK en Github](https://github.com/adobe/target-dotnet-sdk)
 * [Versiones](https://github.com/adobe/target-dotnet-sdk/releases)

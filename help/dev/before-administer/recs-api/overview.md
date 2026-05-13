@@ -1,15 +1,19 @@
 ---
 title: ¿Qué es la API de Adobe Recommendations?
-description: Esta guía muestra a los desarrolladores la práctica de usar las API de Recommendations de Adobe Target para configurar y administrar catálogos de Recommendations y criterios personalizados, así como el uso de la API de envío para recuperar contenido de Recommendations.
+description: Esta guía muestra a los desarrolladores la práctica de usar las API de Recommendations de Adobe Target para configurar y administrar los catálogos de Recommendations y los criterios personalizados, así como el uso de la API de envío para recuperar contenido de Recommendations.
 feature: APIs/SDKs, Recommendations, Administration & Configuration, Overview
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/-bWsxWNZK7LXp0VvKZmsZc68jXcit57v7Wki9hR3wH4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 2%
+source-wordcount: 343
+ht-degree: 3%
 
 ---
 
@@ -20,25 +24,25 @@ Las API relevantes para Recommendations incluyen [API de administrador](../../be
 * Administre su catálogo de productos o contenido recomendables
 * Administrar los algoritmos y las actividades de Recommendations
 
-Con la [API de envío](../../implement/delivery-api/overview.md) de Target con Recommendations, también puede:
+Si usa la [API de envío](../../implement/delivery-api/overview.md) de Target con Recommendations, también puede:
 
 * Recupere recomendaciones en objetos JSON, HTML o XML para que se puedan mostrar en la web, dispositivos móviles, correo electrónico, Internet de las cosas (IOT) y otros canales.
 
 ## Descripción
 
-Esta guía, relativa a las API de Recommendations, muestra a los desarrolladores la práctica práctica de utilizar las API de Recommendations para configurar y administrar catálogos de Recommendations y criterios personalizados, así como el uso de la API de envío para recuperar contenido de Recommendations. Al final, usted será capaz de:
+Esta guía, relativa a las API de Recommendations, guía a los desarrolladores a través de la práctica con las API de Recommendations para configurar y administrar catálogos de Recommendations y criterios personalizados, así como el uso de la API de envío para recuperar contenido de Recommendations. Al final, usted será capaz de:
 
 * Configuración y administración de entidades mediante la API de Recommendations
 * Configuración y administración de criterios personalizados con la API de Recommendations
 * Obtenga información sobre cómo utilizar Recommendations con la API de envío para utilizar los resultados de Recommendations en dispositivos que no son de HTML
 
-## Audiencia
+## Público
 
 Esta guía está dirigida a desarrolladores que utilicen las API de Target o las API de Recommendations por primera vez.
 
-## Requisitos previos   {#prerequisites}
+## Requisitos previos {#prerequisites}
 
-Las API de administrador de Target requieren [configuración de autenticación de Adobe](../configure-authentication.md). Asegúrese de tener esto configurado antes de utilizar la API de Recommendations.
+Las API de administración de Target requieren [configuración de autenticación de Adobe](../configure-authentication.md). Asegúrese de tener esto configurado antes de utilizar la API de Recommendations.
 
 ## Recursos
 

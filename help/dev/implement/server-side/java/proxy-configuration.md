@@ -1,12 +1,15 @@
 ---
-title: Implementar la configuración proxy en el SDK de Java  [!DNL Adobe Target] Java
-description: Obtenga información sobre cómo configurar la configuración proxy de TargetClient en el SDK de Java  [!DNL Adobe Target] TargetClient.
+title: Implementar la configuración proxy en  [!DNL Adobe Target] Java SDK
+description: Aprenda a configurar la configuración proxy de TargetClient en  [!DNL Adobe Target] Java SDK.
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
-source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
+TQID: https://experienceleague.adobe.com/Vo8KrM-3AGIvoO-E-iAQcAPqzXE24BM30LX7ji5E2Nk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 1%
+source-wordcount: 170
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ ht-degree: 1%
 
 ## Proxy básico
 
-Si la aplicación que ejecuta el SDK requiere un proxy para acceder a Internet, `TargetClient` deberá configurarse con un proxy de la siguiente manera.
+Si la aplicación que ejecuta SDK requiere un proxy para acceder a Internet, `TargetClient` deberá configurarse con una configuración proxy de la siguiente manera.
 
 ### Configuración proxy básica
 

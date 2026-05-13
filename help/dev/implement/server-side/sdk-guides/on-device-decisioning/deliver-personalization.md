@@ -3,10 +3,15 @@ title: Ofrezca personalización mediante los SDK para Adobe Target
 description: Obtenga información sobre cómo entregar personalización mediante [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: bac64c78-0d3a-40d7-ae2b-afa0f1b8dc4f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/IufE4ByFgQ8WwHZ5YVHbbyvN6jBBNGCK4IC98m9zGsc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: 525
+ht-degree: 1%
 
 ---
 
@@ -26,7 +31,7 @@ ht-degree: 0%
 
 Supongamos que es una empresa de turismo. Desea ofrecer una oferta personalizada del 25% de descuento en determinados paquetes de viaje. Para que la oferta resuene entre sus usuarios, decide mostrar un punto de referencia de la ciudad de destino. También debe asegurarse de que la entrega de sus ofertas personalizadas se ejecute con una latencia cercana a cero para que no afecte negativamente a las experiencias de los usuarios y distorsione los resultados.
 
-## 1. Habilite [!UICONTROL on-device decisioning] para su organización
+## &#x200B;1. Habilitar [!UICONTROL on-device decisioning] para su organización
 
 1. Al habilitar la toma de decisiones en el dispositivo, se garantiza que una actividad A/B se ejecute con una latencia cercana a cero. Para habilitar esta característica, vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** en [!DNL Adobe Target] y habilite la opción **[!UICONTROL On-Device Decisioning]**.
 
@@ -34,11 +39,11 @@ Supongamos que es una empresa de turismo. Desea ofrecer una oferta personalizada
 
    >[!NOTE]
    >
-   >Debe tener el rol de administrador o aprobador [user](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para habilitar o deshabilitar la opción [!UICONTROL On-Device Decisioning].
+   >Debe tener el rol de administrador o aprobador [user](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar la opción [!UICONTROL On-Device Decisioning].
 
    Después de habilitar la opción **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] comienza a generar *artefactos de regla* para su cliente.
 
-## 2. Crear una actividad [!UICONTROL Experience Targeting] (XT)
+## &#x200B;2. Crear una actividad [!UICONTROL Experience Targeting] (XT)
 
 1. En [!DNL Adobe Target], vaya a la página **[!UICONTROL Activities]** y, a continuación, seleccione **[!UICONTROL Create Activity]** > **[!UICONTROL Experience Targeting]**.
 
@@ -48,7 +53,7 @@ Supongamos que es una empresa de turismo. Desea ofrecer una oferta personalizada
 
    ![imagen alt](assets/asset-xt-next.png)
 
-## 3. Defina una experiencia personalizada por audiencia
+## &#x200B;3. Definir una experiencia personalizada por audiencia
 
 1. En el paso **[!UICONTROL Experiences]** de creación de la actividad, haga clic en **[!UICONTROL Change Audience]** para crear una audiencia de los visitantes que deseen viajar a San Francisco, California.
 
@@ -66,23 +71,23 @@ Supongamos que es una empresa de turismo. Desea ofrecer una oferta personalizada
 
    ![imagen alt](assets/asset-content-ny.png)
 
-## 4. Verificar la experiencia personalizada por audiencia
+## &#x200B;4. Verificar experiencia personalizada por audiencia
 
 En el paso **[!UICONTROL Targeting]**, compruebe que ha configurado la experiencia personalizada que desea por audiencia.
 
 ![imagen alt](assets/asset-verify-sf-ny.png)
 
-## 5. Configurar informes
+## &#x200B;5. Configuración de informes
 
 En el paso **[!UICONTROL Goals & Settings]**, elija **[!UICONTROL Adobe Target]** como **[!UICONTROL Reporting Source]** para ver los resultados de la actividad en la interfaz de usuario de [!DNL Adobe Target] o elija **[!UICONTROL Adobe Analytics]** para verlos en la interfaz de usuario de Adobe Analytics.
 
 ![imagen alt](assets/asset-reporting-sf-ny.png)
 
-## 6. Agregar métricas para el seguimiento de KPI
+## &#x200B;6. Agregar métricas para KPI de seguimiento
 
 Elija un(a) **[!UICONTROL Goal Metric]** para medir el éxito de la actividad. En este ejemplo, una conversión correcta se basa en si el usuario hace clic en la oferta de destino personalizada.
 
-## 7. Implementar las ofertas personalizadas en la aplicación
+## &#x200B;7. Implemente sus ofertas personalizadas en la aplicación
 
 >[!BEGINTABS]
 
@@ -146,7 +151,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-## 8. Implementar código para rastrear eventos de conversión
+## &#x200B;8. Implementación de código para hacer un seguimiento de eventos de conversión
 
 >[!BEGINTABS]
 
@@ -219,6 +224,6 @@ notificationDeliveryService.sendNotification(request);
 
 >[!ENDTABS]
 
-## 9. Active la actividad de segmentación de experiencias (XT)
+## &#x200B;9. Active su actividad de segmentación de experiencias (XT)
 
 ![imagen alt](assets/asset-xt-activate.png)

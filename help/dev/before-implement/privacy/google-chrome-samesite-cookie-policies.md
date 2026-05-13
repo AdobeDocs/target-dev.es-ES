@@ -4,10 +4,16 @@ description: Descubra cómo [!DNL Adobe Target] gestiona el estándar SameSite I
 title: ¿Cómo administra  [!DNL Target]  las políticas de cookies de SameSite de Google?
 feature: Privacy & Security
 exl-id: 58a83def-9625-4d44-914f-203509c6c434
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/vidrxxFMqtYLAHQEiqbpEpgcab6OBie-oEhKoWljHwo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 68%
+source-wordcount: 2019
+ht-degree: 63%
 
 ---
 
@@ -17,7 +23,7 @@ Google empezó a imponer nuevas políticas de cookies de forma predeterminada a 
 
 A partir de Chrome 80, los desarrolladores web deben especificar explícitamente qué cookies pueden funcionar en distintos sitios web. Este es el primero de muchos anuncios que Google planea hacer para mejorar la privacidad y seguridad en la web.
 
-Dado el hecho de que Facebook ha estado en el primer puesto con respecto a la privacidad y la seguridad, otras empresas importantes como Apple, y ahora Google, han sido rápidos a la hora de crear nuevas identidades como defensores de la privacidad y la seguridad. Apple lideró a estas empresas anunciando primero cambios en sus políticas de cookies a principios de este año a través de ITP 2.1 y recientemente, ITP 2.2. En ITP 2.1, Apple bloquea completamente las cookies de terceros y mantiene las cookies creadas en el explorador durante solo siete días. En ITP 2.2, las cookies se conservan solo durante un día. El anuncio de Google no es ni de lejos tan agresivo como el de Apple, pero es el primer paso hacia el mismo objetivo final. Para obtener más información sobre las políticas de Apple, consulte [Prevención inteligente del seguimiento de Apple (ITP) 2.x](/help/dev/before-implement/privacy/apple-itp-2x.md).
+Dado el hecho de que Facebook ha estado en el primer puesto con respecto a la privacidad y la seguridad, otras empresas importantes como Apple, y ahora Google, han sido rápidos a la hora de crear nuevas identidades como defensores de la privacidad y la seguridad. Apple lideró a estas empresas anunciando primero cambios en sus políticas de cookies a principios de este año a través de ITP 2.1 y, recientemente, ITP 2.2. En ITP 2.1, Apple bloquea completamente las cookies de terceros y mantiene las cookies creadas en el explorador durante solo siete días. En ITP 2.2, las cookies se conservan solo durante un día. El anuncio de Google no es ni de lejos tan agresivo como el de Apple, pero es el primer paso hacia el mismo objetivo final. Para obtener más información sobre las políticas de Apple, consulte [Prevención inteligente del seguimiento de Apple (ITP) 2.x](/help/dev/before-implement/privacy/apple-itp-2x.md).
 
 ## ¿Qué son las cookies y cómo se utilizan?
 
@@ -80,7 +86,7 @@ Sin embargo, cuando decide utilizar el seguimiento entre dominios para usar [!DN
 
 Para comprender lo que debe hacer para que [!DNL Target] siga funcionando para usuarios de Google Chrome 80 (y posteriores), consulte la siguiente tabla, en la que verá las siguientes columnas:
 
-* **Biblioteca JavaScript de Target**: Si utiliza at.js 1.*x* o at.js 2.*x* en sus sitios.
+* **Biblioteca JavaScript de Target**: Si usa at.js 1.*x* o at.js 2.*x* en sus sitios.
 * **SameSite con cookies predeterminadas = Habilitado**: Si los usuarios tienen “SameSite con cookies predeterminadas” habilitado, ¿cómo le afectará a usted? ¿Hay algo que necesite hacer para que [!DNL Target] siga funcionando?
 * **Las cookies sin SameSite deben ser seguras = Habilitado**: Si los usuarios tienen “Cookies sin SameSite debe ser seguras” habilitado, ¿cómo le afectará a usted? ¿Hay algo que necesite hacer para que [!DNL Target] siga funcionando?
 
@@ -88,7 +94,7 @@ Para comprender lo que debe hacer para que [!DNL Target] siga funcionando para u
 | --- | --- | --- |
 | at.js 1.*x* con cookie de origen. | Sin impacto. | Sin impacto si no usa el seguimiento entre dominios. |
 | at.js 1.*x* con seguimiento entre dominios habilitado. | Sin impacto. | Debe habilitar el protocolo HTTPS para su sitio.<br />Target usa una cookie de terceros para rastrear usuarios y Google requiere que las cookies de terceros tengan `SameSite = None` y el indicador Secure. El indicador Secure requiere que sus sitios utilicen el protocolo HTTPS. |
-| at.js 2.*x*  | Sin impacto. | Sin impacto. |
+| at.js 2.*x* | Sin impacto. | Sin impacto. |
 
 ## ¿Qué debe hacer [!DNL Target]?
 
@@ -98,11 +104,11 @@ Entonces, ¿qué hemos de hacer en nuestra plataforma para ayudarle a cumplir co
 | --- | --- | --- |
 | at.js 1.*x* con cookie de origen. | Sin impacto. | Sin impacto si no usa el seguimiento entre dominios. |
 | at.js 1.*x* con seguimiento entre dominios habilitado. | Sin impacto. | at.js 1.*x* con seguimiento entre dominios habilitado. |
-| at.js 2.*x*  | Sin impacto. | Sin impacto. |
+| at.js 2.*x* | Sin impacto. | Sin impacto. |
 
 ## ¿Cuál es el impacto si no pasa a utilizar el protocolo HTTPS?
 
-El único caso de uso que le afectará es si utiliza la función de seguimiento entre dominios en [!DNL Target] a través de at.js 1.*x*. Sin pasar a HTTPS, que es un requisito de Google, verá un pico en los visitantes únicos en sus dominios, ya que Google eliminará la cookie de terceros que usamos. Además, debido a que se eliminará la cookie de terceros, [!DNL Target] no podrá proporcionar una experiencia coherente y personalizada para ese usuario a medida que este navega de un dominio a otro. La cookie de terceros se utiliza principalmente para identificar a un único usuario que navega entre sus dominios.
+El único caso de uso que le afectará es si está usando la característica de seguimiento entre dominios en [!DNL Target] hasta at.js 1.*x*. Sin pasar a HTTPS, que es un requisito de Google, verá un pico en los visitantes únicos en sus dominios, ya que Google eliminará la cookie de terceros que usamos. Además, debido a que se eliminará la cookie de terceros, [!DNL Target] no podrá proporcionar una experiencia coherente y personalizada para ese usuario a medida que este navega de un dominio a otro. La cookie de terceros se utiliza principalmente para identificar a un único usuario que navega entre sus dominios.
 
 ## Conclusión
 

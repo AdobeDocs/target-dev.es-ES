@@ -1,23 +1,29 @@
 ---
 keywords: adobe.target.triggerView, triggerView, triggerview, vista de déclencheur, at.js, funciones, función, viewName, viewname, nombre de vista, adobe.target.triggerView1
-description: Utilice la función adobe.target.triggerView() para la biblioteca JavaScript SPA  [!DNL Adobe Target] at.js para su uso en aplicaciones de una sola página (). (at.js 2.x)
+description: Utilice la función adobe.target.triggerView() para la biblioteca JavaScript  [!DNL Adobe Target] at.js para su uso en aplicaciones de una sola página (SPA). (at.js 2.x)
 title: ¿Cómo utilizo la función adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
-source-git-commit: fe4e607173c760f782035a10f52936d96e9db300
+TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 21%
+source-wordcount: 423
+ht-degree: 20%
 
 ---
 
 # adobe.target.triggerView (viewName, options): at.js 2.x
 
-Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. SPA `adobe.target.triggerView()` debe implementarse para aplicaciones de una sola página () a fin de usar el [!UICONTROL Visual Experience Composer] (VEC) para crear actividades [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT). SPA Si `[!UICONTROL adobe.target.triggerView()]` no está implementado en el sitio, el VEC no se puede usar para la creación de informes de VEC (VECoVECoVECoVECoVECoVECo. Para obtener más información, consulte [Implementación de aplicación de una sola página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. `adobe.target.triggerView()` debe implementarse para aplicaciones de una sola página (SPA) a fin de usar el [!UICONTROL Visual Experience Composer] (VEC) para crear actividades [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT). Si `[!UICONTROL adobe.target.triggerView()]` no está implementado en el sitio, el VEC no se puede usar para SPA. Para obtener más información, consulte [Implementación de aplicación de una sola página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 >[!NOTE]
 >
->Esta función se introdujo en at.js 2.*x*. Esta función no está disponible para la versión 1 de at.js.*x*.
+>Esta función se introdujo en at.js 2.*x*. Esta función no está disponible para la versión 1.*x* de at.js.
 
 | Parámetro | Tipo | ¿Requerido? | Descripción |
 | --- | --- | --- | --- |
@@ -72,7 +78,7 @@ adobe.target.getOffers({
 
 ## Ejemplo: Compatibilidad óptima para `triggerView()` con [!UICONTROL Adobe Visual Editing Helper extension]
 
-Tenga en cuenta lo siguiente al usar la extensión [Ayuda de edición visual de Adobe](https://experienceleague.adobe.com/es/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
+Tenga en cuenta lo siguiente al usar la extensión [Ayuda de edición visual de Adobe](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
 
 Debido a las nuevas directivas de manifiesto V3 de [!DNL Googl]e para las extensiones [!DNL Chrome], [!UICONTROL Visual Editing Helper extension] debe esperar el evento `DOMContentLoaded` antes de cargar las bibliotecas [!DNL Target] en el VEC. Este retraso podría hacer que las páginas web activen la llamada a `triggerView()` antes de que las bibliotecas de creación estén listas, lo que ocasionaría que la vista no se rellene al cargar.
 

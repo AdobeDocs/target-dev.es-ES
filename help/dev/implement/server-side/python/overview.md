@@ -1,18 +1,21 @@
 ---
-title: Introducción al SDK de  [!DNL Adobe Target] Python
-description: Descubra cómo  [!DNL Adobe Target] los clientes de pueden instalar, inicializar y utilizar el SDK de Python de.
+title: Empiece con  [!DNL Adobe Target] Python SDK
+description: Aprenda cómo  [!DNL Adobe Target] los clientes pueden instalar, inicializar y utilizar Python SDK.
 feature: APIs/SDKs
 exl-id: 2ccd1b4e-d9af-4547-81fe-c70e6f00df3d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/yqURWV6x9TZblAgpXl-bay9ZReykHwCvUDIr0A45bQ0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 3%
+source-wordcount: 129
+ht-degree: 15%
 
 ---
 
-# Información general del SDK de Python
+# Información general sobre Python SDK
 
-Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] pueden instalar, inicializar y utilizar el SDK de Python.
+Esta guía de referencia muestra cómo los clientes de [!DNL Adobe Target] pueden instalar, inicializar y utilizar Python SDK.
 
 ## Requisitos previos
 
@@ -20,20 +23,20 @@ Todas las versiones de Python que se mantienen actualmente son compatibles. Cons
 
 ## Primeros pasos
 
-Para ver cómo puede empezar a usar el SDK de Python, vaya a la [[!DNL Target] Guía de introducción al SDK](../sdk-guides/getting-started/getting-started.md).
+Para ver cómo puede empezar a usar Python SDK, vaya a la [[!DNL Target] Guía de introducción de SDK](../sdk-guides/getting-started/getting-started.md).
 
 ## Aplicación de ejemplo
 
-Prueba del SDK de Python:
+Prueba de conducción con Python SDK:
 
 * Al visitar el sitio de demostración [[!DNL Adobe Target] [!UICONTROL on-device decisioning]](https://github.com/adobe/on-device-decisioning-demo-site)
 * En una [aplicación de ejemplo](../sdk-guides/sample-apps/sample-apps.md).
 
 ## Referencia
 
-Para leer y comprender la documentación de referencia del SDK de Python, comience en [Instalar SDK](install-sdk.md).
+Para leer y comprender la documentación de referencia de Python SDK, comience en [Instalar SDK](install-sdk.md).
 
 ## Archivos de Source
 
-* [Repositorio de Github del SDK de Python](https://github.com/adobe/target-python-sdk)
-* [Registro de cambios](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md)
+* [Python SDK Github Repo](https://github.com/adobe/target-python-sdk)
+* [Changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md)

@@ -5,10 +5,16 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 4%
+source-wordcount: 1060
+ht-degree: 3%
 
 ---
 
@@ -18,7 +24,7 @@ Siga los pasos del diagrama de *Experiencias de procesamiento* para asegurarse d
 
 >[!NOTE]
 >
->Si ha habilitado la solicitud de carga de página automática durante el paso [Configurar solicitud de carga de página automática](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) en *Inicializar SDK* , puede omitir esta actividad a menos que desee llamar al SDK para Adobe Target para procesar experiencias adicionales mediante una solicitud de ubicación regional.
+>Si habilitó la solicitud de carga de página automática durante el paso [Configurar solicitud de carga de página automática](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) en *Inicializar SDK* , puede omitir esta actividad a menos que desee llamar al SDK de Adobe Target para procesar experiencias adicionales mediante una solicitud de ubicación regional.
 
 >[!TIP]
 >
@@ -26,7 +32,7 @@ Siga los pasos del diagrama de *Experiencias de procesamiento* para asegurarse d
 
 ## Representar diagrama de experiencias {#diagram}
 
-La administración automática de parpadeos predeterminada disponible con at.js solo tiene sentido cuando tiene [!UICONTROL Automatic Page Load Request] habilitado. Esta opción oculta todo el cuerpo del HTML al recuperar las experiencias de [!DNL Target]. En este caso, es su responsabilidad gestionar el parpadeo. Busque patrones de implementación disponibles para la gestión de parpadeos a modo de guía.
+La administración automática de parpadeos predeterminada disponible con at.js solo tiene sentido cuando tiene [!UICONTROL Automatic Page Load Request] habilitado. Esta opción oculta todo el cuerpo de HTML al recuperar las experiencias de [!DNL Target]. En este caso, es su responsabilidad gestionar el parpadeo. Busque patrones de implementación disponibles para la gestión de parpadeos a modo de guía.
 
 >[!NOTE]
 >
@@ -58,8 +64,8 @@ Agregue elementos promocionados y controle su ubicación en el diseño de recome
 **Opciones disponibles**
 
 * Promocionar por ID
-* [Promocionar por colección](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=es){target=_blank}
-* [Promocionar por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=es){target=_blank}
+* [Promocionar por colección](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [Promocionar por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Se requieren parámetros de entidad**
 
@@ -67,7 +73,7 @@ Agregue elementos promocionados y controle su ubicación en el diseño de recome
 
 **Lecturas**
 
-* [Agregar promociones](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=es){target=_blank}
+* [Agregar promociones](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -91,7 +97,7 @@ Haga recomendaciones basadas en el contenido del carro de compras del usuario.
 
 **Lecturas**
 
-* [Basado en el carro de compras](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en el carro](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -120,7 +126,7 @@ Haga recomendaciones basadas en la popularidad general de un elemento en el siti
 
 **Lecturas**
 
-* [Basado en popularidad](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en popularidad](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -146,7 +152,7 @@ Haga recomendaciones basadas en la búsqueda de artículos similares a los que e
 
 **Lecturas**
 
-* [Basado en elemento](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en elementos](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -169,7 +175,7 @@ Haga recomendaciones basadas en el comportamiento del usuario.
 
 **Lecturas**
 
-* [Basado en usuario](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en el usuario](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -191,7 +197,7 @@ Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 **Lecturas**
 
-* [Criterios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Criterios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -203,7 +209,7 @@ Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 **Lecturas**
 
-* [Usar reglas de inclusión dinámicas y estáticas](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=es){target=_blank}
+* [Uso de reglas de inclusión dinámicas y estáticas](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -217,7 +223,7 @@ Pase los ID de entidad de las entidades que desee excluir de las recomendaciones
 
 **Lecturas**
 
-* [¿Puedo excluir dinámicamente una entidad?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=es#exclude){target=_blank}
+* [¿Puedo excluir dinámicamente una entidad?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -229,9 +235,9 @@ Pase los ID de entidad de las entidades que desee excluir de las recomendaciones
 
 **Lecturas**
 
-* [Atributos de entidad](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=es){target=_blank}
+* [Atributos de entidad](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-También puede realizar este paso creando [fuentes de productos](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=es){target=_blank} con la interfaz de usuario de [!DNL Target] para actualizar el catálogo de productos de [!DNL Recommendations].
+También puede realizar este paso creando [fuentes de productos](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} con la interfaz de usuario de [!DNL Target] para actualizar el catálogo de productos de [!DNL Recommendations].
 
 +++
 
@@ -245,7 +251,7 @@ Proporcione los atributos de perfil que se utilizan como claves para las reglas 
 
 **Lecturas**
 
-* [Atributos de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=es){target=_blank}
+* [Atributos de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -253,7 +259,7 @@ Proporcione los atributos de perfil que se utilizan como claves para las reglas 
 
 ## 3.11: Activar la solicitud de carga de página {#fire}
 
-Este paso almacena en déclencheur una llamada a [!DNL Delivery API] con `execute` > `pageLoad` carga útil en la solicitud. El método `getOffers()` recupera la experiencia y `applyOffers()` la procesa en la página. La solicitud `pageLoad` es necesaria para procesar experiencias creadas en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es){target=_blank} (VEC).
+Este paso almacena en déclencheur una llamada a [!DNL Delivery API] con `execute` > `pageLoad` carga útil en la solicitud. El método `getOffers()` recupera la experiencia y `applyOffers()` la procesa en la página. La solicitud `pageLoad` es necesaria para procesar experiencias creadas en el [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 +++Ver detalles
 

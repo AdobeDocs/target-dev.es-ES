@@ -5,11 +5,25 @@ title: ¿Cómo funciona la toma de decisiones en el dispositivo con la bibliotec
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
 TQID: https://experienceleague.adobe.com/5cYQQDwAwUbKanR3Wbt7ckKnGwHvz3arqn0zjdz6SBc
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 3621
@@ -78,7 +92,7 @@ La siguiente lista corresponde a los números del diagrama:
 
 | Paso | Descripción |
 | --- | --- |
-| 1 | El ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](¿https://experienceleague.adobe.com/docs/id-service/using/home.html?). |
+| 1 | El ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud] (¿https://experienceleague.adobe.com/docs/id-service/using/home.html?). |
 | 2 | La biblioteca at.js carga sincrónicamente y oculta el cuerpo del documento.<br />   La biblioteca at.js también se puede cargar de forma asíncrona con un fragmento de ocultamiento previo opcional implementado en la página. |
 | 3 | La biblioteca at.js oculta el cuerpo para evitar parpadeos. |
 | 4 | Se realiza una solicitud de carga de página que incluye todos los parámetros configurados, como (ECID, ID de cliente, parámetros personalizados, perfil de usuario, etc.) |
@@ -340,6 +354,6 @@ Puede filtrar todas las actividades que cumplen los requisitos de [!UICONTROL on
 
    La primera generación de artefactos de reglas JSON puede tardar hasta 10 minutos.
 
-1. Cree y active un tipo de actividad [ compatible con [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) y verifique que cumpla los requisitos de [!UICONTROL on-device decisioning].
+1. Cree y active un tipo de actividad [&#x200B; compatible con [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) y verifique que cumpla los requisitos de [!UICONTROL on-device decisioning].
 1. Establezca **[!UICONTROL Decisioning Method]** en **[!UICONTROL "Hybrid"]** o **[!UICONTROL "On-device only"]** a través de la interfaz de usuario de la configuración de at.js.
 1. Descargue e implemente at.js 2.5.0+ en sus páginas.

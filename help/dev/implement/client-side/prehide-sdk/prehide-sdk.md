@@ -4,7 +4,7 @@ description: Aprenda a integrar  [!DNL Adobe Target] Preocultar SDK para elimina
 title: Preocultar guía de integración de SDK
 feature: Implementation
 hide: true
-source-git-commit: 2a992af7a1a8bbc6dba4ce23263d7af7db773333
+source-git-commit: 81818370d32ee8c3f3538e5d8d942f66c13e6a13
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 0%

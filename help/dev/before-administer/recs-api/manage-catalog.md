@@ -6,14 +6,21 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: 905
 ht-degree: 0%
 
 ---
 
-# Administrar el catálogo Recommendations mediante API
+# Administrar el catálogo de Recommendations mediante las API
 
 A la vez que se asegura de que cumple con los [requisitos para usar la API de Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites), aprendió a [generar un token de acceso](/help/dev/before-administer/configure-authentication.md) mediante el flujo de autenticación JWT para usar las API de administración de [!DNL Adobe Target] en [Adobe Developer Console](https://developer.adobe.com/console/home).
 
@@ -25,11 +32,11 @@ Ahora puede usar las [API de Recommendations](https://developer.adobe.com/target
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-Antes de continuar, obtén la [colección Postman de Recommendations](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
+Antes de continuar, obtenga la [colección Postman de Recommendations](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
 
 ## Creación y actualización de elementos con la API Guardar entidades
 
-Para rellenar la base de datos de productos de Recommendations con la API en lugar de con una fuente de productos CSV o para que Target active solicitudes en páginas de productos, use [Guardar la API de entidades](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). Esta solicitud agrega o actualiza un elemento en un solo entorno de Target. La sintaxis es:
+Para rellenar la base de datos de productos de Recommendations usando la API en lugar de una fuente de productos CSV o si las solicitudes de Target se activan en páginas de productos, use [Guardar la API de entidades](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). Esta solicitud agrega o actualiza un elemento en un solo entorno de Target. La sintaxis es:
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities

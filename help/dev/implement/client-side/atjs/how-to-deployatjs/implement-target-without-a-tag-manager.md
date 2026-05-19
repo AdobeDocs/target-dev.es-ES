@@ -4,10 +4,27 @@ description: Obtenga información sobre cómo especificar la configuración (det
 title: ¿Puedo implementar [!DNL Target]  sin un Administrador de etiquetas?
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 35%
+source-wordcount: 1739
+ht-degree: 33%
 
 ---
 
@@ -109,7 +126,7 @@ Para obtener más información, consulte [Privacidad](/help/dev/before-implement
 
 >[!NOTE]
 >
->La opción Compatibilidad con navegadores anteriores estaba disponible en la versión 0.9.3 (y anteriores) de at.js. Esta opción se ha eliminado de la versión 0.9.4 de at.js. Para saber cuáles con los exploradores compatibles con at.js, consulte [Exploradores compatibles](/help/dev/before-implement/supported-browsers.md)<p>Los navegadores anteriores son navegadores más viejos que no admiten completamente CORS (Uso compartido de recursos de origen cruzado). Algunos de estos navegadores son: Internet Explorer antes de la versión 11 y Safari versión 6 y anteriores. Si se deshabilitó la compatibilidad con exploradores anteriores, [!DNL Target] no entregó contenido ni contó visitantes en los informes de estos exploradores. Si esta opción estaba habilitada, se recomienda realizar el control de calidad en los exploradores más antiguos para garantizar una buena experiencia del cliente.
+>La opción Compatibilidad con navegadores anteriores estaba disponible en la versión 0.9.3 (y anteriores) de at.js. Esta opción se ha eliminado en la versión 0.9.4 de at.js. Para obtener una lista de los exploradores compatibles con at.js, consulte [Exploradores compatibles](/help/dev/before-implement/supported-browsers.md).<p>Los navegadores anteriores son navegadores más viejos que no admiten completamente CORS (Uso compartido de recursos de origen cruzado). Algunos de estos navegadores son: Internet Explorer antes de la versión 11 y Safari versión 6 y anteriores. Si se deshabilitó la compatibilidad con exploradores anteriores, [!DNL Target] no entregó contenido ni contó visitantes en los informes de estos exploradores. Si esta opción estaba habilitada, se recomienda realizar el control de calidad en los exploradores más antiguos para garantizar una buena experiencia del cliente.
 
 ## Descargar at.js
 
@@ -232,7 +249,7 @@ Una implementación típica de [!DNL Target] que no usa un administrador de etiq
 
 Tenga en cuenta las siguientes notas importantes:
 
-* Debe usarse el tipo de documento HTML5 (por ejemplo, `<!doctype html>`). Los tipos de documento no admitidos o anteriores podrían ocasionar que [!DNL Target] no pueda realizar una solicitud.
+* Se debe utilizar el tipo de documento HTML5 (por ejemplo, `<!doctype html>`). Los tipos de documento no admitidos o anteriores podrían ocasionar que [!DNL Target] no pueda realizar una solicitud.
 * Conexión previa y Recuperación previa son opciones que pueden ayudar a que sus páginas web se carguen más rápido. Si usa estas configuraciones, asegúrese de reemplazar `<client code>` por su propio código de cliente, que puede obtener de la página **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
 * Si tiene una capa de datos es óptimo definir la mayor cantidad posible en el `<head>` de sus páginas antes de que se cargue at.js. Esta ubicación proporciona la máxima capacidad para utilizar esta información en [!DNL Target] para la personalización.
 * Las funciones especiales de [!DNL Target], como `targetPageParams()`, `targetPageParamsAll()`, proveedores de datos y `targetGlobalSettings()` deben definirse después de la capa de datos y antes de que se cargue at.js. Alternativamente, estas funciones podrían guardarse en la sección Encabezado de biblioteca de la página Editar configuración de at.js y guardarse como parte de la propia biblioteca de at.js. Para obtener más información sobre estas funciones, consulte [funciones de at.js](/help/dev/implement/client-side/atjs/atjs-functions/atjs-functions.md).

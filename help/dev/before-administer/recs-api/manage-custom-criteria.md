@@ -1,14 +1,21 @@
 ---
 title: Cómo administrar los criterios personalizados
-description: Pasos necesarios para utilizar las API de Adobe Target para administrar, crear, enumerar, editar, obtener y eliminar criterios de Recommendations de Adobe Target.
+description: Pasos necesarios para utilizar las API de Adobe Target para administrar, crear, enumerar, editar, obtener y eliminar los criterios de Adobe Target Recommendations.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: 930
 ht-degree: 0%
 
 ---
@@ -107,13 +114,13 @@ Si utiliza el identificador de criterios mencionado anteriormente, elimine los c
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
 1. Compruebe que los criterios se han eliminado utilizando Obtener criterios personalizados.
-   ![DeleteCustomCriteria2](assets/DeleteCustomCriteria2.png)
+   ![EliminarCriteriosPersonalizados2](assets/DeleteCustomCriteria2.png)
 En este caso, el error 404 esperado indica que no se pueden encontrar los criterios eliminados.
 
 >[!NOTE]
 >
 >Como recordatorio, los criterios no se eliminarán de la IU de Target aunque se hayan eliminado, ya que se crearon con la API Crear criterio personalizado.
 
-¡Felicidades! Ahora puede crear, mostrar en lista, editar, eliminar y obtener detalles sobre criterios personalizados con la API de Recommendations. En la siguiente sección, utilice la API de envío de Target para recuperar recomendaciones.
+¡Felicidades! Ahora puede crear, mostrar en lista, editar, eliminar y obtener detalles sobre criterios personalizados mediante la API de Recommendations. En la siguiente sección, utilice la API de envío de Target para recuperar recomendaciones.
 
-&lt;!— [Siguiente: &quot;Recuperar Recommendations con la API de envío del lado del servidor&quot; >](fetch-recs-server-side-delivery-api.md) —>
+&lt;!— [Siguiente: &quot;Recuperación de recomendaciones con la API de envío del lado del servidor&quot; >](fetch-recs-server-side-delivery-api.md) —>

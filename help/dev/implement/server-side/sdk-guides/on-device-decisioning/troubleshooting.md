@@ -3,9 +3,20 @@ title: Resolución de problemas de toma de decisiones en el dispositivo
 description: Obtenga información sobre cómo solucionar problemas de [!UICONTROL on-device decisioning]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
+TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: 1158
 ht-degree: 0%
 
 ---
@@ -20,15 +31,15 @@ ht-degree: 0%
 1. Asegúrese de que los seguimientos de [!DNL Target] estén habilitados
 1. Compruebe que el [!UICONTROL on-device decisioning] *artefacto de regla* se haya recuperado y almacenado en caché según el intervalo de sondeo definido.
 1. Valide la entrega de contenido mediante el artefacto de reglas en caché creando una actividad de prueba [!UICONTROL on-device decisioning] a través del compositor de experiencias basadas en formularios.
-1. Inspect envía errores de notificación
+1. Inspeccionar errores de notificación de envío
 
-## 1. Asegúrese de que el registrador esté configurado
+## &#x200B;1. Asegúrese de que el registrador esté configurado
 
-Al inicializar el SDK, asegúrese de habilitar el registro.
+Al inicializar SDK, asegúrese de habilitar el registro.
 
 **Nodo.js**
 
-Para el SDK de Node.js, se debe proporcionar un objeto `logger`.
+Se debe proporcionar un objeto `logger` para Node.js SDK.
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -40,7 +51,7 @@ const CONFIG = {
 
 **SDK de Java**
 
-Para el SDK de Java `logRequests` en `ClientConfig` debe estar habilitado.
+Para Java SDK `logRequests` en `ClientConfig` debe estar habilitado.
 
 ```js {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -56,7 +67,7 @@ Además, la JVM debe iniciarse con el siguiente parámetro de línea de comandos
 java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 ```
 
-## 2. Asegúrese de que [!DNL Target]Traces esté habilitado
+## &#x200B;2. Asegúrese de que [!DNL Target]Traces esté habilitado
 
 Al habilitar los seguimientos, se generará información adicional de [!DNL Adobe Target] con respecto al artefacto de reglas.
 
@@ -113,9 +124,9 @@ Al habilitar los seguimientos, se generará información adicional de [!DNL Adob
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## 3. Compruebe que el [!UICONTROL on-device decisioning] *artefacto de regla* se haya recuperado y almacenado en caché según el intervalo de sondeo definido.
+## &#x200B;3. Compruebe que el [!UICONTROL on-device decisioning] *artefacto de regla* se haya recuperado y almacenado en caché según el intervalo de sondeo definido.
 
-1. Espere la duración del intervalo de sondeo (el valor predeterminado es 20 minutos) y asegúrese de que el SDK esté recuperando el artefacto. Se generarán los mismos registros de terminal.
+1. Espere el intervalo de sondeo (el valor predeterminado es 20 minutos) y asegúrese de que SDK está recuperando el artefacto. Se generarán los mismos registros de terminal.
 
    Además, la información del seguimiento [!DNL Target]Trace debe enviarse al terminal con detalles sobre el artefacto de regla.
 
@@ -135,9 +146,9 @@ Al habilitar los seguimientos, se generará información adicional de [!DNL Adob
      },
    ```
 
-## 4. Valide la entrega de contenido mediante el artefacto de reglas en caché creando una actividad de prueba [!UICONTROL on-device decisioning] a través del compositor de experiencias basadas en formularios
+## &#x200B;4. Valide la entrega de contenido mediante el artefacto de reglas en caché creando una actividad de prueba [!UICONTROL on-device decisioning] a través del compositor de experiencias basadas en formularios
 
-1. Vaya a la [!DNL Target]IU en el Experience Cloud
+1. Vaya a la [!DNL Target]IU de en Experience Cloud
 
    ![imagen alt](assets/asset-target-ui-1.png)
 
@@ -201,7 +212,7 @@ Al habilitar los seguimientos, se generará información adicional de [!DNL Adob
    Response:  <div>test</div>
    ```
 
-## Inspect envía errores de notificación
+## Inspeccionar errores de notificación de envío
 
 Al utilizar la toma de decisiones en el dispositivo, las notificaciones se envían automáticamente para que getOffers ejecute solicitudes. Estas solicitudes se envían silenciosamente en segundo plano. Cualquier error se puede inspeccionar mediante la suscripción a un evento denominado `sendNotificationError`. Este es un ejemplo de código que muestra cómo suscribirse a los errores de notificación mediante el SDK de Node.js.
 
@@ -490,4 +501,4 @@ Existen varias razones por las que se realiza una llamada al servidor aunque el 
 
 * Cuando el mbox utilizado para una actividad &quot;Opción de decisiones en el dispositivo elegible&quot; también se usa para otras actividades que no son &quot;Opción de decisiones en el dispositivo elegible&quot;, el mbox se enumera en la sección `remoteMboxes` del artefacto `rules.json`. Cuando un mbox aparece en `remoteMboxes`, cualquier llamada de `getOffer(s)` a ese mbox resulta en una llamada al servidor.
 
-* Si configura una actividad en un espacio de trabajo o una propiedad y no incluye la misma al configurar el SDK, esto puede hacer que se descargue el `rules.josn` del espacio de trabajo predeterminado, que puede utilizar el mbox en la sección `remoteMboxes`.
+* Si configura una actividad en un espacio de trabajo o una propiedad y no incluye la misma al configurar SDK, esto puede hacer que se descargue el `rules.josn` del espacio de trabajo predeterminado, que puede utilizar el mbox en la sección `remoteMboxes`.

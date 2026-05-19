@@ -4,20 +4,36 @@ description: Detalles sobre la administración de cookies de  [!DNL Adobe Target
 title: Cookies de at.js
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
-source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
+TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 72%
+source-wordcount: 1830
+ht-degree: 67%
 
 ---
 
 # Cookies de at.js
 
-Información sobre at.js 2.x y at.js 1.Comportamiento de la cookie de *x*
+Información sobre el comportamiento de las cookies at.js 2.x y at.js 1.*x*.
 
 ## Comportamiento de la cookie at.js 2.x
 
-Para la versión 2.x de at.js (hasta la versión 2.10.0, pero sin incluir), *solo se admiten cookies de origen*. Como en at.js 1.*x*, la cookie de origen, &quot;mbox&quot;, está almacenada en `clientdomain.com`, donde `clientdomain` es su dominio.
+Para la versión 2.x de at.js (hasta la versión 2.10.0, pero sin incluir), *solo se admiten cookies de origen*. Al igual que en at.js 1.*x*, la cookie de origen, &quot;mbox&quot;, se almacena en `clientdomain.com`, donde `clientdomain` es su dominio.
 
 at.js genera un ID de sesión y la almacena ahí la cookie. La primera respuesta contiene toda la información de la actividad, así como `TNT` o `PC ID` generados por los servidores de [!DNL Target]. A continuación, at.js escribe `TNT/PC ID` en la cookie.
 
@@ -29,16 +45,16 @@ El servicio de Experience Cloud ID siempre establece la cookie propia de `AMCV_#
 
 ### Compatibilidad con cookies de terceros y seguimiento entre dominios
 
-El seguimiento entre dominios permite ver sesiones en dos sitios relacionados, pero con distintos dominios, como una sola sesión. Puede crear una actividad de [!DNL Target] que abarque `siteA.com` y `siteB.com`, y que el visitante permanezca en la misma experiencia cuando se compartan dominios. Esta funcionalidad se vincula a at.js 1.Comportamiento de cookies de terceros y de origen de *x*.
+El seguimiento entre dominios permite ver sesiones en dos sitios relacionados, pero con distintos dominios, como una sola sesión. Puede crear una actividad de [!DNL Target] que abarque `siteA.com` y `siteB.com`, y que el visitante permanezca en la misma experiencia cuando se compartan dominios. Esta funcionalidad se vincula al comportamiento de cookies de terceros y de origen de at.js 1.*x*.
 
 >[!NOTE]
 >
 >En las versiones 2.10.0 y posteriores de at.js, se admiten tanto las cookies de terceros como el seguimiento entre dominios.
 
 
-## at.js 1.Comportamiento de la cookie *x*
+## Comportamiento de la cookie at.js 1.*x*
 
-Para las versiones 1 de at.js.*x*, el comportamiento de la cookie depende de si es una cookie de origen, una cookie de terceros con una cookie de origen o solo una cookie de terceros.
+Para las versiones 1.0&rbrace;x *de at.js, el comportamiento de la cookie depende de si es una cookie de origen, una cookie de terceros con una cookie de origen o solo una cookie de terceros.*
 
 ### Cuándo usar cookies de origen o de terceros
 
@@ -134,7 +150,7 @@ Tenga en cuenta lo siguiente:
 | Cookies | Detalles |
 |--- |--- |
 | Dominios de origen | Esta es la implementación estándar para [!DNL Target] clientes.  La cookie “mbox” se establece en el dominio del cliente. |
-| Seguimiento de terceros | El seguimiento de terceros es importante para los casos de uso de publicidad y segmentación en [!DNL Target] y en [!DNL Adobe Audience Manager] (AAM).  El seguimiento de terceros requiere técnicas de programación entre sitios.  [!DNL Target] usa dos cookies, &quot;mboxSession&quot; y &quot;mboxPC&quot;, establecidas en el dominio `clientcode.tt.omtrd.net`. |
+| Seguimiento de terceros | El seguimiento de terceros es importante para los casos de uso de publicidad y segmentación en [!DNL Target] y en [!DNL Adobe Audience Manager] (AAM).  El seguimiento de terceros requiere técnicas de ejecución de scripts en sitios múltiples.  [!DNL Target] usa dos cookies, &quot;mboxSession&quot; y &quot;mboxPC&quot;, establecidas en el dominio `clientcode.tt.omtrd.net`. |
 
 ### ¿Cuál es el enfoque de Apple?
 

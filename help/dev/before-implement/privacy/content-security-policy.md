@@ -4,9 +4,23 @@ description: Obtenga información acerca de las directivas de la directiva de se
 title: ¿Cómo administra  [!DNL Target]  las políticas de seguridad de contenido (CSP)?
 feature: Privacy & Security
 exl-id: ec6942e5-36d8-4f88-b3d6-47f9eaca03a8
-source-git-commit: c43c79b29768694eac534e22047b5ee6a3d0ccd5
+TQID: https://experienceleague.adobe.com/gGNgYyblw6-D-RiHBtzAtrOOdhVOsIzYQ-HhkhCtyuI
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: 610
 ht-degree: 28%
 
 ---
@@ -31,7 +45,7 @@ Sin embargo, en una implementación de [!DNL Target], estas directivas no deben 
 
 “adobe.tt.omtrdc.net” es un dominio propiedad del Adobe. [!DNL Adobe Target] es una herramienta de prueba y personalización y se espera que [!DNL Target] pueda recibir y procesar solicitudes desde cualquier lugar sin requerir ninguna autenticación. Estas solicitudes contienen pares de clave/valor que se utilizan para pruebas A/B, recomendaciones o personalización de contenido.
 
-El Adobe no almacena información de identificación personal (PII) u otra información confidencial en [!DNL Adobe Target] servidores Edge de a los que señala &quot;adobe.tt.omtrdc.net&quot;.
+Adobe no almacena información de identificación personal (PII) u otra información confidencial en [!DNL Adobe Target] servidores Edge de a los que señala &quot;adobe.tt.omtrdc.net&quot;.
 
 Se espera que se pueda acceder a [!DNL Target] desde cualquier dominio a través de llamadas de JavaScript. La única manera de permitir este acceso es aplicando &quot;Access-Control-Allow-Origin&quot; con un comodín.
 

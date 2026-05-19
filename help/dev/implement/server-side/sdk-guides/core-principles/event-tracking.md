@@ -3,9 +3,18 @@ title: Seguimiento de eventos
 description: Utilice las capacidades de seguimiento de eventos de  [!DNL Adobe Target] para medir de manera eficaz las métricas que más importan para su negocio y sus casos de uso.
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/swckm7EdKlSkC2xl1P57EAyiuGz18rucZOAxcudzYpo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: 528
 ht-degree: 1%
 
 ---
@@ -16,7 +25,7 @@ Utilice las capacidades de seguimiento de eventos de [!DNL Adobe Target] para me
 
 Para realizar el seguimiento de eventos a través de los SDK de [!DNL Adobe Target], siga este proceso de 2 pasos:
 
-1. Instale el SDK e implemente el código que envía eventos a [!DNL Adobe Target].
+1. Instale SDK e implemente el código que envía eventos a [!DNL Adobe Target].
 
 1. Cree y active una actividad [!DNL Adobe Target] con una métrica de objetivo en la interfaz de usuario.
 
@@ -34,7 +43,7 @@ En la tabla siguiente se define la combinación de objetivos y eventos que puede
 
 ## Cómo se activan las impresiones
 
-Los SDK de Target llaman a la [API de envío](/help/dev/implement/delivery-api/overview.md) subyacente. Cuando un objeto execute con parámetros requeridos está dentro de la propia solicitud, la impresión se incrementa automáticamente para las actividades calificadas. Los métodos del SDK que incrementan una impresión automáticamente son:
+Los SDK de Target llaman a la [API de envío](/help/dev/implement/delivery-api/overview.md) subyacente. Cuando un objeto execute con parámetros requeridos está dentro de la propia solicitud, la impresión se incrementa automáticamente para las actividades calificadas. Los métodos de SDK que incrementan una impresión automáticamente son:
 
 * getOffers()
 * getAttributes()
@@ -61,7 +70,7 @@ ResponseStatus TargetClient.sendNotifications(TargetDeliveryRequest request)
 
 >[!ENDTABS]
 
-## Código de ejemplo. 
+## Código de ejemplo.
 
 Los siguientes ejemplos de código funcionan para todos los tipos de métricas de objetivo, ya sean Conversión, Ingresos o Participación.
 

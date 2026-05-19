@@ -4,9 +4,18 @@ description: Obtener datos en  [!DNL Target] usando [!UICONTROL Bulk Profile Upd
 title: ¿Cómo puedo obtener datos en  [!DNL Target] usando [!UICONTROL Bulk Profile Update API]?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 946e9431e6bde30f564b4ba1a4cf0a78d8c5c6bf
+TQID: https://experienceleague.adobe.com/vBcIsBR6wwYr7MbRh7UJvt71ULDEq6iXVZ5spZlif-0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: 221
 ht-degree: 7%
 
 ---
@@ -23,7 +32,7 @@ Comparar [!UICONTROL Bulk Profile Update API] con [[!DNL Adobe Target Single Pro
 
 Esta opción es similar a [[!UICONTROL customer attributes]](/help/dev/before-implement/methods-to-get-data-into-target/customer-attributes.md) con algunas diferencias:
 
-* [!UICONTROL Customer attributes] usa una carga FTP. [!UICONTROL Target Bulk Profile Update API] utiliza una API de POST HTTP.
+* [!UICONTROL Customer attributes] usa una carga FTP. [!UICONTROL Target Bulk Profile Update API] utiliza una API HTTP POST.
 * [!UICONTROL Customer attribute] datos se pueden compartir con [!DNL Analytics]. [!UICONTROL Bulk Profile Update] solo se puede usar en [!DNL Target].
 * Compatibilidad con [!UICONTROL Customer attributes] al crear un perfil para un usuario [!DNL Target] que aún no ha visto.
    * [!UICONTROL Bulk Profile Update API] v2: no es necesario especificar todos los valores de parámetro para cada `pcId`. Los perfiles se crean para cualquier `pcId` o `mbox3rdPartyId` que no se encuentre en [!DNL Target].

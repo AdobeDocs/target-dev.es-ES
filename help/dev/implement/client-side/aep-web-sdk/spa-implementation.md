@@ -4,9 +4,20 @@ description: Aprenda a crear una implementación de aplicación de una sola pág
 keywords: target;adobe target;vistas xdm; vistas;aplicaciones de una sola página;SPA;ciclo de vida de SPA;lado del cliente;prueba AB;segmentación de experiencias;XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: 1747
 ht-degree: 2%
 
 ---
@@ -236,7 +247,7 @@ Al hacer clic en una acción se resalta el elemento del sitio donde se aplica es
 | Información | Muestra los detalles de esta acción. |
 | Editar | Permite editar las propiedades de esta acción directamente. |
 | Clonar | Clona la acción a uno o más [!UICONTROL Views] que existen en el panel [!UICONTROL Modifications] o a uno o más [!UICONTROL Views] a los que ha navegado en el VEC. La acción no tiene que existir necesariamente en el panel [!UICONTROL Modifications].<br/><br/>**Nota:** Después de realizar una operación de clonación, debe navegar a [!UICONTROL View] en el VEC a través de [!UICONTROL Browse] para ver si la acción clonada era una operación válida. Si la acción no se puede aplicar a [!UICONTROL View], verá un error. |
-| Mover   | Mueve la acción a [!UICONTROL Page Load Event] o a cualquier otro [!UICONTROL View] que ya exista en el panel [!UICONTROL Modifications].<br/><br/>**Evento de carga de página:** Todas las acciones correspondientes al evento de carga de página se aplican en la carga inicial de la página web. <br/><br/>**Nota:** Después de realizar una operación de movimiento, debe navegar a [!UICONTROL View] en el VEC a través de [!UICONTROL Browse] para ver si el movimiento era una operación válida. Si la acción no se puede aplicar a [!UICONTROL View], vea un error. |
+| Mover | Mueve la acción a [!UICONTROL Page Load Event] o a cualquier otro [!UICONTROL View] que ya exista en el panel [!UICONTROL Modifications].<br/><br/>**Evento de carga de página:** Todas las acciones correspondientes al evento de carga de página se aplican en la carga inicial de la página web. <br/><br/>**Nota:** Después de realizar una operación de movimiento, debe navegar a [!UICONTROL View] en el VEC a través de [!UICONTROL Browse] para ver si el movimiento era una operación válida. Si la acción no se puede aplicar a [!UICONTROL View], vea un error. |
 | Eliminar | Elimina la acción. |
 
 ## Uso del VEC para ejemplos de SPA

@@ -4,10 +4,24 @@ description: Descubra cómo [!DNL Adobe Target] cumple con las leyes de privacid
 title: ¿Cómo gestiona Target los problemas de privacidad, incluida la PII?
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: 88bde40aa6dfb96e1d53e4db6ba5547d38dbbb99
+TQID: https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 43%
+source-wordcount: 799
+ht-degree: 44%
 
 ---
 
@@ -25,7 +39,7 @@ La dirección IP de un visitante del sitio web se transmite a un centro de proce
 
 ## Sustitución del último octeto de direcciones IP
 
-El Adobe ha desarrollado una configuración de &quot;privacidad por diseño&quot; que los usuarios pueden habilitar para el Adobe [!DNL Target]. Cuando se habilita, el Adobe [!DNL Target] oculta inmediatamente el último octeto (la última parte) de la dirección IP en el momento en que se recopila la dirección IP. Esta anonimización se realiza antes de cualquier procesamiento de la dirección IP, incluso antes de una consulta geográfica opcional de la dirección IP.
+Adobe ha desarrollado una configuración de &quot;privacidad por diseño&quot; que los usuarios pueden habilitar para Adobe [!DNL Target]. Cuando está habilitada, Adobe [!DNL Target] oculta inmediatamente el último octeto (la última parte) de la dirección IP en el momento en que se recopila la dirección IP. Esta anonimización se realiza antes de cualquier procesamiento de la dirección IP, incluso antes de una consulta geográfica opcional de la dirección IP.
 
 Cuando se habilita esta función, la dirección IP se convierte en lo suficientemente anónima para que ya no pueda identificarse como información personal. Como resultado, [!DNL Target] se puede usar de conformidad con las leyes de privacidad de datos en países que no permiten la recopilación de información personal. Es muy probable que la obtención de información por nivel de ciudad vea significativamente afectada por la confusión de la dirección IP. La obtención de información por nivel de región y país solo debería verse ligeramente afectada.
 
@@ -74,6 +88,6 @@ Consulte [Reglamentos de protección de datos y privacidad](/help/dev/before-imp
 
 ## Recopilación de datos sobre el uso de las funciones
 
-Los datos de uso de características individuales se recopilan con fines de Adobe interno para identificar si las características de [!DNL Target] funcionan según lo previsto o para identificar las características que se están infrautilizando. Se recopilan varias mediciones de latencia para ayudar a resolver los problemas de rendimiento. Los datos personales no se recopilan.
+Los datos de uso de características individuales se recopilan con fines internos de Adobe para identificar si las características de [!DNL Target] funcionan según lo previsto o para identificar las características que se están infrautilizando. Se recopilan varias mediciones de latencia para ayudar a resolver los problemas de rendimiento. Los datos personales no se recopilan.
 
 Puede excluirse de los datos de uso de informes en nuestros SDK configurando `telemetryEnabled` como false en las opciones de inicialización del cliente. Para obtener más información, consulte [telemetryEnabled en targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#telemetryenabled).

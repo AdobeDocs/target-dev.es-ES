@@ -4,10 +4,25 @@ description: Aprenda cómo  [!DNL Target] usa el protocolo TLS (Transport Layer 
 title: ¿Cómo usa  [!DNL Target] TLS para proporcionar seguridad?
 feature: Privacy & Security
 exl-id: f5ea2272-27ab-49c9-b096-b15dd277d4e5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/2Ka08Kp8jLd6u7-gtwbfU1rq7SGDxE-dwBTHWz1mS3E
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1197'
-ht-degree: 49%
+source-wordcount: 1231
+ht-degree: 45%
 
 ---
 
@@ -15,7 +30,7 @@ ht-degree: 49%
 
 Información sobre cambios en la forma en que [!DNL Adobe] y [!DNL Adobe Target] usan TLS (Seguridad de capa de transporte) para mantener los estándares de seguridad más altos y promover la seguridad de los datos de los clientes.
 
-Seguridad de capa de transporte (TLS) es el protocolo de seguridad más implementado que se usa hoy en día para navegadores web y otras aplicaciones que requieren que los datos se intercambien de forma segura en una red. Adobe cuenta con estándares de seguridad que requieren la discontinuación de protocolos más antiguos y exigen el uso de TLS 1.2 para tener en uso la versión más actualizada y segura.
+Seguridad de capa de transporte (TLS) es el protocolo de seguridad más implementado que se usa hoy en día para navegadores web y otras aplicaciones que requieren que los datos se intercambien de forma segura en una red. Adobe tiene estándares de cumplimiento de seguridad que requieren la discontinuación de protocolos más viejos y exigen el uso de TLS 1.2 para tener en uso la versión más actualizada y segura.
 
 >[!WARNING]
 >
@@ -27,17 +42,17 @@ No esperamos que esto tenga un impacto significativo en los datos de los cliente
 
 TLS 1.2 es el predeterminado a partir del 1 de marzo de 2020 y TLS 1.1 ya no será compatible.
 
-Adobe realizará la migración de sus clientes por etapas a TLS 1.2. Para aquellos cuyos dominios ya cumplan con 1.2, los pasaremos a TLS 1.2 sin que usted tenga que hacer ningún cambio. La mayoría de los dominios de los clientes ya son compatibles con TLS 1.2; sin embargo, si su dominio no es compatible con TLS 1.2, mantendremos esos dominios en TLS 1.1 como en el día de hoy (hasta marzo de 2020).
+Adobe trasladará a los clientes de forma gradual a TLS 1.2. Para aquellos cuyos dominios ya son compatibles con 1.2, los moveremos a TLS 1.2 sin necesidad de realizar ningún cambio por su parte. La mayoría de los dominios de los clientes ya son compatibles con TLS 1.2; sin embargo, si su dominio no es compatible con TLS 1.2, mantendremos esos dominios en TLS 1.1 como en el día de hoy (hasta marzo de 2020).
 
 No debería tener ningún problema durante esta fase de migración. Si el VEC ha dejado de cargar un sitio que anteriormente funcionaba, [abra un ticket de atención al cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es&#reference_ACA3391A00EF467B87930A450050077C) citando esta migración como causa posible.
 
-Si, sin embargo, es uno de los clientes que están en TSL 1.1 sin admitir TLS 1.2, debería planificar la migración de sus dominios e infraestructura a TLS 1.2. Seguiremos admitiendo el protocolo TLS 1.1 hasta el lunes, 01 de marzo de 2020. A partir del 1 de marzo de 2020, [!DNL Target] no admitirá el protocolo TLS 1.1 que se utilizará para el VEC mediante la capacidad del Compositor de experiencias mejorado.
+Sin embargo, si es uno de esos clientes que utilizan TSL 1.1 sin compatibilidad con TLS 1.2, debe planificar el movimiento de sus dominios/infraestructura a TLS 1.2. Seguiremos admitiendo el protocolo TLS 1.1 hasta el 1 de marzo de 2020. A partir del 1 de marzo de 2020, [!DNL Target] no admitirá el protocolo TLS 1.1 que se utilizará para el VEC mediante la capacidad del Compositor de experiencias mejorado.
 
 Aunque recomendamos encarecidamente que todos estén en TLS 1.2 de ahora en adelante, si usted es un nuevo cliente, pero *NO* admite TLS 1.2, póngase en contacto con el Servicio de atención al cliente para informarles de que necesita estar en TLS 1.1 para el Compositor de experiencias mejorado. Sin embargo, planifique pasar a TLS 1.2, ya que la compatibilidad con TLS 1.0 terminará el lunes, 01 de marzo de 2020.
 
 ## Entrega de actividades
 
-A partir del 1 de marzo de 2020, [!DNL Target] servidores dejarán de ser compatibles con TLS 1.1. Con este cambio, los servidores de [!DNL Target] dejarán de aceptar solicitudes de visitantes con dispositivos antiguos o navegadores web que no sean compatibles con TLS 1.2 (o versiones posteriores). Como resultado, los dispositivos y navegadores más antiguos y que solo admitan TLS 1.1 (o que admitan TLS 1.1 de forma predeterminada) no recibirán de Adobe Target contenido de actividades. Se mostrará el contenido predeterminado del sitio.
+A partir del 1 de marzo de 2020, [!DNL Target] servidores dejarán de ser compatibles con TLS 1.1. Con este cambio, los servidores de [!DNL Target] dejarán de aceptar solicitudes de visitantes con dispositivos antiguos o exploradores web que no sean compatibles con TLS 1.2 (o posterior). Como resultado, los dispositivos y navegadores más antiguos y que solo admitan TLS 1.1 (o que admitan TLS 1.1 de forma predeterminada) no recibirán de Adobe Target contenido de actividades. Se mostrará el contenido predeterminado del sitio.
 
 Algunos de los dispositivos y navegadores antiguos que se verán afectados son:
 
@@ -100,14 +115,14 @@ En esta sección se describe lo que cabe esperar de los navegadores que admiten 
 
 | Implementación de JavaScript [!DNL Target] | Detalles |
 |--- |--- |
-| SDK web de Adobe Experience Platform | Con TLS 1.0 o TLS 1.1 habilitado:<ul><li>Al usar herramientas de desarrollo del navegador, en la pestaña Red, verá “200 OK”. Esto significa que la solicitud ha resultado satisfactoria.</li><li>El usuario ve el mensaje “No se puede conectar de forma segura a esta página”. El mensaje explica que esto puede deberse a que el sitio utiliza configuraciones de seguridad TLS no actualizadas o inseguras.</li><li>No se muestran errores de la consola.</li><li>Se proporciona el contenido predeterminado.</li></ul>Con TLS 1.2 habilitado:<ul><li>Se proporciona el contenido de oferta predeterminado.</li></ul> |
+| Adobe Experience Platform Web SDK | Con TLS 1.0 o TLS 1.1 habilitado:<ul><li>Al usar herramientas de desarrollo del navegador, en la pestaña Red, verá “200 OK”. Esto significa que la solicitud ha resultado satisfactoria.</li><li>El usuario ve el mensaje “No se puede conectar de forma segura a esta página”. El mensaje explica que esto puede deberse a que el sitio utiliza configuraciones de seguridad TLS no actualizadas o inseguras.</li><li>No se muestran errores de la consola.</li><li>Se proporciona el contenido predeterminado.</li></ul>Con TLS 1.2 habilitado:<ul><li>Se proporciona el contenido de oferta predeterminado.</li></ul> |
 | at.js | Con TLS 1.0 o TLS 1.1 habilitado:<ul><li>Al usar herramientas de desarrollo del navegador, en la pestaña Red, verá “200 OK”. Esto significa que la solicitud ha resultado satisfactoria.</li><li>El usuario ve el mensaje “No se puede conectar de forma segura a esta página”. El mensaje explica que esto puede deberse a que el sitio utiliza configuraciones de seguridad TLS no actualizadas o inseguras.</li><li>No se muestran errores de la consola.</li><li>Se proporciona el contenido predeterminado.</li></ul>Con TLS 1.2 habilitado:<ul><li>Se proporciona el contenido de oferta predeterminado.</li></ul> |
 
 ### Actividad segmentada con audiencia de versión de explorador (Internet Explorer, versiones 6, 7 u 8)
 
-Las audiencias dejan de funcionar.
+Los públicos dejan de funcionar.
 
 | Implementación de JavaScript [!DNL Target] | Detalles |
 |--- |--- |
-| SDK web de Adobe Experience Platform | El SDK de Platform no es compatible con versiones de Internet Explorer anteriores a la 10. |
+| Adobe Experience Platform Web SDK | Platform SDK no es compatible con versiones de Internet Explorer anteriores a la 10. |
 | at.js | at.js no es compatible con las versiones anteriores a la 10 de Internet Explorer. |

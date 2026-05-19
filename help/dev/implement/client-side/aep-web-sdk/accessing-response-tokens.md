@@ -3,9 +3,20 @@ title: Acceso a los tokens de respuesta mediante Adobe Experience Platform Web S
 description: Obtenga información sobre cómo tener acceso a los tokens de respuesta con  [!DNL Adobe Experience Platform Web SDK].
 keywords: personalización;target;adobe target;renderDecisions;sendEvent;decisionScopes;result.decisions,token de respuesta;
 feature: AEP Web SDK
-source-git-commit: f010ca54aac3c2a644a77fb2f88aff1996f6ddfe
+exl-id: b125017c-c257-4f2f-a479-dd0f20e76a9a
+TQID: https://experienceleague.adobe.com/kqa-HY5-dOvNq-yGqthunYDdyTKkiiFdsHquyN34ERg
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: 273
 ht-degree: 0%
 
 ---

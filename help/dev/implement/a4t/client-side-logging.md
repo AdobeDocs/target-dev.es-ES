@@ -5,9 +5,22 @@ seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target;a4t;registro;sdk web;experiencia;plataforma;
 feature: Implementation
-source-git-commit: 4d4ca7dcffdbaee5770084bd85c3109df0d6a8d4
+exl-id: fef34eec-128f-4433-a557-42f1347cf2c3
+TQID: https://experienceleague.adobe.com/A-6Z757zzqoIW12ICTs9WBwXjHbapgLArhGSoIgMulo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: 1139
 ht-degree: 0%
 
 ---
@@ -24,13 +37,13 @@ El registro en el lado del cliente significa que se devuelven datos relevantes d
 
 Este documento describe los pasos para configurar el registro de A4T en el lado del cliente para [!DNL Platform Web SDK] y proporciona ejemplos de implementación para casos de uso comunes.
 
-## Requisitos previos   {#prerequisites}
+## Requisitos previos {#prerequisites}
 
 En este tutorial se da por hecho que está familiarizado con los conceptos y procesos fundamentales relacionados con el uso de [!DNL Platform Web SDK] con fines de personalización. Revise la siguiente documentación si necesita una introducción:
 
 * [Configuración de Web SDK](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/commands/configure/overview)
-* [Enviando eventos](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [Procesando contenido personalizado](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [Envío de eventos](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [Representación de contenido de personalización](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Configurar el registro del lado del cliente [!DNL Analytics] {#set-up-client-side-logging}
 

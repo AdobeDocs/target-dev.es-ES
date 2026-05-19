@@ -4,9 +4,20 @@ description: Utilice la función [!UICONTROL adobe.target.applyOffer()] para la 
 title: ¿Cómo se utiliza la función [!UICONTROL adobe.target.applyOffer()]?
 feature: at.js
 exl-id: 957bbe92-8012-4bd5-95d6-1ae38b72bb16
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/lrjsIl-gKu1SnrZapxYcoDObvUCGG2ht58QtWbQkYts
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: 169
 ht-degree: 69%
 
 ---
@@ -24,7 +35,7 @@ El parámetro de opciones es obligatorio y tiene la siguiente estructura:
 | Clave | Tipo | Requerido | Descripción |
 |--- |--- |--- |--- |
 | mbox | Cadena | Sí | El nombre de mbox<br />con at.js 1.3.0 (y versiones posteriores) Target exige que se use la clave mbox. Esta clave se ha requerido en el pasado, pero Target impone ahora su uso para garantizar que Target tenga la validación adecuada y los clientes usen la función correctamente. |
-| selector | Cadena o elemento DOM | No | Elemento HTML o selector de CSS utilizado para identificar el elemento HTML donde Target debería colocar el contenido de la oferta. Si no se proporciona un selector, Target supone que el elemento HTML debe utilizar un HEAD HTML. |
+| selector | Cadena o elemento DOM | No | Elemento HTML o selector de CSS utilizado para identificar el elemento HTML donde Target debería colocar el contenido de la oferta. Si no se proporciona ningún selector, Target supone que el elemento HTML debe utilizar HTML HEAD. |
 | Oferta | Matriz | Sí | Las acciones de una matriz que deben aplicarse al elemento. |
 
 ## Ejemplo

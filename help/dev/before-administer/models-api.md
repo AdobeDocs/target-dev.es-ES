@@ -3,9 +3,20 @@ title: Información general de API de modelos Adobe
 description: Información general sobre la API de modelos, que los usuarios pueden utilizar para bloquear funciones y evitar que se incluyan en los modelos de aprendizaje automático.
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: 1316
 ht-degree: 2%
 
 ---
@@ -24,7 +35,7 @@ Las listas de bloqueados se pueden definir por actividad (nivel de actividad) o 
 
 Vea la especificación de API de modelos [aquí](../administer/models-api/models-api-overview.md).
 
-## Requisitos previos  
+## Requisitos previos
 
 Para usar la API de modelos, debe configurar la autenticación mediante [Adobe Developer Console](https://developer.adobe.com/console/home), tal como lo haría con [Target Admin API](../administer/admin-api/admin-api-overview-new.md). Para obtener más información, consulte [Cómo configurar la autenticación](../before-administer/configure-authentication.md).
 

@@ -5,9 +5,22 @@ title: ¿Cómo Implemento Actividades De [!UICONTROL Recommendations]?
 feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: 760e6425fc2a32ec5c405094d144f173de1b6c07
+TQID: https://experienceleague.adobe.com/A7j0oJbyO3oei-a2l02I58o9I0vCPrRcqWC-QgQUxBo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: 1644
 ht-degree: 18%
 
 ---
@@ -128,11 +141,11 @@ function targetPageParams() {
 
 Cuando se produce un evento de compra, pasa la identidad del artículo o artículos comprados. Consulte [Rastrear conversiones](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions) en el artículo de [Cómo implementar at.js > Implementar [!UICONTROL Target] sin un administrador de etiquetas](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
-## &#x200B;4. Configurar exclusiones globales
+## &#x200B;4. Configuración de exclusiones globales
 
 Excluya cualquier elemento de nivel global que no quiera que se recomiende a un visitante. Consulte [Exclusiones](https://experienceleague.adobe.com/es/docs/target/using/recommendations/entities/exclusions) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
 
-## &#x200B;5. Configurar [!UICONTROL Recommendations]
+## &#x200B;5. Configurar la configuración de [!UICONTROL Recommendations]
 
 Utilice la configuración para administrar la implementación de [!UICONTROL Recommendations].
 
@@ -166,7 +179,7 @@ Para obtener más información, consulte [Configurar la autenticación para las 
 
 Conocer el sector industrial del sitio ayuda a Target a elegir criterios para las recomendaciones.
 
-Los criterios de [!DNL Recommendations] son reglas que determinan qué productos o contenido recomendar en función de un conjunto predeterminado de comportamientos del visitante. Los criterios pueden basarse en tendencias populares, en los comportamientos actuales y pasados de un visitante o en productos y contenido similares. Puede probar distintos tipos de recomendaciones entre sí si se agregan varios criterios.
+Los criterios de [!DNL Recommendations] son reglas que determinan qué productos o contenido recomendar en función de un conjunto predeterminado de comportamientos del visitante. Los criterios se pueden basar en tendencias populares, los comportamientos actuales y pasados de un visitante o productos y contenido similares. Puede probar distintos tipos de recomendaciones entre sí si se agregan varios criterios.
 
 Para obtener más información, consulte [Criterios](https://experienceleague.adobe.com/es/docs/target/using/recommendations/criteria/algorithms){target=_blank} en la *Guía para profesionales de Adobe Target Business.*
 
@@ -199,7 +212,7 @@ Las siguientes opciones están disponibles en la sección [!UICONTROL Product Ca
 
 #### [!UICONTROL Default Host Group]
 
-Seleccione el grupo de hosts predeterminado.
+Seleccione su grupo de hosts predeterminado.
 
 El grupo de hosts puede utilizarse para separar los elementos disponibles en el catálogo para usos diferentes. Por ejemplo, puede utilizar grupos de hosts para entornos de desarrollo y producción, marcas diferentes o regiones geográficas diferentes. De forma predeterminada, la vista previa de los resultados en Búsqueda de catálogo, Colecciones y Exclusiones se basa en el grupo de hosts predeterminado. (También puede seleccionar otro grupo de hosts para obtener una vista previa de los resultados mediante el filtro Entorno). De forma predeterminada, los elementos recién añadidos están disponibles en todos los grupos de hosts a menos que se especifique un ID de entorno al crear o actualizar el elemento. Las recomendaciones enviadas dependen del grupo de hosts especificado en la solicitud.
 

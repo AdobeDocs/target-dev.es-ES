@@ -1,26 +1,37 @@
 ---
 title: Descargue, almacene y actualice el artefacto de regla de toma de decisiones en el dispositivo a través de la carga útil JSON
-description: Este método es mejor si la aplicación está estructurada de manera que requiera que el SDK se inicialice en cada archivo en el que utilice métodos SDK.
+description: Este método es mejor si la aplicación está estructurada de manera que requiera que SDK se inicialice en cada archivo en el que utilice métodos SDK.
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: 298
+ht-degree: 1%
 
 ---
 
 # Descarga, almacenamiento y actualización del artefacto de regla a través de la carga útil JSON
 
-Este método es mejor si la aplicación está estructurada de manera que requiera que el SDK se inicialice en cada archivo en el que utilice métodos SDK. Antes de que la aplicación web pueda utilizar la carga útil JSON del artefacto de regla durante la inicialización del SDK, debe asegurarse de que la carga útil JSON se descargue y esté disponible para que la aplicación la utilice.
+Este método es mejor si la aplicación está estructurada de manera que requiera que SDK se inicialice en cada archivo en el que utilice métodos SDK. Antes de que la aplicación web pueda utilizar la carga útil JSON del artefacto de regla durante la inicialización de SDK, debe asegurarse de que la carga útil JSON se descargue y esté disponible para que la aplicación la utilice.
 
 ## Resumen de los pasos
 
-1. Instalación del SDK
-1. Inicialización del SDK
+1. Instalación de SDK
+1. Inicialización de SDK
 1. Almacenar y utilizar la carga útil JSON
 
-## 1. Instalar el SDK
+## &#x200B;1. Instalación de SDK
 
 >[!BEGINTABS]
 
@@ -42,9 +53,9 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. Inicializar el SDK
+## &#x200B;2. Inicialización de SDK
 
-1. En primer lugar, importe el SDK. Importe al mismo archivo desde el que puede controlar el inicio del servidor.
+1. Primero, importe SDK. Importe al mismo archivo desde el que puede controlar el inicio del servidor.
 
    **Nodo.js**
 
@@ -59,7 +70,7 @@ npm i @adobe/target-nodejs-sdk -P
    import com.adobe.target.edge.client.TargetClient;
    ```
 
-1. Para configurar el SDK, utilice el método create.
+1. Para configurar SDK, utilice el método create.
 
    **Nodo.js**
 
@@ -115,10 +126,10 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. El cliente y `organizationId` se pueden recuperar de [!DNL Adobe Target]navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, como se muestra aquí.
 
-   &lt;!— Insert image-client-code.png —>
+   &lt;!— Insertar image-client-code.png —>
    ![imagen alt](assets/asset-rule-artifact-3.png)
 
-## 3. Almacenar y aumentar la carga útil JSON
+## &#x200B;3. Almacenar y aumentar la carga útil JSON
 
 El mecanismo que utilice para almacenar la carga útil JSON depende de la arquitectura del sistema. Puede utilizar un archivo local, una base de datos o un sistema de almacenamiento en caché de objetos de memoria como Memcached. Debe poder leer este JSON desde su aplicación para el consumo. En esta guía, utilizamos un archivo local como almacenamiento.
 
@@ -162,7 +173,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Al inicializar el SDK [!DNL Adobe Target]a través de la carga útil JSON, el servidor está listo para servir solicitudes inmediatamente con actividades de toma de decisiones en el dispositivo, ya que el SDK [!DNL Adobe Target]no necesita esperar a que se descargue el artefacto de regla.
+>Al inicializar [!DNL Adobe Target]SDK a través de la carga útil JSON, el servidor está listo para servir solicitudes inmediatamente con actividades de toma de decisiones en el dispositivo, ya que [!DNL Adobe Target]SDK no necesita esperar a que se descargue el artefacto de regla.
 
 Este es un ejemplo que muestra la capacidad de inicialización de carga útil JSON.
 

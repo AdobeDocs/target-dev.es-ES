@@ -3,10 +3,22 @@ title: ¿Qué funciones se admiten en la toma de decisiones en el dispositivo?
 description: Aprenda a ofrecer el contenido personalizado más relevante y atractivo mediante el aprendizaje automático mediante una llamada al servidor en directo.
 feature: APIs/SDKs
 exl-id: 15d9870f-6c58-4da0-bfe5-ef23daf7d273
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Fgwu8Nh90i-tS1aCUVmQReGz6DYBP2GHdcNM7z17BSk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 13%
+source-wordcount: 710
+ht-degree: 9%
 
 ---
 
@@ -18,9 +30,9 @@ Los SDK del lado del servidor de [!DNL Adobe Target] proporcionan a los desarrol
 * Segmentación de audiencia
 * Método de asignación
 
-## Tipos de actividades. 
+## Tipos de actividades.
 
-La siguiente tabla indica qué [tipos de actividad](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=es) creados con el [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es&) son compatibles o no con [!UICONTROL on-device decisioning].
+La siguiente tabla indica qué [tipos de actividad](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=es) creados con el [Compositor de experiencias basadas en formularios] (¿https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es&) son compatibles o no con [!UICONTROL on-device decisioning].
 
 | Tipo de actividad | Admitido |
 | --- | --- |
@@ -114,7 +126,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-Sin embargo, si no tiene la capacidad de realizar búsquedas de IP a geografía en su servidor, pero aún desea realizar [!UICONTROL on-device decisioning] para `getOffers` solicitudes que contienen audiencias basadas en regiones geográficas, esto también se admite. La desventaja de este enfoque es que usará una búsqueda remota de IP a geografía, que agregará latencia a cada llamada de `getOffers`. Esta latencia debe ser menor que una llamada a `getOffers` remota, ya que entra en una red de distribución de contenido (CDN) ubicada cerca del servidor. Solo debe proporcionar el campo `ipAddress` en el objeto `Geo` de la `Context` de su solicitud para que el SDK pueda recuperar la geolocalización de la dirección IP del usuario. Si se proporciona cualquier otro campo además de `ipAddress`, el SDK de [!DNL Target] no recuperará los metadatos de ubicación geográfica para la resolución.
+Sin embargo, si no tiene la capacidad de realizar búsquedas de IP a geografía en su servidor, pero aún desea realizar [!UICONTROL on-device decisioning] para `getOffers` solicitudes que contienen audiencias basadas en regiones geográficas, esto también se admite. La desventaja de este enfoque es que usará una búsqueda remota de IP a geografía, que agregará latencia a cada llamada de `getOffers`. Esta latencia debe ser menor que una llamada a `getOffers` remota, ya que entra en una red de distribución de contenido (CDN) ubicada cerca del servidor. Solo debe proporcionar el campo `ipAddress` en el objeto `Geo` de la `Context` de su solicitud para que SDK recupere la ubicación geográfica de la dirección IP del usuario. Si se proporciona cualquier otro campo además de `ipAddress`, el SDK [!DNL Target] no recuperará los metadatos de ubicación geográfica para la resolución.
 
 
 >[!BEGINTABS]

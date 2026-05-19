@@ -3,10 +3,17 @@ title: Prácticas recomendadas al utilizar la toma de decisiones en el dispositi
 description: Conozca las prácticas recomendadas al usar [!UICONTROL on-device decisioning] en  [!DNL Adobe Target]
 feature: Implement Server-side
 exl-id: a0ca014d-ad9f-4ecc-961d-cb7ba236507f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/GgVJaAal4uS1RqpCK3wNCVwPjAOaXzjXNV7EoqWhwcY
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 0%
+source-wordcount: 393
+ht-degree: 3%
 
 ---
 
@@ -21,7 +28,7 @@ Cuando se utiliza &quot;en el dispositivo&quot; como método de toma de decision
 * Desactive las actividades compatibles con el dispositivo que no estén pensadas para estar en el artefacto.
 * Si tiene Target Premium, puede usar [properties/workspaces](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=es) para crear archivos de artefactos diferentes para espacios de trabajo diferentes.
 * Si los archivos de artefactos se vuelven muy grandes debido a razones legítimas, puede utilizar el método de toma de decisiones &quot;híbrido&quot;. Este método le permite descargar el artefacto en paralelo y todas las llamadas a la API de Target se transfieren hasta que el artefacto se ha descargado. Lea la sección de prácticas recomendadas sobre el modo de toma de decisiones &quot;híbrido&quot; a continuación para obtener más información sobre este enfoque.
-* SPA Si tiene una aplicación de una sola página (), [!DNL Adobe] recomienda cargar e inicializar at.js antes de cargar el archivo JavaScript principal de la aplicación durante la primera carga de página. Este método inicia la descarga del artefacto mucho antes, lo que proporciona una representación de la experiencia más rápida.
+* Si tiene una aplicación de una sola página (SPA), [!DNL Adobe] recomienda cargar e inicializar at.js antes de cargar el archivo JavaScript principal de la aplicación durante la primera carga de página. Este método inicia la descarga del artefacto mucho antes, lo que proporciona una representación de la experiencia más rápida.
 
 ## Prácticas recomendadas cuando el método de toma de decisiones es &quot;híbrido&quot;
 

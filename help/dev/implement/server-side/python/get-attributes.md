@@ -1,12 +1,19 @@
 ---
-title: Cómo usar solicitudes asincrónicas en el SDK de  [!DNL Adobe Target] Python
-description: Descubra cómo el SDK de  [!DNL Target] Python admite solicitudes asincrónicas, lo que puede reducir el tiempo de destino efectivo a cero.
+title: Cómo usar solicitudes asincrónicas en  [!DNL Adobe Target] Python SDK
+description: Descubra cómo  [!DNL Target] Python SDK admite solicitudes asincrónicas, lo que puede reducir el tiempo de destino efectivo a cero.
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/CFfT7Amoca2yqYkkt9AviTmWi-RCjGdABYYuWHxvqC8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 16%
+source-wordcount: 130
+ht-degree: 15%
 
 ---
 

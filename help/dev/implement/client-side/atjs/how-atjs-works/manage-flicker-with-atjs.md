@@ -4,9 +4,21 @@ description: Descubra cómo at.js y  [!DNL Target] evitan el parpadeo (el conten
 title: ¿Cómo administra at.js el parpadeo?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/r8uyzkf1gSHmppyDHPOcn5jrH86Hedb4ArMmtigq93w
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: 717
 ht-degree: 57%
 
 ---
@@ -21,13 +33,13 @@ El parpadeo tiene lugar cuando se muestra momentáneamente el contenido predeter
 
 Si habilita la función [mbox global creado automáticamente](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) al configurar at.js, éste gestiona el parpadeo cambiando al configuración de opacidad mientras la página carga. Cuando se carga at.js, cambia la configuración de opacidad del elemento `<body>` a &quot;0&quot;, lo que hace que la página sea invisible inicialmente para los visitantes. Después de recibir una respuesta de [!DNL Target] (o si se detecta un error en la solicitud [!DNL Target]), at.js restablece la opacidad a &quot;1&quot;. Esto garantiza que el visitante solo vea la página después de haberse aplicado el contenido de sus actividades.
 
-Si activa el ajuste al configurar at.js, at.js establece la opacidad del estilo HTML BODY en 0. Después de recibir una respuesta de [!DNL Target], at.js restablece la opacidad de BODY del HTML a 1.
+Si habilita el ajuste al configurar at.js, at.js establece la opacidad del estilo HTML BODY en 0. Después de recibir una respuesta de [!DNL Target], at.js restablece la opacidad de HTML BODY a 1.
 
 La opacidad establecida en 0 mantiene el contenido de la página oculto para evitar el parpadeo, pero el navegador sigue procesando la página y carga todos los activos necesarios, como CSS, imágenes, etc.
 
 Si `opacity: 0` no funciona en su implementación, también puede administrar el parpadeo personalizando `bodyHiddenStyle` y establecerlo en `body {visibility:hidden !important}`. Puede usar `body {opacity:0 !important}` o `body {visibility:hidden !important}`, el que funcione mejor para sus circunstancias específicas.
 
-La ilustración siguiente muestra las llamadas a Ocultar cuerpo y Mostrar cuerpo en at.js 1.*x* y at.js 2.x.
+La siguiente ilustración muestra las llamadas a Ocultar cuerpo y Mostrar cuerpo en at.js 1.*x* y at.js 2.x.
 
 **at.js 2.x**
 
@@ -35,7 +47,7 @@ La ilustración siguiente muestra las llamadas a Ocultar cuerpo y Mostrar cuerpo
 
 ![Flujo de Target: solicitud de carga de página de at.js](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Flujo de Target: solicitud de carga de página de at.js"){zoomable="yes"}
 
-**at.js 1.*x***  
+**at.js 1.*x***
 
 (Haga clic en la imagen para ampliarla a ancho completo).
 

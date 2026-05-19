@@ -1,13 +1,21 @@
 ---
 title: API de envío de Adobe Target que identifica visitantes
 description: ¿Cómo puedo identificar al usuario dentro de  [!DNL Adobe Target]?
-keywords: api de envío
+keywords: API de envío
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 7%
+source-wordcount: 789
+ht-degree: 9%
 
 ---
 
@@ -22,7 +30,7 @@ Target utiliza tres identificadores:
 | `tntId` | `tntId` es el identificador principal de [!DNL Target] para un usuario. Puede proporcionar este identificador o [!DNL Target] lo generará automáticamente si la solicitud no contiene uno. |
 | `thirdPartyId` | El `thirdPartyId` es el identificador de su compañía para el usuario que puede enviar con cada llamada. Cuando un usuario inicia sesión en el sitio de una empresa, esta generalmente crea un ID vinculado a la cuenta del visitante, la tarjeta de fidelidad, el número de pertenencia u otros identificadores aplicables para esa empresa. |
 | `marketingCloudVisitorId` | `marketingCloudVisitorId` se usa para combinar y compartir datos entre distintas soluciones de Adobe. Se requiere `marketingCloudVisitorId` para las integraciones con Adobe Analytics y Adobe Audience Manager. |
-| `customerIds` | Junto con la ID de visitante Experience Cloud, se pueden usar [ID de cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=es) adicionales y un estado autenticado para cada visitante. |
+| `customerIds` | Junto con el ID de visitante de Experience Cloud, se pueden usar [ID de cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=es) adicionales y un estado autenticado para cada visitante. |
 
 ## [!DNL Target] ID
 
@@ -77,7 +85,7 @@ El `tntId` generado es `10abf6304b2714215b1fd39a870f01afc.28_20`. Tenga en cuent
 
 ## ID de visitante de Marketing Cloud
 
-`marketingCloudVisitorId` es un identificador universal y persistente que identifica a los visitantes en todas las soluciones del Experience Cloud. Cuando su organización implementa el servicio de ID, este ID le permite identificar el mismo visitante del sitio y sus datos en diferentes soluciones de Experience Cloud como Adobe Target, Adobe Analytics o Adobe Audience Manager. Tenga en cuenta que `marketingCloudVisitorId` es necesario al aprovechar e integrar con Analytics y Audience Manager.
+`marketingCloudVisitorId` es un identificador universal y persistente que identifica a los visitantes en todas las soluciones de Experience Cloud. Cuando su organización implementa el servicio de ID, este ID le permite identificar el mismo visitante del sitio y sus datos en diferentes soluciones de Experience Cloud como Adobe Target, Adobe Analytics o Adobe Audience Manager. Tenga en cuenta que `marketingCloudVisitorId` es necesario al aprovechar e integrar con Analytics y Audience Manager.
 
 ```
 curl -X POST \
@@ -112,7 +120,7 @@ curl -X POST \
 }'
 ```
 
-La llamada de ejemplo anterior muestra cómo se pasa a Adobe Target un(a) `marketingCloudVisitorId` que se recuperó del servicio de ID de Experience Cloud. En este escenario, [!DNL Target] genera un `tntId`, ya que no se pasó a la llamada original, que se asignará al `marketingCloudVisitorId` proporcionado, tal como se ve en la respuesta siguiente.
+La llamada de ejemplo anterior muestra cómo se pasa a Adobe Target un(a) `marketingCloudVisitorId` que se recuperó del servicio de Experience Cloud ID. En este escenario, [!DNL Target] genera un `tntId`, ya que no se pasó a la llamada original, que se asignará al `marketingCloudVisitorId` proporcionado, tal como se ve en la respuesta siguiente.
 
 ## ID de terceros
 

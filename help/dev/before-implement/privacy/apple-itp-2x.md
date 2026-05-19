@@ -4,10 +4,25 @@ description: Obtenga información acerca de  [!DNL Adobe Target]  y el impacto d
 title: ¿Cómo administra  [!DNL Target] la compatibilidad con Apple ITP?
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 30%
+source-wordcount: 681
+ht-degree: 28%
 
 ---
 
@@ -21,11 +36,11 @@ Estas versiones de ITP incluyen las restricciones siguientes:
 | --- | --- |
 | [ITP 2.1](https://webkit.org/blog/8613/intelligent-tracking-prevention-2-1/) | Las cookies limitadas del cliente que se colocan en el explorador mediante la API `document.cookie` con una caducidad de siete días.<br />Publicado el 21 de febrero de 2019. |
 | [ITP 2.2](https://webkit.org/blog/8828/intelligent-tracking-prevention-2-2/) | Se ha reducido drásticamente la caducidad de siete días a un día.<br />Publicado el miércoles, 24 de abril de 2019. |
-| [ITP 2.3](https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/) | Se eliminaron varias soluciones, como usar localStorage o usar JavaScript `Document.referrer property`.<br />Publicado el 23 de septiembre de 2019.Se ha lanzado la función de defensa de encubrimiento <br />CNAME en ITP en Safari 14, macOS Big Sur, Catalina, Mojave, iOS 14 y iPadOS 14. Todas las cookies creadas por una respuesta HTTP cubierta por CNAME de terceros se configurarán para que caduquen en siete días.<br />Anunciado el 12 de noviembre de 2020. |
+| [ITP 2.3](https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/) | Se han eliminado varias soluciones, como usar localStorage o usar JavaScript `Document.referrer property`.<br />Publicada el 23 de septiembre de 2019.<br />Se ha lanzado la función de defensa de ocultamiento CNAME para ITP en Safari 14, macOS Big Sur, Catalina, Mojave, iOS 14 y iPadOS 14. Todas las cookies creadas por una respuesta HTTP cubierta por CNAME de terceros se configurarán para que caduquen en siete días.<br />Anunciado el 12 de noviembre de 2020. |
 
 ## ¿Cuál es el impacto para mí como cliente de [!DNL Target]?
 
-Target proporciona bibliotecas JavaScript para que usted las implemente en sus páginas de modo que [!DNL Target] pueda ofrecer personalización en tiempo real a sus visitantes. Hay tres bibliotecas de JavaScript [!DNL Target] en at.js 1.*x*, at.js 2.*x*, el [!DNL Adobe Experience Cloud Web SDK] que coloca cookies del lado del cliente [!DNL Target] en los navegadores de los visitantes a través de la API `document.cookie`. Como resultado, las cookies de [!DNL Target] se ven afectadas por ITP 2.1, 2.2 y 2.3 de Apple y caducarán pasados siete días (con ITP 2.1) y después de un día (con ITP 2.2 e ITP 2.3).
+Target proporciona bibliotecas JavaScript para que usted las implemente en sus páginas de modo que [!DNL Target] pueda ofrecer personalización en tiempo real a sus visitantes. Hay tres bibliotecas JavaScript [!DNL Target] at.js 1.*x*, at.js 2.*x*, las [!DNL Adobe Experience Cloud Web SDK] que colocan cookies [!DNL Target] del lado del cliente en los exploradores de los visitantes a través de la API `document.cookie`. Como resultado, las cookies de [!DNL Target] se ven afectadas por ITP 2.1, 2.2 y 2.3 de Apple y caducarán pasados siete días (con ITP 2.1) y después de un día (con ITP 2.2 e ITP 2.3).
 
 Apple ITP 2.x afecta a [!DNL Target] en las siguientes áreas:
 

@@ -4,10 +4,20 @@ description: Obtener datos en  [!DNL Target] usando parámetros de página.
 title: ¿Cómo obtengo datos en  [!DNL Target] usando parámetros de página?
 feature: Implementation
 exl-id: 9bb7157e-a938-4150-8a15-c9bf0a0e2296
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/CYhZOFnli-DmREOOZGE2aGNn3x7BJ7uwGA2vfwUSnOk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 32%
+source-wordcount: 397
+ht-degree: 31%
 
 ---
 
@@ -46,7 +56,7 @@ Los datos se envían a [!DNL Target] en tiempo real y se pueden usar en la misma
 
   Además de los caracteres mencionados en el sitio IETF, [!DNL Target] permite los siguientes caracteres en las cadenas de consulta:
 
-  ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers=&quot;true&quot;}
+  ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers="true"}
 
   Todo lo demás debe tener codificación URL. El estándar especifica el siguiente formato ( [https://www.ietf.org/rfc/rfc1738.txt](https://www.ietf.org/rfc/rfc1738.txt) ), como se muestra a continuación:
 

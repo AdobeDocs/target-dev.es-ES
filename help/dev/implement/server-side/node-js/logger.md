@@ -1,11 +1,16 @@
 ---
 title: Inicialice el SDK  [!DNL Adobe Target] Node.js para registrar solicitudes
-description: Obtenga información sobre cómo registrar solicitudes en el SDK de  [!DNL Adobe Target] Node.js.
+description: Obtenga información sobre cómo registrar solicitudes en el SDK  [!DNL Adobe Target] Node.js.
 feature: APIs/SDKs
 exl-id: 5db3e301-47b3-4330-b185-c0c03f72e790
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/tC6xT-eAHOO17h1BK-PwWTBmwg3Dy0Wj8KYrV3W-VR4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: 83
 ht-degree: 2%
 
 ---
@@ -14,7 +19,7 @@ ht-degree: 2%
 
 ## Descripción
 
-Al [inicializar el SDK](initialize-sdk.md), el objeto `options.logger` es un objeto opcional. Sin embargo, para depurar de forma eficaz cuando se produce un problema, se debe proporcionar un objeto `logger` al inicializar el SDK.
+Al [inicializar SDK](initialize-sdk.md), el objeto `options.logger` es un objeto opcional. Sin embargo, para depurar correctamente cuando se produce un problema, se debe proporcionar un objeto `logger` al inicializar SDK.
 
 Se espera que el objeto `logger` tenga un método `debug()` y un método `error()`. Cuando se proporcione un registrador apropiado, como `console`, se registrarán [!DNL Target] solicitudes y respuestas.
 

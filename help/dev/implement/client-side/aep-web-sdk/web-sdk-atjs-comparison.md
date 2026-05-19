@@ -4,9 +4,26 @@ description: Descubra cómo se comparan las características de at.js con  [!DNL
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;preocultando fragmento;vec;Compositor de experiencias basadas en formularios;xdm;audiencias;decisiones;ámbito;esquema;diagrama del sistema;diagrama
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
-source-git-commit: 158c45b824df8d3bd565ac7c654b65f1fd631e2c
+TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: 2303
 ht-degree: 5%
 
 ---
@@ -490,7 +507,7 @@ adobe.target.sendNotifications({
 
 ### Usando [!DNL Platform Web SDK]
 
-Puede realizar un seguimiento de eventos y acciones del usuario llamando al comando `sendEvent`, rellenando el XDM `_experience.decisioning.propositions` de `fieldgroup` y estableciendo `eventType` en uno de los dos valores siguientes:
+Puede realizar un seguimiento de eventos y acciones del usuario llamando al comando `sendEvent`, rellenando el XDM `fieldgroup` de `_experience.decisioning.propositions` y estableciendo `eventType` en uno de los dos valores siguientes:
 
 * `decisioning.propositionDisplay`: Indica la representación de la actividad [!DNL Target].
 * `decisioning.propositionInteract`: indica la interacción de un usuario con la actividad, como un clic del ratón.
@@ -947,7 +964,7 @@ Así es como los datos fluyen a los sistemas cuando el registro de Analytics en 
 
 ### Uso de at.js
 
-En lugar de definir la configuración en la interfaz de usuario de `window.targetGlobalSettings,`, puede anular la configuración de la biblioteca at.js mediante [!DNL Target] o usar las API de REST.
+En lugar de definir la configuración en la interfaz de usuario de [!DNL Target], puede anular la configuración de la biblioteca at.js mediante `window.targetGlobalSettings,` o usar las API de REST.
 
 La anulación debe definirse antes de que se cargue at.js o en Administración > Implementación > Editar la configuración de at.js > Configuración del código > Encabezado de la biblioteca.
 

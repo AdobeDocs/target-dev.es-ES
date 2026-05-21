@@ -13,9 +13,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 7a5aae2510a014c6efaeee63080cde3e7746f91c
 workflow-type: tm+mt
-source-wordcount: 354
+source-wordcount: 350
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. El cliente y el id. de organización se pueden recuperar de [!DNL Adobe Target] navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, como se muestra aquí.
 
-   &lt;!— Insertar image-client-code.png —>
+   <!-- Insert image-client-code.png -->
    ![Página de implementación bajo Administración en Target](assets/asset-rule-artifact-3.png)
 
 ## &#x200B;3. Almacenar y utilizar el artefacto de regla

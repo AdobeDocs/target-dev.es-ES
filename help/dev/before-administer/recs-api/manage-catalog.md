@@ -7,15 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
 TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
-source-wordcount: 905
+source-wordcount: 901
 ht-degree: 0%
 
 ---
@@ -156,7 +153,7 @@ Si recibe un error que indica que no se encontró la entidad, como se muestra en
 
    >[!NOTE]
    >
-   >Si no se especifica ningún entorno explícitamente, Get Entity intenta obtener la entidad solo de [entorno predeterminado](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=es). Si desea extraer de cualquier entorno que no sea el predeterminado, debe especificar el ID del entorno.
+   >Si no se especifica ningún entorno explícitamente, Get Entity intenta obtener la entidad solo de [entorno predeterminado](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Si desea extraer de cualquier entorno que no sea el predeterminado, debe especificar el ID del entorno.
 
 1. Si es necesario, agregue el parámetro `environmentId` y vuelva a enviar la solicitud.
 
@@ -208,4 +205,4 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
 ¡Felicidades! Ahora puede utilizar las API de Recommendations para crear, actualizar, eliminar y obtener detalles sobre las entidades del catálogo. En la siguiente sección, aprenderá a administrar criterios personalizados.
 
-&lt;!— [Siguiente: &quot;Administrar criterios personalizados&quot; >](manage-custom-criteria.md) —>
+<!-- [Next "Manage Custom Criteria" >](manage-custom-criteria.md) -->

@@ -4,9 +4,9 @@ description: Aprenda a integrar  [!DNL Adobe Target] Preocultar SDK para elimina
 title: Preocultar guía de integración de SDK
 feature: Implementation
 hide: true
-source-git-commit: 81818370d32ee8c3f3538e5d8d942f66c13e6a13
+source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,6 @@ Una pequeña biblioteca sincrónica de JavaScript que evita el parpadeo visual c
    ```html
    <script>
      window.PrehideConfig = {
-       org: "your-client-code",
        sdk: "alloy"            // or "atjs" (defaults to "alloy")
      };
    </script>
@@ -64,7 +63,7 @@ Una pequeña biblioteca sincrónica de JavaScript que evita el parpadeo visual c
 >[!IMPORTANT]
 >
 >Prehide SDK debe ejecutarse antes que Alloy/at.js. Si Alloy se carga primero, la página procesa el contenido no personalizado y, a continuación, vuelve a procesarlo. Ese es el parpadeo exacto que esta SDK está diseñada para evitar.
-></br>>No agregue `async` ni `defer` a la etiqueta de script de preocultar SDK. Se requiere una ejecución sincrónica para que la regla de ocultación se inserte antes de que el explorador empiece a mostrar la página.
+></br>>No agregue `async` ni `defer` a la etiqueta de script de SDK de preocultación. Se requiere una ejecución sincrónica para que la regla de ocultación se inserte antes de que el explorador empiece a mostrar la página.
 
 El SDK de ocultación previa debe aparecer antes en el documento que el SDK [!DNL Adobe Target] que limpia después de él. El orden de carga no es negociable:
 
@@ -110,26 +109,13 @@ Existen dos maneras de incluir `prehide.min.js`:
 
 SDK acepta la configuración de dos fuentes, en orden de prioridad. Lee el que esté disponible primero.
 
-### R: Marcadores de posición de tiempo de descarga (sin configuración de tiempo de ejecución)
-
-Cuando descarga `prehide.min.js` desde la interfaz de usuario de Flicker Manager, el servidor sustituye tres marcadores de posición dentro del paquete:
-
-| Marcador | Reemplazado por | Alternativa si no se sustituye |
-| --- | --- | --- |
-| `__FM_CLIENT_CODE__` | Su código de cliente (por ejemplo, `"acmecorp"`) | Lee `window.PrehideConfig.org` |
-| `__FM_TIMEOUT__` | Duración del temporizador de protección en ms (por ejemplo, `"3000"`) | `5000` ms |
-| `__FM_VERSION__` | Versión de SDK (por ejemplo, `"1.0.0"`) | `"0.0.0-dev"` |
-
-Si usa el paquete descargado por la interfaz de usuario, no se necesita ningún bloque `PrehideConfig`. Solo hay que alinear el guión.
-
-### B: tiempo de ejecución `window.PrehideConfig` (integración manual)
+### Tiempo de ejecución `window.PrehideConfig` (integración manual)
 
 Para paquetes autoalojados o sin modificar, declare un objeto de configuración antes de ejecutar el script de ocultación previa:
 
 ```html
 <script>
   window.PrehideConfig = {
-    org: "acmecorp",        // required (or rely on baked-in __FM_CLIENT_CODE__)
     sdk: "alloy"             // optional: "alloy" (default) or "atjs"
   };
 </script>
@@ -137,7 +123,6 @@ Para paquetes autoalojados o sin modificar, declare un objeto de configuración 
 
 | Campo | Tipo | Requerido | Descripción |
 | --- | --- | --- | --- |
-| `org` | string | Sí (a menos que esté cocido) | Su código de cliente de. Se utiliza como segmento de organización de la dirección URL de CDN desde la que se recuperan las reglas de ocultación previa. |
 | `sdk` | `"alloy"` \| `"atjs"` | No | El SDK de Adobe se cargó en la página. Ver [selección de SDK](#sdk-selection). |
 
 ## Selección de SDK {#sdk-selection}
@@ -149,12 +134,16 @@ Para paquetes autoalojados o sin modificar, declare un objeto de configuración 
 | `"alloy"` *(predeterminado)* | `<style id="alloy-prehiding">` | Alinear SDK al personalizar-completar | Estás cargando Alloy / Adobe Web SDK en esta página. |
 | `"atjs"` | `<style id="at-body-style">` | at.js en personalization-complete | Está cargando la biblioteca clásica at.js en esta página. |
 
+>[!NOTE]
+>
+>Para at.js SDK, solo se admiten las versiones 2.x y posteriores.
+
 ### Cómo se establece
 
 ```html
 <!-- For at.js -->
 <script>
-  window.PrehideConfig = { org: "acmecorp", sdk: "atjs" };
+  window.PrehideConfig = { sdk: "atjs" };
 </script>
 <script> /* prehide.min.js inline */ </script>
 <script src="https://cdn.adobe.com/.../at.js"></script>

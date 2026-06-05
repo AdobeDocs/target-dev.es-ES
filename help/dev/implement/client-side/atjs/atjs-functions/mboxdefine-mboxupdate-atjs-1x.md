@@ -1,6 +1,6 @@
 ---
 keywords: mboxDefine, mboxdefine, mbox define, mboxUpdate, mboxupdate, actualización de mbox, at.js, funciones, función, mboxDefine0
-description: Utilice las funciones [!UICONTROL mboxDefine()] y [!UICONTROL mboxUpdate()] de la biblioteca JavaScript  [!DNL Adobe Target] at.js para definir o actualizar un mbox. (at.js 1.x)
+description: Use las funciones [!UICONTROL mboxDefine()] y [!UICONTROL mboxUpdate()] para la biblioteca JavaScript  [!DNL Adobe Target] at.js para definir o actualizar un mbox. (at.js 1.x)
 title: ¿Cómo utilizo las funciones [!UICONTROL mboxDefine()] y [!UICONTROL mboxUpdate()]?
 feature: at.js
 exl-id: 0a7dbea2-1cbd-4a5b-ba68-4c76a88d65c4
@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 202
-ht-degree: 47%
+source-wordcount: 208
+ht-degree: 46%
 
 ---
 

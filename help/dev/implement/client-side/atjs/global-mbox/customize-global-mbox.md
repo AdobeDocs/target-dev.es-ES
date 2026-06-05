@@ -1,6 +1,6 @@
 ---
 keywords: mbox global, personalizar mbox global, editar at.js, at.js, implementar at.js
-description: Aprenda a personalizar un mbox global para at.js en la página [!UICONTROL Administration]-[!UICONTROL Implementation] de  [!DNL Adobe Target].
+description: Aprenda a personalizar un mbox global para at.js en la página [!UICONTROL Administración]-[!UICONTROL Implementación] en [!DNL Adobe Target].
 title: ¿Cómo puedo personalizar un mbox global?
 feature: at.js
 exl-id: f7809c3d-6e77-4bbe-8da3-4ab0a448c801
@@ -18,8 +18,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 209
-ht-degree: 17%
+source-wordcount: 227
+ht-degree: 16%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 17%
 
 Información para personalizar un mbox global de [!DNL Adobe Target] para at.js.
 
-1. Haga clic en **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
+1. Haga clic en **[!UICONTROL Administración]** > **[!UICONTROL Implementación]**.
 
-1. Deshabilite **[!UICONTROL Page load enabled (Auto create global mbox)]** y luego agregue el nombre del mbox global personalizado que desea usar para publicar actividades de [!DNL Target].
+1. Deshabilite **[!UICONTROL Carga de página habilitada (Crear automáticamente mbox global)]** y luego agregue el nombre del mbox global personalizado que desea usar para publicar actividades de [!DNL Target].
 
 >[!WARNING]
 >
@@ -52,4 +52,4 @@ Este mbox global personalizado también se usa para el rastreo de clics.
 
 >[!WARNING]
 >
->Todas las actividades de su cuenta se sincronizan con este mbox. Asegúrese de que el mbox global esté presente en el sitio para que las actividades de sigan funcionando. Asegúrese de editar y volver a guardar las actividades afectadas que se crearon con el [!UICONTROL Visual Experience Composer] (VEC) que se sincronizan con este mbox. No es necesario volver a guardar las actividades creadas en [!UICONTROL Form-Based Experience Composer] o mediante API.
+>Todas las actividades de su cuenta se sincronizan con este mbox. Asegúrese de que el mbox global esté presente en el sitio para que las actividades de sigan funcionando. Asegúrese de editar y volver a guardar las actividades afectadas que se crearon con el [!UICONTROL Compositor de experiencias visuales] (VEC) que se sincronizan con este mbox. No es necesario volver a guardar las actividades creadas en [!UICONTROL Compositor de experiencias basadas en formularios] ni a través de la API.

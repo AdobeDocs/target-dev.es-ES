@@ -16,7 +16,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1316
+source-wordcount: 1321
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 La API de modelos, también denominada API de Lista de bloqueados, permite a los usuarios ver y administrar la lista de características utilizadas en los modelos de aprendizaje automático para las actividades [!UICONTROL Automated Personalization] (AP) y [!DNL Auto-Target] (AT). Si un usuario desea excluir una función de la utilización por parte de los modelos para actividades AP o AT, puede utilizar la API de modelos para añadir esa función a la &quot;lista de bloqueados&quot;.
 
-Un(a) **[!UICONTROL blocklist]** define el conjunto de características que [!DNL Adobe Target] excluirá de sus modelos de aprendizaje automático. Para obtener más información sobre las características, consulte [Datos utilizados por [!DNL Target] algoritmos de aprendizaje automático](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=es).
+Una **[!UICONTROL lista de bloqueados]** define el conjunto de características que [!DNL Adobe Target] excluirá de sus modelos de aprendizaje automático. Para obtener más información sobre las características, consulte [Datos utilizados por [!DNL Target] algoritmos de aprendizaje automático](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=es).
 
 Las listas de bloqueados se pueden definir por actividad (nivel de actividad) o para todas las actividades de una cuenta de [!DNL Target] (nivel global).
 
@@ -212,7 +212,7 @@ En el ejemplo que se muestra aquí, el usuario está bloqueando dos característ
 
 ![Paso 3](assets/models-api-step-3.png)
 
-Tenga en cuenta que después de la inclusión en la lista de bloqueados de una característica, se recomienda que compruebe la lista de bloqueados actualizada realizando de nuevo el [Paso 2](#step2) (GET la lista de bloqueados). Compruebe que los resultados se muestran según lo esperado (compruebe que los resultados incluyen las funciones añadidas desde la última solicitud de PUT).
+Tenga en cuenta que después de la inclusión en la lista de bloqueados de una característica, se recomienda que compruebe la lista de bloqueados actualizada realizando de nuevo el [Paso 2](#step2) (OBTENGA la lista de bloqueados). Compruebe que los resultados aparecen según lo esperado (compruebe que los resultados incluyen las funciones añadidas desde la última petición PUT).
 
 ## Paso 4: (Opcional) Desbloquear {#step4}
 
@@ -246,7 +246,7 @@ En el ejemplo que se muestra a continuación, el usuario está borrando su lista
 
 ![Paso 4](assets/models-api-step-4.png)
 
-Como siempre, después de modificar la lista de bloqueados, se recomienda que vuelva a realizar el [Paso 2](#step2) (GET comprueba la lista de bloqueados para comprobar que la lista incluye las características esperadas). En el ejemplo que se muestra aquí, el usuario comprueba que su lista de bloqueados está vacía.
+Como siempre, después de modificar la lista de bloqueados, se recomienda que realice de nuevo el [Paso 2](#step2) (OBTENGA la lista de bloqueados para comprobar que la lista incluye las características esperadas). En el ejemplo que se muestra aquí, el usuario comprueba que su lista de bloqueados está vacía.
 
 ![Paso 4b](assets/models-api-step-4b.png)
 
@@ -293,7 +293,7 @@ En la solicitud de ejemplo que se muestra arriba, el usuario está bloqueando do
 
 Pregunta: ¿No es redundante el ejemplo de código anterior?
 
-Respuesta: Sí. Es redundante bloquear funciones con valores que comienzan por &quot;AAM&quot;, a la vez que bloquea todas las funciones cuya fuente sea &quot;AAM&quot;. El siguiente resultado es que todas las funciones procedentes de AAM (segmentos de Experience Cloud) se bloquearán. Por lo tanto, si el objetivo es bloquear todas las funciones de los segmentos de Experience Cloud, no es necesario especificar individualmente determinadas funciones que comienzan con &quot;AAM&quot;, como en el ejemplo anterior.
+Respuesta: Sí. Es redundante bloquear funciones con valores que comienzan por &quot;AAM&quot;, a la vez que bloquea todas las funciones cuya fuente sea &quot;AAM&quot;. El siguiente resultado es que todas las funciones procedentes de AAM (segmentos de Experience Cloud) se bloquearán. Por lo tanto, si el objetivo es bloquear todas las funciones de los segmentos de Experience Cloud, no es necesario especificar individualmente determinadas funciones a partir de &quot;AAM&quot;, como en el ejemplo anterior.
 
 Paso final: Ya sea a nivel de actividad o a nivel global, se recomienda comprobar la lista de bloqueados después de modificarla para asegurarse de que contiene los valores esperados. Para ello, cambie `PUT` por `GET`.
 

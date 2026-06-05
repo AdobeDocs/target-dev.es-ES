@@ -13,7 +13,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 246
+source-wordcount: 249
 ht-degree: 4%
 
 ---
@@ -70,7 +70,7 @@ const prefetchMboxesRequest = {
 const targetResponse = await targetClient.getOffers({ request: prefetchMboxesRequest });
 ```
 
-Una respuesta correcta contendrá un objeto de respuesta [!UICONTROL Target Delivery API], que incluye contenido recuperado previamente para los mboxes solicitados. Un objeto `targetResponse.response` de ejemplo puede aparecer de la siguiente manera:
+Una respuesta correcta contendrá un objeto de respuesta [!UICONTROL Target Delivery API], que contiene contenido recuperado previamente para los mboxes solicitados. Un objeto `targetResponse.response` de ejemplo puede aparecer de la siguiente manera:
 
 ### Node.js
 

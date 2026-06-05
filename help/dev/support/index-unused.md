@@ -3,8 +3,8 @@ title: 'Asistencia: Adobe Analytics'
 description: Esta es la página de soporte de Adobe Analytics
 source-git-commit: f139f5b910b5d23ea8cf4ee5b00ea5f6fd3c39b2
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 6%
+source-wordcount: '97'
+ht-degree: 8%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Aprenda dónde hacer preguntas, informar de errores, realizar solicitudes de funciones y activar discusiones.
 
-## Comentarios 
+## Comentarios
 
 Tienes un lugar donde empezar las discusiones.
 

@@ -17,8 +17,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 347
-ht-degree: 33%
+source-wordcount: 363
+ht-degree: 31%
 
 ---
 
@@ -32,12 +32,12 @@ Como seguridad adicional, puede requerir que la llamada a la API de actualizaci�
 
 **Para requerir autenticación y generar un token de acceso mediante la interfaz de usuario de [!DNL Target]:**
 
-1. Haga clic en **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
-1. En **[!UICONTROL Profile API]**, deslice el conmutador **[!UICONTROL Require Authentication]** a la posición habilitada o deshabilitada.
+1. Haga clic en **[!UICONTROL Administración]** > **[!UICONTROL Implementación]**.
+1. En la **[!UICONTROL API de perfil]**, deslice la opción **[!UICONTROL Requerir autenticación]** a la posición habilitada o deshabilitada.
 
    ![imagen alt](assets/profile_api_settings.png)
 
-1. (Condicional) Si habilitó el requisito de autenticación, haga clic en **[!UICONTROL Generate New Profile Authentication Token]**.
+1. (Condicional) Si habilitó el requisito de autenticación, haga clic en **[!UICONTROL Generar nuevo token de autenticación de perfil]**.
 
    ![imagen alt](assets/profile_api_settings_2.png)
 
@@ -59,7 +59,7 @@ También puede generar un token de autentificación de perfil mediante API. Para
 
 1. Copie el token e inclúyalo en el encabezado de la solicitud con el formato: &quot;Autorización&quot; : &quot;Portador&quot;.
 
-1. Haga clic en **[!UICONTROL Generate New Profile Authentication Token]** para regenerar el token según sea necesario.
+1. Haga clic en **[!UICONTROL Generar nuevo token de autenticación de perfil]** para volver a generar el token según sea necesario.
 
 >[!WARNING]
 >

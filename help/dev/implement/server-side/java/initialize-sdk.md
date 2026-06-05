@@ -1,6 +1,6 @@
 ---
 title: Inicialice Java SDK mediante el método create
-description: Aprenda a utilizar el método create para inicializar Java SDK e instanciar [!UICONTROL TargetClient] para realizar llamadas a  [!DNL Adobe Target] para experimentos y experiencias personalizadas.
+description: Aprenda a usar el método create para inicializar Java SDK e instanciar [!UICONTROL TargetClient] para hacer llamadas a [!DNL Adobe Target] para experimentos y experiencias personalizadas.
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
 TQID: https://experienceleague.adobe.com/B1Ev7NnjlFMg4VoicF6Z4whyqfJYDjCwPeYRKEk2viY
@@ -12,8 +12,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 460
-ht-degree: 17%
+source-wordcount: 471
+ht-degree: 16%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 17%
 
 ## Descripción
 
-Utilice el método `create` para inicializar Java SDK e instanciar [!UICONTROL Target Client] para realizar llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
+Utilice el método `create` para inicializar Java SDK e instanciar el [!UICONTROL cliente de Target] para hacer llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
 
 ## Método
 
-[!UICONTROL TargetClient] se creó con `TargetClient.create`.
+[!UICONTROL TargetClient] se ha creado con `TargetClient.create`.
 
 ### crear
 
@@ -45,8 +45,8 @@ ClientConfigBuilder ClientConfig.builder()
 
 | Nombre | Tipo | Requerido | Valor predeterminado | Descripción |
 | --- | --- | --- | --- | --- |
-| cliente | Cadena | Sí | Ninguna | [!UICONTROL Target Client Id] |
-| organizationId | Cadena | Sí | Ninguna | [!UICONTROL Experience Cloud Organization ID] |
+| cliente | Cadena | Sí | Ninguna | [!UICONTROL Id. de cliente de Target] |
+| organizationId | Cadena | Sí | Ninguna | [!UICONTROL ID de organización de Experience Cloud] |
 | connectTimeout | Número | No | 10000 | Tiempo de espera de conexión para todas las solicitudes en milisegundos |
 | socketTimeout | Número | No | 10000 | Tiempo de espera de socket para todas las solicitudes en milisegundos |
 | maxConnectionsPerHost | Número | No | 100 | Número máximo de conexiones por host [!DNL Target] |

@@ -23,7 +23,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2303
+source-wordcount: 2308
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ Este artículo proporciona información general sobre las diferencias entre la b
 
 ### Instalación de at.js
 
-[!DNL Adobe] permite que los clientes descarguen la biblioteca directamente desde la ficha [!DNL Adobe Experience Cloud], [!UICONTROL Implementation]. La biblioteca at.js se personaliza con opciones que el cliente tiene como: clientCode, imsOrgId, etc.
+[!DNL Adobe] permite que los clientes descarguen la biblioteca directamente desde la ficha [!DNL Adobe Experience Cloud], [!UICONTROL Implementación]. La biblioteca at.js se personaliza con opciones que el cliente tiene como: clientCode, imsOrgId, etc.
 
 ### Instalación de Web SDK
 
@@ -319,7 +319,7 @@ adobe.target.getOffers({
 
 ### Usando [!DNL Platform Web SDK]
 
-Puede recuperar actividades basadas en [!UICONTROL Form-Based Composer] usando el comando `sendEvent` y pasando los nombres de mbox bajo la opción `decisionScopes`. El comando `sendEvent` devuelve una promesa que se resuelve con un objeto que contiene las actividades/propuestas solicitadas:
+Puede recuperar actividades basadas en [!UICONTROL Compositor basado en formularios] usando el comando `sendEvent` y pasando los nombres de mbox bajo la opción `decisionScopes`. El comando `sendEvent` devuelve una promesa que se resuelve con un objeto que contiene las actividades/propuestas solicitadas:
 
 Este fragmento de código es el aspecto de la matriz `propositions`:
 
@@ -670,7 +670,7 @@ alloy("sendEvent", {
 
 ### Uso de at.js
 
-Usar la función `adobe.target.triggerView`. Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. La función `adobe.target.triggerView()` debe implementarse para que las aplicaciones de una sola página (SPA) utilicen el [!UICONTROL Visual Experience Composer] (VEC) para crear actividades [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT). Si `adobe.target.triggerView()` no está implementado en el sitio, el VEC no se puede usar para SPA.
+Usar la función `adobe.target.triggerView`. Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. La función `adobe.target.triggerView()` debe implementarse para aplicaciones de una sola página (SPA) a fin de usar el [!UICONTROL Compositor de experiencias visuales] (VEC) para crear actividades de [!UICONTROL Prueba A/B] y [!UICONTROL Segmentación de experiencias] (XT). Si `adobe.target.triggerView()` no está implementado en el sitio, el VEC no se puede usar para SPA.
 
 **Ejemplo**
 
@@ -682,7 +682,7 @@ adobe.target.triggerView("homeView")
 
 ### Usando [!DNL Platform Web SDK]
 
-Para almacenar en déclencheur o señalar una aplicación de una sola página [!UICONTROL View Change], establezca la propiedad `web.webPageDetails.viewName` en la opción `xdm` del comando `sendEvent`. [!DNL Platform Web SDK] comprueba la caché de la vista; si hay ofertas para `viewName` especificado en `sendEvent`, las ejecuta y envía un evento de notificación de visualización.
+Para almacenar en déclencheur o señalar una aplicación de una sola página [!UICONTROL Ver cambio], establezca la propiedad `web.webPageDetails.viewName` en la opción `xdm` del comando `sendEvent`. [!DNL Platform Web SDK] comprueba la caché de la vista; si hay ofertas para `viewName` especificado en `sendEvent`, las ejecuta y envía un evento de notificación de visualización.
 
 **Ejemplo**
 
@@ -701,7 +701,7 @@ alloy("sendEvent", {
 
 [Más información](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
 
-## Cómo aprovechar [!UICONTROL Response Tokens]
+## Cómo aprovechar [!UICONTROL Tokens de respuesta]
 
 El contenido de Personalization devuelto desde [!DNL Target] incluye [tokens de respuesta](https://experienceleague.adobe.com/es/docs/target/using/administer/response-tokens). Los tokens de respuesta son detalles acerca de la actividad, oferta, experiencia, perfil de usuario, información geográfica y más. Estos detalles se pueden compartir con herramientas de terceros o utilizar para la depuración. Los tokens de respuesta se pueden configurar en la interfaz de usuario [!DNL Target].
 

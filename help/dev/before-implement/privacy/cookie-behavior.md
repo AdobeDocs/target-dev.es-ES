@@ -34,7 +34,7 @@ El comportamiento de la cookie depende de si es una cookie de origen, una cookie
 
 >[!NOTE]
 >
->Para obtener información detallada sobre las distintas cookies que usa [!DNL Target], consulte [[!DNL Adobe Target] cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-target.html?lang=es){target=_blank} en la *Guía de componentes de la interfaz central de Experience Cloud*.
+>Para obtener información detallada sobre las diferentes cookies que usa [!DNL Target], consulte [[!DNL Adobe Target] cookies](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-target.html?lang=es){target=_blank} en la *Guía de componentes de la interfaz central de Experience Cloud*.
 >
 >Este tema contiene información sobre `mboxSession` y `mboxPC`. Las prácticas recomendadas de implementación recomiendan que no vincule ni almacene información confidencial con los datos de cookies: `mboxSession` o `mboxPC`.
 

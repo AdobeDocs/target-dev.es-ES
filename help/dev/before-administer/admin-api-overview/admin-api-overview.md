@@ -42,7 +42,7 @@ Todas las API tienen una versión asociada. Es importante proporcionar la versi�
 
 Si la solicitud contiene una carga útil (POST o PUT), se utiliza el encabezado `Content-Type` de la solicitud para especificar la versión.
 
-Si la solicitud no contiene una carga útil (GET, DELETE o OPTIONS), se utiliza el encabezado `Accept` para especificar la versión.
+Si la solicitud no contiene una carga útil (GET, DELETE u OPTIONS), se utiliza el encabezado `Accept` para especificar la versión.
 
 Si no se proporciona una versión, la llamada predeterminada será V1 (application/vnd.adobe.target.v1+json).
 

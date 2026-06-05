@@ -19,8 +19,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 352
-ht-degree: 3%
+source-wordcount: 424
+ht-degree: 1%
 
 ---
 
@@ -38,10 +38,10 @@ Si no hay una cookie [!DNL Target] (mbox), se le considerará un visitante nuevo
 
 Versión 84.0.4147,105
 
-1. Haga clic en el menú **[!UICONTROL Chrome]** > **[!UICONTROL Preferences]**.
-1. Haga clic en la ficha **[!UICONTROL Privacy and Security]**.
-1. Haga clic en **[!UICONTROL Cookies and other site data]**.
-1. Haga clic en **[!UICONTROL See all cookies and site data]**.
+1. Haga clic en el menú **[!UICONTROL Chrome]** > **[!UICONTROL Preferencias]**.
+1. Haga clic en la ficha **[!UICONTROL Privacidad y seguridad]**.
+1. Haga clic en **[!UICONTROL Cookies y otros datos del sitio]**.
+1. Haga clic en **[!UICONTROL Ver todas las cookies y los datos del sitio]**.
 1. Expanda la sección `adobe.com`, seleccione la cookie **mbox** y haga clic en el icono Eliminar (X).
 
 ## Eliminar la cookie [!DNL Target] de Mozilla Firefox
@@ -50,10 +50,10 @@ Versión 79.0
 
 ### Eliminar todas las cookies asociadas con `adobe.com`
 
-1. Haga clic en el menú **[!UICONTROL Firefox]** > **[!UICONTROL Preferences]**.
-1. Haga clic en la ficha **[!UICONTROL Privacy and Security]**.
-1. En **&#x200B; Cookies y datos del sitio*, haga clic en &#x200B;** [!UICONTROL Manage Data]**.
-1. Seleccione el sitio `adobe.com` y luego haga clic en **[!UICONTROL Remove Selected]**.
+1. Haz clic en el menú de **[!UICONTROL Firefox]** > **[!UICONTROL Preferencias]**.
+1. Haga clic en la ficha **[!UICONTROL Privacidad y seguridad]**.
+1. En **&#x200B; Cookies y datos del sitio*, haga clic en &#x200B;** [!UICONTROL Administrar datos]**.
+1. Seleccione el sitio `adobe.com` y luego haga clic en **[!UICONTROL Quitar selección]**.
 
 >[!WARNING]
 >
@@ -61,20 +61,20 @@ Versión 79.0
 
 ### Eliminar una cookie individual (mbox)
 
-1. En Firefox, haga clic en **[!UICONTROL Tools]** > **[!UICONTROL Web Developer]** > **[!UICONTROL Storage Inspector]**.
-1. Haga clic en la ficha **[!UICONTROL Advanced]**.
+1. En Firefox, haga clic en **[!UICONTROL Herramientas]** > **[!UICONTROL Desarrollador web]** > **[!UICONTROL Inspector de almacenamiento]**.
+1. Haga clic en la ficha **[!UICONTROL Avanzadas]**.
 1. Vaya a la página web que contiene la cookie que desea eliminar.
-1. Expanda la sección **[!UICONTROL Cookies]** y haga clic en `https://experience.adobe.com`.
-1. Haga clic con el botón derecho en la cookie **[!UICONTROL mbox]** y luego haga clic en **[!UICONTROL Delete]**.
+1. Expanda la sección **[!UICONTROL Cookies]** y luego haga clic en `https://experience.adobe.com`.
+1. Haga clic con el botón derecho en la cookie **[!UICONTROL mbox]** y luego haga clic en **[!UICONTROL Eliminar]**.
 
 ## Eliminar la cookie [!DNL Target] de Microsoft Edge
 
 Versión 84.0.522.52
 
-1. Haga clic en el menú **[!UICONTROL Microsoft Edge]** > **[!UICONTROL Preferences]**.
-1. Haga clic en la ficha **[!UICONTROL Site Permissions]**.
-1. Haga clic en **[!UICONTROL Cookies and site data]**.
-1. Haga clic en **[!UICONTROL See all cookies and site data]**.
+1. Haga clic en el menú **[!UICONTROL Microsoft Edge]** > **[!UICONTROL Preferencias]**.
+1. Haga clic en la ficha **[!UICONTROL Permisos del sitio]**.
+1. Haga clic en **[!UICONTROL Cookies y datos del sitio]**.
+1. Haga clic en **[!UICONTROL Ver todas las cookies y los datos del sitio]**.
 1. Expanda la sección `adobe.com`, seleccione la cookie **mbox** y haga clic en el icono Eliminar (X).
 
 ## Eliminar la cookie [!DNL Target] de Apple Safari
@@ -83,10 +83,10 @@ Versión 13.1.2
 
 ### Eliminar todas las cookies asociadas con `adobe.com`
 
-1. Haga clic en el menú **[!UICONTROL Safari]** > **[!UICONTROL Preferences]**.
-1. Haga clic en la ficha **[!UICONTROL Privacy]**.
-1. Haga clic en **[!UICONTROL Manage Website Data]**.
-1. Seleccione los sitios para las cookies que desea eliminar y luego haga clic en **[!UICONTROL Remove]**.
+1. Haga clic en el menú **[!UICONTROL Safari]** > **[!UICONTROL Preferencias]**.
+1. Haga clic en la ficha **[!UICONTROL Privacidad]**.
+1. Haga clic en **[!UICONTROL Administrar datos del sitio web]**.
+1. Seleccione los sitios para las cookies que desea eliminar y luego haga clic en **[!UICONTROL Eliminar]**.
 
 >[!WARNING]
 >
@@ -94,11 +94,11 @@ Versión 13.1.2
 
 ### Eliminar una cookie individual (mbox)
 
-1. Haga clic en el menú **[!UICONTROL Safari]** > **[!UICONTROL Preferences]**.
-1. Haga clic en la ficha **[!UICONTROL Advanced]**.
-1. Seleccione la opción **[!UICONTROL Show Develop menu in menu bar]**.
+1. Haga clic en el menú **[!UICONTROL Safari]** > **[!UICONTROL Preferencias]**.
+1. Haga clic en la ficha **[!UICONTROL Avanzadas]**.
+1. Seleccione la opción **[!UICONTROL Mostrar menú de desarrollo en la barra de menús]**.
 1. Vaya a la página web que contiene la cookie que desea eliminar.
-1. Haga clic en el menú **[!UICONTROL Develop]** > **[!UICONTROL Show Web Inspector]**.
-1. Haga clic en la ficha **[!UICONTROL Storage]**.
-1. Expanda la sección **[!UICONTROL Cookies]** y haga clic en `www.adobe.com`.
-1. Haga clic con el botón derecho en la cookie **mbox** y luego haga clic en **[!UICONTROL Delete]**.
+1. Haga clic en el menú **[!UICONTROL Desarrollar]** > **[!UICONTROL Mostrar inspector web]**.
+1. Haga clic en la ficha **[!UICONTROL Almacenamiento]**.
+1. Expanda la sección **[!UICONTROL Cookies]** y luego haga clic en `www.adobe.com`.
+1. Haga clic con el botón derecho en la cookie **mbox** y luego haga clic en **[!UICONTROL Eliminar]**.

@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.applyOffers, applyOffers, applyoffers, apply oferta, at.js, funciones, función,
-description: Utilice la función [!UICONTROL adobe.target.applyOffers()] para la biblioteca JavaScript  [!DNL Adobe Target] at.js para aplicar varias ofertas en la respuesta. (at.js 2.x)
-title: ¿Cómo se utiliza la función [!UICONTROL adobe.target.applyOffers()]?
+description: Utilice la función [!UICONTROL adobe.target.applyOffers()] para que la biblioteca JavaScript  [!DNL Adobe Target] at.js aplique varias ofertas en la respuesta. (at.js 2.x)
+title: ¿Cómo utilizo la función [!UICONTROL adobe.target.applyOffers()]?
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
 TQID: https://experienceleague.adobe.com/9WIJvPZIlrtLkv-vv-HRkctgwHn3nX-jrE4-4usXW0Y
@@ -18,7 +18,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 820
+source-wordcount: 825
 ht-degree: 78%
 
 ---
@@ -82,7 +82,7 @@ Esta función permite aplicar más de una oferta recuperada por `adobe.target.ge
 | Respuesta > Ejecutar > pageLoad > Seguimiento | El objeto que contiene todos los datos de seguimiento de la solicitud pageLoad. |
 | Respuesta > Ejecutar > pageLoad > Analytics > Carga | [!DNL Analytics] carga para la integración de cliente que debería enviarse a [!DNL Analytics] después de aplicar el contenido de carga de página. (Consulte la sección Campañas habilitadas para A4T). |
 
-## Ejemplo de llamada de [!UICONTROL applyOffers()]
+## Ejemplo de llamada [!UICONTROL applyOffers()]
 
 ```javascript {line-numbers="true"}
 adobe.target.applyOffers({response:{

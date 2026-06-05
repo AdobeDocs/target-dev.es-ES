@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 310
+source-wordcount: 316
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ No, no necesita at.js para utilizar los SDK móviles. at.js es la biblioteca de 
 
 ## ¿Es móvil [!DNL Target] una funcionalidad de [!DNL Adobe Target] SKU de producto premium solamente?
 
-No. Para clientes de [!DNL Adobe Target Standard], puede usar nuestros SDK móviles para actividades de [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT) solo con el complemento de aplicación móvil [!DNL Target Standard]. Si quieres usar [!UICONTROL Recommendations] o funciones con tecnología de IA en la aplicación móvil, necesitas una licencia de [Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=es#premium).
+No. Para clientes de [!DNL Adobe Target Standard], solo puedes usar nuestros SDK móviles para las actividades de [!UICONTROL Prueba A/B] y [!UICONTROL Segmentación de experiencias] (XT) con el complemento de aplicación móvil [!DNL Target Standard]. Si quieres usar [!UICONTROL Recommendations] o funciones con tecnología de IA en la aplicación móvil, necesitas una licencia de [Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=es#premium).
 
 ## ¿Existe una integración de aplicación móvil entre [!DNL Adobe Experience Manager] (AEM) y [!DNL Target] actividades móviles?
 

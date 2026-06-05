@@ -18,7 +18,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
-source-wordcount: 1366
+source-wordcount: 1284
 ht-degree: 1%
 
 ---
@@ -57,12 +57,12 @@ Para crear recomendaciones que se puedan usar con la API de entrega, use [Compos
 1. En primer lugar, cree y guarde un diseño basado en JSON para utilizarlo en su recomendación. Para obtener el archivo JSON de muestra, además de información básica sobre cómo se pueden devolver las respuestas JSON al configurar una actividad basada en formularios, consulte la documentación de [Creación de diseños de recomendación](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=es). En este ejemplo, el diseño se denomina *JSON simple.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
-1. En Target, vaya a **[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]** y, a continuación, seleccione **[!UICONTROL Form]**.
+1. En Target, vaya a **[!UICONTROL Actividades]** > **[!UICONTROL Crear actividad]** > **[!UICONTROL Recommendations]** y luego seleccione **[!UICONTROL Formulario]**.
 
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
-1. Seleccione una propiedad y haga clic en **[!UICONTROL Next]**.
-1. Defina la ubicación en la que desea que los usuarios reciban la respuesta de la recomendación. El ejemplo siguiente utiliza una ubicación denominada *api_charter*. Seleccione el diseño basado en JSON, creado anteriormente, con el nombre *JSON simple.*
+1. Seleccione una propiedad y haga clic en **[!UICONTROL Siguiente]**.
+1. Defina la ubicación en la que desea que los usuarios reciban la respuesta de la recomendación. El ejemplo siguiente utiliza una ubicación denominada *api_charter*. Seleccione su diseño basado en JSON, creado anteriormente, con el nombre *JSON simple.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
 1. Guarde y active la recomendación. Generará resultados. [Una vez que los resultados estén listos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=es), puede usar la API de envío para recuperarlos.
 
@@ -72,9 +72,9 @@ La sintaxis de la [API de envío](/help/dev/implement/delivery-api/overview.md) 
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. Tenga en cuenta que el código de cliente es obligatorio. Como recordatorio, el código de cliente se puede encontrar en Adobe Target navegando a **[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**. Observe el valor **Código de cliente** en la sección **Token de API de recomendación**.
+1. Tenga en cuenta que el código de cliente es obligatorio. Como recordatorio, el código de cliente se puede encontrar en Adobe Target navegando a **[!UICONTROL Recommendations]** > **[!UICONTROL Configuración]**. Observe el valor **Código de cliente** en la sección **Token de API de recomendación**.
    ![client-code.png](assets/client-code.png)
-1. Una vez que tenga el código de cliente de, cree la llamada de API de envío. El ejemplo siguiente comienza con **[!UICONTROL Web Batched Mboxes Delivery API Call]** proporcionado en la [colección Postman de la API de entrega](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection), y realiza las modificaciones pertinentes. Por ejemplo:
+1. Una vez que tenga el código de cliente de, cree la llamada de API de envío. El ejemplo siguiente comienza con la **[!UICONTROL llamada a la API de entrega de mboxes web por lotes]** proporcionada en la [colección Postman de la API de entrega](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection), y realiza las modificaciones pertinentes. Por ejemplo:
    * los objetos **browser** y **address** se quitaron de **Body**, ya que no son necesarios para los casos de uso que no son de HTML
    * *api_charter* aparece como el nombre de la ubicación en este ejemplo
    * se especifica entity.id, ya que esta recomendación se basa en la Similitud de contenido, que requiere que se pase a Target una clave de elemento actual.

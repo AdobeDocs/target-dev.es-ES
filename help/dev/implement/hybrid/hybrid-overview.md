@@ -18,13 +18,13 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 116
+source-wordcount: 119
 ht-degree: 7%
 
 ---
 
 # Implementación híbrida
 
-[!DNL Adobe Target] ofrece un modelo de implementación híbrido único para la personalización: mezcla implementaciones del lado del cliente y del lado del servidor. Este modelo híbrido permite a los usuarios no técnicos crear un experimento o una actividad de personalización con el WYSIWYG [!UICONTROL Visual Experience Composer] (VEC), así como hacer que la experiencia se ejecute, envíe y procese en el servidor para obtener un buen rendimiento de entregas.
+[!DNL Adobe Target] ofrece un modelo de implementación híbrido único para la personalización: mezcla implementaciones del lado del cliente y del lado del servidor. Este modelo híbrido permite a los usuarios no técnicos crear un experimento o una actividad de personalización con el [!UICONTROL Compositor de experiencias visuales] (VEC) de WYSIWYG, así como hacer que la experiencia se ejecute, envíe y procese en el servidor para obtener un buen rendimiento de entregas.
 
 Para obtener más información, consulte [Implementación híbrida de Adobe](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=es) en [Tutoriales de Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=es).

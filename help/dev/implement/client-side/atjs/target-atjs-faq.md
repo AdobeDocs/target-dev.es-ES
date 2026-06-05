@@ -19,8 +19,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2981
-ht-degree: 66%
+source-wordcount: 2994
+ht-degree: 65%
 
 ---
 
@@ -123,7 +123,7 @@ Cargar at.js de forma asíncrona es un modo excelente de evitar el bloqueo de pr
 
 Puede evitar el parpadeo utilizando un fragmento de ocultamiento previo que oculta la página (o partes especificadas) y luego lo revela después de que at.js y la solicitud global se hayan cargado. El fragmento debe añadirse antes de cargar at.js.
 
-Si va a implementar at.js a través de una implementación asíncrona de [!UICONTROL Adobe Experience Platform], asegúrese de incluir el fragmento de ocultamiento previo directamente en las páginas, antes de implementar [!DNL Target] mediante código incrustado de [!UICONTROL Adobe Experience Platform].
+Si va a implementar at.js a través de una implementación asincrónica de [!UICONTROL Adobe Experience Platform], asegúrese de incluir el fragmento de ocultamiento previo directamente en las páginas, antes de implementar [!DNL Target] mediante el código incrustado de [!UICONTROL Adobe Experience Platform].
 
 Si implementa at.js a través de una implementación sincrónica de DTM, el fragmento de ocultamiento previo se puede añadir a través de una regla de carga de página activada en la parte superior de la misma.
 
@@ -131,7 +131,7 @@ Para obtener más información, consulte [Cómo gestiona at.js el parpadeo](/hel
 
 ## ¿at.js es compatible con la integración de [!DNL Adobe Experience Manager] (Experience Manager)?
 
-[!DNL Adobe Experience Manager] 6.2 con FP-11577 (o posterior) ahora admite implementaciones de at.js con su integración [!UICONTROL Adobe Target Cloud Services].
+[!DNL Adobe Experience Manager] 6.2 con FP-11577 (o posterior) ahora admite implementaciones de at.js con su integración de [!UICONTROL Adobe Target Cloud Services].
 
 ## ¿Cómo puedo evitar el parpadeo en la carga de la página al utilizar at.js?
 
@@ -159,7 +159,7 @@ No, si el dominio cruzado se define en x-solamente y Safari tiene deshabilitadas
 
 Para admitir visitantes de Safari, se &quot;deshabilitaría&quot; (solo establece una cookie de origen) o &quot;habilitaría&quot; (solo establece una cookie de origen en Safari, mientras que establece cookies de origen y de terceros en otros exploradores) un mejor dominio X.
 
-## ¿Puedo usar Target [!UICONTROL Visual Experience Composer] (VEC) en mis aplicaciones de una sola página?
+## ¿Puedo usar el [!UICONTROL Compositor de experiencias visuales] (VEC) de Target en mis aplicaciones de una sola página?
 
 Sí, puede utilizar el VEC para su SPA si usa at.js 2.x. Para obtener más información, consulte [Compositor de experiencias visuales de una sola página (SPA)](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=es).
 

@@ -30,7 +30,7 @@ Las audiencias se pueden usar para segmentar las actividades de experimentación
 ### Biblioteca [!DNL Target]
 
 Para obtener más información, consulte [[!DNL Target] Biblioteca](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html?lang=es).
-&#x200B;
+palo de golf
 * Conducido por Bing
 * Explorador Chrome
 * Explorador Firefox

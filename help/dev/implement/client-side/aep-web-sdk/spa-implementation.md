@@ -17,7 +17,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1747
+source-wordcount: 1836
 ht-degree: 2%
 
 ---
@@ -38,43 +38,43 @@ Estas son algunas ventajas de usar [!DNL Adobe Experience Platform Web SDK] para
 
 * Capacidad de almacenar en caché todas las ofertas de carga de página para reducir varias llamadas al servidor a una sola llamada al servidor.
 * Mejore la experiencia del usuario en su sitio, ya que las ofertas se muestran inmediatamente a través de la caché sin el tiempo de retraso introducido por las llamadas tradicionales al servidor.
-* Una sola línea de código y configuración de desarrollador único permite a los especialistas en marketing crear y ejecutar actividades [!UICONTROL A/B Test] y [!UICONTROL Experience Targeting] (XT) a través del [!UICONTROL Visual Experience Composer] (VEC) en su SPA.
+* Una sola línea de código y una configuración de desarrollador única permiten a los especialistas en marketing crear y ejecutar las actividades de [!UICONTROL Prueba A/B] y [!UICONTROL Segmentación de experiencias] (XT) a través del [!UICONTROL Compositor de experiencias visuales] (VEC) en su SPA.
 
 ## Vistas de XDM y aplicaciones de una sola página
 
-El VEC [!UICONTROL Adobe Target] para SPA aprovecha un concepto denominado [!UICONTROL Views]: un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de SPA. Por lo tanto, una aplicación de una sola página puede considerarse como una transición entre vistas (en lugar de las direcciones URL) según las interacciones del usuario. Un [!UICONTROL View] suele representar un sitio completo o elementos visuales agrupados dentro de un sitio.
+El VEC de [!UICONTROL Adobe Target] para SPA aprovecha un concepto llamado [!UICONTROL Vistas]: un grupo lógico de elementos visuales que, juntos, constituyen una experiencia de SPA. Por lo tanto, una aplicación de una sola página puede considerarse como una transición entre vistas (en lugar de las direcciones URL) según las interacciones del usuario. Una [!UICONTROL vista] suele representar un sitio completo o elementos visuales agrupados dentro de un sitio.
 
-Para explicar con más detalle qué son las vistas, el siguiente ejemplo utiliza un sitio hipotético de comercio electrónico en línea implementado en [!DNL React] para explorar el ejemplo [!UICONTROL Views].
+Para explicar con más detalle qué son las vistas, el siguiente ejemplo utiliza un sitio hipotético de comercio electrónico en línea implementado en [!DNL React] para explorar el ejemplo [!UICONTROL Vistas].
 
-Después de navegar al sitio principal, una imagen promociona una venta de Pascua, así como los productos más recientes disponibles en el sitio. En este caso, se podría definir un [!UICONTROL View] para toda la pantalla de inicio. Este(a) [!UICONTROL View] podría llamarse simplemente &quot;home&quot;.
+Después de navegar al sitio principal, una imagen promociona una venta de Pascua, así como los productos más recientes disponibles en el sitio. En este caso, se podría definir una [!UICONTROL vista] para toda la pantalla de inicio. Esta [!UICONTROL vista] podría llamarse simplemente &quot;home&quot;.
 
 ![Imagen de muestra de una aplicación de una sola página en una ventana del explorador.](/help/dev/implement/client-side/aep-web-sdk/assets/example-views.png)
 
-A medida que el cliente se interese más por los productos que vende la empresa, decide hacer clic en el vínculo **Productos**. De forma similar al sitio de inicio, se puede definir todo el sitio de productos como [!UICONTROL View]. Este(a) [!UICONTROL View] podría(n) llamarse &quot;products-all&quot;.
+A medida que el cliente se interese más por los productos que vende la empresa, decide hacer clic en el vínculo **Productos**. De manera similar al sitio de inicio, todo el sitio de productos puede definirse como una [!UICONTROL vista]. Esta [!UICONTROL vista] podría llamarse &quot;products-all&quot;.
 
 ![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, con todos los productos mostrados.](/help/dev/implement/client-side/aep-web-sdk/assets/example-products-all.png)
 
-Dado que [!UICONTROL View] se puede definir como un sitio completo o un grupo de elementos visuales en un sitio. Los cuatro productos mostrados en el sitio de productos podrían agruparse y considerarse como un [!UICONTROL View]. Esta vista podría llamarse &quot;productos&quot;.
+Dado que una [!UICONTROL vista] puede definirse como un sitio completo o un grupo de elementos visuales en un sitio. Los cuatro productos mostrados en el sitio de productos podrían agruparse y considerarse como una [!UICONTROL Vista]. Esta vista podría llamarse &quot;productos&quot;.
 
 ![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, con productos de ejemplo mostrados.](/help/dev/implement/client-side/aep-web-sdk/assets/example-products.png)
 
-Cuando el cliente decide hacer clic en el botón **Cargar más** para explorar más productos en el sitio, la dirección URL del sitio web no cambia en este caso. Sin embargo, se puede crear un(a) [!UICONTROL View] aquí para representar solamente la segunda fila de productos que se muestran. El nombre de [!UICONTROL View] podría ser &quot;products-page-2&quot;.
+Cuando el cliente decide hacer clic en el botón **Cargar más** para explorar más productos en el sitio, la dirección URL del sitio web no cambia en este caso. Sin embargo, aquí se puede crear una [!UICONTROL vista] para representar solamente la segunda fila de productos que se muestran. El nombre de [!UICONTROL View] podría ser &quot;products-page-2&quot;.
 
 ![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, con productos de ejemplo mostrados en una página adicional.](/help/dev/implement/client-side/aep-web-sdk/assets/example-load-more.png)
 
-El cliente decide adquirir algunos productos en el sitio y pasa a la pantalla de pago. En el sitio de cierre de compra, el cliente tiene la opción de elegir entre envío normal o exprés. Un(a) [!UICONTROL View] puede ser cualquier grupo de elementos visuales en un sitio, por lo que se podría crear un(a) [!UICONTROL View] para las preferencias de envío y llamarse &quot;Preferencias de envío&quot;.
+El cliente decide adquirir algunos productos en el sitio y pasa a la pantalla de pago. En el sitio de cierre de compra, el cliente tiene la opción de elegir entre envío normal o exprés. Una [!UICONTROL vista] puede ser cualquier grupo de elementos visuales en un sitio, por lo que se podría crear una [!UICONTROL vista] para las preferencias de envío y llamarse &quot;preferencias de envío&quot;.
 
 ![Imagen de muestra de una página de desprotección de aplicación de una sola página en una ventana del explorador.](/help/dev/implement/client-side/aep-web-sdk/assets/example-check-out.png)
 
-El concepto de [!UICONTROL Views] se puede ampliar mucho más allá de este escenario. Estos escenarios son solo algunos ejemplos de [!UICONTROL Views] que se pueden definir en un sitio.
+El concepto de [!UICONTROL Views] se puede ampliar mucho más allá de este escenario. Estos escenarios son solo algunos ejemplos de [!UICONTROL vistas] que se pueden definir en un sitio.
 
-## Implementando [!UICONTROL XDM Views]
+## Implementando [!UICONTROL vistas XDM]
 
-[!UICONTROL XDM Views] se puede aprovechar en [!DNL Target] para permitir que los especialistas en marketing ejecuten pruebas A/B y XT en SPA a través de [!UICONTROL Visual Experience Composer]. Para hacerlo, es necesario realizar los siguientes pasos para completar una configuración de desarrollador única:
+[!UICONTROL Las vistas XDM] se pueden aprovechar en [!DNL Target] para permitir que los especialistas en marketing ejecuten pruebas A/B y XT en SPA a través de [!UICONTROL Visual Experience Composer]. Para hacerlo, es necesario realizar los siguientes pasos para completar una configuración de desarrollador única:
 
 1. Instalar [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/install/overview).
-2. Determine todos(as) los/las [!UICONTROL XDM Views] de la aplicación de una sola página que desee personalizar.
-3. Después de definir [!UICONTROL XDM Views], para entregar actividades A/B o XT VEC, implemente la función `sendEvent()` con `renderDecisions` establecido en `true` y el [!UICONTROL XDM View] correspondiente en su aplicación de una sola página. Se debe pasar [!UICONTROL XDM View] en `xdm.web.webPageDetails.viewName`. Este paso permite a los especialistas en marketing aprovechar [!UICONTROL Visual Experience Composer] para iniciar pruebas A/B y XT para esos XDM.
+2. Determine todas las [!UICONTROL vistas XDM] de su aplicación de una sola página que desee personalizar.
+3. Después de definir las [!UICONTROL vistas XDM], para entregar actividades A/B o XT VEC, implemente la función `sendEvent()` con `renderDecisions` establecido en `true` y la [!UICONTROL vista XDM] correspondiente en su aplicación de una sola página. La vista [!UICONTROL XDM View] debe pasarse en `xdm.web.webPageDetails.viewName`. Este paso permite a los especialistas en marketing aprovechar [!UICONTROL Compositor de experiencias visuales] para iniciar pruebas A/B y XT para esos XDM.
 
    ```javascript
    alloy("sendEvent", { 
@@ -91,7 +91,7 @@ El concepto de [!UICONTROL Views] se puede ampliar mucho más allá de este esce
 
 >[!NOTE]
 >
->En la primera llamada de `sendEvent()`, se recuperarán y almacenarán en caché todos los [!UICONTROL XDM Views] que se deban representar para el usuario final. Las llamadas subsiguientes `sendEvent()` con [!UICONTROL XDM Views] transferidas se leen desde la caché y se procesan sin una llamada al servidor.
+>En la primera llamada de `sendEvent()`, todas las [!UICONTROL vistas XDM] que se deben procesar al usuario final se recuperan y se almacenan en caché. Las llamadas subsiguientes `sendEvent()` con [!UICONTROL vistas XDM] pasadas se leen desde la caché y se procesan sin una llamada al servidor.
 
 ## `sendEvent()` ejemplos de funciones
 
@@ -185,7 +185,7 @@ El equipo de marketing desea ejecutar una prueba A/B para ver si se cambia el co
 
 ![Imagen de muestra de una aplicación de una sola página en una ventana del explorador, con pruebas A/B.](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-3.png)
 
-Para personalizar el contenido del sitio según las preferencias de envío que se seleccionen, se puede crear un [!UICONTROL View] para cada preferencia de entrega. Cuando se selecciona **Entrega normal**, el [!UICONTROL View] puede llamarse &quot;checkout-normal&quot;. Si se selecciona **Envío exprés**, el [!UICONTROL View] puede llamarse &quot;checkout-express&quot;.
+Para personalizar el contenido del sitio según las preferencias de envío que se seleccionen, se puede crear una [!UICONTROL vista] para cada preferencia de envío. Cuando se selecciona **Envío normal**, la [!UICONTROL Vista] puede llamarse &quot;cierre de compra-normal&quot;. Si se selecciona **Envío exprés**, la [!UICONTROL Vista] puede llamarse &quot;Pago y envío exprés&quot;.
 
 ```jsx
 function onViewChange(viewName) { 
@@ -226,37 +226,37 @@ class Checkout extends Component {
 } 
 ```
 
-## Usar [!UICONTROL Visual Experience Composer] para una SPA
+## Uso del [!UICONTROL Compositor de experiencias visuales] para una SPA
 
-Cuando haya terminado de definir su [!UICONTROL XDM Views] e implementado `sendEvent()` con los [!UICONTROL XDM Views] pasados, el VEC puede detectar estos [!UICONTROL Views] y permitir a los usuarios crear acciones y modificaciones para actividades A/B o XT.
+Cuando haya terminado de definir sus [!UICONTROL vistas XDM] e implementado `sendEvent()` con esas [!UICONTROL vistas XDM] pasadas, el VEC podrá detectar estas [!UICONTROL vistas] y permitir a los usuarios crear acciones y modificaciones para actividades A/B o XT.
 
 >[!NOTE]
 >
 >Para usar el VEC para tu SPA, debes instalar y activar la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome VEC Helper Extension](https://experienceleague.adobe.com/es/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
-### [!UICONTROL Modifications] panel
+### Panel [!UICONTROL Modificaciones]
 
-El panel [!UICONTROL Modifications] captura las acciones creadas para un(a) [!UICONTROL View] en particular. Todas las acciones de [!UICONTROL View] se agrupan en ese(a) [!UICONTROL View].
+El panel [!UICONTROL Modificaciones] captura las acciones creadas para una [!UICONTROL vista] en particular. Todas las acciones de una [!UICONTROL vista] se agrupan bajo esa [!UICONTROL vista].
 
 ### Acciones
 
-Al hacer clic en una acción se resalta el elemento del sitio donde se aplica esta acción. Cada acción de VEC creada en un(a) [!UICONTROL View] tiene los iconos siguientes: **Información**, **Editar**, **Clonar**, **Mover** y **Eliminar**. Estos iconos se explican con más detalle en la tabla siguiente.
+Al hacer clic en una acción se resalta el elemento del sitio donde se aplica esta acción. Cada acción del VEC creada en una [!UICONTROL vista] tiene los iconos siguientes: **Información**, **Editar**, **Clonar**, **Mover** y **Eliminar**. Estos iconos se explican con más detalle en la tabla siguiente.
 
 | Icono | Descripción |
 |---|---|
 | Información | Muestra los detalles de esta acción. |
 | Editar | Permite editar las propiedades de esta acción directamente. |
-| Clonar | Clona la acción a uno o más [!UICONTROL Views] que existen en el panel [!UICONTROL Modifications] o a uno o más [!UICONTROL Views] a los que ha navegado en el VEC. La acción no tiene que existir necesariamente en el panel [!UICONTROL Modifications].<br/><br/>**Nota:** Después de realizar una operación de clonación, debe navegar a [!UICONTROL View] en el VEC a través de [!UICONTROL Browse] para ver si la acción clonada era una operación válida. Si la acción no se puede aplicar a [!UICONTROL View], verá un error. |
-| Mover | Mueve la acción a [!UICONTROL Page Load Event] o a cualquier otro [!UICONTROL View] que ya exista en el panel [!UICONTROL Modifications].<br/><br/>**Evento de carga de página:** Todas las acciones correspondientes al evento de carga de página se aplican en la carga inicial de la página web. <br/><br/>**Nota:** Después de realizar una operación de movimiento, debe navegar a [!UICONTROL View] en el VEC a través de [!UICONTROL Browse] para ver si el movimiento era una operación válida. Si la acción no se puede aplicar a [!UICONTROL View], vea un error. |
+| Clonar | Clona la acción a una o más [!UICONTROL Vistas] que existen en el panel [!UICONTROL Modificaciones] o a una o más [!UICONTROL Vistas] a las que ha navegado en el VEC. La acción no tiene que existir necesariamente en el panel [!UICONTROL Modificaciones].<br/><br/>**Nota:** Después de realizar una operación de clonado, debe navegar a la [!UICONTROL Vista] en el VEC a través de [!UICONTROL Examinar] para ver si la acción clonada era una operación válida. Si la acción no se puede aplicar a [!UICONTROL View], verá un error. |
+| Mover | Mueve la acción a un [!UICONTROL evento de carga de página] o a cualquier otra [!UICONTROL vista] que ya exista en el panel [!UICONTROL Modificaciones].<br/><br/>**Evento de carga de página:** Todas las acciones correspondientes al evento de carga de página se aplican en la carga inicial de la página web. <br/><br/>**Nota:** Después de realizar una operación de movimiento, debe navegar a la [!UICONTROL Vista] en el VEC a través de [!UICONTROL Examinar] para ver si el movimiento era una operación válida. Si la acción no se puede aplicar a [!UICONTROL View], verá un error. |
 | Eliminar | Elimina la acción. |
 
 ## Uso del VEC para ejemplos de SPA
 
-Esta sección describe tres ejemplos de cómo usar [!UICONTROL Visual Experience Composer] para crear acciones y modificaciones para actividades A/B o XT.
+Esta sección describe tres ejemplos de cómo usar el [!UICONTROL Compositor de experiencias visuales] para crear acciones y modificaciones para actividades A/B o XT.
 
 ### Ejemplo 1: Actualizar la vista &quot;principal&quot;
 
-Anteriormente en este artículo, se definió un(a) [!UICONTROL View] denominado(a) &quot;home&quot; para todo el sitio principal. Ahora, el equipo de marketing desea actualizar la vista &quot;principal&quot; de las siguientes maneras:
+Anteriormente en este artículo se definió una [!UICONTROL vista] denominada &quot;página de inicio&quot; para todo el sitio de inicio. Ahora, el equipo de marketing desea actualizar la vista &quot;principal&quot; de las siguientes maneras:
 
 * Cambie los botones **Agregar al carro** y **Me gusta** por un tono más claro de azul. Este cambio debe producirse durante la carga de la página, ya que implica el cambio de componentes del encabezado.
 * Cambie la etiqueta **Productos más recientes para 2026** por **Productos de prueba para 2026** y cambie el color del texto a morado.
@@ -267,7 +267,7 @@ Para realizar estas actualizaciones en el VEC, seleccione **Componer** y aplique
 
 ### Ejemplo 2: Cambiar etiquetas de producto
 
-Para la &quot;página de productos-2&quot; [!UICONTROL View], el equipo de mercadotecnia desea cambiar la etiqueta de **Precio** a **Precio de venta** y cambiar el color de la etiqueta a rojo.
+Para la [!UICONTROL vista] de la &quot;página de productos-2&quot;, el equipo de marketing desea cambiar la etiqueta de **Precio** a **Precio de venta** y cambiar el color de la etiqueta a rojo.
 
 Para realizar estas actualizaciones en el VEC, se requieren los siguientes pasos:
 
@@ -281,7 +281,7 @@ Para realizar estas actualizaciones en el VEC, se requieren los siguientes pasos
 
 ### Ejemplo 3: Personalizar el estilo de preferencias de entrega
 
-[!UICONTROL Views] se puede definir en un nivel granular, como un estado o una opción de un botón de opción. Anteriormente en este artículo [!UICONTROL Views] se definieron para las preferencias de envío, &quot;checkout-normal&quot; y &quot;checkout-express&quot;. El equipo de marketing desea cambiar el color del botón a rojo para la vista &quot;checkout-express&quot;.
+[!UICONTROL Las vistas] se pueden definir en un nivel granular, como un estado o una opción de un botón de opción. Anteriormente en este artículo, se definieron [!UICONTROL vistas] para las preferencias de envío, &quot;cierre de compra normal&quot; y &quot;cierre de compra exprés&quot;. El equipo de marketing desea cambiar el color del botón a rojo para la vista &quot;checkout-express&quot;.
 
 Para realizar estas actualizaciones en el VEC, se requieren los siguientes pasos:
 
@@ -295,6 +295,6 @@ Para realizar estas actualizaciones en el VEC, se requieren los siguientes pasos
 
 >[!NOTE]
 >
->El mensaje &quot;checkout-express&quot; [!UICONTROL View] no aparece en el panel [!UICONTROL Modifications] hasta que se seleccione el botón de opción **Envío exprés**. Esto se debe a que la función `sendEvent()` se ejecuta cuando se selecciona el botón de opción **Envío exprés**, por lo que el VEC no tiene en cuenta el mensaje &quot;checkout-express&quot; [!UICONTROL View] hasta que se selecciona el botón de opción.
+>La [!UICONTROL vista] &quot;Pago y envío rápido&quot; no aparece en el panel [!UICONTROL Modificaciones] hasta que se seleccione el botón de opción **Envío exprés**. Esto se debe a que la función `sendEvent()` se ejecuta cuando se selecciona el botón de opción **Envío exprés**, por lo que el VEC no tiene en cuenta el mensaje &quot;Pago y envío exprés&quot; [!UICONTROL Ver] hasta que se selecciona el botón de opción.
 
 ![Compositor de experiencias visuales muestra el selector de preferencias de envío.](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)

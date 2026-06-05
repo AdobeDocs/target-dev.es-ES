@@ -12,7 +12,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 357
+source-wordcount: 366
 ht-degree: 12%
 
 ---
@@ -53,7 +53,7 @@ Devuelve un(a) `TargetDeliveryResponse` si se llama sincrónicamente (predetermi
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
-| respuesta | DeliveryResponse | Se ajusta a la respuesta [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| respuesta | DeliveryResponse | Se ajusta a la respuesta [[!UICONTROL API de envío de destino]](/help/dev/implement/delivery-api/overview.md) |
 | target_cookie | dict | Cookie [!DNL Target] |
 | target_location_hint_cookie | dict | [!DNL Target] cookie de indicio de ubicación |
 | analytics_details | list[AnalyticsResponse] | Carga útil de Analytics, en caso de uso de Analytics por parte del cliente |
@@ -74,8 +74,8 @@ El objeto `meta` utilizado para indicar el estado de la respuesta de destino tie
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | decisioning_method | str | Qué método de toma de decisiones se ha utilizado: en el dispositivo o del lado del servidor |
-| remote_mboxes | list`[str]` | Cuando el método de toma de decisiones es `on-device`, se proporciona una matriz de nombres de mbox que no se pudieron decidir completamente en el dispositivo. En otras palabras, se necesita una solicitud [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md). |
-| remote_views | list`[str]` | Cuando el método de toma de decisiones es en el dispositivo, se proporciona una matriz de nombres de vista que no se pudieron decidir completamente en el dispositivo. En otras palabras, se necesita una solicitud [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md). |
+| remote_mboxes | list`[str]` | Cuando el método de toma de decisiones es `on-device`, se proporciona una matriz de nombres de mbox que no se pudieron decidir completamente en el dispositivo. En otras palabras, se necesita una solicitud de la [[!UICONTROL API de envío de Target]](/help/dev/implement/delivery-api/overview.md). |
+| remote_views | list`[str]` | Cuando el método de toma de decisiones es en el dispositivo, se proporciona una matriz de nombres de vista que no se pudieron decidir completamente en el dispositivo. En otras palabras, se necesita una solicitud de la [[!UICONTROL API de envío de Target]](/help/dev/implement/delivery-api/overview.md). |
 
 ## Ejemplo
 

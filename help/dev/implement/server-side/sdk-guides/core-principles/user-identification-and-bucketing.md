@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1172
+source-wordcount: 1173
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## Identificación de usuario
 
-Hay varias maneras de identificar a un usuario dentro de [!DNL Adobe Target]. [!UICONTROL Target] utiliza los identificadores siguientes:
+Hay varias maneras de identificar a un usuario dentro de [!DNL Adobe Target]. [!UICONTROL Target] usa los identificadores siguientes:
 
 | Nombre del campo | Descripción |
 | --- | --- |

@@ -23,7 +23,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1797
+source-wordcount: 1879
 ht-degree: 4%
 
 ---
@@ -75,16 +75,16 @@ Este paso ayuda a garantizar que la biblioteca `VisitorAPI.js` se carga, configu
 
 **Requisitos previos**
 
-* Para usar el servicio API/ID de visitante, su compañía debe estar habilitada para [!DNL Adobe Experience Cloud] y tener un [!UICONTROL Organization ID]. Para obtener más información, consulte [Requisitos de Experience Cloud: ID de organización] (¿https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=es&){target=_blank} en la guía *Ayuda del servicio de identidad*.
+* Para usar el servicio API/ID de visitante, tu empresa debe estar habilitada para [!DNL Adobe Experience Cloud] y tener un [!UICONTROL ID de organización]. Para obtener más información, consulte [Requisitos de Experience Cloud: ID de organización] (¿https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=es&){target=_blank} en la guía *Ayuda del servicio de identidad*.
 * Necesita el archivo `VisitorAPI.js`. Ya debería tener este archivo si tiene [!DNL Adobe Analytics] implementado. Este archivo también se puede agregar mediante la [[!DNL Adobe Experience Platform] extensión de etiquetas](https://experienceleague.adobe.com/docs/tags.html?lang=es){target=_blank} o se puede descargar desde el [Administrador de códigos Adobe Analytics](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=es){target=_blank}.
 
 **Configurar y hacer referencia a VisitorAPI.js**
 
-Para obtener más información, consulte [Implementar el servicio de Experience Cloud para Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=es){target=_blank}.
+Para obtener más información, consulte [Implementación del servicio Experience Cloud para Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=es){target=_blank}.
 
 **Lecturas**
 
-* [Información general del servicio de Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=es){target=_blank}
+* [Información general del servicio de identidad de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=es){target=_blank}
 * [Acerca del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html?lang=es){target=_blank}
 * [Cookies y el servicio de Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=es){target=_blank}
 * [Solicitud y configuración de ID con el servicio de identidad de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=es){target=_blank}
@@ -255,9 +255,9 @@ Haga recomendaciones basadas en el contenido del carro de compras del usuario.
 
 **Criterios disponibles**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Quienes Vieron Esto, Vieron Aquello]
+* [!UICONTROL Quienes Vieron Esto, Compraron Aquello]
+* [!UICONTROL Las Personas Que Compraron Estos, Compraron Esos]
 
 **Se requieren parámetros de entidad**
 
@@ -279,13 +279,13 @@ Haga recomendaciones basadas en la popularidad general de un elemento en el siti
 
 **Criterios disponibles**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Más visitados en todo el sitio]
+* [!UICONTROL Más visitados por categoría]
+* [!UICONTROL Más visitados por atributo de artículo]
+* [!UICONTROL Principales vendedores en todo el sitio]
+* [!UICONTROL Principales vendedores por categoría]
+* [!UICONTROL Principales vendedores por atributo de artículo]
+* [!UICONTROL Métrica superior por Analytics]
 
 **Se requieren parámetros de entidad**
 
@@ -308,10 +308,10 @@ Haga recomendaciones basadas en la búsqueda de artículos similares a los que e
 
 **Criterios disponibles**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Las Personas Que Vieron Esto, Vieron Aquello]
+* [!UICONTROL Otras Personas Que Vieron Esto, Compraron Aquello]
+* [!UICONTROL Otras Personas Que Compraron Esto, Compraron Aquello]
+* [!UICONTROL Elementos con atributos similares]
 
 **Se requieren parámetros de entidad**
 
@@ -333,8 +333,8 @@ Haga recomendaciones basadas en el comportamiento del usuario.
 
 **Criterios disponibles**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Artículos vistos recientemente]
+* [!UICONTROL Recomendado para usted]
 
 **Se requieren parámetros de entidad**
 
@@ -356,7 +356,7 @@ Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 **Criterios disponibles**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Algoritmo personalizado]
 
 **Se requieren parámetros de entidad**
 

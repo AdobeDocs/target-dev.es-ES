@@ -22,7 +22,7 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 603
+source-wordcount: 618
 ht-degree: 12%
 
 ---
@@ -33,9 +33,9 @@ Información sobre [!DNL Adobe Target] API de envío del lado del servidor, SDK 
 
 >[!NOTE]
 >
->Si su implementación utiliza at.js y [!DNL AppMeasurement] en el lado del cliente, debe utilizar [!UICONTROL Target Delivery API] y los SDK del lado del servidor que se describen a continuación.
+>Si su implementación utiliza at.js y [!DNL AppMeasurement] en el lado del cliente, debe utilizar la [!UICONTROL API de envío de Target] y los SDK del lado del servidor que se describen a continuación.
 >
->Si su implementación utiliza [!UICONTROL Adobe Experience Platform Web SDK], debe usar [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/es/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>Si su implementación usa [!UICONTROL Adobe Experience Platform Web SDK], debería usar la [[!UICONTROL API de servidor de Adobe Experience Platform] [!UICONTROL Edge Network]](https://experienceleague.adobe.com/es/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 El proceso siguiente se produce en una implementación del lado del servidor de [!DNL Target]:
 
@@ -64,7 +64,7 @@ A través de la API de entrega [!DNL Target], puede:
 * Ofrezca experiencias desde cualquier plataforma o aplicación del lado del servidor que pueda realizar llamadas HTTP/S.
 * Ofrezca experiencias coherentes y personalizadas a un visitante, independientemente del canal o los dispositivos que el visitante utilizó para interactuar con su negocio.
 * Almacene en caché las experiencias de un visitante dentro de una sesión en su servidor para poder evitar múltiples llamadas a la API y lograr así un mejor rendimiento.
-* Se integra perfectamente con los productos de Adobe Experience Cloud, como Adobe Analytics, Adobe Audience Manager (AAM) y el servicio de Experience Cloud ID desde el servidor.
+* Se integra perfectamente con los productos de Adobe Experience Cloud, como Adobe Analytics, Adobe Audience Manager (AAM) y el servicio Experience Cloud ID desde el servidor.
 
 ## SDK del lado del servidor
 

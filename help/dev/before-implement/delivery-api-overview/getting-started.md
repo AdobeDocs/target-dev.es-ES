@@ -1,6 +1,6 @@
 ---
 title: Introducción a la API de entrega de Adobe Target
-description: ¿Cómo se usa [!UICONTROL Adobe Target Delivery API]?
+description: ¿Cómo uso la [!UICONTROL API de envío de Adobe Target]?
 keywords: API de envío
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
@@ -16,14 +16,14 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 116
+source-wordcount: 132
 ht-degree: 1%
 
 ---
 
-# Introducción a [!UICONTROL Adobe Target Delivery API]
+# Introducción a la [!UICONTROL API de envío de Adobe Target]
 
-Una llamada de [!UICONTROL Target Delivery API] tiene este aspecto:
+Una llamada a la API [!UICONTROL Target Delivery] tiene este aspecto:
 
 ```
 curl -X POST \
@@ -55,9 +55,9 @@ curl -X POST \
     }'
 ```
 
-Se puede recuperar `clientCode` de la interfaz de usuario de [!DNL Target] navegando a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
+Se puede recuperar `clientCode` de la interfaz de usuario de [!DNL Target] navegando a **[!UICONTROL Administración]** > **[!UICONTROL Implementación]**.
 
-Antes de realizar una llamada de [!UICONTROL Target Delivery API], siga estos pasos para asegurarse de que una respuesta contenga la experiencia relevante para mostrar a los usuarios finales:
+Antes de realizar una llamada a la API [!UICONTROL Target Delivery], siga estos pasos para asegurarse de que una respuesta contenga la experiencia relevante para mostrar a los usuarios finales:
 
 1. Cree una actividad [!DNL Target] (A/B, XT, AP o Recommendations) con [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es) o [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es).
 1. Utilice la API de envío para obtener una respuesta para los mboxes utilizados en la actividad [!DNL Target] creada en el paso 2.

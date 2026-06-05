@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ Siga los pasos del diagrama de *Experiencias de procesamiento* para asegurarse d
 
 ## Representar diagrama de experiencias {#diagram}
 
-La administración automática de parpadeos predeterminada disponible con at.js solo tiene sentido cuando tiene [!UICONTROL Automatic Page Load Request] habilitado. Esta opción oculta todo el cuerpo de HTML al recuperar las experiencias de [!DNL Target]. En este caso, es su responsabilidad gestionar el parpadeo. Busque patrones de implementación disponibles para la gestión de parpadeos a modo de guía.
+La administración automática de parpadeos predeterminada disponible con at.js solo tiene sentido cuando tiene [!UICONTROL Solicitud automática de carga de página] habilitada. Esta opción oculta todo el cuerpo de HTML al recuperar las experiencias de [!DNL Target]. En este caso, es su responsabilidad gestionar el parpadeo. Busque patrones de implementación disponibles para la gestión de parpadeos a modo de guía.
 
 >[!NOTE]
 >
@@ -94,9 +94,9 @@ Haga recomendaciones basadas en el contenido del carro de compras del usuario.
 
 **Criterios disponibles**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Quienes Vieron Esto, Vieron Aquello]
+* [!UICONTROL Quienes Vieron Esto, Compraron Aquello]
+* [!UICONTROL Las Personas Que Compraron Estos, Compraron Esos]
 
 **Se requieren parámetros de entidad**
 
@@ -118,13 +118,13 @@ Haga recomendaciones basadas en la popularidad general de un elemento en el siti
 
 **Criterios disponibles**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Más visitados en todo el sitio]
+* [!UICONTROL Más visitados por categoría]
+* [!UICONTROL Más visitados por atributo de artículo]
+* [!UICONTROL Principales vendedores en todo el sitio]
+* [!UICONTROL Principales vendedores por categoría]
+* [!UICONTROL Principales vendedores por atributo de artículo]
+* [!UICONTROL Métrica superior por Analytics]
 
 **Se requieren parámetros de entidad**
 
@@ -147,10 +147,10 @@ Haga recomendaciones basadas en la búsqueda de artículos similares a los que e
 
 **Criterios disponibles**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Las Personas Que Vieron Esto, Vieron Aquello]
+* [!UICONTROL Otras Personas Que Vieron Esto, Compraron Aquello]
+* [!UICONTROL Otras Personas Que Compraron Esto, Compraron Aquello]
+* [!UICONTROL Elementos con atributos similares]
 
 **Se requieren parámetros de entidad**
 
@@ -173,8 +173,8 @@ Haga recomendaciones basadas en el comportamiento del usuario.
 
 **Criterios disponibles**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Artículos vistos recientemente]
+* [!UICONTROL Recomendado para usted]
 
 **Se requieren parámetros de entidad**
 
@@ -196,7 +196,7 @@ Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 **Criterios disponibles**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Algoritmo personalizado]
 
 **Se requieren parámetros de entidad**
 

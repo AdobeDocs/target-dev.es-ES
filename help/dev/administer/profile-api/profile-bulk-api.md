@@ -1,6 +1,6 @@
 ---
 title: API de actualización de perfil en lote de Adobe Target
-description: Aprenda a usar [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] para enviar datos de perfil de varios visitantes a [!DNL Target] para usarlos en la segmentación.
+description: Aprenda a usar la  [!DNL Adobe Target] [!UICONTROL API de actualización de perfiles en lotes] para enviar datos de perfil de varios visitantes a [!DNL Target] para usarlos en la segmentación.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
@@ -18,16 +18,16 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1063
+source-wordcount: 1094
 ht-degree: 7%
 
 ---
 
 # [!DNL Adobe Target Bulk Profile Update API]
 
-[!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] le permite actualizar los perfiles de usuario de varios visitantes de un sitio web de forma masiva mediante un archivo por lotes.
+La [!DNL Adobe Target] [!UICONTROL API de actualización de perfiles en lote] le permite actualizar los perfiles de usuario de varios visitantes de un sitio web en lote mediante un archivo por lotes.
 
-Con [!UICONTROL Bulk Profile Update API], puede enviar convenientemente datos detallados del perfil del visitante en forma de parámetros de perfil para muchos usuarios a [!DNL Target] desde cualquier origen externo. Las fuentes externas pueden incluir sistemas de administración de la relación con los clientes (CRM) o puntos de venta (POS), que normalmente no están disponibles en una página web.
+Con la [!UICONTROL API de actualización de perfiles en lotes], puede enviar convenientemente datos detallados del perfil del visitante en forma de parámetros de perfil para muchos usuarios a [!DNL Target] desde cualquier fuente externa. Las fuentes externas pueden incluir sistemas de administración de la relación con los clientes (CRM) o puntos de venta (POS), que normalmente no están disponibles en una página web.
 
 | Versión | Ejemplo de URL | Funciones |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ Con [!UICONTROL Bulk Profile Update API], puede enviar convenientemente datos de
 >
 >* Si su implementación usa `thirdPartyId` para la identificación del perfil, use la versión 2 (v2) de la API con `thirdPartyId` como clave.
 
-## Ventajas de [!UICONTROL Bulk Profile Update API]
+## Ventajas de la [!UICONTROL API de actualización de perfiles en lotes]
 
 * No hay ningún límite en la cantidad de atributos del perfil.
 * Los atributos de perfil enviados a través del sitio se pueden actualizar mediante la API y viceversa.
@@ -76,10 +76,10 @@ batch=pcId,param1,param2,param3,param4
 Hace referencia a este archivo en la llamada de POST a [!DNL Target] servidores para procesar el archivo. Al crear el archivo por lotes, tenga en cuenta lo siguiente:
 
 * La primera fila del archivo debe especificar encabezados de columna.
-* El primer encabezado debe ser un `pcId` o `thirdPartyId`. No se admite [!UICONTROL Marketing Cloud visitor ID]. [!UICONTROL pcId] es un visitorID generado por [!DNL Target]. `thirdPartyId` es un identificador especificado por la aplicación cliente, que se pasa a [!DNL Target] a través de una llamada de mbox como `mbox3rdPartyId`. Se debe hacer referencia a él aquí como `thirdPartyId`.
+* El primer encabezado debe ser un `pcId` o `thirdPartyId`. [!UICONTROL ID de visitante de Marketing Cloud] no es compatible. [!UICONTROL pcId] es un visitorID generado por [!DNL Target]. `thirdPartyId` es un identificador especificado por la aplicación cliente, que se pasa a [!DNL Target] a través de una llamada de mbox como `mbox3rdPartyId`. Se debe hacer referencia a él aquí como `thirdPartyId`.
 * Los parámetros y valores especificados en el archivo por lotes deben estar codificados en URL mediante UTF-8 por motivos de seguridad. Los parámetros y valores se pueden reenviar a otros nodos perimetrales para su procesamiento mediante solicitudes HTTP.
 * Los parámetros sólo deben tener el formato `paramName`. Los parámetros se muestran en [!DNL Target] como `profile.paramName`.
-* Si usa [!UICONTROL Bulk Profile Update API] v2, no es necesario especificar todos los valores de parámetro para cada `pcId`. Los perfiles se crean para cualquier `pcId` o `mbox3rdPartyId` que no se encuentre en [!DNL Target]. Si utiliza la versión 1, los perfiles no se crean para los pcIds o mbox3rdPartyIds que faltan. Para obtener más información, vea [Administrar valores vacíos en [!DNL Bulk Profile Update API]](#empty).
+* Si está usando la [!UICONTROL API de actualización de perfiles en lotes] v2, no es necesario que especifique todos los valores de parámetro para cada `pcId`. Los perfiles se crean para cualquier `pcId` o `mbox3rdPartyId` que no se encuentre en [!DNL Target]. Si utiliza la versión 1, los perfiles no se crean para los pcIds o mbox3rdPartyIds que faltan. Para obtener más información, vea [Administrar valores vacíos en [!DNL Bulk Profile Update API]](#empty).
 * El tamaño del archivo en lote debe ser inferior a 50 MB. Además, el número total de filas no debe superar los 500 000. Este límite garantiza que los servidores no se inunden con demasiadas solicitudes.
 * No hay restricciones en el número de atributos que se pueden cargar. Sin embargo, el tamaño total de los datos de perfil externos, que incluyen los atributos del cliente, la API del perfil, los parámetros de perfil In-Mbox y la salida del script de perfil, no debe superar los 64 KB.
 * Los parámetros y valores distinguen entre mayúsculas y minúsculas.
@@ -96,7 +96,7 @@ Donde:
 
 BATCH.TXT es el nombre de archivo. CLIENTCODE es el código de cliente [!DNL Target].
 
-Si no conoce su código de cliente, en la interfaz de usuario de [!DNL Target], haga clic en **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. El código de cliente se muestra en la sección [!UICONTROL Account Details].
+Si no conoce su código de cliente, en la interfaz de usuario de [!DNL Target], haga clic en **[!UICONTROL Administración]** > **[!UICONTROL Implementación]**. El código de cliente se muestra en la sección [!UICONTROL Detalles de la cuenta].
 
 ### Inspeccione la respuesta
 
@@ -129,8 +129,8 @@ Los valores esperados para los campos de estado son:
 | Estado | Detalles |
 | --- | --- |
 | [!UICONTROL complete] | La solicitud de actualización de lote de perfiles se completó correctamente. |
-| [!UICONTROL incomplete] | La solicitud de actualización de lote de perfiles aún se está procesando y no se ha completado. |
-| [!UICONTROL stuck] | La solicitud de actualización de lote de perfiles está atascada y no se pudo completar. |
+| [!UICONTROL incompleto] | La solicitud de actualización de lote de perfiles aún se está procesando y no se ha completado. |
+| [!UICONTROL atascado] | La solicitud de actualización de lote de perfiles está atascada y no se pudo completar. |
 
 ### Respuesta URL de estado detallado del lote
 

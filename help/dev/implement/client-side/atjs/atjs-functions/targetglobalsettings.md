@@ -1,7 +1,7 @@
 ---
 keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalsettings, global settings, at.js, funciones, función, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookieDomain, crossDomain, crossDomain, timeout, globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain8 crossDomain5, optoutEnabled, optout, opt out, selectorsPollingTimeout, dataProviders, Personalization híbrido, deviceIdLifetime
-description: Use la función [!UICONTROL targetGlobalSettings()] para la biblioteca JavaScript  [!DNL Adobe Target] at.js para anular la configuración en lugar de usar las API  [!DNL Target] UI o REST.
-title: ¿Cómo se utiliza la función [!UICONTROL targetGlobalSettings()]?
+description: Utilice la función [!UICONTROL targetGlobalSettings()] para que la biblioteca JavaScript  [!DNL Adobe Target] at.js anule la configuración en lugar de usar las API  [!DNL Target] UI o REST.
+title: ¿Cómo se usa la función [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
@@ -24,7 +24,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2702
+source-wordcount: 2705
 ht-degree: 56%
 
 ---

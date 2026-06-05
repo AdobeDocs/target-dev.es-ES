@@ -1,6 +1,6 @@
 ---
 title: Resolución de problemas de toma de decisiones en el dispositivo
-description: Obtenga información sobre cómo solucionar problemas de [!UICONTROL on-device decisioning]
+description: Obtenga información sobre cómo solucionar problemas de [!UICONTROL toma de decisiones en el dispositivo]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
@@ -16,12 +16,12 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1158
+source-wordcount: 1188
 ht-degree: 0%
 
 ---
 
-# Resolución de problemas [!UICONTROL on-device decisioning]
+# Solucionando problemas de [!UICONTROL toma de decisiones en el dispositivo]
 
 ## Validando configuración
 
@@ -29,8 +29,8 @@ ht-degree: 0%
 
 1. Asegúrese de que `logger` esté configurado
 1. Asegúrese de que los seguimientos de [!DNL Target] estén habilitados
-1. Compruebe que el [!UICONTROL on-device decisioning] *artefacto de regla* se haya recuperado y almacenado en caché según el intervalo de sondeo definido.
-1. Valide la entrega de contenido mediante el artefacto de reglas en caché creando una actividad de prueba [!UICONTROL on-device decisioning] a través del compositor de experiencias basadas en formularios.
+1. Compruebe que el [!UICONTROL artefacto de la regla *de toma de decisiones en el dispositivo]* se ha recuperado y almacenado en caché según el intervalo de sondeo definido.
+1. Valide la entrega de contenido a través del artefacto de reglas en caché creando una actividad de prueba [!UICONTROL toma de decisiones en el dispositivo] a través del compositor de experiencias basadas en formularios.
 1. Inspeccionar errores de notificación de envío
 
 ## &#x200B;1. Asegúrese de que el registrador esté configurado
@@ -75,7 +75,7 @@ Al habilitar los seguimientos, se generará información adicional de [!DNL Adob
 
    ![imagen alt](assets/asset-target-ui-1.png)
 
-1. Vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** y haga clic en **[!UICONTROL Generate New Authorization Token]**.
+1. Vaya a **[!UICONTROL Administración]** > **[!UICONTROL Implementación]** y haga clic en **[!UICONTROL Generar nuevo token de autorización]**.
 
    ![imagen alt](assets/asset-target-ui-2.png)
 
@@ -124,7 +124,7 @@ Al habilitar los seguimientos, se generará información adicional de [!DNL Adob
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## &#x200B;3. Compruebe que el [!UICONTROL on-device decisioning] *artefacto de regla* se haya recuperado y almacenado en caché según el intervalo de sondeo definido.
+## &#x200B;3. Compruebe que el [!UICONTROL artefacto de la regla *de toma de decisiones en el dispositivo]* se ha recuperado y almacenado en caché según el intervalo de sondeo definido.
 
 1. Espere el intervalo de sondeo (el valor predeterminado es 20 minutos) y asegúrese de que SDK está recuperando el artefacto. Se generarán los mismos registros de terminal.
 
@@ -146,7 +146,7 @@ Al habilitar los seguimientos, se generará información adicional de [!DNL Adob
      },
    ```
 
-## &#x200B;4. Valide la entrega de contenido mediante el artefacto de reglas en caché creando una actividad de prueba [!UICONTROL on-device decisioning] a través del compositor de experiencias basadas en formularios
+## &#x200B;4. Valide la entrega de contenido mediante el artefacto de reglas en caché creando una actividad de prueba [!UICONTROL toma de decisiones en el dispositivo] a través del compositor de experiencias basadas en formularios
 
 1. Vaya a la [!DNL Target]IU de en Experience Cloud
 
@@ -250,11 +250,11 @@ client = TargetClient.create({
 
 ## Escenarios comunes de resolución de problemas
 
-Asegúrese de revisar [funciones compatibles](supported-features.md) para [!UICONTROL on-device decisioning] cuando encuentre problemas.
+Asegúrese de revisar las [funciones compatibles](supported-features.md) para la [!UICONTROL toma de decisiones en el dispositivo] cuando encuentre problemas.
 
 ### Las actividades de toma de decisiones en el dispositivo no se ejecutan debido a una audiencia o actividad no admitidas
 
-Un problema común que se puede producir es que [!UICONTROL on-device decisioning] actividades no se ejecutan debido a que la audiencia está en uso o el tipo de actividad no es compatible.
+Un problema común que puede ocurrir es que las actividades de [!UICONTROL toma de decisiones en el dispositivo] no se ejecuten debido a que la audiencia en uso o el tipo de actividad no son compatibles.
 
 (1) Con el resultado del registrador, revise las entradas de la propiedad trace en el objeto response. Identifique específicamente la propiedad de campañas:
 

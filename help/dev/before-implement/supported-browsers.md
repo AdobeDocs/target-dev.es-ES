@@ -18,7 +18,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 436
+source-wordcount: 443
 ht-degree: 19%
 
 ---
@@ -45,7 +45,7 @@ La interfaz [!DNL Target] es compatible con los siguientes exploradores y dispos
 
 ## Requisitos de edición visual
 
-Para poder abrir, crear y obtener una vista previa de las páginas web de forma fiable en [!UICONTROL Visual Experience Composer] (VEC), debe tener instalada la extensión de explorador [Ayuda de edición visual de Adobe Experience Cloud](https://experienceleague.adobe.com/es/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} en el explorador web o usar [!UICONTROL Enhanced Experience Composer (EEC)].
+Para poder abrir, crear y obtener una vista previa de las páginas web de forma fiable en el [!UICONTROL Compositor de experiencias visuales] (VEC), debe tener la [extensión del explorador Ayuda de edición visual de Adobe Experience Cloud](https://experienceleague.adobe.com/es/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} instalada en el explorador web o usar [!UICONTROL Compositor de experiencias mejorado (EEC)].
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ La entrega de contenido se ha probado en los siguientes navegadores y dispositiv
 
 | Tipo de dispositivo | Versión del navegador |
 |--- |--- |
-| Windows | <ul><li>Microsoft Internet Explorer 9 y 10. Probado en modo de emulación. **Nota**: la entrega de contenido en IE 9 ya no es compatible con at.js 1.3.0 (y versiones posteriores). La entrega de contenido en IE 10, 11 y todas las versiones anteriores ya no es compatible con at.js 2.5.0 (y versiones posteriores).</li><li>Internet Explorer 11. **Nota**: la entrega de contenido en IE 10, 11 y todas las versiones anteriores ya no es compatible con at.js 2.5.0 (y versiones posteriores).</li><li>Microsoft Edge</li><li>Chrome (última versión, menos 1)</li><li>Firefox (último, último menos 1)</li></ul> |
+| Windows | <ul><li>Microsoft Internet Explorer 9 y 10. Probado en modo de emulación. **Nota**: la entrega de contenido en IE 9 ya no es compatible con at.js 1.3.0 (y versiones posteriores). La entrega de contenido en IE 10, 11 y todas las versiones anteriores ya no es compatible con at.js 2.5.0 (y versiones posteriores).</li><li>Internet Explorer 11. **Nota**: la entrega de contenido en IE 10, 11 y todas las versiones anteriores ya no es compatible con at.js 2.5.0 (y versiones posteriores).</li><li>Microsoft Edge</li><li>Chrome (última versión, menos 1)</li><li>Firefox (último, último menos 1)</li></ul> |
 | Mac | <ul><li>Apple Safari (versión más reciente). **Nota**: Para obtener más información sobre cómo administra Safari las cookies de origen y de terceros, consulte [Cookie de Target](../implement/client-side/atjs/atjs-cookies.md).</li><li>Firefox (último, último menos 1)</li><li>Chrome (última versión, menos 1)</li></ul> |
 | Móvil o tableta | <ul><li>Apple iOS (última versión)</li><li>Dispositivos y tabletas Android (Android 4 y versiones posteriores)</li><li>Microsoft Surface (Windows 8.1)</li></ul> |
 

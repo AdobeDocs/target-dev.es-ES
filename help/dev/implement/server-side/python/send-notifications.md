@@ -14,7 +14,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 420
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ target_client.send_notifications(options)
 
 | Nombre | Tipo | Requerido | Valor predeterminado | Descripción |
 | --- | --- | --- | --- | --- |
-| de eventos | DeliveryRequest | Sí | Ninguna | Se ajusta a la solicitud [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| de eventos | DeliveryRequest | Sí | Ninguna | Se ajusta a la solicitud [[!UICONTROL API de envío de Target]](/help/dev/implement/delivery-api/overview.md) |
 | target_cookie | str | no | Ninguna | Cookie [!DNL Target] |
 | target_location_hint | str | no | Ninguna | [!DNL Target] sugerencia de ubicación |
 | consumer_id | str | no | Ninguna | Al vincular varias llamadas, se deben proporcionar ID de consumidor diferentes |
@@ -75,7 +75,7 @@ target_client.send_notifications(options)
 
 ## Ejemplo
 
-En primer lugar, vamos a generar la solicitud [!UICONTROL Target Delivery API] para recuperar previamente contenido para los mboxes `home` y `product1`.
+En primer lugar, vamos a crear la solicitud de la API [!UICONTROL Target Delivery] para recuperar previamente contenido para los mboxes `home` y `product1`.
 
 ### Python
 
@@ -89,7 +89,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-Una respuesta correcta contendrá un objeto de respuesta [!UICONTROL Target Delivery API], que incluye contenido recuperado previamente para los mboxes solicitados. Un objeto `target_response["response"]` de ejemplo (con formato de diccionario) puede aparecer de la siguiente manera:
+Una respuesta correcta contendrá un objeto de respuesta [!UICONTROL Target Delivery API], que contiene contenido recuperado previamente para los mboxes solicitados. Un objeto `target_response["response"]` de ejemplo (con formato de diccionario) puede aparecer de la siguiente manera:
 
 ### Python
 

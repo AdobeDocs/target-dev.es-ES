@@ -13,13 +13,13 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 29
-ht-degree: 41%
+source-wordcount: 33
+ht-degree: 36%
 
 ---
 
 # API de Adobe Target Recommendations
 
-El(la) [!UICONTROL Adobe Target Recommendations API] se encuentra aquí:
+La [!UICONTROL API de Adobe Target Recommendations] se encuentra aquí:
 
 * [https://developer.adobe.com/target/administer/recommendations-api/](https://developer.adobe.com/target/administer/recommendations-api/){target=_blank}

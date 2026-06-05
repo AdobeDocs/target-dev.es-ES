@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 152
+source-wordcount: 155
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Tenga en cuenta que los números de la imagen no indican la secuencia de operaci
 
 1. SDK del lado del cliente para [!DNL Adobe Target] y [!DNL Experience Cloud ID Service]
 1. [!DNL Target Delivery API] llamada
-1. [!UICONTROL Experience Cloud ID] (ECID) llamada de adquisición
+1. [!UICONTROL Llamada de adquisición de Experience Cloud ID] (ECID)
 1. API de actualización de perfiles en lote y servicio [!DNL Customer Attributes] (CA)
 1. Ingesta de datos de perfil de las fuentes de datos del cliente al almacén de perfiles [!DNL Target]
 1. Recopilación de datos de perfil y comportamiento y decisión de qué experiencia mostrar al visitante

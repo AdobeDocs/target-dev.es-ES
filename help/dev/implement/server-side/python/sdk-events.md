@@ -1,6 +1,6 @@
 ---
 title: Suscribirse a eventos en  [!DNL Adobe Target] Python SDK
-description: Obtenga información sobre cómo suscribirse a varios eventos que se producen dentro de Python SDK mediante el objeto [!UICONTROL OnDeviceDecisioningHandler].
+description: Obtenga información sobre cómo suscribirse a varios eventos que ocurren en Python SDK mediante el objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
 TQID: https://experienceleague.adobe.com/iFtlxw8Wlc9EMtDTndtXD7a2gu1TzGM6ijXire9gHPk
@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 165
+source-wordcount: 166
 ht-degree: 3%
 
 ---

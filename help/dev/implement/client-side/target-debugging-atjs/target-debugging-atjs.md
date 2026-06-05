@@ -1,7 +1,7 @@
 ---
-keywords: at.js, depurar at.js, depurador de adobe Experience Cloud, Experience Cloud Debugger, mbox Trace, mbox highlight, depurar, depuración, $9
-description: Use [!UICONTROL Adobe Experience Cloud Debugger] para ver la configuración de su biblioteca, examinar solicitudes, activar el registro de la consola, deshabilitar  [!DNL Target] solicitudes de llamada y mucho más.
-title: ¿Cómo depuro en?¿Js con [!UICONTROL Adobe Experience Cloud Debugger]?
+keywords: at.js, depurar at.js, depurador de adobe Experience Cloud, depurador de experience cloud, mbox trace, mbox highlight, depurar, depuración, $9
+description: Use [!UICONTROL Adobe Experience Cloud Debugger] para ver la configuración de su biblioteca, examinar solicitudes, activar el registro de consola, deshabilitar [!DNL Target] solicitudes de llamada y mucho más.
+title: ¿Cómo depuro en?¿Js Con [!UICONTROL Adobe Experience Cloud Debugger]?
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
 TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
@@ -17,14 +17,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 162
+source-wordcount: 178
 ht-degree: 6%
 
 ---
 
 # Depurar at.js mediante [!UICONTROL Adobe Experience Cloud Debugger]
 
-Información acerca del uso de la extensión [!UICONTROL Adobe Experience Cloud Debugger], que facilita y agiliza la comprensión de su implementación de [!DNL Target].
+Información sobre el uso de la extensión [!UICONTROL Adobe Experience Cloud Debugger], que facilita y agiliza la comprensión de su implementación de [!DNL Target].
 
 Puede ver rápidamente la configuración de la biblioteca, examinar las solicitudes para asegurarse de que los parámetros personalizados se pasan correctamente, activar el registro de consola y desactivar todas las [!DNL Target] solicitudes. Si se autentica en [!DNL Experience Cloud], podrá usar la potente herramienta de seguimiento de mbox para inspeccionar su actividad, las cualificaciones de audiencia y el perfil del visitante.
 

@@ -1,6 +1,6 @@
 ---
 title: Suscribirse a eventos en  [!DNL Adobe Target] Java SDK
-description: Obtenga información sobre cómo suscribirse a varios eventos que se producen dentro de Java SDK mediante el objeto [!UICONTROL OnDeviceDecisioningHandler].
+description: Obtenga información sobre cómo suscribirse a varios eventos que ocurren en Java SDK mediante el objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: f2d56762-6bf7-4c6b-9c14-fb20e5cfd60d
 TQID: https://experienceleague.adobe.com/x3aig-jM-GXzmLNcUNclZUK9Y49tuSF9-sdkxzJFtiM
@@ -10,8 +10,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 134
-ht-degree: 5%
+source-wordcount: 144
+ht-degree: 4%
 
 ---
 
@@ -27,9 +27,9 @@ El objeto `OnDeviceDecisioningHandler` contiene las siguientes llamadas de retor
 
 | Nombre | Argumentos | Descripción |
 | --- | --- | --- |
-| onDeviceDecisioningReady | Ninguna | Solo se llamó una vez la primera vez que el cliente está listo para [!UICONTROL on-device decisioning] |
-| artifactDownloadSucceeded | contenido de byte[] del archivo de artefactos | Se llama cada vez que se descarga un artefacto [!UICONTROL on-device decisioning] |
-| artifactDownloadFailed | Excepción | Se llama cada vez que se produce un error al descargar un artefacto [!UICONTROL on-device decisioning] |
+| onDeviceDecisioningReady | Ninguna | Se llama solo una vez la primera vez que el cliente está listo para [!UICONTROL la toma de decisiones en el dispositivo] |
+| artifactDownloadSucceeded | contenido de byte[] del archivo de artefactos | Se llama cada vez que se descarga un artefacto de [!UICONTROL toma de decisiones en el dispositivo] |
+| artifactDownloadFailed | Excepción | Se llama cada vez que se produce un error al descargar un artefacto de [!UICONTROL toma de decisiones en el dispositivo] |
 
 ## Ejemplo
 

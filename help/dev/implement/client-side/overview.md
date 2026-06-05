@@ -19,8 +19,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 233
-ht-degree: 28%
+source-wordcount: 252
+ht-degree: 26%
 
 ---
 
@@ -32,7 +32,7 @@ Para implementar [!DNL Target] del lado del cliente, debe usar una de las biblio
 
 * [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
 
-  [!UICONTROL Adobe Experience Platform Web SDK] le permite interactuar con los distintos servicios de [!DNL Adobe Experience Cloud] (incluido [!DNL Target]) a través de [!UICONTROL Adobe Experience Edge Network]. Si decide migrar a [!UICONTROL Adobe Experience Platform Web SDK], vea [Qué es [!UICONTROL Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md).
+  [!UICONTROL Adobe Experience Platform Web SDK] le permite interactuar con los distintos servicios de [!DNL Adobe Experience Cloud] (incluido [!DNL Target]) a través de [!UICONTROL Adobe Experience Edge Network]. Si decide migrar a [!UICONTROL Adobe Experience Platform Web SDK], consulte [Qué es [!UICONTROL Adobe Experience Platform Web SDK]](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md).
 
 * [[!DNL Target] biblioteca JavaScript at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 

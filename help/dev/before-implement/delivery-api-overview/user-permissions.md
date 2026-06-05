@@ -12,14 +12,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: 184
 ht-degree: 1%
 
 ---
 
 # Permisos de usuario (Premium)
 
-[!DNL Adobe] permite a los clientes administrar permisos para sus usuarios cuando utilizan Adobe Target. Para realizar una llamada a [!UICONTROL Adobe Target Delivery API] correcta, se debe pasar un token con los permisos correctos dentro de la llamada a la API. Para obtener más información sobre los permisos de usuario y cómo recuperar el token, visite [esta documentación](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=es).
+[!DNL Adobe] permite a los clientes administrar permisos para sus usuarios cuando utilizan Adobe Target. Para que una llamada a la [!UICONTROL API de envío de Adobe Target] se realice correctamente, se debe pasar un token con los permisos correctos en la llamada a la API. Para obtener más información sobre los permisos de usuario y cómo recuperar el token, visite [esta documentación](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=es).
 
 ```
 curl -X POST \

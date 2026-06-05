@@ -1,6 +1,6 @@
 ---
 keywords: implementación, biblioteca javascript, js, atjs, toma de decisiones en el dispositivo, toma de decisiones en el dispositivo, at.js, en el dispositivo, en el dispositivo, implementación0
-description: Obtenga información sobre cómo realizar [!UICONTROL on-device decisioning] con la biblioteca at.js
+description: Obtenga información sobre cómo realizar [!UICONTROL decisiones en el dispositivo] con la biblioteca at.js
 title: ¿Cómo funciona la toma de decisiones en el dispositivo con la biblioteca JavaScript at.js?
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
@@ -26,24 +26,24 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 3621
+source-wordcount: 3835
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL On-device decisioning] para at.js
+# [!UICONTROL Toma de decisiones en el dispositivo] para at.js
 
-Desde la versión 2.5.0, at.js ofrece [!UICONTROL on-device decisioning]. [!UICONTROL On-device decisioning] le permite almacenar en caché sus actividades [Prueba A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es) y [Segmentación de experiencias](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=es) (XT) en el explorador para realizar la toma de decisiones en memoria sin una solicitud de bloqueo de red al Edge Network [!DNL Adobe Target].
+A partir de la versión 2.5.0, at.js ofrece [!UICONTROL toma de decisiones en el dispositivo]. [!UICONTROL La toma de decisiones en el dispositivo] le permite almacenar en caché sus actividades de [Prueba A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es) y [Segmentación de experiencias](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=es) (XT) en el explorador para realizar una toma de decisiones en memoria sin una solicitud de red de bloqueo a [!DNL Adobe Target] Edge Network.
 
 >[!NOTE]
 >
->[!UICONTROL On-device decisioning] está disponible tanto para implementaciones del lado del cliente como del lado del servidor. Este artículo describe [!UICONTROL on-device decisioning] para el cliente. Para obtener información acerca de [!UICONTROL on-device decisioning] para el lado del servidor, consulte la documentación de implementación del lado del servidor [aquí](../../../server-side/sdk-guides/on-device-decisioning/overview.md).
+>[!UICONTROL La toma de decisiones en el dispositivo] está disponible tanto para implementaciones del lado del cliente como del lado del servidor. Este artículo describe [!UICONTROL toma de decisiones en el dispositivo] para el cliente. Para obtener información sobre [!UICONTROL la toma de decisiones en el dispositivo] para el servidor, consulte la documentación de implementación del lado del servidor [aquí](../../../server-side/sdk-guides/on-device-decisioning/overview.md).
 
-[!DNL Target] también ofrece la flexibilidad de ofrecer la experiencia más relevante y actualizada a partir de sus actividades de experimentación y personalización impulsadas por el aprendizaje automático (impulsadas por ML) a través de una llamada al servidor en directo. En otras palabras, cuando el rendimiento es más importante, puede elegir usar [!UICONTROL on-device decisioning]. Sin embargo, cuando se necesita la experiencia más relevante, actualizada y basada en ML, se puede realizar una llamada al servidor en su lugar.
+[!DNL Target] también ofrece la flexibilidad de ofrecer la experiencia más relevante y actualizada a partir de sus actividades de experimentación y personalización impulsadas por el aprendizaje automático (impulsadas por ML) a través de una llamada al servidor en directo. En otras palabras, cuando el rendimiento es más importante, puede optar por [!UICONTROL tomar decisiones en el dispositivo]. Sin embargo, cuando se necesita la experiencia más relevante, actualizada y basada en ML, se puede realizar una llamada al servidor en su lugar.
 
-## ¿Cuáles son los beneficios de [!UICONTROL on-device decisioning]?
+## ¿Cuáles son las ventajas de [!UICONTROL tomar decisiones en el dispositivo]?
 
-Los beneficios de [!UICONTROL on-device decisioning] incluyen:
+Las ventajas de [!UICONTROL tomar decisiones en el dispositivo] son:
 
 * **Ofrezca decisiones y experiencias increíblemente rápidas.** La agrupación y la toma de decisiones se realizan en la memoria y en el explorador para evitar el bloqueo de solicitudes de red.
 * **Mejora el rendimiento de la aplicación.** Ejecute experimentos y proporcione personalización a sus clientes y usuarios sin poner en riesgo las experiencias de los usuarios finales.
@@ -52,21 +52,21 @@ Los beneficios de [!UICONTROL on-device decisioning] incluyen:
 
 ## Funciones compatibles
 
-[!DNL Adobe Target] JS SDK ofrece a los clientes la flexibilidad de elegir entre el rendimiento y la actualización de los datos para tomar decisiones. En otras palabras, si la entrega del contenido personalizado más relevante y atractivo a través del aprendizaje automático es lo más importante para usted, se debe realizar una llamada al servidor en directo. Sin embargo, cuando el rendimiento es más crítico, se debe tomar una decisión en el dispositivo y en la memoria. Para que [!UICONTROL on-device decisioning] funcione, consulte la lista de características compatibles:
+[!DNL Adobe Target] JS SDK ofrece a los clientes la flexibilidad de elegir entre el rendimiento y la actualización de los datos para tomar decisiones. En otras palabras, si la entrega del contenido personalizado más relevante y atractivo a través del aprendizaje automático es lo más importante para usted, se debe realizar una llamada al servidor en directo. Sin embargo, cuando el rendimiento es más crítico, se debe tomar una decisión en el dispositivo y en la memoria. Para que [!UICONTROL la toma de decisiones en el dispositivo] funcione, consulte la lista de características compatibles:
 
 * Tipos de actividades.
 * Segmentación de audiencia
 * Método de asignación
 
-Para obtener más información, vea [Características compatibles con [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md).
+Para obtener más información, consulte [Funciones compatibles con [!UICONTROL toma de decisiones en el dispositivo]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md).
 
-## ¿Cómo funciona [!UICONTROL on-device decisioning]?
+## ¿Cómo funciona [!UICONTROL la toma de decisiones en el dispositivo]?
 
-Al implementar e inicializar at.js con [!UICONTROL on-device decisioning] habilitado, se descarga un [artefacto de regla](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md) que incluye a [!UICONTROL on-device decisioning] para actividades, audiencias y recursos A/B y XT desde la red de distribución de contenido (CDN) de Akamai más cercana a su visitante y se almacena en caché localmente en el explorador del visitante. Cuando se realiza una solicitud desde at.js para recuperar una experiencia, la decisión con respecto a la experiencia que se va a devolver se realiza en memoria, en función de los metadatos codificados en el artefacto de regla en caché.
+Cuando implementa e inicializa at.js con [!UICONTROL toma de decisiones en el dispositivo] habilitado, se descarga un [artefacto de regla](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md) que incluye su [!UICONTROL toma de decisiones en el dispositivo] para actividades A/B y XT, audiencias y recursos, desde la CDN de Akamai más cercana a su visitante y se almacena en caché localmente en el explorador del visitante. Cuando se realiza una solicitud desde at.js para recuperar una experiencia, la decisión con respecto a la experiencia que se va a devolver se realiza en memoria, en función de los metadatos codificados en el artefacto de regla en caché.
 
 ## Método de toma de decisiones
 
-Con [!UICONTROL on-device decisioning], [!DNL Target] introduce una nueva configuración denominada Método de toma de decisiones. La configuración Método de toma de decisiones dicta cómo at.js envía sus experiencias. El método de toma de decisiones tiene tres valores:
+Con [!UICONTROL toma de decisiones en el dispositivo], [!DNL Target] introduce una nueva configuración denominada Método de decisión. La configuración Método de toma de decisiones dicta cómo at.js envía sus experiencias. El método de toma de decisiones tiene tres valores:
 
 * Solo del lado del servidor
 * Solo en el dispositivo
@@ -92,7 +92,7 @@ La siguiente lista corresponde a los números del diagrama:
 
 | Paso | Descripción |
 | --- | --- |
-| 1 | El ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud] (¿https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es&). |
+| 1 | La ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud] (¿https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es&). |
 | 2 | La biblioteca at.js carga sincrónicamente y oculta el cuerpo del documento.<br />   La biblioteca at.js también se puede cargar de forma asíncrona con un fragmento de ocultamiento previo opcional implementado en la página. |
 | 3 | La biblioteca at.js oculta el cuerpo para evitar parpadeos. |
 | 4 | Se realiza una solicitud de carga de página que incluye todos los parámetros configurados, como (ECID, ID de cliente, parámetros personalizados, perfil de usuario, etc.) |
@@ -109,13 +109,13 @@ La siguiente lista corresponde a los números del diagrama:
 
 ### Solo en el dispositivo
 
-Solo en el dispositivo es el método de toma de decisiones que debe configurarse en at.js 2.5.0+ cuando [!UICONTROL on-device decisioning] solo debe usarse en sus páginas web.
+Solo en el dispositivo es el método de toma de decisiones que debe establecerse en at.js 2.5.0+ cuando [!UICONTROL toma de decisiones en el dispositivo] debe usarse solamente en sus páginas web.
 
-[!UICONTROL On-device decisioning] puede entregar sus experiencias y actividades de personalización a una velocidad asombrosa, ya que las decisiones se toman a partir de un artefacto de reglas en caché que contiene todas las actividades que cumplen los requisitos para [!UICONTROL on-device decisioning].
+[!UICONTROL Toma de decisiones en el dispositivo] puede entregar sus experiencias y actividades de personalización a una velocidad asombrosa, ya que las decisiones se toman a partir de un artefacto de reglas en caché que contiene todas las actividades que cumplen los requisitos para [!UICONTROL toma de decisiones en el dispositivo].
 
-Para obtener más información acerca de las actividades que cumplen los requisitos para [!UICONTROL on-device decisioning], vea [Características compatibles en [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md).
+Para obtener más información sobre las actividades que cumplen los requisitos para [!UICONTROL toma de decisiones en el dispositivo], consulte [Funciones compatibles con [!UICONTROL toma de decisiones en el dispositivo]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md).
 
-Este método de toma de decisiones solo debe usarse si el rendimiento es muy crítico en todas las páginas que requieren decisiones de Target. Además, recuerde que cuando se selecciona este método de toma de decisiones, las actividades de [!DNL Target] que no cumplen los requisitos para [!UICONTROL on-device decisioning] no se entregarán ni ejecutarán. La biblioteca at.js 2.5.0+ está configurada para buscar únicamente el artefacto de reglas en caché para tomar decisiones.
+Este método de toma de decisiones solo debe usarse si el rendimiento es muy crítico en todas las páginas que requieren decisiones de Target. Además, recuerde que cuando se selecciona este método de toma de decisiones, las actividades de [!DNL Target] que no cumplen los requisitos para [!UICONTROL la toma de decisiones en el dispositivo] no se entregarán ni ejecutarán. La biblioteca at.js 2.5.0+ está configurada para buscar únicamente el artefacto de reglas en caché para tomar decisiones.
 
 El diagrama siguiente ilustra la interacción entre su visitante, el explorador, at.js 2.5.0+ y la CDN de Akamai. La CDN de Akamai almacena en caché el artefacto de reglas para la primera visita del visitante. Para la primera visita a la página de un visitante nuevo, el artefacto de reglas JSON debe descargarse de la CDN de Akamai para almacenarse en la caché local en el explorador del visitante. Una vez descargado el artefacto de reglas JSON, la decisión se toma inmediatamente sin una llamada de red de bloqueo. El siguiente diagrama de flujo captura los nuevos visitantes.
 
@@ -127,11 +127,11 @@ La siguiente lista corresponde a los números del diagrama:
 
 >[!NOTE]
 >
->[!DNL Adobe Target] Servidores de administración califican todas sus actividades que cumplen los requisitos para [!UICONTROL on-device decisioning], generan el artefacto de reglas JSON y lo propagan a la CDN de Akamai. Sus actividades se monitorizan continuamente en busca de actualizaciones para generar un nuevo artefacto de reglas JSON que se propagará a la CDN de Akamai.
+>[!DNL Adobe Target] servidores de administración califican todas sus actividades que cumplen los requisitos para [!UICONTROL toma de decisiones en el dispositivo], genera el artefacto de reglas JSON y lo propaga a la CDN de Akamai. Sus actividades se monitorizan continuamente en busca de actualizaciones para generar un nuevo artefacto de reglas JSON que se propagará a la CDN de Akamai.
 
 | Paso | Descripción |
 | --- | --- |
-| 1 | El ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es). |
+| 1 | La ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es). |
 | 2 | La biblioteca de at.js carga de forma sincronizada y oculta el cuerpo del documento.<br />La biblioteca at.js también se puede cargar de forma asíncrona con un fragmento de ocultamiento previo opcional implementado en la página. |
 | 3 | La biblioteca at.js oculta el cuerpo para evitar parpadeos. |
 | 4 | La biblioteca at.js realiza una solicitud para recuperar el artefacto de regla JSON de la CDN de Akamai más cercana al visitante. |
@@ -154,11 +154,11 @@ La siguiente lista corresponde a los números del diagrama:
 
 >[!NOTE]
 >
->[!DNL Adobe Target] Servidores de administración califican todas sus actividades que cumplen los requisitos para [!UICONTROL on-device decisioning], generan el artefacto de reglas JSON y lo propagan a la CDN de Akamai. Sus actividades se monitorizan continuamente en busca de actualizaciones para generar un nuevo artefacto de reglas JSON que se propagará a la CDN de Akamai.
+>[!DNL Adobe Target] servidores de administración califican todas sus actividades que cumplen los requisitos para [!UICONTROL toma de decisiones en el dispositivo], genera el artefacto de reglas JSON y lo propaga a la CDN de Akamai. Sus actividades se monitorizan continuamente en busca de actualizaciones para generar un nuevo artefacto de reglas JSON que se propagará a la CDN de Akamai.
 
 | Paso | Descripción |
 | --- | --- |
-| 1 | El ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es). |
+| 1 | La ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es). |
 | 2 | La biblioteca de at.js carga de forma sincronizada y oculta el cuerpo del documento.<br />La biblioteca at.js también se puede cargar de forma asíncrona con un fragmento de ocultamiento previo opcional implementado en la página. |
 | 3 | La biblioteca at.js oculta el cuerpo para evitar parpadeos. |
 | 4 | La biblioteca at.js interpreta el artefacto de regla JSON y ejecuta la decisión en la memoria para recuperar la experiencia. |
@@ -171,11 +171,11 @@ La siguiente lista corresponde a los números del diagrama:
 
 ### Híbrido
 
-Híbrido es el método de toma de decisiones que debe establecerse en at.js 2.5.0+ cuando se deben ejecutar tanto [!UICONTROL on-device decisioning] como las actividades que requieren una llamada de red a la red de Edge [!DNL Adobe Target].
+Híbrido es el método de toma de decisiones que debe establecerse en at.js 2.5.0+ cuando se deben ejecutar tanto la toma de decisiones en el dispositivo [!UICONTROL como las actividades que requieren una llamada de red a la red de Edge [!DNL Adobe Target].]
 
-Cuando administra actividades de [!UICONTROL on-device decisioning] y actividades del lado del servidor, puede resultar un poco complicado y tedioso pensar en cómo implementar y aprovisionar [!DNL Target] en sus páginas. Con el método de toma de decisiones híbrido, [!DNL Target] sabe cuándo debe realizar una llamada al servidor a la red de Edge [!DNL Adobe Target] para las actividades que requieren ejecución del lado del servidor y también cuándo ejecutar únicamente decisiones en el dispositivo.
+Cuando administra las actividades de [!UICONTROL toma de decisiones en el dispositivo] y las actividades del lado del servidor, puede resultar un poco complicado y tedioso pensar en cómo implementar y aprovisionar [!DNL Target] en sus páginas. Con el método de toma de decisiones híbrido, [!DNL Target] sabe cuándo debe realizar una llamada al servidor a la red de Edge [!DNL Adobe Target] para las actividades que requieren ejecución del lado del servidor y también cuándo ejecutar únicamente decisiones en el dispositivo.
 
-El artefacto de reglas JSON incluye metadatos para informar a at.js de si un mbox tiene una actividad del lado del servidor en ejecución o una actividad [!UICONTROL on-device decisioning]. Este método de toma de decisiones garantiza que las actividades que desea que se entreguen rápidamente se realicen a través de [!UICONTROL on-device decisioning] y que, para las actividades que requieren una personalización basada en ML más potente, dichas actividades se realicen a través de la red de Edge [!DNL Adobe Target].
+El artefacto de reglas JSON incluye metadatos para informar a at.js de si un mbox tiene una actividad del lado del servidor en ejecución o una actividad de [!UICONTROL toma de decisiones en el dispositivo]. Este método de toma de decisiones garantiza que las actividades que desea que se entreguen rápidamente se realicen mediante [!UICONTROL toma de decisiones en el dispositivo] y que, para las actividades que requieren una personalización basada en ML más potente, dichas actividades se realicen a través de la red de Edge [!DNL Adobe Target].
 
 El diagrama siguiente ilustra la interacción entre su visitante, el explorador, at.js 2.5.0+, la CDN de Akamai y la Edge Network [!DNL Adobe Target] para un visitante nuevo que visita su página por primera vez. La conclusión de este diagrama es que el artefacto de reglas JSON se descarga asincrónicamente mientras las decisiones se toman a través de la red de Edge [!DNL Adobe Target].
 
@@ -189,11 +189,11 @@ La siguiente lista corresponde a los números del diagrama:
 
 >[!NOTE]
 >
->[!DNL Adobe Target] Servidores de administración califican todas sus actividades que cumplen los requisitos para [!UICONTROL on-device decisioning], generan el artefacto de reglas JSON y lo propagan a la CDN de Akamai. Sus actividades se monitorizan continuamente en busca de actualizaciones para generar un nuevo artefacto de reglas JSON que se propagará a la CDN de Akamai.
+>[!DNL Adobe Target] servidores de administración califican todas sus actividades que cumplen los requisitos para [!UICONTROL toma de decisiones en el dispositivo], genera el artefacto de reglas JSON y lo propaga a la CDN de Akamai. Sus actividades se monitorizan continuamente en busca de actualizaciones para generar un nuevo artefacto de reglas JSON que se propagará a la CDN de Akamai.
 
 | Paso | Descripción |
 | --- | --- |
-| 1 | El ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es). |
+| 1 | La ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es). |
 | 2 | La biblioteca de at.js carga de forma sincronizada y oculta el cuerpo del documento.<br />La biblioteca at.js también se puede cargar de forma asíncrona con un fragmento de ocultamiento previo opcional implementado en la página. |
 | 3 | La biblioteca at.js oculta el cuerpo para evitar parpadeos. |
 | 4 | Se realiza una solicitud de carga de página al Edge Network [!DNL Adobe Target], incluidos todos los parámetros configurados, como (ECID, ID de cliente, parámetros personalizados, perfil de usuario, etc.) |
@@ -219,11 +219,11 @@ La siguiente lista corresponde a los números del diagrama:
 
 >[!NOTE]
 >
->[!DNL Adobe Target] Servidores de administración califican todas sus actividades que cumplen los requisitos para [!UICONTROL on-device decisioning], generan el artefacto de reglas JSON y lo propagan a la CDN de Akamai. Sus actividades se monitorizan continuamente en busca de actualizaciones para generar un nuevo artefacto de reglas JSON que se propagará a la CDN de Akamai.
+>[!DNL Adobe Target] servidores de administración califican todas sus actividades que cumplen los requisitos para [!UICONTROL toma de decisiones en el dispositivo], genera el artefacto de reglas JSON y lo propaga a la CDN de Akamai. Sus actividades se monitorizan continuamente en busca de actualizaciones para generar un nuevo artefacto de reglas JSON que se propagará a la CDN de Akamai.
 
 | Paso | Descripción |
 | --- | --- |
-| 1 | El ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es). |
+| 1 | La ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=es). |
 | 2 | La biblioteca de at.js carga de forma sincronizada y oculta el cuerpo del documento.<br />La biblioteca at.js también se puede cargar de forma asíncrona con un fragmento de ocultamiento previo opcional implementado en la página. |
 | 3 | La biblioteca at.js oculta el cuerpo para evitar parpadeos. |
 | 4 | Se realiza una solicitud para recuperar una experiencia. |
@@ -235,36 +235,36 @@ La siguiente lista corresponde a los números del diagrama:
 | 10 | Se carga toda la página web. |
 | 11 | Se envían los datos de Analytics a los servidores de recopilación de datos. Se comparan los datos de Target con los datos de Analytics mediante el SDID y se procesan en el almacén de informes de Analytics. Por lo tanto, los datos de Analytics se pueden ver tanto en Analytics como en [!DNL Target] mediante los informes de [!UICONTROL Analytics for Target] (A4T). |
 
-## ¿Cómo habilito [!UICONTROL on-device decisioning]?
+## ¿Cómo habilito [!UICONTROL la toma de decisiones en el dispositivo]?
 
-[!UICONTROL On-device decisioning] está disponible para todos los clientes de [!DNL Target] que utilizan At.js 2.5.0+.
+[!UICONTROL La toma de decisiones en el dispositivo] está disponible para todos los clientes de [!DNL Target] que usan At.js 2.5.0+.
 
-Para habilitar [!UICONTROL on-device decisioning]:
+Para habilitar [!UICONTROL la toma de decisiones en el dispositivo]:
 
 >[!NOTE]
 >
 >Debe tener el rol de administrador o aprobador [usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para habilitar o deshabilitar la opción de toma de decisiones en el dispositivo.
 
-1. Haga clic en **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**.
-1. En **[!UICONTROL Account details]**, coloque el conmutador **[!UICONTROL On-Device Decisioning]** en la posición &quot;on&quot;.
+1. Haga clic en **[!UICONTROL Administración]** > **[!UICONTROL Implementación]** > **[!UICONTROL Detalles de la cuenta]**.
+1. En **[!UICONTROL Detalles de la cuenta]**, coloque el conmutador **[!UICONTROL Toma de decisiones en el dispositivo]** en la posición &quot;Activada&quot;.
 
-   Conmutar ![[!UICONTROL On-device decisioning]](assets/on-device-decisioning-toggle.png)
+   ![[!UICONTROL Conmutación de decisiones en el dispositivo]](assets/on-device-decisioning-toggle.png)
 
-   La opción &quot;Incluir todas las actividades calificadas de [!UICONTROL on-device decisioning] existentes en el artefacto&quot; se muestra si habilita [!UICONTROL on-device decisioning].
-1. (Condicional) Deslice el conmutador a la posición &quot;Activado&quot; si desea que todas sus actividades activas de [!DNL Target] que cumplen los requisitos para [!UICONTROL on-device decisioning] se incluyan automáticamente en el artefacto.
+   La opción &quot;Incluir todas las actividades calificadas de [!UICONTROL toma de decisiones en el dispositivo] existentes en el artefacto&quot; se muestra si habilita [!UICONTROL la toma de decisiones en el dispositivo].
+1. (Condicional) Deslice el conmutador a la posición &quot;Activado&quot; si desea que todas sus actividades activas de [!DNL Target] que cumplen los requisitos para la [!UICONTROL toma de decisiones en el dispositivo] se incluyan automáticamente en el artefacto.
 
-   Si deja esta opción desactivada, debe volver a crear y activar las actividades [!UICONTROL on-device decisioning] para que se incluyan en el artefacto de reglas generadas. En otras palabras, cualquier actividad en estado activo antes de activar la opción Toma de decisiones en el dispositivo no se incluye en el artefacto de reglas.
+   Si deja esta opción desactivada, debe volver a crear y activar las actividades de [!UICONTROL toma de decisiones en el dispositivo] para que se incluyan en el artefacto de reglas generadas. En otras palabras, cualquier actividad en estado activo antes de activar la opción Toma de decisiones en el dispositivo no se incluye en el artefacto de reglas.
 
 Después de habilitar la opción de toma de decisiones en el dispositivo, [!DNL Target] comienza a generar y propagar [artefactos de regla](/help/dev/implement/client-side/atjs/on-device-decisioning/rule-artifact.md) para su cliente.
 
 >[!WARNING]
 >
->Asegúrese de habilitar la opción antes de inicializar el SDK [!DNL Adobe Target] para usar [!UICONTROL on-device decisioning]. Los artefactos de regla primero deben generarse y propagarse a las CDN de Akamai para que [!UICONTROL on-device decisioning] funcione. La propagación puede tardar entre cinco y diez minutos en generarse y propagarse el primer artefacto de regla a la CDN de Akamai.
+>Asegúrese de habilitar la opción antes de inicializar el SDK [!DNL Adobe Target] para usar [!UICONTROL toma de decisiones en el dispositivo]. Los artefactos de regla primero deben generarse y propagarse a las CDN de Akamai para que funcione [!UICONTROL la toma de decisiones en el dispositivo]. La propagación puede tardar entre cinco y diez minutos en generarse y propagarse el primer artefacto de regla a la CDN de Akamai.
 
-## ¿Cómo configuro at.js 2.5.0+ para que use [!UICONTROL on-device decisioning]?
+## ¿Cómo configuro at.js 2.5.0+ para usar [!UICONTROL toma de decisiones en el dispositivo]?
 
-1. Haga clic en **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**.
-1. En **[!UICONTROL Implementation Methods]** > **[!UICONTROL Main Implementation Method]**, haga clic en **[!UICONTROL Edit]** junto a su versión de at.js (debe ser at.js 2.5.0 o posterior).
+1. Haga clic en **[!UICONTROL Administración]** > **[!UICONTROL Implementación]** > **[!UICONTROL Detalles de la cuenta]**.
+1. En **[!UICONTROL Métodos de implementación]** > **[!UICONTROL Método de implementación principal]**, haga clic en **[!UICONTROL Editar]** junto a su versión de at.js (debe ser at.js 2.5.0 o posterior).
 
    ![Editar configuración del método de implementación principal](assets/main-implementation-method.png)
 
@@ -327,33 +327,33 @@ adobe.target.getOffers({
 
 ### TTL de caché de artefactos
 
-Target representa las actividades que cumplen los requisitos de [!UICONTROL on-device decisioning] como un artefacto que consta de metadatos, reglas y condiciones. Este artefacto se almacena en caché en la CDN de Akamai. Durante la primera visita del usuario, el explorador del usuario descarga y almacena en caché el artefacto que representa sus actividades [!UICONTROL on-device decisioning].
+Target representa las actividades que cumplen los requisitos para [!UICONTROL la toma de decisiones en el dispositivo] como un artefacto que consta de metadatos, reglas y condiciones. Este artefacto se almacena en caché en la CDN de Akamai. Durante la primera visita del usuario, el explorador descargará y almacenará en caché el artefacto que representa las actividades de [!UICONTROL toma de decisiones en el dispositivo].
 
 En las visitas posteriores al sitio, el explorador comprueba automáticamente si debe descargar una versión más reciente del artefacto. Esta comprobación añade latencia. El TTL Caché de artefactos define el número de minutos que no desea que el explorador compruebe si hay un artefacto actualizado desde la última descarga correcta. Cuanto más largo sea el lapso de tiempo, mejor será el rendimiento. Cuanto más corto sea el lapso de tiempo, mejor será la actualización de los datos, pero al coste de la latencia añadida.
 
-## ¿Cómo sé que una actividad es elegible para [!UICONTROL on-device decisioning]?
+## ¿Cómo sé que una actividad es elegible para [!UICONTROL la toma de decisiones en el dispositivo]?
 
-Después de crear una actividad que cumple los requisitos de [!UICONTROL on-device decisioning], se puede ver una etiqueta que indique Apto para la toma de decisiones en el dispositivo en la página Información general de la actividad.
+Después de crear una actividad elegible para [!UICONTROL toma de decisiones en el dispositivo], verá una etiqueta que indique Opción de decisiones en el dispositivo en la página Información general de la actividad.
 
 ![Etiqueta elegible para la toma de decisiones en el dispositivo en la página Información general de la actividad.](assets/on-device-decisioning-eligible-label.png)
 
-Esta etiqueta no significa que la actividad siempre se enviará a través de [!UICONTROL on-device decisioning]. Solo cuando at.js 2.5.0+ esté configurado para usar [!UICONTROL on-device decisioning], esta actividad se ejecutará en el dispositivo. Si at.js 2.5.0+ no está configurado para utilizar en el dispositivo, esta actividad se entregará a través de una llamada al servidor realizada desde at.js.
+Esta etiqueta no significa que la actividad siempre se enviará a través de [!UICONTROL toma de decisiones en el dispositivo]. Solo cuando at.js 2.5.0+ esté configurado para usar [!UICONTROL toma de decisiones en el dispositivo], esta actividad se ejecutará en el dispositivo. Si at.js 2.5.0+ no está configurado para utilizar en el dispositivo, esta actividad se entregará a través de una llamada al servidor realizada desde at.js.
 
-Puede filtrar todas las actividades que cumplen los requisitos de [!UICONTROL on-device decisioning] en la página Actividades mediante el filtro Apto para la toma de decisiones en el dispositivo.
+Puede filtrar todas las actividades que cumplen los requisitos de [!UICONTROL toma de decisiones en el dispositivo] en la página Actividades mediante el filtro Elegible para la toma de decisiones en el dispositivo.
 
 ![Filtro apto para la toma de decisiones en el dispositivo en la página Actividades.](assets/on-device-decisioning-filter.png)
 
 >[!NOTE]
 >
->Después de crear y activar una actividad que cumpla los requisitos de [!UICONTROL on-device decisioning], pueden pasar de cinco a diez minutos antes de que se incluya en el artefacto de reglas que se genera y propaga al punto de presencias de la CDN de Akamai.
+>Después de crear y activar una actividad elegible para [!UICONTROL toma de decisiones en el dispositivo], pueden pasar de cinco a diez minutos antes de que se incluya en el artefacto de reglas que se genera y propaga al punto de presencias de la CDN de Akamai.
 
-## Resumen de los pasos para garantizar que mis actividades [!UICONTROL on-device decisioning] se entreguen a través de At.js 2.5.0+?
+## Resumen de los pasos para garantizar que mis actividades de [!UICONTROL toma de decisiones en el dispositivo] se entreguen a través de At.js 2.5.0+?
 
-1. Acceda a la interfaz de usuario de [!DNL Adobe Target] y vaya a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account Details]** para habilitar la opción **[!UICONTROL On-Device Decisioning]**.
-1. Habilite la opción **[!UICONTROL "Include all existing [!UICONTROL on-device decisioning] qualified activities in the artifact"]**.
+1. Acceda a la interfaz de usuario de [!DNL Adobe Target] y vaya a **[!UICONTROL Administración]** > **[!UICONTROL Implementación]** > **[!UICONTROL Detalles de la cuenta]** para habilitar la opción **[!UICONTROL Toma de decisiones en el dispositivo]**.
+1. Habilite **[!UICONTROL &quot;Incluir todas las actividades calificadas de [!UICONTROL toma de decisiones en el dispositivo] existentes en el artefacto&quot;]**.
 
    La primera generación de artefactos de reglas JSON puede tardar hasta 10 minutos.
 
-1. Cree y active un tipo de actividad [&#x200B; compatible con [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) y verifique que cumpla los requisitos de [!UICONTROL on-device decisioning].
-1. Establezca **[!UICONTROL Decisioning Method]** en **[!UICONTROL "Hybrid"]** o **[!UICONTROL "On-device only"]** a través de la interfaz de usuario de la configuración de at.js.
+1. Cree y active un tipo de actividad [compatible con la toma de decisiones en el dispositivo](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md), y verifique que cumpla los requisitos de [!UICONTROL toma de decisiones en el dispositivo].
+1. Establezca el **[!UICONTROL Método de decisión]** en **[!UICONTROL &quot;Híbrido&quot;]** o **[!UICONTROL &quot;Solo en el dispositivo&quot;]** a través de la interfaz de usuario de la configuración de at.js.
 1. Descargue e implemente at.js 2.5.0+ en sus páginas.

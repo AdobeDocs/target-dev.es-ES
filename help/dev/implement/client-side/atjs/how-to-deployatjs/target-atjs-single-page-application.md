@@ -24,7 +24,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2848
+source-wordcount: 2851
 ht-degree: 53%
 
 ---
@@ -87,7 +87,7 @@ Ahora que hemos cubierto lo que son las vistas de [!DNL Adobe Target], podemos a
 
    Primero, debemos instalar at.js 2.*x*. Esta versión de at.js se desarrolló teniendo en cuenta las SPA. Las versiones anteriores de at.js no son compatibles con las vistas [!DNL Adobe Target] y con el VEC para SPA.
 
-   Descargar at.js 2.*x* a través de la interfaz de usuario [!DNL Adobe Target] ubicada en **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. at.js 2.*x* también se puede implementar mediante etiquetas en [!DNL Adobe Experience Platform].
+   Descargar at.js 2.*x* a través de la interfaz de usuario [!DNL Adobe Target] ubicada en **[!UICONTROL Administración]** > **[!UICONTROL Implementación]**. at.js 2.*x* también se puede implementar mediante etiquetas en [!DNL Adobe Experience Platform].
 
 1. Implemente la función at.js 2.*x*, `[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)` en sus sitios.
 
@@ -101,7 +101,7 @@ Ahora que hemos cubierto lo que son las vistas de [!DNL Adobe Target], podemos a
 
    | Parámetro | Tipo | ¿Requerido? | Información general | Descripción |
    | --- | --- | --- | --- | --- |
-   | Nombre de vista | Cadena | Sí | &#x200B;1. No hay espacios al final.<br />2. No puede estar vacío.<br />3. El nombre de vista debe ser único para todas las páginas.<br />4. **Advertencia**: el nombre de la vista no debe comenzar ni finalizar con “`/`”. Esto se debe a que el cliente generalmente extraería el nombre de la vista de la ruta de la URL. Para nosotros, &quot;home&quot; y &quot;`/home`&quot; son diferentes.<br />5. **Advertencia**: la misma vista no debe activarse varias veces con la opción `{page: true}`. | Pase cualquier nombre como tipo de cadena que desee que represente la vista. Este nombre de vista se muestra en el panel **[!UICONTROL Modifications]** del VEC para que los especialistas en marketing creen acciones y ejecuten sus actividades A/B y XT. |
+   | Nombre de vista | Cadena | Sí | &#x200B;1. No hay espacios al final.<br />2. No puede estar vacío.<br />3. El nombre de vista debe ser único para todas las páginas.<br />4. **Advertencia**: el nombre de la vista no debe comenzar ni finalizar con “`/`”. Esto se debe a que el cliente generalmente extraería el nombre de la vista de la ruta de la URL. Para nosotros, &quot;home&quot; y &quot;`/home`&quot; son diferentes.<br />5. **Advertencia**: la misma vista no debe activarse varias veces con la opción `{page: true}`. | Pase cualquier nombre como tipo de cadena que desee que represente la vista. Este nombre de vista se muestra en el panel **[!UICONTROL Modificaciones]** del VEC para que los especialistas en marketing creen acciones y ejecuten sus actividades A/B y XT. |
    | opciones | Objeto | No |  |  |
    | opciones > página | Booleano | No |  | **VERDADERO**: el valor predeterminado de la página es verdadero. Cuando `page=true`, las notificaciones se enviarán a los servidores de Edge para incrementar el recuento de impresiones.<br />**FALSO**: Cuando se seleccione `page=false`, las notificaciones no se enviarán para incrementar el recuento de impresiones. Debe utilizarse cuando desee volver a procesar un componente en una página con una oferta. |
 

@@ -13,7 +13,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 229
+source-wordcount: 232
 ht-degree: 2%
 
 ---
@@ -59,7 +59,7 @@ PrefetchRequest prefetchMboxesRequest = new PrefetchRequest().setMboxes(mboxRequ
 TargetDeliveryResponse targetResponse = targetJavaClient.getOffers(targetDeliveryRequest);
 ```
 
-Una respuesta correcta contendrá un objeto de respuesta [!UICONTROL Target Delivery API], que incluye contenido recuperado previamente para los mboxes solicitados. Un objeto `targetResponse.response` de ejemplo puede tener el siguiente aspecto:
+Una respuesta correcta contendrá un objeto de respuesta [!UICONTROL Target Delivery API], que contiene contenido recuperado previamente para los mboxes solicitados. Un objeto `targetResponse.response` de ejemplo puede tener el siguiente aspecto:
 
 ### Respuesta
 

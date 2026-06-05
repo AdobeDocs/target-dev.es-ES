@@ -1,6 +1,6 @@
 ---
-title: Usar [!UICONTROL getOffers()] en  [!DNL Adobe Target] al usar el SDK de Node.js
-description: Aprenda a usar [!UICONTROL getOffers()] para ejecutar una decisión y recuperar una experiencia de  [!DNL Adobe Target].
+title: Usar [!UICONTROL getOffers()] en [!DNL Adobe Target] al usar el SDK de Node.js
+description: Aprenda a usar [!UICONTROL getOffers()] para ejecutar una decisión y recuperar una experiencia de [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
 TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
@@ -10,12 +10,12 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 326
-ht-degree: 21%
+source-wordcount: 342
+ht-degree: 20%
 
 ---
 
-# [!UICONTROL Get Offers] (Node.js)
+# [!UICONTROL Obtener ofertas] (Node.js)
 
 ## Descripción
 
@@ -51,8 +51,8 @@ El objeto `options` tiene la siguiente estructura:
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
-| de eventos | Objeto | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) solicitud |
-| respuesta | Objeto | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) respuesta |
+| de eventos | Objeto | [[!UICONTROL Solicitud de API de envío de destino]](/help/dev/implement/delivery-api/overview.md) |
+| respuesta | Objeto | Respuesta de la [[!UICONTROL API de envío de destino]](/help/dev/implement/delivery-api/overview.md) |
 | visitorState | Objeto | Objeto que se debe pasar a la API de visitante `getInstance()` |
 | targetCookie | Objeto | Cookie [!DNL Target] |
 | targetLocationHintCookie | Objeto | [!DNL Target] cookie de indicio de ubicación |
@@ -76,7 +76,7 @@ El objeto `status` utilizado para indicar el estado de la respuesta de destino t
 | --- | --- | --- |
 | status | Número | Código de estado HTTP |
 | message | Cadena | Un mensaje sobre la respuesta. Por ejemplo, puede indicar si la respuesta se decidió [en el dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) o en el lado del servidor |
-| remoteMboxes | Matriz | Cuando el método de toma de decisiones es `on-device`, se proporciona una matriz de nombres de mbox que no se pudieron decidir completamente en el dispositivo. En otras palabras, se necesita una solicitud [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md). |
+| remoteMboxes | Matriz | Cuando el método de toma de decisiones es `on-device`, se proporciona una matriz de nombres de mbox que no se pudieron decidir completamente en el dispositivo. En otras palabras, se necesita una solicitud de la [[!UICONTROL API de envío de Target]](/help/dev/implement/delivery-api/overview.md). |
 
 ## Ejemplo
 

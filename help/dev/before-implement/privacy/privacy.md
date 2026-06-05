@@ -20,8 +20,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 799
-ht-degree: 44%
+source-wordcount: 814
+ht-degree: 43%
 
 ---
 
@@ -43,11 +43,11 @@ Adobe ha desarrollado una configuración de &quot;privacidad por diseño&quot; q
 
 Cuando se habilita esta función, la dirección IP se convierte en lo suficientemente anónima para que ya no pueda identificarse como información personal. Como resultado, [!DNL Target] se puede usar de conformidad con las leyes de privacidad de datos en países que no permiten la recopilación de información personal. Es muy probable que la obtención de información por nivel de ciudad vea significativamente afectada por la confusión de la dirección IP. La obtención de información por nivel de región y país solo debería verse ligeramente afectada.
 
-La siguiente configuración está disponible en la interfaz de usuario de [!DNL Target] al navegar a **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**:
+La siguiente configuración está disponible en la interfaz de usuario de [!DNL Target] navegando a **[!UICONTROL Administración]** > **[!UICONTROL Implementación]**:
 
-* [!UICONTROL Last octet obfuscation]: [!DNL Target] oculta el último octeto de la dirección IP.
-* [!UICONTROL Entire IP obfuscation]: [!DNL Target] oculta toda la dirección IP.
-* [!UICONTROL None]: [!DNL Target] no oculta ninguna parte de la dirección IP.
+* [!UICONTROL Ofuscación del último octeto]: [!DNL Target] oculta el último octeto de la dirección IP.
+* [!UICONTROL Ofuscación de IP completa]: [!DNL Target] oculta la dirección IP completa.
+* [!UICONTROL Ninguno]: [!DNL Target] no oculta ninguna parte de la dirección IP.
 
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
 
@@ -55,9 +55,9 @@ La siguiente configuración está disponible en la interfaz de usuario de [!DNL 
 
 ### Ofuscación de IP de nivel de flujo de datos al usar [!DNL Adobe Experience Platform Web SDK] {#aep}
 
-Al usar [!DNL Platform Web SDK] (versión 23.4 o posterior), la configuración de confusión de IP en el nivel de secuencia de datos tiene prioridad sobre cualquier opción de confusión de IP establecida en [!DNL Target]. Por ejemplo, si la opción de confusión de IP en el nivel de secuencia de datos está establecida en [!UICONTROL Full] y la opción de confusión de IP [!DNL Target] está establecida en [!UICONTROL Last octet obfuscation], [!DNL Target] recibe una IP totalmente oculta.
+Al usar [!DNL Platform Web SDK] (versión 23.4 o posterior), la configuración de confusión de IP en el nivel de secuencia de datos tiene prioridad sobre cualquier opción de confusión de IP establecida en [!DNL Target]. Por ejemplo, si la opción de ofuscación de IP de nivel de secuencia de datos está establecida en [!UICONTROL Completa] y la opción de ofuscación de IP de [!DNL Target] está establecida en [!UICONTROL Última ofuscación de octeto], [!DNL Target] recibe una IP totalmente ofuscada.
 
-Para obtener más información, consulte [!UICONTROL IP Obfuscation] en [Configurar un conjunto de datos](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=es){target=_blank} en la Guía de flujos de datos de *[!DNL Adobe Experience Platfrom]*.
+Para obtener más información, consulte [!UICONTROL Confusión de IP] en [Configurar un conjunto de datos](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=es){target=_blank} en la Guía de flujos de datos de *[!DNL Adobe Experience Platfrom]*.
 
 ## Segmentación geográfica
 

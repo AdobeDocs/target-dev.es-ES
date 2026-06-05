@@ -15,8 +15,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 170
-ht-degree: 34%
+source-wordcount: 165
+ht-degree: 35%
 
 ---
 
@@ -37,7 +37,7 @@ Configure `Target Third Party ID Namespace` en su [secuencia de datos](https://e
 ### Paso 2: Enviar `mbox3rdpartyId` a [!DNL Target]
 
 Envíe `mbox3rdpartyId` a [!DNL Target] en el comando `sendEvent`, utilizando el área de nombres de ID que configuró en el paso 1.
-[Más información sobre el envío de identificadores](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
+[Más información sobre cómo enviar ID](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
 
 ```javascript
 alloy("sendEvent", {

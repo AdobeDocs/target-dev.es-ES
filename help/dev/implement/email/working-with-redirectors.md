@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 689
-ht-degree: 63%
+source-wordcount: 697
+ht-degree: 62%
 
 ---
 
@@ -57,7 +57,7 @@ Antes de poder usar un redirector, debe crearlo.
 
    * Donde `yourclientcode` es el código de cliente de la empresa. El código de cliente de su compañía está por completo en minúscula y carece de caracteres especiales.
 
-     Su código de cliente está disponible en la parte superior de la página **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** de la interfaz [!DNL Target].
+     El código de cliente se encuentra disponible en la parte superior de la página **[!UICONTROL Administración]** > **[!UICONTROL Implementación]** de la interfaz [!DNL Target].
 
    * `redirectorlink_456` es el nombre del mbox de redirector que aparecerá en la cuenta para usarlo en campañas y pruebas.
 
@@ -107,7 +107,7 @@ Use un redirector para pasar los costes por clic.
 
 >[!NOTE]
 >
->La práctica recomendada es determinar el valor de costo mediante la métrica de compromiso **[!UICONTROL Score per visit]**.
+>La práctica recomendada es determinar el valor de costo mediante la métrica de compromiso **[!UICONTROL Puntuación por visita]**.
 
 Añada `&mboxPageValue=-value` a la dirección URL. Observe el valor negativo.
 
@@ -124,7 +124,7 @@ Use un redirector para pasar los ingresos por clic.
 
 >[!NOTE]
 >
->La práctica recomendada es determinar el valor de los ingresos mediante la métrica de participación **[!UICONTROL Score per visit]**.
+>La práctica recomendada es determinar el valor de los ingresos mediante la métrica de participación **[!UICONTROL Puntuación por visita]**.
 
 Añada `&mboxPageValue=value` a la dirección URL.
 

@@ -33,7 +33,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 501
+source-wordcount: 510
 ht-degree: 11%
 
 ---
@@ -60,7 +60,7 @@ Esta guía para desarrolladores de *[!DNL Adobe Target]* proporciona recursos y 
 
 ## Implementación del lado del cliente
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): [!DNL Adobe Experience Platform Web SDK] le permite interactuar con los distintos servicios de [!DNL Experience Cloud] (incluido [!DNL Target]) mediante [!UICONTROL Adobe Experience Edge Network].
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): [!DNL Adobe Experience Platform Web SDK] le permite interactuar con los distintos servicios de [!DNL Experience Cloud] (incluido [!DNL Target]) a través de [!UICONTROL Adobe Experience Edge Network].
 
 [**Biblioteca JavaScript at.js de Target**](/help/dev/implement/client-side/overview.md): La biblioteca JavaScript at.js mejora los tiempos de carga de página en implementaciones web, mejora la seguridad y proporciona mejores opciones de implementación en aplicaciones de una sola página.
 
@@ -104,7 +104,7 @@ Esta guía para desarrolladores de *[!DNL Adobe Target]* proporciona recursos y 
 
 [**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): recupere información del perfil de usuario [!DNL Adobe Target].
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Recupere datos de informe de actividad [!UICONTROL A/B Test] y [!UICONTROL Automated Personalization].
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Recupere los datos del informe de actividad [!UICONTROL Prueba A/B] y [!UICONTROL Automated Personalization].
 
 [**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/): Use la API [!DNL Target Recommendations].
 

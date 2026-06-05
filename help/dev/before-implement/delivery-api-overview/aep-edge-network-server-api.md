@@ -18,15 +18,15 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 101
+source-wordcount: 121
 ht-degree: 0%
 
 ---
 
-# Información general de [!UICONTROL Adobe Experience Platform Edge Network Server API]
+# Información general sobre la API de servidor de [!UICONTROL Adobe Experience Platform Edge Network]
 
-[!UICONTROL Adobe Experience Platform Edge Network] proporciona una forma optimizada para que los clientes interactúen con los servicios de [!DNL Adobe Experience Cloud] o [!UICONTROL Adobe Experience Platform Edge].
+[!UICONTROL Adobe Experience Platform Edge Network] ofrece una forma optimizada para que los clientes interactúen con los servicios de [!DNL Adobe Experience Cloud] o [!UICONTROL Adobe Experience Platform Edge].
 
-[!UICONTROL Edge Network Server API] se puede usar para una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing. La API de servidor se puede utilizar en servidores, dispositivos de IoT, descodificadores y muchos otros dispositivos.
+La [!UICONTROL API de servidor de Edge Network] se puede usar para una variedad de casos de uso de recopilación de datos, personalización, publicidad y marketing. La API de servidor se puede utilizar en servidores, dispositivos de IoT, descodificadores y muchos otros dispositivos.
 
 Para obtener más información, consulte [Información general sobre la API de Edge Network Server](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=es){target=_blank} en la *documentación sobre la API de Edge Server*.

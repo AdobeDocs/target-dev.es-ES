@@ -37,7 +37,7 @@ Para la versión 2.x de at.js (hasta la versión 2.10.0, pero sin incluir), *sol
 
 at.js genera un ID de sesión y la almacena ahí la cookie. La primera respuesta contiene toda la información de la actividad, así como `TNT` o `PC ID` generados por los servidores de [!DNL Target]. A continuación, at.js escribe `TNT/PC ID` en la cookie.
 
-El servicio de Experience Cloud ID siempre establece la cookie propia de `AMCV_###@AdobeOrg`, aunque se pasa `ECID` en [!DNL Target] solicitudes.
+Experience Cloud ID siempre establece la cookie propia `AMCV_###@AdobeOrg`, aunque `ECID` se pasa en [!DNL Target] solicitudes.
 
 >[!NOTE]
 >

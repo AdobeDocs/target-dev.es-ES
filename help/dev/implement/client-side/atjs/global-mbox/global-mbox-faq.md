@@ -19,8 +19,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 309
-ht-degree: 32%
+source-wordcount: 316
+ht-degree: 31%
 
 ---
 
@@ -34,7 +34,7 @@ Se admite un único mbox global en su cuenta.
 
 Puede limitar dónde se ejecutan sus actividades añadiéndoles reglas de URL. Para obtener más información, vea [Incluir la misma experiencia en páginas similares](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=es).
 
-También puede pasar un parámetro en la página usando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) y, a continuación, seleccionar esos parámetros en la sección &quot;configurar URL&quot; del [!UICONTROL Visual Experience Composer] (VEC) o agregando los parámetros como &quot;refinamientos&quot; en el [!UICONTROL Form-Based Experience Composer].
+También puede pasar un parámetro en la página usando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) y luego seleccionar esos parámetros en la sección &quot;configurar URL&quot; del [!UICONTROL Compositor de experiencias visuales] (VEC) o agregando los parámetros como &quot;refinamientos&quot; en el [!UICONTROL Compositor de experiencias basadas en formularios].
 
 ## ¿Cómo paso los datos de ingresos en un mbox global de [!DNL Target]?
 

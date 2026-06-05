@@ -1,6 +1,6 @@
 ---
 title: Suscribirse a eventos en  [!DNL Adobe Target] .NET SDK
-description: Obtenga información sobre cómo suscribirse a varios eventos que se producen en .NET SDK mediante el objeto [!UICONTROL OnDeviceDecisioningHandler].
+description: Obtenga información sobre cómo suscribirse a varios eventos que tienen lugar en .NET SDK mediante el objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 7578033f-3de5-4d13-9739-46ad1269ec5f
 TQID: https://experienceleague.adobe.com/oeGknU-pW1-XjVrxn8JNEPoFBF8Gntt-vaVnqjdyTC8
@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 120
+source-wordcount: 133
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 ## Descripción
 
-Al [inicializar SDK](initialize-sdk.md), se puede proporcionar un delegado `OnDeviceDecisioningReady` opcional en el objeto `TargetClientConfig`, que se invocará cuando SDK esté listo para las llamadas de método en el dispositivo. También hay un par de delegados más disponibles para administrar la descarga de artefactos de [!UICONTROL on-device decisioning].
+Al [inicializar SDK](initialize-sdk.md), se puede proporcionar un delegado `OnDeviceDecisioningReady` opcional en el objeto `TargetClientConfig`, que se invocará cuando SDK esté listo para las llamadas de método en el dispositivo. También hay otros delegados disponibles para administrar la descarga del artefacto [!UICONTROL toma de decisiones en el dispositivo].
 
 ## Solicitud
 
@@ -27,9 +27,9 @@ Los siguientes delegados se pueden configurar para determinados eventos:
 
 | Nombre | Argumentos | Descripción |
 | --- | --- | --- |
-| OnDeviceDecisioningReady | Ninguna | Solo se llamó una vez la primera vez que el cliente está listo para [!UICONTROL on-device decisioning] |
-| DescargaDeArtefactoCorrecta | contenido de cadena del archivo de artefactos | Se llama cada vez que se descarga un artefacto [!UICONTROL on-device decisioning] |
-| ArtifactDownloadFailed | Excepción | Se llama cada vez que se produce un error al descargar un artefacto [!UICONTROL on-device decisioning] |
+| OnDeviceDecisioningReady | Ninguna | Se llama solo una vez la primera vez que el cliente está listo para [!UICONTROL la toma de decisiones en el dispositivo] |
+| DescargaDeArtefactoCorrecta | contenido de cadena del archivo de artefactos | Se llama cada vez que se descarga un artefacto de [!UICONTROL toma de decisiones en el dispositivo] |
+| ArtifactDownloadFailed | Excepción | Se llama cada vez que se produce un error al descargar un artefacto de [!UICONTROL toma de decisiones en el dispositivo] |
 
 ## Ejemplo
 

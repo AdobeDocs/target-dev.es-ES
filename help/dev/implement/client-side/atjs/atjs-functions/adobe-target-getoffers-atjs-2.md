@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.getOffers, getOffers, getoffers, obtener oferta, at.js, funciones, función, $8
-description: Utilice la función [!UICONTROL adobe.target.getOffers()] y sus opciones para que la biblioteca  [!DNL Adobe Target] at.js active solicitudes para obtener varias ofertas.  [!DNL Target] (at.js 2.x)
-title: ¿Cómo se utiliza la función [!UICONTROL adobe.target.getOffers()]?
+description: Utilice la función [!UICONTROL adobe.target.getOffers()] y sus opciones para que la biblioteca  [!DNL Adobe Target] at.js active solicitudes para obtener varias  [!DNL Target] ofertas. (at.js 2.x)
+title: ¿Cómo utilizo la función [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
 TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
@@ -19,8 +19,8 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 60%
+source-wordcount: 1357
+ht-degree: 57%
 
 ---
 
@@ -51,7 +51,7 @@ Esta función le permite recuperar varias ofertas pasando varios mboxes. Además
 | Solicitud > ID > thirdPartyId | No | Tamaño máximo = 128. |  |
 | Request > experienceCloud | No |  |  |
 | Request > experienceCloud > analytics | No |  | Integración de Adobe Analytics |
-| Request > experienceCloud > analytics > logging | No | Se debe implementar lo siguiente en la página:<ul><li>Servicio de ID de visitante</li><li>AppMeasurement.js</li></ul> | Se admiten los siguientes valores:<P>**client_side**: cuando se especifique, se devolverá una carga útil de Analytics al que llama, que debería usarse para enviar a [!UICONTROL Adobe Analytics] a través de [!UICONTROL Data Insertion API].<P>**server_side**: Este es el valor predeterminado en el que el backend [!DNL Target] y [!DNL Analytics] usará el SDID para unir las llamadas con fines de creación de informes. |
+| Request > experienceCloud > analytics > logging | No | Se debe implementar lo siguiente en la página:<ul><li>Servicio de ID de visitante</li><li>AppMeasurement.js</li></ul> | Se admiten los siguientes valores:<P>**client_side**: cuando se especifique, se devolverá una carga útil de Analytics al que llama, que debería usarse para enviar a [!UICONTROL Adobe Analytics] a través de la [!UICONTROL API de inserción de datos].<P>**server_side**: Este es el valor predeterminado en el que el backend [!DNL Target] y [!DNL Analytics] usará el SDID para unir las llamadas con fines de creación de informes. |
 | Solicitud > Captura previa | No |  |  |
 | Solicitud > Captura previa > Vistas | No | Recuento máximo 50.<P>Nombre no en blanco.<P>Longitud de nombre `<=` 128.<P>Longitud del valor `<=` 5000.<P>El nombre no debe comenzar con &quot;perfil&quot;.<P>Nombres no permitidos: &quot;orderId&quot;, &quot;orderTotal&quot;, &quot;productPurchasedId&quot;. | Pase parámetros para utilizarlos para recuperar vistas relevantes en actividades activas. |
 | Solicitud > Captura previa > Vistas > profileParameters | No | Recuento máximo 50.<P>Nombre no en blanco.<P>Longitud de nombre `<=` 128.<P>Longitud del valor `<=` 5000.<P>Solo acepta valores de cadena.<P>El nombre no debe comenzar con &quot;perfil&quot;. | Pase parámetros de perfil para utilizarlos para recuperar vistas relevantes en actividades activas. |
@@ -86,7 +86,7 @@ Esta función le permite recuperar varias ofertas pasando varios mboxes. Además
 | Solicitud > Ejecutar > mboxes > mbox > Pedido > Total | No | `>=` 0. | Recupere ofertas para un mbox determinado con los totales de pedidos especificados. |
 | Solicitud > Ejecutar > mboxes > mbox > Pedido > purchasedProductIds | No | No hay valores en blanco.<P>Longitud máxima de cada valor = 50.<P>Concatenado y separado por una coma.<P>Longitud total de los identificadores de producto `<=` 250. | Recupere ofertas para un mbox determinado con los ID de pedido especificada del producto comprado. |
 
-## Llame a [!UICONTROL getOffers()] para todas las vistas
+## Llamar a [!UICONTROL getOffers()] para todas las vistas
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -117,7 +117,7 @@ adobe.target.getOffers({
 }); 
 ```
 
-## Llame a [!UICONTROL getOffers()] para recuperar las vistas más recientes con los parámetros pasado y de perfil
+## Llame a [!UICONTROL getOffers()] para recuperar las vistas más recientes con los parámetros proporcionados y los parámetros de perfil
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -219,7 +219,7 @@ adobe.target.getOffers({
 
 La carga útil se puede reenviar a [!DNL Adobe Analytics] mediante la [API de inserción de datos](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
-## Buscar y procesar datos de varios mboxes a través de [!UICONTROL getOffers()] y [!UICONTROL applyOffers()]
+## Buscar y procesar datos de varios mboxes mediante [!UICONTROL getOffers()] y [!UICONTROL applyOffers()]
 
 at.js 2.x le permite recuperar varios mboxes a través de la API de `[!UICONTROL getOffers()]`. También puede buscar datos para varios mboxes y, después, utilizar `[!UICONTROL applyOffers()]` para representar los datos en diferentes ubicaciones identificadas por un selector de CSS.
 

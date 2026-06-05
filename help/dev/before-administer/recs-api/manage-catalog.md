@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 930
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Ahora puede usar las [API de Recommendations](https://developer.adobe.com/target
 
 >[!NOTE]
 >
->Envíe la solicitud **[!UICONTROL IMS: JWT Generate + Auth via User Token]** siempre que necesite actualizar el token de acceso para la autenticación, ya que caduca pasadas 24 horas. Consulte [Configuración de la autenticación de la API de Adobe](../configure-authentication.md) para obtener instrucciones.
+>Envíe la solicitud **[!UICONTROL IMS: JWT Generate + Auth via User Token]** siempre que necesite actualizar el token de acceso para la autenticación, ya que caduca después de 24 horas. Consulte [Configuración de la autenticación de la API de Adobe](../configure-authentication.md) para obtener instrucciones.
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
@@ -44,7 +44,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 
 Por ejemplo, las entidades guardadas pueden utilizarse para actualizar artículos siempre que se cumplan determinados umbrales (como umbrales de inventario o precio) con el fin de marcar dichos artículos y evitar que se recomienden.
 
-1. Vaya a **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL Environments]** para obtener el identificador del entorno de destino en el que desea agregar o actualizar un elemento.
+1. Vaya a **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Entornos DE CONTROL]** para obtener el identificador del entorno de destino en el que desea agregar o actualizar un elemento.
 
    ![GuardarEntidades1](assets/SaveEntities01.png)
 
@@ -79,7 +79,7 @@ Por ejemplo, las entidades guardadas pueden utilizarse para actualizar artículo
        }
    ```
 
-1. Haga clic en **[!UICONTROL Send]**. Debe recibir la siguiente respuesta.
+1. Haga clic en **[!UICONTROL Enviar]**. Debe recibir la siguiente respuesta.
 
    ![Guardar entidades5.png](assets/SaveEntities05.png)
 
@@ -123,11 +123,11 @@ Por ejemplo, las entidades guardadas pueden utilizarse para actualizar artículo
        }
    ```
 
-1. ¡Ahora es tu turno! Utilice la API **[!UICONTROL Save Entities]** para agregar los siguientes elementos al catálogo. Utilice el JSON de muestra anterior como punto de partida. (Deberá ampliar el JSON para incluir entidades adicionales).
+1. ¡Ahora es tu turno! Use la API **[!UICONTROL Guardar entidades]** para agregar los siguientes elementos al catálogo. Utilice el JSON de muestra anterior como punto de partida. (Deberá ampliar el JSON para incluir entidades adicionales).
 
    ![Guardar entidades6.png](assets/SaveEntities06.png)
 
-Parece que los dos últimos elementos no pertenecen. Vamos a inspeccionarlos usando la API **[!UICONTROL Get Entity]** y, si es necesario, eliminarlos usando la API **[!UICONTROL Delete Entities]**.
+Parece que los dos últimos elementos no pertenecen. Vamos a inspeccionarlos usando la API **[!UICONTROL Obtener entidad]** y, si es necesario, eliminarlos usando la API **[!UICONTROL Eliminar entidades]**.
 
 ## Obtención de detalles del elemento con la API de obtención de entidad
 
@@ -166,7 +166,7 @@ Si recibe un error que indica que no se encontró la entidad, como se muestra en
 
    ![GetEntity5](assets/GetEntity5.png)
 
-Supongamos que decide que estas entidades deben eliminarse del catálogo. Vamos a usar la API **[!UICONTROL Delete Entities]**.
+Supongamos que decide que estas entidades deben eliminarse del catálogo. Usemos la API **[!UICONTROL Eliminar entidades]**.
 
 ## Eliminación de elementos con la API de eliminación de entidades
 
@@ -180,7 +180,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 >
 >La API Eliminar entidades elimina las entidades a las que hacen referencia los ID especificados. Si no se proporciona ningún ID de entidad, se eliminan todas las entidades del entorno determinado. Si no se proporciona ningún ID de entorno, las entidades se eliminarán de todos los entornos. ¡Utilícelo con precaución!
 
-1. Vaya a **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Environments]** para obtener el identificador del entorno de destino del que desea eliminar los elementos.
+1. Vaya a **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Entornos]** para obtener el identificador del entorno de destino del que desea eliminar los elementos.
 
    ![Eliminar entidades1](assets/SaveEntities01.png)
 
@@ -200,7 +200,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
    ![Eliminar entidades5](assets/DeleteEntities5.png)
 
-1. Compruebe sus resultados usando **[!UICONTROL Get Entity]**, que ahora debería indicar que no se encuentran las entidades eliminadas.
+1. Compruebe sus resultados usando **[!UICONTROL Obtener entidad]**, que ahora debería indicar que no se pueden encontrar las entidades eliminadas.
 
    ![Eliminar entidades6](assets/DeleteEntities6.png)
 

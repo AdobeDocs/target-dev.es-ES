@@ -5,11 +5,18 @@ title: ¿Cuáles son las preguntas y respuestas comunes acerca de at.js?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 TQID: https://experienceleague.adobe.com/wOC67fpxKtZKP3-o-T86oA-HqySuPGebT9W5LUHuxSA
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 2994
@@ -212,7 +219,7 @@ Las siguientes son posibles causas para que aparezca este mensaje de advertencia
 * La página subyacente es parte de una aplicación de una sola página (SPA) o la página contiene elementos que aparecen más adelante y el &quot;mecanismo de sondeo selector&quot; de at.js no puede encontrar esos elementos. Aumentar el valor de `selectorsPollingTimeout` podría ser de ayuda. Para obtener más información, consulte [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 * Cualquier métrica de seguimiento de clics intenta añadirse a todas las páginas, independientemente de la dirección URL en la que se estableciera dicha métrica. Aunque es algo inofensivo, esta situación provoca la aparición de muchos de estos mensajes.
 
-  Para obtener los mejores resultados, descargue y use la [versión más reciente de at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md). Para obtener más información sobre cómo descargar at.js, consulte la sección [Descargar at.js mediante la interfaz [!DNL Target] ](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) en el artículo [*Cómo implementar at.js* > *Implementar [!DNL Target] sin un administrador de etiquetas*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
+  Para obtener los mejores resultados, descargue y use la [versión más reciente de at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md). Para obtener más información sobre cómo descargar at.js, consulte la sección [Descargar at.js mediante la interfaz [!DNL Target] &#x200B;](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) en el artículo [*Cómo implementar at.js* > *Implementar [!DNL Target] sin un administrador de etiquetas*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
 ## ¿Cuál es el dominio tt.omtrdc.net al cual se dirigen las llamadas del servidor de [!DNL Target]?
 

@@ -6,21 +6,14 @@ level: Experienced
 role: Developer
 exl-id: d568cd1d-acc3-42e0-ae2c-5787e6f361f8
 TQID: https://experienceleague.adobe.com/uYNa5mL-8ffPS-ddjnQzILnPFMbjNJqKZDmQT8qFeGA
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c4147b6e-073b-4d3c-9ab1-d60f2f4434ef
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c4147b6e-073b-4d3c-9ab1-d60f2f4434efid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 152
+source-wordcount: 155
 ht-degree: 0%
 
 ---
@@ -37,7 +30,7 @@ Tenga en cuenta que los números de la imagen no indican la secuencia de operaci
 
 1. SDK del lado del cliente para [!DNL Adobe Target] y [!DNL Experience Cloud ID Service]
 1. [!DNL Target Delivery API] llamada
-1. [!UICONTROL Experience Cloud ID] (ECID) llamada de adquisición
+1. [!UICONTROL Llamada de adquisición de Experience Cloud ID] (ECID)
 1. API de actualización de perfiles en lote y servicio [!DNL Customer Attributes] (CA)
 1. Ingesta de datos de perfil de las fuentes de datos del cliente al almacén de perfiles [!DNL Target]
 1. Recopilación de datos de perfil y comportamiento y decisión de qué experiencia mostrar al visitante

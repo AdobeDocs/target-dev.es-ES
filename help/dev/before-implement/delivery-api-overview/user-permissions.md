@@ -1,25 +1,23 @@
 ---
 title: Permisos de usuario de API de envío de Adobe Target
 description: Permisos de usuario de API de envío de Adobe Target
-badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=es#premium newtab=true" tooltip="Consulte qué se incluye en Target Premium."
+badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=en#premium newtab=true" tooltip="Consulte qué se incluye en Target Premium."
 keywords: API de envío
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/V7F8WjDNUMJJySyep0nVCg0wMK05ZfdV4XPtMjXOBvM
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: 184
 ht-degree: 1%
 
 ---
 
 # Permisos de usuario (Premium)
 
-[!DNL Adobe] permite a los clientes administrar permisos para sus usuarios cuando utilizan Adobe Target. Para realizar una llamada a [!UICONTROL Adobe Target Delivery API] correcta, se debe pasar un token con los permisos correctos dentro de la llamada a la API. Para obtener más información sobre los permisos de usuario y cómo recuperar el token, visite [esta documentación](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=es).
+[!DNL Adobe] permite a los clientes administrar permisos para sus usuarios cuando utilizan Adobe Target. Para que una llamada a la [!UICONTROL API de envío de Adobe Target] se realice correctamente, se debe pasar un token con los permisos correctos en la llamada a la API. Para obtener más información sobre los permisos de usuario y cómo recuperar el token, visite [esta documentación](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
 ```
 curl -X POST \

@@ -4,18 +4,13 @@ description: ¿Cómo se generan los tokens de autenticación necesarios para int
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
 TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
 workflow-type: tm+mt
-source-wordcount: 1849
+source-wordcount: 1927
 ht-degree: 1%
 
 ---
@@ -54,29 +49,29 @@ En esta sección, tendrá acceso a [!DNL Adobe Developer Console] y creará un p
 
 <!--(1. Generate your private key and public certificate, per the [documentation on authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (as described in **Step 1** of [How to set up Adobe IO: Authentication - Step by Step](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). After completing Step 1, return to this guide and resume with Step 2, below. // The outcome of this step should be the creation of a `private.key` file and a `certificate_pub.crt` file. Return to this guide once you have generated these two files.)-->
 
-1. En [Adobe Admin Console](https://adminconsole.adobe.com/), asegúrese de que su cuenta de usuario [!DNL Adobe] tenga acceso de nivel [Administrador de productos](https://helpx.adobe.com/es/enterprise/using/admin-roles.html) y [Desarrollador](https://helpx.adobe.com/es/enterprise/using/manage-developers.html) a [!DNL Target].
+1. En [Adobe Admin Console](https://adminconsole.adobe.com/), asegúrese de que su cuenta de usuario [!DNL Adobe] tenga acceso de nivel [Administrador de productos](https://helpx.adobe.com/enterprise/using/admin-roles.html) y [Desarrollador](https://helpx.adobe.com/enterprise/using/manage-developers.html) a [!DNL Target].
 
-1. En [Adobe Developer Console](https://developer.adobe.com/console/home), seleccione el [!UICONTROL Experience Cloud Organization] para el que desea crear esta integración. (Tenga en cuenta que es probable que solo tenga acceso a un(a) [!UICONTROL Experience Cloud Organization].)
+1. En [Adobe Developer Console](https://developer.adobe.com/console/home), seleccione la [!UICONTROL organización de Experience Cloud] para la que desea crear esta integración. Tenga en cuenta que es probable que solo tenga acceso a una [!UICONTROL organización de Experience Cloud].
 
    ![configure-io-target-createproject2.png](assets/configure-io-target-createproject2.png)
 
-1. Haga clic en **[!UICONTROL Create new project]**.
+1. Haga clic en **[!UICONTROL Crear nuevo proyecto]**.
 
    ![configure-io-target-createproject3.png](assets/configure-io-target-createproject3.png)
 
-1. Haga clic en **[!UICONTROL Add API]** para agregar una API de REST a su proyecto y poder acceder a los servicios y productos de [!DNL Adobe].
+1. Haga clic en **[!UICONTROL Agregar API]** para agregar una API de REST a su proyecto y poder acceder a los servicios y productos de [!DNL Adobe].
 
    ![Agregar API](assets/configure-io-target-createproject4.png)
 
-1. Seleccione **[!DNL Adobe Target]** como el servicio [!DNL Adobe] con el que desea integrar. Haga clic en el botón **[!UICONTROL Next]** que aparece.
+1. Seleccione **[!DNL Adobe Target]** como el servicio [!DNL Adobe] con el que desea integrar. Haga clic en el botón **[!UICONTROL Siguiente]** que aparece.
 
    ![configure-io-target-createproject5](assets/configure-io-target-createproject5.png)
 
-1. Seleccione una opción para asociar claves públicas y privadas con la integración de cuenta de servicio que está creando para [!DNL Target]. Para este ejemplo, seleccione **[!UICONTROL Option 1: Generate a key pair]** y haga clic en **[!UICONTROL Generate keypair]**.
+1. Seleccione una opción para asociar claves públicas y privadas con la integración de cuenta de servicio que está creando para [!DNL Target]. Para este ejemplo, seleccione **[!UICONTROL Opción 1: genere un par de claves]** y haga clic en **[!UICONTROL Generar par de claves]**.
 
    ![configure-io-target-createproject6](assets/configure-io-target-createproject6.png)
 
-1. Según las instrucciones, anote el archivo de configuración descargado automáticamente (`config`), que contiene su clave privada. Haga clic en **[!UICONTROL Next]**.
+1. Según las instrucciones, anote el archivo de configuración descargado automáticamente (`config`), que contiene su clave privada. Haga clic en **[!UICONTROL Siguiente]**.
 
    ![configure-io-target-createproject7](assets/configure-io-target-createproject7.png)
 
@@ -84,12 +79,12 @@ En esta sección, tendrá acceso a [!DNL Adobe Developer Console] y creará un p
 
    ![configure-io-target-createproject8](assets/configure-io-target-createproject8.png)
 
-1. De nuevo en Adobe Developer Console, seleccione los [perfiles de producto](https://helpx.adobe.com/es/enterprise/using/manage-products-and-profiles.html) correspondientes a las propiedades en las que está usando Adobe Recommendations. (Si no utiliza las propiedades, seleccione la opción Workspace predeterminado.) Haga clic en **[!UICONTROL Save configured API]**.
+1. De nuevo en Adobe Developer Console, seleccione los [perfiles de producto](https://helpx.adobe.com/es/enterprise/using/manage-products-and-profiles.html) correspondientes a las propiedades en las que está usando Adobe Recommendations. (Si no utiliza las propiedades, seleccione la opción Workspace predeterminado.) Haga clic en **[!UICONTROL Guardar API configurada]**.
 
    ![configure-io-target-createproject9](assets/configure-io-target-createproject9.png)
 
-1. Haga clic en **[!UICONTROL Create Integration]**. Debería recibir un mensaje temporal que indique que su API se ha configurado correctamente.
-1. Finalmente, cambie el nombre del proyecto a un nombre más significativo que el original `Project 1`. Para ello, navegue hasta el proyecto utilizando la ruta de navegación como se muestra, haga clic en **[!UICONTROL Edit project]** para acceder al modal **[!UICONTROL Edit Project]** y cambie el nombre del proyecto.
+1. Haga clic en **[!UICONTROL Crear integración]**. Debería recibir un mensaje temporal que indique que su API se ha configurado correctamente.
+1. Finalmente, cambie el nombre del proyecto a un nombre más significativo que el original `Project 1`. Para ello, navegue hasta el proyecto utilizando la ruta de navegación como se muestra, haga clic en **[!UICONTROL Editar proyecto]** para acceder al modal **[!UICONTROL Editar proyecto]** y cambie el nombre del proyecto.
 
    ![configure-io-target-createproject11](assets/configure-io-target-createproject11.png)
 
@@ -105,13 +100,13 @@ Existen muchas formas de especificar los detalles del proyecto en Postman, pero 
 
 >[!NOTE]
 >
->Para ver las instrucciones de vídeo aplicables a cualquier solución de Experience Cloud, incluida [!DNL Target], consulte [Usar Postman con las API de Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=es). Las siguientes secciones son relevantes para las API [!DNL Target]: 1. Cree y exporte la API de Experience Platform a Postman 2. Genere un token de acceso con Postman. Estos pasos también se proporcionan a continuación.
+>Para ver las instrucciones de vídeo aplicables a cualquier solución de Experience Cloud, incluida [!DNL Target], consulte [Usar Postman con las API de Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html). Las siguientes secciones son relevantes para las API [!DNL Target]: 1. Cree y exporte la API de Experience Platform a Postman 2. Genere un token de acceso con Postman. Estos pasos también se proporcionan a continuación.
 
-1. Aún en [Adobe Developer Console](https://developer.adobe.com/console/home), vaya a ver las credenciales de **[!UICONTROL Service Account (JWT)]** de su nuevo proyecto. Utilice la navegación izquierda o la sección **[!UICONTROL Credentials]** como se muestra.
+1. Aún en [Adobe Developer Console](https://developer.adobe.com/console/home), vaya a ver las credenciales de **[!UICONTROL cuenta de servicio (JWT)]** de su nuevo proyecto. Use la navegación izquierda o la sección **[!UICONTROL Credenciales]** como se muestra.
 
    ![JWT1](assets/configure-io-target-jwt1.png)
 
-   En **[!UICONTROL Credential details]**, tenga en cuenta que puede ver su **[!UICONTROL Public key(s)]**, **[!UICONTROL Client ID]** y otra información relacionada con su cuenta de servicio.
+   En **[!UICONTROL Detalles de credenciales]**, tenga en cuenta que puede ver su **[!UICONTROL clave(s) pública(s)]**, **[!UICONTROL ID de cliente]** y otra información relacionada con su cuenta de servicio.
 
    ![JWT1a](assets/configure-io-target-jwt1a.png)
 
@@ -119,7 +114,7 @@ Existen muchas formas de especificar los detalles del proyecto en Postman, pero 
 
    ![JWT2](assets/configure-io-target-jwt2.png)
 
-1. Haga clic en **[!UICONTROL Download for Postman]** > **[!UICONTROL Service Account (JWT)]** para crear un archivo JSON que capture la información de autenticación para un entorno de Postman.
+1. Haga clic en **[!UICONTROL Descargar para Postman]** > **[!UICONTROL Cuenta de servicio (JWT)]** para crear un archivo JSON que capture su información de autenticación para un entorno de Postman.
 
    ![JWT3](assets/configure-io-target-jwt3.png)
 
@@ -127,11 +122,11 @@ Existen muchas formas de especificar los detalles del proyecto en Postman, pero 
 
    ![JWT3a](assets/configure-io-target-jwt3a.png)
 
-1. En Postman, haga clic en el icono de engranaje para administrar los entornos y, a continuación, haga clic en **[!UICONTROL Import]** para importar el archivo JSON (entorno).
+1. En Postman, haga clic en el icono de engranaje para administrar sus entornos y luego haga clic en **[!UICONTROL Importar]** para importar el archivo JSON (entorno).
 
    ![JWT4](assets/configure-io-target-jwt4.png)
 
-1. Elija su archivo y haga clic en **[!UICONTROL Open]**.
+1. Elija su archivo y haga clic en **[!UICONTROL Abrir]**.
 
    ![JWT5](assets/configure-io-target-jwt5.png)
 
@@ -151,11 +146,11 @@ Existen muchas formas de especificar los detalles del proyecto en Postman, pero 
 
    ![JWT9](assets/configure-io-target-jwt9.png)
 
-1. En Postman, pegue el valor de clave privada en los campos **[!UICONTROL INITIAL VALUE]** y **[!UICONTROL CURRENT VALUE]**.
+1. En Postman, pegue su valor de clave privada en los campos **[!UICONTROL VALOR INICIAL]** y **[!UICONTROL VALOR ACTUAL]**.
 
    ![JWT10](assets/configure-io-target-jwt10.png)
 
-1. Haga clic en **[!UICONTROL Update]** y cierre el modal Entornos.
+1. Haga clic en **[!UICONTROL Actualizar]** y cierre el modal Entornos.
 
 ## Generar el token de acceso al portador
 
@@ -165,19 +160,19 @@ En esta sección, genera su token de acceso al portador, que es necesario para a
 
    ![token1](assets/configure-io-target-generatetoken1.png)
 
-1. Haga clic en **[!UICONTROL Adobe I/O Access Token Generation Postman collection]**.
+1. Haga clic en la **[!UICONTROL colección Postman de generación de tokens de acceso a Adobe I/O]**.
 
    ![token2](assets/configure-io-target-generatetoken2.png)
 
-1. Obtenga el JSON sin procesar de esta colección haciendo clic en **[!UICONTROL Raw]** y copiando el JSON resultante en el portapapeles. (Como alternativa, puede guardar el JSON sin procesar como archivo .json).
+1. Obtenga el JSON sin procesar de esta colección haciendo clic en **[!UICONTROL Sin procesar]** y copiando el JSON resultante en el portapapeles. (Como alternativa, puede guardar el JSON sin procesar como archivo .json).
 
    ![token3](assets/configure-io-target-generatetoken3.png)
 
-1. En Postman, importe la colección pegando y enviando el JSON sin procesar desde el portapapeles. (Como alternativa, puede cargar el archivo .json que ha guardado). Haga clic en **[!UICONTROL Continue]**.
+1. En Postman, importe la colección pegando y enviando el JSON sin procesar desde el portapapeles. (Como alternativa, puede cargar el archivo .json que ha guardado). Haga clic en **[!UICONTROL Continuar]**.
 
    ![token4](assets/configure-io-target-generatetoken4.png)
 
-1. Seleccione la solicitud **[!UICONTROL IMS: JWT Generate + Auth via User Token]** en la colección Postman de generación de tokens de acceso a Adobe I/O, asegúrese de que su entorno esté seleccionado y haga clic en **[!UICONTROL Send]** para generar el token.
+1. Seleccione la solicitud **[!UICONTROL IMS: JWT Generate + Auth via User Token]** en la colección Postman de Adobe I/O Access Token Generation, asegúrese de que su entorno esté seleccionado y haga clic en **[!UICONTROL Enviar]** para generar el token.
 
    ![token5](assets/configure-io-target-generatetoken5.png)
 
@@ -205,7 +200,7 @@ En este ejercicio, utilizará el nuevo token de acceso al portador enviando una 
 
    ![testigo1](assets/configure-io-target-testtoken0.png)
 
-1. Expanda la colección y anote la solicitud **[!UICONTROL List activities]**.
+1. Expanda la colección y observe la solicitud **[!UICONTROL List activities]**.
 
    ![testigo1](assets/configure-io-target-testtoken1.png)
 
@@ -229,7 +224,7 @@ En este ejercicio, utilizará el nuevo token de acceso al portador enviando una 
 
    ![JWT11](assets/configure-io-target-jwt11.png)
 
-1. Escriba para agregar una nueva variable de entorno `{{TENANT_ID}}`. Copie y pegue su valor de ID de inquilino en los campos **[!UICONTROL INITIAL VALUE]** y **[!UICONTROL CURRENT VALUE]** para la nueva variable de entorno `TENANT_ID`.
+1. Escriba para agregar una nueva variable de entorno `{{TENANT_ID}}`. Copie y pegue su valor de ID de inquilino en los campos **[!UICONTROL VALOR INICIAL]** y **[!UICONTROL VALOR ACTUAL]** para la nueva variable de entorno `TENANT_ID`.
 
    ![testigo5](assets/configure-io-target-testtoken5.png)
 

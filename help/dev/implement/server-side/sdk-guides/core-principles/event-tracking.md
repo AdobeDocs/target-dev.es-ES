@@ -4,14 +4,9 @@ description: Utilice las capacidades de seguimiento de eventos de  [!DNL Adobe T
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/swckm7EdKlSkC2xl1P57EAyiuGz18rucZOAxcudzYpo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 528

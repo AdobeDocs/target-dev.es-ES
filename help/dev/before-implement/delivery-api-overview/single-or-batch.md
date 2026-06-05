@@ -1,30 +1,28 @@
 ---
 title: Entrega por lotes o única de la API de envío de Adobe Target
-description: ¿Cómo utilizo [!UICONTROL Adobe Target Delivery API] llamadas de envío únicas o por lotes?
+description: ¿Cómo uso [!UICONTROL API de envío de Adobe Target] llamadas de envío únicas o por lotes?
 keywords: API de envío
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 448
+source-wordcount: 460
 ht-degree: 0%
 
 ---
 
 # Entrega única o por lotes
 
-[!UICONTROL Adobe Target Delivery API] admite una sola llamada de envío o una llamada de envío por lotes. Se puede realizar una solicitud de servidor para el contenido de uno o varios mboxes.
+La [!UICONTROL API de envío de Adobe Target] admite una llamada de envío única o por lotes. Se puede realizar una solicitud de servidor para el contenido de uno o varios mboxes.
 
 Valore los costes de rendimiento al decidir realizar una sola llamada en lugar de una llamada por lotes. Si conoce todo el contenido que debe mostrarse para un usuario, la práctica recomendada es recuperar contenido para todos los mboxes con una sola llamada de envío por lotes para evitar hacer varias llamadas de envío.
 
 ## Llamada de envío única
 
-Puede recuperar una experiencia para mostrarla al usuario de un mbox mediante [!UICONTROL Adobe Target Delivery API]. Tenga en cuenta que si realiza una sola llamada de envío, debe iniciar otra llamada al servidor para recuperar contenido adicional para un mbox de un usuario. Esto puede resultar muy costoso con el tiempo, por lo que asegúrese de evaluar su enfoque al utilizar la llamada de API de entrega única.
+Puede recuperar una experiencia para mostrarla al usuario de un mbox mediante la [!UICONTROL API de envío de Adobe Target]. Tenga en cuenta que si realiza una sola llamada de envío, debe iniciar otra llamada al servidor para recuperar contenido adicional para un mbox de un usuario. Esto puede resultar muy costoso con el tiempo, por lo que asegúrese de evaluar su enfoque al utilizar la llamada de API de entrega única.
 
 ```
 curl -X POST \

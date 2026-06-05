@@ -5,18 +5,11 @@ title: ¿Cómo Lista de permitidos  [!DNL Target] Nodos De Edge?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
 TQID: https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: a94ced60-8199-4549-b453-ede2acb4101e
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 373
@@ -28,7 +21,7 @@ ht-degree: 0%
 
 Información y una lista actualizada de hosts que le ayudarán a realizar la lista de permitidos de [!DNL Adobe Target] perímetros.
 
-Un perímetro es una arquitectura de servidores distribuidos geográficamente que garantiza tiempos de respuesta óptimos para usuarios finales que solicitan contenido desde cualquier ubicación. Cada nodo perimetral tiene toda la información necesaria para responder a la solicitud de contenido del usuario y realizar un seguimiento de los datos de análisis de esa solicitud. Las solicitudes de los usuarios se dirigen al nodo perimetral más cercano. Para obtener más información, consulte [La red perimetral](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=es#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
+Un perímetro es una arquitectura de servidores distribuidos geográficamente que garantiza tiempos de respuesta óptimos para usuarios finales que solicitan contenido desde cualquier ubicación. Cada nodo perimetral tiene toda la información necesaria para responder a la solicitud de contenido del usuario y realizar un seguimiento de los datos de análisis de esa solicitud. Las solicitudes de los usuarios se dirigen al nodo perimetral más cercano. Para obtener más información, consulte [La red perimetral](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
 
 Si lo desea, puede realizar la lista de permitidos de [!DNL Target] nodos perimetrales.
 
@@ -36,7 +29,7 @@ Si lo desea, puede realizar la lista de permitidos de [!DNL Target] nodos perime
 >
 >Además de la inclusión en la lista de permitidos de las direcciones IP de traducción de direcciones de red (NAT) de [!DNL Target] extremos y [!DNL Target] direcciones IP perimetrales que se describen en el artículo, también debe realizar la lista de permitidos de todos los [!DNL Adobe Analytics] bloques de direcciones IP.
 >
->Para obtener más información, consulte [Todos los bloques de direcciones IP de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=es#all-adobe-analytics-ip-address-blocks){target=_blank} en la documentación de *Notas técnicas de Adobe Analytics*.
+>Para obtener más información, consulte [Todos los bloques de direcciones IP de Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank} en la documentación de *Notas técnicas de Adobe Analytics*.
 >
 >Se está actualizando la infraestructura de [!DNL Adobe Target] y los clientes que deseen direcciones de lista de permitidos deben utilizar ambos conjuntos de direcciones IP. Si no se hace esto, esto afectará a los clientes que usan implementaciones del lado del servidor o híbridas en las que las llamadas de la API de Target para recuperar experiencias se originan dentro de una red detrás de un firewall configurado para usar una lista de permitidos.
 

@@ -5,22 +5,15 @@ title: ¿Cuáles son las preguntas más frecuentes sobre el mbox global?
 feature: at.js
 exl-id: 7bcd1b67-809a-466a-b648-6e0e44386157
 TQID: https://experienceleague.adobe.com/bxsjCqSQpp6M20StzZtMBrfxjJCKgPEPfS2OlBUP00A
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 309
-ht-degree: 32%
+source-wordcount: 316
+ht-degree: 31%
 
 ---
 
@@ -32,9 +25,9 @@ Lista de las preguntas más frecuentes (FAQ) sobre los mboxes globales.
 
 Se admite un único mbox global en su cuenta.
 
-Puede limitar dónde se ejecutan sus actividades añadiéndoles reglas de URL. Para obtener más información, vea [Incluir la misma experiencia en páginas similares](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=es).
+Puede limitar dónde se ejecutan sus actividades añadiéndoles reglas de URL. Para obtener más información, vea [Incluir la misma experiencia en páginas similares](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html).
 
-También puede pasar un parámetro en la página usando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) y, a continuación, seleccionar esos parámetros en la sección &quot;configurar URL&quot; del [!UICONTROL Visual Experience Composer] (VEC) o agregando los parámetros como &quot;refinamientos&quot; en el [!UICONTROL Form-Based Experience Composer].
+También puede pasar un parámetro en la página usando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) y luego seleccionar esos parámetros en la sección &quot;configurar URL&quot; del [!UICONTROL Compositor de experiencias visuales] (VEC) o agregando los parámetros como &quot;refinamientos&quot; en el [!UICONTROL Compositor de experiencias basadas en formularios].
 
 ## ¿Cómo paso los datos de ingresos en un mbox global de [!DNL Target]?
 

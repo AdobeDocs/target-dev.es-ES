@@ -5,34 +5,23 @@ title: ¿Cómo puedo implementar con [!UICONTROL Experience Platform Web SDK]?
 feature: AEP Web SDK
 exl-id: 35ee60d2-3d6d-4169-9f22-b2aef4c6548b
 TQID: https://experienceleague.adobe.com/j3-KSuCkcyyTB2KG4Icm2E7xpAfcuPkaOlhxitd5q-4
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 714
-ht-degree: 11%
+source-wordcount: 786
+ht-degree: 9%
 
 ---
 
-# [!UICONTROL Adobe Experience Platform Web SDK]
+# [!UICONTROL SDK web de Adobe Experience Platform]
 
 [!UICONTROL Adobe Experience Platform Web SDK] (AEP Web SDK) es una biblioteca JavaScript del lado del cliente que permite a los clientes de [!UICONTROL Adobe Experience Cloud] interactuar con los distintos servicios de [!DNL Adobe Experience Cloud] (incluido [!DNL Target]) a través de [!UICONTROL Adobe Experience Platform Edge Network]. Además de la biblioteca JavaScript, existe una extensión [!UICONTROL Adobe Experience Platform] que le ayudará con las configuraciones de Web SDK.
 
-Para obtener más información, vea los siguientes vínculos en la ayuda de *[!UICONTROL Adobe Experience Platform Web SDK]*:
+Para obtener más información, consulte los siguientes vínculos en la ayuda de *[!UICONTROL Adobe Experience Platform Web SDK]*:
 
 * Para obtener información completa: [Qué es [!UICONTROL Adobe Experience Platform Web SDK]](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=es)
 * Para obtener información específica de [!DNL Target]: [[!DNL Target] Información general](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=es)
@@ -43,7 +32,7 @@ Los siguientes tutoriales le ayudan con la implementación:
 
 ### Implementar [!DNL Adobe Experience Cloud] con [!DNL Platform Web SDK]
 
-Aprenda a implementar aplicaciones de [!DNL Experience Cloud] mediante [!DNL Adobe Experience Platform Web SDK] con [este tutorial](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es). Para obtener información específica de [!DNL Target], consulte la sección del tutorial titulada [Configurar [!DNL Target] con Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=es).
+Aprenda a implementar aplicaciones de [!DNL Experience Cloud] mediante [!DNL Adobe Experience Platform Web SDK] con [este tutorial](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=es). Para obtener información específica de [!DNL Target], consulte la sección del tutorial titulada [Configurar [!DNL Target] con Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 ### Migrar [!DNL Target] de at.js 2.*x* a [!DNL Platform Web SDK]
 
@@ -55,12 +44,12 @@ Además de la documentación de [!UICONTROL Platform Web SDK] mencionada anterio
 
 | Función | Descripción/Vínculo |
 | --- | --- |
-| [Control de calidad de la actividad](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=es) | Use direcciones URL de control de calidad en [!DNL Target] para realizar sencillos controles de calidad de las actividades de extremo a extremo con vínculos de vista previa invariables, segmentar audiencias de manera opcional y crear informes de control de calidad que permanecen segmentados a partir de datos de actividades activas. El control de calidad de la actividad le permite probar por completo sus actividades [!DNL Target] antes de lanzarlas.<p>Ver [Compatibilidad con modo de control de calidad de la biblioteca JavaScript de Target](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=es#compatibility) y [URL de vista previa](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=es#preview). |
-| [[!UICONTROL Analytics for Target] (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es) | [!UICONTROL Adobe Analytics for Target] (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en las métricas de conversión y los segmentos de público de [!DNL Analytics] La integración con A4T le permite utilizar informes de Analytics para examinar sus resultados.<p>Consulte [Tipos de actividades compatibles](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es#section_F487896214BF4803AF78C552EF1669AA) y [Pasos de implementación para una implementación de Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=es#platform). |
-| [Públicos](https://experienceleague.adobe.com/docs/target/using/audiences/target.html?lang=es) | Las audiencias de [!DNL Target] determinan quién ve el contenido y las experiencias en una actividad segmentada.<p>Ver [Usar la lista de audiencias](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=es#use-list) y [Combinar varias audiencias](https://experienceleague.adobe.com/docs/target/using/audiences/combining-multiple-audiences.html?lang=es). |
-| [Creación de públicos](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=es) | Usar audiencias creadas en [!DNL Adobe Experience Platform] proporciona datos de clientes más completos que conducen a una personalización más impactante.<p>Ver [Usar audiencias de Adobe Experience Platform](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=es#aep). |
-| [Decisiones de oferta](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html?lang=es) | Agregue decisiones de oferta creadas en [!DNL Adobe Journey Optimizer] a [!DNL Target] actividades (prueba A/B manual o segmentación de experiencias) para determinar y entregar la siguiente mejor oferta para sus visitantes en la web y dispositivos móviles. |
-| [Ofertas de redireccionamiento: preguntas más frecuentes sobre A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=es) | Las ofertas de redireccionamiento hacen que los navegadores de los visitantes redirijan a una página nueva.<p>Ver [¿Admite [!UICONTROL Adobe Experience Platform Web SDK] ofertas de redireccionamiento para A4T?](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=es#platform) |
-| [Tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=es) | Los tokens de respuesta le permiten enviar datos de [!DNL Target] a Google Analytics y otras integraciones de terceros.<p>Consulte [Envío de datos a Google Analytics a través de Platform Web SDK](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=es#sending-data-to-google-analytics-via-platform-web-sdk) para ver una muestra de código de cómo realizar esta tarea. |
-| [Implementación de aplicación de una sola página](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=es) en la guía de información general de *[!UICONTROL Platform Web SDK]*. | [!UICONTROL Adobe Experience Platform Web SDK] proporciona funciones enriquecidas que permiten a su empresa ejecutar personalizaciones en tecnologías de próxima generación del lado del cliente, como aplicaciones de una sola página (SPA). |
+| [Control de calidad de la actividad](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html) | Use direcciones URL de control de calidad en [!DNL Target] para realizar sencillos controles de calidad de las actividades de extremo a extremo con vínculos de vista previa invariables, segmentar audiencias de manera opcional y crear informes de control de calidad que permanecen segmentados a partir de datos de actividades activas. El control de calidad de la actividad le permite probar por completo sus actividades [!DNL Target] antes de lanzarlas.<p>Ver [Compatibilidad con modo de control de calidad de la biblioteca JavaScript de Target](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html#compatibility) y [URL de vista previa](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html#preview). |
+| [[!UICONTROL Analytics for Target] (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) | [!UICONTROL Adobe Analytics for Target] (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia. La integración con A4T le permite utilizar informes de Analytics para examinar sus resultados.<p>Consulte [Tipos de actividades compatibles](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html#section_F487896214BF4803AF78C552EF1669AA) y [Pasos de implementación para una implementación de Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html#platform). |
+| [Públicos](https://experienceleague.adobe.com/docs/target/using/audiences/target.html) | Las audiencias de [!DNL Target] determinan quién ve el contenido y las experiencias en una actividad segmentada.<p>Ver [Usar la lista de audiencias](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html#use-list) y [Combinar varias audiencias](https://experienceleague.adobe.com/docs/target/using/audiences/combining-multiple-audiences.html). |
+| [Creación de públicos](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html?lang=es) | Usar audiencias creadas en [!DNL Adobe Experience Platform] proporciona datos de clientes más completos que conducen a una personalización más impactante.<p>Ver [Usar audiencias de Adobe Experience Platform](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/audiences.html#aep). |
+| [Decisiones de oferta](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html) | Agregue decisiones de oferta creadas en [!DNL Adobe Journey Optimizer] a [!DNL Target] actividades (prueba A/B manual o segmentación de experiencias) para determinar y entregar la siguiente mejor oferta para sus visitantes en la web y dispositivos móviles. |
+| [Ofertas de redireccionamiento: preguntas más frecuentes sobre A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html) | Las ofertas de redireccionamiento hacen que los navegadores de los visitantes redirijan a una página nueva.<p>Ver [¿Admite [!UICONTROL Adobe Experience Platform Web SDK] ofertas de redireccionamiento para A4T?](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html#platform) |
+| [Tokens de respuesta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) | Los tokens de respuesta le permiten enviar datos de [!DNL Target] a Google Analytics y otras integraciones de terceros.<p>Consulte [Envío de datos a Google Analytics a través de Platform Web SDK](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html#sending-data-to-google-analytics-via-platform-web-sdk) para ver una muestra de código de cómo realizar esta tarea. |
+| [Implementación de aplicación de una sola página](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html) en la guía de información general de *[!UICONTROL Platform Web SDK]*. | [!UICONTROL Adobe Experience Platform Web SDK] proporciona funciones enriquecidas que permiten que su empresa ejecute personalizaciones en tecnologías de próxima generación del lado del cliente, como aplicaciones de una sola página (SPA). |
 | [Cambios en el cifrado de TLS (Seguridad de capa de transporte)](/help/dev/before-implement/tls-transport-layer-security-encryption.md) | TLS (Transport Layer Security) le ayuda a mantener los estándares de seguridad más altos y a promover la seguridad de los datos de los clientes. |

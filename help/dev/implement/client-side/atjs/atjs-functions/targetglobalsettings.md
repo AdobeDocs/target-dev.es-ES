@@ -1,30 +1,18 @@
 ---
 keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalsettings, global settings, at.js, funciones, función, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookieDomain, crossDomain, crossDomain, timeout, globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain8 crossDomain5, optoutEnabled, optout, opt out, selectorsPollingTimeout, dataProviders, Personalization híbrido, deviceIdLifetime
-description: Use la función [!UICONTROL targetGlobalSettings()] para la biblioteca JavaScript  [!DNL Adobe Target] at.js para anular la configuración en lugar de usar las API  [!DNL Target] UI o REST.
-title: ¿Cómo se utiliza la función [!UICONTROL targetGlobalSettings()]?
+description: Utilice la función [!UICONTROL targetGlobalSettings()] para que la biblioteca JavaScript  [!DNL Adobe Target] at.js anule la configuración en lugar de usar las API  [!DNL Target] UI o REST.
+title: ¿Cómo se usa la función [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2702
+source-wordcount: 2705
 ht-degree: 56%
 
 ---
@@ -120,7 +108,7 @@ Las configuraciones que se pueden anular son las siguientes:
 
   Solo del lado del servidor es el método de toma de decisiones predeterminado que se establece por defecto cuando at.js 2.5+ se implementa y despliega en las propiedades web.
 
-  Usar solo del lado del servidor como configuración predeterminada significa que todas las decisiones se toman en la red perimetral [!DNL Target], lo que implica una llamada al servidor de bloqueo. Este método puede introducir la latencia incremental, pero también proporciona beneficios importantes, como la posibilidad de aplicar las capacidades de aprendizaje automático de [!DNL Target], que incluyen las actividades [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=es), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=es) (AP) y [Segmentación automática](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=es).
+  Usar solo del lado del servidor como configuración predeterminada significa que todas las decisiones se toman en la red perimetral [!DNL Target], lo que implica una llamada al servidor de bloqueo. Este método puede introducir la latencia incremental, pero también proporciona beneficios importantes, como la posibilidad de aplicar las capacidades de aprendizaje automático de [!DNL Target], que incluyen las actividades [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) y [Segmentación automática](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html).
 
   Además, la mejora de sus experiencias personalizadas mediante el uso del perfil de usuario de [!DNL Target], que se mantiene en todas las sesiones y canales, puede proporcionar potentes resultados para su empresa.
 
@@ -302,8 +290,8 @@ Los vídeos siguientes contienen más información:
 
 | Vídeo | Descripción |
 |--- |--- |
-| [Uso de Proveedores de datos en Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=es) | Proveedores de datos es una funcionalidad que permite pasar fácilmente datos de terceros a Target. Un tercero podría ser un servicio de pronóstico del clima, un DMP o incluso su propio servicio web. Puede usar estos datos para crear audiencias, dirigir contenido y enriquecer el perfil del visitante. |
-| [Implementación de Proveedores de datos en Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=es) | Detalles de implementación y ejemplos de cómo usar la característica dataProviders de Adobe [!DNL Target] para recuperar datos de proveedores de datos de terceros y pasarlos en la solicitud [!DNL Target]. |
+| [Uso de Proveedores de datos en Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | Proveedores de datos es una funcionalidad que permite pasar fácilmente datos de terceros a Target. Un tercero podría ser un servicio de pronóstico del clima, un DMP o incluso su propio servicio web. Puede usar estos datos para crear audiencias, dirigir contenido y enriquecer el perfil del visitante. |
+| [Implementación de Proveedores de datos en Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | Detalles de implementación y ejemplos de cómo usar la característica dataProviders de Adobe [!DNL Target] para recuperar datos de proveedores de datos de terceros y pasarlos en la solicitud [!DNL Target]. |
 
 La configuración `window.targetGlobalSettings.dataProviders` es una matriz de proveedores de datos.
 

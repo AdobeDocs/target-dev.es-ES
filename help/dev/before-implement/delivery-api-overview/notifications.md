@@ -1,19 +1,16 @@
 ---
 title: Notificaciones de API de envío de Adobe Target
-description: ¿Cómo se activan las notificaciones mediante [!UICONTROL Adobe Target Delivery API]?
+description: ¿Cómo se activan las notificaciones mediante la [!UICONTROL API de envío de Adobe Target]?
 keywords: API de envío
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/rooWLG-bh7lu7eBELTQys3KoNtS-6ZicxfHoQcU6TU0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: 426
 ht-degree: 0%
 
 ---
@@ -26,7 +23,7 @@ Para que las notificaciones se activen en el mbox o la vista correctos, asegúre
 
 ## Notificaciones para mboxes de recuperación previa
 
-Se pueden enviar una o varias notificaciones a través de una sola llamada de envío. Determine si la métrica de la que debe realizarse el seguimiento es un `click` o `display` para cada mbox para que el `type` de la notificación se pueda reflejar correctamente. Además, pase un `id` por cada notificación para que se pueda determinar si una notificación se envió correctamente a través de [!UICONTROL &#x200B; Adobe Target Delivery API]. `timestamp` también es importante que se reenvíe a [!DNL Target] para indicar cuándo se produjo `click` o `display` en un mbox determinado con fines de creación de informes.
+Se pueden enviar una o varias notificaciones a través de una sola llamada de envío. Determine si la métrica de la que debe realizarse el seguimiento es un `click` o `display` para cada mbox para que el `type` de la notificación se pueda reflejar correctamente. Además, pase un `id` para cada notificación, de modo que se pueda determinar si una notificación se envió correctamente a través de la [!UICONTROL  API de Adobe Target Delivery]. `timestamp` también es importante que se reenvíe a [!DNL Target] para indicar cuándo se produjo `click` o `display` en un mbox determinado con fines de creación de informes.
 
 ```
 curl -X POST \
@@ -117,7 +114,7 @@ Si todos los `notifications` enviados a [!DNL Target] se procesan correctamente,
 
 ## Notificaciones para vistas recuperadas previamente
 
-Se pueden enviar una o varias notificaciones a través de una sola llamada de envío. Determine si la métrica de la que debe realizarse el seguimiento es `click` o `display` para cada mbox para que el tipo de notificación se pueda reflejar correctamente. Además, pase un `id` por cada notificación para que se pueda determinar si una notificación se envió correctamente a través de [!UICONTROL Adobe Target Delivery API]. La marca de tiempo también es importante para reenviarse a [!DNL Target] a fin de indicar cuándo se produjo `click` o `display` en una vista determinada con fines de generación de informes.
+Se pueden enviar una o varias notificaciones a través de una sola llamada de envío. Determine si la métrica de la que debe realizarse el seguimiento es `click` o `display` para cada mbox para que el tipo de notificación se pueda reflejar correctamente. Además, pase un `id` por cada notificación para que se pueda determinar si se envió correctamente a través de la [!UICONTROL API de envío de Adobe Target]. La marca de tiempo también es importante para reenviarse a [!DNL Target] a fin de indicar cuándo se produjo `click` o `display` en una vista determinada con fines de generación de informes.
 
 ```
 curl -X POST \

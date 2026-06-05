@@ -6,17 +6,13 @@ level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
 TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 368
+source-wordcount: 369
 ht-degree: 0%
 
 ---
@@ -60,7 +56,7 @@ No es necesario incluir los atributos de conversión de pedidos en esta llamada.
    * `orderTotal`: total del pedido de la compra.
    * `orderId`: ID de pedido de la compra.
 
-  La siguiente ilustración muestra una regla [para [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=es){target=_blank} que solo debería activarse en la página [!UICONTROL Confirmation].
+  La siguiente ilustración muestra una regla [para [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que solo debería activarse en la página [!UICONTROL Confirmación].
 
   ![Página de configuración de la acción](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -69,7 +65,7 @@ No es necesario incluir los atributos de conversión de pedidos en esta llamada.
 **Lecturas**
 
 * [adobe.target.trackEvent(), método](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds para criterios basados en el carro de compras](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=es#cart-based){target=_blank}
+* [cartIds para criterios basados en el carro de compras](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **Acciones**
 

@@ -6,19 +6,14 @@ feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
 TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 611
+source-wordcount: 624
 ht-degree: 0%
 
 ---
@@ -71,8 +66,8 @@ https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_m
 Como puede ver, hay un parámetro `adobe_mc` anexado a la dirección URL. Este parámetro contiene valores codificados para:
 
 * TS=1660667205: La marca de tiempo actual. Esta marca de tiempo garantiza que la vista web no reciba valores caducados.
-* MCMID=69624092487065093697422606480535692677: [!UICONTROL Experience Cloud ID] (ECID). También conocido como MID o [!UICONTROL Marketing Cloud ID], requerido para la identificación de visitantes entre soluciones [!DNL Adobe].
-* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: El [!UICONTROL Adobe Organization ID].
+* MCMID=69624092487065093697422606480535692677: [!UICONTROL Experience Cloud ID] (ECID). También conocido como MID o [!UICONTROL Marketing Cloud ID] necesario para la identificación de visitantes entre soluciones [!DNL Adobe].
+* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: [!UICONTROL ID. de organización de Adobe].
 
 El `Identity.getUrlVariables` es un método [!DNL Adobe Experience Platform Mobile SDK] alternativo que devuelve una cadena formada correctamente que contiene las variables de dirección URL [!DNL Experience Cloud Identity Service]. Para obtener más información, consulte [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} en la *referencia de API de identidad*.
 
@@ -90,7 +85,7 @@ Target.getSessionId { (id, err) in
 
 ## Realizar pruebas en las vistas web
 
-Los vínculos de vista previa web se generan en la página [!UICONTROL Activity detail] al hacer clic en el vínculo [[!UICONTROL Adobe QA] &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md) para mostrar una ventana emergente con el fin de copiar cada vínculo de vista previa de experiencia, de forma similar a la siguiente:
+Los vínculos de vista previa web se generan en la página [!UICONTROL Detalles de actividad] al hacer clic en el vínculo [[!UICONTROL Control de calidad de Adobe]](/help/dev/implement/mobile/target-mobile-preview.md) para mostrar una ventana emergente y copiar cada vínculo de vista previa de experiencia, de forma similar a la siguiente:
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

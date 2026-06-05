@@ -1,24 +1,19 @@
 ---
 keywords: adobe.target.trackEvent, trackEvent, trackevent, rastrear evento, at.js, funciones, función, preventDefault, preventdefault, prevent default, adobe.target.trackEvent
-description: Utilice la función [!UICONTROL adobe.target.trackEvent()] de la biblioteca JavaScript  [!DNL Adobe Target] at.js para activar una solicitud que informe de las acciones del usuario, como los clics y las conversiones en el sitio.
-title: ¿Cómo se utiliza la función [!UICONTROL adobe.target.trackEvent()]?
+description: Utilice la función [!UICONTROL adobe.target.trackEvent()] para la biblioteca JavaScript  [!DNL Adobe Target] at.js para activar una solicitud para informar de las acciones del usuario, como los clics y las conversiones en el sitio.
+title: ¿Cómo utilizo la función [!UICONTROL adobe.target.trackEvent()]?
 feature: at.js
 exl-id: 9a55e4f1-d7f9-47c1-867c-2ce06fb26f9f
 TQID: https://experienceleague.adobe.com/Jib9C5FvmsgIF6CA-0UbdMdnMiXxQCkU2-O3Zys3vrY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 58%
+source-wordcount: 336
+ht-degree: 56%
 
 ---
 
@@ -26,13 +21,13 @@ ht-degree: 58%
 
 Esta función activa una solicitud para informar sobre las acciones de los usuarios, como clics y conversiones. No proporciona ninguna actividad en la respuesta.
 
-Después, estas llamadas de mbox de seguimiento de eventos se pueden usar para definir métricas en las actividades. Para obtener más información, consulte [Métricas de éxito](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=es) y [Conversiones de seguimiento](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions).
+Después, estas llamadas de mbox de seguimiento de eventos se pueden usar para definir métricas en las actividades. Para obtener más información, consulte [Métricas de éxito](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) y [Conversiones de seguimiento](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions).
 
 He aquí los detalles de API:
 
 | Clave | Tipo | Requerido | Descripción |
 |--- |--- |--- |--- |
-| mbox | Cadena | Sí | Nombre de mbox<P>**Nota**: Si se activa una llamada a [!UICONTROL trackEvent()] con un nombre de mbox que ya se ha activado en la página, se restablece el SDID de [!UICONTROL trackEvent()] y será diferente a las llamadas a [!DNL Target] de la página. Sin embargo, si se activa una llamada a [!UICONTROL trackEvent()] con un nombre de mbox diferente, el SDID de la llamada a [!UICONTROL trackEvent()] se mantiene coherente con las llamadas a [!UICONTROL Page Load Request]/[!UICONTROL triggerView()] de la página. |
+| mbox | Cadena | Sí | Nombre de mbox<P>**Nota**: Si se activa una llamada a [!UICONTROL trackEvent()] con un nombre de mbox que ya se ha activado en la página, se restablece el SDID de [!UICONTROL trackEvent()] y será diferente a las llamadas a [!DNL Target] de la página. Sin embargo, si se activa una llamada a [!UICONTROL trackEvent()] con un nombre de mbox diferente, el SDID de la llamada a [!UICONTROL trackEvent()] se mantendrá coherente con las llamadas a [!UICONTROL Page Load Request]/[!UICONTROL triggerView()] de la página. |
 | selector | Cadena | No | Los selectores de CSS utilizados para encontrar los elementos HTML. Los detectores de eventos se adjuntarán a los elementos encontrados. |
 | type | Cadena | No | Representa un tipo de evento registrado. Puede ser tanto eventos HTML conocidos como: click, mousedown, etc. como también eventos HTML personalizados. |
 | preventDefault | Booleano | No | Indica si usar `[!UICONTROL event.preventDefault()]` en la llamada de retorno de la escucha de eventos. Toma el valor predeterminado de falso.<P>**Nota**: solo se admiten `[!UICONTROL form[submit]]` y `a[click]`. No se admiten otros escenarios debido a la complejidad y a la gran cantidad de escenarios por admitir. |

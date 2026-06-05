@@ -4,18 +4,13 @@ description: Aprenda a utilizar el método create para inicializar el SDK de Nod
 feature: APIs/SDKs
 exl-id: 71516e44-508a-4d8d-9f2b-7c54243e9c60
 TQID: https://experienceleague.adobe.com/uawle0-l5bcv-FuXMLkPc8kIf8DvbkRqAYelr-ehNLk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 321
+source-wordcount: 332
 ht-degree: 18%
 
 ---
@@ -24,7 +19,7 @@ ht-degree: 18%
 
 ## Descripción
 
-Utilice el método `create` para inicializar el SDK Node.js e instanciar el cliente [!UICONTROL Target] para realizar llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
+Utilice el método `create` para inicializar el SDK Node.js e instanciar el cliente [!UICONTROL Target] para hacer llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
 
 ## Método
 
@@ -40,9 +35,9 @@ TargetClient.create(options: Object): TargetClient
 
 | Nombre | Tipo | Requerido | Valor predeterminado | Descripción |
 | --- | --- | --- | --- | --- |
-| cliente | Cadena | Sí | Ninguna | [!UICONTROL Adobe Target Client ID] |
-| organizationId | Cadena | Sí | Ninguna | [!UICONTROL Experience Cloud Organization ID] |
-| entorno | Cadena | No | producción | Nombre del entorno de destino. En la interfaz de usuario [!DNL Target], [!UICONTROL Administration] > [!UICONTROL Environments]. |
+| cliente | Cadena | Sí | Ninguna | [!UICONTROL ID de cliente de Adobe Target] |
+| organizationId | Cadena | Sí | Ninguna | [!UICONTROL ID de organización de Experience Cloud] |
+| entorno | Cadena | No | producción | Nombre del entorno de destino. En la interfaz de usuario de [!DNL Target], [!UICONTROL Administración] > [!UICONTROL Entornos]. |
 | timeout | Número | No | 3000 | Tiempo de espera en milisegundos |
 | serverDomain | Cadena | No | `*client*.tt.omtrdc.net` | Anula el nombre de host predeterminado |
 | secure | Booleano | No | true | No configurado para aplicar el esquema HTTP |

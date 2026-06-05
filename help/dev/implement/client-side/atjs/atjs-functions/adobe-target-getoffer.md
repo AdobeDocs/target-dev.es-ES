@@ -1,26 +1,19 @@
 ---
 keywords: adobe.target.getOffer, getOffer, getoffer, obtener oferta, at.js, funciones, función, $8
-description: Utilice la función [!UICONTROL adobe.target.getOffer()] y sus opciones para que la biblioteca  [!DNL Adobe Target] at.js active solicitudes para obtener una oferta [!DNL Target] s.
-title: ¿Cómo se utiliza la función [!UICONTROL adobe.target.getOffer()]?
+description: Utilice la función [!UICONTROL adobe.target.getOffer()] y sus opciones para que la biblioteca  [!DNL Adobe Target] at.js active solicitudes para obtener una oferta [!DNL Target] .
+title: ¿Cómo utilizo la función [!UICONTROL adobe.target.getOffer()]?
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 TQID: https://experienceleague.adobe.com/GcXVIt-42-PV0j4Q4oe5uePTZAn7PDIMicIAULDXz-s
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 463
-ht-degree: 74%
+source-wordcount: 472
+ht-degree: 72%
 
 ---
 
@@ -36,11 +29,11 @@ Use con `[!UICONTROL adobe.target.applyOffer()]` para procesar la respuesta o us
 | params | Objeto | No | Parámetros de mbox. Un objeto de pares de clave-valor que tiene la siguiente estructura:<P>`{ "param1": "value1", "param2": "value2"}` |
 | success | Función | Sí | La llamada de retorno que se ejecutará cuando tengamos una respuesta del servidor. La función de llamada de retorno de éxito recibirá un solo parámetro que representa una matriz de objetos de oferta. Este es un ejemplo de llamada de retorno de éxito:<P>`function handleSuccess(response){......}`<P>Consulte Respuestas más adelante para conocer los detalles. |
 | error | Función | Sí | Llamada de retorno que se ejecutará cuando tengamos un error. Hay un par de casos que se consideran erróneos:<ul><li>Código de estado HTTP diferente a 200 OK</li><li>No se puede analizar la respuesta. Por ejemplo, hemos construido mal JSON o HTML en lugar de JSON.</li><li>La respuesta contiene la clave de “error”. Por ejemplo, se arrojó una excepción en el borde donde no se pudo procesar correctamente una solicitud. Obtuvimos un error cuando se bloquea un mbox y no pudimos recuperar ningún contenido, etc. La función de llamada de retorno de error recibirá dos parámetros: estado y error. Este es un ejemplo de devolución de llamada de error: `function handleError(status, error){......}`</li></ul>Consulte Respuestas de error más adelante para conocer los detalles. |
-| timeout | Número | No | Tiempo de espera en milisegundos. Si no se especifica, se usará el tiempo de espera predeterminado en at.js.<P>El tiempo de espera predeterminado se puede establecer desde la interfaz de usuario de [!DNL Target] en [!UICONTROL Administration] > [!UICONTROL Implementation]. |
+| timeout | Número | No | Tiempo de espera en milisegundos. Si no se especifica, se usará el tiempo de espera predeterminado en at.js.<P>El tiempo de espera predeterminado se puede establecer desde la interfaz de usuario de [!DNL Target] en [!UICONTROL Administración] > [!UICONTROL Implementación]. |
 
 ## Ejemplos
 
-Agregando parámetros con [!UICONTROL getOffer()] y utilizando [!UICONTROL applyOffer()] para la administración de éxito:
+Agregando parámetros con [!UICONTROL getOffer()] y usando [!UICONTROL applyOffer()] para la administración correcta:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   

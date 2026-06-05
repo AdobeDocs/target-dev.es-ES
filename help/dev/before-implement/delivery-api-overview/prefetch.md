@@ -1,24 +1,17 @@
 ---
 title: Precarga de API de envío de Adobe Target
-description: ¿Cómo se usa la recuperación previa en [!UICONTROL Adobe Target Delivery API]?
+description: ¿Cómo utilizo la recuperación previa en la [!UICONTROL API de envío de Adobe Target]?
 keywords: API de envío
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 548
+source-wordcount: 578
 ht-degree: 0%
 
 ---
@@ -37,7 +30,7 @@ Al utilizar la recuperación previa, es importante estar familiarizado con los s
 
 ## Mboxes de recuperación previa
 
-Los clientes, como las aplicaciones móviles y los servidores, pueden recuperar previamente varios mboxes para un visitante determinado dentro de una sesión y almacenarlos en la caché para evitar múltiples llamadas a [!UICONTROL Adobe Target Delivery API].
+Los clientes, como las aplicaciones móviles y los servidores, pueden recuperar previamente varios mboxes para un visitante determinado dentro de una sesión y almacenarlos en la caché para evitar múltiples llamadas a la [!UICONTROL API de envío de Adobe Target].
 
 ```shell shell-session
 curl -X POST \
@@ -132,11 +125,11 @@ Dentro del campo `prefetch`, agregue uno o más `mboxes` que quiera recuperar pr
 }
 ```
 
-Dentro de la respuesta, verá el campo `content` que contiene la experiencia que se mostrará al visitante en relación con un(a) `mbox` determinado(a). Esto es muy útil cuando se almacena en caché en el servidor para que cuando un visitante interactúe con su aplicación web o móvil en una sesión y visite un(a) `mbox` en cualquier página particular de su aplicación, la experiencia se pueda entregar desde la caché en lugar de realizar otra llamada de [!UICONTROL Adobe Target Delivery API]. Sin embargo, cuando se entrega una experiencia al visitante desde `mbox`, se envía un `notification` a través de una llamada de API de entrega para que se produzca el registro de impresiones. Esto se debe a que la respuesta de `prefetch` llamadas se almacena en caché, lo que significa que el visitante no ha visto las experiencias en el momento en que se produce la llamada a `prefetch`. Para obtener más información acerca del proceso `notification`, consulte [Notificaciones](notifications.md).
+Dentro de la respuesta, verá el campo `content` que contiene la experiencia que se mostrará al visitante en relación con un(a) `mbox` determinado(a). Esto es muy útil cuando se almacena en caché en el servidor para que cuando un visitante interactúe con su aplicación web o móvil en una sesión y visite un `mbox` en cualquier página en particular de su aplicación, la experiencia se pueda entregar desde la caché en lugar de hacer otra llamada a la [!UICONTROL API de envío de Adobe Target]. Sin embargo, cuando se entrega una experiencia al visitante desde `mbox`, se envía un `notification` a través de una llamada de API de entrega para que se produzca el registro de impresiones. Esto se debe a que la respuesta de `prefetch` llamadas se almacena en caché, lo que significa que el visitante no ha visto las experiencias en el momento en que se produce la llamada a `prefetch`. Para obtener más información acerca del proceso `notification`, consulte [Notificaciones](notifications.md).
 
 ## Recuperar previamente mboxes con métricas `clickTrack` al usar [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
+[[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
 
 El siguiente fragmento de código es una respuesta de una recuperación previa de un mbox que contiene `clickTrack` métricas para notificar a [!DNL Analytics] que se hizo clic en una oferta:
 
@@ -181,7 +174,7 @@ El siguiente fragmento de código es una respuesta de una recuperación previa d
 
 ## Recuperar vistas previamente
 
-Las vistas admiten aplicaciones de una sola página (SPA) y aplicaciones móviles de forma más fluida. Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia SPA o móvil. Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es){target=_blank} y [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=es){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Las vistas admiten aplicaciones de una sola página (SPA) y aplicaciones móviles de forma más fluida. Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia SPA o móvil. Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL Prueba A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} y [[!UICONTROL Segmentación de experiencias]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -211,7 +204,7 @@ curl -X POST \
 }'
 ```
 
-La llamada de ejemplo anterior recupera previamente todas las vistas creadas mediante el VEC de SPA para las actividades [!UICONTROL A/B Test] y XT que se mostrarán para la web `channel`. Observe que la llamada recupera previamente todas las vistas de las actividades [!UICONTROL A/B Test] o XT para las que califica un visitante con `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que visita `url`:`https://target.enablementadobe.com/react/demo/#/`.
+La llamada de ejemplo anterior recupera previamente todas las vistas creadas mediante el VEC de SPA para las actividades [!UICONTROL Prueba A/B] y XT que se mostrarán para la web `channel`. Observe que la llamada recupera previamente todas las vistas de las actividades [!UICONTROL Prueba A/B] o XT para las que califica un visitante con `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que está visitando `url`:`https://target.enablementadobe.com/react/demo/#/`.
 
 ```JSON  {line-numbers="true"}
 {

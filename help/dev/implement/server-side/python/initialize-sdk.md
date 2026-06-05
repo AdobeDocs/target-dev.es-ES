@@ -1,24 +1,22 @@
 ---
 title: Inicialice Python SDK mediante el método create
-description: Aprenda a utilizar el método create para inicializar Python SDK e instanciar [!UICONTROL TargetClient] para realizar llamadas a  [!DNL Adobe Target] para experimentos y experiencias personalizadas.
+description: Aprenda a usar el método create para inicializar Python SDK e instanciar [!UICONTROL TargetClient] para hacer llamadas a [!DNL Adobe Target] para experimentos y experiencias personalizadas.
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
 TQID: https://experienceleague.adobe.com/la4hiAeSKSTgV7-WPLuW-MudsVJAm3qbq1vT7rnzymQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 276
-ht-degree: 17%
+source-wordcount: 287
+ht-degree: 16%
 
 ---
 
 # Inicialización de Python SDK
 
 Descripción
-Utilice el método `create` para inicializar Python SDK e instanciar [!UICONTROL Target Client] para realizar llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
+Utilice el método `create` para inicializar Python SDK e instanciar [!UICONTROL Target Client] para hacer llamadas a [!DNL Adobe Target] con el fin de realizar experimentos y experiencias personalizadas.
 
 ## Método
 
@@ -34,8 +32,8 @@ TargetClient.create(options)
 
 | Nombre | Tipo | Requerido | Valor predeterminado | Descripción |
 | --- | --- | --- | --- | --- |
-| cliente | str | Sí | Ninguna | [!UICONTROL Adobe Target client ID] |
-| organization_id | str | Sí | Ninguna | [!UICONTROL Experience Cloud Organization ID] |
+| cliente | str | Sí | Ninguna | [!UICONTROL ID de cliente de Adobe Target] |
+| organization_id | str | Sí | Ninguna | [!UICONTROL ID de organización de Experience Cloud] |
 | timeout | int | No | 3000 | Tiempo de espera en milisegundos |
 | server_domain | str | No | `client.tt.omtrdc.net` | Anula el nombre de host predeterminado |
 | secure | bool | No | true | No configurado para aplicar el esquema HTTP |

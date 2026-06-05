@@ -5,21 +5,11 @@ title: Cookies de at.js
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
 TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
 source-wordcount: 1830
@@ -37,7 +27,7 @@ Para la versión 2.x de at.js (hasta la versión 2.10.0, pero sin incluir), *sol
 
 at.js genera un ID de sesión y la almacena ahí la cookie. La primera respuesta contiene toda la información de la actividad, así como `TNT` o `PC ID` generados por los servidores de [!DNL Target]. A continuación, at.js escribe `TNT/PC ID` en la cookie.
 
-El servicio de Experience Cloud ID siempre establece la cookie propia de `AMCV_###@AdobeOrg`, aunque se pasa `ECID` en [!DNL Target] solicitudes.
+Experience Cloud ID siempre establece la cookie propia `AMCV_###@AdobeOrg`, aunque `ECID` se pasa en [!DNL Target] solicitudes.
 
 >[!NOTE]
 >
@@ -54,11 +44,11 @@ El seguimiento entre dominios permite ver sesiones en dos sitios relacionados, p
 
 ## Comportamiento de la cookie at.js 1.*x*
 
-Para las versiones 1.0&rbrace;x *de at.js, el comportamiento de la cookie depende de si es una cookie de origen, una cookie de terceros con una cookie de origen o solo una cookie de terceros.*
+Para las versiones 1.0}x *de at.js, el comportamiento de la cookie depende de si es una cookie de origen, una cookie de terceros con una cookie de origen o solo una cookie de terceros.*
 
 ### Cuándo usar cookies de origen o de terceros
 
-La configuración del sitio determina las cookies que se utilizarán. Es útil entender cómo funciona [!DNL Target] al intentar comprender las cookies de origen y de terceros. Ver [Cómo [!DNL Adobe Target] funciona](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=es) para obtener más información.
+La configuración del sitio determina las cookies que se utilizarán. Es útil entender cómo funciona [!DNL Target] al intentar comprender las cookies de origen y de terceros. Ver [Cómo [!DNL Adobe Target] funciona](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) para obtener más información.
 
 Hay tres casos principales para el uso de cookies:
 
@@ -171,5 +161,5 @@ De Apple:
 | Funcionalidad afectada | Detalles |
 |--- |--- |
 | Soporte para la no participación | Los cambios de Apple en el seguimiento de WebKit interrumpen el soporte para la no participación.<P>La exclusión de [!DNL Target] usa una cookie en el dominio `clientcode.tt.omtrdc.net`. Para obtener más información, consulte [Privacidad](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] admite dos formas de no participación:<ul><li>Una por cliente (el cliente gestiona el vínculo de no participación).</li><li>Uno a través de Adobe que excluye al usuario de toda la funcionalidad de [!DNL Target] para todos los clientes.</li></ul>Ambos métodos utilizan una cookie de terceros. |
-| [!DNL Target] actividades | Los clientes pueden elegir su [duración de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=es) para sus cuentas de [!DNL Target], con un máximo de 90 días. El problema es que si la duración del perfil de la cuenta supera los 30 días y se purga la cookie de origen porque el dominio del cliente se ha marcado como un seguimiento de usuarios entre sitios, el comportamiento de los visitantes de Safari se verá afectado en las siguientes áreas de [!DNL Target]:<P>**[!DNL Target]informes**: Si un usuario de Safari entra en una actividad, regresa pasados 30 días y luego se convierte, ese usuario cuenta como dos visitantes y una conversión.<P>Este comportamiento es el mismo para las actividades que usan [!DNL Analytics] como fuente de informes (A4T).<P>**Perfil y pertenencia a actividades**:<ul><li>Los datos de perfil se borran al caducar la cookie de origen.</li><li>La pertenencia a actividades se borra al caducar la cookie de origen.</li><li> [!DNL Target] no funciona en Safari para cuentas que usan una implementación de cookies de terceros, o de cookies de origen y de terceros. Nótese que este comportamiento no es nuevo. Safari lleva un tiempo sin admitir cookies de terceros.</li></ul><P>**Sugerencias**: Si existe preocupación en cuanto a que el dominio del cliente pueda marcarse como uno que realiza un seguimiento de los visitantes entre sesiones, lo más seguro es establecer la duración del perfil en 30 días o menos en [!DNL Target]. De este modo, se asegurará de que los usuarios reciban un seguimiento similar en Safari y en los demás navegadores. |
+| [!DNL Target] actividades | Los clientes pueden elegir su [duración de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) para sus cuentas de [!DNL Target], con un máximo de 90 días. El problema es que si la duración del perfil de la cuenta supera los 30 días y se purga la cookie de origen porque el dominio del cliente se ha marcado como un seguimiento de usuarios entre sitios, el comportamiento de los visitantes de Safari se verá afectado en las siguientes áreas de [!DNL Target]:<P>**[!DNL Target]informes**: Si un usuario de Safari entra en una actividad, regresa pasados 30 días y luego se convierte, ese usuario cuenta como dos visitantes y una conversión.<P>Este comportamiento es el mismo para las actividades que usan [!DNL Analytics] como fuente de informes (A4T).<P>**Perfil y pertenencia a actividades**:<ul><li>Los datos de perfil se borran al caducar la cookie de origen.</li><li>La pertenencia a actividades se borra al caducar la cookie de origen.</li><li> [!DNL Target] no funciona en Safari para cuentas que usan una implementación de cookies de terceros, o de cookies de origen y de terceros. Nótese que este comportamiento no es nuevo. Safari lleva un tiempo sin admitir cookies de terceros.</li></ul><P>**Sugerencias**: Si existe preocupación en cuanto a que el dominio del cliente pueda marcarse como uno que realiza un seguimiento de los visitantes entre sesiones, lo más seguro es establecer la duración del perfil en 30 días o menos en [!DNL Target]. De este modo, se asegurará de que los usuarios reciban un seguimiento similar en Safari y en los demás navegadores. |
 

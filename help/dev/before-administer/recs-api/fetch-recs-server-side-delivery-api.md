@@ -7,18 +7,13 @@ thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
 TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
-source-wordcount: 1366
+source-wordcount: 1284
 ht-degree: 1%
 
 ---
@@ -52,19 +47,19 @@ Para utilizar la API de envío para ofrecer experiencias de Target, incluidas re
 
 ## Crear una recomendación con el Compositor de experiencias basadas en formularios
 
-Para crear recomendaciones que se puedan usar con la API de entrega, use [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es).
+Para crear recomendaciones que se puedan usar con la API de entrega, use [Compositor basado en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
-1. En primer lugar, cree y guarde un diseño basado en JSON para utilizarlo en su recomendación. Para obtener el archivo JSON de muestra, además de información básica sobre cómo se pueden devolver las respuestas JSON al configurar una actividad basada en formularios, consulte la documentación de [Creación de diseños de recomendación](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=es). En este ejemplo, el diseño se denomina *JSON simple.*
+1. En primer lugar, cree y guarde un diseño basado en JSON para utilizarlo en su recomendación. Para obtener el archivo JSON de muestra, además de información básica sobre cómo se pueden devolver las respuestas JSON al configurar una actividad basada en formularios, consulte la documentación de [Creación de diseños de recomendación](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html). En este ejemplo, el diseño se denomina *JSON simple.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
-1. En Target, vaya a **[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]** y, a continuación, seleccione **[!UICONTROL Form]**.
+1. En Target, vaya a **[!UICONTROL Actividades]** > **[!UICONTROL Crear actividad]** > **[!UICONTROL Recommendations]** y luego seleccione **[!UICONTROL Formulario]**.
 
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
-1. Seleccione una propiedad y haga clic en **[!UICONTROL Next]**.
-1. Defina la ubicación en la que desea que los usuarios reciban la respuesta de la recomendación. El ejemplo siguiente utiliza una ubicación denominada *api_charter*. Seleccione el diseño basado en JSON, creado anteriormente, con el nombre *JSON simple.*
+1. Seleccione una propiedad y haga clic en **[!UICONTROL Siguiente]**.
+1. Defina la ubicación en la que desea que los usuarios reciban la respuesta de la recomendación. El ejemplo siguiente utiliza una ubicación denominada *api_charter*. Seleccione su diseño basado en JSON, creado anteriormente, con el nombre *JSON simple.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. Guarde y active la recomendación. Generará resultados. [Una vez que los resultados estén listos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=es), puede usar la API de envío para recuperarlos.
+1. Guarde y active la recomendación. Generará resultados. [Una vez que los resultados estén listos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html), puede usar la API de envío para recuperarlos.
 
 ## Uso de la API de entrega
 
@@ -72,9 +67,9 @@ La sintaxis de la [API de envío](/help/dev/implement/delivery-api/overview.md) 
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. Tenga en cuenta que el código de cliente es obligatorio. Como recordatorio, el código de cliente se puede encontrar en Adobe Target navegando a **[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**. Observe el valor **Código de cliente** en la sección **Token de API de recomendación**.
+1. Tenga en cuenta que el código de cliente es obligatorio. Como recordatorio, el código de cliente se puede encontrar en Adobe Target navegando a **[!UICONTROL Recommendations]** > **[!UICONTROL Configuración]**. Observe el valor **Código de cliente** en la sección **Token de API de recomendación**.
    ![client-code.png](assets/client-code.png)
-1. Una vez que tenga el código de cliente de, cree la llamada de API de envío. El ejemplo siguiente comienza con **[!UICONTROL Web Batched Mboxes Delivery API Call]** proporcionado en la [colección Postman de la API de entrega](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection), y realiza las modificaciones pertinentes. Por ejemplo:
+1. Una vez que tenga el código de cliente de, cree la llamada de API de envío. El ejemplo siguiente comienza con la **[!UICONTROL llamada a la API de entrega de mboxes web por lotes]** proporcionada en la [colección Postman de la API de entrega](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection), y realiza las modificaciones pertinentes. Por ejemplo:
    * los objetos **browser** y **address** se quitaron de **Body**, ya que no son necesarios para los casos de uso que no son de HTML
    * *api_charter* aparece como el nombre de la ubicación en este ejemplo
    * se especifica entity.id, ya que esta recomendación se basa en la Similitud de contenido, que requiere que se pase a Target una clave de elemento actual.
@@ -125,7 +120,7 @@ En una [sección anterior](manage-catalog.md) aprendimos a administrar entidades
 ## Documentación de referencia
 
 * [Documentación de la API de envío de Adobe Target](/help/dev/implement/delivery-api/overview.md)
-* [Integrar Recommendations con el correo electrónico](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=es)
+* [Integrar Recommendations con el correo electrónico](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## Resumen y revisión
 

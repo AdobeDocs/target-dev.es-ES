@@ -1,10 +1,10 @@
 ---
 title: Integración con Experience Cloud
 description: Integración con Experience Cloud
-keywords: api de envío
+keywords: API de envío
 source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '482'
 ht-degree: 7%
 
 ---

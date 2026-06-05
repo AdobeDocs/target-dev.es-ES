@@ -1,25 +1,21 @@
 ---
-title: Integración con los informes de Experience Cloud A4T
+title: Integración con los informes de A4T de Experience Cloud
 description: Integración con Experience Cloud, informes de A4T, integración de Analytics para Target
 keywords: api de entrega, lado del servidor, lado del servidor, integración, a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 392
+source-wordcount: 399
 ht-degree: 6%
 
 ---
 
-# Informes [!UICONTROL Analytics for Target] (A4T)
+# Informes de [!UICONTROL Analytics for Target] (A4T)
 
 [!DNL Adobe Target] admite informes de A4T tanto para la toma de decisiones en el dispositivo como para las actividades [!DNL Target] del lado del servidor. Existen dos opciones de configuración para activar la creación de informes de A4T:
 
@@ -33,7 +29,7 @@ ht-degree: 6%
 ## Requisitos previos
 
 1. Configure la actividad en la interfaz de usuario [!DNL Adobe Target] con [!DNL Adobe Analytics] como fuente de informes y asegúrese de que las cuentas estén habilitadas para A4T.
-1. El usuario de API genera el Adobe [!UICONTROL Marketing Cloud Visitor ID] y garantiza que este identificador esté disponible cuando se ejecute la solicitud [!DNL Target].
+1. El usuario de API genera el Adobe [!UICONTROL ID de visitante de Marketing Cloud] y se asegura de que este ID esté disponible cuando se ejecute la solicitud [!DNL Target].
 
 ## [!DNL Adobe Target] reenvía automáticamente la carga útil [!DNL Analytics]
 

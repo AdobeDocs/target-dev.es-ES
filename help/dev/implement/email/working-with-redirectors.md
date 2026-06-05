@@ -5,22 +5,15 @@ title: ¿Cómo trabajo con los redirectores?
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
 TQID: https://experienceleague.adobe.com/3SUsZl1y9tk97sWgdB3iB7wrAXNb2LfN3hObJM14caE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 689
-ht-degree: 63%
+source-wordcount: 697
+ht-degree: 62%
 
 ---
 
@@ -57,7 +50,7 @@ Antes de poder usar un redirector, debe crearlo.
 
    * Donde `yourclientcode` es el código de cliente de la empresa. El código de cliente de su compañía está por completo en minúscula y carece de caracteres especiales.
 
-     Su código de cliente está disponible en la parte superior de la página **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** de la interfaz [!DNL Target].
+     El código de cliente se encuentra disponible en la parte superior de la página **[!UICONTROL Administración]** > **[!UICONTROL Implementación]** de la interfaz [!DNL Target].
 
    * `redirectorlink_456` es el nombre del mbox de redirector que aparecerá en la cuenta para usarlo en campañas y pruebas.
 
@@ -69,13 +62,13 @@ Antes de poder usar un redirector, debe crearlo.
 
    >[!WARNING]
    >
-   >Tenga en cuenta que con el redirector puede estar expuesto a un riesgo de vulnerabilidad de redireccionamiento abierto. Para evitar el uso no autorizado de vínculos de redirector por parte de terceros, Adobe recomienda utilizar &quot;hosts autorizados&quot; para la lista de permitidos de los dominios de URL de redireccionamiento predeterminados. [!DNL Target] usa hosts para la lista de permitidos de dominios a los que desea permitir redirecciones. Para obtener más información, consulte [Crear Listas de permitidos que especifiquen hosts con autorización para enviar llamadas de mbox a [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=es#allowlist) en *Hosts*.
+   >Tenga en cuenta que con el redirector puede estar expuesto a un riesgo de vulnerabilidad de redireccionamiento abierto. Para evitar el uso no autorizado de vínculos de redirector por parte de terceros, Adobe recomienda utilizar &quot;hosts autorizados&quot; para la lista de permitidos de los dominios de URL de redireccionamiento predeterminados. [!DNL Target] usa hosts para la lista de permitidos de dominios a los que desea permitir redirecciones. Para obtener más información, consulte [Crear Listas de permitidos que especifiquen hosts con autorización para enviar llamadas de mbox a [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) en *Hosts*.
 
 1. Valide el redirector.
    1. *Práctica recomendada de seguridad*: Asegúrese de que el dominio usado en el redirector esté incluido en la lista de permitidos, como se ha indicado anteriormente. Si utiliza un dominio que no esté incluido en la lista de permitidos, Adobe bloqueará cualquier llamada a ese dominio para evitar que agentes malintencionados utilicen el redirector para redirigir a dominios potencialmente malintencionados.
    2. Inserte la dirección URL del redirector en un navegador y actualícelo.
    3. Inicie sesión en la cuenta, actualice la lista de mboxes y confirme que el nuevo redirector aparece enumerado en la cuenta.
-1. Si va a comprobar diferentes destinos para un anuncio, cree [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=es) para cada versión.
+1. Si va a comprobar diferentes destinos para un anuncio, cree [Ofertas de redireccionamiento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html) para cada versión.
 1. Cree la campaña.
 
    Consulte [Implementaciones no basadas en JavaScript](/help/dev/implement/email/overview.md) para saber cuál es la configuración apropiada para alcanzar sus metas.
@@ -107,7 +100,7 @@ Use un redirector para pasar los costes por clic.
 
 >[!NOTE]
 >
->La práctica recomendada es determinar el valor de costo mediante la métrica de compromiso **[!UICONTROL Score per visit]**.
+>La práctica recomendada es determinar el valor de costo mediante la métrica de compromiso **[!UICONTROL Puntuación por visita]**.
 
 Añada `&mboxPageValue=-value` a la dirección URL. Observe el valor negativo.
 
@@ -124,7 +117,7 @@ Use un redirector para pasar los ingresos por clic.
 
 >[!NOTE]
 >
->La práctica recomendada es determinar el valor de los ingresos mediante la métrica de participación **[!UICONTROL Score per visit]**.
+>La práctica recomendada es determinar el valor de los ingresos mediante la métrica de participación **[!UICONTROL Puntuación por visita]**.
 
 Añada `&mboxPageValue=value` a la dirección URL.
 

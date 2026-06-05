@@ -4,17 +4,13 @@ description: Aprenda a utilizar getOffers() para ejecutar una decisión y recupe
 feature: APIs/SDKs
 exl-id: 4d1d1cbd-c7e5-4146-9fea-08e01923874d
 TQID: https://experienceleague.adobe.com/T-oUyDgCJZ8hqQZgCb3-Z-d9WeMaffwq8krMHhGvYlI
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 572
+source-wordcount: 576
 ht-degree: 13%
 
 ---
@@ -70,7 +66,7 @@ El objeto `TargetDeliveryRequest.Builder` tiene la siguiente estructura:
 | tntId | Cadena | No | Identificador principal en [!DNL Target] de un usuario. Se obtuvo de targetCookies. Se genera automáticamente si no se proporciona. |
 | mcId | Cadena | No | Se utiliza para combinar y compartir datos entre distintas soluciones de Adobe (ECID). Se obtuvo de targetCookies. Se genera automáticamente si no se proporciona. |
 | trackingServer | Cadena | No | El servidor de Adobe Analytics para que [!DNL Adobe Target] y [!DNL Adobe Analytics] unan correctamente los datos. |
-| trackingServerSecure | Cadena | No | El [!UICONTROL Adobe Analytics Secure Server] para que [!DNL Adobe Target] y [!DNL Adobe Analytics] unan correctamente los datos. |
+| trackingServerSecure | Cadena | No | El [!UICONTROL servidor seguro de Adobe Analytics] para que [!DNL Adobe Target] y [!DNL Adobe Analytics] unan correctamente los datos. |
 | decisioningMethod | DecisioningMethod | No | Se puede utilizar para establecer explícitamente el método de toma de decisiones ON_DEVICE o HYBRID para la toma de decisiones en el dispositivo |
 
 Los valores de cada campo deben cumplir con la especificación de solicitud [API de envío de destino](/help/dev/implement/delivery-api/overview.md).

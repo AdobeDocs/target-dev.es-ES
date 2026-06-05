@@ -6,20 +6,14 @@ level: Experienced
 role: Developer
 exl-id: 65fd369a-6034-4b51-8ddf-e53e526a795d
 TQID: https://experienceleague.adobe.com/H85u3UrJXqEeUPscsxTkbTJsF9kmSSpK-ExzCyZT8yE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 383
+source-wordcount: 398
 ht-degree: 0%
 
 ---
@@ -54,19 +48,19 @@ Para ayudar al equipo a crear nuevos patrones o para mejorar los patrones existe
    >
    >Debe iniciar sesión en `github.com` para abrir un problema en [!DNL Experience League]. Revise las directrices de contribución y las instrucciones del código de conducta si es la primera vez que abre un problema.
 
-1. (Condicional) Para sugerir una idea para un nuevo patrón o mejoras en los patrones existentes, haga clic en **[!UICONTROL Detailed feedback options]** y, a continuación, haga clic en **[!UICONTROL Report an issue]**.
+1. (Condicional) Para sugerir una idea de un nuevo patrón o de mejoras en los patrones existentes, haz clic en **[!UICONTROL Opciones de comentarios detallados]** y, a continuación, haz clic en **[!UICONTROL Informar de un problema]**.
 
    1. Escriba un título y, a continuación, escriba los comentarios en el cuadro de texto.
 
       Adjunte archivos o capturas de pantalla si es necesario.
 
-   1. Haga clic en **[!UICONTROL Submit new issue]** cuando termine.
+   1. Haga clic en **[!UICONTROL Enviar nuevo problema]** cuando termine.
 
-1. (Condicional) Para editar el texto de un motivo existente, en el modelo de opciones de comentarios del artículo correspondiente, haga clic en **[!UICONTROL Suggest an edit]** y, a continuación, haga clic en el icono **[!UICONTROL Edit]** (el icono de lápiz).
+1. (Condicional) Para editar el texto de un patrón existente, en el modelo de opciones de comentarios del artículo correspondiente, haga clic en **[!UICONTROL Sugerir una edición]** y, a continuación, haga clic en el icono **[!UICONTROL Editar]** (el icono de lápiz).
 
    1. Realice ediciones con la sintaxis Markdown.
 
-   1. Haga clic en **[!UICONTROL Commit changes]** cuando termine.
+   1. Haga clic en **[!UICONTROL Confirmar cambios]** cuando termine.
 
 El equipo [!DNL Target] puede revisar sus comentarios o ediciones y comunicarse con usted mediante esta característica para recopilar información adicional o para obtener más aclaraciones, si es necesario.
 

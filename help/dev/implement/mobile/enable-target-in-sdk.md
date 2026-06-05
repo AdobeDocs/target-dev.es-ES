@@ -25,7 +25,7 @@ Agregue [!UICONTROL Adobe Mobile Services SDK] a su aplicación.
 
 1. Agregue [!DNL Adobe Mobile Services SDK] a su aplicación.
 
-   Encontrará las instrucciones en [Implementación básica y ciclo de vida](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/dev-qs.html).
+   Encontrará las instrucciones en [Implementación básica y ciclo de vida](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/dev-qs.html?lang=es).
 
 1. Añada código de cliente, tiempo de espera y habilite SSL.
 

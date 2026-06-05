@@ -31,7 +31,7 @@ Información para ayudarle a planificar e implementar [!DNL Adobe Target Recomme
 
 >[!NOTE]
 >
->Además de este artículo, la [Guía para profesionales de Adobe Target](https://experienceleague.adobe.com/en/docs/target/using/target-home){target=_blank} contiene información detallada acerca de [Target Recommendations](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations){target=_blank}.
+>Además de este artículo, la [Guía para profesionales de Adobe Target](https://experienceleague.adobe.com/es/docs/target/using/target-home){target=_blank} contiene información detallada acerca de [Target Recommendations](https://experienceleague.adobe.com/es/docs/target/using/recommendations/recommendations){target=_blank}.
 
 Antes de configurar su primera actividad [!UICONTROL Recommendations] en [!DNL Adobe Target], complete los siguientes pasos:
 
@@ -58,7 +58,7 @@ Para ofrecer recomendaciones de alta calidad, [!UICONTROL Target] debe conocer l
 
 | Método | Qué es | Cuándo utilizarla | Información adicional |
 | --- | --- | --- | --- |
-| Fuente de catálogo | Programe una fuente (CSV, [!DNL Google] XML de producto o [!UICONTROL Clasificaciones de productos de Analytics]) para que se cargue e ingiera diariamente. | Para enviar información sobre varios elementos a la vez. Para enviar información que cambia con poca frecuencia. | Ver [Fuentes](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds). |
+| Fuente de catálogo | Programe una fuente (CSV, [!DNL Google] XML de producto o [!UICONTROL Clasificaciones de productos de Analytics]) para que se cargue e ingiera diariamente. | Para enviar información sobre varios elementos a la vez. Para enviar información que cambia con poca frecuencia. | Ver [Fuentes](https://experienceleague.adobe.com/es/docs/target/using/recommendations/entities/feeds). |
 | API de entidades | Llame a una API para enviar actualizaciones al minuto de un solo elemento. | Para enviar actualizaciones a medida que se producen en un elemento a la vez. Para enviar información que cambia con frecuencia (por ejemplo, nivel de precio, inventario/stock). | Consulte la [documentación para desarrolladores de API de entidades](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Pasar actualizaciones en la página | Envíe actualizaciones de un solo elemento al minuto mediante JavaScript en la página o mediante la API de envío. | Para enviar actualizaciones a medida que se producen en un elemento a la vez. Para enviar información que cambia con frecuencia (por ejemplo, nivel de precio, inventario/stock). | Ver [vistas de artículos/páginas de productos](#item-views-or-product-pages) a continuación. |
 
@@ -121,7 +121,7 @@ function targetPageParams() {
 }
 ```
 
-Para obtener más información sobre las recomendaciones basadas en el carro de compras, consulte [Basado en el carro de compras](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
+Para obtener más información sobre las recomendaciones basadas en el carro de compras, consulte [Basado en el carro de compras](https://experienceleague.adobe.com/es/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key#cart-based) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
 
 ### Excluir elementos que ya están en el carro de compras del visitante
 
@@ -143,7 +143,7 @@ Cuando se produce un evento de compra, pasa la identidad del artículo o artícu
 
 ## &#x200B;4. Configuración de exclusiones globales
 
-Excluya cualquier elemento de nivel global que no quiera que se recomiende a un visitante. Consulte [Exclusiones](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/exclusions) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
+Excluya cualquier elemento de nivel global que no quiera que se recomiende a un visitante. Consulte [Exclusiones](https://experienceleague.adobe.com/es/docs/target/using/recommendations/entities/exclusions) en la *[!DNL Adobe Target]Guía para profesionales de negocios*.
 
 ## &#x200B;5. Configurar [!UICONTROL Recommendations]
 
@@ -181,7 +181,7 @@ Conocer el sector industrial del sitio ayuda a Target a elegir criterios para la
 
 Los criterios de [!DNL Recommendations] son reglas que determinan qué productos o contenido recomendar en función de un conjunto predeterminado de comportamientos del visitante. Los criterios se pueden basar en tendencias populares, los comportamientos actuales y pasados de un visitante o productos y contenido similares. Puede probar distintos tipos de recomendaciones entre sí si se agregan varios criterios.
 
-Para obtener más información, consulte [Criterios](https://experienceleague.adobe.com/en/docs/target/using/recommendations/criteria/algorithms){target=_blank} en la *Guía para profesionales de Adobe Target Business.*
+Para obtener más información, consulte [Criterios](https://experienceleague.adobe.com/es/docs/target/using/recommendations/criteria/algorithms){target=_blank} en la *Guía para profesionales de Adobe Target Business.*
 
 La siguiente configuración está disponible en la sección [!UICONTROL Criterios]:
 
@@ -204,7 +204,7 @@ En general, se recomienda mostrar solamente criterios compatibles. Sin embargo, 
 
 Adobe recomienda deshabilitar esta opción si se usa una solución de administración de etiquetas.
 
-Para obtener más información sobre esta opción, consulte [[!UICONTROL Preguntas frecuentes]](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank} de Recommendations en la *[!DNL Adobe Target]Guía para profesionales de la empresa*.
+Para obtener más información sobre esta opción, consulte [[!UICONTROL Preguntas frecuentes]](https://experienceleague.adobe.com/es/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank} de Recommendations en la *[!DNL Adobe Target]Guía para profesionales de la empresa*.
 
 ### [!UICONTROL Catálogo de productos]
 
@@ -231,7 +231,7 @@ El filtro **[!UICONTROL Entorno]** está disponible en los siguientes lugares de
 * Cuadro de diálogo Crear exclusión (**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusiones]** > **[!UICONTROL Crear exclusión]**)
 * Cuadro de diálogo Actualizar exclusión (**[!UICONTROL Recommendations]** > **[!UICONTROL Exclusiones]** > **[!UICONTROL Editar]**)
 
-Para obtener más información, consulte [Hosts](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts){target=_blank} en la *[!DNL Adobe Target]Guía para profesionales de la empresa*.
+Para obtener más información, consulte [Hosts](https://experienceleague.adobe.com/es/docs/target/using/administer/hosts){target=_blank} en la *[!DNL Adobe Target]Guía para profesionales de la empresa*.
 
 #### [!UICONTROL Base de miniatura]
 

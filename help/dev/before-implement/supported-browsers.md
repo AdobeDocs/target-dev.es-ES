@@ -45,7 +45,7 @@ La interfaz [!DNL Target] es compatible con los siguientes exploradores y dispos
 
 ## Requisitos de edición visual
 
-Para poder abrir, crear y obtener una vista previa de las páginas web de forma fiable en el [!UICONTROL Compositor de experiencias visuales] (VEC), debe tener la [extensión del explorador Ayuda de edición visual de Adobe Experience Cloud](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} instalada en el explorador web o usar [!UICONTROL Compositor de experiencias mejorado (EEC)].
+Para poder abrir, crear y obtener una vista previa de las páginas web de forma fiable en el [!UICONTROL Compositor de experiencias visuales] (VEC), debe tener la [extensión del explorador Ayuda de edición visual de Adobe Experience Cloud](https://experienceleague.adobe.com/es/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} instalada en el explorador web o usar [!UICONTROL Compositor de experiencias mejorado (EEC)].
 
 >[!NOTE]
 >

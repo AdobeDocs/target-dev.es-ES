@@ -72,7 +72,7 @@ El concepto de [!UICONTROL Views] se puede ampliar mucho más allá de este esce
 
 [!UICONTROL Las vistas XDM] se pueden aprovechar en [!DNL Target] para permitir que los especialistas en marketing ejecuten pruebas A/B y XT en SPA a través de [!UICONTROL Visual Experience Composer]. Para hacerlo, es necesario realizar los siguientes pasos para completar una configuración de desarrollador única:
 
-1. Instalar [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
+1. Instalar [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/install/overview).
 2. Determine todas las [!UICONTROL vistas XDM] de su aplicación de una sola página que desee personalizar.
 3. Después de definir las [!UICONTROL vistas XDM], para entregar actividades A/B o XT VEC, implemente la función `sendEvent()` con `renderDecisions` establecido en `true` y la [!UICONTROL vista XDM] correspondiente en su aplicación de una sola página. La vista [!UICONTROL XDM View] debe pasarse en `xdm.web.webPageDetails.viewName`. Este paso permite a los especialistas en marketing aprovechar [!UICONTROL Compositor de experiencias visuales] para iniciar pruebas A/B y XT para esos XDM.
 
@@ -232,7 +232,7 @@ Cuando haya terminado de definir sus [!UICONTROL vistas XDM] e implementado `sen
 
 >[!NOTE]
 >
->Para usar el VEC para tu SPA, debes instalar y activar la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome VEC Helper Extension](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
+>Para usar el VEC para tu SPA, debes instalar y activar la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome VEC Helper Extension](https://experienceleague.adobe.com/es/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
 ### Panel [!UICONTROL Modificaciones]
 

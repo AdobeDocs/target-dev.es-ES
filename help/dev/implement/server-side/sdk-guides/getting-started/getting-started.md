@@ -49,7 +49,7 @@ Al habilitar la toma de decisiones en el dispositivo, se garantiza que la activi
 
 >[!NOTE]
 >
->Debe tener el **[!UICONTROL Administrador]** o **[!UICONTROL Aprobador]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar o deshabilitar la opción **[!UICONTROL Toma de decisiones en el dispositivo]**.
+>Debe tener el **[!UICONTROL Administrador]** o **[!UICONTROL Aprobador]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para habilitar o deshabilitar la opción **[!UICONTROL Toma de decisiones en el dispositivo]**.
 
 Después de habilitar la opción **[!UICONTROL Toma de decisiones en el dispositivo]**, [!DNL Adobe Target] comienza a generar [artefactos de regla](../on-device-decisioning/rule-artifact-overview.md) para su cliente.
 
@@ -400,6 +400,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >Debe tener el **[!UICONTROL aprobador]** o **[!UICONTROL publicador]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para realizar este paso.
+   >Debe tener el **[!UICONTROL aprobador]** o **[!UICONTROL publicador]** [rol de usuario](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=es) para realizar este paso.
 
    ![imagen alt](assets/asset-activate.png)

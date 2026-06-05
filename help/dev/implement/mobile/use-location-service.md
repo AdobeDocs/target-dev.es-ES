@@ -24,4 +24,4 @@ La ubicación es un contexto importante para comprender y interactuar con los us
 
 Puede usar [!DNL Location Service] con [!DNL Target] para aprovechar las reglas con [tags en Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=es) y adjuntar los datos de [!UICONTROL Places] a los eventos de [!DNL Adobe Target] SDK.
 
-Para obtener más información, consulte [Usar [!UICONTROL Servicio de ubicación] con [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html) en la guía de [Servicio de ubicación de Adobe Experience Platform](https://experienceleague.adobe.com/docs/places/using/home.html).
+Para obtener más información, consulte [Usar [!UICONTROL Servicio de ubicación] con [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=es) en la guía de [Servicio de ubicación de Adobe Experience Platform](https://experienceleague.adobe.com/docs/places/using/home.html?lang=es).

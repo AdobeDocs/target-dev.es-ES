@@ -5,23 +5,12 @@ title: ¿Puedo implementar [!DNL Target]  sin un Administrador de etiquetas?
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
 TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 1785
 ht-degree: 32%
@@ -76,7 +65,7 @@ En el panel Métodos de implementación se pueden configurar los siguientes ajus
 | [!UICONTROL Carga de página habilitada (mbox global creado automáticamente)] | Seleccione si quiere incrustar la llamada de mbox global en el archivo at.js para que se active automáticamente cada vez que se cargue la página. |
 | [!UICONTROL Mbox global] | Seleccione un nombre para el mbox global. De forma predeterminada, este nombre es target-global-mbox.<p>Pueden utilizarse caracteres especiales, incluido el símbolo &amp;, en los nombres de mbox con at.js. |
 | [!UICONTROL Tiempo de espera (segundos)] | Si [!DNL Target] no responde con contenido dentro del periodo definido, se agota el tiempo de espera de la llamada del servidor y se muestra el contenido predeterminado. Se siguen realizando llamadas adicionales durante la sesión del visitante. El valor predeterminado es de 5 segundos.<p>La biblioteca at.js utiliza la configuración de tiempo de espera de `XMLHttpRequest`. El tiempo de espera comienza cuando se activa la solicitud y se detiene cuando [!DNL Target] obtiene una respuesta del servidor. Para obtener más información, consulte [XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout) en Mozilla Developer Network.<p>Si el tiempo de espera especificado se agota antes de recibir una respuesta, se mostrará el contenido predeterminado y el visitante se podrá contar como un participante de una actividad, ya que la recopilación de datos se realizará en el perímetro de [!DNL Target]. Si la solicitud alcanza el límite de [!DNL Target], se contará al visitante.<p>Considere los siguientes puntos a la hora de configurar el tiempo de espera:<ul><li>Si el valor es demasiado bajo, los usuarios podrían ver el contenido predeterminado la mayor parte del tiempo, aunque se cuente al visitante como un participante de la actividad.</li><li>Si el valor es demasiado alto, los visitantes podrían ver áreas negras en la página web o páginas en blanco si oculta el cuerpo durante periodos muy largos.</li></ul>Para comprender mejor cómo funcionan los tiempos de respuesta de mbox, consulte la ficha Red en las herramientas para desarrolladores de su navegador. También puede utilizar herramientas de supervisión del rendimiento web de terceros, como Catchpoint.<p>**Nota**: La configuración de [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout) garantiza que [!DNL Target] no espere a la respuesta de la API del visitante durante demasiado tiempo. Esta configuración y la configuración Tiempo de espera para at.js descrita no se afectan entre sí. |
-| [!UICONTROL Duración del perfil] | Esta opción determina durante cuánto tiempo se almacenan los perfiles de los visitantes. De forma predeterminada, los perfiles se almacenan durante dos semanas. Esta configuración se puede aumentar hasta 90 días.<p>Para cambiar la configuración de Duración del perfil, comuníquese con [Atención al cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es#reference_ACA3391A00EF467B87930A450050077C). |
+| [!UICONTROL Duración del perfil] | Esta opción determina durante cuánto tiempo se almacenan los perfiles de los visitantes. De forma predeterminada, los perfiles se almacenan durante dos semanas. Esta configuración se puede aumentar hasta 90 días.<p>Para cambiar la configuración de Duración del perfil, comuníquese con [Atención al cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C). |
 
 ### Método de implementación principal
 
@@ -90,7 +79,7 @@ Para editar la configuración de at.js, haga clic en **[!UICONTROL Editar]** jun
 
 >[!WARNING]
 >
->Antes de cambiar esta configuración predeterminada, comuníquese con [Client Care](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=es#reference_ACA3391A00EF467B87930A450050077C) para que no afecte a su implementación actual.
+>Antes de cambiar esta configuración predeterminada, comuníquese con [Client Care](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C) para que no afecte a su implementación actual.
 
 Además de la configuración explicada anteriormente, también está disponible la siguiente configuración específica de at.js:
 
@@ -295,3 +284,4 @@ El mbox de confirmación de pedido utiliza los siguientes parámetros:
 | orderId | Valor único para identificar un pedido de recuento de conversión.<p>El `orderId` debe ser único. Los pedidos duplicados se ignoran en los informes. |
 | orderTotal | Valor monetario de la compra.<p>No pase el símbolo de moneda. Use un punto (no una coma) para indicar valores decimales. |
 | productPurchasedId (opcional) | Lista de ID de productos comprados en el pedido, separados por comas.<p>Estos ID de producto se muestran en el informe de auditoría para admitir análisis de informes adicionales. |
+

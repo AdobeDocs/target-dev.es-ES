@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 472
 ht-degree: 72%
@@ -141,3 +141,4 @@ Los parámetros de “estado” y “error” pasados a la llamada de retorno de
 |--- |--- |--- |
 | status | Cadena | Representa el estado de error. Este parámetro puede tener los siguientes valores:<ul><li>timeout: indica que se ha agotado el tiempo de espera de la solicitud.</li><li>parseerror: indica que no se pudo analizar la respuesta, por ejemplo, si recibimos HTML o texto sin formato en lugar de JSON.</li><li>error: indica un error general como el que recibimos con estado HTTP diferente a 200 OK.</li></ul> |
 | error | Cadena | Contiene datos adicionales como mensaje de excepción o cualquier otra cuestión que podría resultar útil para resolución de problemas. |
+

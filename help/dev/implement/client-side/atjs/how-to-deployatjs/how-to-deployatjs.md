@@ -18,7 +18,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 287
 ht-degree: 27%
@@ -50,3 +50,4 @@ Puede implementar at.js con los métodos siguientes:
   Para obtener más información, consulte la documentación del administrador de etiquetas de terceros.
 
 Para implementar [!DNL Target] al usar aplicaciones de una sola página (SPA), consulte [Implementación de aplicación de una sola página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+

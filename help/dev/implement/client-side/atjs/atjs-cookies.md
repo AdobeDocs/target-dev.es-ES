@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 1830
 ht-degree: 67%
@@ -172,4 +172,3 @@ De Apple:
 |--- |--- |
 | Soporte para la no participación | Los cambios de Apple en el seguimiento de WebKit interrumpen el soporte para la no participación.<P>La exclusión de [!DNL Target] usa una cookie en el dominio `clientcode.tt.omtrdc.net`. Para obtener más información, consulte [Privacidad](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] admite dos formas de no participación:<ul><li>Una por cliente (el cliente gestiona el vínculo de no participación).</li><li>Uno a través de Adobe que excluye al usuario de toda la funcionalidad de [!DNL Target] para todos los clientes.</li></ul>Ambos métodos utilizan una cookie de terceros. |
 | [!DNL Target] actividades | Los clientes pueden elegir su [duración de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=es) para sus cuentas de [!DNL Target], con un máximo de 90 días. El problema es que si la duración del perfil de la cuenta supera los 30 días y se purga la cookie de origen porque el dominio del cliente se ha marcado como un seguimiento de usuarios entre sitios, el comportamiento de los visitantes de Safari se verá afectado en las siguientes áreas de [!DNL Target]:<P>**[!DNL Target]informes**: Si un usuario de Safari entra en una actividad, regresa pasados 30 días y luego se convierte, ese usuario cuenta como dos visitantes y una conversión.<P>Este comportamiento es el mismo para las actividades que usan [!DNL Analytics] como fuente de informes (A4T).<P>**Perfil y pertenencia a actividades**:<ul><li>Los datos de perfil se borran al caducar la cookie de origen.</li><li>La pertenencia a actividades se borra al caducar la cookie de origen.</li><li> [!DNL Target] no funciona en Safari para cuentas que usan una implementación de cookies de terceros, o de cookies de origen y de terceros. Nótese que este comportamiento no es nuevo. Safari lleva un tiempo sin admitir cookies de terceros.</li></ul><P>**Sugerencias**: Si existe preocupación en cuanto a que el dominio del cliente pueda marcarse como uno que realiza un seguimiento de los visitantes entre sesiones, lo más seguro es establecer la duración del perfil en 30 días o menos en [!DNL Target]. De este modo, se asegurará de que los usuarios reciban un seguimiento similar en Safari y en los demás navegadores. |
-

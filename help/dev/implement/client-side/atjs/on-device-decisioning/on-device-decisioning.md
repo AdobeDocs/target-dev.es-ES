@@ -24,7 +24,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 3835
 ht-degree: 4%
@@ -357,4 +357,5 @@ Puede filtrar todas las actividades que cumplen los requisitos de [!UICONTROL to
 1. Cree y active un tipo de actividad [compatible con la toma de decisiones en el dispositivo](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md), y verifique que cumpla los requisitos de [!UICONTROL toma de decisiones en el dispositivo].
 1. Establezca el **[!UICONTROL Método de decisión]** en **[!UICONTROL &quot;Híbrido&quot;]** o **[!UICONTROL &quot;Solo en el dispositivo&quot;]** a través de la interfaz de usuario de la configuración de at.js.
 1. Descargue e implemente at.js 2.5.0+ en sus páginas.
+
 

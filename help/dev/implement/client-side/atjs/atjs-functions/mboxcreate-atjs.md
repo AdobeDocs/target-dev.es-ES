@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 216
 ht-degree: 40%
@@ -57,4 +57,5 @@ Esta función está integrada en at.js principalmente para facilitar la transici
 * No se recomiendan funciones `[!UICONTROL mboxCreate()]` vacías que aparecen en la parte superior de la página como mbox global.
 
   El mbox global creado automáticamente en at.js es una mejor opción porque se activa desde `<head>` y puede devolver contenido más rápido.
+
 

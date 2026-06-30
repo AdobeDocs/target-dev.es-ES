@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 61%
@@ -51,4 +51,5 @@ Las siguientes ventajas se aplican únicamente si utiliza etiquetas en [!DNL Ado
   >Utilice la acción Enviar señalización en la extensión [!DNL Adobe Analytics] para que la llamada de [!DNL Analytics] espere a que se realice la llamada de [!DNL Target]. Si llama directamente a `s.t()` o `s.tl()` utilizando código personalizado, las llamadas de [!DNL Analytics] no esperan hasta que se hayan completado las llamadas de [!DNL Target].
 
 * **Evita la gestión de ofertas de redirección incorrectas:** Si tiene [!DNL Target] y [!DNL Analytics] en la página y Target ejecuta una oferta de redirección, puede darse el caso de que el rastreador de [!DNL Analytics] active una solicitud cuando no debería, (ya que el usuario se redirige a una dirección URL diferente). Si implementa [!DNL Target] y [!DNL Analytics] mediante etiquetas en [!DNL Adobe Experience Platform], no tendrá este problema. Utilizando etiquetas en [!DNL Adobe Experience Platform], [!DNL Target] ordena a [!DNL Analytics] que interrumpa la solicitud de señalización de [!DNL Analytics].
+
 

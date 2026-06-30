@@ -25,7 +25,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 5174
 ht-degree: 61%
@@ -586,4 +586,5 @@ Al implementar at.js, tenga en cuenta lo siguiente:
 * La implementación asíncrona significa que las integraciones heredadas, como el complemento [!UICONTROL Test&amp;Target to SiteCatalyst], pueden no funcionar.
 * No se admiten [!DNL Target] complementos que hagan referencia a objetos y métodos de mbox.js.
 * Todas las llamadas a [!DNL Target] se realizan mediante una solicitud XMLHTTPRequest y el contenido se devuelve mediante JSON.
+
 

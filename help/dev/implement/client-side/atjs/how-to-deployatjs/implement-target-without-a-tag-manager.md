@@ -21,7 +21,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 1785
 ht-degree: 32%
@@ -295,4 +295,5 @@ El mbox de confirmación de pedido utiliza los siguientes parámetros:
 | orderId | Valor único para identificar un pedido de recuento de conversión.<p>El `orderId` debe ser único. Los pedidos duplicados se ignoran en los informes. |
 | orderTotal | Valor monetario de la compra.<p>No pase el símbolo de moneda. Use un punto (no una coma) para indicar valores decimales. |
 | productPurchasedId (opcional) | Lista de ID de productos comprados en el pedido, separados por comas.<p>Estos ID de producto se muestran en el informe de auditoría para admitir análisis de informes adicionales. |
+
 

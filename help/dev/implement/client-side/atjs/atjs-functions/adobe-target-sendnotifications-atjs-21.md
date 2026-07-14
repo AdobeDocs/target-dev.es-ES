@@ -5,17 +5,12 @@ title: ¿Cómo utilizo la función adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 TQID: https://experienceleague.adobe.com/QprkTK-0WGq-fzJ9e3FUSAZAandaZFiUY62-zQ6ajY8
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 642
 ht-degree: 83%
@@ -130,5 +125,6 @@ adobe.target.getOffers({
 >[!NOTE]
 >
 >Si está usando [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` solo con recuperación previa y `[!UICONTROL sendNotifications()]`, la solicitud [!DNL Analytics] debe activarse después de que se ejecute `[!UICONTROL sendNotifications()]`. El propósito de esto es garantizar que el SDID generado por `[!UICONTROL sendNotifications()]` coincida con el SDID enviado a [!DNL Analytics] y [!DNL Target].
+
 
 

@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 2994
 ht-degree: 65%
@@ -314,6 +314,7 @@ El tipo de documento HTML 5 garantiza que la página se carga en modo estándar.
 ## ¿at.js funciona en un entorno de aplicación jónico?
 
 Esta implementación nunca se probó, ya que at.js no estaba diseñado para funcionar en un entorno que no sea web. [!DNL Adobe] recomienda sus [SDK para implementaciones móviles](/help/dev/implement/mobile/overview.md).
+
 
 
 

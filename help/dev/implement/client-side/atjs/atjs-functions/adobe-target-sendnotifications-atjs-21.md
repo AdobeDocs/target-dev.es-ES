@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 642
 ht-degree: 83%
@@ -130,5 +130,6 @@ adobe.target.getOffers({
 >[!NOTE]
 >
 >Si está usando [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` solo con recuperación previa y `[!UICONTROL sendNotifications()]`, la solicitud [!DNL Analytics] debe activarse después de que se ejecute `[!UICONTROL sendNotifications()]`. El propósito de esto es garantizar que el SDID generado por `[!UICONTROL sendNotifications()]` coincida con el SDID enviado a [!DNL Analytics] y [!DNL Target].
+
 
 

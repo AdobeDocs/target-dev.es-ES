@@ -21,16 +21,20 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 786
-ht-degree: 9%
+source-wordcount: 844
+ht-degree: 8%
 
 ---
 
 # [!UICONTROL SDK web de Adobe Experience Platform]
 
 [!UICONTROL Adobe Experience Platform Web SDK] (AEP Web SDK) es una biblioteca JavaScript del lado del cliente que permite a los clientes de [!UICONTROL Adobe Experience Cloud] interactuar con los distintos servicios de [!DNL Adobe Experience Cloud] (incluido [!DNL Target]) a través de [!UICONTROL Adobe Experience Platform Edge Network]. Además de la biblioteca JavaScript, existe una extensión [!UICONTROL Adobe Experience Platform] que le ayudará con las configuraciones de Web SDK.
+
+>[!IMPORTANT]
+>
+>Al implementar [!DNL Target] con [!UICONTROL Adobe Experience Platform Web SDK], las solicitudes y respuestas pasan por la API de Interact (a través del comando `sendEvent` sobre [!UICONTROL Experience Platform Edge Network]), no por la [!DNL Target] [API de entrega](/help/dev/implement/delivery-api/overview.md). [!DNL Delivery API] está diseñado para [!DNL at.js] y solo para implementaciones directas del lado del servidor. Consulte [Comparar la biblioteca at.js con Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md) para comprender las diferencias entre los dos enfoques.
 
 Para obtener más información, consulte los siguientes vínculos en la ayuda de *[!UICONTROL Adobe Experience Platform Web SDK]*:
 

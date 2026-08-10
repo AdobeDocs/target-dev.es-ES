@@ -399,11 +399,11 @@ Ya está disponible la versión 1.3.0 de at.js.
 
 * Los siguientes eventos nuevos sirven para ayudar a rastrear, depurar y personalizar la interacción con at.js:
 
-   * LIBRARY_LOADED
-   * REQUEST_START
-   * CONTENT_RENDERING_START
-   * CONTENT_RENDERING_NO_OFFERS
-   * CONTENT_RENDERING_REDIRECT
+  * LIBRARY_LOADED
+  * REQUEST_START
+  * CONTENT_RENDERING_START
+  * CONTENT_RENDERING_NO_OFFERS
+  * CONTENT_RENDERING_REDIRECT
 
   Para obtener más información, consulte [Eventos personalizados de at.js](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md).
 
@@ -553,10 +553,10 @@ Versión **[!DNL Target]:** 16.6.1
 
   Esta nueva API proporciona a los desarrolladores acceso a ciertos módulos de jQuery utilizados en at.js para desarrollar extensiones (es decir, complementos) para la biblioteca. Este cambio conlleva varias implicaciones. Solo afectan a los usuarios que usan estas características:
 
-   * La API `getSettings()` se ha eliminado, pero las mismas funciones están disponibles en `registerExtension()`.
-   * La API `getTracking()` se ha eliminado, pero las mismas funciones están disponibles en `registerExtension()`.
+  * La API `getSettings()` se ha eliminado, pero las mismas funciones están disponibles en `registerExtension()`.
+  * La API `getTracking()` se ha eliminado, pero las mismas funciones están disponibles en `registerExtension()`.
 
-   * Las extensiones existentes (por ejemplo, AngularJS) se deben actualizar para usar el método `registerExtension()`.
+  * Las extensiones existentes (por ejemplo, AngularJS) se deben actualizar para usar el método `registerExtension()`.
 
 * Nueva API de notificación de at.js.
 

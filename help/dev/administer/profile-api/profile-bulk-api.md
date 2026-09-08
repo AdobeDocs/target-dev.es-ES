@@ -90,7 +90,7 @@ Hace referencia a este archivo en la llamada de POST a [!DNL Target] servidores 
 >
 >Todos los nombres y valores de parámetro deben estar codificados en URL (UTF-8) antes de enviar el lote, enviado con `Content-Type: application/x-www-form-urlencoded`, con el cuerpo que comienza con `batch=`. Los caracteres reservados no codificados se leen como sintaxis de solicitud en lugar de como datos, lo que puede hacer que el lote se rechace, trunque o dañe.
 >
->Si recibe una respuesta de &quot;error inesperado&quot; sin que se emita ningún `batchId`, consulte [La API de actualización de perfiles en lote devuelve el &quot;error inesperado&quot;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) para ver los pasos de solución de problemas.
+>Si recibe una respuesta de &quot;error inesperado&quot; sin que se emita ningún `batchId`, consulte [La API de actualización de perfiles en lote devuelve el &quot;error inesperado&quot;](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-24281) para ver los pasos de solución de problemas.
 
 Los siguientes caracteres suelen estar presentes en los valores de perfil, pero tienen un significado especial en los datos de `application/x-www-form-urlencoded`. Si los envía sin codificar, la solicitud falla o los datos se dañan sin un error obvio:
 

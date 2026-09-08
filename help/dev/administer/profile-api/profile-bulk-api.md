@@ -5,21 +5,14 @@ feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
 TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
 workflow-type: tm+mt
-source-wordcount: 1094
-ht-degree: 7%
+source-wordcount: 1311
+ht-degree: 6%
 
 ---
 
@@ -83,6 +76,27 @@ Hace referencia a este archivo en la llamada de POST a [!DNL Target] servidores 
 * El tamaño del archivo en lote debe ser inferior a 50 MB. Además, el número total de filas no debe superar los 500 000. Este límite garantiza que los servidores no se inunden con demasiadas solicitudes.
 * No hay restricciones en el número de atributos que se pueden cargar. Sin embargo, el tamaño total de los datos de perfil externos, que incluyen los atributos del cliente, la API del perfil, los parámetros de perfil In-Mbox y la salida del script de perfil, no debe superar los 64 KB.
 * Los parámetros y valores distinguen entre mayúsculas y minúsculas.
+
+### Requisitos de codificación de URL {#url-encoding}
+
+>[!IMPORTANT]
+>
+>Todos los nombres y valores de parámetro deben estar codificados en URL (UTF-8) antes de enviar el lote, enviado con `Content-Type: application/x-www-form-urlencoded`, con el cuerpo que comienza con `batch=`. Los caracteres reservados no codificados se leen como sintaxis de solicitud en lugar de como datos, lo que puede hacer que el lote se rechace, trunque o dañe.
+>
+>Si recibe una respuesta de &quot;error inesperado&quot; sin que se emita ningún `batchId`, consulte [La API de actualización de perfiles en lote devuelve el &quot;error inesperado&quot;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) para ver los pasos de solución de problemas.
+
+Los siguientes caracteres suelen estar presentes en los valores de perfil, pero tienen un significado especial en los datos de `application/x-www-form-urlencoded`. Si los envía sin codificar, la solicitud falla o los datos se dañan sin un error obvio:
+
+| Carácter | Codificar como | Si se envía sin codificar |
+|---|---|---|
+| `%` | `%25` | Se rechaza todo el lote. La respuesta devuelve HTTP 200 con `success=false` y el mensaje &quot;Error inesperado&quot;, y no se emite ningún `batchId`. |
+| `&` | `%26` | El lote se trunca silenciosamente a las primeras `&`. Se borran las filas restantes, lo que puede dar como resultado una actualización parcial o una respuesta &quot;El lote está vacío&quot;. |
+| `+` | `%2B` | El carácter se convierte silenciosamente en un espacio, lo que corrompe el valor almacenado. |
+| `=` | `%3D` | El carácter puede malinterpretarse como un límite de campo. |
+
+_Por ejemplo, el valor `50% off & more` debe enviarse como `50%25 off %26 more`._
+
+Tenga en cuenta que las letras, los dígitos, los caracteres acentuados en UTF-8 y los caracteres `- . ! ~ _ * ( )` no requieren codificación. Sin embargo, [!DNL Adobe] recomienda codificar todos los valores para evitar ambigüedades.
 
 ## petición HTTP POST
 

@@ -16,10 +16,10 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
 workflow-type: tm+mt
-source-wordcount: 1094
-ht-degree: 7%
+source-wordcount: 1311
+ht-degree: 6%
 
 ---
 
@@ -83,6 +83,27 @@ Hace referencia a este archivo en la llamada de POST a [!DNL Target] servidores 
 * El tamaño del archivo en lote debe ser inferior a 50 MB. Además, el número total de filas no debe superar los 500 000. Este límite garantiza que los servidores no se inunden con demasiadas solicitudes.
 * No hay restricciones en el número de atributos que se pueden cargar. Sin embargo, el tamaño total de los datos de perfil externos, que incluyen los atributos del cliente, la API del perfil, los parámetros de perfil In-Mbox y la salida del script de perfil, no debe superar los 64 KB.
 * Los parámetros y valores distinguen entre mayúsculas y minúsculas.
+
+### Requisitos de codificación de URL {#url-encoding}
+
+>[!IMPORTANT]
+>
+>Todos los nombres y valores de parámetro deben estar codificados en URL (UTF-8) antes de enviar el lote, enviado con `Content-Type: application/x-www-form-urlencoded`, con el cuerpo que comienza con `batch=`. Los caracteres reservados no codificados se leen como sintaxis de solicitud en lugar de como datos, lo que puede hacer que el lote se rechace, trunque o dañe.
+>
+>Si recibe una respuesta de &quot;error inesperado&quot; sin que se emita ningún `batchId`, consulte [La API de actualización de perfiles en lote devuelve el &quot;error inesperado&quot;](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-24281) para ver los pasos de solución de problemas.
+
+Los siguientes caracteres suelen estar presentes en los valores de perfil, pero tienen un significado especial en los datos de `application/x-www-form-urlencoded`. Si los envía sin codificar, la solicitud falla o los datos se dañan sin un error obvio:
+
+| Carácter | Codificar como | Si se envía sin codificar |
+|---|---|---|
+| `%` | `%25` | Se rechaza todo el lote. La respuesta devuelve HTTP 200 con `success=false` y el mensaje &quot;Error inesperado&quot;, y no se emite ningún `batchId`. |
+| `&` | `%26` | El lote se trunca silenciosamente a las primeras `&`. Se borran las filas restantes, lo que puede dar como resultado una actualización parcial o una respuesta &quot;El lote está vacío&quot;. |
+| `+` | `%2B` | El carácter se convierte silenciosamente en un espacio, lo que corrompe el valor almacenado. |
+| `=` | `%3D` | El carácter puede malinterpretarse como un límite de campo. |
+
+_Por ejemplo, el valor `50% off & more` debe enviarse como `50%25 off %26 more`._
+
+Tenga en cuenta que las letras, los dígitos, los caracteres acentuados en UTF-8 y los caracteres `- . ! ~ _ * ( )` no requieren codificación. Sin embargo, [!DNL Adobe] recomienda codificar todos los valores para evitar ambigüedades.
 
 ## petición HTTP POST
 

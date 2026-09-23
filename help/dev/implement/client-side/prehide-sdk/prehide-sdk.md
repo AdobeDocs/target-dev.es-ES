@@ -1,16 +1,13 @@
 ---
 keywords: ocultar previamente SDK, parpadeo, antiparpadeo, preocultación, preocultación, aleación, at.js, implementación, consentimiento, CMP, colocación de script, en línea, externo, selección de SDK
-description: Aprenda a integrar  [!DNL Adobe Target] Preocultar SDK para eliminar el parpadeo del contenido no personalizado (parpadeo) durante la carga de la página. SDK funciona tanto con Adobe Alloy (Web SDK) como con at.js.
+description: Obtenga información sobre cómo integrar SDK Prehide de [!DNL Adobe Target] para eliminar el parpadeo del contenido no personalizado (parpadeo) durante la carga de la página. SDK funciona tanto con Adobe Alloy (Web SDK) como con at.js.
 title: Preocultar guía de integración de SDK
 feature: Implementation
-hide: true
-source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
+source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 0%
-
+source-wordcount: '1066'
+ht-degree: 1%
 ---
-
 
 # Preocultar guía de integración de SDK
 
@@ -63,7 +60,8 @@ Una pequeña biblioteca sincrónica de JavaScript que evita el parpadeo visual c
 >[!IMPORTANT]
 >
 >Prehide SDK debe ejecutarse antes que Alloy/at.js. Si Alloy se carga primero, la página procesa el contenido no personalizado y, a continuación, vuelve a procesarlo. Ese es el parpadeo exacto que esta SDK está diseñada para evitar.
-></br>>No agregue `async` ni `defer` a la etiqueta de script de SDK de preocultación. Se requiere una ejecución sincrónica para que la regla de ocultación se inserte antes de que el explorador empiece a mostrar la página.
+></br>
+>No agregue `async` ni `defer` a la etiqueta de script de preocultar SDK. Se requiere una ejecución sincrónica para que la regla de ocultación se inserte antes de que el explorador empiece a mostrar la página.
 
 El SDK de ocultación previa debe aparecer antes en el documento que el SDK [!DNL Adobe Target] que limpia después de él. El orden de carga no es negociable:
 

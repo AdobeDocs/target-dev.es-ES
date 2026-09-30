@@ -1,16 +1,26 @@
 ---
 keywords: oferta, recuperación previa, iOS, android, sdk, móvil, sdk móvil, 8 dólares
-description: Utilice la función de recuperación previa  [!DNL Adobe Target] en los SDK de iOS y Android Mobile para recuperar contenido de ofertas el menor número posible de veces almacenando en caché las respuestas del servidor.
+description: Utilice la función de recuperación previa [!DNL Adobe Target] en los SDK de iOS y Android Mobile para recuperar contenido de ofertas el menor número posible de veces almacenando en caché las respuestas del servidor.
 title: ¿Puedo recuperar previamente contenido de ofertas para aplicaciones móviles?
 feature: Implement Mobile
 exl-id: 6f8e8298-f1e9-46f0-828f-717c7d632077
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '318'
 ht-degree: 37%
-
 ---
-
 # Recuperación previa de contenido de ofertas
 
 La función de recuperación previa de [!DNL Target] usa los SDK para móviles de iOS y Android a fin de recuperar contenido de ofertas el menor número posible de veces almacenando en caché las respuestas del servidor.

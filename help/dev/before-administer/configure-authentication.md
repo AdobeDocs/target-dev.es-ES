@@ -1,25 +1,32 @@
 ---
-title: Cómo configurar la autenticación para  [!DNL Adobe Target] API
-description: ¿Cómo se generan los tokens de autenticación necesarios para interactuar correctamente con  [!DNL Adobe Target] API?
+title: Cómo configurar la autenticación para las API de [!DNL Adobe Target]
+description: ¿Cómo se generan los tokens de autenticación necesarios para interactuar correctamente con las API de [!DNL Adobe Target]?
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
+TQID: 'https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1927
+source-wordcount: '1929'
 ht-degree: 1%
-
 ---
-
 # Configurar la autenticación para las API de [!DNL Adobe Target]
 
 Las API de administrador de [!DNL Adobe Target], incluidas las API de [!DNL Recommendations Admin], están protegidas con autenticación para garantizar que solo los usuarios autorizados las usen para acceder a [!DNL Adobe Target]. Use [Adobe Developer Console](https://developer.adobe.com/console/home) para administrar esta autenticación en todos los [!DNL Adobe Experience Cloud solutions], incluido [!DNL Adobe Target].
@@ -46,7 +53,7 @@ Estos son los pasos preliminares necesarios para generar los tokens de autentica
 | Recurso | Detalles |
 | --- | --- |
 | Postman | Para completar estos pasos correctamente, obtiene la [aplicación de Postman](https://www.postman.com/downloads/) para tu sistema operativo. Postman basic es gratuito con la creación de cuentas. Aunque no es necesario para usar las API [!DNL Adobe Target] en general, Postman facilita los flujos de trabajo de las API y [!DNL Adobe Target] proporciona varias colecciones de Postman para ayudar a ejecutar sus API y conocer su funcionamiento. El resto de esta guía supone conocimientos prácticos de Postman. Para obtener ayuda, consulte la [documentación de Postman](https://learning.getpostman.com/). |
-| Referencias | En el resto de esta guía se da por hecho que está familiarizado con los siguientes recursos:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentación de la API de perfil y administrador de Target](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentación de la API de Recommendations](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
+| Referencias: | En el resto de esta guía se da por hecho que está familiarizado con los siguientes recursos:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentación de la API de perfil y administrador de Target](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentación de la API de Recommendations](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## Creación de un proyecto de Adobe I/O
 

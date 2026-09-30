@@ -3,7 +3,16 @@ keywords: ocultar previamente SDK, parpadeo, antiparpadeo, preocultación, preoc
 description: Obtenga información sobre cómo integrar SDK Prehide de [!DNL Adobe Target] para eliminar el parpadeo del contenido no personalizado (parpadeo) durante la carga de la página. SDK funciona tanto con Adobe Alloy (Web SDK) como con at.js.
 title: Preocultar guía de integración de SDK
 feature: Implementation
-source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 1%

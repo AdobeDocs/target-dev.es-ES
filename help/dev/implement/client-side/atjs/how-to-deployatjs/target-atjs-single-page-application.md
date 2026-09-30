@@ -1,34 +1,46 @@
 ---
 keywords: implementación de aplicación de una sola página, implementar aplicación de una sola página, spa, at.js 2.x, at.js, aplicación de una sola página, aplicación de una sola página, spa, SPA, implementación de aplicación de una sola página
-description: Aprenda a usar [!DNL Adobe Target] at.js 2.x para implementar [!DNL Target] para aplicaciones de una sola página (SPA).
-title: ¿Puedo implementar  [!DNL Target] para aplicaciones de una sola página (SPA)?
+description: Aprenda a utilizar [!DNL Adobe Target] at.js 2.x para implementar [!DNL Target] para aplicaciones de una sola página (SPA).
+title: ¿Puedo implementar [!DNL Target] para aplicaciones de una sola página (SPA)?
 feature: Implement Server-side
 exl-id: d59d7683-0a63-47a9-bbb5-0fe4a5bb7766
-TQID: https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo
+TQID: 'https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2851
+source-wordcount: '2854'
 ht-degree: 53%
-
 ---
-
 # Implementación de aplicación de página única
 
 Los sitios web tradicionales funcionaban en modelos de navegación “página a página”, conocidos como aplicaciones de varias páginas, en las que los diseños de sitios web estaban perfectamente asociados a las direcciones URL y las transiciones de una página web a otra requerían la carga de páginas. Las aplicaciones web modernas, como las Aplicaciones de una sola página (SPA), adoptan un modelo que impulsa el uso rápido de la representación de la interfaz de usuario del explorador, que a menudo es independiente de las recargas de página. Estas experiencias suelen desencadenarse mediante interacciones de clientes, como desplazamientos, clics y movimientos del cursor. A medida que los paradigmas de las webs modernas evolucionan, la importancia de los eventos genéricos tradicionales, como la carga de páginas, para implementar la personalización y la experimentación, ya no es tanta.

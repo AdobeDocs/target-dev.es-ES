@@ -1,28 +1,35 @@
 ---
 keywords: api, adobe i/o, classic, adobe developer console
-description: Aprenda a pasar de las  [!DNL Adobe Target Classic] API a las [!DNL Target] API en [!DNL Adobe Developer Console].
-title: ¿Cómo hago la transición de  [!DNL Target Classic] API a [!DNL Target] API en [!DNL Adobe Developer Console]?
+description: Aprenda a realizar la transición de las API de [!DNL Adobe Target Classic] a las API de [!DNL Target] en [!DNL Adobe Developer Console].
+title: ¿Cómo hago la transición de las API [!DNL Target Classic] a las API [!DNL Target] en [!DNL Adobe Developer Console]?
 feature: APIs/SDKs
 exl-id: b84e3767-89ad-4e2d-9bb4-7e31bffbc285
-TQID: https://experienceleague.adobe.com/cIWcraU0O9Ut1VBbD5ScKOyBrXniyIEM5XEVZMJvffk
+TQID: 'https://experienceleague.adobe.com/cIWcraU0O9Ut1VBbD5ScKOyBrXniyIEM5XEVZMJvffk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Customer experience
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 595
+source-wordcount: '599'
 ht-degree: 32%
-
 ---
-
 # Transición de [!DNL Target Classic] API a [!DNL Target] API en [!DNL Adobe Developer Console]
 
 Información para ayudarle con la transición de las API [!DNL Target Classic] a las API [!DNL Target] en [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/home).

@@ -3,23 +3,34 @@ title: Administración del catálogo de Recommendations mediante API
 description: Pasos necesarios para utilizar las API de Adobe Target para crear, actualizar, guardar, obtener y eliminar entidades en el catálogo de Recommendations.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+TQID: 'https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 930
+source-wordcount: '930'
 ht-degree: 0%
-
 ---
-
 # Administrar el catálogo de Recommendations mediante las API
 
 A la vez que se asegura de que cumple con los [requisitos para usar la API de Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites), aprendió a [generar un token de acceso](/help/dev/before-administer/configure-authentication.md) mediante el flujo de autenticación JWT para usar las API de administración de [!DNL Adobe Target] en [Adobe Developer Console](https://developer.adobe.com/console/home).
@@ -150,7 +161,7 @@ Los detalles de entidad solo se pueden recuperar para una sola entidad a la vez.
 1. Envíe la solicitud.
 
    ![GetEntity3](assets/GetEntity3.png)
-Si recibe un error que indica que no se encontró la entidad, como se muestra en el ejemplo anterior, compruebe que está enviando la solicitud al entorno de Target correcto.
+   Si recibe un error que indica que no se encontró la entidad, como se muestra en el ejemplo anterior, compruebe que está enviando la solicitud al entorno de Target correcto.
 
 
 

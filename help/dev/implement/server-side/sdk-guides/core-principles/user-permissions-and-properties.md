@@ -1,20 +1,23 @@
 ---
 title: Permisos de usuario y propiedades
-description: Los SDK  [!DNL Target] incluyen compatibilidad con permisos y propiedades de usuario.
+description: Los SDK de [!DNL Target] incluyen compatibilidad con permisos y propiedades de usuario.
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/4l6qKRuEw14xYjcEsY49-3AAjYl6gouoKWIjkNuchdI
+TQID: 'https://experienceleague.adobe.com/4l6qKRuEw14xYjcEsY49-3AAjYl6gouoKWIjkNuchdI'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 123
+source-wordcount: '124'
 ht-degree: 8%
-
 ---
-
 # Permisos de usuario y propiedades
 
 Los SDK de [!DNL Target] incluyen compatibilidad con permisos y propiedades de usuario. Si no conoce cómo [!DNL Adobe Target] administra los permisos de empresa a través de espacios de trabajo y propiedades, puede obtener más información al respecto en [Permisos de usuario de empresa](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=es).

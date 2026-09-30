@@ -3,26 +3,38 @@ title: Recuperación de recomendaciones con la API de entrega
 description: Este artículo guía a los desarrolladores a través de los pasos necesarios para recuperar contenido de Recommendations mediante la API de envío de Adobe Target.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
+TQID: 'https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1284
+source-wordcount: '1380'
 ht-degree: 1%
-
 ---
-
 # Recuperación de recomendaciones con la API de entrega
 
 Las API de Adobe Target y Adobe Target Recommendations se pueden utilizar para enviar respuestas a páginas web, pero también se pueden utilizar en experiencias no basadas en HTML, como aplicaciones, pantallas, consolas, correos electrónicos, quioscos y otros dispositivos de visualización. En otras palabras, cuando no se pueden usar las bibliotecas de Target y JavaScript, la [API de envío de Target](/help/dev/implement/delivery-api/overview.md) sigue habilitando el acceso a toda la gama de funcionalidades de Target para ofrecer experiencias personalizadas.
@@ -62,7 +74,7 @@ Para crear recomendaciones que se puedan usar con la API de entrega, use [Compos
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
 1. Seleccione una propiedad y haga clic en **[!UICONTROL Siguiente]**.
-1. Defina la ubicación en la que desea que los usuarios reciban la respuesta de la recomendación. El ejemplo siguiente utiliza una ubicación denominada *api_charter*. Seleccione su diseño basado en JSON, creado anteriormente, con el nombre *JSON simple.*
+1. Defina la ubicación en la que desea que los usuarios reciban la respuesta de la recomendación. El ejemplo siguiente utiliza una ubicación denominada *api_charter*. Seleccione el diseño basado en JSON, creado anteriormente, con el nombre *JSON simple.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
 1. Guarde y active la recomendación. Generará resultados. [Una vez que los resultados estén listos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=es), puede usar la API de envío para recuperarlos.
 
@@ -84,7 +96,7 @@ Recuerde configurar los parámetros de consulta correctamente. Por ejemplo, aseg
 1. Envíe la solicitud. Esto se ejecuta en la ubicación *api_charter*, que tiene una recomendación activa en ejecución, definida con su diseño JSON que generará una lista de entidades recomendadas.
 1. Reciba una respuesta basada en el diseño JSON.
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
-La respuesta incluye el ID de clave, así como los ID de entidad de las entidades recomendadas.
+   La respuesta incluye el ID de clave, así como los ID de entidad de las entidades recomendadas.
 
 El uso de la API de envío con Recommendations de esta manera le permite realizar pasos adicionales antes de mostrar recomendaciones al visitante en un dispositivo que no sea de HTML. Por ejemplo, puede tomar la respuesta de la API de envío para realizar una búsqueda adicional en tiempo real de los detalles de atributos de entidad (inventario, precio, calificación, etc.) de otro sistema (como una plataforma de CMS, PIM o de comercio electrónico) antes de mostrar los resultados finales.
 

@@ -1,25 +1,32 @@
 ---
 title: Sincronización de perfiles en tiempo real para mbox3rdPartyId
-description: Aprenda a utilizar mbox3rdPartyId con  [!DNL Adobe Experience Platform Web SDK].
+description: Aprenda a utilizar mbox3rdPartyId con [!DNL Adobe Experience Platform Web SDK].
 keywords: personalización;target;adobe target;renderDecisions;sendEvent;mbox3rdPartyId;
 feature: AEP Web SDK
 exl-id: 1c5067ef-38b3-4bf1-bd39-ea0f2cbd1074
-TQID: https://experienceleague.adobe.com/Ej2sYVnBD9orRTlsMQG85JJV7dvn-9gnABDa0b8uBlM
+TQID: 'https://experienceleague.adobe.com/Ej2sYVnBD9orRTlsMQG85JJV7dvn-9gnABDa0b8uBlM'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 165
-ht-degree: 35%
-
+source-wordcount: '181'
+ht-degree: 32%
 ---
-
 # Usar mbox3rdPartyId
 
 El `mbox3rdPartyId` en [!DNL Adobe Target] es el ID de visitante de su compañía, como el ID de pertenencia para el programa de lealtad de su empresa.
@@ -37,7 +44,7 @@ Configure `Target Third Party ID Namespace` en su [secuencia de datos](https://e
 ### Paso 2: Enviar `mbox3rdpartyId` a [!DNL Target]
 
 Envíe `mbox3rdpartyId` a [!DNL Target] en el comando `sendEvent`, utilizando el área de nombres de ID que configuró en el paso 1.
-[Más información sobre cómo enviar ID](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
+[Más información sobre el envío de identificadores](/help/dev/implement/client-side/aep-web-sdk/using-mbox-3rdpartyid.md)
 
 ```javascript
 alloy("sendEvent", {

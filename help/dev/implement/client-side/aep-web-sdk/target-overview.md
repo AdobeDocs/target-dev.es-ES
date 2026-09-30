@@ -1,15 +1,25 @@
 ---
-title: Use [!DNL Adobe Target] con [!DNL Web SDK] para la personalización.
-description: Aprenda a procesar contenido personalizado con [!DNL Experience Platform Web SDK] using [!DNL Adobe Target].
+title: Usar [!DNL Adobe Target] con [!DNL Web SDK] para personalización.
+description: Obtenga información sobre cómo procesar contenido personalizado con [!DNL Experience Platform Web SDK] mediante [!DNL Adobe Target].
 feature: AEP Web SDK
 exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
-source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 5%
-
 ---
-
 # Usar [!DNL Adobe Target] y [!DNL Web SDK] para personalización
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] puede entregar y procesar experiencias personalizadas administradas en [!DNL Adobe Target] al canal web. Puede usar un editor de WYSIWYG, llamado [Compositor de experiencias visuales](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=es) (VEC), o una interfaz no visual, [Compositor de experiencias basadas en formularios](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=es), para crear, activar y entregar sus actividades y experiencias de personalización.

@@ -88,7 +88,7 @@ Este paso ayuda a garantizar que la biblioteca `VisitorAPI.js` se carga, configu
 
 **Requisitos previos**
 
-* Para usar el servicio API/ID de visitante, tu empresa debe estar habilitada para [!DNL Adobe Experience Cloud] y tener un [!UICONTROL ID de organización]. Para obtener más información, consulte [Requisitos de Experience Cloud: ID de organización](¿https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} en la guía *Ayuda del servicio de identidad*.
+* Para usar el servicio API/ID de visitante, tu empresa debe estar habilitada para [!DNL Adobe Experience Cloud] y tener un [!UICONTROL ID de organización]. Para obtener más información, consulte [Requisitos de Experience Cloud: ID de organización] (¿https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} en la guía *Ayuda del servicio de identidad*.
 * Necesita el archivo `VisitorAPI.js`. Ya debería tener este archivo si tiene [!DNL Adobe Analytics] implementado. Este archivo también se puede agregar mediante la [[!DNL Adobe Experience Platform] extensión de etiquetas](https://experienceleague.adobe.com/docs/tags.html){target=_blank} o se puede descargar desde el [Administrador de códigos Adobe Analytics](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
 
 **Configurar y hacer referencia a VisitorAPI.js**

@@ -54,7 +54,7 @@ Los SDK de [!DNL Adobe Target] de próxima generación ahora ofrecen [!UICONTROL
 
 ## ¿Cómo funciona?
 
-Al instalar e inicializar un SDK [!DNL Adobe Target] con [!UICONTROL toma de decisiones en el dispositivo] habilitado, se descarga un artefacto de regla *4} que se almacena en la caché local del servidor, desde la red de distribución de contenido (CDN) de Akamai más cercana al servidor.* Cuando se realiza una solicitud para recuperar una experiencia [!DNL Adobe Target] en la aplicación del lado del servidor, la decisión con respecto a qué contenido se va a devolver se toma en memoria, según los metadatos codificados en el artefacto de reglas en caché, que define todas sus actividades A/B y XT de [!UICONTROL toma de decisiones en el dispositivo].
+Al instalar e inicializar un SDK [!DNL Adobe Target] con [!UICONTROL toma de decisiones en el dispositivo] habilitado, se descarga un artefacto de regla *4&rbrace; que se almacena en la caché local del servidor, desde la red de distribución de contenido (CDN) de Akamai más cercana al servidor.* Cuando se realiza una solicitud para recuperar una experiencia [!DNL Adobe Target] en la aplicación del lado del servidor, la decisión con respecto a qué contenido se va a devolver se toma en memoria, según los metadatos codificados en el artefacto de reglas en caché, que define todas sus actividades A/B y XT de [!UICONTROL toma de decisiones en el dispositivo].
 
 El diagrama siguiente muestra la arquitectura de [!UICONTROL toma de decisiones en el dispositivo]. Haga clic en para expandir la imagen.
 

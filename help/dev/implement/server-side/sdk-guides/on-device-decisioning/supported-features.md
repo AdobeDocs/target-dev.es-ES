@@ -39,7 +39,7 @@ Los SDK del lado del servidor de [!DNL Adobe Target] proporcionan a los desarrol
 
 ## Tipos de actividades.
 
-La siguiente tabla indica qué [tipos de actividad](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) creados con el [Compositor de experiencias basadas en formularios](¿https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) son compatibles o no con [!UICONTROL decisiones en el dispositivo].
+La siguiente tabla indica qué [tipos de actividad](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) creados con el [Compositor de experiencias basadas en formularios] (¿https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) son compatibles o no con [!UICONTROL decisiones en el dispositivo].
 
 | Tipo de actividad | Admitido |
 | --- | --- |

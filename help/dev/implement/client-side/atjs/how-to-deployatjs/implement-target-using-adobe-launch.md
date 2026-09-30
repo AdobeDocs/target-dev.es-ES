@@ -37,7 +37,7 @@ Las etiquetas de [!DNL Adobe Experience Platform] son la siguiente generación d
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en [!DNL Adobe Experience Platform]. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento](¿https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?) para obtener una referencia consolidada de los cambios terminológicos.
+>Adobe Experience Platform Launch se ha convertido en un conjunto de tecnologías de recopilación de datos en [!DNL Adobe Experience Platform]. Como resultado, se han implementado varios cambios terminológicos en la documentación del producto. Consulte el siguiente [documento] (¿https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?) para obtener una referencia consolidada de los cambios terminológicos.
 
 En la siguiente tabla se enumeran distintos recursos donde puede obtener más información:
 
@@ -45,7 +45,7 @@ En la siguiente tabla se enumeran distintos recursos donde puede obtener más in
 |--- |--- |
 | [Agregar Adobe Target](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/target.html?lang=es#implement-solutions) | Este tutorial proporciona instrucciones paso a paso para implementar [!DNL Target] en un sitio web con etiquetas en [!DNL Adobe Experience Platform]. Los temas incluyen añadir la biblioteca JavaScript at.js, activar el mbox global, añadir parámetros e integrar con otras soluciones. Este artículo forma parte de un tutorial más amplio que muestra cómo implementar Adobe Experience Platform y otras soluciones de Adobe Experience Cloud. |
 | [Guía de inicio rápido](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html?lang=es) | Información acerca de la implementación y administración de las etiquetas de análisis, marketing y publicidad necesarias para lograr experiencias de cliente relevantes. |
-| Información general de la [extensión de Adobe  [!DNL Target] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=es) | Información acerca de la implementación de [!DNL Target] mediante [!DNL Adobe Experience Platform]. |
+| Información general de la [extensión de Adobe  [!DNL Target] &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=es) | Información acerca de la implementación de [!DNL Target] mediante [!DNL Adobe Experience Platform]. |
 
 ## Ventajas de implementar at.js con la extensión [!DNL Target]
 

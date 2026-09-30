@@ -30,7 +30,7 @@ Para que las notificaciones se activen en el mbox o la vista correctos, asegúre
 
 ## Notificaciones para mboxes de recuperación previa
 
-Se pueden enviar una o varias notificaciones a través de una sola llamada de envío. Determine si la métrica de la que debe realizarse el seguimiento es un `click` o `display` para cada mbox para que el `type` de la notificación se pueda reflejar correctamente. Además, pase un `id` para cada notificación, de modo que se pueda determinar si una notificación se envió correctamente a través de la [!UICONTROL  API de Adobe Target Delivery]. `timestamp` también es importante que se reenvíe a [!DNL Target] para indicar cuándo se produjo `click` o `display` en un mbox determinado con fines de creación de informes.
+Se pueden enviar una o varias notificaciones a través de una sola llamada de envío. Determine si la métrica de la que debe realizarse el seguimiento es un `click` o `display` para cada mbox para que el `type` de la notificación se pueda reflejar correctamente. Además, pase un `id` para cada notificación, de modo que se pueda determinar si una notificación se envió correctamente a través de la [!UICONTROL &#x200B; API de Adobe Target Delivery]. `timestamp` también es importante que se reenvíe a [!DNL Target] para indicar cuándo se produjo `click` o `display` en un mbox determinado con fines de creación de informes.
 
 ```
 curl -X POST \

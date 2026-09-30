@@ -4,13 +4,23 @@ description: Obtenga información acerca del comportamiento de la cookie de Targ
 title: ¿Dónde Puedo Encontrar Información Sobre Las Cookies De Target?
 feature: at.js
 role: Developer
-source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 53%
-
 ---
-
 # Cookies de Target
 
 El comportamiento de la cookie depende de si es una cookie de origen, una cookie de terceros con una cookie de origen o solo una cookie de terceros.
@@ -23,7 +33,7 @@ Vea también [Eliminar la cookie de Target](/help/dev/before-implement/privacy/c
 
 ## Cuándo usar cookies de origen o de terceros
 
-La configuración del sitio determina las cookies que se utilizarán. A la hora de saber cuándo usar cookies de origen y cookies de terceros, resulta útil conocer el modo en que funciona Target. Consulte [Funcionamiento de Adobe Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=es) para obtener más información.
+La configuración del sitio determina las cookies que se utilizarán. A la hora de saber cuándo usar cookies de origen y cookies de terceros, resulta útil conocer el modo en que funciona Target. Consulte [Funcionamiento de Adobe Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) para obtener más información.
 
 Hay tres casos principales para el uso de cookies:
 
@@ -138,4 +148,4 @@ De Apple:
 | Funcionalidad afectada | Detalles |
 |--- |--- |
 | Soporte para la no participación | Los cambios de Apple en el seguimiento de WebKit interrumpen el soporte para la no participación.<br />La no participación en Target emplea una cookie en el dominio `clientcode.tt.omtrdc.net`. Para obtener más información, consulte [Privacidad](/help/dev/before-implement/privacy/privacy.md).<br />Target admite dos formas de no participación:<ul><li>Una por cliente (el cliente gestiona el vínculo de no participación).</li><li>Una mediante Adobe, que excluye al usuario de toda funcionalidad de Target para todos los clientes.</li></ul>Ambos métodos utilizan una cookie de terceros. |
-| Actividades de Target | Los clientes pueden elegir su [duración de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=es) para sus cuentas de Target (hasta 90 días). El problema es que si la duración del perfil de la cuenta supera los 30 días y se purga la cookie de origen porque el dominio del cliente se ha marcado como un seguimiento de usuarios entre sitios, el comportamiento para los visitantes de Safari se ve afectado en las siguientes áreas de Target:<br />**[!UICONTROL Informes de Target &#x200B;]**: Si un usuario de Safari entra en una actividad, regresa pasados 30 días y luego convierte ese usuario, cuenta como dos visitantes y una conversión.<br />Este comportamiento es el mismo para las actividades que usan Analytics como fuente de informes (A4T).<br />**[!UICONTROL Perfiles y pertenencia a actividades]**:<ul><li>Los datos de perfil se borran al caducar la cookie de origen.</li><li>La pertenencia a actividades se borra al caducar la cookie de origen.</li><li> Target no funciona en Safari para cuentas que utilizan una implementación de cookie de terceros, o de cookies de origen y de terceros. Este comportamiento no es nuevo. Safari lleva tiempo sin permitir cookies de terceros.</li></ul><br />**[!UICONTROL Sugerencias &#x200B;]**: Si existe preocupación en cuanto a que el dominio del cliente pueda marcarse como uno que realiza un seguimiento de los visitantes entre sesiones, lo más seguro es establecer en Target la duración del perfil en 30 días o menos. Este límite garantiza que los usuarios reciban un seguimiento similar en Safari y en todos los demás navegadores. |
+| Actividades de Target | Los clientes pueden elegir su [duración de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) para sus cuentas de Target (hasta 90 días). El problema es que si la duración del perfil de la cuenta supera los 30 días y se purga la cookie de origen porque el dominio del cliente se ha marcado como un seguimiento de usuarios entre sitios, el comportamiento para los visitantes de Safari se ve afectado en las siguientes áreas de Target:<br />**[!UICONTROL Informes de Target ]**: Si un usuario de Safari entra en una actividad, regresa pasados 30 días y luego convierte ese usuario, cuenta como dos visitantes y una conversión.<br />Este comportamiento es el mismo para las actividades que usan Analytics como fuente de informes (A4T).<br />**[!UICONTROL Perfiles y pertenencia a actividades]**:<ul><li>Los datos de perfil se borran al caducar la cookie de origen.</li><li>La pertenencia a actividades se borra al caducar la cookie de origen.</li><li> Target no funciona en Safari para cuentas que utilizan una implementación de cookie de terceros, o de cookies de origen y de terceros. Este comportamiento no es nuevo. Safari lleva tiempo sin permitir cookies de terceros.</li></ul><br />**[!UICONTROL Sugerencias ]**: Si existe preocupación en cuanto a que el dominio del cliente pueda marcarse como uno que realiza un seguimiento de los visitantes entre sesiones, lo más seguro es establecer en Target la duración del perfil en 30 días o menos. Este límite garantiza que los usuarios reciban un seguimiento similar en Safari y en todos los demás navegadores. |

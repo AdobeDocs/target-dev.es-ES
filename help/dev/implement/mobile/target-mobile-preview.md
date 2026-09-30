@@ -1,21 +1,27 @@
 ---
 keywords: control de calidad, vista previa, vínculo de vista previa, móvil, vista previa para móviles
 description: Utilice los vínculos de vista previa para móviles para realizar un completo control de calidad de las actividades de aplicaciones móviles.
-title: ¿Cómo se usan los vínculos de vista previa para móviles en  [!DNL Adobe Target] Mobile?
+title: ¿Cómo utilizo los vínculos de vista previa para móviles en [!DNL Adobe Target] dispositivos móviles?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+TQID: 'https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '579'
 ht-degree: 24%
-
 ---
-
 # [!DNL Target] vista previa para móviles
 
 Use los vínculos de vista previa en móviles para realizar fácilmente un control de calidad exhaustivo de las actividades de aplicaciones móviles y registrarse en diferentes experiencias con el dispositivo sin tener que usar ningún dispositivo de prueba especial.
@@ -80,7 +86,7 @@ Abra el vínculo en un navegador móvil en un dispositivo en el que tenga instal
 1. Seleccione la combinación de experiencias que desee usar y, a continuación, haga clic en **[!UICONTROL Iniciar experiencias]**.
 
    |![vista previa para móviles 1](assets/mobile-preview-experience-selection-1.png)|![vista previa para móviles 2](assets/mobile-preview-experience-result-1-france.png)|![vista previa para móviles 3](assets/mobile-preview-experience-result-1-shipfree.png)|
-|![vista previa para móviles 4](assets/mobile-preview-experience-selection-2.png)|![vista previa para móviles 5](assets/mobile-preview-experience-result-2-aus.png)|![vista previa para móviles 6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![vista previa para móviles 4](assets/mobile-preview-experience-selection-2.png)|![vista previa para móviles 5](assets/mobile-preview-experience-result-2-aus.png)|![vista previa para móviles 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Limitaciones
 

@@ -1,27 +1,33 @@
 ---
 keywords: implementación, api, perfil, configuración de la api de perfil, token de autenticación
-description: Obtenga información sobre cómo configurar la autenticación para actualizaciones por lotes mediante  [!DNL Adobe Target] API y generar un token de autenticación de perfil.
+description: Obtenga información sobre cómo configurar la autenticación para actualizaciones por lotes mediante las API [!DNL Adobe Target] y generar un token de autenticación de perfil.
 title: ¿Cómo utilizo la configuración de la API del perfil para habilitar o deshabilitar las actualizaciones por lotes?
 feature: APIs/SDKs
 exl-id: 968f33d0-296b-4248-8c9a-8e6f3077bdfa
-TQID: https://experienceleague.adobe.com/-KYSphaCrm0ICK7g92v9x-uK--nwirs4-DWBR3G5rTM
+TQID: 'https://experienceleague.adobe.com/-KYSphaCrm0ICK7g92v9x-uK--nwirs4-DWBR3G5rTM'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 363
+source-wordcount: '364'
 ht-degree: 31%
-
 ---
-
 # Configuración de la API de perfil
 
 Habilite o deshabilite la autenticación para actualizaciones en lote mediante las API [!DNL Adobe Target] y genere un token de autenticación de perfil.
@@ -47,11 +53,11 @@ Como seguridad adicional, puede requerir que la llamada a la API de actualizaci�
 
    * Función de administrador o tener al menos derechos de aprobador
 
-     Para obtener más información para los clientes de Target Standard, consulte [Especificar funciones y permisos](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=es#roles-permissions) en *Usuarios*. Para obtener más información para los clientes de [!DNL Target Premium], consulte [Configuración de permisos de Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=es).
+     Para obtener más información para los clientes de Target Standard, consulte [Especificar funciones y permisos](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions) en *Usuarios*. Para obtener más información para los clientes de [!DNL Target Premium], consulte [Configuración de permisos de Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
    * Función de administrador en el nivel de espacio de trabajo/perfil de producto
 
-     Los espacios de trabajo solo están disponibles para los clientes de [!DNL Target Premium]. Para obtener más información, consulte [Permisos de usuario de Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=es).
+     Los espacios de trabajo solo están disponibles para los clientes de [!DNL Target Premium]. Para obtener más información, consulte [Permisos de usuario de Enterprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
    * Derechos de administrador (permiso Sysadmin) en el nivel de producto [!DNL Adobe Target]
 

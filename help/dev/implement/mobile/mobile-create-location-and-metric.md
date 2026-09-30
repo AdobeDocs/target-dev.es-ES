@@ -1,23 +1,30 @@
 ---
 keywords: aplicación móvil, ubicación de aplicación móvil, segmentar por aplicación móvil, ubicaciones de segmentación por móvil, métricas de éxito de aplicaciones móviles
-description: Ver código de muestra para aprender a crear ubicaciones y métricas de éxito en aplicaciones de iOS para que puedas usar  [!DNL Adobe Target] para personalizar y optimizar tu aplicación.
-title: ¿Cómo puedo crear  [!DNL Target] ubicaciones y métricas de éxito en una aplicación de iOS?
+description: Vea código de ejemplo para aprender a crear ubicaciones y métricas de éxito en aplicaciones de iOS de modo que pueda usar [!DNL Adobe Target] para personalizar y optimizar su aplicación.
+title: ¿Cómo puedo crear [!DNL Target] ubicaciones y métricas de éxito en una aplicación de iOS?
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
-TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
+TQID: 'https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Beginner
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 469
-ht-degree: 63%
-
+source-wordcount: '471'
+ht-degree: 62%
 ---
-
 # iOS - crear una ubicación y métrica de éxito de [!DNL Target]
 
 Para usar [!DNL Target] en su aplicación móvil, cree una ubicación y una métrica de éxito.
@@ -28,11 +35,11 @@ Para usar [!DNL Target] en su aplicación móvil, cree una ubicación y una mét
 >
 >[Adobe Experience Platform SDK para aplicaciones móviles](https://developer.adobe.com/client-sdks/documentation/){target=_blank} es la solución recomendada para impulsar [!DNL Adobe Experience Cloud] soluciones y servicios en sus aplicaciones móviles.
 
-Esta sección incluye código de ejemplo que se puede usar como plantilla en la aplicación. Los ejemplos de esta sección contienen código para iOS. Los mismos patrones sirven para Android. La sintaxis específica de Android se encuentra en la guía [Android SDK 4.x para soluciones de Experience Cloud](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=es).
+Esta sección incluye código de ejemplo que se puede usar como plantilla en la aplicación. Los ejemplos de esta sección contienen código para iOS. Los mismos patrones sirven para Android. La sintaxis específica de Android se encuentra en la guía [Android SDK 4.x para soluciones de Experience Cloud](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html).
 
 >[!NOTE]
 >
->Consulte la [Documentación móvil](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html?lang=es) para obtener una lista de todos los métodos [!DNL Target] disponibles.
+>Consulte la [Documentación móvil](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html) para obtener una lista de todos los métodos [!DNL Target] disponibles.
 
 Para crear una ubicación [!DNL Target] en la aplicación y realizar una solicitud, existen dos métodos principales:
 

@@ -4,29 +4,41 @@ description: Obtenga información sobre Target y el Reglamento General de Protec
 title: ¿Cómo gestiona Target las normas de privacidad y protección de datos?
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
-TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
+TQID: 'https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 2432
+source-wordcount: '2432'
 ht-degree: 61%
-
 ---
-
 # Reglamentos de protección de datos y privacidad
 
 Información sobre el Reglamento General de Protección de Datos (RGPD) de la Unión Europea, la Ley de Privacidad del Consumidor de California (CCPA) y otros requisitos de privacidad internacionales. Descubra cómo afectan estas regulaciones a su organización y a Adobe Target.
@@ -89,7 +101,7 @@ Hay tres escenarios a considerar cuando se usa la inclusión:
 
 1. **La etiqueta de Target se aprobó previamente mediante Adobe Experience Platform (o el sujeto de datos aprobó previamente Target):** La etiqueta de Target no se retiene para el consentimiento y funciona como se espera.
 1. **La etiqueta de Target NO está aprobada previamente y `bodyHidingEnabled` es FALSO:** la etiqueta de Target se activa solo después de que se haya obtenido el consentimiento del cliente. Antes de recopilar el consentimiento, solo está disponible el contenido predeterminado. Después de recibir el consentimiento, se llama a Target y el contenido personalizado está disponible para el sujeto de los datos (visitante). Debido a que solo el contenido predeterminado está disponible antes del consentimiento, es importante usar una estrategia adecuada, como una página de inicio que cubra cualquier parte de la página o contenido que pueda ser personalizado. Este proceso asegura que la experiencia se mantenga consistente para el sujeto de los datos (visitante).
-1. **La etiqueta de Target NO está aprobada previamente y `bodyHidingEnabled` es VERDADERO:** la etiqueta de Target se activa solo después de que se haya obtenido el consentimiento del cliente. Antes de recopilar el consentimiento, solo está disponible el contenido predeterminado. Sin embargo, debido a que `bodyHidingEnabled` se establece en verdadero, `bodyHiddenStyle` dicta qué contenido de la página está oculto hasta que se dispara la etiqueta de Target (o el sujeto de los datos rechaza la opción de inclusión, en cuyo caso se muestre el contenido por defecto). De forma predeterminada, `bodyHiddenStyle` se establece en `body { opacity:0;}`, que oculta la etiqueta de cuerpo HTML. A continuación encontrará la configuración de página recomendada por Adobe para que todo el cuerpo de la página, excepto el cuadro de diálogo del administrador de consentimiento, se oculte al colocar el contenido de la página en un contenedor y el cuadro de diálogo del administrador de consentimiento en un contenedor separado. Estos ajustes configuran Target de modo que ocultan solo el contenedor de contenido de la página. Consulte [Resumen de Privacy Service] (¿https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=es&).
+1. **La etiqueta de Target NO está aprobada previamente y `bodyHidingEnabled` es VERDADERO:** la etiqueta de Target se activa solo después de que se haya obtenido el consentimiento del cliente. Antes de recopilar el consentimiento, solo está disponible el contenido predeterminado. Sin embargo, debido a que `bodyHidingEnabled` se establece en verdadero, `bodyHiddenStyle` dicta qué contenido de la página está oculto hasta que se dispara la etiqueta de Target (o el sujeto de los datos rechaza la opción de inclusión, en cuyo caso se muestre el contenido por defecto). De forma predeterminada, `bodyHiddenStyle` se establece en `body { opacity:0;}`, que oculta la etiqueta de cuerpo HTML. A continuación encontrará la configuración de página recomendada por Adobe para que todo el cuerpo de la página, excepto el cuadro de diálogo del administrador de consentimiento, se oculte al colocar el contenido de la página en un contenedor y el cuadro de diálogo del administrador de consentimiento en un contenedor separado. Estos ajustes configuran Target de modo que ocultan solo el contenedor de contenido de la página. Consulte [Resumen de Privacy Service](¿https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?).
 
    La configuración de página recomendada para el escenario 3 es:
 
@@ -135,7 +147,7 @@ Todas las solicitudes de RGPD y CCPA entre soluciones de Experience Cloud, inclu
 
 ### ¿Qué información Adobe permite que nuestros clientes eliminen en respuesta a una solicitud del sujeto/usuario?
 
-La información relacionada con un visitante individual dentro de Target está contenida dentro del perfil del visitante de Target. Target permite que los clientes eliminen todos los datos asociados con un ID en su perfil del visitante. Para obtener ejemplos de los datos de perfil que Target almacena, consulte [Perfil del visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=es).
+La información relacionada con un visitante individual dentro de Target está contenida dentro del perfil del visitante de Target. Target permite que los clientes eliminen todos los datos asociados con un ID en su perfil del visitante. Para obtener ejemplos de los datos de perfil que Target almacena, consulte [Perfil del visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
 
 Los datos agregados o anonimizados (por ejemplo, datos de informe) que no identifican a una persona en particular, o datos que no están relacionados con una persona específica (por ejemplo, datos de contenido) están fuera del alcance de una solicitud de eliminación de usuario.
 
@@ -163,7 +175,7 @@ Adobe no ofrece actualmente una solución de administración de consentimiento, 
 
 Target proporciona soporte de funcionalidad opcional a través de Adobe Experience Platform para ayudar a su estrategia de administración de consentimiento. La funcionalidad de inclusión permite a los clientes controlar cómo y cuándo se inicia la etiqueta de Target. También hay una opción a través de Adobe Experience Platform para aprobar previamente la etiqueta de Target. El uso de Adobe Experience Platform es el enfoque recomendado para administrar inclusiones. Existe un control granular adicional en Adobe Experience Platform para ocultar elementos seleccionados de su página antes de la activación de Target que pueden ser útiles para su estrategia de consentimiento.
 
-Para obtener más información sobre el RGPD, la CCPA y Adobe Experience Platform, consulte [La biblioteca JavaScript de privacidad de Adobe y RGPD] (¿https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=es&). Además, consulte la *inclusión de Adobe Target y Adobe Experience Platform* en la sección superior.
+Para obtener más información sobre el RGPD, la CCPA y Adobe Experience Platform, consulte [La biblioteca JavaScript de privacidad de Adobe y RGPD](¿https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?). Además, consulte la *inclusión de Adobe Target y Adobe Experience Platform* en la sección superior.
 
 ### ¿Envía `AdobePrivacy.js` información a la API del RGPD?
 
@@ -302,7 +314,7 @@ La siguiente tabla contiene descripción de los campos JSON de perfil ilustrativ
 | Sample_Parameter | El responsable del tratamiento de datos carga o proporciona directamente gran cantidad de información en el perfil de Target. En este ejemplo, se cargó un parámetro en el perfil de Target con la API de actualización de perfil. Para obtener más información, consulte [Métodos para obtener datos en Target](/help/dev/before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md). |
 | user.ReturnTimeOfDay | Este campo estándar incluye la hora del día correspondiente a la visita de retorno más reciente de un usuario. |
 | firstSessionStart | Este campo estándar incluye la hora del día en que comenzó la primera sesión del usuario. |
-| user.sessionCountScript | El responsable del tratamiento de datos carga o proporciona directamente gran cantidad de información en el perfil de Target. En este ejemplo, un script de perfil está incrementando el número de sesiones que este visitante realizó en el sitio del responsable del tratamiento de datos. Para obtener más información, consulte [Atributos de script de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=es). |
+| user.sessionCountScript | El responsable del tratamiento de datos carga o proporciona directamente gran cantidad de información en el perfil de Target. En este ejemplo, un script de perfil está incrementando el número de sesiones que este visitante realizó en el sitio del responsable del tratamiento de datos. Para obtener más información, consulte [Atributos de script de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html). |
 
 >[!NOTE]
 >

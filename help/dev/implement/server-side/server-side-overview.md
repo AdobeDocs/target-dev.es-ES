@@ -1,32 +1,42 @@
 ---
 keywords: servidor, api, sdk, node.js, nodejs, node.js, api de recommendations, api, api, servidor1
-description: Obtenga información acerca de las  [!DNL Adobe Target] API de envío del lado del servidor, SDK y [!DNL Target Recommendations] API de.
-title: ¿Dónde puedo obtener información acerca de  [!DNL Target] API de envío del lado del servidor y los SDK?
+description: Obtenga información acerca de las API de entrega del servidor [!DNL Adobe Target], los SDK y las API [!DNL Target Recommendations].
+title: ¿Dónde puedo obtener información acerca de [!DNL Target] API y SDK de envío del lado del servidor?
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
+TQID: 'https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+    internal-label: Delivery API
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7a393cc6a3f30a276a256cdabb5b42fe08f3c505
+    internal-label: Machine learning
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 820
+source-wordcount: '823'
 ht-degree: 9%
-
 ---
-
 # Servidor: implementar [!DNL Target]
 
 Información sobre [!DNL Adobe Target] API de envío del lado del servidor, SDK y [!DNL Target Recommendations] API.
@@ -35,7 +45,7 @@ Información sobre [!DNL Adobe Target] API de envío del lado del servidor, SDK 
 >
 >Si su implementación utiliza at.js y [!DNL AppMeasurement] en el lado del cliente, debe utilizar la [!UICONTROL API de envío de Target] y los SDK del lado del servidor que se describen a continuación.
 >
->Si su implementación usa [!UICONTROL Adobe Experience Platform Web SDK], debería usar la [[!UICONTROL API de servidor de Adobe Experience Platform] [!UICONTROL Edge Network]](https://experienceleague.adobe.com/es/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>Si su implementación usa [!UICONTROL Adobe Experience Platform Web SDK], debería usar la [[!UICONTROL API de servidor de Adobe Experience Platform] [!UICONTROL Edge Network]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 El proceso siguiente se produce en una implementación del lado del servidor de [!DNL Target]:
 
@@ -104,7 +114,7 @@ Para llamadas a la API de Edge que no sean de SDK, cumpla los siguientes requisi
 
 Cuando [!DNL Target] clasifica una solicitud como tráfico de bots, la personalización puede fallar o parecer intermitente porque la búsqueda de perfiles, la evaluación de segmentos y el contenido personalizado para actividades como [!UICONTROL Recommendations] y [!UICONTROL Segmentación automática] están suprimidos.
 
-Obtenga más información acerca de la implementación con SDK en la [[!DNL Adobe Experience Platform Web SDK] descripción general](https://experienceleague.adobe.com/es/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
+Obtenga más información acerca de la implementación con SDK en la [[!DNL Adobe Experience Platform Web SDK] descripción general](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
 
 **Ejemplo de solicitud de API de Edge (los encabezados deben incluir `User-Agent`):**
 

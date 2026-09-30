@@ -1,27 +1,36 @@
 ---
 title: Implementación de aplicación de una sola página para [!DNL Adobe Experience Platform Web SDK]
-description: Aprenda a crear una implementación de aplicación de una sola página (SPA) de  [!DNL Adobe Experience Platform Web SDK]usando [!DNL Target].
+description: Aprenda a crear una implementación de aplicación de una sola página (SPA) de [!DNL Adobe Experience Platform Web SDK]usando [!DNL Target].
 keywords: target;adobe target;vistas xdm; vistas;aplicaciones de una sola página;SPA;ciclo de vida de SPA;lado del cliente;prueba AB;segmentación de experiencias;XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+TQID: 'https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1836
+source-wordcount: '1837'
 ht-degree: 2%
-
 ---
-
 # Implementación de aplicación de una sola página
 
 [!DNL Adobe Experience Platform Web SDK] proporciona funciones enriquecidas que permiten a su empresa ejecutar personalizaciones en tecnologías de próxima generación del lado del cliente, como aplicaciones de una sola página (SPA).
@@ -72,7 +81,7 @@ El concepto de [!UICONTROL Views] se puede ampliar mucho más allá de este esce
 
 [!UICONTROL Las vistas XDM] se pueden aprovechar en [!DNL Target] para permitir que los especialistas en marketing ejecuten pruebas A/B y XT en SPA a través de [!UICONTROL Visual Experience Composer]. Para hacerlo, es necesario realizar los siguientes pasos para completar una configuración de desarrollador única:
 
-1. Instalar [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/es/docs/experience-platform/web-sdk/install/overview).
+1. Instalar [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
 2. Determine todas las [!UICONTROL vistas XDM] de su aplicación de una sola página que desee personalizar.
 3. Después de definir las [!UICONTROL vistas XDM], para entregar actividades A/B o XT VEC, implemente la función `sendEvent()` con `renderDecisions` establecido en `true` y la [!UICONTROL vista XDM] correspondiente en su aplicación de una sola página. La vista [!UICONTROL XDM View] debe pasarse en `xdm.web.webPageDetails.viewName`. Este paso permite a los especialistas en marketing aprovechar [!UICONTROL Compositor de experiencias visuales] para iniciar pruebas A/B y XT para esos XDM.
 
@@ -232,7 +241,7 @@ Cuando haya terminado de definir sus [!UICONTROL vistas XDM] e implementado `sen
 
 >[!NOTE]
 >
->Para usar el VEC para tu SPA, debes instalar y activar la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome VEC Helper Extension](https://experienceleague.adobe.com/es/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
+>Para usar el VEC para tu SPA, debes instalar y activar la extensión [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) o [Chrome VEC Helper Extension](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
 ### Panel [!UICONTROL Modificaciones]
 

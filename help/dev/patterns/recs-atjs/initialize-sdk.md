@@ -1,33 +1,46 @@
 ---
 title: Inicializar SDK
-description: Asegúrese de que todos los pasos necesarios para cargar la biblioteca JavaScript  [!DNL Adobe Target] at.js se ejecuten en la secuencia correcta.
+description: Asegúrese de que todos los pasos necesarios para cargar la biblioteca JavaScript at.js de [!DNL Adobe Target] se ejecutan en la secuencia correcta.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
-TQID: https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo
+TQID: 'https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1879
+source-wordcount: '1880'
 ht-degree: 4%
-
 ---
-
 # Inicializar SDK
 
 Siga los pasos del diagrama *Inicializar SDK* para asegurarse de que todas las tareas necesarias para cargar la biblioteca JavaScript at.js de [!DNL Adobe Target] se ejecuten en la secuencia correcta.
@@ -75,27 +88,27 @@ Este paso ayuda a garantizar que la biblioteca `VisitorAPI.js` se carga, configu
 
 **Requisitos previos**
 
-* Para usar el servicio API/ID de visitante, tu empresa debe estar habilitada para [!DNL Adobe Experience Cloud] y tener un [!UICONTROL ID de organización]. Para obtener más información, consulte [Requisitos de Experience Cloud: ID de organización] (¿https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=es&){target=_blank} en la guía *Ayuda del servicio de identidad*.
-* Necesita el archivo `VisitorAPI.js`. Ya debería tener este archivo si tiene [!DNL Adobe Analytics] implementado. Este archivo también se puede agregar mediante la [[!DNL Adobe Experience Platform] extensión de etiquetas](https://experienceleague.adobe.com/docs/tags.html?lang=es){target=_blank} o se puede descargar desde el [Administrador de códigos Adobe Analytics](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=es){target=_blank}.
+* Para usar el servicio API/ID de visitante, tu empresa debe estar habilitada para [!DNL Adobe Experience Cloud] y tener un [!UICONTROL ID de organización]. Para obtener más información, consulte [Requisitos de Experience Cloud: ID de organización](¿https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} en la guía *Ayuda del servicio de identidad*.
+* Necesita el archivo `VisitorAPI.js`. Ya debería tener este archivo si tiene [!DNL Adobe Analytics] implementado. Este archivo también se puede agregar mediante la [[!DNL Adobe Experience Platform] extensión de etiquetas](https://experienceleague.adobe.com/docs/tags.html){target=_blank} o se puede descargar desde el [Administrador de códigos Adobe Analytics](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
 
 **Configurar y hacer referencia a VisitorAPI.js**
 
-Para obtener más información, consulte [Implementación del servicio Experience Cloud para Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=es){target=_blank}.
+Para obtener más información, consulte [Implementación del servicio Experience Cloud para Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}.
 
 **Lecturas**
 
-* [Información general del servicio de identidad de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=es){target=_blank}
-* [Acerca del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html?lang=es){target=_blank}
-* [Cookies y el servicio de Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=es){target=_blank}
-* [Solicitud y configuración de ID con el servicio de identidad de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=es){target=_blank}
-* [Conceptos básicos de sincronización de ID y tasas de coincidencia](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html?lang=es){target=_blank}
+* [Información general del servicio de identidad de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html){target=_blank}
+* [Acerca del servicio de ID](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html){target=_blank}
+* [Cookies y el servicio de Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html){target=_blank}
+* [Solicitud y configuración de ID con el servicio de identidad de Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html){target=_blank}
+* [Conceptos básicos de sincronización de ID y tasas de coincidencia](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html){target=_blank}
 
 **Acciones**
 
 * Incruste el archivo `VisitorAPI.js` en sus páginas web.
-* Obtenga información acerca de las [configuraciones disponibles para el servicio API/ID de visitante](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=es){target=_blank}.
+* Obtenga información acerca de las [configuraciones disponibles para el servicio API/ID de visitante](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}.
 * Una vez cargado el archivo `VisitorAPI.js`, use el método `Visitor.getInstance` para inicializar con las configuraciones necesarias.
-* Familiarícese con los [métodos disponibles](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=es){target=_blank}.
+* Familiarícese con los [métodos disponibles](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}.
 
 +++
 
@@ -114,11 +127,11 @@ Este paso ayuda a garantizar que los ID conocidos de los visitantes (ID de CRM, 
 * El ID conocido de los visitantes debe estar disponible en la capa de datos.
 
 **Establecer ID de cliente**
-Para obtener más información, consulte [setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=es){target=_blank}.
+Para obtener más información, consulte [setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}.
 
 **Lecturas**
 
-* [Sincronización de perfiles en tiempo real para mbox3rdPartyId](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=es){target=_blank}
+* [Sincronización de perfiles en tiempo real para mbox3rdPartyId](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html){target=_blank}
 
 **Acciones**
 
@@ -202,12 +215,12 @@ Este paso ayuda a garantizar que se establezcan todos los datos que deben enviar
 
 * La capa de datos debe estar lista con todos los datos que deben enviarse a [!DNL Target].
 * Recommendations: enriquecer perfil.
-   * Pase `entity.id` para capturar los datos de los criterios y artículos vistos recientemente según los criterios basados en el último producto visto.
-   * Pase `entity.id` para capturar datos para los criterios de popularidad basados en la categoría de favoritos.
-   * Pase el atributo de perfil si los criterios personalizados se basan en él o se utilizan en el filtrado de reglas de inclusión en cualquier criterio.
+  * Pase `entity.id` para capturar los datos de los criterios y artículos vistos recientemente según los criterios basados en el último producto visto.
+  * Pase `entity.id` para capturar datos para los criterios de popularidad basados en la categoría de favoritos.
+  * Pase el atributo de perfil si los criterios personalizados se basan en él o se utilizan en el filtrado de reglas de inclusión en cualquier criterio.
 * Recommendations: introducir datos de productos.
-   * Se pueden pasar otros parámetros de entidad (reservados y personalizados) para introducir o actualizar el catálogo de productos en [!DNL Recommendations].
-   * El catálogo de productos también se puede actualizar usando fuentes de entidad usando la interfaz de usuario o la API de [!DNL Target].
+  * Se pueden pasar otros parámetros de entidad (reservados y personalizados) para introducir o actualizar el catálogo de productos en [!DNL Recommendations].
+  * El catálogo de productos también se puede actualizar usando fuentes de entidad usando la interfaz de usuario o la API de [!DNL Target].
 
 **Asignar datos a[!DNL Target]**
 
@@ -229,15 +242,15 @@ Para obtener más información, consulte [targetPageParams()](/help/dev/implemen
 
 ## 1.6: Promoción {#promotion}
 
-Agregue elementos promocionados y controle su ubicación en sus [!DNL Target Recommendations] [diseños](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=es){target=_blank}.
+Agregue elementos promocionados y controle su ubicación en sus [!DNL Target Recommendations] [diseños](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
 
 +++Ver detalles
 
 **Opciones disponibles**
 
 * Promocionar por ID
-* [Promocionar por colección](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=es){target=_blank}
-* [Promocionar por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=es){target=_blank}
+* [Promocionar por colección](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [Promocionar por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Se requieren parámetros de entidad**
 
@@ -265,7 +278,7 @@ Haga recomendaciones basadas en el contenido del carro de compras del usuario.
 
 **Lecturas**
 
-* [Basado en el carro](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en el carro](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -294,7 +307,7 @@ Haga recomendaciones basadas en la popularidad general de un elemento en el siti
 
 **Lecturas**
 
-* [Basado en popularidad](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en popularidad](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -319,7 +332,7 @@ Haga recomendaciones basadas en la búsqueda de artículos similares a los que e
 
 **Lecturas**
 
-* [Basado en elementos](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en elementos](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -342,7 +355,7 @@ Haga recomendaciones basadas en el comportamiento del usuario.
 
 **Lecturas**
 
-* [Basado en el usuario](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Basado en el usuario](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -364,7 +377,7 @@ Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 **Lecturas**
 
-* [Criterios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=es#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Criterios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -376,7 +389,7 @@ Cree recomendaciones basadas en un archivo personalizado que haya cargado.
 
 **Lecturas**
 
-* [Uso de reglas de inclusión dinámicas y estáticas](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=es){target=_blank}
+* [Uso de reglas de inclusión dinámicas y estáticas](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -390,7 +403,7 @@ Pase los ID de entidad de las entidades que desee excluir de las recomendaciones
 
 **Lecturas**
 
-* [¿Puedo excluir dinámicamente una entidad?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=es#exclude){target=_blank}
+* [¿Puedo excluir dinámicamente una entidad?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -404,7 +417,7 @@ Use los atributos de entidad para pasar la información de producto o contenido 
 
 **Lecturas**
 
-* [Atributos de entidad](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=es){target=_blank}
+* [Atributos de entidad](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=en){target=_blank}
 
 +++
 
@@ -452,7 +465,7 @@ Este paso garantiza que la biblioteca JavaScript at.js se cargue e inicialice.
 
 *Lecturas*
 
-* [Cómo funciona Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=es){target=_blank}
+* [Cómo funciona Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html){target=_blank}
 * [Cómo funciona at.js](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [Implementación de Target sin un administrador de etiquetas](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 

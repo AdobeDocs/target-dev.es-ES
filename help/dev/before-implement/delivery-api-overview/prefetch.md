@@ -4,25 +4,32 @@ description: ¿Cómo utilizo la recuperación previa en la [!UICONTROL API de en
 keywords: API de envío
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
+TQID: 'https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Mobile experience
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '578'
 ht-degree: 0%
-
 ---
-
 # Precarga
 
 La recuperación previa permite a clientes como aplicaciones móviles y servidores recuperar contenido para varios mboxes o vistas en una solicitud, almacenarlo en la caché local y, posteriormente, notificar a [!DNL Target] cuando el visitante visite esos mboxes o vistas.
@@ -136,7 +143,7 @@ Dentro de la respuesta, verá el campo `content` que contiene la experiencia que
 
 ## Recuperar previamente mboxes con métricas `clickTrack` al usar [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=es){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
+[[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) es una integración de soluciones cruzadas que le permite crear actividades basadas en [!DNL Analytics] métricas de conversión y segmentos de audiencia.
 
 El siguiente fragmento de código es una respuesta de una recuperación previa de un mbox que contiene `clickTrack` métricas para notificar a [!DNL Analytics] que se hizo clic en una oferta:
 
@@ -181,7 +188,7 @@ El siguiente fragmento de código es una respuesta de una recuperación previa d
 
 ## Recuperar vistas previamente
 
-Las vistas admiten aplicaciones de una sola página (SPA) y aplicaciones móviles de forma más fluida. Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia SPA o móvil. Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL Prueba A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=es){target=_blank} y [[!UICONTROL Segmentación de experiencias]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=es){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Las vistas admiten aplicaciones de una sola página (SPA) y aplicaciones móviles de forma más fluida. Las vistas se pueden ver como un grupo lógico de elementos visuales que, juntos, constituyen una experiencia SPA o móvil. Ahora, a través de la API de entrega, se pueden recuperar previamente las actividades [[!UICONTROL Prueba A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} y [[!UICONTROL Segmentación de experiencias]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T creadas por VEC con modificaciones en [Vistas para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ```shell  {line-numbers="true"}
 curl -X POST \

@@ -1,26 +1,33 @@
 ---
 title: Notificar al destinatario
-description: Asegúrese de que todos los eventos de los que  [!DNL Target] debe realizar un seguimiento se envían mediante el método trackEvent.
+description: Asegúrese de que todos los eventos de los que [!DNL Target] debe realizar un seguimiento se envíen mediante el método trackEvent.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
+TQID: 'https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Implementation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 369
+source-wordcount: '370'
 ht-degree: 0%
-
 ---
-
 # Notificar a [!DNL Target]
 
 Al completar este paso, se asegura de que todos los eventos que deben enviarse a [!DNL Adobe Target] se envíen mediante el método `trackEvent`.
@@ -56,11 +63,11 @@ No es necesario incluir los atributos de conversión de pedidos en esta llamada.
 * Reúnase con su equipo empresarial para identificar todos los eventos que pueden considerarse como métricas de conversión o de éxito. También debe identificar el evento de conversión que genera ingresos para que esos detalles se puedan enviar a [!DNL Target] junto con los datos del evento.
 * Asegúrese de que los siguientes atributos estén disponibles en la capa de datos para que pueda enviarlos con el evento de conversión. El evento de conversión genera ingresos, como una compra de producto o un evento de Agregar al carro de compras.
 
-   * `productPurchaseId`: ID de producto comprados como parte del pedido. Separe varios productos con comas.
-   * `orderTotal`: total del pedido de la compra.
-   * `orderId`: ID de pedido de la compra.
+  * `productPurchaseId`: ID de producto comprados como parte del pedido. Separe varios productos con comas.
+  * `orderTotal`: total del pedido de la compra.
+  * `orderId`: ID de pedido de la compra.
 
-  La siguiente ilustración muestra una regla [para [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=es){target=_blank} que solo debería activarse en la página [!UICONTROL Confirmación].
+  La siguiente ilustración muestra una regla [para [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que solo debería activarse en la página [!UICONTROL Confirmación].
 
   ![Página de configuración de la acción](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -69,7 +76,7 @@ No es necesario incluir los atributos de conversión de pedidos en esta llamada.
 **Lecturas**
 
 * [adobe.target.trackEvent(), método](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds para criterios basados en el carro de compras](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=es#cart-based){target=_blank}
+* [cartIds para criterios basados en el carro de compras](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **Acciones**
 

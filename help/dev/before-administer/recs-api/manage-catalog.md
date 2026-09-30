@@ -167,7 +167,7 @@ Los detalles de entidad solo se pueden recuperar para una sola entidad a la vez.
 
    >[!NOTE]
    >
-   >Si no se especifica ningún entorno explícitamente, Get Entity intenta obtener la entidad solo de [entorno predeterminado](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Si desea extraer de cualquier entorno que no sea el predeterminado, debe especificar el ID del entorno.
+   >Si no se especifica ningún entorno explícitamente, Get Entity intenta obtener la entidad solo de [entorno predeterminado](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=es). Si desea extraer de cualquier entorno que no sea el predeterminado, debe especificar el ID del entorno.
 
 1. Si es necesario, agregue el parámetro `environmentId` y vuelva a enviar la solicitud.
 

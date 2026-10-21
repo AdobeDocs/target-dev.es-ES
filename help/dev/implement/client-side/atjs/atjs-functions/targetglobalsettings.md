@@ -286,7 +286,7 @@ En el campo Encabezado de la biblioteca se puede introducir JavaScript de format
 window.targetGlobalSettings = {
    timeout: 200, // using custom timeout
    visitorApiTimeout: 500, // using custom API timeout
-   enabled: document.location.href.indexOf('https://www.adobe.com') >= 0 // enabled ONLY on adobe.com
+   enabled: document.location.href.indexOf('https://www.adobe.com/es') >= 0 // enabled ONLY on adobe.com
 };
 ```
 

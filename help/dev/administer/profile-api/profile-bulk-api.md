@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -156,9 +156,9 @@ Los valores esperados para los campos de estado son:
 
 | Estado | Detalles |
 | --- | --- |
-| [!UICONTROL complete] | La solicitud de actualización de lote de perfiles se completó correctamente. |
-| [!UICONTROL incompleto] | La solicitud de actualización de lote de perfiles aún se está procesando y no se ha completado. |
-| [!UICONTROL atascado] | La solicitud de actualización de lote de perfiles está atascada y no se pudo completar. |
+| [!UICONTROL complete] | La solicitud de actualización de lote de perfiles se completó correctamente. No se necesita ninguna acción. |
+| [!UICONTROL incompleto] | La solicitud de actualización de lote de perfiles aún se está procesando y no se ha completado. No se necesita ninguna acción. |
+| [!UICONTROL atascado] | La solicitud de actualización de lote de perfiles está atascada y no se pudo completar. Si un lote permanece atascado incluso después de 24 horas desde su carga, debe cargarlo de nuevo. |
 
 ### Respuesta URL de estado detallado del lote
 

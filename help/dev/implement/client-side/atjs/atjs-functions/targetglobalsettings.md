@@ -1,34 +1,44 @@
 ---
 keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalsettings, global settings, at.js, funciones, función, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookieDomain, crossDomain, crossDomain, timeout, globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain8 crossDomain5, optoutEnabled, optout, opt out, selectorsPollingTimeout, dataProviders, Personalization híbrido, deviceIdLifetime
-description: Utilice la función [!UICONTROL targetGlobalSettings()] para que la biblioteca JavaScript  [!DNL Adobe Target] at.js anule la configuración en lugar de usar las API  [!DNL Target] UI o REST.
+description: Use la función [!UICONTROL targetGlobalSettings()] para la biblioteca JavaScript at.js [!DNL Adobe Target] a fin de anular la configuración en lugar de usar las API de REST o IU [!DNL Target].
 title: ¿Cómo se usa la función [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
-source-wordcount: 2705
+source-wordcount: '2707'
 ht-degree: 56%
-
 ---
-
 # [!UICONTROL targetGlobalSettings()]
 
 Puede anular la configuración de la biblioteca at.js mediante `[!UICONTROL targetGlobalSettings()]`, en lugar de hacerlo en la interfaz de usuario de [!DNL Target], o mediante las API de REST.
@@ -552,12 +562,12 @@ Tenga en cuenta lo siguiente al utilizar `serverState`:
 
 * Por el momento, at.js v2.2 solo admite la entrega de experiencias mediante serverState para:
 
-   * Actividades creadas por VEC que se ejecutan al cargar la página.
-   * Vistas previamente recuperadas.
+  * Actividades creadas por VEC que se ejecutan al cargar la página.
+  * Vistas previamente recuperadas.
 
-     Si hay SPA que utilizan [!DNL Target] vistas y `triggerView()` en la API de at.js, at.js v2.2 almacena en caché el contenido de todas las vistas previamente recuperadas del lado del servidor y las aplica en cuanto cada vista se activa mediante `triggerView()`, de nuevo sin activar ninguna llamada de recuperación de contenido adicional a [!DNL Target].
+    Si hay SPA que utilizan [!DNL Target] vistas y `triggerView()` en la API de at.js, at.js v2.2 almacena en caché el contenido de todas las vistas previamente recuperadas del lado del servidor y las aplica en cuanto cada vista se activa mediante `triggerView()`, de nuevo sin activar ninguna llamada de recuperación de contenido adicional a [!DNL Target].
 
-   * **Nota**: Actualmente, los mboxes recuperados del lado del servidor no son compatibles con `serverState`.
+  * **Nota**: Actualmente, los mboxes recuperados del lado del servidor no son compatibles con `serverState`.
 
 * Al aplicar ofertas `serverState`, at.js tiene en cuenta la configuración de `pageLoadEnabled` y `viewsEnabled`; por ejemplo, las ofertas de carga de página no se aplicarán si la configuración de `pageLoadEnabled` es falsa.
 

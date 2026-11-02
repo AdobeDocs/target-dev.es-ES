@@ -1,25 +1,27 @@
 ---
 keywords: implementación, implementación, configuración, configuración, actualización de perfil único
-description: Obtener datos en  [!DNL Target] usando la API de actualización de perfil único.
-title: ¿Cómo puedo obtener datos en  [!DNL Target] usando la [!UICONTROL API de actualización de perfil único]?
+description: Obtener datos en [!DNL Target] mediante la API de actualización de perfil único.
+title: ¿Cómo puedo obtener datos en [!DNL Target] mediante la [!UICONTROL API de actualización de perfil único]?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
 TQID: https://experienceleague.adobe.com/tkh7YEJ9Vr5eMynNYYxYKZZDOXZTVJNxwUSCxiwPfzI
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 160
+source-wordcount: '162'
 ht-degree: 3%
-
 ---
-
 # [!UICONTROL API de actualización de perfil único]
 
 La [!DNL Adobe Target] [!UICONTROL API de actualización de perfil único] le permite enviar una actualización de perfil para un solo usuario. La [!UICONTROL API de actualización de perfil único] es casi idéntica a la [!UICONTROL API de actualización de perfil en lote], pero se actualiza un perfil de visitante a la vez, en línea con la llamada de API en lugar de con un archivo .cvs.

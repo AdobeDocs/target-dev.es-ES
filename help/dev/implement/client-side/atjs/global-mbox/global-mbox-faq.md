@@ -1,29 +1,34 @@
 ---
 keywords: solución de problemas, preguntas más frecuentes, FAQ, global, mbox global
-description: Lea las preguntas más frecuentes (FAQ) y las respuestas acerca de los mboxes globales de Adobe [!DNL Target] s.
+description: Lea las preguntas más frecuentes (FAQ) y las respuestas acerca de los mboxes globales de Adobe [!DNL Target].
 title: ¿Cuáles son las preguntas más frecuentes sobre el mbox global?
 feature: at.js
 exl-id: 7bcd1b67-809a-466a-b648-6e0e44386157
 TQID: https://experienceleague.adobe.com/bxsjCqSQpp6M20StzZtMBrfxjJCKgPEPfS2OlBUP00A
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 316
+source-wordcount: '317'
 ht-degree: 31%
-
 ---
-
 # Preguntas más frecuentes sobre mbox global
 
 Lista de las preguntas más frecuentes (FAQ) sobre los mboxes globales.

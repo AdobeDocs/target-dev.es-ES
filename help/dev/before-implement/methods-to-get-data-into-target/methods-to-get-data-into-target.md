@@ -1,26 +1,29 @@
 ---
 keywords: implementar, implementar, configurar, configurar, parámetro de página, tomcat, codificación url, atributo de perfil en página, parámetro mbox, atributos de perfil en página, atributo de perfil en script, API de actualización de perfiles en lote, API de actualización de archivo único, atributos del cliente, implementar5, implementar6, implementar7, implementar8, implementar9, implementar0, implementar1, implementar2, implementar3, implementar4, implementar5, proveedores de datos, proveedor de datos, proveedor de datos
-description: Obtenga datos en  [!DNL Target] (parámetros de página, atributos de perfil, atributos de perfil de secuencia de comandos, proveedores de datos, API de actualización de perfiles únicas y masivas, atributos del cliente).
+description: Obtenga datos en [!DNL Target] (parámetros de página, atributos de perfil, atributos de perfil de secuencia de comandos, proveedores de datos, API de actualización de perfiles únicas y masivas, atributos del cliente).
 title: ¿Cómo puedo obtener datos en Target?
 feature: Implementation
 exl-id: a54e306a-ea8e-4d3f-bc5d-b5895b6b9a84
 TQID: https://experienceleague.adobe.com/pmlPWRHb9tnrdSFm7s5OZ-RRsJJOxw-ntBY5AeswIcM
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 377
+source-wordcount: '377'
 ht-degree: 27%
-
 ---
-
 # Información general sobre métodos
 
 Información sobre los distintos métodos que se pueden utilizar para introducir datos en Adobe Target.

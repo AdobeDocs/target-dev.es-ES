@@ -1,28 +1,32 @@
 ---
 keywords: Navegadores, Requisitos previos, Requisitos, internet explorer, chrome, firefox, safari, android, surface, Navegadores0
-description: Conozca qué exploradores de Internet [!DNL Adobe Target] admiten para su interfaz y para la entrega de contenido.
-title: ¿Qué exploradores admiten  [!DNL Target] ?
+description: Descubra qué exploradores de Internet [!DNL Adobe Target] admiten para su interfaz y para la entrega de contenido.
+title: ¿Qué exploradores admite [!DNL Target]?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
 TQID: https://experienceleague.adobe.com/xYilaZkJzo4zLIJ4uvIxkuRkhl5E1D52OFmf1eZNtDs
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 443
+source-wordcount: '445'
 ht-degree: 19%
-
 ---
-
 # Navegadores admitidos
 
 La aplicación y la entrega de contenido de [!DNL Adobe Target] se han probado en una amplia gama de navegadores y dispositivos.

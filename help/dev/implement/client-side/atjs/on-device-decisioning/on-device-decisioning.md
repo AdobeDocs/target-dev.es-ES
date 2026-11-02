@@ -104,7 +104,7 @@ La siguiente lista corresponde a los números del diagrama:
 
 | Paso | Descripción |
 | --- | --- |
-| 1 | La ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud](¿https://experienceleague.adobe.com/docs/id-service/using/home.html?). |
+| 1 | La ID de visitante de Experience Cloud se ha recuperado del [servicio de identidad de Adobe Experience Cloud] (¿https://experienceleague.adobe.com/docs/id-service/using/home.html?). |
 | 2 | La biblioteca at.js carga sincrónicamente y oculta el cuerpo del documento.<br />   La biblioteca at.js también se puede cargar de forma asíncrona con un fragmento de ocultamiento previo opcional implementado en la página. |
 | 3 | La biblioteca at.js oculta el cuerpo para evitar parpadeos. |
 | 4 | Se realiza una solicitud de carga de página que incluye todos los parámetros configurados, como (ECID, ID de cliente, parámetros personalizados, perfil de usuario, etc.) |
@@ -366,7 +366,7 @@ Puede filtrar todas las actividades que cumplen los requisitos de [!UICONTROL to
 
    La primera generación de artefactos de reglas JSON puede tardar hasta 10 minutos.
 
-1. Cree y active un tipo de actividad [compatible con la toma de decisiones en el dispositivo]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md), y verifique que cumpla los requisitos de [!UICONTROL toma de decisiones en el dispositivo].[!UICONTROL 
+1. Cree y active un tipo de actividad [compatible con la toma de decisiones en el dispositivo](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md), y verifique que cumpla los requisitos de [!UICONTROL toma de decisiones en el dispositivo].
 1. Establezca el **[!UICONTROL Método de decisión]** en **[!UICONTROL &quot;Híbrido&quot;]** o **[!UICONTROL &quot;Solo en el dispositivo&quot;]** a través de la interfaz de usuario de la configuración de at.js.
 1. Descargue e implemente at.js 2.5.0+ en sus páginas.
 

@@ -62,7 +62,7 @@ El seguimiento entre dominios permite ver sesiones en dos sitios relacionados, p
 
 ## Comportamiento de la cookie at.js 1.*x*
 
-Para las versiones 1.0}x *de at.js, el comportamiento de la cookie depende de si es una cookie de origen, una cookie de terceros con una cookie de origen o solo una cookie de terceros.*
+Para las versiones 1.0&rbrace;x *de at.js, el comportamiento de la cookie depende de si es una cookie de origen, una cookie de terceros con una cookie de origen o solo una cookie de terceros.*
 
 ### Cuándo usar cookies de origen o de terceros
 

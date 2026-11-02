@@ -50,7 +50,7 @@ La siguiente tabla indica qué [tipos de actividad](https://experienceleague.ado
 | [Segmentación de experiencias](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT) | Sí |
 | [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) ![Premium](../../../assets/premium.png) | No |
 | [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html) ![Premium](../../../assets/premium.png) | No |
-| [Actividades que usan Analytics for Target](¿https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) (A4T) | Sí |
+| [Actividades que usan Analytics for Target] (¿https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?) (A4T) | Sí |
 
 ## Segmentación de audiencia
 

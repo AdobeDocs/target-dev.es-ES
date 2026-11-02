@@ -1,28 +1,32 @@
 ---
 keywords: eventos personalizados, at.js, solicitud fallida, solicitud correcta, error de representación de contenido, representación de contenido correcta, biblioteca cargada, solicitar inicio, inicio de representación de contenido, representación de contenido sin ofertas, redireccionamiento de representación de contenido, eventos personalizados2
-description: Utilice eventos personalizados para que se notifique a la biblioteca JavaScript  [!DNL Adobe Target] at.js cuando una solicitud o una oferta de mbox se realice correctamente o no se realice correctamente.
+description: Utilice eventos personalizados para que se notifique a la biblioteca JavaScript at.js de [!DNL Adobe Target] cuando una solicitud o una oferta de mbox se realice correctamente o no se complete correctamente.
 title: ¿Cómo utilizo los eventos personalizados de at.js?
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
 TQID: https://experienceleague.adobe.com/gCjLJ-XBlMe-GE-gaTJ2wHkn1jmal6Ftbs1GDb0zURA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 661
+source-wordcount: '662'
 ht-degree: 70%
-
 ---
-
 # Eventos personalizados de at.js
 
 Información sobre `at.js custom events`, le avisa cuando una oferta o una solicitud de mbox se procesa correcta o incorrectamente.
@@ -62,7 +66,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 
 Vea el siguiente vídeo para aprender a utilizar los tokens de respuesta y los eventos personalizados de at.js con el fin de compartir información de perfil de [!DNL Target] con sistemas de terceros.
 
->[!VIDEO](https://video.tv.adobe.com/v/33709/?captions=spa&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)
 
 
 

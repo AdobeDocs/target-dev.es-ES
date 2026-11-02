@@ -1,28 +1,32 @@
 ---
 keywords: parpadeo, at.js, implementación, asincrónico, asincrónico, sincrónico, sincrónico, $8
-description: Descubra cómo at.js y  [!DNL Target] evitan el parpadeo (el contenido predeterminado se muestra momentáneamente antes de ser reemplazado por el contenido de la actividad) durante la carga de la página o la aplicación.
+description: Descubra cómo at.js y [!DNL Target] evitan el parpadeo (el contenido predeterminado se muestra momentáneamente antes de ser reemplazado por el contenido de la actividad) durante la carga de la página o la aplicación.
 title: ¿Cómo administra at.js el parpadeo?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 TQID: https://experienceleague.adobe.com/r8uyzkf1gSHmppyDHPOcn5jrH86Hedb4ArMmtigq93w
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 717
+source-wordcount: '718'
 ht-degree: 57%
-
 ---
-
 # Cómo gestiona at.js el parpadeo
 
 Información sobre cómo la biblioteca JavaScript de at.js de [!DNL Adobe Target] evita el parpadeo mientras se carga una página o una aplicación.

@@ -1,27 +1,30 @@
 ---
 keywords: mboxCreate, mboxcreate, mbox create, at.js, funciones, función
-description: Utilice la función [!UICONTROL mboxCreate()] para que la biblioteca JavaScript  [!DNL Adobe Target] at.js aplique ofertas al DIV más cercano con el nombre de clase mboxDefault. (at.js 1.x)
+description: Utilice la función [!UICONTROL mboxCreate()] para la biblioteca JavaScript at.js [!DNL Adobe Target] a fin de aplicar ofertas al DIV más cercano con el nombre de clase mboxDefault. (at.js 1.x)
 title: ¿Cómo se usa la función [!UICONTROL mboxCreate()]?
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
 TQID: https://experienceleague.adobe.com/hCEKL9RPtqIbMVEouzObjU6dc7TKl1hBtKZ1jEdicRE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 216
+source-wordcount: '217'
 ht-degree: 40%
-
 ---
-
 # [!UICONTROL mboxCreate(mbox,params)] - at.js 1.x
 
 Ejecuta una solicitud y aplica la oferta al DIV más cercano con nombre de clase mboxDefault.

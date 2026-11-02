@@ -1,28 +1,32 @@
 ---
 keywords: targetPageParams, targetpageparams, pageParams, pageparams, parámetros de página, at.js, funciones, función, targetPageParams0
-description: Utilice la función [!UICONTROL targetPageParams()] para que la biblioteca JavaScript  [!DNL Adobe Target] at.js adjunte parámetros al mbox global desde fuera del código de solicitud.
+description: Utilice la función [!UICONTROL targetPageParams()] para la biblioteca JavaScript at.js [!DNL Adobe Target] a fin de adjuntar parámetros al mbox global desde fuera del código de solicitud.
 title: ¿Cómo utilizo la función [!UICONTROL targetPageParams()]?
 feature: at.js
 exl-id: 274e4d1f-843a-443b-ad98-7139dc4a13f8
 TQID: https://experienceleague.adobe.com/xaSxd1biZ8G-LmgYN4YW9BZ2lDyjZyPHOOlfnbXC2jU
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
-source-wordcount: 170
+source-wordcount: '171'
 ht-degree: 66%
-
 ---
-
 # [!UICONTROL targetPageParams()]
 
 Este método permite adjuntar parámetros al mbox global desde fuera del código de la solicitud.

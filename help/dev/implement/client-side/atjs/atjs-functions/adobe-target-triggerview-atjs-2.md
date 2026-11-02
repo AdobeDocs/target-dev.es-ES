@@ -1,27 +1,30 @@
 ---
 keywords: adobe.target.triggerView, triggerView, triggerview, vista de déclencheur, at.js, funciones, función, viewName, viewname, nombre de vista, adobe.target.triggerView1
-description: Utilice la función adobe.target.triggerView() para la biblioteca JavaScript  [!DNL Adobe Target] at.js para su uso en aplicaciones de una sola página (SPA). (at.js 2.x)
+description: Utilice la función adobe.target.triggerView() para la biblioteca JavaScript at.js [!DNL Adobe Target] para usarla en aplicaciones de una sola página (SPA). (at.js 2.x)
 title: ¿Cómo utilizo la función adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 446
+source-wordcount: '447'
 ht-degree: 19%
-
 ---
-
 # adobe.target.triggerView (viewName, options): at.js 2.x
 
 Se puede llamar a esta función cada vez que se carga una página nueva o cuando se vuelve a procesar un componente de una página. `adobe.target.triggerView()` debe implementarse para aplicaciones de una sola página (SPA) a fin de usar el [!UICONTROL Compositor de experiencias visuales] (VEC) para crear actividades de [!UICONTROL Prueba A/B] y [!UICONTROL Segmentación de experiencias] (XT). Si `[!UICONTROL adobe.target.triggerView()]` no está implementado en el sitio, el VEC no se puede usar para SPA. Para obtener más información, consulte [Implementación de aplicación de una sola página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
@@ -83,7 +86,7 @@ adobe.target.getOffers({
 
 ## Ejemplo: compatibilidad óptima para `triggerView()` con la extensión [!UICONTROL Ayuda de edición visual de Adobe]
 
-Tenga en cuenta lo siguiente al usar la extensión [Ayuda de edición visual de Adobe](https://experienceleague.adobe.com/es/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
+Tenga en cuenta lo siguiente al usar la extensión [Ayuda de edición visual de Adobe](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
 
 Debido a las nuevas directivas de Manifiesto V3 de [!DNL Googl]e para las extensiones [!DNL Chrome], la extensión [!UICONTROL Ayuda de edición visual] debe esperar el evento `DOMContentLoaded` antes de cargar las bibliotecas [!DNL Target] en el VEC. Este retraso podría hacer que las páginas web activen la llamada a `triggerView()` antes de que las bibliotecas de creación estén listas, lo que ocasionaría que la vista no se rellene al cargar.
 

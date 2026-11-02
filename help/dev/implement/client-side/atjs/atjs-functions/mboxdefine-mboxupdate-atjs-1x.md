@@ -1,27 +1,30 @@
 ---
 keywords: mboxDefine, mboxdefine, mbox define, mboxUpdate, mboxupdate, actualización de mbox, at.js, funciones, función, mboxDefine0
-description: Use las funciones [!UICONTROL mboxDefine()] y [!UICONTROL mboxUpdate()] para la biblioteca JavaScript  [!DNL Adobe Target] at.js para definir o actualizar un mbox. (at.js 1.x)
+description: Use las funciones [!UICONTROL mboxDefine()] y [!UICONTROL mboxUpdate()] para la biblioteca JavaScript at.js de [!DNL Adobe Target] para definir o actualizar un mbox. (at.js 1.x)
 title: ¿Cómo utilizo las funciones [!UICONTROL mboxDefine()] y [!UICONTROL mboxUpdate()]?
 feature: at.js
 exl-id: 0a7dbea2-1cbd-4a5b-ba68-4c76a88d65c4
 TQID: https://experienceleague.adobe.com/Fn-Ej8jk2AMEn79tOtRoP9GQc36Ugy6FtXyn6x7jkmA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 208
-ht-degree: 46%
-
+source-wordcount: '209'
+ht-degree: 45%
 ---
-
 # [!UICONTROL mboxDefine()] y [!UICONTROL mboxUpdate()] - at.js 1.x
 
 Defina y actualice un mbox en [!DNL Adobe Target].

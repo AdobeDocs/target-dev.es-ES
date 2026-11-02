@@ -1,33 +1,42 @@
 ---
 keywords: Información general y referencia, webkit, cookies, origen, terceros, origen, terceros,
-description: Obtenga información acerca del comportamiento de  [!DNL Target] cookies (cookie de origen, cookie de terceros con cookie de origen o cookie de terceros solamente).
-title: ¿Dónde Puedo Encontrar Información Sobre  [!DNL Target] Cookies?
+description: Obtenga información acerca del comportamiento de la cookie [!DNL Target] (cookie de origen, cookie de terceros con cookie de origen o solo cookie de terceros).
+title: ¿Dónde puedo encontrar información sobre las cookies de [!DNL Target]?
 feature: at.js
 exl-id: d44e02ce-8920-4130-bcad-699ca77c0dad
 TQID: https://experienceleague.adobe.com/Uc9Gb06t9DIkvBvLQJ9ZhopE8pyJovjyrQdsUmFD9-o
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1692
+source-wordcount: '1694'
 ht-degree: 49%
-
 ---
-
 # [!DNL Target] cookies
 
 El comportamiento de la cookie depende de si es una cookie de origen, una cookie de terceros con una cookie de origen o solo una cookie de terceros.
@@ -42,7 +51,7 @@ Ver también [Eliminar la [!DNL Target] cookie](cookie-deleting.md).
 
 ## Cuándo usar cookies de origen o de terceros
 
-La configuración del sitio determina las cookies que se utilizarán. Es útil entender cómo funciona [!DNL Target] al intentar comprender las cookies de origen y de terceros. Consulte [Cómo funciona [!DNL Adobe] [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=es) para obtener más información.
+La configuración del sitio determina las cookies que se utilizarán. Es útil entender cómo funciona [!DNL Target] al intentar comprender las cookies de origen y de terceros. Consulte [Cómo funciona [!DNL Adobe] [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) para obtener más información.
 
 Hay tres casos principales para el uso de cookies:
 
@@ -157,4 +166,4 @@ De Apple:
 | Funcionalidad afectada | Detalles |
 |--- |--- |
 | Soporte para la no participación | Los cambios de Apple en el seguimiento de WebKit interrumpen el soporte para la no participación.<br />La no participación en Target emplea una cookie en el dominio `clientcode.tt.omtrdc.net`. Para obtener más información, consulte [Privacidad](privacy.md).<br />Target admite dos formas de no participación:<ul><li>Una por cliente (el cliente gestiona el vínculo de no participación).</li><li>Uno a través de [!DNL Adobe] que excluye al usuario de toda la funcionalidad de [!DNL Target] para todos los clientes.</li></ul>Ambos métodos utilizan una cookie de terceros. |
-| Actividades de Target | Los clientes pueden elegir su [duración de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=es) para sus cuentas de [!DNL Target] (hasta 90 días). El problema es que si la duración del perfil de la cuenta supera los 30 días y se purga la cookie de origen porque el dominio del cliente se ha marcado como un seguimiento de usuarios entre sitios, el comportamiento para los visitantes de Safari se ve afectado en las siguientes áreas de Target:<br />**Informes de Target**: Si un usuario de Safari entra en una actividad, regresa pasados 30 días y luego convierte ese usuario, cuenta como dos visitantes y una conversión.<br />Este comportamiento es el mismo para las actividades que usan Analytics como fuente de informes (A4T).<br />**Perfiles y pertenencia a actividades**:<ul><li>Los datos de perfil se borran al caducar la cookie de origen.</li><li>La pertenencia a actividades se borra al caducar la cookie de origen.</li><li> [!DNL Target] no funciona en Safari para cuentas que usan una implementación de cookies de terceros, o de cookies de origen y de terceros. Este comportamiento no es nuevo. Safari lleva tiempo sin permitir cookies de terceros.</li></ul><br />**Sugerencias**: Si existe preocupación en cuanto a que el dominio del cliente pueda marcarse como uno que realiza un seguimiento de los visitantes entre sesiones, lo más seguro es establecer en Target la duración del perfil en 30 días o menos. Este límite garantiza que los usuarios reciban un seguimiento similar en Safari y en todos los demás navegadores. |
+| Actividades de Target | Los clientes pueden elegir su [duración de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) para sus cuentas de [!DNL Target] (hasta 90 días). El problema es que si la duración del perfil de la cuenta supera los 30 días y se purga la cookie de origen porque el dominio del cliente se ha marcado como un seguimiento de usuarios entre sitios, el comportamiento para los visitantes de Safari se ve afectado en las siguientes áreas de Target:<br />**Informes de Target**: Si un usuario de Safari entra en una actividad, regresa pasados 30 días y luego convierte ese usuario, cuenta como dos visitantes y una conversión.<br />Este comportamiento es el mismo para las actividades que usan Analytics como fuente de informes (A4T).<br />**Perfiles y pertenencia a actividades**:<ul><li>Los datos de perfil se borran al caducar la cookie de origen.</li><li>La pertenencia a actividades se borra al caducar la cookie de origen.</li><li> [!DNL Target] no funciona en Safari para cuentas que usan una implementación de cookies de terceros, o de cookies de origen y de terceros. Este comportamiento no es nuevo. Safari lleva tiempo sin permitir cookies de terceros.</li></ul><br />**Sugerencias**: Si existe preocupación en cuanto a que el dominio del cliente pueda marcarse como uno que realiza un seguimiento de los visitantes entre sesiones, lo más seguro es establecer en Target la duración del perfil en 30 días o menos. Este límite garantiza que los usuarios reciban un seguimiento similar en Safari y en todos los demás navegadores. |

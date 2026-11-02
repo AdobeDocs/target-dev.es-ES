@@ -1,26 +1,29 @@
 ---
 keywords: implementar, implementar, configurar, configurar, parámetros de página
-description: Obtener datos en  [!DNL Target] usando parámetros de página.
-title: ¿Cómo obtengo datos en  [!DNL Target] usando parámetros de página?
+description: Obtener datos en [!DNL Target] mediante parámetros de página.
+title: ¿Cómo se obtienen datos en [!DNL Target] mediante parámetros de página?
 feature: Implementation
 exl-id: 9bb7157e-a938-4150-8a15-c9bf0a0e2296
 TQID: https://experienceleague.adobe.com/CYhZOFnli-DmREOOZGE2aGNn3x7BJ7uwGA2vfwUSnOk
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: f6df325aff4a2eb9321b86778d102737493e63bb
 workflow-type: tm+mt
-source-wordcount: 397
+source-wordcount: '399'
 ht-degree: 31%
-
 ---
-
 # Parámetros de página
 
 Los parámetros de página (también denominados &quot;parámetros de mbox&quot;) son pares de nombre/valor que se pasan directamente a través del código de página y que no se almacenan en el perfil del visitante para su uso futuro.
@@ -78,8 +81,8 @@ targetPageParams (sustituye los parámetros en el mbox global de la página):
 
 ## Vínculos a información relevante
 
-Recommendations: [implementación según el tipo de página](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=es)
+Recommendations: [implementación según el tipo de página](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html)
 
 Confirmación del pedido: [Rastrear conversiones](../../implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions)
 
-Afinidad de la categoría: [afinidad de la categoría](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=es)
+Afinidad de la categoría: [afinidad de la categoría](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html)

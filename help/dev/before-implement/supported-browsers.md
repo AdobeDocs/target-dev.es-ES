@@ -22,9 +22,9 @@ topic_v2:
     internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d1a60ca866f126520e9a17257adc50114ddd8e7
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '452'
 ht-degree: 19%
 ---
 # Navegadores admitidos
@@ -45,7 +45,7 @@ La interfaz [!DNL Target] es compatible con los siguientes exploradores y dispos
 | Tipo de dispositivo | Versión del navegador |
 |--- |--- |
 | [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
-| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li><li>[!DNL Safari]</li></ul> |
 
 ## Requisitos de edición visual
 
@@ -53,7 +53,7 @@ Para poder abrir, crear y obtener una vista previa de las páginas web de forma 
 
 >[!NOTE]
 >
->[!DNL Google Chrome] y [!DNL Microsoft Edge] son actualmente los únicos exploradores que admiten la edición visual de páginas web en [!DNL Adobe Target].
+>[!DNL Google Chrome] y [!DNL Microsoft Edge] son actualmente los únicos exploradores que admiten la edición visual de páginas web en [!DNL Adobe Target]. [!DNL Safari] no es compatible con el VEC o EEC.
 
 
 ## Entrega de contenido

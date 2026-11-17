@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
+source-git-commit: 78a2ba4a9668cee9813788f03c81eb68f3a6af07
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1316'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -203,5 +203,3 @@ Al enviar valores vacíos (&quot;&quot;, campos nulos o que faltan) para paráme
 Este comportamiento se aplica tanto a la versión 1 como a la versión 2 de [!DNL Bulk Profile Update API].
 
 No tiene ningún efecto intentar borrar o quitar un atributo enviando un valor vacío.
-
-Se ha planificado la eliminación de atributos explícitos para una versión futura (v3) de la API, pero aún no está disponible.
